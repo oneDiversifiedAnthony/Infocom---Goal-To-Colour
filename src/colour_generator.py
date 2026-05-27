@@ -1,6 +1,52 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""
+Legacy standalone colour generator (pre-tabbed-UI version).
+
+Cycles random RGB colours every 3 seconds and allows team selection via a
+Countries popup window.  Kept as a standalone entry point for quick testing
+of sACN colour output without launching the full tabbed application.
+
+Events handled:
+    - update_colour() -- called every 3 s via after(); generates random colours
+      when no team is selected.
+    - set_team_colours(colours, country_name) -- locks display to a team's colours.
+    - reset_to_random() -- clears team lock and resumes random cycling.
+    - open_countries() -- spawns the CountriesWindow as a child Toplevel.
+
+Design decisions:
+    - This file is intentionally kept separate from gui.py so it can be run with
+      ``python "Colour Generator.py"`` for rapid hardware testing without the
+      overhead of tabs, schedules, or chase controllers.
+    - The 3-second random interval is a deliberate choice: fast enough to verify
+      that sACN output is working, slow enough to read the RGB values on screen.
+"""
+
 import tkinter as tk
 import random
-from countries import CountriesWindow
+from src.countries import CountriesWindow
 
 
 class ColourGenerator:
@@ -81,7 +127,7 @@ class ColourGenerator:
             ]
             self._draw_swatches(colours)
 
-        self.root.after(3000, self.update_colour)
+        self.root.after(3000, self.update_colour)  # why: 3 s is fast enough to confirm sACN output, slow enough to read RGB values
 
 
 if __name__ == "__main__":

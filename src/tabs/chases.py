@@ -1,91 +1,46 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""Chases tab UI builder -- pattern editor with scrollable step list, save/load/delete, run/stop.
+
+Handles events:
+    - Add Step / Clear All manage the step list in the scrollable editor.
+    - Save persists the current pattern to patterns.json.
+    - Load / Delete operate on saved patterns via the combo selector.
+    - RUN starts the chase controller; STOP halts it.
+
+Key design decisions:
+    - Separated from ChaseController for single-responsibility (UI vs. runtime logic).
+    - step_rows list tracks all UI state (StringVars) for easy serialization.
+    - Scrollable canvas used because tkinter has no native scrollable frame widget.
+"""
+
 import tkinter as tk
 from tkinter import ttk, messagebox
-import json
-import os
 
-PATTERNS_FILE = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "assets", "patterns.json")
-
-COLOUR_OPTIONS = ["Colour 1", "Colour 2", "Colour 3", "Black", "White"]
-COLOUR_MAP = {
-    "Black": [0, 0, 0],
-    "White": [255, 255, 255],
-}
-
-
-def _resolve_colour(choice, team_colours):
-    """Resolve a dropdown choice to an RGB list."""
-    if choice in COLOUR_MAP:
-        return list(COLOUR_MAP[choice])
-    if team_colours:
-        idx = {"Colour 1": 0, "Colour 2": 1, "Colour 3": 2}.get(choice, 0)
-        if idx < len(team_colours):
-            return list(team_colours[idx])
-    return [0, 0, 0]
-
-
-def _load_patterns():
-    if os.path.exists(PATTERNS_FILE):
-        with open(PATTERNS_FILE, "r") as f:
-            return json.load(f)
-    return {}
-
-
-def _save_patterns(patterns):
-    with open(PATTERNS_FILE, "w") as f:
-        json.dump(patterns, f, indent=2)
-
-
-class ChaseController:
-    """Runs a chase pattern by stepping through frames."""
-
-    def __init__(self, root, draw_swatches_cb, get_team_colours_cb):
-        self.root = root
-        self.draw_swatches = draw_swatches_cb
-        self.get_team_colours = get_team_colours_cb
-        self.timer_id = None
-        self.steps = []
-        self.current_step = 0
-        self.running = False
-
-    def start(self, steps):
-        """Start running a chase pattern (list of step dicts)."""
-        self.stop()
-        if not steps:
-            return
-        self.steps = steps
-        self.current_step = 0
-        self.running = True
-        self._run_step()
-
-    def stop(self):
-        self.running = False
-        if self.timer_id:
-            self.root.after_cancel(self.timer_id)
-            self.timer_id = None
-
-    @property
-    def is_active(self):
-        return self.running
-
-    def _run_step(self):
-        if not self.running or not self.steps:
-            return
-
-        step = self.steps[self.current_step]
-        team_colours = self.get_team_colours()
-
-        colours = [
-            _resolve_colour(step["ch1"], team_colours),
-            _resolve_colour(step["ch2"], team_colours),
-            _resolve_colour(step["ch3"], team_colours),
-        ]
-        self.draw_swatches(colours)
-
-        delay_ms = int(float(step.get("time", 0.5)) * 1000)
-        delay_ms = max(50, delay_ms)
-
-        self.current_step = (self.current_step + 1) % len(self.steps)
-        self.timer_id = self.root.after(delay_ms, self._run_step)
+from .chase_patterns import COLOUR_OPTIONS, load_patterns, save_patterns
+from .chase_controller import ChaseController
 
 
 def build_chases_tab(notebook, root, draw_swatches_cb, get_team_colours_cb):
@@ -94,7 +49,7 @@ def build_chases_tab(notebook, root, draw_swatches_cb, get_team_colours_cb):
     notebook.add(tab, text="Chases")
 
     chase = ChaseController(root, draw_swatches_cb, get_team_colours_cb)
-    patterns = _load_patterns()
+    patterns = load_patterns()
 
     # ── Top: pattern selector ─────────────────────────────────────────
     sel_frame = tk.LabelFrame(tab, text="Saved Patterns", font=("Segoe UI", 10), padx=8, pady=4)
@@ -106,11 +61,11 @@ def build_chases_tab(notebook, root, draw_swatches_cb, get_team_colours_cb):
     pattern_combo["values"] = list(patterns.keys())
     pattern_combo.pack(side="left", padx=(0, 8))
 
-    step_rows = []  # list of dicts with StringVars
+    step_rows = []  # why: mutable list tracks all UI state for serialization to/from JSON
 
     def _refresh_combo():
         nonlocal patterns
-        patterns = _load_patterns()
+        patterns = load_patterns()
         pattern_combo["values"] = list(patterns.keys())
 
     def _load_selected():
@@ -129,7 +84,7 @@ def build_chases_tab(notebook, root, draw_swatches_cb, get_team_colours_cb):
         if not name or name not in patterns:
             return
         del patterns[name]
-        _save_patterns(patterns)
+        save_patterns(patterns)
         _refresh_combo()
         pattern_var.set("")
 
@@ -249,7 +204,7 @@ def build_chases_tab(notebook, root, draw_swatches_cb, get_team_colours_cb):
             messagebox.showwarning("Save", "Add at least one step.")
             return
         patterns[name] = data
-        _save_patterns(patterns)
+        save_patterns(patterns)
         _refresh_combo()
         pattern_var.set(name)
 

@@ -1,5 +1,43 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""Colour Generator tab -- RGB sliders for custom colour, random mode, and blackout.
+
+Handles events:
+    - Slider changes update the live colour preview.
+    - PUSH sends the custom colour to all three sACN channels.
+    - Random Mode resets to cycling random colours every 3 seconds.
+    - BLACKOUT sends black (0,0,0) to all channels.
+
+Returns widget references (gen_team_label, swatches, swatch_labels, _update_colour)
+so the App class can update them when a team is selected from other tabs.
+"""
+
 import tkinter as tk
 import random
+
+from src.constants import SWATCH_CANVAS_SIZE, RANDOM_CYCLE_INTERVAL_MS, DMX_MAX_VALUE
 
 
 def build_generator_tab(notebook, draw_swatches, get_state, set_state):
@@ -18,10 +56,10 @@ def build_generator_tab(notebook, draw_swatches, get_state, set_state):
     swatch_frame.pack(padx=20, pady=(12, 0))
     swatches = []
     swatch_labels = []
-    for _ in range(3):
+    for _ in range(3):  # why: three swatches match the three sACN colour channels
         col_frame = tk.Frame(swatch_frame)
         col_frame.pack(side="left", padx=8)
-        canvas = tk.Canvas(col_frame, width=100, height=100,
+        canvas = tk.Canvas(col_frame, width=SWATCH_CANVAS_SIZE, height=SWATCH_CANVAS_SIZE,
                            highlightthickness=1, highlightbackground="#999999")
         canvas.pack()
         lbl = tk.Label(col_frame, text="", font=("Consolas", 10))
@@ -43,13 +81,13 @@ def build_generator_tab(notebook, draw_swatches, get_state, set_state):
     slider_row = tk.Frame(picker_frame)
     slider_row.pack(fill="x")
 
-    r_slider = tk.Scale(slider_row, from_=0, to=255, orient="horizontal",
+    r_slider = tk.Scale(slider_row, from_=0, to=DMX_MAX_VALUE, orient="horizontal",
                         label="R", fg="red", length=150, font=("Consolas", 8))
     r_slider.pack(side="left", expand=True, fill="x", padx=2)
-    g_slider = tk.Scale(slider_row, from_=0, to=255, orient="horizontal",
+    g_slider = tk.Scale(slider_row, from_=0, to=DMX_MAX_VALUE, orient="horizontal",
                         label="G", fg="green", length=150, font=("Consolas", 8))
     g_slider.pack(side="left", expand=True, fill="x", padx=2)
-    b_slider = tk.Scale(slider_row, from_=0, to=255, orient="horizontal",
+    b_slider = tk.Scale(slider_row, from_=0, to=DMX_MAX_VALUE, orient="horizontal",
                         label="B", fg="blue", length=150, font=("Consolas", 8))
     b_slider.pack(side="left", expand=True, fill="x", padx=2)
 
@@ -78,7 +116,7 @@ def build_generator_tab(notebook, draw_swatches, get_state, set_state):
 
     def _push_custom():
         r, g, b = r_slider.get(), g_slider.get(), b_slider.get()
-        colours = [[r, g, b]] * 3
+        colours = [[r, g, b]] * 3  # why: same colour to all 3 channels for uniform single-colour output
         set_state(colours, "Custom")
         gen_team_label.config(text="Custom")
         draw_swatches(colours)
@@ -105,7 +143,7 @@ def build_generator_tab(notebook, draw_swatches, get_state, set_state):
                 for _ in range(3)
             ]
             draw_swatches(colours)
-        tab.after(3000, _update_colour)
+        tab.after(RANDOM_CYCLE_INTERVAL_MS, _update_colour)  # why: 3-second cycle keeps the display lively when no team is selected
 
-    # Return references the App needs
+    # why: returning widget refs lets the App class update them when a team is selected from other tabs
     return gen_team_label, swatches, swatch_labels, _update_colour

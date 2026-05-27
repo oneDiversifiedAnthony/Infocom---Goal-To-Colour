@@ -1,6 +1,54 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""
+Goal celebration flash controller.
+
+Alternates between full team colours and a dimmed/black "off" frame at 400 ms
+intervals for 30 seconds to create a visible goal-flash effect on the sACN-
+controlled lighting rig.
+
+Events handled:
+    - trigger(colours, country_name, duration) -- starts or restarts the flash cycle.
+    - stop() -- cancels any active flash.
+
+Design decisions:
+    - White/near-white channels (all components >= 200) flash to full black rather
+      than dimming, because dimming white only produces grey which lacks visual
+      contrast under stage lighting.
+    - Non-white colours dim to 15 % brightness instead of going to black so the
+      audience can still perceive the team colour identity during the "off" beat.
+    - Wall-clock time (time.time()) is used for duration tracking instead of
+      counting frames, so the flash length stays accurate even if tkinter's
+      after() timer drifts under heavy UI load.
+"""
+
 import time
 
-# Threshold: if a channel is above this, it counts as "white-ish"
+from src.constants import FLASH_INTERVAL_MS, DEFAULT_GOAL_DURATION_SEC
+
+# why: 200 chosen empirically -- above this, dimming produces muddy grey; full black is more dramatic
 WHITE_THRESHOLD = 200
 
 
@@ -22,7 +70,7 @@ def _flash_off_colours(colours):
             result.append([0, 0, 0])
         else:
             # Dim towards black
-            result.append(_dim_colour(rgb, 0.15))
+            result.append(_dim_colour(rgb, 0.15))  # why: 15 % keeps colour recognisable while still creating a visible flash
     return result
 
 
@@ -38,7 +86,7 @@ class GoalController:
         self.team_name = ""
         self.colours = None
 
-    def trigger(self, colours, country_name, duration=30):
+    def trigger(self, colours, country_name, duration=DEFAULT_GOAL_DURATION_SEC):
         """Start a goal flash for `duration` seconds."""
         self.colours = colours
         self.team_name = country_name
@@ -48,7 +96,7 @@ class GoalController:
         if self.timer_id:
             self.root.after_cancel(self.timer_id)
 
-        self.end_time = time.time() + duration
+        self.end_time = time.time() + duration  # why: wall-clock time avoids drift if after() is delayed by UI work
         self._flash(True)
 
     def stop(self):
@@ -74,4 +122,4 @@ class GoalController:
         else:
             self.draw_swatches(_flash_off_colours(self.colours))
 
-        self.timer_id = self.root.after(400, lambda: self._flash(not show_on))
+        self.timer_id = self.root.after(FLASH_INTERVAL_MS, lambda: self._flash(not show_on))  # why: 400 ms gives a visible strobe without being seizure-inducing

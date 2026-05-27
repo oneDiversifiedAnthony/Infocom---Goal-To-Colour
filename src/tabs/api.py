@@ -1,3 +1,41 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""API tab -- fetch live sports data from external endpoints with auto-refresh.
+
+Handles events:
+    - Get button performs a single HTTP fetch in a background thread.
+    - Auto Get starts a repeating fetch cycle with configurable interval.
+    - Stop Auto cancels the auto-refresh timer and resets the progress bar.
+
+Key design decisions:
+    - Threading for HTTP requests prevents UI freeze during network calls.
+    - Mutable lists (auto_timer_id[0]) used because closures cannot rebind
+      nonlocal ints in nested functions within tkinter callbacks.
+    - Progress bar ticks every 100ms for smooth visual countdown between fetches.
+"""
+
 import tkinter as tk
 from tkinter import ttk
 import threading
@@ -32,6 +70,7 @@ def build_api_tab(notebook):
 
     status_label = tk.Label(ctrl_frame, text="", font=("Segoe UI", 9), fg="#888888")
 
+    # why: mutable lists used because closures can't rebind nonlocal ints in nested tkinter callbacks
     auto_timer_id = [None]
     auto_progress_id = [None]
     auto_running = [False]
@@ -67,7 +106,7 @@ def build_api_tab(notebook):
             except Exception as e:
                 tab.after(0, lambda: _show_error(str(e)))
 
-        threading.Thread(target=_do_request, daemon=True).start()
+        threading.Thread(target=_do_request, daemon=True).start()  # why: background thread prevents UI freeze during network I/O
 
     def _show_result(text):
         result_text.config(state="normal")
@@ -133,7 +172,7 @@ def build_api_tab(notebook):
         pct = min(100, (auto_elapsed[0] / auto_interval[0]) * 100)
         progress["value"] = pct
         if auto_elapsed[0] < auto_interval[0]:
-            auto_progress_id[0] = tab.after(100, _tick_progress)
+            auto_progress_id[0] = tab.after(100, _tick_progress)  # why: 100ms tick gives smooth visual countdown
 
     auto_btn = tk.Button(ctrl_frame, text="Auto Get", font=("Segoe UI", 10, "bold"),
                          bg="#28a745", fg="white", padx=12, pady=2,

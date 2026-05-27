@@ -1,3 +1,41 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""sACN Config tab -- IP entry, channel mapping grid, connect/disconnect, CID display.
+
+Handles events:
+    - Connect reads the channel map and destination IP, then starts sACN output.
+    - Disconnect stops the sACN sender.
+    - Copy button copies the source CID to the clipboard.
+
+Key design decisions:
+    - Blank IP defaults to multicast for zero-config setup on local networks.
+    - Channel map is editable per-colour (R/G/B channels + universe) for flexible
+      fixture patching across multiple universes.
+    - on_connect callback allows the App to auto-switch to the Flags tab after connection.
+"""
+
 import tkinter as tk
 import socket
 from src.theme import FG_DIM
@@ -29,7 +67,7 @@ def build_sacn_tab(notebook, sacn, on_connect=None):
     ip_frame = tk.Frame(tab)
     ip_frame.pack(pady=6)
     tk.Label(ip_frame, text="Destination IP:", font=("Segoe UI", 11)).pack(side="left", padx=(0, 8))
-    ip_var = tk.StringVar(value="")
+    ip_var = tk.StringVar(value="")  # why: blank defaults to multicast for zero-config setup
     tk.Entry(ip_frame, textvariable=ip_var, font=("Consolas", 11), width=20).pack(side="left")
     tk.Label(ip_frame, text="(blank = multicast)", font=("Segoe UI", 9), fg="#888888").pack(side="left", padx=(8, 0))
 
@@ -79,14 +117,14 @@ def build_sacn_tab(notebook, sacn, on_connect=None):
             sacn_status.config(text="Invalid channel or universe value", fg="red")
             return
         ip = ip_var.get().strip()
-        sacn.reconfigure(channel_map=channel_map, destination_ip=ip or None)
+        sacn.reconfigure(channel_map=channel_map, destination_ip=ip or None)  # why: None triggers multicast mode
         universes = sorted(set(m["universe"] for m in channel_map) | sacn.extra_universes)
         mode = f"unicast {ip}" if ip else "multicast"
         sacn_status.config(
             text=f"Connected - Universe(s) {', '.join(map(str, universes))}, {mode}", fg="green"
         )
         if on_connect:
-            on_connect()
+            on_connect()  # why: allows auto-switching to Flags tab after connection
 
     def _disconnect():
         sacn.stop()

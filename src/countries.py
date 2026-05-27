@@ -1,7 +1,53 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""
+Standalone / popup World Cup teams browser.
+
+Displays teams grouped by World Cup group with colour swatches and "Send"
+buttons.  Can run as a standalone application (``python countries.py``) or as
+a child Toplevel window inside the main app.
+
+Events handled:
+    - _send_colours(colours, country_name) -- invoked when the user clicks a
+      team's "Send" button; delegates to the colour_callback if one was provided.
+
+Design decisions:
+    - Standalone mode creates a Tk() root; embedded mode creates a Toplevel()
+      child.  This ensures correct window parenting and event-loop ownership
+      (only one Tk() should ever exist per process).
+    - colour_callback is an optional callable, enabling loose coupling: the
+      caller decides what happens when a colour is sent, keeping this module
+      reusable without any import dependency on the main app.
+"""
+
 import tkinter as tk
 from tkinter import ttk
 import json
 import os
+
+from src.constants import DEFAULT_TEAM_COLOURS
 
 
 class CountriesWindow:
@@ -16,9 +62,9 @@ class CountriesWindow:
         self.standalone = root is None
 
         if self.standalone:
-            self.root = tk.Tk()
+            self.root = tk.Tk()  # why: standalone needs its own Tk event loop
         else:
-            self.root = tk.Toplevel(root)
+            self.root = tk.Toplevel(root)  # why: Toplevel for proper window parenting under the existing Tk root
 
         self.root.title("World Cup 2026 - Teams & Colours")
         self.root.resizable(True, True)
@@ -60,7 +106,7 @@ class CountriesWindow:
 
         for country in group["teams"]:
             team_data = self.db["teams"].get(country, {})
-            colours = team_data.get("colours", [[128, 128, 128]] * 3)
+            colours = team_data.get("colours", DEFAULT_TEAM_COLOURS)
             self._add_team_row(tab, country, colours)
 
         # Separator

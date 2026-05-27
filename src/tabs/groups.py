@@ -1,5 +1,42 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""Groups tab with sub-tabs A-L showing teams, colour swatches, and fixtures.
+
+Handles events:
+    - Send button triggers immediate colour output for the selected team.
+
+Key design decisions:
+    - Uses a nested Notebook for group sub-tabs to keep each group self-contained
+      and independently scrollable.
+    - Each team row includes inline colour swatches plus a Send button for quick output.
+"""
+
 import tkinter as tk
 from tkinter import ttk
+
+from src.constants import DEFAULT_TEAM_COLOURS
 
 
 def build_groups_tab(notebook, db, set_team_colours_cb):
@@ -7,7 +44,7 @@ def build_groups_tab(notebook, db, set_team_colours_cb):
     tab = tk.Frame(notebook)
     notebook.add(tab, text="Groups")
 
-    group_notebook = ttk.Notebook(tab)
+    group_notebook = ttk.Notebook(tab)  # why: nested notebook keeps each group self-contained and scrollable
     group_notebook.pack(fill="both", expand=True, padx=4, pady=4)
 
     for group_key in sorted(db["groups"].keys()):
@@ -22,7 +59,7 @@ def _populate_group_tab(tab, group, db, set_team_colours_cb):
 
     for country in group["teams"]:
         team_data = db["teams"].get(country, {})
-        colours = team_data.get("colours", [[128, 128, 128]] * 3)
+        colours = team_data.get("colours", DEFAULT_TEAM_COLOURS)
         _add_team_row(tab, country, colours, set_team_colours_cb)
 
     ttk.Separator(tab, orient="horizontal").pack(fill="x", padx=12, pady=(8, 4))
@@ -56,5 +93,5 @@ def _add_team_row(parent, country, colours, set_team_colours_cb):
 
     tk.Button(
         row, text="Send", font=("Segoe UI", 8),
-        command=lambda c=colours, n=country: set_team_colours_cb(c, n)
+        command=lambda c=colours, n=country: set_team_colours_cb(c, n)  # why: lambda captures current values to avoid late-binding closure bug
     ).pack(side="right")

@@ -1,3 +1,38 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""Read Me tab -- renders README.md with markdown formatting inside a tkinter Text widget.
+
+Handles events:
+    - On tab creation, loads and renders README.md into a read-only Text widget.
+
+Key design decisions:
+    - Custom markdown renderer because tkinter has no native markdown widget.
+    - Supports PyInstaller bundling via sys._MEIPASS fallback for frozen executables.
+    - Regex-based parsing handles headers, bullets, code blocks, bold, and inline code.
+"""
+
 import tkinter as tk
 from tkinter import font as tkfont
 import os
@@ -5,7 +40,7 @@ import sys
 import re
 
 
-# When bundled by PyInstaller, files are in sys._MEIPASS; otherwise use the project root
+# why: sys._MEIPASS is set by PyInstaller for bundled apps; fallback uses project root for development
 _BASE = getattr(sys, "_MEIPASS", os.path.join(os.path.dirname(__file__), os.pardir, os.pardir))
 README_FILE = os.path.join(_BASE, "README.md")
 
@@ -80,7 +115,7 @@ def _render_markdown(text_widget, md):
 
 def _insert_inline(text_widget, line, base_tag):
     """Insert a line handling **bold** and `code` inline formatting."""
-    parts = re.split(r"(\*\*[^*]+\*\*|`[^`]+`)", line)
+    parts = re.split(r"(\*\*[^*]+\*\*|`[^`]+`)", line)  # why: regex splits on bold (**) and inline code (`) for tag-based formatting
     for part in parts:
         if part.startswith("**") and part.endswith("**"):
             text_widget.insert("end", part[2:-2], "bold")

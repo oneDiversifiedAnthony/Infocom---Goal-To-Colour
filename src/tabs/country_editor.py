@@ -1,3 +1,41 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""Country Editor tab -- edit team colours via colour picker and view trigger channels.
+
+Handles events:
+    - Clicking a colour swatch opens the native OS colour picker.
+    - Selecting a new colour saves to countries.json immediately.
+    - Send button outputs that team's colours to the sACN channels.
+
+Key design decisions:
+    - Uses tkinter colorchooser for the native OS colour picker dialog.
+    - Saves to countries.json immediately on pick for instant persistence (no save button).
+    - Grid layout with column constants (COL_NAME, COL_SW1, etc.) keeps alignment
+      consistent and makes column references readable throughout the code.
+"""
+
 import tkinter as tk
 from tkinter import ttk, colorchooser
 import json
@@ -15,10 +53,10 @@ def _load_countries():
 
 def _save_countries(data):
     with open(COUNTRIES_FILE, "w") as f:
-        json.dump(data, f, indent=2)
+        json.dump(data, f, indent=2)  # why: indent=2 keeps JSON human-readable for hand-editing
 
 
-# Column indices
+# why: column constants keep grid alignment consistent and column references readable
 COL_NAME = 0
 COL_SW1 = 1
 COL_RGB1 = 2
@@ -148,4 +186,4 @@ def _pick_colour(event, colour_index, swatch, label, country, data, all_swatches
         swatch.delete("all")
         swatch.create_rectangle(0, 0, SWATCH_SIZE, SWATCH_SIZE, fill=hex_col, outline="")
         label.config(text=f"{r},{g},{b}")
-        _save_countries(data)
+        _save_countries(data)  # why: saves immediately on pick for instant persistence -- no separate save button needed

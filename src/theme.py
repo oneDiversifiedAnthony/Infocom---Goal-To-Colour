@@ -1,3 +1,44 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""
+Dark theme configuration for the tkinter GUI.
+
+Applies a consistent dark colour palette across all classic tk and ttk widget types.
+Exports colour constants (BG, FG, ACCENT, etc.) used throughout the application.
+
+Events handled:
+    None -- this module is a pure configuration helper called once at startup.
+
+Design decisions:
+    - Uses the "clam" ttk theme as the base because it is the most customizable
+      cross-platform ttk theme (default and alt themes ignore many style options).
+    - Configures BOTH tk option_add (for classic widgets like tk.Label, tk.Entry)
+      AND ttk.Style (for themed widgets like ttk.Notebook, ttk.Combobox) so that
+      every widget in the app inherits the dark palette regardless of its toolkit layer.
+"""
+
 import tkinter as tk
 from tkinter import ttk
 
@@ -27,7 +68,7 @@ def apply_dark_theme(root):
     root.option_add("*highlightBackground", BG)
 
     style = ttk.Style()
-    style.theme_use("clam")
+    style.theme_use("clam")  # why: "clam" is the only cross-platform ttk theme that respects nearly all style options
     style.configure(".", background=BG, foreground=FG, fieldbackground=BG_ENTRY,
                     borderwidth=0)
     style.configure("TNotebook", background=BG, borderwidth=0)

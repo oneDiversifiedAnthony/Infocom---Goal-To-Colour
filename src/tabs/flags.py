@@ -1,13 +1,52 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""Flags tab -- grid of country buttons filling the entire tab space.
+
+Handles events:
+    - Clicking any country button (or its child labels/swatches) sends that
+      team's colours to the sACN output via set_team_colours_cb.
+
+Key design decisions:
+    - 7x7 grid with uniform column/row weights so buttons scale with the window.
+    - Drop-cap style (large first letter) makes country names scannable at a glance.
+    - Recursive bind ensures clicks on any child widget (label, swatch) bubble up
+      to trigger the button callback.
+    - BLACKOUT is always first button (position 0,0) for quick emergency access.
+"""
+
 import tkinter as tk
 from tkinter import ttk
 
-COLS = 7
+from src.theme import BG, BG_LIGHT, FG  # why: import from theme instead of duplicating colour values
+from src.constants import DEFAULT_TEAM_COLOURS
+
+COLS = 7  # why: 7x7 grid accommodates up to 48 teams (including BLACKOUT) on one screen
 ROWS = 7
 FONT_SMALL = ("Segoe UI", 10, "bold")
 FONT_BIG = ("Segoe UI", 20, "bold")
-BG = "#1e1e1e"
-BG_BTN = "#2d2d2d"
-FG = "#e0e0e0"
+BG_BTN = BG_LIGHT  # why: button background uses the theme's lighter shade
 
 
 def build_flags_tab(notebook, db, set_team_colours_cb):
@@ -16,7 +55,7 @@ def build_flags_tab(notebook, db, set_team_colours_cb):
     notebook.add(tab, text="Flags")
 
     for c in range(COLS):
-        tab.columnconfigure(c, weight=1, uniform="col")
+        tab.columnconfigure(c, weight=1, uniform="col")  # why: uniform weight ensures buttons scale equally with window
     for r in range(ROWS):
         tab.rowconfigure(r, weight=1, uniform="row")
 
@@ -26,7 +65,7 @@ def build_flags_tab(notebook, db, set_team_colours_cb):
     teams_sorted = sorted(db["teams"].keys())
     for idx, country in enumerate(teams_sorted):
         team_data = db["teams"][country]
-        colours = team_data.get("colours", [[128, 128, 128]] * 3)
+        colours = team_data.get("colours", DEFAULT_TEAM_COLOURS)
         trigger = team_data.get("trigger", {})
         channel = trigger.get("channel", "")
         row = (idx + 1) // COLS
@@ -74,7 +113,7 @@ def _add_grid_button(parent, row, col, name, colours, callback, channel=""):
     def on_click(event, c=colours, n=name):
         callback(c, n)
 
-    def bind_recursive(widget):
+    def bind_recursive(widget):  # why: recursive bind ensures clicks on any child widget (label, swatch) trigger the button
         widget.bind("<Button-1>", on_click)
         for child in widget.winfo_children():
             bind_recursive(child)

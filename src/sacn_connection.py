@@ -1,6 +1,57 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""
+sACN (E1.31 streaming DMX) network sender.
+
+Manages DMX universe connections and per-colour RGB channel mapping.  Supports
+both unicast (specific IP) and multicast transport modes.
+
+Events handled:
+    - connect() / reconfigure() -- (re)establishes the sACN sender session.
+    - send_rgb(colours) -- pushes a list of RGB triplets to the mapped DMX channels.
+    - send_trigger(universe, channel, value) -- sets a single DMX channel, used for
+      goal-trigger signals on dedicated universes.
+    - stop() -- tears down the sender (also registered with atexit for crash safety).
+
+Design decisions:
+    - A UUID-based CID is generated once per instance so that sACN receivers can
+      uniquely identify this source across reconnections within the same process.
+    - The channel_map is structured per-colour (one dict per colour with r/g/b/universe
+      keys) rather than per-channel, because the application always thinks in terms of
+      three colours -- this keeps the mapping API simpler and avoids off-by-one errors.
+    - extra_universes allows trigger channels to live on separate DMX universes from
+      the colour data without requiring the caller to know activation details.
+    - atexit.register(self.stop) ensures DMX outputs are zeroed even on unhandled
+      exceptions or interpreter shutdown.
+"""
+
 import sacn
 import atexit
 import uuid
+
+from src.constants import DMX_CHANNEL_COUNT, DMX_MAX_VALUE
 
 
 class SacnConnection:
@@ -16,11 +67,11 @@ class SacnConnection:
         self.destination_ip = destination_ip
         self.sender = None
         self.source_name = source_name
-        self._cid_uuid = uuid.uuid4()
+        self._cid_uuid = uuid.uuid4()  # why: UUID CID lets sACN receivers uniquely identify this source
         self.cid = str(self._cid_uuid)
         self._active_universes = set()
-        self.extra_universes = set()  # additional universes to activate (e.g. triggers)
-        atexit.register(self.stop)
+        self.extra_universes = set()  # why: separate universe set for trigger channels so they are auto-activated on connect
+        atexit.register(self.stop)  # why: ensures DMX outputs are zeroed even on crash or unhandled exception
 
     def connect(self):
         self.stop()
@@ -53,10 +104,10 @@ class SacnConnection:
             m = self.channel_map[i]
             uni = m["universe"]
             if uni not in uni_data:
-                uni_data[uni] = [0] * 512
+                uni_data[uni] = [0] * DMX_CHANNEL_COUNT
             data = uni_data[uni]
             for ch, val in [(m["r"], rgb[0]), (m["g"], rgb[1]), (m["b"], rgb[2])]:
-                if 1 <= ch <= 512:
+                if 1 <= ch <= DMX_CHANNEL_COUNT:
                     data[ch - 1] = val
         # Send to each universe
         for uni, data in uni_data.items():
@@ -68,7 +119,7 @@ class SacnConnection:
                 continue
             output.dmx_data = tuple(data)
 
-    def send_trigger(self, universe, channel, value=255):
+    def send_trigger(self, universe, channel, value=DMX_MAX_VALUE):
         """Set a single channel on a universe to a value."""
         if not self.sender:
             return
@@ -88,8 +139,8 @@ class SacnConnection:
                 return
         except (KeyError, TypeError):
             return
-        data = list(output.dmx_data) if output.dmx_data else [0] * 512
-        if 1 <= channel <= 512:
+        data = list(output.dmx_data) if output.dmx_data else [0] * DMX_CHANNEL_COUNT
+        if 1 <= channel <= DMX_CHANNEL_COUNT:
             data[channel - 1] = value
         output.dmx_data = tuple(data)
 

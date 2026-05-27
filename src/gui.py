@@ -1,3 +1,52 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""
+Main application window (App class) for the World Cup Colour sACN controller.
+
+Orchestrates all UI tabs (sACN, Generator, Groups, Schedule, Flags, Chases,
+Country Editor, API, ReadMe), manages the sACN network connection, team colour
+state, and goal-flash triggers with a 5-second timeout and progress bar.
+
+Events handled:
+    - set_team_colours / _goal_pressed -- user selects a team or fires a goal.
+    - _fire_trigger / _clear_all_triggers -- sends and clears DMX trigger pulses.
+    - _draw_swatches -- pushes new colours to both UI swatches and sACN output.
+    - _on_close -- graceful shutdown of sACN sender.
+
+Design decisions:
+    - The status bar is packed bottom-first (before the Notebook) so that tkinter's
+      packer keeps it anchored at the bottom edge during window resizes.
+    - The trigger system uses root.after() timers for non-blocking 5-second pulses
+      instead of threads, keeping all DMX I/O on the main thread and avoiding
+      race conditions.
+    - countries_db is merged into db ("teams" key) so that every lookup
+      (groups, schedule, flags) can share a single unified team dictionary.
+    - Version is bumped on every launch (timestamp-based) to make it trivial to
+      identify which build a user is running.
+"""
+
 import tkinter as tk
 from tkinter import ttk
 import json
@@ -6,8 +55,12 @@ from datetime import datetime
 
 from src.theme import apply_dark_theme, FG_DIM
 from src.statusbar import StatusBar
-from src.ScanMockDevice import SacnConnection
+from src.sacn_connection import SacnConnection
 from src.goal import GoalController
+from src.constants import (
+    TRIGGER_UNIVERSE, TRIGGER_PULSE_DURATION_MS, TRIGGER_PROGRESS_TICK_MS,
+    DMX_MAX_VALUE, SWATCH_CANVAS_SIZE,
+)
 from src.tabs import (
     build_sacn_tab,
     build_generator_tab,
@@ -52,7 +105,7 @@ class App:
         apply_dark_theme(self.root)
 
         self.sacn = SacnConnection(source_name="DIVERSIFIED WORLD CUP")
-        self.sacn.extra_universes.add(2)
+        self.sacn.extra_universes.add(TRIGGER_UNIVERSE)  # why: trigger channels live on a separate universe from colour data
 
         self.team_colours = None
         self.team_name = None
@@ -61,13 +114,13 @@ class App:
             self.db = json.load(f)
         with open(COUNTRIES_FILE, "r") as f:
             self.countries_db = json.load(f)
-        self.db["teams"] = self.countries_db["teams"]
+        self.db["teams"] = self.countries_db["teams"]  # why: merge into one dict so all tabs share a single unified team lookup
 
         self._trigger_timer = None
         self._trigger_progress_timer = None
         self._active_trigger = None
 
-        # Status bar (pack bottom first)
+        # why: status bar packed bottom-first so it stays anchored during window resize
         self.status_bar = StatusBar(self.root)
 
         # Main notebook
@@ -112,7 +165,7 @@ class App:
         for i, rgb in enumerate(colours):
             hex_col = f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
             self.swatches[i].delete("all")
-            self.swatches[i].create_rectangle(0, 0, 100, 100, fill=hex_col, outline="")
+            self.swatches[i].create_rectangle(0, 0, SWATCH_CANVAS_SIZE, SWATCH_CANVAS_SIZE, fill=hex_col, outline="")
             self.swatch_labels[i].config(text=f"{rgb[0]}, {rgb[1]}, {rgb[2]}")
         self.sacn.send_rgb(colours)
         self.status_bar.update(colours, self.team_name, self.team_colours, self.countries_db)
@@ -149,11 +202,11 @@ class App:
             self.root.after_cancel(self._trigger_progress_timer)
 
         self._active_trigger = (uni, ch)
-        self.sacn.send_trigger(uni, ch, 255)
+        self.sacn.send_trigger(uni, ch, DMX_MAX_VALUE)
         self.status_bar.trigger_label.config(
             text=f"{country_name} Ch{ch} triggered", fg="#ff9800")
 
-        self._trigger_duration = 5000
+        self._trigger_duration = TRIGGER_PULSE_DURATION_MS
         self._trigger_elapsed = 0
         self.status_bar.trigger_progress["value"] = 100
         self._tick_trigger_progress()
@@ -162,15 +215,15 @@ class App:
             self._clear_all_triggers()
             self._trigger_timer = None
 
-        self._trigger_timer = self.root.after(5000, _clear)
+        self._trigger_timer = self.root.after(TRIGGER_PULSE_DURATION_MS, _clear)  # why: after() keeps DMX I/O on the main thread, avoiding race conditions
 
     def _tick_trigger_progress(self):
-        self._trigger_elapsed += 50
+        self._trigger_elapsed += TRIGGER_PROGRESS_TICK_MS
         remaining = max(0, self._trigger_duration - self._trigger_elapsed)
         pct = (remaining / self._trigger_duration) * 100
         self.status_bar.trigger_progress["value"] = pct
         if remaining > 0:
-            self._trigger_progress_timer = self.root.after(50, self._tick_trigger_progress)
+            self._trigger_progress_timer = self.root.after(TRIGGER_PROGRESS_TICK_MS, self._tick_trigger_progress)
         else:
             self._trigger_progress_timer = None
 

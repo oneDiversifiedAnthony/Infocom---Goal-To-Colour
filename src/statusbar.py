@@ -1,3 +1,46 @@
+# Copyright (c) 2026 oneDiversified.
+#
+#     ..---------.
+#   ...         .--.
+#  ............   .--            #+ -#.                              -#.  +### ##                +#
+# ...........----  .-.           #+                                       #+                     +#
+# --     --    --.  ++     -######+ -#  ##   +#  #####+  ####.-####- .# -########  +#####   #######
+# --     --    --.  ++    -#-   -#+ -#  .#+ -#- ##---+#+ ##   -##+.  .#.  #+   ## +#+---## ##    ##
+# .-     -------.  -+.    .##   +#+ -#   -#+#-  ##.      ##      .## .#   #+   ## -#+      +#-   ##
+#  --.   ....     -+-       ######+ -#    ###    +####+  ##   -####+ .#.  #+   ##   #####   -######
+#   .--.        -++
+#      ------+++-
+#
+# This software, its source code, and all associated functions, scripts, and
+# documentation are the proprietary and confidential property of oneDiversified.
+#
+# Unauthorized copying, distribution, modification, or disclosure of this software
+# is strictly prohibited. This code is provided solely for internal use by authorized
+# oneDiversified personnel and may not be shared, published, or distributed externally
+# without explicit written permission from oneDiversified.
+#
+# Use of this software constitutes acceptance of your confidentiality, IP protection,
+# and contractual obligations with oneDiversified.
+
+"""
+Bottom status bar widget for the main application window.
+
+Displays live colour swatches with RGB values, a trigger-status label with a
+countdown progress bar, and a source-info readout (team name and trigger channel).
+
+Events handled:
+    - update(colours, team_name, team_colours, countries_db) -- refreshes all
+      status indicators whenever the active colour output changes.
+
+Design decisions:
+    - The bar is packed with side="bottom" BEFORE the main Notebook widget so that
+      tkinter's packer guarantees it stays anchored at the bottom even when the
+      window is resized (widgets packed first get layout priority).
+    - The trigger progress bar uses orange (#ff9800) for high visibility against
+      the dark theme background; orange was chosen because it is not used by any
+      team colour and therefore cannot be confused with output.
+"""
+
 import tkinter as tk
 from tkinter import ttk
 from src.theme import BG_LIGHT, FG_DIM, ACCENT
@@ -7,7 +50,7 @@ class StatusBar:
     def __init__(self, root):
         self.root = root
         bar = tk.Frame(root, relief="sunken", bd=1, bg=BG_LIGHT)
-        bar.pack(fill="x", side="bottom", padx=4, pady=(0, 4))
+        bar.pack(fill="x", side="bottom", padx=4, pady=(0, 4))  # why: packed bottom-first so it stays anchored during window resize
 
         tk.Label(bar, text="OUTPUT:", font=("Segoe UI", 9, "bold"),
                  fg=ACCENT, bg=BG_LIGHT).pack(side="left", padx=(8, 6))
@@ -30,7 +73,7 @@ class StatusBar:
 
         style = ttk.Style()
         style.configure("Trigger.Horizontal.TProgressbar",
-                        troughcolor=BG_LIGHT, background="#ff9800", thickness=10)
+                        troughcolor=BG_LIGHT, background="#ff9800", thickness=10)  # why: orange for high visibility against dark theme; not a team colour so no confusion
         self.trigger_progress = ttk.Progressbar(
             bar, orient="horizontal", length=80, mode="determinate",
             style="Trigger.Horizontal.TProgressbar", maximum=100)
