@@ -1,0 +1,64 @@
+{
+  "Default": [
+    {
+      "ch1": "Colour 1",
+      "ch2": "White",
+      "ch3": "Colour 3",
+      "time": 0.5
+    },
+    {
+      "ch1": "Black",
+      "ch2": "Colour 2",
+      "ch3": "White",
+      "time": 0.5
+    },
+    {
+      "ch1": "Colour 1",
+      "ch2": "Colour 2",
+      "ch3": "Colour 3",
+      "time": 0.5
+    },
+    {
+      "ch1": "Black",
+      "ch2": "Black",
+      "ch3": "Black",
+      "time": 0.5
+    },
+    {
+      "ch1": "Colour 2",
+      "ch2": "Black",
+      "ch3": "Colour 1",
+      "time": 0.5
+    },
+    {
+      "ch1": "Colour 1",
+      "ch2": "Colour 3",
+      "ch3": "Colour 2",
+      "time": 0.5
+    },
+    {
+      "ch1": "Colour 3",
+      "ch2": "Colour 2",
+      "ch3": "Colour 1",
+      "time": 0.5
+    },
+    {
+      "ch1": "Black",
+      "ch2": "White",
+      "ch3": "Black",
+      "time": 0.5
+    },
+    {
+      "ch1": "Colour 1",
+      "ch2": "Colour 2",
+      "ch3": "Colour 3",
+      "time": 0.5
+    },
+    {
+      "ch1": "White",
+      "ch2": "Colour 1",
+      "ch3": "Black",
+      "time": 0.5
+    }
+  ]
+}

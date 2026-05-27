@@ -1,0 +1,138 @@
+{
+  "tournament": "FIFA World Cup 2026",
+  "hosts": ["USA", "Mexico", "Canada"],
+  "groups": {
+    "A": {
+      "teams": ["USA", "Morocco", "Chile", "New Zealand"],
+      "games": [
+        {"home": "USA", "away": "Morocco", "date": "Jun 11", "venue": "MetLife Stadium, NJ"},
+        {"home": "Chile", "away": "New Zealand", "date": "Jun 11", "venue": "SoFi Stadium, LA"},
+        {"home": "USA", "away": "Chile", "date": "Jun 16", "venue": "AT&T Stadium, Dallas"},
+        {"home": "Morocco", "away": "New Zealand", "date": "Jun 16", "venue": "Hard Rock Stadium, Miami"},
+        {"home": "USA", "away": "New Zealand", "date": "Jun 21", "venue": "MetLife Stadium, NJ"},
+        {"home": "Morocco", "away": "Chile", "date": "Jun 21", "venue": "Lincoln Financial Field, Philadelphia"}
+      ]
+    },
+    "B": {
+      "teams": ["Mexico", "Ecuador", "Senegal", "Jamaica"],
+      "games": [
+        {"home": "Mexico", "away": "Ecuador", "date": "Jun 12", "venue": "Estadio Azteca, Mexico City"},
+        {"home": "Senegal", "away": "Jamaica", "date": "Jun 12", "venue": "Estadio BBVA, Monterrey"},
+        {"home": "Mexico", "away": "Senegal", "date": "Jun 17", "venue": "Estadio Azteca, Mexico City"},
+        {"home": "Ecuador", "away": "Jamaica", "date": "Jun 17", "venue": "Estadio Akron, Guadalajara"},
+        {"home": "Mexico", "away": "Jamaica", "date": "Jun 22", "venue": "Estadio Azteca, Mexico City"},
+        {"home": "Ecuador", "away": "Senegal", "date": "Jun 22", "venue": "Estadio BBVA, Monterrey"}
+      ]
+    },
+    "C": {
+      "teams": ["Canada", "Netherlands", "Cameroon", "Austria"],
+      "games": [
+        {"home": "Canada", "away": "Netherlands", "date": "Jun 12", "venue": "BMO Field, Toronto"},
+        {"home": "Cameroon", "away": "Austria", "date": "Jun 12", "venue": "BC Place, Vancouver"},
+        {"home": "Canada", "away": "Cameroon", "date": "Jun 17", "venue": "BMO Field, Toronto"},
+        {"home": "Netherlands", "away": "Austria", "date": "Jun 17", "venue": "BC Place, Vancouver"},
+        {"home": "Canada", "away": "Austria", "date": "Jun 22", "venue": "BMO Field, Toronto"},
+        {"home": "Netherlands", "away": "Cameroon", "date": "Jun 22", "venue": "BC Place, Vancouver"}
+      ]
+    },
+    "D": {
+      "teams": ["Brazil", "Nigeria", "Turkey", "Costa Rica"],
+      "games": [
+        {"home": "Brazil", "away": "Nigeria", "date": "Jun 13", "venue": "SoFi Stadium, LA"},
+        {"home": "Turkey", "away": "Costa Rica", "date": "Jun 13", "venue": "Levi's Stadium, San Francisco"},
+        {"home": "Brazil", "away": "Turkey", "date": "Jun 18", "venue": "Hard Rock Stadium, Miami"},
+        {"home": "Nigeria", "away": "Costa Rica", "date": "Jun 18", "venue": "Mercedes-Benz Stadium, Atlanta"},
+        {"home": "Brazil", "away": "Costa Rica", "date": "Jun 23", "venue": "SoFi Stadium, LA"},
+        {"home": "Nigeria", "away": "Turkey", "date": "Jun 23", "venue": "Levi's Stadium, San Francisco"}
+      ]
+    },
+    "E": {
+      "teams": ["Argentina", "Denmark", "Ukraine", "Iraq"],
+      "games": [
+        {"home": "Argentina", "away": "Denmark", "date": "Jun 13", "venue": "Hard Rock Stadium, Miami"},
+        {"home": "Ukraine", "away": "Iraq", "date": "Jun 13", "venue": "NRG Stadium, Houston"},
+        {"home": "Argentina", "away": "Ukraine", "date": "Jun 18", "venue": "MetLife Stadium, NJ"},
+        {"home": "Denmark", "away": "Iraq", "date": "Jun 18", "venue": "Gillette Stadium, Boston"},
+        {"home": "Argentina", "away": "Iraq", "date": "Jun 23", "venue": "Hard Rock Stadium, Miami"},
+        {"home": "Denmark", "away": "Ukraine", "date": "Jun 23", "venue": "NRG Stadium, Houston"}
+      ]
+    },
+    "F": {
+      "teams": ["France", "Colombia", "South Africa", "Saudi Arabia"],
+      "games": [
+        {"home": "France", "away": "Colombia", "date": "Jun 14", "venue": "MetLife Stadium, NJ"},
+        {"home": "South Africa", "away": "Saudi Arabia", "date": "Jun 14", "venue": "Lincoln Financial Field, Philadelphia"},
+        {"home": "France", "away": "South Africa", "date": "Jun 19", "venue": "AT&T Stadium, Dallas"},
+        {"home": "Colombia", "away": "Saudi Arabia", "date": "Jun 19", "venue": "Mercedes-Benz Stadium, Atlanta"},
+        {"home": "France", "away": "Saudi Arabia", "date": "Jun 24", "venue": "MetLife Stadium, NJ"},
+        {"home": "Colombia", "away": "South Africa", "date": "Jun 24", "venue": "Lincoln Financial Field, Philadelphia"}
+      ]
+    },
+    "G": {
+      "teams": ["England", "Japan", "Serbia", "Panama"],
+      "games": [
+        {"home": "England", "away": "Japan", "date": "Jun 14", "venue": "SoFi Stadium, LA"},
+        {"home": "Serbia", "away": "Panama", "date": "Jun 14", "venue": "Levi's Stadium, San Francisco"},
+        {"home": "England", "away": "Serbia", "date": "Jun 19", "venue": "AT&T Stadium, Dallas"},
+        {"home": "Japan", "away": "Panama", "date": "Jun 19", "venue": "NRG Stadium, Houston"},
+        {"home": "England", "away": "Panama", "date": "Jun 24", "venue": "SoFi Stadium, LA"},
+        {"home": "Japan", "away": "Serbia", "date": "Jun 24", "venue": "Levi's Stadium, San Francisco"}
+      ]
+    },
+    "H": {
+      "teams": ["Spain", "South Korea", "Tunisia", "Poland"],
+      "games": [
+        {"home": "Spain", "away": "South Korea", "date": "Jun 15", "venue": "Hard Rock Stadium, Miami"},
+        {"home": "Tunisia", "away": "Poland", "date": "Jun 15", "venue": "Gillette Stadium, Boston"},
+        {"home": "Spain", "away": "Tunisia", "date": "Jun 20", "venue": "Mercedes-Benz Stadium, Atlanta"},
+        {"home": "South Korea", "away": "Poland", "date": "Jun 20", "venue": "Lincoln Financial Field, Philadelphia"},
+        {"home": "Spain", "away": "Poland", "date": "Jun 25", "venue": "Hard Rock Stadium, Miami"},
+        {"home": "South Korea", "away": "Tunisia", "date": "Jun 25", "venue": "Gillette Stadium, Boston"}
+      ]
+    },
+    "I": {
+      "teams": ["Germany", "Uruguay", "Ghana", "Uzbekistan"],
+      "games": [
+        {"home": "Germany", "away": "Uruguay", "date": "Jun 15", "venue": "MetLife Stadium, NJ"},
+        {"home": "Ghana", "away": "Uzbekistan", "date": "Jun 15", "venue": "NRG Stadium, Houston"},
+        {"home": "Germany", "away": "Ghana", "date": "Jun 20", "venue": "AT&T Stadium, Dallas"},
+        {"home": "Uruguay", "away": "Uzbekistan", "date": "Jun 20", "venue": "Levi's Stadium, San Francisco"},
+        {"home": "Germany", "away": "Uzbekistan", "date": "Jun 25", "venue": "MetLife Stadium, NJ"},
+        {"home": "Uruguay", "away": "Ghana", "date": "Jun 25", "venue": "NRG Stadium, Houston"}
+      ]
+    },
+    "J": {
+      "teams": ["Portugal", "Iran", "Ivory Coast", "Qatar"],
+      "games": [
+        {"home": "Portugal", "away": "Iran", "date": "Jun 16", "venue": "SoFi Stadium, LA"},
+        {"home": "Ivory Coast", "away": "Qatar", "date": "Jun 16", "venue": "Mercedes-Benz Stadium, Atlanta"},
+        {"home": "Portugal", "away": "Ivory Coast", "date": "Jun 21", "venue": "Hard Rock Stadium, Miami"},
+        {"home": "Iran", "away": "Qatar", "date": "Jun 21", "venue": "Gillette Stadium, Boston"},
+        {"home": "Portugal", "away": "Qatar", "date": "Jun 26", "venue": "SoFi Stadium, LA"},
+        {"home": "Iran", "away": "Ivory Coast", "date": "Jun 26", "venue": "Mercedes-Benz Stadium, Atlanta"}
+      ]
+    },
+    "K": {
+      "teams": ["Belgium", "Australia", "Egypt", "Croatia"],
+      "games": [
+        {"home": "Belgium", "away": "Australia", "date": "Jun 16", "venue": "AT&T Stadium, Dallas"},
+        {"home": "Egypt", "away": "Croatia", "date": "Jun 16", "venue": "NRG Stadium, Houston"},
+        {"home": "Belgium", "away": "Egypt", "date": "Jun 21", "venue": "Lincoln Financial Field, Philadelphia"},
+        {"home": "Australia", "away": "Croatia", "date": "Jun 21", "venue": "Levi's Stadium, San Francisco"},
+        {"home": "Belgium", "away": "Croatia", "date": "Jun 26", "venue": "AT&T Stadium, Dallas"},
+        {"home": "Australia", "away": "Egypt", "date": "Jun 26", "venue": "NRG Stadium, Houston"}
+      ]
+    },
+    "L": {
+      "teams": ["Italy", "Switzerland", "Algeria", "Indonesia"],
+      "games": [
+        {"home": "Italy", "away": "Switzerland", "date": "Jun 17", "venue": "MetLife Stadium, NJ"},
+        {"home": "Algeria", "away": "Indonesia", "date": "Jun 17", "venue": "Estadio Akron, Guadalajara"},
+        {"home": "Italy", "away": "Algeria", "date": "Jun 22", "venue": "SoFi Stadium, LA"},
+        {"home": "Switzerland", "away": "Indonesia", "date": "Jun 22", "venue": "Estadio BBVA, Monterrey"},
+        {"home": "Italy", "away": "Indonesia", "date": "Jun 27", "venue": "MetLife Stadium, NJ"},
+        {"home": "Switzerland", "away": "Algeria", "date": "Jun 27", "venue": "Estadio Akron, Guadalajara"}
+      ]
+    }
+  }
+}
