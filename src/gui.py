@@ -6,15 +6,19 @@ from datetime import datetime
 
 from src.theme import apply_dark_theme, FG_DIM
 from src.statusbar import StatusBar
-from src.sACN import build_sacn_tab
-from src.tabs import build_generator_tab
 from src.ScanMockDevice import SacnConnection
 from src.goal import GoalController
-from src.groups import build_groups_tab
-from src.schedule import build_schedule_tab
-from src.flags import build_flags_tab
-from src.chases import build_chases_tab
-from src.country_editor import build_country_editor_tab
+from src.tabs import (
+    build_sacn_tab,
+    build_generator_tab,
+    build_groups_tab,
+    build_schedule_tab,
+    build_flags_tab,
+    build_chases_tab,
+    build_country_editor_tab,
+    build_readme_tab,
+    build_api_tab,
+)
 
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), os.pardir, "assets")
 DB_FILE = os.path.join(ASSETS_DIR, "worldcup_teams.json")
@@ -90,6 +94,8 @@ class App:
         self.chase = build_chases_tab(self.notebook, self.root, self._draw_swatches,
                                       lambda: self.team_colours)
         build_country_editor_tab(self.notebook, self.set_team_colours)
+        build_api_tab(self.notebook)
+        build_readme_tab(self.notebook)
 
         self.root.protocol("WM_DELETE_WINDOW", self._on_close)
         start_random()

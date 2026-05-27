@@ -5,16 +5,19 @@ from datetime import datetime
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 MAIN = os.path.join(ROOT, "main.py")
-OUT_DIR = os.path.join(ROOT, ".claude")
+OUT_DIR = os.path.join(ROOT, "Candidates")
 ASSETS_DIR = os.path.join(ROOT, "assets")
 
 timestamp = datetime.now().strftime("%Y%m%d.%H%M")
 exe_name = f"GOOOOOOOOAAAAALLLLLLLLLL_{timestamp}"
 
+README = os.path.join(ROOT, "README.md")
+
 data_files = []
 for f in os.listdir(ASSETS_DIR):
     if f.endswith(".json"):
         data_files.append(f"--add-data={os.path.join(ASSETS_DIR, f)};assets")
+data_files.append(f"--add-data={README};.")
 
 cmd = [
     sys.executable, "-m", "PyInstaller",
