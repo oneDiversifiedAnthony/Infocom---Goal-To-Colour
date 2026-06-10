@@ -22,23 +22,27 @@
 # Use of this software constitutes acceptance of your confidentiality, IP protection,
 # and contractual obligations with oneDiversified.
 
-"""sACN Config tab -- IP entry, channel mapping grid, connect/disconnect, CID display.
+"""sACN Config tab -- IP entry, channel mapping grid, connect/disconnect, CID display,
+and live DMX fader banks for Universe 1 and Universe 2.
 
 Handles events:
     - Connect reads the channel map and destination IP, then starts sACN output.
     - Disconnect stops the sACN sender.
     - Copy button copies the source CID to the clipboard.
+    - Fader changes push updated DMX values to the sACN sender in real time.
 
 Key design decisions:
     - Blank IP defaults to multicast for zero-config setup on local networks.
     - Channel map is editable per-colour (R/G/B channels + universe) for flexible
       fixture patching across multiple universes.
     - on_connect callback allows the App to auto-switch to the Flags tab after connection.
+    - Universe 1 faders are grouped as 3 lamps × RGB for clear fixture identification.
 """
 
 import tkinter as tk
 import socket
 from src.theme import FG_DIM
+from src.constants import DMX_CHANNEL_COUNT
 
 
 def _get_local_ips():
@@ -56,7 +60,20 @@ def _get_local_ips():
     return ips
 
 
-def build_sacn_tab(notebook, sacn, on_connect=None):
+def _intensity_colour(value, channel_type):
+    """Return a hex colour reflecting intensity for a given channel type (r/g/b or generic)."""
+    v = max(0, min(255, value))
+    if channel_type == "r":
+        return f"#{v:02x}0000"
+    elif channel_type == "g":
+        return f"#00{v:02x}00"
+    elif channel_type == "b":
+        return f"#0000{v:02x}"
+    # generic grey
+    return f"#{v:02x}{v:02x}{v:02x}"
+
+
+def build_sacn_tab(notebook, sacn, countries_db=None, on_connect=None):
     tab = tk.Frame(notebook)
     notebook.add(tab, text="sACN Config")
 
@@ -164,3 +181,296 @@ def build_sacn_tab(notebook, sacn, on_connect=None):
 
     for addr in _get_local_ips():
         tk.Label(ip_list_frame, text=addr, font=("Consolas", 10), fg=FG_DIM, anchor="w").pack(anchor="w")
+
+    # ── DMX Fader Banks ─────────────────────────────────────────────────
+    FADERS_PER_UNI = 50
+    POLL_MS = 100
+
+    fader_container = tk.Frame(tab)
+    fader_container.pack(fill="both", expand=True, padx=8, pady=(5, 8))
+
+    # Track fader state per universe: {universe: [IntVar * FADERS_PER_UNI]}
+    fader_vars = {}
+    fader_canvases = {}
+
+    country_name_labels = {}  # {(universe, channel_idx): Label}
+    active_country = [None]
+
+    def _build_fader_bank(parent, universe, labels, expand=True, channel_names=None):
+        """Build a bank of vertical faders for a universe.
+
+        labels: list of (channel_number, display_label, channel_type) tuples.
+        channel_names: optional dict {channel_number: country_name} for labels below faders.
+        """
+        frame = tk.LabelFrame(parent, text=f"Universe {universe}",
+                               font=("Segoe UI", 10, "bold"), padx=4, pady=4)
+        frame.pack(side="left", fill="both", expand=expand, padx=(0, 4))
+
+        # Scrollable inner frame
+        name_height = 80 if channel_names else 0
+        scroll_canvas = tk.Canvas(frame, highlightthickness=0, height=220 + name_height)
+        scrollbar = tk.Scrollbar(frame, orient="horizontal", command=scroll_canvas.xview)
+        inner = tk.Frame(scroll_canvas)
+
+        inner.bind("<Configure>",
+                   lambda e: scroll_canvas.configure(scrollregion=scroll_canvas.bbox("all")))
+        scroll_canvas.create_window((0, 0), window=inner, anchor="nw")
+        scroll_canvas.configure(xscrollcommand=scrollbar.set)
+
+        scroll_canvas.pack(fill="both", expand=True)
+        scrollbar.pack(fill="x")
+
+        num_faders = len(labels)
+        uni_vars = [None] * FADERS_PER_UNI
+        uni_canvases = [None] * FADERS_PER_UNI
+
+        # Track resizable widgets for dynamic sizing
+        all_sliders = []
+        all_intensity = []
+        all_ch_labels = []
+        all_val_labels = []
+        all_name_canvases = []
+        all_cols = []
+
+        for ch_num, display_label, ch_type in labels:
+            idx = ch_num - 1
+            col = tk.Frame(inner)
+            col.pack(side="left", padx=1)
+            all_cols.append(col)
+
+            # Channel label at top
+            ch_label = tk.Label(col, text=display_label, font=("Consolas", 6),
+                     fg="#aaaaaa")
+            ch_label.pack()
+            all_ch_labels.append(ch_label)
+
+            var = tk.IntVar(value=0)
+            uni_vars[idx] = var
+
+            # Intensity canvas
+            intensity_cv = tk.Canvas(col, width=14, height=10,
+                                      bg="#000000", highlightthickness=0)
+            intensity_cv.pack(pady=(1, 0))
+            uni_canvases[idx] = (intensity_cv, ch_type)
+            all_intensity.append(intensity_cv)
+
+            # Fader
+            slider = tk.Scale(col, from_=255, to=0, orient="vertical",
+                              variable=var, length=140, width=14,
+                              sliderlength=10, showvalue=False,
+                              font=("Consolas", 6),
+                              troughcolor="#2a2a2a", activebackground="#ffcc00")
+            slider.pack()
+            all_sliders.append(slider)
+
+            # Scroll wheel support
+            def _on_scroll(event, v=var):
+                delta = 1 if event.delta > 0 else -1
+                v.set(max(0, min(255, v.get() + delta)))
+
+            slider.bind("<MouseWheel>", _on_scroll)
+
+            # Glow on hover
+            def _on_enter(event, s=slider):
+                s.config(troughcolor="#444444")
+
+            def _on_leave(event, s=slider):
+                s.config(troughcolor="#2a2a2a")
+
+            slider.bind("<Enter>", _on_enter)
+            slider.bind("<Leave>", _on_leave)
+
+            # Value label
+            val_label = tk.Label(col, text="0", font=("Consolas", 6), fg="#888888")
+            val_label.pack()
+            all_val_labels.append(val_label)
+
+            # Country name (rotated 90°) below fader
+            name_cv = None
+            if channel_names and ch_num in channel_names:
+                name = channel_names[ch_num]
+                name_cv = tk.Canvas(col, width=16, height=70,
+                                     highlightthickness=0)
+                name_cv.pack()
+                name_cv.create_text(8, 35, text=name, fill="#ffffff",
+                                    font=("Segoe UI", 6), angle=90, anchor="center")
+                country_name_labels[(universe, idx)] = name_cv
+            elif channel_names:
+                name_cv = tk.Canvas(col, width=16, height=70, highlightthickness=0)
+                name_cv.pack()
+            if name_cv:
+                all_name_canvases.append((name_cv, ch_num, idx))
+
+            def _on_change(*_args, v=var, lbl=val_label, cv=intensity_cv, ct=ch_type, u=universe, i=idx):
+                val = v.get()
+                lbl.config(text=str(val))
+                cv.config(bg=_intensity_colour(val, ct))
+                _push_universe(u)
+
+            var.trace_add("write", _on_change)
+
+        # Dynamic resize based on container width
+        resize_debounce = [None]
+
+        def _on_frame_resize(event):
+            if resize_debounce[0]:
+                frame.after_cancel(resize_debounce[0])
+            resize_debounce[0] = frame.after(150, lambda: _apply_sizes(event.width))
+
+        def _apply_sizes(container_w):
+            if num_faders == 0 or container_w < 20:
+                return
+            col_w = max(10, (container_w - 20) // num_faders)
+            fader_w = max(8, col_w - 4)
+            intensity_w = max(8, col_w - 4)
+            font_size = max(5, min(9, col_w // 4))
+            name_font = max(5, min(8, col_w // 3))
+            name_cv_w = max(10, col_w - 2)
+
+            for s in all_sliders:
+                s.config(width=fader_w)
+            for cv in all_intensity:
+                cv.config(width=intensity_w)
+            for lbl in all_ch_labels:
+                lbl.config(font=("Consolas", font_size))
+            for lbl in all_val_labels:
+                lbl.config(font=("Consolas", font_size))
+            for ncv, ch_num, idx in all_name_canvases:
+                ncv.config(width=name_cv_w)
+                ncv.delete("all")
+                cname = channel_names.get(ch_num, "") if channel_names else ""
+                if cname:
+                    fill = "#ffcc00" if cname == active_country[0] else "#ffffff"
+                    fnt = ("Segoe UI", name_font, "bold") if cname == active_country[0] else ("Segoe UI", name_font)
+                    ncv.create_text(name_cv_w // 2, 35, text=cname, fill=fill,
+                                    font=fnt, angle=90, anchor="center")
+
+        scroll_canvas.bind("<Configure>", _on_frame_resize)
+
+        fader_vars[universe] = uni_vars
+        fader_canvases[universe] = uni_canvases
+        return frame
+
+    def _push_universe(universe):
+        """Send current fader values for a universe to sACN."""
+        if not sacn.sender:
+            return
+        if universe not in sacn._active_universes:
+            return
+        uni_v = fader_vars.get(universe)
+        if not uni_v:
+            return
+        data = [0] * DMX_CHANNEL_COUNT
+        for i in range(FADERS_PER_UNI):
+            if uni_v[i] is not None:
+                data[i] = uni_v[i].get()
+        try:
+            output = sacn.sender[universe]
+            if output is not None:
+                output.dmx_data = tuple(data)
+        except (KeyError, TypeError):
+            pass
+
+    def _update_faders_from_output():
+        """Poll sACN output and update fader positions to reflect current values."""
+        if sacn.sender:
+            for universe, uni_v in fader_vars.items():
+                if universe not in sacn._active_universes:
+                    continue
+                try:
+                    output = sacn.sender[universe]
+                    if output is None or not output.dmx_data:
+                        continue
+                except (KeyError, TypeError):
+                    continue
+                dmx = output.dmx_data
+                for i in range(FADERS_PER_UNI):
+                    if uni_v[i] is not None:
+                        current = uni_v[i].get()
+                        actual = dmx[i] if i < len(dmx) else 0
+                        if current != actual:
+                            uni_v[i].set(actual)
+        tab.after(POLL_MS, _update_faders_from_output)
+
+    # Universe 1: 3 lamps × RGB (channels 1-9 only)
+    u1_labels = []
+    lamp_colours = ["r", "g", "b"]
+    for lamp in range(3):
+        for ci, colour in enumerate(lamp_colours):
+            ch = lamp * 3 + ci + 1
+            u1_labels.append((ch, f"L{lamp+1}\n{colour.upper()}", colour))
+
+    # Build channel→country mapping for Universe 2
+    u2_channel_names = {}
+    if countries_db:
+        for team_name, team_data in countries_db.get("teams", {}).items():
+            trigger = team_data.get("trigger")
+            if trigger and trigger.get("universe") == 2:
+                u2_channel_names[trigger["channel"]] = team_name
+
+    # Universe 2: generic channels 1-50 with country names
+    u2_labels = [(ch, f"{ch}", "x") for ch in range(1, FADERS_PER_UNI + 1)]
+
+    u1_frame = _build_fader_bank(fader_container, 1, u1_labels, expand=False)
+    _build_fader_bank(fader_container, 2, u2_labels, expand=True,
+                      channel_names=u2_channel_names)
+
+    # Combined colour swatches for each lamp in Universe 1
+    swatch_frame = tk.Frame(u1_frame)
+    swatch_frame.pack(fill="x", pady=(4, 0))
+    lamp_swatches = []
+    for lamp in range(3):
+        sf = tk.Frame(swatch_frame)
+        sf.pack(side="left", expand=True, fill="x", padx=2)
+        tk.Label(sf, text=f"L{lamp+1}", font=("Consolas", 6), fg="#aaaaaa").pack(side="left")
+        cv = tk.Canvas(sf, width=30, height=14, bg="#000000", highlightthickness=1,
+                       highlightbackground="#333333")
+        cv.pack(side="left", fill="x", expand=True, padx=(2, 0))
+        lamp_swatches.append(cv)
+
+    def _update_lamp_swatches(*_args):
+        uni_v = fader_vars.get(1)
+        if not uni_v:
+            return
+        for lamp in range(3):
+            r_var = uni_v[lamp * 3]
+            g_var = uni_v[lamp * 3 + 1]
+            b_var = uni_v[lamp * 3 + 2]
+            r = r_var.get() if r_var else 0
+            g = g_var.get() if g_var else 0
+            b = b_var.get() if b_var else 0
+            lamp_swatches[lamp].config(bg=f"#{r:02x}{g:02x}{b:02x}")
+
+    # Hook swatch update to each U1 fader
+    uni1_vars = fader_vars.get(1, [])
+    for i in range(9):
+        if uni1_vars[i] is not None:
+            uni1_vars[i].trace_add("write", _update_lamp_swatches)
+
+    def _update_country_name(name):
+        # Reset previous active label to white
+        if active_country[0]:
+            for (uni, idx), cv in country_name_labels.items():
+                ch = idx + 1
+                cname = u2_channel_names.get(ch, "")
+                if cname == active_country[0]:
+                    cw = max(10, cv.winfo_width())
+                    cv.delete("all")
+                    cv.create_text(cw // 2, 35, text=cname, fill="#ffffff",
+                                   font=("Segoe UI", 6), angle=90, anchor="center")
+        # Highlight new active label in yellow
+        active_country[0] = name
+        if name:
+            for (uni, idx), cv in country_name_labels.items():
+                ch = idx + 1
+                cname = u2_channel_names.get(ch, "")
+                if cname == name:
+                    cw = max(10, cv.winfo_width())
+                    cv.delete("all")
+                    cv.create_text(cw // 2, 35, text=cname, fill="#ffcc00",
+                                   font=("Segoe UI", 6, "bold"), angle=90, anchor="center")
+
+    # Start polling
+    tab.after(POLL_MS, _update_faders_from_output)
+
+    return _update_country_name, _connect

@@ -24,31 +24,38 @@
 
 """API tab -- fetch live sports data from external endpoints with auto-refresh.
 
-Handles events:
-    - Get button performs a single HTTP fetch in a background thread.
-    - Auto Get starts a repeating fetch cycle with configurable interval.
-    - Stop Auto cancels the auto-refresh timer and resets the progress bar.
-
-Key design decisions:
-    - Threading for HTTP requests prevents UI freeze during network calls.
-    - Mutable lists (auto_timer_id[0]) used because closures cannot rebind
-      nonlocal ints in nested functions within tkinter callbacks.
-    - Progress bar ticks every 100ms for smooth visual countdown between fetches.
+Orchestrates the sub-tabs (Raw, Tree, Table, Changes, Call Log) and handles
+URL building, HTTP fetching, auto-refresh timing, and rate-limit display.
 """
 
+import datetime
+import json
+import os
 import tkinter as tk
 from tkinter import ttk
 import threading
 import urllib.request
 import urllib.error
 
+from src.tabs.api_raw import build_raw_subtab
+from src.tabs.api_tree import build_tree_subtab
+from src.tabs.api_table import build_table_subtab
+from src.tabs.api_changes import build_changes_subtab
+from src.tabs.api_calllog import build_calllog_subtab
 
-DEFAULT_URL = "https://cricket.sportmonks.com/api/v2.0/livescores?api_token={{api_token}}&include="
+
+DEFAULT_URL = "https://api.sportmonks.com/v3/football/livescores/inplay?api_token={{api_token}}"
+CALL_LOG_DIR = os.path.join(
+    os.path.dirname(__file__), os.pardir, os.pardir, "Call Log"
+)
+CALL_LOG_ROTATE_MINUTES = 60
 
 
-def build_api_tab(notebook):
+def build_api_tab(notebook, status_bar=None):
     tab = tk.Frame(notebook)
     notebook.add(tab, text="API")
+
+    os.makedirs(CALL_LOG_DIR, exist_ok=True)
 
     # ── URL ────────────────────────────────────────────────────────────
     url_frame = tk.Frame(tab)
@@ -61,7 +68,7 @@ def build_api_tab(notebook):
     token_frame = tk.Frame(tab)
     token_frame.pack(fill="x", padx=12, pady=4)
     tk.Label(token_frame, text="API Token:", font=("Segoe UI", 10)).pack(side="left", padx=(0, 6))
-    token_var = tk.StringVar(value="SgWZqK22kfrWuT013yqUZG6U0W7xEovKeZz1SWIIb9OArYUFp6XESiDAiTyk")
+    token_var = tk.StringVar(value="PjLbP92xw5PErBT46aKaLwnBsibPrxQNSqAKGr849URVxOaCEVKyW117BpWZ")
     tk.Entry(token_frame, textvariable=token_var, font=("Consolas", 9), width=50).pack(side="left", fill="x", expand=True)
 
     # ── Controls ───────────────────────────────────────────────────────
@@ -82,16 +89,100 @@ def build_api_tab(notebook):
         token = token_var.get().strip()
         return url.replace("{{api_token}}", token)
 
+    # ── Rate limit state ──────────────────────────────────────────────
+    RATE_LIMIT_TOTAL = 2500
+    rate_flash_id = [None]
+    rate_flash_visible = [True]
+
+    # Call log file rotation: new file every 60 minutes, date/time stamped
+    current_log_file = [None]
+    current_log_hour = [None]
+
+    def _get_call_log_file():
+        """Return the current log file path, rotating every 60 minutes."""
+        now = datetime.datetime.now()
+        hour_key = now.strftime("%Y%m%d_%H")
+        if hour_key != current_log_hour[0]:
+            current_log_hour[0] = hour_key
+            filename = f"callcounter_{now.strftime('%Y-%m-%d_%H%M')}.log"
+            current_log_file[0] = os.path.join(CALL_LOG_DIR, filename)
+        return current_log_file[0]
+
+    def _append_call_log(remaining):
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        log_file = _get_call_log_file()
+        with open(log_file, "a", encoding="utf-8") as f:
+            f.write(f"{timestamp}, tokens_remaining: {remaining}\n")
+
+    def _stop_rate_flash():
+        if rate_flash_id[0]:
+            tab.after_cancel(rate_flash_id[0])
+            rate_flash_id[0] = None
+        rate_flash_visible[0] = True
+
+    def _rate_flash_tick():
+        rate_flash_visible[0] = not rate_flash_visible[0]
+        if rate_flash_visible[0]:
+            rate_style.configure("Rate.Horizontal.TProgressbar", background="#ff0000")
+        else:
+            rate_style.configure("Rate.Horizontal.TProgressbar", background="#333333")
+        rate_flash_id[0] = tab.after(500, _rate_flash_tick)
+
+    def _update_rate_limit(data):
+        if not isinstance(data, dict):
+            return
+        rl = data.get("rate_limit")
+        if not isinstance(rl, dict):
+            return
+
+        remaining = rl.get("remaining", 0)
+        resets_in = rl.get("resets_in_seconds", 0)
+
+        _append_call_log(remaining)
+
+        pct = (remaining / RATE_LIMIT_TOTAL) * 100
+
+        rate_label.config(text=f"Rate Limit: {remaining}/{RATE_LIMIT_TOTAL}  ({pct:.1f}%)")
+        minutes = resets_in // 60
+        seconds = resets_in % 60
+        rate_reset_label.config(text=f"Resets in {minutes}m {seconds}s")
+
+        if resets_in > 0 and remaining > 0:
+            max_interval = resets_in / remaining
+            rate_max_speed_label.config(text=f"Max speed: 1 call every {max_interval:.1f}s")
+        else:
+            rate_max_speed_label.config(text="")
+
+        rate_progress["value"] = pct
+        _stop_rate_flash()
+        if pct < 10:
+            rate_style.configure("Rate.Horizontal.TProgressbar", background="#ff0000")
+            _rate_flash_tick()
+        elif pct < 25:
+            rate_style.configure("Rate.Horizontal.TProgressbar", background="#ff0000")
+        elif pct < 50:
+            rate_style.configure("Rate.Horizontal.TProgressbar", background="#ff6600")
+        else:
+            rate_style.configure("Rate.Horizontal.TProgressbar", background="#28a745")
+
+        if status_bar:
+            status_bar.update_rate_limit(remaining, RATE_LIMIT_TOTAL, resets_in)
+
+        try:
+            from src.tabs.webserver import update_state as _ws_update
+            _ws_update(api_remaining=f"{remaining} / {RATE_LIMIT_TOTAL}")
+        except ImportError:
+            pass
+
+    # ── Fetch logic ───────────────────────────────────────────────────
     def _fetch():
         final_url = _build_url()
         status_label.config(text="Fetching...", fg="#0066cc")
-        result_text.config(state="normal")
-        result_text.delete("1.0", "end")
-        result_text.config(state="disabled")
+        raw_clear()
 
         def _do_request():
             try:
-                req = urllib.request.Request(final_url)
+                req = urllib.request.Request(final_url, headers={"User-Agent": "Mozilla/5.0"})
                 with urllib.request.urlopen(req, timeout=15) as resp:
                     body = resp.read().decode("utf-8", errors="replace")
                 tab.after(0, lambda: _show_result(body))
@@ -102,39 +193,49 @@ def build_api_tab(notebook):
                 except Exception:
                     pass
                 msg = f"HTTP Error {e.code}: {e.reason}\n\n{body}"
-                tab.after(0, lambda: _show_error(msg))
+                code = e.code
+                tab.after(0, lambda: _show_error(msg, code))
             except Exception as e:
-                tab.after(0, lambda: _show_error(str(e)))
+                msg = str(e)
+                tab.after(0, lambda: _show_error(msg))
 
-        threading.Thread(target=_do_request, daemon=True).start()  # why: background thread prevents UI freeze during network I/O
+        threading.Thread(target=_do_request, daemon=True).start()
 
     def _show_result(text):
-        result_text.config(state="normal")
-        result_text.delete("1.0", "end")
-        result_text.insert("1.0", text)
-        result_text.config(state="disabled")
+        parsed = None
+        try:
+            parsed = json.loads(text)
+        except (json.JSONDecodeError, ValueError):
+            pass
+
+        raw_update(parsed, text)
+        tree_update(parsed, text)
+        table_update(parsed)
+
+        if parsed is not None:
+            _update_rate_limit(parsed)
+            changes_check(parsed)
+
         status_label.config(text="OK", fg="green")
 
-    def _show_error(msg):
-        result_text.config(state="normal")
-        result_text.delete("1.0", "end")
-        result_text.insert("1.0", f"ERROR:\n{msg}")
-        result_text.config(state="disabled")
+    def _show_error(msg, http_code=None):
+        raw_error(msg)
+        tree_error(msg)
         status_label.config(text="Error", fg="red")
+        if http_code == 429:
+            _stop_auto()
 
-    # Get button
+    # ── Get / Auto controls ───────────────────────────────────────────
     tk.Button(ctrl_frame, text="Get", font=("Segoe UI", 10, "bold"),
               bg="#0066cc", fg="white", padx=16, pady=2,
               command=_fetch).pack(side="left", padx=(0, 12))
 
-    # Auto get controls
     ttk.Separator(ctrl_frame, orient="vertical").pack(side="left", fill="y", padx=8)
     tk.Label(ctrl_frame, text="Auto every", font=("Segoe UI", 10)).pack(side="left", padx=(4, 4))
-    interval_var = tk.IntVar(value=10)
-    interval_spin = tk.Spinbox(ctrl_frame, from_=1, to=30, textvariable=interval_var,
-                                font=("Consolas", 10), width=3, justify="center")
-    interval_spin.pack(side="left")
-    tk.Label(ctrl_frame, text="sec", font=("Segoe UI", 10)).pack(side="left", padx=(2, 8))
+    interval_var = tk.IntVar(value=1400)
+    tk.Spinbox(ctrl_frame, from_=100, to=60000, increment=100, textvariable=interval_var,
+               font=("Consolas", 10), width=6, justify="center").pack(side="left")
+    tk.Label(ctrl_frame, text="ms", font=("Segoe UI", 10)).pack(side="left", padx=(2, 8))
 
     def _start_auto():
         if auto_running[0]:
@@ -158,7 +259,7 @@ def build_api_tab(notebook):
         if not auto_running[0]:
             return
         _fetch()
-        interval_ms = max(1, interval_var.get()) * 1000
+        interval_ms = max(100, interval_var.get())
         auto_interval[0] = interval_ms
         auto_elapsed[0] = 0
         progress["value"] = 0
@@ -172,7 +273,7 @@ def build_api_tab(notebook):
         pct = min(100, (auto_elapsed[0] / auto_interval[0]) * 100)
         progress["value"] = pct
         if auto_elapsed[0] < auto_interval[0]:
-            auto_progress_id[0] = tab.after(100, _tick_progress)  # why: 100ms tick gives smooth visual countdown
+            auto_progress_id[0] = tab.after(100, _tick_progress)
 
     auto_btn = tk.Button(ctrl_frame, text="Auto Get", font=("Segoe UI", 10, "bold"),
                          bg="#28a745", fg="white", padx=12, pady=2,
@@ -181,17 +282,41 @@ def build_api_tab(notebook):
 
     status_label.pack(side="right", padx=8)
 
-    # ── Progress bar ───────────────────────────────────────────────────
-    progress = ttk.Progressbar(tab, length=200, mode="determinate", maximum=100)
-    progress.pack(fill="x", padx=12, pady=(4, 6))
+    # ── Auto countdown progress bar ──────────────────────────────────
+    auto_style = ttk.Style()
+    auto_style.configure("Auto.Horizontal.TProgressbar", troughcolor="#333333",
+                         background="#0066cc")
+    progress = ttk.Progressbar(tab, length=200, mode="determinate", maximum=100,
+                               style="Auto.Horizontal.TProgressbar")
+    progress.pack(fill="x", padx=12, pady=(4, 2))
 
-    # ── Results ────────────────────────────────────────────────────────
-    result_frame = tk.LabelFrame(tab, text="Response", font=("Segoe UI", 10), padx=6, pady=6)
-    result_frame.pack(fill="both", expand=True, padx=12, pady=(0, 12))
+    # ── Rate Limit ────────────────────────────────────────────────────
+    rate_frame = tk.Frame(tab)
+    rate_frame.pack(fill="x", padx=12, pady=(2, 2))
+    rate_label = tk.Label(rate_frame, text="Rate Limit: --", font=("Segoe UI", 10, "bold"),
+                          fg="#cc0000")
+    rate_label.pack(side="left")
+    rate_max_speed_label = tk.Label(rate_frame, text="", font=("Segoe UI", 9, "bold"), fg="#0066cc")
+    rate_max_speed_label.pack(side="right", padx=(8, 0))
+    rate_reset_label = tk.Label(rate_frame, text="", font=("Segoe UI", 9), fg="#888888")
+    rate_reset_label.pack(side="right")
 
-    result_text = tk.Text(result_frame, wrap="word", font=("Consolas", 9),
-                          state="disabled", cursor="arrow")
-    result_scroll = tk.Scrollbar(result_frame, command=result_text.yview)
-    result_text.config(yscrollcommand=result_scroll.set)
-    result_scroll.pack(side="right", fill="y")
-    result_text.pack(fill="both", expand=True)
+    rate_style = ttk.Style()
+    rate_style.configure("Rate.Horizontal.TProgressbar", troughcolor="#333333",
+                         background="#28a745")
+    rate_progress = ttk.Progressbar(tab, length=200, mode="determinate", maximum=100,
+                                    style="Rate.Horizontal.TProgressbar")
+    rate_progress.pack(fill="x", padx=12, pady=(0, 6))
+
+    # ── Results (sub-tabbed) ─────────────────────────────────────────
+    result_notebook = ttk.Notebook(tab)
+    result_notebook.pack(fill="both", expand=True, padx=12, pady=(0, 12))
+
+    # Build sub-tabs
+    _, raw_update, raw_error, raw_clear = build_raw_subtab(result_notebook)
+    _, tree_update, tree_error = build_tree_subtab(result_notebook)
+    _, table_update = build_table_subtab(result_notebook)
+    _, changes_check = build_changes_subtab(result_notebook, CALL_LOG_DIR)
+    build_calllog_subtab(result_notebook, CALL_LOG_DIR, tab)
+
+    return _start_auto

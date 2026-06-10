@@ -38,7 +38,7 @@ DEFAULT_TEAM_COLOURS = [[128, 128, 128]] * 3  # why: neutral grey placeholder wh
 
 # ── Timing (milliseconds unless noted) ────────────────────────────────
 RANDOM_CYCLE_INTERVAL_MS = 3000         # why: fast enough to confirm sACN output, slow enough to read RGB values
-TRIGGER_PULSE_DURATION_MS = 5000        # why: 5-second trigger pulse matches typical sports-broadcast cue length
+TRIGGER_PULSE_DURATION_MS = 30000       # why: 30-second trigger pulse then blackout
 TRIGGER_PROGRESS_TICK_MS = 50           # why: 50ms tick gives smooth progress-bar animation (20 fps)
 FLASH_INTERVAL_MS = 400                 # why: 400ms on/off cycle is visible but not seizure-inducing
 DEFAULT_GOAL_DURATION_SEC = 30          # why: 30-second goal celebration matches typical broadcast replay window

@@ -28,7 +28,11 @@ Launches the main App window which orchestrates all tabs, sACN output,
 and goal-trigger functionality.
 """
 
-from src.gui import App
+from src.DependancyCheck import check_and_install
 
 if __name__ == "__main__":
+    if not check_and_install():
+        raise SystemExit(1)
+
+    from src.gui import App
     App()

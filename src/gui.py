@@ -64,13 +64,14 @@ from src.constants import (
 from src.tabs import (
     build_sacn_tab,
     build_generator_tab,
-    build_groups_tab,
-    build_schedule_tab,
+    build_timeline_tab,
     build_flags_tab,
     build_chases_tab,
     build_country_editor_tab,
     build_readme_tab,
     build_api_tab,
+    build_sounds_tab,
+    build_webserver_tab,
 )
 
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), os.pardir, "assets")
@@ -128,7 +129,9 @@ class App:
         self.notebook.pack(fill="both", expand=True, padx=8, pady=8)
 
         # Tabs
-        build_sacn_tab(self.notebook, self.sacn, on_connect=self._switch_to_flags)
+        self._update_sacn_country, self._sacn_connect = build_sacn_tab(
+            self.notebook, self.sacn, self.countries_db,
+            on_connect=self._switch_to_flags)
 
         self.gen_team_label, self.swatches, self.swatch_labels, start_random = \
             build_generator_tab(
@@ -140,15 +143,38 @@ class App:
         self.goal = GoalController(self.root, self._draw_swatches,
                                    lambda t: self.gen_team_label.config(text=t))
 
-        build_groups_tab(self.notebook, self.db, self.set_team_colours)
-        build_schedule_tab(self.notebook, self.db, self.set_team_colours, self._goal_pressed)
-        build_flags_tab(self.notebook, self.db, self.set_team_colours)
+        build_timeline_tab(self.notebook, self.db, self.set_team_colours, self._goal_pressed)
+        build_flags_tab(self.notebook, self.db, self._goal_pressed)
         self._flags_tab_index = self.notebook.index("end") - 1
         self.chase = build_chases_tab(self.notebook, self.root, self._draw_swatches,
                                       lambda: self.team_colours)
         build_country_editor_tab(self.notebook, self.set_team_colours)
-        build_api_tab(self.notebook)
+        self._start_api_auto = build_api_tab(self.notebook, self.status_bar)
+        self._fire_sound_event = build_sounds_tab(self.notebook, self.countries_db)
         build_readme_tab(self.notebook)
+
+        # Web server tab -- pass schedule data
+        all_games = []
+        for group_key, group in self.db["groups"].items():
+            for game in group["games"]:
+                all_games.append({**game, "group": group_key})
+        self._update_web_state = build_webserver_tab(
+            self.notebook,
+            goal_pressed_cb=self._goal_pressed,
+            set_colours_cb=self.set_team_colours)
+        self._update_web_state(games=all_games, teams=self.db.get("teams", {}))
+
+        # Auto-start sACN connection and API auto-get
+        self._sacn_connect()
+        self._start_api_auto()
+
+        # Poll sACN connection status for footer indicator
+        def _poll_sacn_status():
+            connected = self.sacn.sender is not None
+            self.status_bar.update_sacn_status(connected)
+            self._update_web_state(sacn_connected=connected)
+            self.root.after(2000, _poll_sacn_status)
+        _poll_sacn_status()
 
         self.root.protocol("WM_DELETE_WINDOW", self._on_close)
         start_random()
@@ -169,20 +195,29 @@ class App:
             self.swatch_labels[i].config(text=f"{rgb[0]}, {rgb[1]}, {rgb[2]}")
         self.sacn.send_rgb(colours)
         self.status_bar.update(colours, self.team_name, self.team_colours, self.countries_db)
+        if hasattr(self, '_update_web_state'):
+            self._update_web_state(colours=colours, team_name=self.team_name or "",
+                                   goal_active=self.goal.is_active)
 
     def set_team_colours(self, colours, country_name=""):
         self.team_colours = colours
         self.team_name = country_name
         self.gen_team_label.config(text=country_name)
         self._draw_swatches(colours)
+        self._update_sacn_country(country_name)
         if country_name:
             self._fire_trigger(country_name)
 
     def _goal_pressed(self, colours, country_name):
+        print(f"[App] _goal_pressed called: {country_name}")
         self.team_colours = colours
         self.team_name = country_name
+        self.gen_team_label.config(text=country_name)
+        self._draw_swatches(colours)
+        self._update_sacn_country(country_name)
         self.goal.trigger(colours, country_name)
         self._fire_trigger(country_name)
+        self._fire_sound_event("Goal by Team", country_name)
 
     def _fire_trigger(self, country_name):
         team = self.countries_db.get("teams", {}).get(country_name, {})
@@ -233,8 +268,12 @@ class App:
             if t:
                 self.sacn.send_trigger(t["universe"], t["channel"], 0)
         self._active_trigger = None
+        self.goal.stop()
         self.status_bar.trigger_label.config(text="", fg=FG_DIM)
         self.status_bar.trigger_progress["value"] = 0
+        # Blackout colour output
+        black = [[0, 0, 0]] * 3
+        self._draw_swatches(black)
 
     def _on_close(self):
         self.sacn.stop()

@@ -111,9 +111,10 @@ class GoalController:
 
     def _flash(self, show_on):
         if time.time() >= self.end_time:
-            # Finished — show team colours one last time
+            # Finished — blackout
             self.set_label(self.team_name or "Random")
-            self.draw_swatches(self.colours)
+            blackout = [[0, 0, 0] for _ in self.colours]
+            self.draw_swatches(blackout)
             self.timer_id = None
             return
 
