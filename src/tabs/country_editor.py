@@ -40,8 +40,10 @@ import tkinter as tk
 from tkinter import ttk, colorchooser
 import json
 import os
+import threading
 
 COUNTRIES_FILE = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "assets", "countries.json")
+ANTHEMS_DIR = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "Sound Files", "Anthems")
 
 SWATCH_SIZE = 28
 
@@ -67,6 +69,8 @@ COL_RGB3 = 6
 COL_UNIV = 7
 COL_CH = 8
 COL_SEND = 9
+COL_ANTHEM = 10
+COL_PLAY = 11
 
 
 def build_country_editor_tab(notebook, set_team_colours_cb):
@@ -75,7 +79,36 @@ def build_country_editor_tab(notebook, set_team_colours_cb):
 
     data = _load_countries()
 
-    # Scrollable area
+    # Track currently playing anthem for stop
+    _playing = [None]  # pygame Sound object
+
+    # ── Fixed header ────────────────────────────────────────────────────
+    header_frame = tk.Frame(tab)
+    header_frame.pack(fill="x", padx=12, pady=(6, 0))
+
+    header_grid = tk.Frame(header_frame)
+    header_grid.pack(fill="x")
+
+    tk.Label(header_grid, text="Country", font=("Segoe UI", 10, "bold"),
+             anchor="w", width=16).grid(row=0, column=COL_NAME, sticky="w", padx=(0, 8))
+    tk.Label(header_grid, text="Colour 1", font=("Segoe UI", 10, "bold"),
+             anchor="center").grid(row=0, column=COL_SW1, columnspan=2, padx=4)
+    tk.Label(header_grid, text="Colour 2", font=("Segoe UI", 10, "bold"),
+             anchor="center").grid(row=0, column=COL_SW2, columnspan=2, padx=4)
+    tk.Label(header_grid, text="Colour 3", font=("Segoe UI", 10, "bold"),
+             anchor="center").grid(row=0, column=COL_SW3, columnspan=2, padx=4)
+    tk.Label(header_grid, text="Univ", font=("Segoe UI", 10, "bold"),
+             anchor="center").grid(row=0, column=COL_UNIV, padx=4)
+    tk.Label(header_grid, text="Ch", font=("Segoe UI", 10, "bold"),
+             anchor="center").grid(row=0, column=COL_CH, padx=4)
+    tk.Label(header_grid, text="", width=5).grid(row=0, column=COL_SEND)
+    tk.Label(header_grid, text="Anthem", font=("Segoe UI", 10, "bold"),
+             anchor="w").grid(row=0, column=COL_ANTHEM, sticky="w", padx=4)
+    tk.Label(header_grid, text="", width=3).grid(row=0, column=COL_PLAY)
+
+    ttk.Separator(tab, orient="horizontal").pack(fill="x", padx=12, pady=(2, 0))
+
+    # ── Scrollable area ────────────────────────────────────────────────
     canvas = tk.Canvas(tab, highlightthickness=0)
     scrollbar = ttk.Scrollbar(tab, orient="vertical", command=canvas.yview)
     scroll_frame = tk.Frame(canvas)
@@ -105,35 +138,17 @@ def build_country_editor_tab(notebook, set_team_colours_cb):
     grid = tk.Frame(scroll_frame)
     grid.pack(fill="x", padx=12, pady=(6, 6))
 
-    # Header row
-    row_idx = 0
-    tk.Label(grid, text="Country", font=("Segoe UI", 10, "bold"),
-             anchor="w").grid(row=row_idx, column=COL_NAME, sticky="w", padx=(0, 8))
-    tk.Label(grid, text="Colour 1", font=("Segoe UI", 10, "bold"),
-             anchor="center").grid(row=row_idx, column=COL_SW1, columnspan=2, padx=4)
-    tk.Label(grid, text="Colour 2", font=("Segoe UI", 10, "bold"),
-             anchor="center").grid(row=row_idx, column=COL_SW2, columnspan=2, padx=4)
-    tk.Label(grid, text="Colour 3", font=("Segoe UI", 10, "bold"),
-             anchor="center").grid(row=row_idx, column=COL_SW3, columnspan=2, padx=4)
-    tk.Label(grid, text="Univ", font=("Segoe UI", 10, "bold"),
-             anchor="center").grid(row=row_idx, column=COL_UNIV, padx=4)
-    tk.Label(grid, text="Ch", font=("Segoe UI", 10, "bold"),
-             anchor="center").grid(row=row_idx, column=COL_CH, padx=4)
-    tk.Label(grid, text="", width=5).grid(row=row_idx, column=COL_SEND)
-
-    row_idx += 1
-    ttk.Separator(grid, orient="horizontal").grid(
-        row=row_idx, column=0, columnspan=10, sticky="ew", pady=(0, 4))
-
     # Data rows
-    row_idx += 1
+    row_idx = 0
     for country in sorted(data["teams"].keys()):
         colours = data["teams"][country]["colours"]
-        _add_editor_row(grid, row_idx, country, colours, data, set_team_colours_cb)
+        _add_editor_row(grid, row_idx, country, colours, data,
+                        set_team_colours_cb, _playing)
         row_idx += 1
 
 
-def _add_editor_row(grid, row_idx, country, colours, data, set_team_colours_cb):
+def _add_editor_row(grid, row_idx, country, colours, data,
+                    set_team_colours_cb, playing_ref):
     tk.Label(grid, text=country, font=("Segoe UI", 11), anchor="w",
              width=16).grid(row=row_idx, column=COL_NAME, sticky="w", padx=(0, 8), pady=2)
 
@@ -173,6 +188,35 @@ def _add_editor_row(grid, row_idx, country, colours, data, set_team_colours_cb):
               command=lambda c=country: set_team_colours_cb(
                   data["teams"][c]["colours"], c)
               ).grid(row=row_idx, column=COL_SEND, padx=(8, 0), pady=2, sticky="w")
+
+    # Anthem path and play button
+    anthem = data["teams"][country].get("anthem", "")
+    anthem_display = anthem if anthem else "—"
+    fg = "#888888" if anthem else "#555555"
+    tk.Label(grid, text=anthem_display, font=("Consolas", 7), fg=fg,
+             anchor="w", width=30).grid(row=row_idx, column=COL_ANTHEM,
+                                         padx=4, pady=2, sticky="w")
+
+    if anthem:
+        anthem_path = os.path.join(ANTHEMS_DIR, anthem)
+
+        def _play_anthem(path=anthem_path):
+            try:
+                import pygame
+                if not pygame.mixer.get_init():
+                    pygame.mixer.init()
+                if playing_ref[0]:
+                    playing_ref[0].stop()
+                    playing_ref[0] = None
+                snd = pygame.mixer.Sound(path)
+                snd.play()
+                playing_ref[0] = snd
+            except Exception:
+                pass
+
+        tk.Button(grid, text="▶", font=("Segoe UI", 8), width=3,
+                  command=_play_anthem).grid(row=row_idx, column=COL_PLAY,
+                                              padx=2, pady=2)
 
 
 def _pick_colour(event, colour_index, swatch, label, country, data, all_swatches):

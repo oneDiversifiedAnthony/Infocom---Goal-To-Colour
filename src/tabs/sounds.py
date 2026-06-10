@@ -39,6 +39,7 @@ import pygame
 from src.tabs.sound_keybinding import bind_sound_keys, F_KEYS
 
 SOUND_DIR = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "Sound Files")
+ANTHEMS_DIR = os.path.join(SOUND_DIR, "Anthems")
 MEDITS_FILE = os.path.join(SOUND_DIR, "medits.json")
 WAVEFORM_W = 300
 WAVEFORM_H = 60
