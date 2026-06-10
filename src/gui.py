@@ -148,9 +148,10 @@ class App:
         self._flags_tab_index = self.notebook.index("end") - 1
         self.chase = build_chases_tab(self.notebook, self.root, self._draw_swatches,
                                       lambda: self.team_colours)
-        build_country_editor_tab(self.notebook, self.set_team_colours)
+        self._stop_editor_preview = build_country_editor_tab(self.notebook, self.set_team_colours)
         self._start_api_auto = build_api_tab(self.notebook, self.status_bar)
-        self._fire_sound_event = build_sounds_tab(self.notebook, self.countries_db)
+        self._fire_sound_event = build_sounds_tab(self.notebook, self.countries_db,
+                                                   stop_editor_preview=self._stop_editor_preview)
         build_readme_tab(self.notebook)
 
         # Web server tab -- pass schedule data

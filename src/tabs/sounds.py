@@ -246,8 +246,8 @@ def _draw_waveform(canvas, waveform_data, cue_in=None, cue_out=None,
 EVENT_TYPES = ["None", "Goal", "Goal by Team"]
 
 
-def build_sounds_tab(notebook, countries_db=None):
-    """Build the Sounds tab. Returns (tab, fire_event_fn)."""
+def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
+    """Build the Sounds tab. Returns fire_event_fn."""
     tab = tk.Frame(notebook)
     notebook.add(tab, text="Sounds")
 
@@ -268,6 +268,248 @@ def build_sounds_tab(notebook, countries_db=None):
     render_menu = tk.OptionMenu(toolbar, render_var, "Fast", "Medium", "Detailed")
     render_menu.config(font=("Segoe UI", 9), width=8)
     render_menu.pack(side="right")
+
+    # ── Anthem channel ────────────────────────────────────────────────
+    anthem_frame = tk.LabelFrame(tab, text="National Anthem", font=("Segoe UI", 10, "bold"),
+                                  fg="#cc6600", padx=4, pady=2)
+    anthem_frame.pack(fill="x", padx=12, pady=(4, 4))
+
+    anthem_content = tk.Frame(anthem_frame)
+    anthem_content.pack(fill="x")
+
+    anthem_status = tk.Label(anthem_content, text="No anthem playing",
+                              font=("Segoe UI", 10), fg="#888888", width=30, anchor="w")
+    anthem_status.pack(side="left", padx=(4, 12))
+
+    anthem_fade_btn = tk.Button(anthem_content, text="Fade Out", font=("Segoe UI", 9, "bold"),
+                                 bg="#ff6600", fg="white", padx=12, state="disabled")
+    anthem_fade_btn.pack(side="left", padx=(0, 16))
+
+    anthem_time_label = tk.Label(anthem_content, text="", font=("Consolas", 10), fg="#888888",
+                                  width=18, anchor="center")
+    anthem_time_label.pack(side="left", padx=(0, 16))
+
+    # Anthem gain slider
+    anthem_gain_frame = tk.Frame(anthem_content)
+    anthem_gain_frame.pack(side="left", padx=(0, 16))
+    tk.Label(anthem_gain_frame, text="Vol", font=("Consolas", 7), fg="#888888").pack(side="left")
+    anthem_gain_var = tk.DoubleVar(value=0.0)
+    anthem_gain_slider = tk.Scale(anthem_gain_frame, from_=-60, to=15, resolution=0.5,
+                                   variable=anthem_gain_var, orient="horizontal",
+                                   font=("Consolas", 7), length=160,
+                                   sliderlength=16, width=18, showvalue=True)
+    anthem_gain_slider.pack(side="left", padx=4)
+    anthem_gain_slider.bind("<Button-3>", lambda e: anthem_gain_var.set(0.0))
+
+    # Anthem VU meters (L/R)
+    anthem_meter_frame = tk.Frame(anthem_content)
+    anthem_meter_frame.pack(side="left", padx=(8, 4))
+    tk.Label(anthem_meter_frame, text="L", font=("Consolas", 6), fg="#888888").pack(side="left")
+    anthem_vu_l = tk.Canvas(anthem_meter_frame, width=80, height=18,
+                             bg="#1a1a1a", highlightthickness=1,
+                             highlightbackground="#333333")
+    anthem_vu_l.pack(side="left", padx=1)
+    tk.Label(anthem_meter_frame, text="R", font=("Consolas", 6), fg="#888888").pack(side="left")
+    anthem_vu_r = tk.Canvas(anthem_meter_frame, width=80, height=18,
+                             bg="#1a1a1a", highlightthickness=1,
+                             highlightbackground="#333333")
+    anthem_vu_r.pack(side="left", padx=1)
+
+    anthem_channel = [None]  # pygame Channel
+    anthem_sound = [None]    # pygame Sound
+    anthem_playing = [False]
+    anthem_poll_id = [None]
+    anthem_start_time = [0.0]
+    anthem_fading = [False]
+    anthem_fade_timer = [None]
+    ANTHEM_FADE_DURATION_MS = 3000
+    ANTHEM_FADE_STEP_MS = 50
+
+    def _anthem_db_to_vol(db):
+        if db <= -60:
+            return 0.0
+        return min(1.0, 10 ** (db / 20) * 0.18)
+
+    def _anthem_apply_gain(*_args):
+        if anthem_channel[0] and anthem_playing[0] and not anthem_fading[0]:
+            anthem_channel[0].set_volume(_anthem_db_to_vol(anthem_gain_var.get()))
+
+    anthem_gain_var.trace_add("write", _anthem_apply_gain)
+
+    def _draw_h_meter(canvas_widget, rms_val):
+        w = canvas_widget.winfo_width()
+        h = canvas_widget.winfo_height()
+        canvas_widget.delete("all")
+        bar_w = min(int(rms_val * w * 2), w)
+        if rms_val > 0.7:
+            colour = "#ff0000"
+        elif rms_val > 0.4:
+            colour = "#ff6600"
+        else:
+            colour = "#00cc66"
+        canvas_widget.create_rectangle(0, 1, bar_w, h - 1, fill=colour, outline="")
+
+    def _anthem_poll():
+        if not anthem_playing[0] or not anthem_channel[0]:
+            return
+        if not anthem_channel[0].get_busy():
+            _anthem_stop()
+            return
+        if anthem_sound[0]:
+            raw = anthem_sound[0].get_raw()
+            length_s = anthem_sound[0].get_length()
+            rms_l = rms_r = 0
+            if length_s > 0 and len(raw) > 0:
+                frame_size = 4
+                total_frames = len(raw) // frame_size
+                elapsed = (time.time() - anthem_start_time[0]) % length_s
+                pos_frame = int((elapsed / length_s) * total_frames)
+                chunk_frames = min(2048, total_frames)
+                start_byte = max(0, (pos_frame - chunk_frames // 2)) * frame_size
+                end_byte = min(len(raw), start_byte + chunk_frames * frame_size)
+                chunk = raw[start_byte:end_byte]
+                if len(chunk) >= 4:
+                    n = len(chunk) // frame_size
+                    sum_l = sum_r = 0
+                    for fi in range(n):
+                        off = fi * frame_size
+                        sl, sr = struct.unpack_from("<hh", chunk, off)
+                        sum_l += sl * sl
+                        sum_r += sr * sr
+                    rms_l = math.sqrt(sum_l / n) / 32768
+                    rms_r = math.sqrt(sum_r / n) / 32768
+            gain_mult = _anthem_db_to_vol(anthem_gain_var.get()) / 0.18
+            _draw_h_meter(anthem_vu_l, rms_l * gain_mult)
+            _draw_h_meter(anthem_vu_r, rms_r * gain_mult)
+            # Update time display
+            if length_s > 0:
+                elapsed = time.time() - anthem_start_time[0]
+                remaining = max(0, length_s - elapsed)
+                e_m, e_s = int(elapsed) // 60, int(elapsed) % 60
+                r_m, r_s = int(remaining) // 60, int(remaining) % 60
+                t_m, t_s = int(length_s) // 60, int(length_s) % 60
+                anthem_time_label.config(
+                    text=f"{e_m}:{e_s:02d} / {t_m}:{t_s:02d}  -{r_m}:{r_s:02d}",
+                    fg="#cc6600" if remaining > 5 else "#ff0000")
+        anthem_poll_id[0] = tab.after(LEVEL_POLL_MS, _anthem_poll)
+
+    def _anthem_fade_tick(step):
+        if not anthem_playing[0] or not anthem_fading[0]:
+            return
+        total_steps = ANTHEM_FADE_DURATION_MS // ANTHEM_FADE_STEP_MS
+        if step >= total_steps:
+            _anthem_stop()
+            return
+        frac = 1.0 - (step / total_steps)
+        base_vol = _anthem_db_to_vol(anthem_gain_var.get())
+        if anthem_channel[0]:
+            anthem_channel[0].set_volume(base_vol * frac)
+        anthem_fade_timer[0] = tab.after(ANTHEM_FADE_STEP_MS,
+                                          lambda: _anthem_fade_tick(step + 1))
+
+    def _anthem_fade_out():
+        if not anthem_playing[0]:
+            return
+        if anthem_fading[0]:
+            _anthem_stop()
+            return
+        anthem_fading[0] = True
+        anthem_fade_btn.config(text="Stop", bg="#cc0000")
+        _anthem_fade_tick(0)
+
+    ANTHEM_CROSSFADE_MS = 2000
+    ANTHEM_CROSSFADE_STEP_MS = 50
+    anthem_pending = [None]  # (country_name,) waiting for crossfade to finish
+    anthem_crossfade_timer = [None]
+
+    def _anthem_crossfade_tick(step):
+        """Fade out current anthem, then start the pending one."""
+        total_steps = ANTHEM_CROSSFADE_MS // ANTHEM_CROSSFADE_STEP_MS
+        if step >= total_steps or not anthem_playing[0]:
+            # Crossfade done — hard stop and play pending
+            pending = anthem_pending[0]
+            anthem_pending[0] = None
+            _anthem_hard_stop()
+            if pending:
+                _anthem_start(pending)
+            return
+        frac = 1.0 - (step / total_steps)
+        base_vol = _anthem_db_to_vol(anthem_gain_var.get())
+        if anthem_channel[0]:
+            anthem_channel[0].set_volume(base_vol * frac)
+        anthem_crossfade_timer[0] = tab.after(ANTHEM_CROSSFADE_STEP_MS,
+                                               lambda: _anthem_crossfade_tick(step + 1))
+
+    def _anthem_start(country_name):
+        """Immediately start playing an anthem (no fade check)."""
+        teams = countries_db.get("teams", {}) if countries_db else {}
+        team = teams.get(country_name, {})
+        anthem_file = team.get("anthem", "")
+        if not anthem_file:
+            return
+        filepath = os.path.join(ANTHEMS_DIR, anthem_file)
+        if not os.path.exists(filepath):
+            return
+        try:
+            snd = pygame.mixer.Sound(filepath)
+            anthem_sound[0] = snd
+            anthem_start_time[0] = time.time()
+            anthem_channel[0] = snd.play()
+            if anthem_channel[0]:
+                anthem_channel[0].set_volume(_anthem_db_to_vol(anthem_gain_var.get()))
+            anthem_playing[0] = True
+            anthem_fading[0] = False
+            anthem_status.config(text=f"Playing: {country_name}", fg="#cc6600")
+            anthem_fade_btn.config(state="normal", text="Fade Out", bg="#ff6600")
+            _anthem_poll()
+        except Exception:
+            pass
+
+    def _anthem_play(country_name):
+        """Play the national anthem for the given country.
+        If one is already playing, crossfade over 2 seconds first."""
+        if stop_editor_preview:
+            stop_editor_preview()
+        if anthem_playing[0]:
+            # Crossfade: fade out current, then start new
+            anthem_pending[0] = country_name
+            if anthem_crossfade_timer[0]:
+                tab.after_cancel(anthem_crossfade_timer[0])
+            _anthem_crossfade_tick(0)
+        else:
+            _anthem_start(country_name)
+
+    def _anthem_hard_stop():
+        """Immediately stop anthem playback with no fade."""
+        if anthem_fade_timer[0]:
+            tab.after_cancel(anthem_fade_timer[0])
+            anthem_fade_timer[0] = None
+        anthem_fading[0] = False
+        if anthem_channel[0]:
+            anthem_channel[0].stop()
+        if anthem_sound[0]:
+            anthem_sound[0].stop()
+        anthem_playing[0] = False
+        anthem_channel[0] = None
+        anthem_sound[0] = None
+        if anthem_poll_id[0]:
+            tab.after_cancel(anthem_poll_id[0])
+            anthem_poll_id[0] = None
+        anthem_status.config(text="No anthem playing", fg="#888888")
+        anthem_fade_btn.config(state="disabled", text="Fade Out", bg="#ff6600")
+        anthem_time_label.config(text="", fg="#888888")
+        anthem_vu_l.delete("all")
+        anthem_vu_r.delete("all")
+
+    def _anthem_stop():
+        """Stop anthem, cancelling any crossfade in progress."""
+        if anthem_crossfade_timer[0]:
+            tab.after_cancel(anthem_crossfade_timer[0])
+            anthem_crossfade_timer[0] = None
+        anthem_pending[0] = None
+        _anthem_hard_stop()
+
+    anthem_fade_btn.config(command=_anthem_fade_out)
 
     # Scrollable container for sound cards
     cards_outer = tk.Frame(tab)
@@ -594,7 +836,8 @@ def build_sounds_tab(notebook, countries_db=None):
                         _save_peak_cache(pf, cached[0], cached[1])
                     tab.after(0, lambda: _on_sound_loaded(s, s_half, cached))
                 except Exception as e:
-                    tab.after(0, lambda: duration_label.config(text=f"Error: {e}") if duration_label.winfo_exists() else None)
+                    msg = str(e)
+                    tab.after(0, lambda: duration_label.config(text=f"Error: {msg}") if duration_label.winfo_exists() else None)
             threading.Thread(target=_worker, daemon=True).start()
 
         def _on_sound_loaded(s, s_half, cached_peaks):
@@ -1163,6 +1406,9 @@ def build_sounds_tab(notebook, countries_db=None):
                 if ctrl["team_var"].get() == team_name:
                     if not ctrl["is_playing"]():
                         ctrl["play"]()
+        # Play national anthem for the team
+        if team_name and event_type in ("Goal", "Goal by Team"):
+            _anthem_play(team_name)
 
     refresh_btn.config(command=_scan_and_populate)
     _scan_and_populate()

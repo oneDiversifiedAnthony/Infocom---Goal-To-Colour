@@ -1,0 +1,34 @@
+{
+  "SFX - Siren.mp3": {
+    "cue_in": 0.02701,
+    "cue_out": 0.62124,
+    "gain_db": -0.5,
+    "event": "Goal by Team",
+    "event_team": "Canada"
+  },
+  "SFX - Steamship horn.mp3": {
+    "cue_in": 0.012277,
+    "cue_out": 0.160221,
+    "gain_db": 14.5
+  },
+  "GOAL.mp3": {
+    "cue_out": 0.895203,
+    "gain_db": -3.0,
+    "cue_in": 0.011275
+  },
+  "Rock 'N' Roll (Part 1) - Gary Glitter.mp3": {
+    "gain_db": 13.0,
+    "cue_in": 0.002214
+  },
+  "Rock 'n' Roll (Part 2).mp3": {
+    "cue_in": 0.000738,
+    "gain_db": -60.0,
+    "cue_out": 0.951292
+  },
+  "G-O-A-L Shout ( Andrés Cantor ) - angelofcaine69 (192k).mp3": {
+    "gain_db": 7.5
+  },
+  "United States of America National Anthem (Instrumental).mp3": {
+    "gain_db": 7.5
+  }
+}

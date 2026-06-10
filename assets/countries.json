@@ -22,7 +22,8 @@
         "universe": 2,
         "channel": 1
       },
-      "anthem": "Algeria National Anthem (Instrumental).mp3"
+      "anthem": "Algeria National Anthem (Instrumental).mp3",
+      "anthem_length": 72.0
     },
     "Argentina": {
       "colours": [
@@ -46,7 +47,8 @@
         "universe": 2,
         "channel": 2
       },
-      "anthem": "Argentina National Anthem (Instrumental).mp3"
+      "anthem": "Argentina National Anthem (Instrumental).mp3",
+      "anthem_length": 213.3
     },
     "Australia": {
       "colours": [
@@ -70,7 +72,8 @@
         "universe": 2,
         "channel": 3
       },
-      "anthem": "Australia National Anthem (Instrumental).mp3"
+      "anthem": "Australia National Anthem (Instrumental).mp3",
+      "anthem_length": 54.4
     },
     "Austria": {
       "colours": [
@@ -94,7 +97,8 @@
         "universe": 2,
         "channel": 4
       },
-      "anthem": "Austria National Anthem (Instrumental).mp3"
+      "anthem": "Austria National Anthem (Instrumental).mp3",
+      "anthem_length": 89.5
     },
     "Belgium": {
       "colours": [
@@ -118,7 +122,8 @@
         "universe": 2,
         "channel": 5
       },
-      "anthem": "Belgium National Anthem (Instrumental).mp3"
+      "anthem": "Belgium National Anthem (Instrumental).mp3",
+      "anthem_length": 63.1
     },
     "Brazil": {
       "colours": [
@@ -142,7 +147,8 @@
         "universe": 2,
         "channel": 6
       },
-      "anthem": "Brazil National Anthem (Instrumental).mp3"
+      "anthem": "Brazil National Anthem (Instrumental).mp3",
+      "anthem_length": 112.9
     },
     "Cameroon": {
       "colours": [
@@ -166,7 +172,8 @@
         "universe": 2,
         "channel": 7
       },
-      "anthem": "Cameroon National Anthem (Instrumental).mp3"
+      "anthem": "Cameroon National Anthem (Instrumental).mp3",
+      "anthem_length": 58.3
     },
     "Canada": {
       "colours": [
@@ -190,7 +197,8 @@
         "universe": 2,
         "channel": 8
       },
-      "anthem": "Canada National Anthem (Instrumental).mp3"
+      "anthem": "Canada National Anthem (Instrumental).mp3",
+      "anthem_length": 79.0
     },
     "Chile": {
       "colours": [
@@ -214,7 +222,8 @@
         "universe": 2,
         "channel": 9
       },
-      "anthem": "Chile National Anthem (Instrumental).mp3"
+      "anthem": "Chile National Anthem (Instrumental).mp3",
+      "anthem_length": 122.5
     },
     "Colombia": {
       "colours": [
@@ -238,7 +247,8 @@
         "universe": 2,
         "channel": 10
       },
-      "anthem": "Colombia National Anthem (Instrumental).mp3"
+      "anthem": "Colombia National Anthem (Instrumental).mp3",
+      "anthem_length": 160.9
     },
     "Costa Rica": {
       "colours": [
@@ -262,7 +272,8 @@
         "universe": 2,
         "channel": 11
       },
-      "anthem": "Costa Rica National Anthem (Instrumental).mp3"
+      "anthem": "Costa Rica National Anthem (Instrumental).mp3",
+      "anthem_length": 105.8
     },
     "Croatia": {
       "colours": [
@@ -286,7 +297,8 @@
         "universe": 2,
         "channel": 12
       },
-      "anthem": "Croatia National Anthem (Instrumental).mp3"
+      "anthem": "Croatia National Anthem (Instrumental).mp3",
+      "anthem_length": 59.4
     },
     "Denmark": {
       "colours": [
@@ -310,7 +322,8 @@
         "universe": 2,
         "channel": 13
       },
-      "anthem": "Denmark National Anthem (Instrumental).mp3"
+      "anthem": "Denmark National Anthem (Instrumental).mp3",
+      "anthem_length": 79.4
     },
     "Ecuador": {
       "colours": [
@@ -334,7 +347,8 @@
         "universe": 2,
         "channel": 14
       },
-      "anthem": "Ecuador National Anthem (Instrumental).mp3"
+      "anthem": "Ecuador National Anthem (Instrumental).mp3",
+      "anthem_length": 198.7
     },
     "Egypt": {
       "colours": [
@@ -358,7 +372,8 @@
         "universe": 2,
         "channel": 15
       },
-      "anthem": "Egypt National Anthem (Instrumental).mp3"
+      "anthem": "Egypt National Anthem (Instrumental).mp3",
+      "anthem_length": 85.8
     },
     "England": {
       "colours": [
@@ -382,7 +397,8 @@
         "universe": 2,
         "channel": 16
       },
-      "anthem": "England National Anthem (Instrumental).mp3"
+      "anthem": "England National Anthem (Instrumental).mp3",
+      "anthem_length": 51.5
     },
     "France": {
       "colours": [
@@ -406,7 +422,8 @@
         "universe": 2,
         "channel": 17
       },
-      "anthem": "France National Anthem (Instrumental).mp3"
+      "anthem": "France National Anthem (Instrumental).mp3",
+      "anthem_length": 79.3
     },
     "Germany": {
       "colours": [
@@ -430,7 +447,8 @@
         "universe": 2,
         "channel": 18
       },
-      "anthem": "Germany National Anthem (Instrumental).mp3"
+      "anthem": "Germany National Anthem (Instrumental).mp3",
+      "anthem_length": 74.3
     },
     "Ghana": {
       "colours": [
@@ -454,7 +472,8 @@
         "universe": 2,
         "channel": 19
       },
-      "anthem": "Ghana National Anthem (Instrumental).mp3"
+      "anthem": "Ghana National Anthem (Instrumental).mp3",
+      "anthem_length": 53.0
     },
     "Indonesia": {
       "colours": [
@@ -478,7 +497,8 @@
         "universe": 2,
         "channel": 20
       },
-      "anthem": "Indonesia National Anthem (Instrumental).mp3"
+      "anthem": "Indonesia National Anthem (Instrumental).mp3",
+      "anthem_length": 109.1
     },
     "Iran": {
       "colours": [
@@ -502,7 +522,8 @@
         "universe": 2,
         "channel": 21
       },
-      "anthem": "Iran National Anthem (Instrumental).mp3"
+      "anthem": "Iran National Anthem (Instrumental).mp3",
+      "anthem_length": 67.3
     },
     "Iraq": {
       "colours": [
@@ -526,7 +547,8 @@
         "universe": 2,
         "channel": 22
       },
-      "anthem": "Iraq National Anthem (Instrumental).mp3"
+      "anthem": "Iraq National Anthem (Instrumental).mp3",
+      "anthem_length": 104.0
     },
     "Italy": {
       "colours": [
@@ -550,7 +572,8 @@
         "universe": 2,
         "channel": 23
       },
-      "anthem": "Italy National Anthem (Instrumental).mp3"
+      "anthem": "Italy National Anthem (Instrumental).mp3",
+      "anthem_length": 98.7
     },
     "Ivory Coast": {
       "colours": [
@@ -574,7 +597,8 @@
         "universe": 2,
         "channel": 24
       },
-      "anthem": "The Ivory Coast National Anthem (Instrumental).mp3"
+      "anthem": "The Ivory Coast National Anthem (Instrumental).mp3",
+      "anthem_length": 69.2
     },
     "Jamaica": {
       "colours": [
@@ -598,7 +622,8 @@
         "universe": 2,
         "channel": 25
       },
-      "anthem": "Jamaica National Anthem (Instrumental).mp3"
+      "anthem": "Jamaica National Anthem (Instrumental).mp3",
+      "anthem_length": 80.1
     },
     "Japan": {
       "colours": [
@@ -622,7 +647,8 @@
         "universe": 2,
         "channel": 26
       },
-      "anthem": "Japan National Anthem (Instrumental).mp3"
+      "anthem": "Japan National Anthem (Instrumental).mp3",
+      "anthem_length": 58.7
     },
     "Mexico": {
       "colours": [
@@ -646,7 +672,8 @@
         "universe": 2,
         "channel": 27
       },
-      "anthem": "Mexico National Anthem (Instrumental).mp3"
+      "anthem": "Mexico National Anthem (Instrumental).mp3",
+      "anthem_length": 101.7
     },
     "Morocco": {
       "colours": [
@@ -670,7 +697,8 @@
         "universe": 2,
         "channel": 28
       },
-      "anthem": "Morocco National Anthem (Instrumental).mp3"
+      "anthem": "Morocco National Anthem (Instrumental).mp3",
+      "anthem_length": 60.7
     },
     "Netherlands": {
       "colours": [
@@ -694,7 +722,8 @@
         "universe": 2,
         "channel": 29
       },
-      "anthem": "Netherlands National Anthem (Instrumental).mp3"
+      "anthem": "Netherlands National Anthem (Instrumental).mp3",
+      "anthem_length": 48.7
     },
     "New Zealand": {
       "colours": [
@@ -718,7 +747,8 @@
         "universe": 2,
         "channel": 30
       },
-      "anthem": "New Zealand National Anthem (Instrumental).mp3"
+      "anthem": "New Zealand National Anthem (Instrumental).mp3",
+      "anthem_length": 63.1
     },
     "Nigeria": {
       "colours": [
@@ -742,7 +772,8 @@
         "universe": 2,
         "channel": 31
       },
-      "anthem": "Nigeria National Anthem (Instrumental).mp3"
+      "anthem": "Nigeria National Anthem (Instrumental).mp3",
+      "anthem_length": 48.4
     },
     "Panama": {
       "colours": [
@@ -766,7 +797,8 @@
         "universe": 2,
         "channel": 32
       },
-      "anthem": "Panama National Anthem (Instrumental).mp3"
+      "anthem": "Panama National Anthem (Instrumental).mp3",
+      "anthem_length": 109.8
     },
     "Poland": {
       "colours": [
@@ -790,7 +822,8 @@
         "universe": 2,
         "channel": 33
       },
-      "anthem": "Poland National Anthem (Instrumental).mp3"
+      "anthem": "Poland National Anthem (Instrumental).mp3",
+      "anthem_length": 42.9
     },
     "Portugal": {
       "colours": [
@@ -814,7 +847,8 @@
         "universe": 2,
         "channel": 34
       },
-      "anthem": "Portugal National Anthem (Instrumental).mp3"
+      "anthem": "Portugal National Anthem (Instrumental).mp3",
+      "anthem_length": 70.2
     },
     "Qatar": {
       "colours": [
@@ -838,7 +872,8 @@
         "universe": 2,
         "channel": 35
       },
-      "anthem": "Qatar National Anthem (Instrumental).mp3"
+      "anthem": "Qatar National Anthem (Instrumental).mp3",
+      "anthem_length": 86.6
     },
     "Saudi Arabia": {
       "colours": [
@@ -862,7 +897,8 @@
         "universe": 2,
         "channel": 36
       },
-      "anthem": "Saudi Arabia National Anthem (Instrumental).mp3"
+      "anthem": "Saudi Arabia National Anthem (Instrumental).mp3",
+      "anthem_length": 33.7
     },
     "Senegal": {
       "colours": [
@@ -886,7 +922,8 @@
         "universe": 2,
         "channel": 37
       },
-      "anthem": "Senegal National Anthem (Instrumental).mp3"
+      "anthem": "Senegal National Anthem (Instrumental).mp3",
+      "anthem_length": 55.8
     },
     "Serbia": {
       "colours": [
@@ -910,7 +947,8 @@
         "universe": 2,
         "channel": 38
       },
-      "anthem": "Serbia National Anthem (Instrumental).mp3"
+      "anthem": "Serbia National Anthem (Instrumental).mp3",
+      "anthem_length": 106.6
     },
     "South Africa": {
       "colours": [
@@ -957,7 +995,8 @@
         "universe": 2,
         "channel": 40
       },
-      "anthem": "South Korea National Anthem (Instrumental).mp3"
+      "anthem": "South Korea National Anthem (Instrumental).mp3",
+      "anthem_length": 57.4
     },
     "Spain": {
       "colours": [
@@ -981,7 +1020,8 @@
         "universe": 2,
         "channel": 41
       },
-      "anthem": "Spain National Anthem (Instrumental).mp3"
+      "anthem": "Spain National Anthem (Instrumental).mp3",
+      "anthem_length": 58.1
     },
     "Switzerland": {
       "colours": [
@@ -1005,7 +1045,8 @@
         "universe": 2,
         "channel": 42
       },
-      "anthem": "Switzerland National Anthem (Instrumental).mp3"
+      "anthem": "Switzerland National Anthem (Instrumental).mp3",
+      "anthem_length": 84.1
     },
     "Tunisia": {
       "colours": [
@@ -1052,7 +1093,8 @@
         "universe": 2,
         "channel": 44
       },
-      "anthem": "Turkey National Anthem (Instrumental).mp3"
+      "anthem": "Turkey National Anthem (Instrumental).mp3",
+      "anthem_length": 76.1
     },
     "Ukraine": {
       "colours": [
@@ -1076,7 +1118,8 @@
         "universe": 2,
         "channel": 45
       },
-      "anthem": "Ukraine National Anthem (Instrumental).mp3"
+      "anthem": "Ukraine National Anthem (Instrumental).mp3",
+      "anthem_length": 79.6
     },
     "Uruguay": {
       "colours": [
@@ -1100,7 +1143,8 @@
         "universe": 2,
         "channel": 46
       },
-      "anthem": "Uruguay National Anthem (Instrumental).mp3"
+      "anthem": "Uruguay National Anthem (Instrumental).mp3",
+      "anthem_length": 114.5
     },
     "USA": {
       "colours": [
@@ -1124,7 +1168,8 @@
         "universe": 2,
         "channel": 47
       },
-      "anthem": "United States of America National Anthem (Instrumental).mp3"
+      "anthem": "United States of America National Anthem (Instrumental).mp3",
+      "anthem_length": 78.3
     },
     "Uzbekistan": {
       "colours": [
@@ -1148,7 +1193,8 @@
         "universe": 2,
         "channel": 48
       },
-      "anthem": "Uzbekistan National Anthem (Instrumental).mp3"
+      "anthem": "Uzbekistan National Anthem (Instrumental).mp3",
+      "anthem_length": 146.1
     }
   }
 }

@@ -146,6 +146,14 @@ def build_country_editor_tab(notebook, set_team_colours_cb):
                         set_team_colours_cb, _playing)
         row_idx += 1
 
+    def stop_preview():
+        """Stop any anthem preview playing in the country editor."""
+        if _playing[0]:
+            _playing[0].stop()
+            _playing[0] = None
+
+    return stop_preview
+
 
 def _add_editor_row(grid, row_idx, country, colours, data,
                     set_team_colours_cb, playing_ref):
