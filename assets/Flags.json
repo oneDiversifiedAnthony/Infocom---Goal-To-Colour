@@ -66,10 +66,10 @@
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"300\" fill=\"#ff0000\"/><rect y=\"300\" width=\"900\" height=\"300\" fill=\"#fff\"/></svg>"
     },
     "Iran": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"200\" fill=\"#239f40\"/><rect y=\"200\" width=\"900\" height=\"200\" fill=\"#fff\"/><rect y=\"400\" width=\"900\" height=\"200\" fill=\"#da0000\"/><g fill=\"#da0000\" font-family=\"serif\" font-size=\"20\"><text x=\"30\" y=\"215\" letter-spacing=\"22\">ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ</text></g><g fill=\"#239f40\" font-family=\"serif\" font-size=\"20\"><text x=\"30\" y=\"418\" letter-spacing=\"22\">ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ ﷲ</text></g><g transform=\"translate(450,300)\" fill=\"#da0000\"><rect x=\"-5\" y=\"-40\" width=\"10\" height=\"55\"/><circle cx=\"0\" cy=\"-45\" r=\"12\"/><path d=\"M-25,15 Q0,-10 25,15\" fill=\"none\" stroke=\"#da0000\" stroke-width=\"5\"/></g></svg>"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"200\" fill=\"#239f40\"/><rect y=\"200\" width=\"900\" height=\"200\" fill=\"#fff\"/><rect y=\"400\" width=\"900\" height=\"200\" fill=\"#da0000\"/><g fill=\"#da0000\" font-family=\"serif\" font-size=\"20\"><text x=\"30\" y=\"215\" letter-spacing=\"22\">\ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2</text></g><g fill=\"#239f40\" font-family=\"serif\" font-size=\"20\"><text x=\"30\" y=\"418\" letter-spacing=\"22\">\ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2 \ufdf2</text></g><g transform=\"translate(450,300)\" fill=\"#da0000\"><rect x=\"-5\" y=\"-40\" width=\"10\" height=\"55\"/><circle cx=\"0\" cy=\"-45\" r=\"12\"/><path d=\"M-25,15 Q0,-10 25,15\" fill=\"none\" stroke=\"#da0000\" stroke-width=\"5\"/></g></svg>"
     },
     "Iraq": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"200\" fill=\"#ce1126\"/><rect y=\"200\" width=\"900\" height=\"200\" fill=\"#fff\"/><rect y=\"400\" width=\"900\" height=\"200\" fill=\"#000\"/><text x=\"450\" y=\"320\" text-anchor=\"middle\" font-family=\"serif\" font-size=\"72\" fill=\"#007a3d\" font-weight=\"bold\">ﺍﻟﻠﻪ ﺍﻛﺒﺮ</text></svg>"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"200\" fill=\"#ce1126\"/><rect y=\"200\" width=\"900\" height=\"200\" fill=\"#fff\"/><rect y=\"400\" width=\"900\" height=\"200\" fill=\"#000\"/><text x=\"450\" y=\"320\" text-anchor=\"middle\" font-family=\"serif\" font-size=\"72\" fill=\"#007a3d\" font-weight=\"bold\">\ufe8d\ufedf\ufee0\ufeea \ufe8d\ufedb\ufe92\ufeae</text></svg>"
     },
     "Italy": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"300\" height=\"600\" fill=\"#008c45\"/><rect x=\"300\" width=\"300\" height=\"600\" fill=\"#fff\"/><rect x=\"600\" width=\"300\" height=\"600\" fill=\"#cd212a\"/></svg>"
@@ -111,7 +111,7 @@
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#8a1538\"/><polygon points=\"0,0 330,0 330,33 0,67 330,67 0,133 330,133 0,200 330,200 0,267 330,267 0,333 330,333 0,400 330,400 0,467 330,467 0,533 330,533 0,600 330,600\" fill=\"#fff\"/><rect width=\"250\" height=\"600\" fill=\"#fff\"/></svg>"
     },
     "Saudi Arabia": {
-      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#006c35\"/><text x=\"450\" y=\"250\" text-anchor=\"middle\" font-family=\"serif\" font-size=\"80\" fill=\"#fff\" font-weight=\"bold\">لا إله إلا الله</text><text x=\"450\" y=\"330\" text-anchor=\"middle\" font-family=\"serif\" font-size=\"60\" fill=\"#fff\">محمد رسول الله</text><rect x=\"300\" y=\"380\" width=\"300\" height=\"12\" rx=\"4\" fill=\"#fff\"/><path d=\"M350,392 L350,430 Q450,460 550,430 L550,392\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/></svg>"
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#006c35\"/><text x=\"450\" y=\"250\" text-anchor=\"middle\" font-family=\"serif\" font-size=\"80\" fill=\"#fff\" font-weight=\"bold\">\u0644\u0627 \u0625\u0644\u0647 \u0625\u0644\u0627 \u0627\u0644\u0644\u0647</text><text x=\"450\" y=\"330\" text-anchor=\"middle\" font-family=\"serif\" font-size=\"60\" fill=\"#fff\">\u0645\u062d\u0645\u062f \u0631\u0633\u0648\u0644 \u0627\u0644\u0644\u0647</text><rect x=\"300\" y=\"380\" width=\"300\" height=\"12\" rx=\"4\" fill=\"#fff\"/><path d=\"M350,392 L350,430 Q450,460 550,430 L550,392\" fill=\"none\" stroke=\"#fff\" stroke-width=\"4\"/></svg>"
     },
     "Senegal": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"300\" height=\"600\" fill=\"#00853f\"/><rect x=\"300\" width=\"300\" height=\"600\" fill=\"#fdef42\"/><rect x=\"600\" width=\"300\" height=\"600\" fill=\"#e31b23\"/><polygon points=\"450,210 468,270 530,270 480,305 498,365 450,330 402,365 420,305 370,270 432,270\" fill=\"#00853f\"/></svg>"
@@ -148,6 +148,39 @@
     },
     "Uzbekistan": {
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"200\" fill=\"#0099b5\"/><rect y=\"200\" width=\"900\" height=\"10\" fill=\"#ce1126\"/><rect y=\"210\" width=\"900\" height=\"180\" fill=\"#fff\"/><rect y=\"390\" width=\"900\" height=\"10\" fill=\"#ce1126\"/><rect y=\"400\" width=\"900\" height=\"200\" fill=\"#1eb53a\"/><circle cx=\"170\" cy=\"100\" r=\"45\" fill=\"#fff\"/><circle cx=\"185\" cy=\"100\" r=\"40\" fill=\"#0099b5\"/><g fill=\"#fff\"><circle cx=\"240\" cy=\"55\" r=\"6\"/><circle cx=\"270\" cy=\"55\" r=\"6\"/><circle cx=\"300\" cy=\"55\" r=\"6\"/><circle cx=\"240\" cy=\"80\" r=\"6\"/><circle cx=\"270\" cy=\"80\" r=\"6\"/><circle cx=\"300\" cy=\"80\" r=\"6\"/><circle cx=\"330\" cy=\"80\" r=\"6\"/><circle cx=\"240\" cy=\"105\" r=\"6\"/><circle cx=\"270\" cy=\"105\" r=\"6\"/><circle cx=\"300\" cy=\"105\" r=\"6\"/><circle cx=\"330\" cy=\"105\" r=\"6\"/><circle cx=\"360\" cy=\"105\" r=\"6\"/></g></svg>"
+    },
+    "Bosnia and Herzegovina": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#002395\"/><polygon points=\"150,0 750,600 150,600\" fill=\"#fecb00\"/><g fill=\"#fff\"><polygon points=\"225,50 232,72 255,72 236,84 243,106 225,94 207,106 214,84 195,72 218,72\"/><polygon points=\"300,150 307,172 330,172 311,184 318,206 300,194 282,206 289,184 270,172 293,172\"/><polygon points=\"375,250 382,272 405,272 386,284 393,306 375,294 357,306 364,284 345,272 368,272\"/><polygon points=\"450,350 457,372 480,372 461,384 468,406 450,394 432,406 439,384 420,372 443,372\"/><polygon points=\"525,450 532,472 555,472 536,484 543,506 525,494 507,506 514,484 495,472 518,472\"/></g></svg>"
+    },
+    "Cape Verde Islands": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#003893\"/><rect y=\"300\" width=\"900\" height=\"50\" fill=\"#fff\"/><rect y=\"350\" width=\"900\" height=\"60\" fill=\"#cf2027\"/><rect y=\"410\" width=\"900\" height=\"50\" fill=\"#fff\"/><g fill=\"#f7d116\" transform=\"translate(300,420)\"><polygon points=\"0,-40 9,-12 38,-12 15,6 24,34 0,16 -24,34 -15,6 -38,-12 -9,-12\"/><polygon points=\"50,-55 59,-27 88,-27 65,-9 74,19 50,1 26,19 35,-9 12,-27 41,-27\"/><polygon points=\"100,-40 109,-12 138,-12 115,6 124,34 100,16 76,34 85,6 62,-12 91,-12\"/><polygon points=\"130,-10 139,18 168,18 145,36 154,64 130,46 106,64 115,36 92,18 121,18\"/><polygon points=\"100,25 109,53 138,53 115,71 124,99 100,81 76,99 85,71 62,53 91,53\"/><polygon points=\"50,40 59,68 88,68 65,86 74,114 50,96 26,114 35,86 12,68 41,68\"/><polygon points=\"0,25 9,53 38,53 15,71 24,99 0,81 -24,99 -15,71 -38,53 -9,53\"/><polygon points=\"-30,-10 -21,18 8,18 -15,36 -6,64 -30,46 -54,64 -45,36 -68,18 -39,18\"/><polygon points=\"-50,-55 -41,-27 -12,-27 -35,-9 -26,19 -50,1 -74,19 -65,-9 -88,-27 -59,-27\"/><polygon points=\"0,-65 9,-37 38,-37 15,-19 24,9 0,-9 -24,9 -15,-19 -38,-37 -9,-37\"/></g></svg>"
+    },
+    "Congo DR": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#007fff\"/><polygon points=\"0,600 900,0 900,100 0,500\" fill=\"#f7d618\"/><polygon points=\"0,530 900,30 900,70 0,570\" fill=\"#ce1021\"/><polygon points=\"0,560 900,60 900,0 0,600\" fill=\"#f7d618\" opacity=\"0\"/><g fill=\"#f7d618\" transform=\"translate(145,95)\"><polygon points=\"0,-50 12,-16 48,-16 19,6 30,40 0,20 -30,40 -19,6 -48,-16 -12,-16\"/></g></svg>"
+    },
+    "Curacao": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#002b7f\"/><rect y=\"450\" width=\"900\" height=\"50\" fill=\"#f9e814\"/><g fill=\"#fff\"><polygon points=\"200,250 212,287 252,287 220,310 232,347 200,324 168,347 180,310 148,287 188,287\"/><polygon points=\"300,325 309,353 338,353 314,369 323,397 300,381 277,397 286,369 262,353 291,353\"/></g></svg>"
+    },
+    "Czech Republic": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"300\" fill=\"#fff\"/><rect y=\"300\" width=\"900\" height=\"300\" fill=\"#d7141a\"/><polygon points=\"0,0 450,300 0,600\" fill=\"#11457e\"/></svg>"
+    },
+    "Haiti": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"300\" fill=\"#00209f\"/><rect y=\"300\" width=\"900\" height=\"300\" fill=\"#d21034\"/><rect x=\"325\" y=\"175\" width=\"250\" height=\"250\" fill=\"#fff\"/><g transform=\"translate(450,300)\"><circle r=\"30\" fill=\"#016a16\"/><rect x=\"-2\" y=\"-60\" width=\"4\" height=\"40\" fill=\"#8b4513\"/><polygon points=\"0,-60 -15,-40 15,-40\" fill=\"#016a16\"/></g></svg>"
+    },
+    "Jordan": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"200\" fill=\"#000\"/><rect y=\"200\" width=\"900\" height=\"200\" fill=\"#fff\"/><rect y=\"400\" width=\"900\" height=\"200\" fill=\"#007a3d\"/><polygon points=\"0,0 400,300 0,600\" fill=\"#ce1126\"/><polygon points=\"130,300 141,266 170,248 139,248 128,214 117,248 86,248 115,266 104,300 130,278\" fill=\"#fff\"/></svg>"
+    },
+    "Norway": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#ef2b2d\"/><rect x=\"250\" width=\"150\" height=\"600\" fill=\"#fff\"/><rect y=\"225\" width=\"900\" height=\"150\" fill=\"#fff\"/><rect x=\"275\" width=\"100\" height=\"600\" fill=\"#002868\"/><rect y=\"250\" width=\"900\" height=\"100\" fill=\"#002868\"/></svg>"
+    },
+    "Paraguay": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"200\" fill=\"#d52b1e\"/><rect y=\"200\" width=\"900\" height=\"200\" fill=\"#fff\"/><rect y=\"400\" width=\"900\" height=\"200\" fill=\"#0038a8\"/><circle cx=\"450\" cy=\"300\" r=\"60\" fill=\"none\" stroke=\"#000\" stroke-width=\"3\"/><g fill=\"#016a16\" transform=\"translate(450,300)\"><polygon points=\"0,-40 8,-10 40,-10 14,8 22,36 0,18 -22,36 -14,8 -40,-10 -8,-10\"/></g></svg>"
+    },
+    "Scotland": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#005eb8\"/><path d=\"M0,0 L900,600 M900,0 L0,600\" stroke=\"#fff\" stroke-width=\"100\"/></svg>"
+    },
+    "Sweden": {
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 900 600\"><rect width=\"900\" height=\"600\" fill=\"#005293\"/><rect x=\"250\" width=\"150\" height=\"600\" fill=\"#fecb00\"/><rect y=\"225\" width=\"900\" height=\"150\" fill=\"#fecb00\"/></svg>"
     }
   }
 }

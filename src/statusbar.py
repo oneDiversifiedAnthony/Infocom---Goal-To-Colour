@@ -43,6 +43,8 @@ Design decisions:
 
 import tkinter as tk
 from tkinter import ttk
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from src.theme import BG_LIGHT, FG_DIM, ACCENT
 
 
@@ -82,6 +84,30 @@ class StatusBar:
             style="Trigger.Horizontal.TProgressbar", maximum=100)
         self.trigger_progress.pack(side="left", padx=(16, 0), pady=8)
         self.trigger_progress["value"] = 0
+
+        # ── Toronto clock ────────────────────────────────────────────────
+        self._to_tz = ZoneInfo("America/Toronto")
+        self._lv_tz = ZoneInfo("America/Los_Angeles")
+
+        self.lv_clock_label = tk.Label(bar, text="", font=("Consolas", 14, "bold"),
+                                       fg="#cc6600", bg=BG_LIGHT)
+        self.lv_clock_label.pack(side="left", padx=(16, 4))
+        tk.Label(bar, text="LV", font=("Segoe UI", 10), fg="#cc6600",
+                 bg=BG_LIGHT).pack(side="left", padx=(0, 12))
+
+        self.to_clock_label = tk.Label(bar, text="", font=("Consolas", 14, "bold"),
+                                       fg="#cc0066", bg=BG_LIGHT)
+        self.to_clock_label.pack(side="left", padx=(0, 4))
+        tk.Label(bar, text="TO", font=("Segoe UI", 10), fg="#cc0066",
+                 bg=BG_LIGHT).pack(side="left", padx=(0, 12))
+
+        self.utc_clock_label = tk.Label(bar, text="", font=("Consolas", 14, "bold"),
+                                        fg="#0066cc", bg=BG_LIGHT)
+        self.utc_clock_label.pack(side="left", padx=(0, 4))
+        tk.Label(bar, text="UTC", font=("Segoe UI", 10), fg="#0066cc",
+                 bg=BG_LIGHT).pack(side="left", padx=(0, 8))
+
+        self._update_status_clocks()
 
         # ── Rate Limit (right side) ───────────────────────────────────
         self.rate_label = tk.Label(bar, text="", font=("Segoe UI", 18, "bold"),
@@ -130,6 +156,15 @@ class StatusBar:
                 style.configure("FooterRate.Horizontal.TProgressbar", background="#ff6600")
             else:
                 style.configure("FooterRate.Horizontal.TProgressbar", background="#28a745")
+
+    def _update_status_clocks(self):
+        now_utc = datetime.now(timezone.utc)
+        now_lv = now_utc.astimezone(self._lv_tz)
+        now_to = now_utc.astimezone(self._to_tz)
+        self.lv_clock_label.config(text=now_lv.strftime("%H:%M:%S"))
+        self.to_clock_label.config(text=now_to.strftime("%H:%M:%S"))
+        self.utc_clock_label.config(text=now_utc.strftime("%H:%M:%S"))
+        self.root.after(1000, self._update_status_clocks)
 
     def update_sacn_status(self, connected):
         """Update the sACN connection indicator."""

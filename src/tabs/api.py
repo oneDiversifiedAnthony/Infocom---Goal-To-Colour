@@ -86,7 +86,7 @@ def build_api_tab(notebook, status_bar=None):
     token_frame = tk.Frame(tab)
     token_frame.pack(fill="x", padx=12, pady=4)
     tk.Label(token_frame, text="API Token:", font=("Segoe UI", 10)).pack(side="left", padx=(0, 6))
-    token_var = tk.StringVar(value="PjLbP92xw5PErBT46aKaLwnBsibPrxQNSqAKGr849URVxOaCEVKyW117BpWZ")
+    token_var = tk.StringVar(value=_load_env_token())
     tk.Entry(token_frame, textvariable=token_var, font=("Consolas", 9), width=50).pack(side="left", fill="x", expand=True)
 
     # ── Controls ───────────────────────────────────────────────────────

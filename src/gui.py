@@ -57,6 +57,7 @@ from src.theme import apply_dark_theme, FG_DIM
 from src.statusbar import StatusBar
 from src.sacn_connection import SacnConnection
 from src.goal import GoalController
+from src import scores
 from src.constants import (
     TRIGGER_UNIVERSE, TRIGGER_PULSE_DURATION_MS, TRIGGER_PROGRESS_TICK_MS,
     DMX_MAX_VALUE, SWATCH_CANVAS_SIZE,
@@ -141,7 +142,8 @@ class App:
             )
 
         self.goal = GoalController(self.root, self._draw_swatches,
-                                   lambda t: self.gen_team_label.config(text=t))
+                                   lambda t: self.gen_team_label.config(text=t),
+                                   clear_team_cb=self._clear_team)
 
         build_timeline_tab(self.notebook, self.db, self.set_team_colours, self._goal_pressed)
         self._highlight_flag = build_flags_tab(self.notebook, self.db, self._goal_pressed)
@@ -200,6 +202,12 @@ class App:
             self._update_web_state(colours=colours, team_name=self.team_name or "",
                                    goal_active=self.goal.is_active)
 
+    def _clear_team(self):
+        """Clear team name and colours after goal ends."""
+        self.team_name = ""
+        self.team_colours = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+        self._highlight_flag("")
+
     def set_team_colours(self, colours, country_name=""):
         self.team_colours = colours
         self.team_name = country_name
@@ -219,6 +227,7 @@ class App:
         self._highlight_flag(country_name)
         self.goal.trigger(colours, country_name)
         self._fire_trigger(country_name)
+        scores.goal_scored(country_name)
         self._fire_sound_event("Goal by Team", country_name)
 
     def _fire_trigger(self, country_name):

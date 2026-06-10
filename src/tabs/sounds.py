@@ -33,6 +33,7 @@ import struct
 import threading
 import time
 import tkinter as tk
+from tkinter import ttk
 
 import pygame
 
@@ -687,8 +688,9 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         saved_event_team = file_medits.get("event_team", "")
 
         event_var = tk.StringVar(value=saved_event)
-        event_menu = tk.OptionMenu(event_frame, event_var, *EVENT_TYPES)
-        event_menu.config(font=("Segoe UI", 7), width=10)
+        event_menu = ttk.Combobox(event_frame, textvariable=event_var,
+                                   values=EVENT_TYPES, state="readonly",
+                                   font=("Segoe UI", 7), width=12)
         event_menu.pack(fill="x")
 
         team_var = tk.StringVar(value=saved_event_team)
@@ -773,8 +775,9 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             for w in team_menu_frame.winfo_children():
                 w.destroy()
             if event_var.get() == "Goal by Team" and team_names:
-                tm = tk.OptionMenu(team_menu_frame, team_var, *team_names)
-                tm.config(font=("Segoe UI", 7), width=10)
+                tm = ttk.Combobox(team_menu_frame, textvariable=team_var,
+                                  values=team_names, state="readonly",
+                                  font=("Segoe UI", 7), width=12)
                 tm.pack(fill="x")
                 team_menu_widget[0] = tm
                 team_menu_frame.pack(fill="x")

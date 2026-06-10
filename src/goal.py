@@ -77,10 +77,11 @@ def _flash_off_colours(colours):
 class GoalController:
     """Manages goal flash timing. Call from the main app."""
 
-    def __init__(self, root, draw_swatches_cb, set_label_cb):
+    def __init__(self, root, draw_swatches_cb, set_label_cb, clear_team_cb=None):
         self.root = root
         self.draw_swatches = draw_swatches_cb
         self.set_label = set_label_cb
+        self.clear_team = clear_team_cb
         self.timer_id = None
         self.end_time = 0
         self.team_name = ""
@@ -111,11 +112,13 @@ class GoalController:
 
     def _flash(self, show_on):
         if time.time() >= self.end_time:
-            # Finished — blackout
-            self.set_label(self.team_name or "Random")
+            # Finished — blackout and clear team
+            self.set_label("")
             blackout = [[0, 0, 0] for _ in self.colours]
-            self.draw_swatches(blackout)
             self.timer_id = None
+            if self.clear_team:
+                self.clear_team()
+            self.draw_swatches(blackout)
             return
 
         if show_on:

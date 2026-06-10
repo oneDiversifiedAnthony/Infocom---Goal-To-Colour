@@ -495,25 +495,39 @@ def _parse_fixture(fix, team_name):
     if not home and not away:
         home = team_name
 
-    # Score
+    # Score — sum goals by participant (home/away) from the CURRENT score entries
     score_str = ""
     result_info = fix.get("result_info", "")
     if result_info:
         score_str = result_info
     else:
         s1 = fix.get("scores", [])
-        if isinstance(s1, list) and len(s1) >= 2:
+        if isinstance(s1, list) and s1:
             try:
-                goals = []
+                home_goals = 0
+                away_goals = 0
+                has_scores = False
                 for sc in s1:
-                    if isinstance(sc, dict):
-                        sc_data = sc.get("score", {})
-                        if isinstance(sc_data, dict):
-                            g = sc_data.get("goals", "")
-                            if g != "":
-                                goals.append(str(g))
-                if len(goals) >= 2:
-                    score_str = f"{goals[0]} - {goals[1]}"
+                    if not isinstance(sc, dict):
+                        continue
+                    sc_data = sc.get("score", {})
+                    if not isinstance(sc_data, dict):
+                        continue
+                    desc = sc.get("description", "")
+                    participant = sc_data.get("participant", "")
+                    g = sc_data.get("goals")
+                    if g is None or g == "":
+                        continue
+                    g = int(g)
+                    # Use CURRENT entries for the live/final score
+                    if desc == "CURRENT":
+                        has_scores = True
+                        if participant == "home":
+                            home_goals = g
+                        elif participant == "away":
+                            away_goals = g
+                if has_scores:
+                    score_str = f"{home_goals} - {away_goals}"
             except Exception:
                 pass
 

@@ -40,6 +40,7 @@ from urllib.parse import unquote_plus
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from datetime import datetime, timezone
 from zoneinfo import ZoneInfo
+from src import scores
 
 
 # Load logo as base64 for embedding in HTML
@@ -86,6 +87,7 @@ _state = {
 }
 
 _lv_tz = ZoneInfo("America/Los_Angeles")
+_to_tz = ZoneInfo("America/Toronto")
 
 # Callbacks set by the main app (called from HTTP thread via root.after)
 _callbacks = {
@@ -125,6 +127,7 @@ def _build_html():
 
     now_utc = datetime.now(timezone.utc)
     now_lv = now_utc.astimezone(_lv_tz)
+    now_to = now_utc.astimezone(_to_tz)
 
     # Colour swatches HTML
     swatch_html = ""
@@ -154,6 +157,7 @@ def _build_html():
         return _flag_svg(name, width=30, height=20)
 
     # Schedule table
+    scores.update_live_flags()
     schedule_rows = ""
     date_order = {f"Jun {d}": d for d in range(11, 28)}
     sorted_games = sorted(games, key=lambda g: (
@@ -166,32 +170,65 @@ def _build_html():
         if d != current_date:
             current_date = d
             schedule_rows += (
-                f'<tr><td colspan="4" style="background:#0066cc;color:white;'
+                f'<tr><td colspan="7" style="background:#0066cc;color:white;'
                 f'padding:6px 12px;font-weight:bold;font-size:16px;">{d}</td></tr>'
             )
         time_utc = g.get("time_utc", "")
         time_lv = ""
+        time_to = ""
+        is_live = False
         if time_utc:
             try:
                 utc_dt = datetime.strptime(f"2026 {d} {time_utc}", "%Y %b %d %H:%M")
                 utc_dt = utc_dt.replace(tzinfo=timezone.utc)
                 lv_dt = utc_dt.astimezone(_lv_tz)
+                to_dt = utc_dt.astimezone(_to_tz)
                 time_lv = lv_dt.strftime("%H:%M")
+                time_to = to_dt.strftime("%H:%M")
+                diff_min = (now_utc - utc_dt).total_seconds() / 60
+                is_live = 0 <= diff_min <= 120
             except ValueError:
                 pass
+        time_colour = "#28a745" if is_live else "#0088ff"
+        dot_colour = "#28a745" if is_live else "#0066cc"
         time_display = f"{time_utc} UTC"
         if time_lv:
             time_display += f" / {time_lv} LV"
+        if time_to:
+            time_display += f" / {time_to} TO"
         venue = g.get("venue", "")
         group = g.get("group", "")
         home = g.get("home", "")
         away = g.get("away", "")
+        # Score and match minute from score tracker
+        score_display = ""
+        minute_display = ""
+        all_scores = scores.get_all_scores()
+        for fid, sc in all_scores.items():
+            if sc["home"] == home and sc["away"] == away:
+                sd = scores.get_score_display(fid)
+                if sd:
+                    score_display = sd
+                minute_display = scores.get_match_minute_display(fid)
+                break
+        if score_display and minute_display:
+            score_html = f'<span style="color:#ffcc00;font-weight:bold;font-size:18px;padding:0 8px;">{score_display}</span>'
+        elif score_display:
+            score_html = f'<span style="color:#ffcc00;font-weight:bold;font-size:18px;padding:0 8px;">{score_display}</span>'
+        else:
+            score_html = '<span style="color:#555;padding:0 8px;">vs</span>'
+        minute_html = f' <span style="color:#28a745;font-weight:bold;font-size:14px;">{minute_display}</span>' if minute_display else ''
+        live_badge = f' <span style="background:#28a745;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:bold;">LIVE {minute_display}</span>' if is_live else ''
         schedule_rows += (
             f'<tr style="border-bottom:1px solid #333;">'
-            f'<td style="padding:6px;color:#0088ff;font-family:monospace;">{time_display}</td>'
+            f'<td style="padding:6px;width:16px;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:{dot_colour};"></span></td>'
+            f'<td style="padding:6px;color:{time_colour};font-family:monospace;">{time_display}{live_badge}</td>'
             f'<td style="padding:6px;color:#888;">{group}</td>'
+            f'<td style="padding:6px;font-weight:bold;text-align:right;">'
+            f'{_team_flag(home)} <span style="color:#aaa;font-size:10px;">H</span> {home}</td>'
+            f'<td style="padding:6px;text-align:center;">{score_html}</td>'
             f'<td style="padding:6px;font-weight:bold;">'
-            f'{_team_flag(home)} {home} vs {away} {_team_flag(away)}</td>'
+            f'{away} <span style="color:#aaa;font-size:10px;">A</span> {_team_flag(away)}</td>'
             f'<td style="padding:6px;color:#888;font-size:13px;">{venue}</td></tr>'
         )
 
@@ -238,6 +275,11 @@ def _build_html():
     <div class="clock-time" style="color:#cc6600;">{now_lv.strftime("%H:%M:%S")}</div>
     <div class="clock-date">{now_lv.strftime("%a %d %b %Y")}</div>
   </div>
+  <div class="clock">
+    <div class="clock-label" style="color:#cc0066;">Toronto</div>
+    <div class="clock-time" style="color:#cc0066;">{now_to.strftime("%H:%M:%S")}</div>
+    <div class="clock-date">{now_to.strftime("%a %d %b %Y")}</div>
+  </div>
 </div>
 
 {goal_html}
@@ -264,6 +306,37 @@ def _build_api_json():
         "team_name": _state["team_name"],
         "goal_active": _state["goal_active"],
     }, indent=2)
+
+
+def _build_live_scores_html():
+    """Build HTML section showing live game scores."""
+    scores.update_live_flags()
+    all_scores = scores.get_all_scores()
+    active = [(fid, s) for fid, s in all_scores.items()
+              if s["live"] or s["home_score"] > 0 or s["away_score"] > 0]
+    if not active:
+        return ""
+    rows = ""
+    for fid, s in active:
+        minute = scores.get_match_minute_display(fid)
+        live_dot = '<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#28a745;"></span>' if s["live"] else '<span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#555;"></span>'
+        minute_html = f'<span style="color:#28a745;font-weight:bold;font-size:16px;">{minute}</span>' if minute else ''
+        home_flag = _flag_svg(s["home"], width=24, height=16)
+        away_flag = _flag_svg(s["away"], width=24, height=16)
+        rows += (
+            f'<tr style="border-bottom:1px solid #333;">'
+            f'<td style="padding:6px;">{live_dot}</td>'
+            f'<td style="padding:6px;text-align:center;">{minute_html}</td>'
+            f'<td style="padding:6px;text-align:right;font-weight:bold;">{home_flag} <span style="color:#aaa;font-size:10px;">H</span> {s["home"]}</td>'
+            f'<td style="padding:6px;text-align:center;color:#ffcc00;font-weight:bold;font-size:20px;">{s["home_score"]} - {s["away_score"]}</td>'
+            f'<td style="padding:6px;font-weight:bold;">{s["away"]} <span style="color:#aaa;font-size:10px;">A</span> {away_flag}</td>'
+            f'</tr>'
+        )
+    return (
+        f'<div class="status" style="margin-top:12px;">'
+        f'<div style="font-size:16px;font-weight:bold;color:#ffcc00;margin-bottom:8px;">Live Scores</div>'
+        f'<table style="width:100%;border-collapse:collapse;">{rows}</table></div>'
+    )
 
 
 def _build_testing_html():
@@ -397,6 +470,8 @@ def _build_testing_html():
     <span style="font-size:14px;font-weight:bold;color:{'#28a745' if sacn_connected else '#ff0000'};">sACN {'Connected' if sacn_connected else 'Disconnected'}</span>
   </div>
 </div>
+
+{_build_live_scores_html()}
 
 </div>
 </body>

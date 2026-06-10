@@ -22,11 +22,11 @@
   },
   "Rock 'n' Roll (Part 2).mp3": {
     "cue_in": 0.000738,
-    "gain_db": -60.0,
+    "gain_db": 7.5,
     "cue_out": 0.951292
   },
   "G-O-A-L Shout ( Andrés Cantor ) - angelofcaine69 (192k).mp3": {
-    "gain_db": 7.5
+    "gain_db": 4.5
   },
   "United States of America National Anthem (Instrumental).mp3": {
     "gain_db": 7.5
