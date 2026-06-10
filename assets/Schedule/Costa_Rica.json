@@ -1,0 +1,1748 @@
+{
+  "data": [
+    {
+      "id": 77464844,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Round 2",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-06-05",
+      "ending_at": "2025-06-11",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 336851,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110969,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249225,
+              "aggregate_id": null,
+              "round_id": 336851,
+              "state_id": 5,
+              "venue_id": 10981,
+              "name": "Costa Rica vs St. Kitts and Nevis",
+              "starting_at": "2024-06-07 02:30:00",
+              "result_info": "Costa Rica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717727400,
+              "participants": [
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18879,
+                  "sport_id": 1,
+                  "country_id": 160047,
+                  "venue_id": 14545,
+                  "gender": "male",
+                  "name": "St. Kitts and Nevis",
+                  "short_code": null,
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18879.png",
+                  "founded": 1932,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 09:50:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14518993,
+                  "fixture_id": 19110969,
+                  "type_id": 1525,
+                  "participant_id": 18879,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15705667,
+                  "fixture_id": 19110969,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705668,
+                  "fixture_id": 19110969,
+                  "type_id": 48996,
+                  "participant_id": 18879,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14518991,
+                  "fixture_id": 19110969,
+                  "type_id": 1,
+                  "participant_id": 18879,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14518994,
+                  "fixture_id": 19110969,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518992,
+                  "fixture_id": 19110969,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14519009,
+                  "fixture_id": 19110969,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14519010,
+                  "fixture_id": 19110969,
+                  "type_id": 2,
+                  "participant_id": 18879,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336852,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-08",
+          "ending_at": "2024-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110971,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249225,
+              "aggregate_id": null,
+              "round_id": 336852,
+              "state_id": 5,
+              "venue_id": 343716,
+              "name": "Grenada vs Costa Rica",
+              "starting_at": "2024-06-09 21:00:00",
+              "result_info": "Costa Rica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717966800,
+              "participants": [
+                {
+                  "id": 18898,
+                  "sport_id": 1,
+                  "country_id": 26833,
+                  "venue_id": 12401,
+                  "gender": "male",
+                  "name": "Grenada",
+                  "short_code": "GRD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18898.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-16 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14532030,
+                  "fixture_id": 19110971,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14532029,
+                  "fixture_id": 19110971,
+                  "type_id": 1,
+                  "participant_id": 18898,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14532063,
+                  "fixture_id": 19110971,
+                  "type_id": 2,
+                  "participant_id": 18898,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14532032,
+                  "fixture_id": 19110971,
+                  "type_id": 1525,
+                  "participant_id": 18898,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14532031,
+                  "fixture_id": 19110971,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15705671,
+                  "fixture_id": 19110971,
+                  "type_id": 48996,
+                  "participant_id": 18898,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705672,
+                  "fixture_id": 19110971,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14532064,
+                  "fixture_id": 19110971,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336853,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-11",
+          "ending_at": "2025-06-04",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 336854,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110975,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249225,
+              "aggregate_id": null,
+              "round_id": 336854,
+              "state_id": 5,
+              "venue_id": 343715,
+              "name": "Bahamas vs Costa Rica",
+              "starting_at": "2025-06-07 23:00:00",
+              "result_info": "Costa Rica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749337200,
+              "participants": [
+                {
+                  "id": 27044,
+                  "sport_id": 1,
+                  "country_id": 80919,
+                  "venue_id": 11943,
+                  "gender": "male",
+                  "name": "Bahamas",
+                  "short_code": "BHS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/27044.png",
+                  "founded": 1967,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16598920,
+                  "fixture_id": 19110975,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16598919,
+                  "fixture_id": 19110975,
+                  "type_id": 48996,
+                  "participant_id": 27044,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16598469,
+                  "fixture_id": 19110975,
+                  "type_id": 1,
+                  "participant_id": 27044,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16598470,
+                  "fixture_id": 19110975,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16598471,
+                  "fixture_id": 19110975,
+                  "type_id": 2,
+                  "participant_id": 27044,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16598472,
+                  "fixture_id": 19110975,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 8,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16598464,
+                  "fixture_id": 19110975,
+                  "type_id": 1525,
+                  "participant_id": 27044,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16598467,
+                  "fixture_id": 19110975,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 8,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336855,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110977,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249225,
+              "aggregate_id": null,
+              "round_id": 336855,
+              "state_id": 5,
+              "venue_id": 10981,
+              "name": "Costa Rica vs Trinidad and Tobago",
+              "starting_at": "2025-06-11 01:00:00",
+              "result_info": "Costa Rica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749603600,
+              "participants": [
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18637,
+                  "sport_id": 1,
+                  "country_id": 2228,
+                  "venue_id": 2215,
+                  "gender": "male",
+                  "name": "Trinidad and Tobago",
+                  "short_code": "TTO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18637.png",
+                  "founded": 1908,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16606160,
+                  "fixture_id": 19110977,
+                  "type_id": 1525,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16606161,
+                  "fixture_id": 19110977,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16606159,
+                  "fixture_id": 19110977,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16606164,
+                  "fixture_id": 19110977,
+                  "type_id": 2,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16606371,
+                  "fixture_id": 19110977,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16606372,
+                  "fixture_id": 19110977,
+                  "type_id": 48996,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16606162,
+                  "fixture_id": 19110977,
+                  "type_id": 1,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16606163,
+                  "fixture_id": 19110977,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464843,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Final round",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-09-04",
+      "ending_at": "2025-11-19",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 388774,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567617,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388774,
+              "state_id": 5,
+              "venue_id": 1225,
+              "name": "Haiti vs Costa Rica",
+              "starting_at": "2025-11-14 02:00:00",
+              "result_info": "Haiti won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763085600,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17438296,
+                  "fixture_id": 19567617,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438297,
+                  "fixture_id": 19567617,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438300,
+                  "fixture_id": 19567617,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438299,
+                  "fixture_id": 19567617,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438298,
+                  "fixture_id": 19567617,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438301,
+                  "fixture_id": 19567617,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438342,
+                  "fixture_id": 19567617,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438343,
+                  "fixture_id": 19567617,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388770,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567594,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388770,
+              "state_id": 5,
+              "venue_id": 343739,
+              "name": "Nicaragua vs Costa Rica",
+              "starting_at": "2025-09-06 02:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757124000,
+              "participants": [
+                {
+                  "id": 18999,
+                  "sport_id": 1,
+                  "country_id": 3990,
+                  "venue_id": 5009,
+                  "gender": "male",
+                  "name": "Nicaragua",
+                  "short_code": "NIC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18999.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16900308,
+                  "fixture_id": 19567594,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16900306,
+                  "fixture_id": 19567594,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16900303,
+                  "fixture_id": 19567594,
+                  "type_id": 1525,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900305,
+                  "fixture_id": 19567594,
+                  "type_id": 1,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16900433,
+                  "fixture_id": 19567594,
+                  "type_id": 48996,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16900304,
+                  "fixture_id": 19567594,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900434,
+                  "fixture_id": 19567594,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16900307,
+                  "fixture_id": 19567594,
+                  "type_id": 2,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388773,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-14",
+          "ending_at": "2025-10-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567606,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388773,
+              "state_id": 5,
+              "venue_id": 10981,
+              "name": "Costa Rica vs Nicaragua",
+              "starting_at": "2025-10-14 02:00:00",
+              "result_info": "Costa Rica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760407200,
+              "participants": [
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18999,
+                  "sport_id": 1,
+                  "country_id": 3990,
+                  "venue_id": 5009,
+                  "gender": "male",
+                  "name": "Nicaragua",
+                  "short_code": "NIC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18999.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17234195,
+                  "fixture_id": 19567606,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17234196,
+                  "fixture_id": 19567606,
+                  "type_id": 1525,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17234207,
+                  "fixture_id": 19567606,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17234208,
+                  "fixture_id": 19567606,
+                  "type_id": 48996,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17234200,
+                  "fixture_id": 19567606,
+                  "type_id": 2,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17234197,
+                  "fixture_id": 19567606,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17234198,
+                  "fixture_id": 19567606,
+                  "type_id": 1,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17234199,
+                  "fixture_id": 19567606,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388771,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-09",
+          "ending_at": "2025-09-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567599,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388771,
+              "state_id": 5,
+              "venue_id": 10981,
+              "name": "Costa Rica vs Haiti",
+              "starting_at": "2025-09-10 02:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757469600,
+              "participants": [
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16927201,
+                  "fixture_id": 19567599,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16927202,
+                  "fixture_id": 19567599,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16927205,
+                  "fixture_id": 19567599,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16927207,
+                  "fixture_id": 19567599,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16927203,
+                  "fixture_id": 19567599,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16927223,
+                  "fixture_id": 19567599,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16927224,
+                  "fixture_id": 19567599,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16927204,
+                  "fixture_id": 19567599,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388775,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-19",
+          "ending_at": "2025-11-19",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567621,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388775,
+              "state_id": 5,
+              "venue_id": 10981,
+              "name": "Costa Rica vs Honduras",
+              "starting_at": "2025-11-19 01:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763514000,
+              "participants": [
+                {
+                  "id": 18574,
+                  "sport_id": 1,
+                  "country_id": 1176,
+                  "venue_id": 314,
+                  "gender": "male",
+                  "name": "Honduras",
+                  "short_code": "HND",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18574.png",
+                  "founded": 1951,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17471061,
+                  "fixture_id": 19567621,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471062,
+                  "fixture_id": 19567621,
+                  "type_id": 2,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471058,
+                  "fixture_id": 19567621,
+                  "type_id": 1525,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471060,
+                  "fixture_id": 19567621,
+                  "type_id": 1,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471059,
+                  "fixture_id": 19567621,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471063,
+                  "fixture_id": 19567621,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471128,
+                  "fixture_id": 19567621,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17471129,
+                  "fixture_id": 19567621,
+                  "type_id": 48996,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388772,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-10",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567600,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388772,
+              "state_id": 5,
+              "venue_id": 7113,
+              "name": "Honduras vs Costa Rica",
+              "starting_at": "2025-10-10 02:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760061600,
+              "participants": [
+                {
+                  "id": 18574,
+                  "sport_id": 1,
+                  "country_id": 1176,
+                  "venue_id": 314,
+                  "gender": "male",
+                  "name": "Honduras",
+                  "short_code": "HND",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18574.png",
+                  "founded": 1951,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17209870,
+                  "fixture_id": 19567600,
+                  "type_id": 1525,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17209875,
+                  "fixture_id": 19567600,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17209872,
+                  "fixture_id": 19567600,
+                  "type_id": 1,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17209873,
+                  "fixture_id": 19567600,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17209871,
+                  "fixture_id": 19567600,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17209883,
+                  "fixture_id": 19567600,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17209882,
+                  "fixture_id": 19567600,
+                  "type_id": 48996,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17209874,
+                  "fixture_id": 19567600,
+                  "type_id": 2,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124622,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 2004,
+    "remaining": 2281,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

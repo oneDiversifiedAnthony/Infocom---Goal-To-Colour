@@ -71,6 +71,8 @@ COL_CH = 8
 COL_SEND = 9
 COL_ANTHEM = 10
 COL_PLAY = 11
+COL_SM_ID = 12
+COL_COUNTRY_ID = 13
 
 
 def build_country_editor_tab(notebook, set_team_colours_cb):
@@ -105,6 +107,10 @@ def build_country_editor_tab(notebook, set_team_colours_cb):
     tk.Label(header_grid, text="Anthem", font=("Segoe UI", 10, "bold"),
              anchor="w").grid(row=0, column=COL_ANTHEM, sticky="w", padx=4)
     tk.Label(header_grid, text="", width=3).grid(row=0, column=COL_PLAY)
+    tk.Label(header_grid, text="SM ID", font=("Segoe UI", 10, "bold"),
+             anchor="center").grid(row=0, column=COL_SM_ID, padx=4)
+    tk.Label(header_grid, text="Country ID", font=("Segoe UI", 10, "bold"),
+             anchor="center").grid(row=0, column=COL_COUNTRY_ID, padx=4)
 
     ttk.Separator(tab, orient="horizontal").pack(fill="x", padx=12, pady=(2, 0))
 
@@ -225,6 +231,18 @@ def _add_editor_row(grid, row_idx, country, colours, data,
         tk.Button(grid, text="▶", font=("Segoe UI", 8), width=3,
                   command=_play_anthem).grid(row=row_idx, column=COL_PLAY,
                                               padx=2, pady=2)
+
+    # SportMonks ID and Country ID
+    sm_id = data["teams"][country].get("sportmonks_id", "")
+    country_id = data["teams"][country].get("country_id", "")
+    sm_fg = "#888888" if sm_id else "#555555"
+    cid_fg = "#888888" if country_id else "#555555"
+    tk.Label(grid, text=str(sm_id) if sm_id else "—",
+             font=("Consolas", 9), fg=sm_fg, width=8,
+             anchor="center").grid(row=row_idx, column=COL_SM_ID, padx=4, pady=2)
+    tk.Label(grid, text=str(country_id) if country_id else "—",
+             font=("Consolas", 9), fg=cid_fg, width=8,
+             anchor="center").grid(row=row_idx, column=COL_COUNTRY_ID, padx=4, pady=2)
 
 
 def _pick_colour(event, colour_index, swatch, label, country, data, all_swatches):

@@ -36,12 +36,14 @@ from tkinter import ttk
 import threading
 import urllib.request
 import urllib.error
+import webbrowser
 
 from src.tabs.api_raw import build_raw_subtab
 from src.tabs.api_tree import build_tree_subtab
 from src.tabs.api_table import build_table_subtab
 from src.tabs.api_changes import build_changes_subtab
 from src.tabs.api_calllog import build_calllog_subtab
+from src.tabs.api_schedule import build_schedule_subtab
 
 
 DEFAULT_URL = "https://api.sportmonks.com/v3/football/livescores/inplay?api_token={{api_token}}"
@@ -49,6 +51,18 @@ CALL_LOG_DIR = os.path.join(
     os.path.dirname(__file__), os.pardir, os.pardir, "Call Log"
 )
 CALL_LOG_ROTATE_MINUTES = 60
+ENV_FILE = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, ".env")
+
+
+def _load_env_token():
+    """Load SPORTMONKS_API_TOKEN from .env file."""
+    if os.path.isfile(ENV_FILE):
+        with open(ENV_FILE, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith("SPORTMONKS_API_TOKEN="):
+                    return line.split("=", 1)[1].strip()
+    return os.environ.get("SPORTMONKS_API_TOKEN", "")
 
 
 def build_api_tab(notebook, status_bar=None):
@@ -63,6 +77,10 @@ def build_api_tab(notebook, status_bar=None):
     tk.Label(url_frame, text="URL:", font=("Segoe UI", 10)).pack(side="left", padx=(0, 6))
     url_var = tk.StringVar(value=DEFAULT_URL)
     tk.Entry(url_frame, textvariable=url_var, font=("Consolas", 9), width=70).pack(side="left", fill="x", expand=True)
+    tk.Button(url_frame, text="SportMonks Dashboard", font=("Segoe UI", 9, "bold"),
+              bg="#0066cc", fg="white", padx=8,
+              command=lambda: webbrowser.open("https://my.sportmonks.com/login?redirect=dashboard")
+              ).pack(side="right", padx=(8, 0))
 
     # ── API Token ──────────────────────────────────────────────────────
     token_frame = tk.Frame(tab)
@@ -166,7 +184,7 @@ def build_api_tab(notebook, status_bar=None):
             rate_style.configure("Rate.Horizontal.TProgressbar", background="#28a745")
 
         if status_bar:
-            status_bar.update_rate_limit(remaining, RATE_LIMIT_TOTAL, resets_in)
+            status_bar.update_rate_limit(remaining, RATE_LIMIT_TOTAL, resets_in, api_ok=True)
 
         try:
             from src.tabs.webserver import update_state as _ws_update
@@ -216,14 +234,19 @@ def build_api_tab(notebook, status_bar=None):
             _update_rate_limit(parsed)
             changes_check(parsed)
 
-        status_label.config(text="OK", fg="green")
+        status_label.config(text="OK", fg="#28a745")
+        auto_style.configure("Auto.Horizontal.TProgressbar", background="#28a745")
 
     def _show_error(msg, http_code=None):
         raw_error(msg)
         tree_error(msg)
-        status_label.config(text="Error", fg="red")
+        auto_style.configure("Auto.Horizontal.TProgressbar", background="#ff0000")
         if http_code == 429:
-            _stop_auto()
+            status_label.config(text="Rate limited – retrying", fg="#ff6600")
+        else:
+            status_label.config(text="Error – retrying", fg="red")
+        if status_bar:
+            status_bar.rate_label.config(fg="#ff0000")
 
     # ── Get / Auto controls ───────────────────────────────────────────
     tk.Button(ctrl_frame, text="Get", font=("Segoe UI", 10, "bold"),
@@ -318,5 +341,6 @@ def build_api_tab(notebook, status_bar=None):
     _, table_update = build_table_subtab(result_notebook)
     _, changes_check = build_changes_subtab(result_notebook, CALL_LOG_DIR)
     build_calllog_subtab(result_notebook, CALL_LOG_DIR, tab)
+    build_schedule_subtab(result_notebook, token_var, tab)
 
     return _start_auto

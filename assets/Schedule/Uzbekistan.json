@@ -1,0 +1,3004 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609148,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253029,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 21827,
+              "name": "Portugal vs Uzbekistan",
+              "starting_at": "2026-06-23 17:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 47",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782234000,
+              "participants": [
+                {
+                  "id": 18701,
+                  "sport_id": 1,
+                  "country_id": 20,
+                  "venue_id": 14455,
+                  "gender": "male",
+                  "name": "Portugal",
+                  "short_code": "POR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
+                  "founded": 1914,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609196,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253029,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 161191,
+              "name": "Congo DR vs Uzbekistan",
+              "starting_at": "2026-06-27 23:30:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 72",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782603000,
+              "participants": [
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609165,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253029,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 1599,
+              "name": "Uzbekistan vs Colombia",
+              "starting_at": "2026-06-18 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 24",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781748000,
+              "participants": [
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18720,
+                  "sport_id": 1,
+                  "country_id": 353,
+                  "venue_id": 2035,
+                  "gender": "male",
+                  "name": "Colombia",
+                  "short_code": "COL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478769,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 2",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-16",
+      "ending_at": "2024-06-11",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393370,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-06",
+          "ending_at": "2024-06-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312982,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252897,
+              "aggregate_id": null,
+              "round_id": 393370,
+              "state_id": 5,
+              "venue_id": 211879,
+              "name": "Uzbekistan vs Turkmenistan",
+              "starting_at": "2024-06-06 14:30:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717684200,
+              "participants": [
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18842,
+                  "sport_id": 1,
+                  "country_id": 83175,
+                  "venue_id": 14528,
+                  "gender": "male",
+                  "name": "Turkmenistan",
+                  "short_code": "TKM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18842.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 12:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15856941,
+                  "fixture_id": 19312982,
+                  "type_id": 48996,
+                  "participant_id": 18842,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856940,
+                  "fixture_id": 19312982,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14915751,
+                  "fixture_id": 19312982,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915753,
+                  "fixture_id": 19312982,
+                  "type_id": 1525,
+                  "participant_id": 18842,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915740,
+                  "fixture_id": 19312982,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915750,
+                  "fixture_id": 19312982,
+                  "type_id": 2,
+                  "participant_id": 18842,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915748,
+                  "fixture_id": 19312982,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915744,
+                  "fixture_id": 19312982,
+                  "type_id": 1,
+                  "participant_id": 18842,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393369,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-03-26",
+          "ending_at": "2024-03-26",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312979,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252897,
+              "aggregate_id": null,
+              "round_id": 393369,
+              "state_id": 5,
+              "venue_id": 211879,
+              "name": "Uzbekistan vs Hong Kong",
+              "starting_at": "2024-03-26 14:30:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1711463400,
+              "participants": [
+                {
+                  "id": 18134,
+                  "sport_id": 1,
+                  "country_id": 64306,
+                  "venue_id": 13845,
+                  "gender": "male",
+                  "name": "Hong Kong",
+                  "short_code": "HKG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18134.png",
+                  "founded": 1886,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 12:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915690,
+                  "fixture_id": 19312979,
+                  "type_id": 1525,
+                  "participant_id": 18134,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915693,
+                  "fixture_id": 19312979,
+                  "type_id": 2,
+                  "participant_id": 18134,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915698,
+                  "fixture_id": 19312979,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15856934,
+                  "fixture_id": 19312979,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856935,
+                  "fixture_id": 19312979,
+                  "type_id": 48996,
+                  "participant_id": 18134,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14915695,
+                  "fixture_id": 19312979,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915692,
+                  "fixture_id": 19312979,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915697,
+                  "fixture_id": 19312979,
+                  "type_id": 1,
+                  "participant_id": 18134,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393368,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-03-21",
+          "ending_at": "2024-03-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312977,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252897,
+              "aggregate_id": null,
+              "round_id": 393368,
+              "state_id": 5,
+              "venue_id": 642,
+              "name": "Hong Kong vs Uzbekistan",
+              "starting_at": "2024-03-21 12:00:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1711022400,
+              "participants": [
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18134,
+                  "sport_id": 1,
+                  "country_id": 64306,
+                  "venue_id": 13845,
+                  "gender": "male",
+                  "name": "Hong Kong",
+                  "short_code": "HKG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18134.png",
+                  "founded": 1886,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 12:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916116,
+                  "fixture_id": 19312977,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916115,
+                  "fixture_id": 19312977,
+                  "type_id": 1525,
+                  "participant_id": 18134,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15856931,
+                  "fixture_id": 19312977,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856930,
+                  "fixture_id": 19312977,
+                  "type_id": 48996,
+                  "participant_id": 18134,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14916112,
+                  "fixture_id": 19312977,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916111,
+                  "fixture_id": 19312977,
+                  "type_id": 2,
+                  "participant_id": 18134,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916113,
+                  "fixture_id": 19312977,
+                  "type_id": 1,
+                  "participant_id": 18134,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916114,
+                  "fixture_id": 19312977,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393371,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-11",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312984,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252897,
+              "aggregate_id": null,
+              "round_id": 393371,
+              "state_id": 5,
+              "venue_id": 1984,
+              "name": "Iran vs Uzbekistan",
+              "starting_at": "2024-06-11 17:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1718125200,
+              "participants": [
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18652,
+                  "sport_id": 1,
+                  "country_id": 488,
+                  "venue_id": 1984,
+                  "gender": "male",
+                  "name": "Iran",
+                  "short_code": "IRN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
+                  "founded": 1920,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 15:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916096,
+                  "fixture_id": 19312984,
+                  "type_id": 1,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916095,
+                  "fixture_id": 19312984,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916098,
+                  "fixture_id": 19312984,
+                  "type_id": 1525,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916093,
+                  "fixture_id": 19312984,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916097,
+                  "fixture_id": 19312984,
+                  "type_id": 2,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856944,
+                  "fixture_id": 19312984,
+                  "type_id": 48996,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856945,
+                  "fixture_id": 19312984,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14916094,
+                  "fixture_id": 19312984,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393366,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-16",
+          "ending_at": "2023-11-16",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312973,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252897,
+              "aggregate_id": null,
+              "round_id": 393366,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Turkmenistan vs Uzbekistan",
+              "starting_at": "2023-11-16 14:00:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1700143200,
+              "participants": [
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18842,
+                  "sport_id": 1,
+                  "country_id": 83175,
+                  "venue_id": 14528,
+                  "gender": "male",
+                  "name": "Turkmenistan",
+                  "short_code": "TKM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18842.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 12:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916153,
+                  "fixture_id": 19312973,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916150,
+                  "fixture_id": 19312973,
+                  "type_id": 1,
+                  "participant_id": 18842,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916147,
+                  "fixture_id": 19312973,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916141,
+                  "fixture_id": 19312973,
+                  "type_id": 1525,
+                  "participant_id": 18842,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916144,
+                  "fixture_id": 19312973,
+                  "type_id": 2,
+                  "participant_id": 18842,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916142,
+                  "fixture_id": 19312973,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393367,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-21",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312976,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252897,
+              "aggregate_id": null,
+              "round_id": 393367,
+              "state_id": 5,
+              "venue_id": 211879,
+              "name": "Uzbekistan vs Iran",
+              "starting_at": "2023-11-21 13:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1700571600,
+              "participants": [
+                {
+                  "id": 18652,
+                  "sport_id": 1,
+                  "country_id": 488,
+                  "venue_id": 1984,
+                  "gender": "male",
+                  "name": "Iran",
+                  "short_code": "IRN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
+                  "founded": 1920,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 15:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916109,
+                  "fixture_id": 19312976,
+                  "type_id": 1,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916110,
+                  "fixture_id": 19312976,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916107,
+                  "fixture_id": 19312976,
+                  "type_id": 2,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916103,
+                  "fixture_id": 19312976,
+                  "type_id": 1525,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916108,
+                  "fixture_id": 19312976,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916105,
+                  "fixture_id": 19312976,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478770,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 3",
+      "sort_order": 4,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-09-05",
+      "ending_at": "2025-06-10",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393365,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312864,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393365,
+              "state_id": 5,
+              "venue_id": 211879,
+              "name": "Uzbekistan vs Qatar",
+              "starting_at": "2025-06-10 13:45:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749563100,
+              "participants": [
+                {
+                  "id": 18544,
+                  "sport_id": 1,
+                  "country_id": 74505,
+                  "venue_id": 14371,
+                  "gender": "male",
+                  "name": "Qatar",
+                  "short_code": "QAT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18544.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16605080,
+                  "fixture_id": 19312864,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605079,
+                  "fixture_id": 19312864,
+                  "type_id": 2,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605077,
+                  "fixture_id": 19312864,
+                  "type_id": 1,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605583,
+                  "fixture_id": 19312864,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605584,
+                  "fixture_id": 19312864,
+                  "type_id": 48996,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605075,
+                  "fixture_id": 19312864,
+                  "type_id": 1525,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605078,
+                  "fixture_id": 19312864,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605076,
+                  "fixture_id": 19312864,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393364,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-05",
+          "ending_at": "2025-06-05",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312860,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393364,
+              "state_id": 5,
+              "venue_id": 13447,
+              "name": "United Arab Emirates vs Uzbekistan",
+              "starting_at": "2025-06-05 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749139200,
+              "participants": [
+                {
+                  "id": 18566,
+                  "sport_id": 1,
+                  "country_id": 2802,
+                  "venue_id": 14390,
+                  "gender": "male",
+                  "name": "United Arab Emirates",
+                  "short_code": null,
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18566.png",
+                  "founded": 1971,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-12-18 11:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16589193,
+                  "fixture_id": 19312860,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16589188,
+                  "fixture_id": 19312860,
+                  "type_id": 1525,
+                  "participant_id": 18566,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16589189,
+                  "fixture_id": 19312860,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16589190,
+                  "fixture_id": 19312860,
+                  "type_id": 1,
+                  "participant_id": 18566,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16589440,
+                  "fixture_id": 19312860,
+                  "type_id": 48996,
+                  "participant_id": 18566,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16589441,
+                  "fixture_id": 19312860,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16589191,
+                  "fixture_id": 19312860,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16589192,
+                  "fixture_id": 19312860,
+                  "type_id": 2,
+                  "participant_id": 18566,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393363,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-25",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312856,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393363,
+              "state_id": 5,
+              "venue_id": 1984,
+              "name": "Iran vs Uzbekistan",
+              "starting_at": "2025-03-25 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742918400,
+              "participants": [
+                {
+                  "id": 18652,
+                  "sport_id": 1,
+                  "country_id": 488,
+                  "venue_id": 1984,
+                  "gender": "male",
+                  "name": "Iran",
+                  "short_code": "IRN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
+                  "founded": 1920,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 15:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16124732,
+                  "fixture_id": 19312856,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125057,
+                  "fixture_id": 19312856,
+                  "type_id": 48996,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125058,
+                  "fixture_id": 19312856,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16124727,
+                  "fixture_id": 19312856,
+                  "type_id": 1525,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16124730,
+                  "fixture_id": 19312856,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124728,
+                  "fixture_id": 19312856,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16124729,
+                  "fixture_id": 19312856,
+                  "type_id": 1,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124731,
+                  "fixture_id": 19312856,
+                  "type_id": 2,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393356,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-09-05",
+          "ending_at": "2024-09-05",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312835,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393356,
+              "state_id": 5,
+              "venue_id": 211879,
+              "name": "Uzbekistan vs Korea DPR",
+              "starting_at": "2024-09-05 14:00:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1725544800,
+              "participants": [
+                {
+                  "id": 18841,
+                  "sport_id": 1,
+                  "country_id": 1442002,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Korea DPR",
+                  "short_code": "KOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18841.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-06-10 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915913,
+                  "fixture_id": 19312835,
+                  "type_id": 1525,
+                  "participant_id": 18841,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915915,
+                  "fixture_id": 19312835,
+                  "type_id": 2,
+                  "participant_id": 18841,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915917,
+                  "fixture_id": 19312835,
+                  "type_id": 1,
+                  "participant_id": 18841,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915916,
+                  "fixture_id": 19312835,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915918,
+                  "fixture_id": 19312835,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915914,
+                  "fixture_id": 19312835,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15856760,
+                  "fixture_id": 19312835,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856761,
+                  "fixture_id": 19312835,
+                  "type_id": 48996,
+                  "participant_id": 18841,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393357,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-09-10",
+          "ending_at": "2024-09-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312839,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393357,
+              "state_id": 5,
+              "venue_id": 14502,
+              "name": "Kyrgyz Republic vs Uzbekistan",
+              "starting_at": "2024-09-10 14:00:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1725976800,
+              "participants": [
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18788,
+                  "sport_id": 1,
+                  "country_id": 49438,
+                  "venue_id": 14502,
+                  "gender": "male",
+                  "name": "Kyrgyz Republic",
+                  "short_code": "KGZ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18788.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 14:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915503,
+                  "fixture_id": 19312839,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915505,
+                  "fixture_id": 19312839,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915506,
+                  "fixture_id": 19312839,
+                  "type_id": 2,
+                  "participant_id": 18788,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915507,
+                  "fixture_id": 19312839,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915508,
+                  "fixture_id": 19312839,
+                  "type_id": 1,
+                  "participant_id": 18788,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15856768,
+                  "fixture_id": 19312839,
+                  "type_id": 48996,
+                  "participant_id": 18788,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856769,
+                  "fixture_id": 19312839,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14915504,
+                  "fixture_id": 19312839,
+                  "type_id": 1525,
+                  "participant_id": 18788,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393361,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-19",
+          "ending_at": "2024-11-19",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312852,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393361,
+              "state_id": 5,
+              "venue_id": 14459,
+              "name": "Korea DPR vs Uzbekistan",
+              "starting_at": "2024-11-19 12:00:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1732017600,
+              "participants": [
+                {
+                  "id": 18841,
+                  "sport_id": 1,
+                  "country_id": 1442002,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Korea DPR",
+                  "short_code": "KOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18841.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-06-10 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15230327,
+                  "fixture_id": 19312852,
+                  "type_id": 1525,
+                  "participant_id": 18841,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15230322,
+                  "fixture_id": 19312852,
+                  "type_id": 1,
+                  "participant_id": 18841,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15230326,
+                  "fixture_id": 19312852,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15230323,
+                  "fixture_id": 19312852,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15231608,
+                  "fixture_id": 19312852,
+                  "type_id": 2,
+                  "participant_id": 18841,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856795,
+                  "fixture_id": 19312852,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856794,
+                  "fixture_id": 19312852,
+                  "type_id": 48996,
+                  "participant_id": 18841,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15231609,
+                  "fixture_id": 19312852,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393362,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-20",
+          "ending_at": "2025-03-20",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312853,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393362,
+              "state_id": 5,
+              "venue_id": 211879,
+              "name": "Uzbekistan vs Kyrgyz Republic",
+              "starting_at": "2025-03-20 16:00:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742486400,
+              "participants": [
+                {
+                  "id": 18788,
+                  "sport_id": 1,
+                  "country_id": 49438,
+                  "venue_id": 14502,
+                  "gender": "male",
+                  "name": "Kyrgyz Republic",
+                  "short_code": "KGZ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18788.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 14:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16091483,
+                  "fixture_id": 19312853,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16091481,
+                  "fixture_id": 19312853,
+                  "type_id": 1525,
+                  "participant_id": 18788,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16091641,
+                  "fixture_id": 19312853,
+                  "type_id": 48996,
+                  "participant_id": 18788,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16091640,
+                  "fixture_id": 19312853,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16091485,
+                  "fixture_id": 19312853,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16091484,
+                  "fixture_id": 19312853,
+                  "type_id": 1,
+                  "participant_id": 18788,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16091486,
+                  "fixture_id": 19312853,
+                  "type_id": 2,
+                  "participant_id": 18788,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16091487,
+                  "fixture_id": 19312853,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393360,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-14",
+          "ending_at": "2024-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312849,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393360,
+              "state_id": 5,
+              "venue_id": 4726,
+              "name": "Qatar vs Uzbekistan",
+              "starting_at": "2024-11-14 16:15:00",
+              "result_info": "Qatar won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1731600900,
+              "participants": [
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18544,
+                  "sport_id": 1,
+                  "country_id": 74505,
+                  "venue_id": 14371,
+                  "gender": "male",
+                  "name": "Qatar",
+                  "short_code": "QAT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18544.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15203964,
+                  "fixture_id": 19312849,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15203965,
+                  "fixture_id": 19312849,
+                  "type_id": 2,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856788,
+                  "fixture_id": 19312849,
+                  "type_id": 48996,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856789,
+                  "fixture_id": 19312849,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15203881,
+                  "fixture_id": 19312849,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15203880,
+                  "fixture_id": 19312849,
+                  "type_id": 1525,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15203878,
+                  "fixture_id": 19312849,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15203879,
+                  "fixture_id": 19312849,
+                  "type_id": 1,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393359,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-15",
+          "ending_at": "2024-10-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312845,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393359,
+              "state_id": 5,
+              "venue_id": 211879,
+              "name": "Uzbekistan vs United Arab Emirates",
+              "starting_at": "2024-10-15 14:00:00",
+              "result_info": "Uzbekistan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1729000800,
+              "participants": [
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18566,
+                  "sport_id": 1,
+                  "country_id": 2802,
+                  "venue_id": 14390,
+                  "gender": "male",
+                  "name": "United Arab Emirates",
+                  "short_code": null,
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18566.png",
+                  "founded": 1971,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-12-18 11:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15045227,
+                  "fixture_id": 19312845,
+                  "type_id": 1,
+                  "participant_id": 18566,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15045229,
+                  "fixture_id": 19312845,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15856780,
+                  "fixture_id": 19312845,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856781,
+                  "fixture_id": 19312845,
+                  "type_id": 48996,
+                  "participant_id": 18566,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15045228,
+                  "fixture_id": 19312845,
+                  "type_id": 1525,
+                  "participant_id": 18566,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15045226,
+                  "fixture_id": 19312845,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15045258,
+                  "fixture_id": 19312845,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15045259,
+                  "fixture_id": 19312845,
+                  "type_id": 2,
+                  "participant_id": 18566,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393358,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-10",
+          "ending_at": "2024-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312841,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252902,
+              "aggregate_id": null,
+              "round_id": 393358,
+              "state_id": 5,
+              "venue_id": 211879,
+              "name": "Uzbekistan vs Iran",
+              "starting_at": "2024-10-10 14:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1728568800,
+              "participants": [
+                {
+                  "id": 18652,
+                  "sport_id": 1,
+                  "country_id": 488,
+                  "venue_id": 1984,
+                  "gender": "male",
+                  "name": "Iran",
+                  "short_code": "IRN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
+                  "founded": 1920,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 15:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15016480,
+                  "fixture_id": 19312841,
+                  "type_id": 1,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15016481,
+                  "fixture_id": 19312841,
+                  "type_id": 1,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15016482,
+                  "fixture_id": 19312841,
+                  "type_id": 1525,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15016483,
+                  "fixture_id": 19312841,
+                  "type_id": 1525,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15856773,
+                  "fixture_id": 19312841,
+                  "type_id": 48996,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856772,
+                  "fixture_id": 19312841,
+                  "type_id": 48996,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15016506,
+                  "fixture_id": 19312841,
+                  "type_id": 2,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15016507,
+                  "fixture_id": 19312841,
+                  "type_id": 2,
+                  "participant_id": 18745,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478771,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 4",
+      "sort_order": 5,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-10-08",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393374,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-14",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 393373,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-11",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 393372,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-08",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124651,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1975,
+    "remaining": 2244,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

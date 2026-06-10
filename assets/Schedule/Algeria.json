@@ -1,0 +1,2040 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609181,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253028,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11579,
+              "name": "Jordan vs Algeria",
+              "starting_at": "2026-06-23 03:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 44",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782183600,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609197,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253028,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 72370,
+              "name": "Algeria vs Austria",
+              "starting_at": "2026-06-28 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 69",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782612000,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18643,
+                  "sport_id": 1,
+                  "country_id": 143,
+                  "venue_id": 3871,
+                  "gender": "male",
+                  "name": "Austria",
+                  "short_code": "AUT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18643.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609145,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253028,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 72370,
+              "name": "Argentina vs Algeria",
+              "starting_at": "2026-06-17 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 19",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781658000,
+              "participants": [
+                {
+                  "id": 18644,
+                  "sport_id": 1,
+                  "country_id": 44,
+                  "venue_id": 6569,
+                  "gender": "male",
+                  "name": "Argentina",
+                  "short_code": "ARG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
+                  "founded": 1893,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77465184,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-15",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 323228,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995189,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323228,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Algeria vs Uganda",
+              "starting_at": "2025-10-14 16:00:00",
+              "result_info": "Algeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760457600,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18830,
+                  "sport_id": 1,
+                  "country_id": 4125,
+                  "venue_id": 14515,
+                  "gender": "male",
+                  "name": "Uganda",
+                  "short_code": "UGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18830.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-12-30 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17236455,
+                  "fixture_id": 18995189,
+                  "type_id": 48996,
+                  "participant_id": 18830,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17236454,
+                  "fixture_id": 18995189,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17235980,
+                  "fixture_id": 18995189,
+                  "type_id": 2,
+                  "participant_id": 18830,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17235977,
+                  "fixture_id": 18995189,
+                  "type_id": 1,
+                  "participant_id": 18830,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17235974,
+                  "fixture_id": 18995189,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17235976,
+                  "fixture_id": 18995189,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17235979,
+                  "fixture_id": 18995189,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17235975,
+                  "fixture_id": 18995189,
+                  "type_id": 1525,
+                  "participant_id": 18830,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323222,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-09",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995170,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323222,
+              "state_id": 5,
+              "venue_id": 7629,
+              "name": "Uganda vs Algeria",
+              "starting_at": "2024-06-10 16:00:00",
+              "result_info": "Algeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1718035200,
+              "participants": [
+                {
+                  "id": 18830,
+                  "sport_id": 1,
+                  "country_id": 4125,
+                  "venue_id": 14515,
+                  "gender": "male",
+                  "name": "Uganda",
+                  "short_code": "UGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18830.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-12-30 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15582262,
+                  "fixture_id": 18995170,
+                  "type_id": 48996,
+                  "participant_id": 18830,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15582263,
+                  "fixture_id": 18995170,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14533228,
+                  "fixture_id": 18995170,
+                  "type_id": 1525,
+                  "participant_id": 18830,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14533227,
+                  "fixture_id": 18995170,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14533225,
+                  "fixture_id": 18995170,
+                  "type_id": 1,
+                  "participant_id": 18830,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14533226,
+                  "fixture_id": 18995170,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14533355,
+                  "fixture_id": 18995170,
+                  "type_id": 2,
+                  "participant_id": 18830,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14533356,
+                  "fixture_id": 18995170,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323225,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-03",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995180,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323225,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Algeria vs Botswana",
+              "starting_at": "2025-09-04 19:00:00",
+              "result_info": "Algeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757012400,
+              "participants": [
+                {
+                  "id": 18739,
+                  "sport_id": 1,
+                  "country_id": 191038,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Botswana",
+                  "short_code": "BWA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18739.png",
+                  "founded": 1970,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16896251,
+                  "fixture_id": 18995180,
+                  "type_id": 1525,
+                  "participant_id": 18739,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896416,
+                  "fixture_id": 18995180,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896260,
+                  "fixture_id": 18995180,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896254,
+                  "fixture_id": 18995180,
+                  "type_id": 1,
+                  "participant_id": 18739,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896256,
+                  "fixture_id": 18995180,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896417,
+                  "fixture_id": 18995180,
+                  "type_id": 48996,
+                  "participant_id": 18739,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896253,
+                  "fixture_id": 18995180,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896258,
+                  "fixture_id": 18995180,
+                  "type_id": 2,
+                  "participant_id": 18739,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323224,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-23",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995176,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323224,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Algeria vs Mozambique",
+              "starting_at": "2025-03-25 21:00:00",
+              "result_info": "Algeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742936400,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18826,
+                  "sport_id": 1,
+                  "country_id": 6783,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Mozambique",
+                  "short_code": "MOZ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18826.png",
+                  "founded": 1976,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16125767,
+                  "fixture_id": 18995176,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125768,
+                  "fixture_id": 18995176,
+                  "type_id": 48996,
+                  "participant_id": 18826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125552,
+                  "fixture_id": 18995176,
+                  "type_id": 2,
+                  "participant_id": 18826,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125550,
+                  "fixture_id": 18995176,
+                  "type_id": 1,
+                  "participant_id": 18826,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16125547,
+                  "fixture_id": 18995176,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125548,
+                  "fixture_id": 18995176,
+                  "type_id": 1525,
+                  "participant_id": 18826,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125549,
+                  "fixture_id": 18995176,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16125551,
+                  "fixture_id": 18995176,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323223,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-17",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995174,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323223,
+              "state_id": 5,
+              "venue_id": 30527,
+              "name": "Botswana vs Algeria",
+              "starting_at": "2025-03-21 13:00:00",
+              "result_info": "Algeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742562000,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18739,
+                  "sport_id": 1,
+                  "country_id": 191038,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Botswana",
+                  "short_code": "BWA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18739.png",
+                  "founded": 1970,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16093075,
+                  "fixture_id": 18995174,
+                  "type_id": 1,
+                  "participant_id": 18739,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16093076,
+                  "fixture_id": 18995174,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16093074,
+                  "fixture_id": 18995174,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16093077,
+                  "fixture_id": 18995174,
+                  "type_id": 2,
+                  "participant_id": 18739,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16093466,
+                  "fixture_id": 18995174,
+                  "type_id": 48996,
+                  "participant_id": 18739,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16093073,
+                  "fixture_id": 18995174,
+                  "type_id": 1525,
+                  "participant_id": 18739,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16093078,
+                  "fixture_id": 18995174,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16093467,
+                  "fixture_id": 18995174,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323220,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-19",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995164,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323220,
+              "state_id": 5,
+              "venue_id": 14512,
+              "name": "Mozambique vs Algeria",
+              "starting_at": "2023-11-19 13:00:00",
+              "result_info": "Algeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700398800,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18826,
+                  "sport_id": 1,
+                  "country_id": 6783,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Mozambique",
+                  "short_code": "MOZ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18826.png",
+                  "founded": 1976,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13525262,
+                  "fixture_id": 18995164,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13525263,
+                  "fixture_id": 18995164,
+                  "type_id": 1525,
+                  "participant_id": 18826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13525229,
+                  "fixture_id": 18995164,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13525230,
+                  "fixture_id": 18995164,
+                  "type_id": 1,
+                  "participant_id": 18826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13526122,
+                  "fixture_id": 18995164,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13526123,
+                  "fixture_id": 18995164,
+                  "type_id": 2,
+                  "participant_id": 18826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323219,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-15",
+          "ending_at": "2023-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994054,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323219,
+              "state_id": 5,
+              "venue_id": 7629,
+              "name": "Algeria vs Somalia",
+              "starting_at": "2023-11-16 16:00:00",
+              "result_info": "Algeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700150400,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18885,
+                  "sport_id": 1,
+                  "country_id": 7563,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Somalia",
+                  "short_code": "SOM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18885.png",
+                  "founded": 1951,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 15:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13511362,
+                  "fixture_id": 18994054,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13511361,
+                  "fixture_id": 18994054,
+                  "type_id": 1525,
+                  "participant_id": 18885,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13511360,
+                  "fixture_id": 18994054,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13511359,
+                  "fixture_id": 18994054,
+                  "type_id": 1,
+                  "participant_id": 18885,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13511416,
+                  "fixture_id": 18994054,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13511415,
+                  "fixture_id": 18994054,
+                  "type_id": 2,
+                  "participant_id": 18885,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323221,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995168,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323221,
+              "state_id": 5,
+              "venue_id": 7629,
+              "name": "Algeria vs Guinea",
+              "starting_at": "2024-06-06 19:00:00",
+              "result_info": "Guinea won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717700400,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18548,
+                  "sport_id": 1,
+                  "country_id": 1703,
+                  "venue_id": 5043,
+                  "gender": "male",
+                  "name": "Guinea",
+                  "short_code": "GIN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18548.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14518513,
+                  "fixture_id": 18995168,
+                  "type_id": 1525,
+                  "participant_id": 18548,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15582258,
+                  "fixture_id": 18995168,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15582259,
+                  "fixture_id": 18995168,
+                  "type_id": 48996,
+                  "participant_id": 18548,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14518514,
+                  "fixture_id": 18995168,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518631,
+                  "fixture_id": 18995168,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518511,
+                  "fixture_id": 18995168,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14518512,
+                  "fixture_id": 18995168,
+                  "type_id": 1,
+                  "participant_id": 18548,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14518632,
+                  "fixture_id": 18995168,
+                  "type_id": 2,
+                  "participant_id": 18548,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323227,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995184,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323227,
+              "state_id": 5,
+              "venue_id": 13436,
+              "name": "Somalia vs Algeria",
+              "starting_at": "2025-10-09 16:00:00",
+              "result_info": "Algeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760025600,
+              "participants": [
+                {
+                  "id": 18885,
+                  "sport_id": 1,
+                  "country_id": 7563,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Somalia",
+                  "short_code": "SOM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18885.png",
+                  "founded": 1951,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 15:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17197187,
+                  "fixture_id": 18995184,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17197186,
+                  "fixture_id": 18995184,
+                  "type_id": 48996,
+                  "participant_id": 18885,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17197018,
+                  "fixture_id": 18995184,
+                  "type_id": 1525,
+                  "participant_id": 18885,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17197023,
+                  "fixture_id": 18995184,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17197019,
+                  "fixture_id": 18995184,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17197020,
+                  "fixture_id": 18995184,
+                  "type_id": 1,
+                  "participant_id": 18885,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17197021,
+                  "fixture_id": 18995184,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17197022,
+                  "fixture_id": 18995184,
+                  "type_id": 2,
+                  "participant_id": 18885,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323226,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995181,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249497,
+              "aggregate_id": null,
+              "round_id": 323226,
+              "state_id": 5,
+              "venue_id": 1679,
+              "name": "Guinea vs Algeria",
+              "starting_at": "2025-09-08 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757347200,
+              "participants": [
+                {
+                  "id": 18548,
+                  "sport_id": 1,
+                  "country_id": 1703,
+                  "venue_id": 5043,
+                  "gender": "male",
+                  "name": "Guinea",
+                  "short_code": "GIN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18548.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16924478,
+                  "fixture_id": 18995181,
+                  "type_id": 2,
+                  "participant_id": 18548,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924477,
+                  "fixture_id": 18995181,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924640,
+                  "fixture_id": 18995181,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16924639,
+                  "fixture_id": 18995181,
+                  "type_id": 48996,
+                  "participant_id": 18548,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16924474,
+                  "fixture_id": 18995181,
+                  "type_id": 1525,
+                  "participant_id": 18548,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924473,
+                  "fixture_id": 18995181,
+                  "type_id": 1525,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924476,
+                  "fixture_id": 18995181,
+                  "type_id": 1,
+                  "participant_id": 18548,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924475,
+                  "fixture_id": 18995181,
+                  "type_id": 1,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77476898,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-13",
+      "ending_at": "2025-11-13",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 372381,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372382,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372384,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372386,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372383,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372385,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 392946,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-13",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124615,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 2011,
+    "remaining": 2291,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

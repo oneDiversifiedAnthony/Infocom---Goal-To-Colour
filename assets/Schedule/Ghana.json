@@ -1,0 +1,2040 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609183,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253030,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 160,
+              "name": "England vs Ghana",
+              "starting_at": "2026-06-23 20:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 45",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782244800,
+              "participants": [
+                {
+                  "id": 18645,
+                  "sport_id": 1,
+                  "country_id": 462,
+                  "venue_id": 1315,
+                  "gender": "male",
+                  "name": "England",
+                  "short_code": "ENG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18645.png",
+                  "founded": 1863,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609150,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253030,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 11556,
+              "name": "Croatia vs Ghana",
+              "starting_at": "2026-06-27 21:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 68",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782594000,
+              "participants": [
+                {
+                  "id": 18588,
+                  "sport_id": 1,
+                  "country_id": 266,
+                  "venue_id": 176,
+                  "gender": "male",
+                  "name": "Croatia",
+                  "short_code": "CRO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
+                  "founded": 1912,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609167,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253030,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 11542,
+              "name": "Ghana vs Panama",
+              "starting_at": "2026-06-17 23:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 21",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781737200,
+              "participants": [
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77465184,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-15",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 323228,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995242,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323228,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Ghana vs Comoros",
+              "starting_at": "2025-10-12 19:00:00",
+              "result_info": "Ghana won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760295600,
+              "participants": [
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18948,
+                  "sport_id": 1,
+                  "country_id": 364678,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Comoros",
+                  "short_code": "COM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18948.png",
+                  "founded": 1979,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-28 12:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17231541,
+                  "fixture_id": 18995242,
+                  "type_id": 1525,
+                  "participant_id": 18948,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17231544,
+                  "fixture_id": 18995242,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17231542,
+                  "fixture_id": 18995242,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17231545,
+                  "fixture_id": 18995242,
+                  "type_id": 2,
+                  "participant_id": 18948,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17231919,
+                  "fixture_id": 18995242,
+                  "type_id": 48996,
+                  "participant_id": 18948,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17231543,
+                  "fixture_id": 18995242,
+                  "type_id": 1,
+                  "participant_id": 18948,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17231918,
+                  "fixture_id": 18995242,
+                  "type_id": 48996,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17231540,
+                  "fixture_id": 18995242,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323222,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-09",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995224,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323222,
+              "state_id": 5,
+              "venue_id": 3654,
+              "name": "Ghana vs Central African Republic",
+              "starting_at": "2024-06-10 19:00:00",
+              "result_info": "Ghana won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1718046000,
+              "participants": [
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18787,
+                  "sport_id": 1,
+                  "country_id": 1247,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Central African Republic",
+                  "short_code": "CAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18787.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14534029,
+                  "fixture_id": 18995224,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14534026,
+                  "fixture_id": 18995224,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14534028,
+                  "fixture_id": 18995224,
+                  "type_id": 1525,
+                  "participant_id": 18787,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15582284,
+                  "fixture_id": 18995224,
+                  "type_id": 48996,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15582285,
+                  "fixture_id": 18995224,
+                  "type_id": 48996,
+                  "participant_id": 18787,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14534066,
+                  "fixture_id": 18995224,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14534027,
+                  "fixture_id": 18995224,
+                  "type_id": 1,
+                  "participant_id": 18787,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14534067,
+                  "fixture_id": 18995224,
+                  "type_id": 2,
+                  "participant_id": 18787,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323225,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-03",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995234,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323225,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Chad vs Ghana",
+              "starting_at": "2025-09-04 13:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1756990800,
+              "participants": [
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18784,
+                  "sport_id": 1,
+                  "country_id": 98799,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Chad",
+                  "short_code": "TCD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18784.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16895803,
+                  "fixture_id": 18995234,
+                  "type_id": 48996,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16895802,
+                  "fixture_id": 18995234,
+                  "type_id": 48996,
+                  "participant_id": 18784,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16895573,
+                  "fixture_id": 18995234,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16895572,
+                  "fixture_id": 18995234,
+                  "type_id": 1,
+                  "participant_id": 18784,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16895575,
+                  "fixture_id": 18995234,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16895571,
+                  "fixture_id": 18995234,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16895570,
+                  "fixture_id": 18995234,
+                  "type_id": 1525,
+                  "participant_id": 18784,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16895574,
+                  "fixture_id": 18995234,
+                  "type_id": 2,
+                  "participant_id": 18784,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323224,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-23",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995230,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323224,
+              "state_id": 5,
+              "venue_id": 12611,
+              "name": "Madagascar vs Ghana",
+              "starting_at": "2025-03-24 19:00:00",
+              "result_info": "Ghana won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742842800,
+              "participants": [
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18828,
+                  "sport_id": 1,
+                  "country_id": 1646,
+                  "venue_id": 14514,
+                  "gender": "male",
+                  "name": "Madagascar",
+                  "short_code": "MDG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18828.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16123518,
+                  "fixture_id": 18995230,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123517,
+                  "fixture_id": 18995230,
+                  "type_id": 1525,
+                  "participant_id": 18828,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123516,
+                  "fixture_id": 18995230,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123520,
+                  "fixture_id": 18995230,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123521,
+                  "fixture_id": 18995230,
+                  "type_id": 2,
+                  "participant_id": 18828,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123907,
+                  "fixture_id": 18995230,
+                  "type_id": 48996,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16123519,
+                  "fixture_id": 18995230,
+                  "type_id": 1,
+                  "participant_id": 18828,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123906,
+                  "fixture_id": 18995230,
+                  "type_id": 48996,
+                  "participant_id": 18828,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323223,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-17",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995227,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323223,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Ghana vs Chad",
+              "starting_at": "2025-03-21 19:00:00",
+              "result_info": "Ghana won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742583600,
+              "participants": [
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18784,
+                  "sport_id": 1,
+                  "country_id": 98799,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Chad",
+                  "short_code": "TCD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18784.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16094096,
+                  "fixture_id": 18995227,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094095,
+                  "fixture_id": 18995227,
+                  "type_id": 1525,
+                  "participant_id": 18784,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16094094,
+                  "fixture_id": 18995227,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16094099,
+                  "fixture_id": 18995227,
+                  "type_id": 2,
+                  "participant_id": 18784,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094097,
+                  "fixture_id": 18995227,
+                  "type_id": 1,
+                  "participant_id": 18784,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094098,
+                  "fixture_id": 18995227,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094886,
+                  "fixture_id": 18995227,
+                  "type_id": 48996,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16094887,
+                  "fixture_id": 18995227,
+                  "type_id": 48996,
+                  "participant_id": 18784,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323220,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-19",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995366,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323220,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Comoros vs Ghana",
+              "starting_at": "2023-11-21 16:00:00",
+              "result_info": "Comoros won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700582400,
+              "participants": [
+                {
+                  "id": 18948,
+                  "sport_id": 1,
+                  "country_id": 364678,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Comoros",
+                  "short_code": "COM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18948.png",
+                  "founded": 1979,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-28 12:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13533704,
+                  "fixture_id": 18995366,
+                  "type_id": 1,
+                  "participant_id": 18948,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13533774,
+                  "fixture_id": 18995366,
+                  "type_id": 2,
+                  "participant_id": 18948,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13533712,
+                  "fixture_id": 18995366,
+                  "type_id": 1525,
+                  "participant_id": 18948,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13533713,
+                  "fixture_id": 18995366,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13533705,
+                  "fixture_id": 18995366,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13533775,
+                  "fixture_id": 18995366,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323219,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-15",
+          "ending_at": "2023-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994059,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323219,
+              "state_id": 5,
+              "venue_id": 3654,
+              "name": "Ghana vs Madagascar",
+              "starting_at": "2023-11-17 16:00:00",
+              "result_info": "Ghana won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700236800,
+              "participants": [
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18828,
+                  "sport_id": 1,
+                  "country_id": 1646,
+                  "venue_id": 14514,
+                  "gender": "male",
+                  "name": "Madagascar",
+                  "short_code": "MDG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18828.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13512577,
+                  "fixture_id": 18994059,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13512575,
+                  "fixture_id": 18994059,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13512578,
+                  "fixture_id": 18994059,
+                  "type_id": 1525,
+                  "participant_id": 18828,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13512605,
+                  "fixture_id": 18994059,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13512606,
+                  "fixture_id": 18994059,
+                  "type_id": 2,
+                  "participant_id": 18828,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13512576,
+                  "fixture_id": 18994059,
+                  "type_id": 1,
+                  "participant_id": 18828,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323221,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995223,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323221,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Mali vs Ghana",
+              "starting_at": "2024-06-06 19:00:00",
+              "result_info": "Ghana won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717700400,
+              "participants": [
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18731,
+                  "sport_id": 1,
+                  "country_id": 26,
+                  "venue_id": 343707,
+                  "gender": "male",
+                  "name": "Mali",
+                  "short_code": "MLI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18731.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14518571,
+                  "fixture_id": 18995223,
+                  "type_id": 1,
+                  "participant_id": 18731,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15582282,
+                  "fixture_id": 18995223,
+                  "type_id": 48996,
+                  "participant_id": 18731,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15582283,
+                  "fixture_id": 18995223,
+                  "type_id": 48996,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14518572,
+                  "fixture_id": 18995223,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518645,
+                  "fixture_id": 18995223,
+                  "type_id": 2,
+                  "participant_id": 18731,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518646,
+                  "fixture_id": 18995223,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518569,
+                  "fixture_id": 18995223,
+                  "type_id": 1525,
+                  "participant_id": 18731,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518570,
+                  "fixture_id": 18995223,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323227,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995240,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323227,
+              "state_id": 5,
+              "venue_id": 12581,
+              "name": "Central African Republic vs Ghana",
+              "starting_at": "2025-10-08 16:00:00",
+              "result_info": "Ghana won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1759939200,
+              "participants": [
+                {
+                  "id": 18787,
+                  "sport_id": 1,
+                  "country_id": 1247,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Central African Republic",
+                  "short_code": "CAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18787.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17195041,
+                  "fixture_id": 18995240,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17195038,
+                  "fixture_id": 18995240,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17195039,
+                  "fixture_id": 18995240,
+                  "type_id": 1,
+                  "participant_id": 18787,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17195037,
+                  "fixture_id": 18995240,
+                  "type_id": 1525,
+                  "participant_id": 18787,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17195042,
+                  "fixture_id": 18995240,
+                  "type_id": 2,
+                  "participant_id": 18787,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17195044,
+                  "fixture_id": 18995240,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17195421,
+                  "fixture_id": 18995240,
+                  "type_id": 48996,
+                  "participant_id": 18787,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17195422,
+                  "fixture_id": 18995240,
+                  "type_id": 48996,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323226,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995236,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249499,
+              "aggregate_id": null,
+              "round_id": 323226,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Ghana vs Mali",
+              "starting_at": "2025-09-08 19:00:00",
+              "result_info": "Ghana won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757358000,
+              "participants": [
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18731,
+                  "sport_id": 1,
+                  "country_id": 26,
+                  "venue_id": 343707,
+                  "gender": "male",
+                  "name": "Mali",
+                  "short_code": "MLI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18731.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16924774,
+                  "fixture_id": 18995236,
+                  "type_id": 1525,
+                  "participant_id": 18731,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924775,
+                  "fixture_id": 18995236,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924776,
+                  "fixture_id": 18995236,
+                  "type_id": 1,
+                  "participant_id": 18731,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924778,
+                  "fixture_id": 18995236,
+                  "type_id": 2,
+                  "participant_id": 18731,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924777,
+                  "fixture_id": 18995236,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924773,
+                  "fixture_id": 18995236,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924886,
+                  "fixture_id": 18995236,
+                  "type_id": 48996,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16924887,
+                  "fixture_id": 18995236,
+                  "type_id": 48996,
+                  "participant_id": 18731,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77476898,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-13",
+      "ending_at": "2025-11-13",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 372381,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372382,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372384,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372386,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372383,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372385,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 392946,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-13",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124628,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1998,
+    "remaining": 2273,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

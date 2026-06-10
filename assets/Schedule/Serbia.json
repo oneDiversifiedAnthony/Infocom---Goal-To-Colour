@@ -1,0 +1,1442 @@
+{
+  "data": [
+    {
+      "id": 77464842,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-21",
+      "ending_at": "2025-11-18",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 1526,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 362707,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427861,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251896,
+              "aggregate_id": null,
+              "round_id": 362707,
+              "state_id": 5,
+              "venue_id": 1590,
+              "name": "Serbia vs England",
+              "starting_at": "2025-09-09 18:45:00",
+              "result_info": "England won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757443500,
+              "participants": [
+                {
+                  "id": 18645,
+                  "sport_id": 1,
+                  "country_id": 462,
+                  "venue_id": 1315,
+                  "gender": "male",
+                  "name": "England",
+                  "short_code": "ENG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18645.png",
+                  "founded": 1863,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18873,
+                  "sport_id": 1,
+                  "country_id": 296,
+                  "venue_id": 1590,
+                  "gender": "male",
+                  "name": "Serbia",
+                  "short_code": "SRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16926434,
+                  "fixture_id": 19427861,
+                  "type_id": 1525,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16926437,
+                  "fixture_id": 19427861,
+                  "type_id": 1,
+                  "participant_id": 18645,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16926995,
+                  "fixture_id": 19427861,
+                  "type_id": 48996,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16926431,
+                  "fixture_id": 19427861,
+                  "type_id": 1525,
+                  "participant_id": 18645,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16926438,
+                  "fixture_id": 19427861,
+                  "type_id": 1,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16926440,
+                  "fixture_id": 19427861,
+                  "type_id": 2,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16926996,
+                  "fixture_id": 19427861,
+                  "type_id": 48996,
+                  "participant_id": 18645,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16926439,
+                  "fixture_id": 19427861,
+                  "type_id": 2,
+                  "participant_id": 18645,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362709,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427916,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251896,
+              "aggregate_id": null,
+              "round_id": 362709,
+              "state_id": 5,
+              "venue_id": 343788,
+              "name": "Andorra vs Serbia",
+              "starting_at": "2025-10-14 18:45:00",
+              "result_info": "Serbia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760467500,
+              "participants": [
+                {
+                  "id": 18781,
+                  "sport_id": 1,
+                  "country_id": 2931,
+                  "venue_id": 14490,
+                  "gender": "male",
+                  "name": "Andorra",
+                  "short_code": "AND",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18781.png",
+                  "founded": 1994,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18873,
+                  "sport_id": 1,
+                  "country_id": 296,
+                  "venue_id": 1590,
+                  "gender": "male",
+                  "name": "Serbia",
+                  "short_code": "SRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17236476,
+                  "fixture_id": 19427916,
+                  "type_id": 2,
+                  "participant_id": 18781,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17236473,
+                  "fixture_id": 19427916,
+                  "type_id": 1525,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17236475,
+                  "fixture_id": 19427916,
+                  "type_id": 1,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17236472,
+                  "fixture_id": 19427916,
+                  "type_id": 1525,
+                  "participant_id": 18781,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17236474,
+                  "fixture_id": 19427916,
+                  "type_id": 1,
+                  "participant_id": 18781,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17236477,
+                  "fixture_id": 19427916,
+                  "type_id": 2,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17237450,
+                  "fixture_id": 19427916,
+                  "type_id": 48996,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17237449,
+                  "fixture_id": 19427916,
+                  "type_id": 48996,
+                  "participant_id": 18781,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362708,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-09",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427905,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251896,
+              "aggregate_id": null,
+              "round_id": 362708,
+              "state_id": 5,
+              "venue_id": 343456,
+              "name": "Serbia vs Albania",
+              "starting_at": "2025-10-11 18:45:00",
+              "result_info": "Albania won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760208300,
+              "participants": [
+                {
+                  "id": 18873,
+                  "sport_id": 1,
+                  "country_id": 296,
+                  "venue_id": 1590,
+                  "gender": "male",
+                  "name": "Serbia",
+                  "short_code": "SRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18641,
+                  "sport_id": 1,
+                  "country_id": 2454,
+                  "venue_id": 343635,
+                  "gender": "male",
+                  "name": "Albania",
+                  "short_code": "ALB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18641.png",
+                  "founded": 1930,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17222392,
+                  "fixture_id": 19427905,
+                  "type_id": 1525,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17222393,
+                  "fixture_id": 19427905,
+                  "type_id": 1,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17222395,
+                  "fixture_id": 19427905,
+                  "type_id": 2,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17223090,
+                  "fixture_id": 19427905,
+                  "type_id": 48996,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17222394,
+                  "fixture_id": 19427905,
+                  "type_id": 1,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17222396,
+                  "fixture_id": 19427905,
+                  "type_id": 2,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17222391,
+                  "fixture_id": 19427905,
+                  "type_id": 1525,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17223089,
+                  "fixture_id": 19427905,
+                  "type_id": 48996,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362703,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-24",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362710,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427945,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251896,
+              "aggregate_id": null,
+              "round_id": 362710,
+              "state_id": 5,
+              "venue_id": 1315,
+              "name": "England vs Serbia",
+              "starting_at": "2025-11-13 19:45:00",
+              "result_info": "England won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763063100,
+              "participants": [
+                {
+                  "id": 18645,
+                  "sport_id": 1,
+                  "country_id": 462,
+                  "venue_id": 1315,
+                  "gender": "male",
+                  "name": "England",
+                  "short_code": "ENG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18645.png",
+                  "founded": 1863,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18873,
+                  "sport_id": 1,
+                  "country_id": 296,
+                  "venue_id": 1590,
+                  "gender": "male",
+                  "name": "Serbia",
+                  "short_code": "SRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17438048,
+                  "fixture_id": 19427945,
+                  "type_id": 1525,
+                  "participant_id": 18645,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438049,
+                  "fixture_id": 19427945,
+                  "type_id": 1525,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438053,
+                  "fixture_id": 19427945,
+                  "type_id": 2,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438051,
+                  "fixture_id": 19427945,
+                  "type_id": 1,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438161,
+                  "fixture_id": 19427945,
+                  "type_id": 48996,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438160,
+                  "fixture_id": 19427945,
+                  "type_id": 48996,
+                  "participant_id": 18645,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438052,
+                  "fixture_id": 19427945,
+                  "type_id": 2,
+                  "participant_id": 18645,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438050,
+                  "fixture_id": 19427945,
+                  "type_id": 1,
+                  "participant_id": 18645,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362711,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-16",
+          "ending_at": "2025-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427955,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251896,
+              "aggregate_id": null,
+              "round_id": 362711,
+              "state_id": 5,
+              "venue_id": 343456,
+              "name": "Serbia vs Latvia",
+              "starting_at": "2025-11-16 17:00:00",
+              "result_info": "Serbia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763312400,
+              "participants": [
+                {
+                  "id": 18735,
+                  "sport_id": 1,
+                  "country_id": 748,
+                  "venue_id": 775,
+                  "gender": "male",
+                  "name": "Latvia",
+                  "short_code": "LVA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/15/18735.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 15:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18873,
+                  "sport_id": 1,
+                  "country_id": 296,
+                  "venue_id": 1590,
+                  "gender": "male",
+                  "name": "Serbia",
+                  "short_code": "SRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17458466,
+                  "fixture_id": 19427955,
+                  "type_id": 2,
+                  "participant_id": 18735,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17458463,
+                  "fixture_id": 19427955,
+                  "type_id": 1,
+                  "participant_id": 18735,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17458462,
+                  "fixture_id": 19427955,
+                  "type_id": 1,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17458458,
+                  "fixture_id": 19427955,
+                  "type_id": 1525,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17458460,
+                  "fixture_id": 19427955,
+                  "type_id": 1525,
+                  "participant_id": 18735,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17458464,
+                  "fixture_id": 19427955,
+                  "type_id": 2,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17464813,
+                  "fixture_id": 19427955,
+                  "type_id": 48996,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17464814,
+                  "fixture_id": 19427955,
+                  "type_id": 48996,
+                  "participant_id": 18735,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362705,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-09",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345637,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251896,
+              "aggregate_id": null,
+              "round_id": 362705,
+              "state_id": 5,
+              "venue_id": 343456,
+              "name": "Serbia vs Andorra",
+              "starting_at": "2025-06-10 18:45:00",
+              "result_info": "Serbia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749581100,
+              "participants": [
+                {
+                  "id": 18873,
+                  "sport_id": 1,
+                  "country_id": 296,
+                  "venue_id": 1590,
+                  "gender": "male",
+                  "name": "Serbia",
+                  "short_code": "SRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18781,
+                  "sport_id": 1,
+                  "country_id": 2931,
+                  "venue_id": 14490,
+                  "gender": "male",
+                  "name": "Andorra",
+                  "short_code": "AND",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18781.png",
+                  "founded": 1994,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16605790,
+                  "fixture_id": 19345637,
+                  "type_id": 1,
+                  "participant_id": 18781,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605791,
+                  "fixture_id": 19345637,
+                  "type_id": 2,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605788,
+                  "fixture_id": 19345637,
+                  "type_id": 1525,
+                  "participant_id": 18781,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605789,
+                  "fixture_id": 19345637,
+                  "type_id": 1,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605792,
+                  "fixture_id": 19345637,
+                  "type_id": 2,
+                  "participant_id": 18781,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605955,
+                  "fixture_id": 19345637,
+                  "type_id": 48996,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605956,
+                  "fixture_id": 19345637,
+                  "type_id": 48996,
+                  "participant_id": 18781,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605787,
+                  "fixture_id": 19345637,
+                  "type_id": 1525,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362702,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-21",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362704,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345625,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251896,
+              "aggregate_id": null,
+              "round_id": 362704,
+              "state_id": 5,
+              "venue_id": 343635,
+              "name": "Albania vs Serbia",
+              "starting_at": "2025-06-07 18:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749321900,
+              "participants": [
+                {
+                  "id": 18873,
+                  "sport_id": 1,
+                  "country_id": 296,
+                  "venue_id": 1590,
+                  "gender": "male",
+                  "name": "Serbia",
+                  "short_code": "SRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18641,
+                  "sport_id": 1,
+                  "country_id": 2454,
+                  "venue_id": 343635,
+                  "gender": "male",
+                  "name": "Albania",
+                  "short_code": "ALB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18641.png",
+                  "founded": 1930,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16597550,
+                  "fixture_id": 19345625,
+                  "type_id": 2,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16597547,
+                  "fixture_id": 19345625,
+                  "type_id": 1,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16597549,
+                  "fixture_id": 19345625,
+                  "type_id": 2,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16597545,
+                  "fixture_id": 19345625,
+                  "type_id": 1525,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16597548,
+                  "fixture_id": 19345625,
+                  "type_id": 1,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16597546,
+                  "fixture_id": 19345625,
+                  "type_id": 1525,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16598229,
+                  "fixture_id": 19345625,
+                  "type_id": 48996,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16598230,
+                  "fixture_id": 19345625,
+                  "type_id": 48996,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362706,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427842,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251896,
+              "aggregate_id": null,
+              "round_id": 362706,
+              "state_id": 5,
+              "venue_id": 3992,
+              "name": "Latvia vs Serbia",
+              "starting_at": "2025-09-06 13:00:00",
+              "result_info": "Serbia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757163600,
+              "participants": [
+                {
+                  "id": 18735,
+                  "sport_id": 1,
+                  "country_id": 748,
+                  "venue_id": 775,
+                  "gender": "male",
+                  "name": "Latvia",
+                  "short_code": "LVA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/15/18735.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 15:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18873,
+                  "sport_id": 1,
+                  "country_id": 296,
+                  "venue_id": 1590,
+                  "gender": "male",
+                  "name": "Serbia",
+                  "short_code": "SRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16902936,
+                  "fixture_id": 19427842,
+                  "type_id": 1525,
+                  "participant_id": 18735,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16902950,
+                  "fixture_id": 19427842,
+                  "type_id": 2,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16902944,
+                  "fixture_id": 19427842,
+                  "type_id": 1,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16902947,
+                  "fixture_id": 19427842,
+                  "type_id": 2,
+                  "participant_id": 18735,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16902939,
+                  "fixture_id": 19427842,
+                  "type_id": 1525,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16902941,
+                  "fixture_id": 19427842,
+                  "type_id": 1,
+                  "participant_id": 18735,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16906949,
+                  "fixture_id": 19427842,
+                  "type_id": 48996,
+                  "participant_id": 18873,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16906948,
+                  "fixture_id": 19427842,
+                  "type_id": 48996,
+                  "participant_id": 18735,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464841,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-26",
+      "ending_at": "2026-03-26",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 394752,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464841,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2026-03-26",
+          "ending_at": "2026-03-26",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124641,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1985,
+    "remaining": 2254,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

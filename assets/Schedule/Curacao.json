@@ -1,0 +1,1978 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609174,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 72370,
+              "name": "Ecuador vs Curacao",
+              "starting_at": "2026-06-21 00:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 34",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782000000,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18573,
+                  "sport_id": 1,
+                  "country_id": 459,
+                  "venue_id": 1463,
+                  "gender": "male",
+                  "name": "Ecuador",
+                  "short_code": "ECU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609191,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 11556,
+              "name": "Curacao vs C\u00f4te d'Ivoire",
+              "starting_at": "2026-06-25 20:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 55",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782417600,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609158,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 21827,
+              "name": "Germany vs Curacao",
+              "starting_at": "2026-06-14 17:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 10",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781456400,
+              "participants": [
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464844,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Round 2",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-06-05",
+      "ending_at": "2025-06-11",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 336851,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110978,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249226,
+              "aggregate_id": null,
+              "round_id": 336851,
+              "state_id": 5,
+              "venue_id": 71657,
+              "name": "Curacao vs Barbados",
+              "starting_at": "2024-06-05 23:30:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717630200,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18811,
+                  "sport_id": 1,
+                  "country_id": 33497,
+                  "venue_id": 14508,
+                  "gender": "male",
+                  "name": "Barbados",
+                  "short_code": "BRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18811.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-29 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14517274,
+                  "fixture_id": 19110978,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14517275,
+                  "fixture_id": 19110978,
+                  "type_id": 2,
+                  "participant_id": 18811,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15705675,
+                  "fixture_id": 19110978,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705676,
+                  "fixture_id": 19110978,
+                  "type_id": 48996,
+                  "participant_id": 18811,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14517204,
+                  "fixture_id": 19110978,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14517205,
+                  "fixture_id": 19110978,
+                  "type_id": 1,
+                  "participant_id": 18811,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14517207,
+                  "fixture_id": 19110978,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14517206,
+                  "fixture_id": 19110978,
+                  "type_id": 1525,
+                  "participant_id": 18811,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336852,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-08",
+          "ending_at": "2024-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110980,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249226,
+              "aggregate_id": null,
+              "round_id": 336852,
+              "state_id": 5,
+              "venue_id": 21594,
+              "name": "Aruba vs Curacao",
+              "starting_at": "2024-06-09 00:00:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717891200,
+              "participants": [
+                {
+                  "id": 19040,
+                  "sport_id": 1,
+                  "country_id": 44569,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Aruba",
+                  "short_code": "ABW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/19040.png",
+                  "founded": 1932,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14527756,
+                  "fixture_id": 19110980,
+                  "type_id": 1525,
+                  "participant_id": 19040,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14527755,
+                  "fixture_id": 19110980,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15705680,
+                  "fixture_id": 19110980,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705679,
+                  "fixture_id": 19110980,
+                  "type_id": 48996,
+                  "participant_id": 19040,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14527861,
+                  "fixture_id": 19110980,
+                  "type_id": 2,
+                  "participant_id": 19040,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14527757,
+                  "fixture_id": 19110980,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14527754,
+                  "fixture_id": 19110980,
+                  "type_id": 1,
+                  "participant_id": 19040,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14527862,
+                  "fixture_id": 19110980,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336853,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-11",
+          "ending_at": "2025-06-04",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 336854,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110984,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249226,
+              "aggregate_id": null,
+              "round_id": 336854,
+              "state_id": 5,
+              "venue_id": 343726,
+              "name": "Curacao vs St. Lucia",
+              "starting_at": "2025-06-06 23:30:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749252600,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18908,
+                  "sport_id": 1,
+                  "country_id": 12095,
+                  "venue_id": 14556,
+                  "gender": "male",
+                  "name": "St. Lucia",
+                  "short_code": null,
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18908.png",
+                  "founded": 1979,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-27 15:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16593206,
+                  "fixture_id": 19110984,
+                  "type_id": 48996,
+                  "participant_id": 18908,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16593205,
+                  "fixture_id": 19110984,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16593027,
+                  "fixture_id": 19110984,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16593028,
+                  "fixture_id": 19110984,
+                  "type_id": 1525,
+                  "participant_id": 18908,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16593029,
+                  "fixture_id": 19110984,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16593032,
+                  "fixture_id": 19110984,
+                  "type_id": 2,
+                  "participant_id": 18908,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16593031,
+                  "fixture_id": 19110984,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16593030,
+                  "fixture_id": 19110984,
+                  "type_id": 1,
+                  "participant_id": 18908,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336855,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110987,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249226,
+              "aggregate_id": null,
+              "round_id": 336855,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Haiti vs Curacao",
+              "starting_at": "2025-06-10 22:00:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749592800,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16606132,
+                  "fixture_id": 19110987,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605985,
+                  "fixture_id": 19110987,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605979,
+                  "fixture_id": 19110987,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605989,
+                  "fixture_id": 19110987,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605990,
+                  "fixture_id": 19110987,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16606131,
+                  "fixture_id": 19110987,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605981,
+                  "fixture_id": 19110987,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605983,
+                  "fixture_id": 19110987,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464843,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Final round",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-09-04",
+      "ending_at": "2025-11-19",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 388774,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567615,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388774,
+              "state_id": 5,
+              "venue_id": 343718,
+              "name": "Bermuda vs Curacao",
+              "starting_at": "2025-11-14 00:00:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763078400,
+              "participants": [
+                {
+                  "id": 18810,
+                  "sport_id": 1,
+                  "country_id": 15326,
+                  "venue_id": 14509,
+                  "gender": "male",
+                  "name": "Bermuda",
+                  "short_code": "BMU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18810.png",
+                  "founded": 1928,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17438278,
+                  "fixture_id": 19567615,
+                  "type_id": 1,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438274,
+                  "fixture_id": 19567615,
+                  "type_id": 1525,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438275,
+                  "fixture_id": 19567615,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 7,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438280,
+                  "fixture_id": 19567615,
+                  "type_id": 2,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438281,
+                  "fixture_id": 19567615,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 7,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438308,
+                  "fixture_id": 19567615,
+                  "type_id": 48996,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438309,
+                  "fixture_id": 19567615,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438279,
+                  "fixture_id": 19567615,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388770,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567592,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388770,
+              "state_id": 5,
+              "venue_id": 2215,
+              "name": "Trinidad and Tobago vs Curacao",
+              "starting_at": "2025-09-06 00:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757116800,
+              "participants": [
+                {
+                  "id": 18637,
+                  "sport_id": 1,
+                  "country_id": 2228,
+                  "venue_id": 2215,
+                  "gender": "male",
+                  "name": "Trinidad and Tobago",
+                  "short_code": "TTO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18637.png",
+                  "founded": 1908,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16900218,
+                  "fixture_id": 19567592,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16900220,
+                  "fixture_id": 19567592,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16900215,
+                  "fixture_id": 19567592,
+                  "type_id": 1525,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900333,
+                  "fixture_id": 19567592,
+                  "type_id": 48996,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16900216,
+                  "fixture_id": 19567592,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900217,
+                  "fixture_id": 19567592,
+                  "type_id": 1,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16900219,
+                  "fixture_id": 19567592,
+                  "type_id": 2,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16900334,
+                  "fixture_id": 19567592,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388773,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-14",
+          "ending_at": "2025-10-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567610,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388773,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Curacao vs Trinidad and Tobago",
+              "starting_at": "2025-10-14 23:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760482800,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18637,
+                  "sport_id": 1,
+                  "country_id": 2228,
+                  "venue_id": 2215,
+                  "gender": "male",
+                  "name": "Trinidad and Tobago",
+                  "short_code": "TTO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18637.png",
+                  "founded": 1908,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17237711,
+                  "fixture_id": 19567610,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17237707,
+                  "fixture_id": 19567610,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17237709,
+                  "fixture_id": 19567610,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17237780,
+                  "fixture_id": 19567610,
+                  "type_id": 48996,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17237708,
+                  "fixture_id": 19567610,
+                  "type_id": 1525,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17237779,
+                  "fixture_id": 19567610,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17237710,
+                  "fixture_id": 19567610,
+                  "type_id": 1,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17237712,
+                  "fixture_id": 19567610,
+                  "type_id": 2,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388771,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-09",
+          "ending_at": "2025-09-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19574604,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388771,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Curacao vs Bermuda",
+              "starting_at": "2025-09-10 00:00:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757462400,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18810,
+                  "sport_id": 1,
+                  "country_id": 15326,
+                  "venue_id": 14509,
+                  "gender": "male",
+                  "name": "Bermuda",
+                  "short_code": "BMU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18810.png",
+                  "founded": 1928,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16931722,
+                  "fixture_id": 19574604,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16931725,
+                  "fixture_id": 19574604,
+                  "type_id": 1,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16931723,
+                  "fixture_id": 19574604,
+                  "type_id": 1525,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16931724,
+                  "fixture_id": 19574604,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16931726,
+                  "fixture_id": 19574604,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16931727,
+                  "fixture_id": 19574604,
+                  "type_id": 2,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388775,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-19",
+          "ending_at": "2025-11-19",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19572744,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388775,
+              "state_id": 5,
+              "venue_id": 11245,
+              "name": "Jamaica vs Curacao",
+              "starting_at": "2025-11-19 01:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763514000,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17471055,
+                  "fixture_id": 19572744,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471053,
+                  "fixture_id": 19572744,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471054,
+                  "fixture_id": 19572744,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471057,
+                  "fixture_id": 19572744,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471052,
+                  "fixture_id": 19572744,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471056,
+                  "fixture_id": 19572744,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471130,
+                  "fixture_id": 19572744,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17471131,
+                  "fixture_id": 19572744,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388772,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-10",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567605,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388772,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Curacao vs Jamaica",
+              "starting_at": "2025-10-10 23:00:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760137200,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17212552,
+                  "fixture_id": 19567605,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17212553,
+                  "fixture_id": 19567605,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17212556,
+                  "fixture_id": 19567605,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17212554,
+                  "fixture_id": 19567605,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17212670,
+                  "fixture_id": 19567605,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17212671,
+                  "fixture_id": 19567605,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17212555,
+                  "fixture_id": 19567605,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17212557,
+                  "fixture_id": 19567605,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124659,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1967,
+    "remaining": 2240,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

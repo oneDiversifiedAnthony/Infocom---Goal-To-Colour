@@ -1,0 +1,1139 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609177,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253025,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11554,
+              "name": "New Zealand vs Egypt",
+              "starting_at": "2026-06-22 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 40",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782090000,
+              "participants": [
+                {
+                  "id": 18613,
+                  "sport_id": 1,
+                  "country_id": 2817,
+                  "venue_id": 968,
+                  "gender": "male",
+                  "name": "New Zealand",
+                  "short_code": "NZL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+                  "founded": 1891,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18546,
+                  "sport_id": 1,
+                  "country_id": 886,
+                  "venue_id": 58,
+                  "gender": "male",
+                  "name": "Egypt",
+                  "short_code": "EGY",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18546.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 22:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609192,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253025,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 11554,
+              "name": "New Zealand vs Belgium",
+              "starting_at": "2026-06-27 03:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 64",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782529200,
+              "participants": [
+                {
+                  "id": 18743,
+                  "sport_id": 1,
+                  "country_id": 556,
+                  "venue_id": 2318,
+                  "gender": "male",
+                  "name": "Belgium",
+                  "short_code": "BEL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18743.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18613,
+                  "sport_id": 1,
+                  "country_id": 2817,
+                  "venue_id": 968,
+                  "gender": "male",
+                  "name": "New Zealand",
+                  "short_code": "NZL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+                  "founded": 1891,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609160,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253025,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 343444,
+              "name": "Iran vs New Zealand",
+              "starting_at": "2026-06-16 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 15",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781571600,
+              "participants": [
+                {
+                  "id": 18652,
+                  "sport_id": 1,
+                  "country_id": 488,
+                  "venue_id": 1984,
+                  "gender": "male",
+                  "name": "Iran",
+                  "short_code": "IRN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
+                  "founded": 1920,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 15:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18613,
+                  "sport_id": 1,
+                  "country_id": 2817,
+                  "venue_id": 968,
+                  "gender": "male",
+                  "name": "New Zealand",
+                  "short_code": "NZL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+                  "founded": 1891,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77472402,
+      "sport_id": 1,
+      "league_id": 723,
+      "season_id": 23962,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-10-10",
+      "ending_at": "2024-11-18",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 170,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 391365,
+          "sport_id": 1,
+          "league_id": 723,
+          "season_id": 23962,
+          "stage_id": 77472402,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-14",
+          "ending_at": "2024-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19245131,
+              "sport_id": 1,
+              "league_id": 723,
+              "season_id": 23962,
+              "stage_id": 77472402,
+              "group_id": 253555,
+              "aggregate_id": null,
+              "round_id": 391365,
+              "state_id": 5,
+              "venue_id": 14183,
+              "name": "New Zealand vs Vanuatu",
+              "starting_at": "2024-11-15 06:30:00",
+              "result_info": "Oman won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1731652200,
+              "participants": [
+                {
+                  "id": 18846,
+                  "sport_id": 1,
+                  "country_id": 867012,
+                  "venue_id": 14531,
+                  "gender": "male",
+                  "name": "Vanuatu",
+                  "short_code": "VUT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18846.png",
+                  "founded": 1934,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 06:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18613,
+                  "sport_id": 1,
+                  "country_id": 2817,
+                  "venue_id": 968,
+                  "gender": "male",
+                  "name": "New Zealand",
+                  "short_code": "NZL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+                  "founded": 1891,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15204611,
+                  "fixture_id": 19245131,
+                  "type_id": 1525,
+                  "participant_id": 18846,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15204610,
+                  "fixture_id": 19245131,
+                  "type_id": 1525,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 8,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15204613,
+                  "fixture_id": 19245131,
+                  "type_id": 2,
+                  "participant_id": 18846,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15204612,
+                  "fixture_id": 19245131,
+                  "type_id": 2,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 8,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15819447,
+                  "fixture_id": 19245131,
+                  "type_id": 48996,
+                  "participant_id": 18846,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15819448,
+                  "fixture_id": 19245131,
+                  "type_id": 48996,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15204608,
+                  "fixture_id": 19245131,
+                  "type_id": 1,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15204609,
+                  "fixture_id": 19245131,
+                  "type_id": 1,
+                  "participant_id": 18846,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 391364,
+          "sport_id": 1,
+          "league_id": 723,
+          "season_id": 23962,
+          "stage_id": 77472402,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-10",
+          "ending_at": "2024-10-12",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19245128,
+              "sport_id": 1,
+              "league_id": 723,
+              "season_id": 23962,
+              "stage_id": 77472402,
+              "group_id": 253555,
+              "aggregate_id": null,
+              "round_id": 391364,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "New Zealand vs Tahiti",
+              "starting_at": "2024-10-11 02:00:00",
+              "result_info": "Oman won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1728612000,
+              "participants": [
+                {
+                  "id": 18928,
+                  "sport_id": 1,
+                  "country_id": 86958,
+                  "venue_id": 6035,
+                  "gender": "male",
+                  "name": "Tahiti",
+                  "short_code": "TAH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18928.png",
+                  "founded": 1989,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-03-21 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18613,
+                  "sport_id": 1,
+                  "country_id": 2817,
+                  "venue_id": 968,
+                  "gender": "male",
+                  "name": "New Zealand",
+                  "short_code": "NZL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+                  "founded": 1891,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15819442,
+                  "fixture_id": 19245128,
+                  "type_id": 48996,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15819441,
+                  "fixture_id": 19245128,
+                  "type_id": 48996,
+                  "participant_id": 18928,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15017321,
+                  "fixture_id": 19245128,
+                  "type_id": 1525,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15017328,
+                  "fixture_id": 19245128,
+                  "type_id": 2,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15017318,
+                  "fixture_id": 19245128,
+                  "type_id": 1,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15017329,
+                  "fixture_id": 19245128,
+                  "type_id": 2,
+                  "participant_id": 18928,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15017320,
+                  "fixture_id": 19245128,
+                  "type_id": 1525,
+                  "participant_id": 18928,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15017319,
+                  "fixture_id": 19245128,
+                  "type_id": 1,
+                  "participant_id": 18928,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 391366,
+          "sport_id": 1,
+          "league_id": 723,
+          "season_id": 23962,
+          "stage_id": 77472402,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-17",
+          "ending_at": "2024-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19245133,
+              "sport_id": 1,
+              "league_id": 723,
+              "season_id": 23962,
+              "stage_id": 77472402,
+              "group_id": 253555,
+              "aggregate_id": null,
+              "round_id": 391366,
+              "state_id": 5,
+              "venue_id": 14180,
+              "name": "Samoa vs New Zealand",
+              "starting_at": "2024-11-18 06:30:00",
+              "result_info": "Oman won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1731911400,
+              "participants": [
+                {
+                  "id": 18953,
+                  "sport_id": 1,
+                  "country_id": 867334,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Samoa",
+                  "short_code": "WSM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/9/18953.png",
+                  "founded": 1968,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2024-11-18 06:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18613,
+                  "sport_id": 1,
+                  "country_id": 2817,
+                  "venue_id": 968,
+                  "gender": "male",
+                  "name": "New Zealand",
+                  "short_code": "NZL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+                  "founded": 1891,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15227988,
+                  "fixture_id": 19245133,
+                  "type_id": 1525,
+                  "participant_id": 18953,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15227989,
+                  "fixture_id": 19245133,
+                  "type_id": 1525,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 8,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15819452,
+                  "fixture_id": 19245133,
+                  "type_id": 48996,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15819451,
+                  "fixture_id": 19245133,
+                  "type_id": 48996,
+                  "participant_id": 18953,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15227991,
+                  "fixture_id": 19245133,
+                  "type_id": 2,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 8,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15227986,
+                  "fixture_id": 19245133,
+                  "type_id": 1,
+                  "participant_id": 18953,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15227990,
+                  "fixture_id": 19245133,
+                  "type_id": 2,
+                  "participant_id": 18953,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15227987,
+                  "fixture_id": 19245133,
+                  "type_id": 1,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77472400,
+      "sport_id": 1,
+      "league_id": 723,
+      "season_id": 23962,
+      "type_id": 224,
+      "name": "Semi-finals",
+      "sort_order": 4,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-21",
+      "ending_at": "2025-03-21",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19327251,
+          "sport_id": 1,
+          "league_id": 723,
+          "season_id": 23962,
+          "stage_id": 77472400,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 5,
+          "venue_id": null,
+          "name": "New Zealand vs Fiji",
+          "starting_at": "2025-03-21 06:10:00",
+          "result_info": "Oman won after full-time.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1742537400,
+          "participants": [
+            {
+              "id": 18950,
+              "sport_id": 1,
+              "country_id": 866998,
+              "venue_id": 11668,
+              "gender": "male",
+              "name": "Fiji",
+              "short_code": "FJI",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18950.png",
+              "founded": 1938,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-09 06:00:00",
+              "meta": {
+                "location": "away",
+                "winner": false,
+                "position": 2
+              }
+            },
+            {
+              "id": 18613,
+              "sport_id": 1,
+              "country_id": 2817,
+              "venue_id": 968,
+              "gender": "male",
+              "name": "New Zealand",
+              "short_code": "NZL",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+              "founded": 1891,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-06 20:00:00",
+              "meta": {
+                "location": "home",
+                "winner": true,
+                "position": 1
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 16092230,
+              "fixture_id": 19327251,
+              "type_id": 1525,
+              "participant_id": 18950,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 16092232,
+              "fixture_id": 19327251,
+              "type_id": 1,
+              "participant_id": 18950,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 16092229,
+              "fixture_id": 19327251,
+              "type_id": 1525,
+              "participant_id": 18613,
+              "score": {
+                "goals": 7,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 16092231,
+              "fixture_id": 19327251,
+              "type_id": 1,
+              "participant_id": 18613,
+              "score": {
+                "goals": 4,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 16092451,
+              "fixture_id": 19327251,
+              "type_id": 48996,
+              "participant_id": 18613,
+              "score": {
+                "goals": 3,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 16092452,
+              "fixture_id": 19327251,
+              "type_id": 48996,
+              "participant_id": 18950,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 16092233,
+              "fixture_id": 19327251,
+              "type_id": 2,
+              "participant_id": 18613,
+              "score": {
+                "goals": 7,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 16092234,
+              "fixture_id": 19327251,
+              "type_id": 2,
+              "participant_id": 18950,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    },
+    {
+      "id": 77472399,
+      "sport_id": 1,
+      "league_id": 723,
+      "season_id": 23962,
+      "type_id": 224,
+      "name": "Final",
+      "sort_order": 5,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-24",
+      "ending_at": "2025-03-24",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19327249,
+          "sport_id": 1,
+          "league_id": 723,
+          "season_id": 23962,
+          "stage_id": 77472399,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 5,
+          "venue_id": 343374,
+          "name": "New Caledonia vs New Zealand",
+          "starting_at": "2025-03-24 06:00:00",
+          "result_info": "New Zealand won after full-time.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1742796000,
+          "participants": [
+            {
+              "id": 18845,
+              "sport_id": 1,
+              "country_id": 311,
+              "venue_id": 266,
+              "gender": "male",
+              "name": "New Caledonia",
+              "short_code": "NCL",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18845.png",
+              "founded": 1928,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-03-27 03:00:00",
+              "meta": {
+                "location": "home",
+                "winner": false,
+                "position": 1
+              }
+            },
+            {
+              "id": 18613,
+              "sport_id": 1,
+              "country_id": 2817,
+              "venue_id": 968,
+              "gender": "male",
+              "name": "New Zealand",
+              "short_code": "NZL",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+              "founded": 1891,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-06 20:00:00",
+              "meta": {
+                "location": "away",
+                "winner": true,
+                "position": 2
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 16122873,
+              "fixture_id": 19327249,
+              "type_id": 1525,
+              "participant_id": 18613,
+              "score": {
+                "goals": 3,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 16122910,
+              "fixture_id": 19327249,
+              "type_id": 48996,
+              "participant_id": 18845,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 16122911,
+              "fixture_id": 19327249,
+              "type_id": 48996,
+              "participant_id": 18613,
+              "score": {
+                "goals": 3,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 16122877,
+              "fixture_id": 19327249,
+              "type_id": 2,
+              "participant_id": 18613,
+              "score": {
+                "goals": 3,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 16122874,
+              "fixture_id": 19327249,
+              "type_id": 1,
+              "participant_id": 18845,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 16122875,
+              "fixture_id": 19327249,
+              "type_id": 1,
+              "participant_id": 18613,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 16122872,
+              "fixture_id": 19327249,
+              "type_id": 1525,
+              "participant_id": 18845,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 16122876,
+              "fixture_id": 19327249,
+              "type_id": 2,
+              "participant_id": 18845,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124636,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1990,
+    "remaining": 2262,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

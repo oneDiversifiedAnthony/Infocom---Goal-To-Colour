@@ -1,0 +1,2154 @@
+{
+  "data": [
+    {
+      "id": 77478976,
+      "sport_id": 1,
+      "league_id": 729,
+      "season_id": 26682,
+      "type_id": 224,
+      "name": "Final",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-31",
+      "ending_at": "2026-04-01",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19603980,
+          "sport_id": 1,
+          "league_id": 729,
+          "season_id": 26682,
+          "stage_id": 77478976,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 7,
+          "venue_id": 181421,
+          "name": "Congo DR vs Jamaica",
+          "starting_at": "2026-03-31 21:00:00",
+          "result_info": "Congo DR won after extra-time.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1774990800,
+          "participants": [
+            {
+              "id": 18552,
+              "sport_id": 1,
+              "country_id": 1320,
+              "venue_id": 3695,
+              "gender": "male",
+              "name": "Congo DR",
+              "short_code": "COD",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+              "founded": 1919,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:00:00",
+              "meta": {
+                "location": "home",
+                "winner": true,
+                "position": 1
+              }
+            },
+            {
+              "id": 18771,
+              "sport_id": 1,
+              "country_id": 1640,
+              "venue_id": 11245,
+              "gender": "male",
+              "name": "Jamaica",
+              "short_code": "JAM",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+              "founded": 1910,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-05-27 18:30:00",
+              "meta": {
+                "location": "away",
+                "winner": false,
+                "position": 2
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 19730684,
+              "fixture_id": 19603980,
+              "type_id": 1525,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19730685,
+              "fixture_id": 19603980,
+              "type_id": 1525,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19730686,
+              "fixture_id": 19603980,
+              "type_id": 1,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19730687,
+              "fixture_id": 19603980,
+              "type_id": 1,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19730688,
+              "fixture_id": 19603980,
+              "type_id": 2,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19730689,
+              "fixture_id": 19603980,
+              "type_id": 2,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19732776,
+              "fixture_id": 19603980,
+              "type_id": 48996,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732777,
+              "fixture_id": 19603980,
+              "type_id": 48996,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732821,
+              "fixture_id": 19603980,
+              "type_id": 5314,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732832,
+              "fixture_id": 19603980,
+              "type_id": 39,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732818,
+              "fixture_id": 19603980,
+              "type_id": 3,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 19732820,
+              "fixture_id": 19603980,
+              "type_id": 5314,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732833,
+              "fixture_id": 19603980,
+              "type_id": 39,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732819,
+              "fixture_id": 19603980,
+              "type_id": 3,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    },
+    {
+      "id": 77479006,
+      "sport_id": 1,
+      "league_id": 729,
+      "season_id": 26682,
+      "type_id": 224,
+      "name": "Semifinals",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-26",
+      "ending_at": "2026-03-27",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19605153,
+          "sport_id": 1,
+          "league_id": 729,
+          "season_id": 26682,
+          "stage_id": 77479006,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 5,
+          "venue_id": 181421,
+          "name": "New Caledonia vs Jamaica",
+          "starting_at": "2026-03-27 03:00:00",
+          "result_info": "Jamaica won after full-time.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1774580400,
+          "participants": [
+            {
+              "id": 18845,
+              "sport_id": 1,
+              "country_id": 311,
+              "venue_id": 266,
+              "gender": "male",
+              "name": "New Caledonia",
+              "short_code": "NCL",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18845.png",
+              "founded": 1928,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-03-27 03:00:00",
+              "meta": {
+                "location": "home",
+                "winner": false,
+                "position": 1
+              }
+            },
+            {
+              "id": 18771,
+              "sport_id": 1,
+              "country_id": 1640,
+              "venue_id": 11245,
+              "gender": "male",
+              "name": "Jamaica",
+              "short_code": "JAM",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+              "founded": 1910,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-05-27 18:30:00",
+              "meta": {
+                "location": "away",
+                "winner": true,
+                "position": 2
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 19689262,
+              "fixture_id": 19605153,
+              "type_id": 1525,
+              "participant_id": 18845,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19689265,
+              "fixture_id": 19605153,
+              "type_id": 2,
+              "participant_id": 18771,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19689263,
+              "fixture_id": 19605153,
+              "type_id": 1,
+              "participant_id": 18771,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19689264,
+              "fixture_id": 19605153,
+              "type_id": 1,
+              "participant_id": 18845,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19689266,
+              "fixture_id": 19605153,
+              "type_id": 2,
+              "participant_id": 18845,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19689261,
+              "fixture_id": 19605153,
+              "type_id": 1525,
+              "participant_id": 18771,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19689399,
+              "fixture_id": 19605153,
+              "type_id": 48996,
+              "participant_id": 18845,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19689400,
+              "fixture_id": 19605153,
+              "type_id": 48996,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    },
+    {
+      "id": 77464844,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Round 2",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-06-05",
+      "ending_at": "2025-06-11",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 336851,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110999,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249228,
+              "aggregate_id": null,
+              "round_id": 336851,
+              "state_id": 5,
+              "venue_id": 329133,
+              "name": "Jamaica vs Dominican Republic",
+              "starting_at": "2024-06-06 20:30:00",
+              "result_info": "Jamaica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717705800,
+              "participants": [
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18921,
+                  "sport_id": 1,
+                  "country_id": 79146,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Dominican Republic",
+                  "short_code": "DOM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/9/18921.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 00:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15705697,
+                  "fixture_id": 19110999,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705698,
+                  "fixture_id": 19110999,
+                  "type_id": 48996,
+                  "participant_id": 18921,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14518693,
+                  "fixture_id": 19110999,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14518750,
+                  "fixture_id": 19110999,
+                  "type_id": 2,
+                  "participant_id": 18921,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518695,
+                  "fixture_id": 19110999,
+                  "type_id": 1525,
+                  "participant_id": 18921,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518749,
+                  "fixture_id": 19110999,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518696,
+                  "fixture_id": 19110999,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518694,
+                  "fixture_id": 19110999,
+                  "type_id": 1,
+                  "participant_id": 18921,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336852,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-08",
+          "ending_at": "2024-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19111001,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249228,
+              "aggregate_id": null,
+              "round_id": 336852,
+              "state_id": 5,
+              "venue_id": 8014,
+              "name": "Dominica vs Jamaica",
+              "starting_at": "2024-06-09 19:00:00",
+              "result_info": "Jamaica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717959600,
+              "participants": [
+                {
+                  "id": 18878,
+                  "sport_id": 1,
+                  "country_id": 380155,
+                  "venue_id": 14538,
+                  "gender": "male",
+                  "name": "Dominica",
+                  "short_code": "DMA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18878.png",
+                  "founded": 1970,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 22:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14531281,
+                  "fixture_id": 19111001,
+                  "type_id": 2,
+                  "participant_id": 18878,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14531282,
+                  "fixture_id": 19111001,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15705702,
+                  "fixture_id": 19111001,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705701,
+                  "fixture_id": 19111001,
+                  "type_id": 48996,
+                  "participant_id": 18878,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14531106,
+                  "fixture_id": 19111001,
+                  "type_id": 1525,
+                  "participant_id": 18878,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14531104,
+                  "fixture_id": 19111001,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14531105,
+                  "fixture_id": 19111001,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14531103,
+                  "fixture_id": 19111001,
+                  "type_id": 1,
+                  "participant_id": 18878,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336853,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-11",
+          "ending_at": "2025-06-04",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 336854,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19111005,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249228,
+              "aggregate_id": null,
+              "round_id": 336854,
+              "state_id": 5,
+              "venue_id": 343740,
+              "name": "British Virgin Islands vs Jamaica",
+              "starting_at": "2025-06-07 19:00:00",
+              "result_info": "Jamaica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749322800,
+              "participants": [
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18926,
+                  "sport_id": 1,
+                  "country_id": 41302,
+                  "venue_id": 14578,
+                  "gender": "male",
+                  "name": "British Virgin Islands",
+                  "short_code": "VGB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18926.png",
+                  "founded": 1974,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16597596,
+                  "fixture_id": 19111005,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16597591,
+                  "fixture_id": 19111005,
+                  "type_id": 1525,
+                  "participant_id": 18926,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16598251,
+                  "fixture_id": 19111005,
+                  "type_id": 48996,
+                  "participant_id": 18926,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16598252,
+                  "fixture_id": 19111005,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16597592,
+                  "fixture_id": 19111005,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16597594,
+                  "fixture_id": 19111005,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16597593,
+                  "fixture_id": 19111005,
+                  "type_id": 1,
+                  "participant_id": 18926,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16597595,
+                  "fixture_id": 19111005,
+                  "type_id": 2,
+                  "participant_id": 18926,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336855,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19111007,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249228,
+              "aggregate_id": null,
+              "round_id": 336855,
+              "state_id": 5,
+              "venue_id": 11245,
+              "name": "Jamaica vs Guatemala",
+              "starting_at": "2025-06-10 23:00:00",
+              "result_info": "Jamaica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749596400,
+              "participants": [
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18618,
+                  "sport_id": 1,
+                  "country_id": 53128,
+                  "venue_id": 11129,
+                  "gender": "male",
+                  "name": "Guatemala",
+                  "short_code": "GTM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18618.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16606038,
+                  "fixture_id": 19111007,
+                  "type_id": 1,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16606036,
+                  "fixture_id": 19111007,
+                  "type_id": 1525,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16606040,
+                  "fixture_id": 19111007,
+                  "type_id": 2,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16606035,
+                  "fixture_id": 19111007,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16606192,
+                  "fixture_id": 19111007,
+                  "type_id": 48996,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16606039,
+                  "fixture_id": 19111007,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16606037,
+                  "fixture_id": 19111007,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16606191,
+                  "fixture_id": 19111007,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464843,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Final round",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-09-04",
+      "ending_at": "2025-11-19",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 388774,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567614,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388774,
+              "state_id": 5,
+              "venue_id": 2215,
+              "name": "Trinidad and Tobago vs Jamaica",
+              "starting_at": "2025-11-14 00:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763078400,
+              "participants": [
+                {
+                  "id": 18637,
+                  "sport_id": 1,
+                  "country_id": 2228,
+                  "venue_id": 2215,
+                  "gender": "male",
+                  "name": "Trinidad and Tobago",
+                  "short_code": "TTO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18637.png",
+                  "founded": 1908,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17438206,
+                  "fixture_id": 19567614,
+                  "type_id": 1,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438205,
+                  "fixture_id": 19567614,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438204,
+                  "fixture_id": 19567614,
+                  "type_id": 1525,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438209,
+                  "fixture_id": 19567614,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438207,
+                  "fixture_id": 19567614,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438208,
+                  "fixture_id": 19567614,
+                  "type_id": 2,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438328,
+                  "fixture_id": 19567614,
+                  "type_id": 48996,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438329,
+                  "fixture_id": 19567614,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388770,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567591,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388770,
+              "state_id": 5,
+              "venue_id": 14509,
+              "name": "Bermuda vs Jamaica",
+              "starting_at": "2025-09-05 22:00:00",
+              "result_info": "Jamaica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757109600,
+              "participants": [
+                {
+                  "id": 18810,
+                  "sport_id": 1,
+                  "country_id": 15326,
+                  "venue_id": 14509,
+                  "gender": "male",
+                  "name": "Bermuda",
+                  "short_code": "BMU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18810.png",
+                  "founded": 1928,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16900105,
+                  "fixture_id": 19567591,
+                  "type_id": 1525,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900227,
+                  "fixture_id": 19567591,
+                  "type_id": 48996,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16900107,
+                  "fixture_id": 19567591,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900113,
+                  "fixture_id": 19567591,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16900228,
+                  "fixture_id": 19567591,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16900108,
+                  "fixture_id": 19567591,
+                  "type_id": 1,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16900112,
+                  "fixture_id": 19567591,
+                  "type_id": 2,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16900110,
+                  "fixture_id": 19567591,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388773,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-14",
+          "ending_at": "2025-10-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567611,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388773,
+              "state_id": 5,
+              "venue_id": 11245,
+              "name": "Jamaica vs Bermuda",
+              "starting_at": "2025-10-15 00:00:00",
+              "result_info": "Jamaica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760486400,
+              "participants": [
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18810,
+                  "sport_id": 1,
+                  "country_id": 15326,
+                  "venue_id": 14509,
+                  "gender": "male",
+                  "name": "Bermuda",
+                  "short_code": "BMU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18810.png",
+                  "founded": 1928,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17237727,
+                  "fixture_id": 19567611,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17237729,
+                  "fixture_id": 19567611,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17237730,
+                  "fixture_id": 19567611,
+                  "type_id": 1,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17237728,
+                  "fixture_id": 19567611,
+                  "type_id": 1525,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17237732,
+                  "fixture_id": 19567611,
+                  "type_id": 2,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17237851,
+                  "fixture_id": 19567611,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17237731,
+                  "fixture_id": 19567611,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17237852,
+                  "fixture_id": 19567611,
+                  "type_id": 48996,
+                  "participant_id": 18810,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388771,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-09",
+          "ending_at": "2025-09-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567597,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388771,
+              "state_id": 5,
+              "venue_id": 11245,
+              "name": "Jamaica vs Trinidad and Tobago",
+              "starting_at": "2025-09-10 00:00:00",
+              "result_info": "Jamaica won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757462400,
+              "participants": [
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18637,
+                  "sport_id": 1,
+                  "country_id": 2228,
+                  "venue_id": 2215,
+                  "gender": "male",
+                  "name": "Trinidad and Tobago",
+                  "short_code": "TTO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18637.png",
+                  "founded": 1908,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16927160,
+                  "fixture_id": 19567597,
+                  "type_id": 2,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16927155,
+                  "fixture_id": 19567597,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16927159,
+                  "fixture_id": 19567597,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16927156,
+                  "fixture_id": 19567597,
+                  "type_id": 1525,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16927157,
+                  "fixture_id": 19567597,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16927158,
+                  "fixture_id": 19567597,
+                  "type_id": 1,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16927213,
+                  "fixture_id": 19567597,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16927214,
+                  "fixture_id": 19567597,
+                  "type_id": 48996,
+                  "participant_id": 18637,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388775,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-19",
+          "ending_at": "2025-11-19",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19572744,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388775,
+              "state_id": 5,
+              "venue_id": 11245,
+              "name": "Jamaica vs Curacao",
+              "starting_at": "2025-11-19 01:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763514000,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17471055,
+                  "fixture_id": 19572744,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471053,
+                  "fixture_id": 19572744,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471054,
+                  "fixture_id": 19572744,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471057,
+                  "fixture_id": 19572744,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471052,
+                  "fixture_id": 19572744,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471056,
+                  "fixture_id": 19572744,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471130,
+                  "fixture_id": 19572744,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17471131,
+                  "fixture_id": 19572744,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388772,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-10",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567605,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249222,
+              "aggregate_id": null,
+              "round_id": 388772,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Curacao vs Jamaica",
+              "starting_at": "2025-10-10 23:00:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760137200,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18771,
+                  "sport_id": 1,
+                  "country_id": 1640,
+                  "venue_id": 11245,
+                  "gender": "male",
+                  "name": "Jamaica",
+                  "short_code": "JAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-27 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17212552,
+                  "fixture_id": 19567605,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17212553,
+                  "fixture_id": 19567605,
+                  "type_id": 1525,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17212556,
+                  "fixture_id": 19567605,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17212554,
+                  "fixture_id": 19567605,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17212670,
+                  "fixture_id": 19567605,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17212671,
+                  "fixture_id": 19567605,
+                  "type_id": 48996,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17212555,
+                  "fixture_id": 19567605,
+                  "type_id": 1,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17212557,
+                  "fixture_id": 19567605,
+                  "type_id": 2,
+                  "participant_id": 18771,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124632,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1994,
+    "remaining": 2267,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

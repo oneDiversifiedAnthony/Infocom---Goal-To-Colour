@@ -1,0 +1,162 @@
+{
+  "160": {
+    "id": 160,
+    "name": "Boston Stadium",
+    "city_name": "Foxborough",
+    "address": "1388 One Patriot Place",
+    "capacity": 66829,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/soccer/venues/0/160.png",
+    "country_id": 24143344
+  },
+  "1579": {
+    "id": 1579,
+    "name": "Seattle Stadium",
+    "city_name": "Seattle",
+    "address": "800 Occidental Avenue South",
+    "capacity": 68740,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/soccer/venues/11/1579.png",
+    "country_id": 3483
+  },
+  "1583": {
+    "id": 1583,
+    "name": "Monterrey Stadium",
+    "city_name": "Guadalupe",
+    "address": "Avenida Pablo Livas 2011, Colonia La Pastora",
+    "capacity": 53500,
+    "surface": "grass",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/15/1583.png",
+    "country_id": 458
+  },
+  "1599": {
+    "id": 1599,
+    "name": "Mexico City Stadium",
+    "city_name": "Mexico City",
+    "address": "Calzada de Tlalpan 3665, Coyoac\u00e1n",
+    "capacity": 87523,
+    "surface": "grass",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/31/1599.png",
+    "country_id": 458
+  },
+  "11542": {
+    "id": 11542,
+    "name": "Toronto Stadium",
+    "city_name": "Toronto",
+    "address": "170 Princes\u2019 Boulevard",
+    "capacity": 30991,
+    "surface": "grass",
+    "image_path": "https://cdn.sportmonks.com/images/soccer/venues/22/11542.png",
+    "country_id": 1004
+  },
+  "11554": {
+    "id": 11554,
+    "name": "Vancouver Stadium",
+    "city_name": "Vancouver",
+    "address": "777 Pacific Boulevard, False Creek",
+    "capacity": 54500,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/soccer/venues/2/11554.png",
+    "country_id": 1004
+  },
+  "11556": {
+    "id": 11556,
+    "name": "Philadelphia Stadium",
+    "city_name": "Philadelphia",
+    "address": "1 Lincoln Financial Field Way",
+    "capacity": 69176,
+    "surface": null,
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/4/11556.png",
+    "country_id": 24143344
+  },
+  "11579": {
+    "id": 11579,
+    "name": "San Francisco Bay Area Stadium",
+    "city_name": "Santa Clara",
+    "address": "4900 Marie P DeBartolo Way",
+    "capacity": 68500,
+    "surface": "grass",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/27/11579.png",
+    "country_id": 3483
+  },
+  "21826": {
+    "id": 21826,
+    "name": "New York New Jersey Stadium",
+    "city_name": "East Rutherford",
+    "address": "East Rutherford, New Jersey",
+    "capacity": 82566,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/2/21826.png",
+    "country_id": 3483
+  },
+  "21827": {
+    "id": 21827,
+    "name": "Houston Stadium",
+    "city_name": "Houston",
+    "address": "8400 Kirby Drive, Houston",
+    "capacity": 72220,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/3/21827.png",
+    "country_id": 3483
+  },
+  "72370": {
+    "id": 72370,
+    "name": "Kansas City Stadium",
+    "city_name": "Kansas City",
+    "address": "1 Arrowhead Drive, Kansas City, MO 64129, United States",
+    "capacity": 76416,
+    "surface": "grass",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/18/72370.png",
+    "country_id": 3483
+  },
+  "72372": {
+    "id": 72372,
+    "name": "Dallas Stadium",
+    "city_name": "Arlington",
+    "address": "1 AT&T Way, Arlington, TX 76011, United States",
+    "capacity": 80000,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/20/72372.png",
+    "country_id": 3483
+  },
+  "78531": {
+    "id": 78531,
+    "name": "Miami Stadium",
+    "city_name": "Miami Gardens",
+    "address": "347 Don Shula Drive, Miami Gardens",
+    "capacity": 65326,
+    "surface": "grass",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/3/78531.png",
+    "country_id": 3483
+  },
+  "161191": {
+    "id": 161191,
+    "name": "Atlanta Stadium",
+    "city_name": "Atlanta",
+    "address": "1 AMB Drive North West",
+    "capacity": 71000,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/7/161191.png",
+    "country_id": 3483
+  },
+  "181421": {
+    "id": 181421,
+    "name": "Guadalajara Stadium",
+    "city_name": "Zapopan",
+    "address": "Circuito J.V.C. 2800, El Baj\u00edo, 45014 Zapopan, Jalisco, Mexico",
+    "capacity": 46355,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/soccer/venues/13/181421.png",
+    "country_id": 458
+  },
+  "343444": {
+    "id": 343444,
+    "name": "Los Angeles Stadium",
+    "city_name": null,
+    "address": "Inglewood",
+    "capacity": 70242,
+    "surface": "artificial turf",
+    "image_path": "https://cdn.sportmonks.com/images/core/venues/20/343444.png",
+    "country_id": 3483
+  }
+}

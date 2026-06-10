@@ -1,0 +1,2040 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609168,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 161191,
+              "name": "Czech Republic vs South Africa",
+              "starting_at": "2026-06-18 16:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 25",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781798400,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609184,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 1583,
+              "name": "South Africa vs Korea Republic",
+              "starting_at": "2026-06-25 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 54",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782349200,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18567,
+                  "sport_id": 1,
+                  "country_id": 712,
+                  "venue_id": 175,
+                  "gender": "male",
+                  "name": "Korea Republic",
+                  "short_code": "KOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
+                  "founded": 1933,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609127,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 1599,
+              "name": "Mexico vs South Africa",
+              "starting_at": "2026-06-11 19:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 1",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781204400,
+              "participants": [
+                {
+                  "id": 18576,
+                  "sport_id": 1,
+                  "country_id": 458,
+                  "venue_id": 14659,
+                  "gender": "male",
+                  "name": "Mexico",
+                  "short_code": "MEX",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
+                  "founded": 1927,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77465184,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-15",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 323228,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993987,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323228,
+              "state_id": 5,
+              "venue_id": 12009,
+              "name": "South Africa vs Rwanda",
+              "starting_at": "2025-10-14 16:00:00",
+              "result_info": "South Africa won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760457600,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18833,
+                  "sport_id": 1,
+                  "country_id": 88137,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Rwanda",
+                  "short_code": "RWA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18833.png",
+                  "founded": 1972,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 17:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17235955,
+                  "fixture_id": 18993987,
+                  "type_id": 2,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17236436,
+                  "fixture_id": 18993987,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17236437,
+                  "fixture_id": 18993987,
+                  "type_id": 48996,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17235950,
+                  "fixture_id": 18993987,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17235951,
+                  "fixture_id": 18993987,
+                  "type_id": 1525,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17235952,
+                  "fixture_id": 18993987,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17235953,
+                  "fixture_id": 18993987,
+                  "type_id": 1,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17235954,
+                  "fixture_id": 18993987,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323222,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-09",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993969,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323222,
+              "state_id": 5,
+              "venue_id": 22001,
+              "name": "South Africa vs Zimbabwe",
+              "starting_at": "2024-06-11 16:00:00",
+              "result_info": "South Africa won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1718121600,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18547,
+                  "sport_id": 1,
+                  "country_id": 2325,
+                  "venue_id": 11996,
+                  "gender": "male",
+                  "name": "Zimbabwe",
+                  "short_code": "ZWE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18547.png",
+                  "founded": 1965,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-30 13:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14535069,
+                  "fixture_id": 18993969,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14535068,
+                  "fixture_id": 18993969,
+                  "type_id": 1525,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14535066,
+                  "fixture_id": 18993969,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15581738,
+                  "fixture_id": 18993969,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15581739,
+                  "fixture_id": 18993969,
+                  "type_id": 48996,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14535067,
+                  "fixture_id": 18993969,
+                  "type_id": 1,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14535172,
+                  "fixture_id": 18993969,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14535173,
+                  "fixture_id": 18993969,
+                  "type_id": 2,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323225,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-03",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993979,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323225,
+              "state_id": 5,
+              "venue_id": 11987,
+              "name": "Lesotho vs South Africa",
+              "starting_at": "2025-09-05 16:00:00",
+              "result_info": "South Africa won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757088000,
+              "participants": [
+                {
+                  "id": 18772,
+                  "sport_id": 1,
+                  "country_id": 482134,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Lesotho",
+                  "short_code": "LSO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18772.png",
+                  "founded": 1932,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16897845,
+                  "fixture_id": 18993979,
+                  "type_id": 1,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16897846,
+                  "fixture_id": 18993979,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16897843,
+                  "fixture_id": 18993979,
+                  "type_id": 1525,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16897849,
+                  "fixture_id": 18993979,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16897848,
+                  "fixture_id": 18993979,
+                  "type_id": 2,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16899019,
+                  "fixture_id": 18993979,
+                  "type_id": 48996,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16899020,
+                  "fixture_id": 18993979,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16897844,
+                  "fixture_id": 18993979,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323224,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-23",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993975,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323224,
+              "state_id": 5,
+              "venue_id": 14384,
+              "name": "Benin vs South Africa",
+              "starting_at": "2025-03-25 16:00:00",
+              "result_info": "South Africa won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742918400,
+              "participants": [
+                {
+                  "id": 18783,
+                  "sport_id": 1,
+                  "country_id": 7830,
+                  "venue_id": 12456,
+                  "gender": "male",
+                  "name": "Benin",
+                  "short_code": "BEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18783.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16124698,
+                  "fixture_id": 18993975,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16124701,
+                  "fixture_id": 18993975,
+                  "type_id": 2,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16124699,
+                  "fixture_id": 18993975,
+                  "type_id": 1,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124700,
+                  "fixture_id": 18993975,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124702,
+                  "fixture_id": 18993975,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16124697,
+                  "fixture_id": 18993975,
+                  "type_id": 1525,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125045,
+                  "fixture_id": 18993975,
+                  "type_id": 48996,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125046,
+                  "fixture_id": 18993975,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323223,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-17",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993972,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323223,
+              "state_id": 5,
+              "venue_id": 8325,
+              "name": "South Africa vs Lesotho",
+              "starting_at": "2025-03-21 16:00:00",
+              "result_info": "South Africa won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742572800,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18772,
+                  "sport_id": 1,
+                  "country_id": 482134,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Lesotho",
+                  "short_code": "LSO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18772.png",
+                  "founded": 1932,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16093495,
+                  "fixture_id": 18993972,
+                  "type_id": 1525,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16093503,
+                  "fixture_id": 18993972,
+                  "type_id": 1,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16093499,
+                  "fixture_id": 18993972,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16093506,
+                  "fixture_id": 18993972,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16093510,
+                  "fixture_id": 18993972,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16093508,
+                  "fixture_id": 18993972,
+                  "type_id": 2,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16093930,
+                  "fixture_id": 18993972,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16093931,
+                  "fixture_id": 18993972,
+                  "type_id": 48996,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323220,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-19",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993965,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323220,
+              "state_id": 5,
+              "venue_id": 12796,
+              "name": "Rwanda vs South Africa",
+              "starting_at": "2023-11-21 13:00:00",
+              "result_info": "Rwanda won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700571600,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18833,
+                  "sport_id": 1,
+                  "country_id": 88137,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Rwanda",
+                  "short_code": "RWA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18833.png",
+                  "founded": 1972,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 17:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13533340,
+                  "fixture_id": 18993965,
+                  "type_id": 1525,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13533337,
+                  "fixture_id": 18993965,
+                  "type_id": 1,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13533583,
+                  "fixture_id": 18993965,
+                  "type_id": 2,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13533338,
+                  "fixture_id": 18993965,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13533336,
+                  "fixture_id": 18993965,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13533582,
+                  "fixture_id": 18993965,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323219,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-15",
+          "ending_at": "2023-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993960,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323219,
+              "state_id": 5,
+              "venue_id": 12007,
+              "name": "South Africa vs Benin",
+              "starting_at": "2023-11-18 13:00:00",
+              "result_info": "South Africa won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700312400,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18783,
+                  "sport_id": 1,
+                  "country_id": 7830,
+                  "venue_id": 12456,
+                  "gender": "male",
+                  "name": "Benin",
+                  "short_code": "BEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18783.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13515223,
+                  "fixture_id": 18993960,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13515224,
+                  "fixture_id": 18993960,
+                  "type_id": 1,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13515241,
+                  "fixture_id": 18993960,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13515242,
+                  "fixture_id": 18993960,
+                  "type_id": 1525,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13515836,
+                  "fixture_id": 18993960,
+                  "type_id": 2,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13515835,
+                  "fixture_id": 18993960,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323221,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993968,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323221,
+              "state_id": 5,
+              "venue_id": 12732,
+              "name": "Nigeria vs South Africa",
+              "starting_at": "2024-06-07 19:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717786800,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14520959,
+                  "fixture_id": 18993968,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14520962,
+                  "fixture_id": 18993968,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14520960,
+                  "fixture_id": 18993968,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15581736,
+                  "fixture_id": 18993968,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15581737,
+                  "fixture_id": 18993968,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14520961,
+                  "fixture_id": 18993968,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14521049,
+                  "fixture_id": 18993968,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14521050,
+                  "fixture_id": 18993968,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323227,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993985,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323227,
+              "state_id": 5,
+              "venue_id": 12007,
+              "name": "Zimbabwe vs South Africa",
+              "starting_at": "2025-10-10 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760112000,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18547,
+                  "sport_id": 1,
+                  "country_id": 2325,
+                  "venue_id": 11996,
+                  "gender": "male",
+                  "name": "Zimbabwe",
+                  "short_code": "ZWE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18547.png",
+                  "founded": 1965,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-30 13:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17211112,
+                  "fixture_id": 18993985,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211117,
+                  "fixture_id": 18993985,
+                  "type_id": 2,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17211116,
+                  "fixture_id": 18993985,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17211114,
+                  "fixture_id": 18993985,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17211115,
+                  "fixture_id": 18993985,
+                  "type_id": 1,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17211113,
+                  "fixture_id": 18993985,
+                  "type_id": 1525,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211809,
+                  "fixture_id": 18993985,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17211808,
+                  "fixture_id": 18993985,
+                  "type_id": 48996,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323226,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993981,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323226,
+              "state_id": 5,
+              "venue_id": 11987,
+              "name": "South Africa vs Nigeria",
+              "starting_at": "2025-09-09 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757433600,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16926332,
+                  "fixture_id": 18993981,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16925984,
+                  "fixture_id": 18993981,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16925986,
+                  "fixture_id": 18993981,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16925985,
+                  "fixture_id": 18993981,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16925981,
+                  "fixture_id": 18993981,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16925982,
+                  "fixture_id": 18993981,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16925983,
+                  "fixture_id": 18993981,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16926331,
+                  "fixture_id": 18993981,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77476898,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-13",
+      "ending_at": "2025-11-13",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 372381,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372382,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372384,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372386,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372383,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372385,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 392946,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-13",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124642,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1984,
+    "remaining": 2253,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

@@ -1,0 +1,2000 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609172,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253021,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11556,
+              "name": "Brazil vs Haiti",
+              "starting_at": "2026-06-20 00:30:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 29",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781915400,
+              "participants": [
+                {
+                  "id": 18704,
+                  "sport_id": 1,
+                  "country_id": 5,
+                  "venue_id": 392,
+                  "gender": "male",
+                  "name": "Brazil",
+                  "short_code": "BRA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18704.png",
+                  "founded": 1914,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 22:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609187,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253021,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 161191,
+              "name": "Morocco vs Haiti",
+              "starting_at": "2026-06-24 22:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 50",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782338400,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609155,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253021,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 160,
+              "name": "Haiti vs Scotland",
+              "starting_at": "2026-06-14 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 5",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781398800,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18706,
+                  "sport_id": 1,
+                  "country_id": 1161,
+                  "venue_id": 6935,
+                  "gender": "male",
+                  "name": "Scotland",
+                  "short_code": "SCO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18706.png",
+                  "founded": 1873,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464844,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Round 2",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-06-05",
+      "ending_at": "2025-06-11",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 336851,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110979,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249226,
+              "aggregate_id": null,
+              "round_id": 336851,
+              "state_id": 5,
+              "venue_id": 1225,
+              "name": "Haiti vs St. Lucia",
+              "starting_at": "2024-06-06 21:00:00",
+              "result_info": "Haiti won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717707600,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18908,
+                  "sport_id": 1,
+                  "country_id": 12095,
+                  "venue_id": 14556,
+                  "gender": "male",
+                  "name": "St. Lucia",
+                  "short_code": null,
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18908.png",
+                  "founded": 1979,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-27 15:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14518734,
+                  "fixture_id": 19110979,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518729,
+                  "fixture_id": 19110979,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14518730,
+                  "fixture_id": 19110979,
+                  "type_id": 1,
+                  "participant_id": 18908,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15705678,
+                  "fixture_id": 19110979,
+                  "type_id": 48996,
+                  "participant_id": 18908,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705677,
+                  "fixture_id": 19110979,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14518766,
+                  "fixture_id": 19110979,
+                  "type_id": 2,
+                  "participant_id": 18908,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518733,
+                  "fixture_id": 19110979,
+                  "type_id": 1525,
+                  "participant_id": 18908,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518765,
+                  "fixture_id": 19110979,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336852,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-08",
+          "ending_at": "2024-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110981,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249226,
+              "aggregate_id": null,
+              "round_id": 336852,
+              "state_id": 5,
+              "venue_id": 292140,
+              "name": "Barbados vs Haiti",
+              "starting_at": "2024-06-09 21:00:00",
+              "result_info": "Haiti won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717966800,
+              "participants": [
+                {
+                  "id": 18811,
+                  "sport_id": 1,
+                  "country_id": 33497,
+                  "venue_id": 14508,
+                  "gender": "male",
+                  "name": "Barbados",
+                  "short_code": "BRB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18811.png",
+                  "founded": 1910,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-29 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14532035,
+                  "fixture_id": 19110981,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14532033,
+                  "fixture_id": 19110981,
+                  "type_id": 1,
+                  "participant_id": 18811,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15705681,
+                  "fixture_id": 19110981,
+                  "type_id": 48996,
+                  "participant_id": 18811,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705682,
+                  "fixture_id": 19110981,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14532059,
+                  "fixture_id": 19110981,
+                  "type_id": 2,
+                  "participant_id": 18811,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14532060,
+                  "fixture_id": 19110981,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14532036,
+                  "fixture_id": 19110981,
+                  "type_id": 1525,
+                  "participant_id": 18811,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14532034,
+                  "fixture_id": 19110981,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336853,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-11",
+          "ending_at": "2025-06-04",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 336854,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110985,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249226,
+              "aggregate_id": null,
+              "round_id": 336854,
+              "state_id": 5,
+              "venue_id": 343742,
+              "name": "Aruba vs Haiti",
+              "starting_at": "2025-06-07 21:00:00",
+              "result_info": "Haiti won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749330000,
+              "participants": [
+                {
+                  "id": 19040,
+                  "sport_id": 1,
+                  "country_id": 44569,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Aruba",
+                  "short_code": "ABW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/19040.png",
+                  "founded": 1932,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16598631,
+                  "fixture_id": 19110985,
+                  "type_id": 48996,
+                  "participant_id": 19040,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16598632,
+                  "fixture_id": 19110985,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16598148,
+                  "fixture_id": 19110985,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16598143,
+                  "fixture_id": 19110985,
+                  "type_id": 1525,
+                  "participant_id": 19040,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16598146,
+                  "fixture_id": 19110985,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16598147,
+                  "fixture_id": 19110985,
+                  "type_id": 2,
+                  "participant_id": 19040,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16598145,
+                  "fixture_id": 19110985,
+                  "type_id": 1,
+                  "participant_id": 19040,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16598144,
+                  "fixture_id": 19110985,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336855,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110987,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249226,
+              "aggregate_id": null,
+              "round_id": 336855,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Haiti vs Curacao",
+              "starting_at": "2025-06-10 22:00:00",
+              "result_info": "Curacao won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749592800,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16606132,
+                  "fixture_id": 19110987,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605985,
+                  "fixture_id": 19110987,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605979,
+                  "fixture_id": 19110987,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605989,
+                  "fixture_id": 19110987,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605990,
+                  "fixture_id": 19110987,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16606131,
+                  "fixture_id": 19110987,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605981,
+                  "fixture_id": 19110987,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605983,
+                  "fixture_id": 19110987,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464843,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Final round",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-09-04",
+      "ending_at": "2025-11-19",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 388774,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567617,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388774,
+              "state_id": 5,
+              "venue_id": 1225,
+              "name": "Haiti vs Costa Rica",
+              "starting_at": "2025-11-14 02:00:00",
+              "result_info": "Haiti won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763085600,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17438296,
+                  "fixture_id": 19567617,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438297,
+                  "fixture_id": 19567617,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438300,
+                  "fixture_id": 19567617,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438299,
+                  "fixture_id": 19567617,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438298,
+                  "fixture_id": 19567617,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438301,
+                  "fixture_id": 19567617,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438342,
+                  "fixture_id": 19567617,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438343,
+                  "fixture_id": 19567617,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388770,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567593,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388770,
+              "state_id": 5,
+              "venue_id": 1225,
+              "name": "Haiti vs Honduras",
+              "starting_at": "2025-09-06 00:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757116800,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18574,
+                  "sport_id": 1,
+                  "country_id": 1176,
+                  "venue_id": 314,
+                  "gender": "male",
+                  "name": "Honduras",
+                  "short_code": "HND",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18574.png",
+                  "founded": 1951,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16900209,
+                  "fixture_id": 19567593,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900211,
+                  "fixture_id": 19567593,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16900335,
+                  "fixture_id": 19567593,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16900336,
+                  "fixture_id": 19567593,
+                  "type_id": 48996,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16900210,
+                  "fixture_id": 19567593,
+                  "type_id": 1525,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900212,
+                  "fixture_id": 19567593,
+                  "type_id": 1,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16900213,
+                  "fixture_id": 19567593,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16900214,
+                  "fixture_id": 19567593,
+                  "type_id": 2,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388773,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-14",
+          "ending_at": "2025-10-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567607,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388773,
+              "state_id": 5,
+              "venue_id": 314,
+              "name": "Honduras vs Haiti",
+              "starting_at": "2025-10-14 00:00:00",
+              "result_info": "Honduras won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760400000,
+              "participants": [
+                {
+                  "id": 18574,
+                  "sport_id": 1,
+                  "country_id": 1176,
+                  "venue_id": 314,
+                  "gender": "male",
+                  "name": "Honduras",
+                  "short_code": "HND",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18574.png",
+                  "founded": 1951,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17234157,
+                  "fixture_id": 19567607,
+                  "type_id": 1,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17234158,
+                  "fixture_id": 19567607,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17234202,
+                  "fixture_id": 19567607,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17234201,
+                  "fixture_id": 19567607,
+                  "type_id": 48996,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17234155,
+                  "fixture_id": 19567607,
+                  "type_id": 1525,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17234156,
+                  "fixture_id": 19567607,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17234159,
+                  "fixture_id": 19567607,
+                  "type_id": 2,
+                  "participant_id": 18574,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17234160,
+                  "fixture_id": 19567607,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388771,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-09",
+          "ending_at": "2025-09-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567599,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388771,
+              "state_id": 5,
+              "venue_id": 10981,
+              "name": "Costa Rica vs Haiti",
+              "starting_at": "2025-09-10 02:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757469600,
+              "participants": [
+                {
+                  "id": 18598,
+                  "sport_id": 1,
+                  "country_id": 1739,
+                  "venue_id": 10981,
+                  "gender": "male",
+                  "name": "Costa Rica",
+                  "short_code": "CRI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16927201,
+                  "fixture_id": 19567599,
+                  "type_id": 1525,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16927202,
+                  "fixture_id": 19567599,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16927205,
+                  "fixture_id": 19567599,
+                  "type_id": 2,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16927207,
+                  "fixture_id": 19567599,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16927203,
+                  "fixture_id": 19567599,
+                  "type_id": 1,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16927223,
+                  "fixture_id": 19567599,
+                  "type_id": 48996,
+                  "participant_id": 18598,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16927224,
+                  "fixture_id": 19567599,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16927204,
+                  "fixture_id": 19567599,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388775,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-19",
+          "ending_at": "2025-11-19",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567622,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388775,
+              "state_id": 5,
+              "venue_id": 1225,
+              "name": "Haiti vs Nicaragua",
+              "starting_at": "2025-11-19 01:00:00",
+              "result_info": "Haiti won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763514000,
+              "participants": [
+                {
+                  "id": 18999,
+                  "sport_id": 1,
+                  "country_id": 3990,
+                  "venue_id": 5009,
+                  "gender": "male",
+                  "name": "Nicaragua",
+                  "short_code": "NIC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18999.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17471046,
+                  "fixture_id": 19567622,
+                  "type_id": 1525,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471047,
+                  "fixture_id": 19567622,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471050,
+                  "fixture_id": 19567622,
+                  "type_id": 2,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471051,
+                  "fixture_id": 19567622,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471048,
+                  "fixture_id": 19567622,
+                  "type_id": 1,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471049,
+                  "fixture_id": 19567622,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471134,
+                  "fixture_id": 19567622,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17471135,
+                  "fixture_id": 19567622,
+                  "type_id": 48996,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388772,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-10",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567601,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249223,
+              "aggregate_id": null,
+              "round_id": 388772,
+              "state_id": 5,
+              "venue_id": 343739,
+              "name": "Nicaragua vs Haiti",
+              "starting_at": "2025-10-10 00:00:00",
+              "result_info": "Haiti won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760054400,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18999,
+                  "sport_id": 1,
+                  "country_id": 3990,
+                  "venue_id": 5009,
+                  "gender": "male",
+                  "name": "Nicaragua",
+                  "short_code": "NIC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18999.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17209835,
+                  "fixture_id": 19567601,
+                  "type_id": 2,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17209834,
+                  "fixture_id": 19567601,
+                  "type_id": 2,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17209831,
+                  "fixture_id": 19567601,
+                  "type_id": 1525,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17209833,
+                  "fixture_id": 19567601,
+                  "type_id": 1,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17209881,
+                  "fixture_id": 19567601,
+                  "type_id": 48996,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17209830,
+                  "fixture_id": 19567601,
+                  "type_id": 1525,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17209880,
+                  "fixture_id": 19567601,
+                  "type_id": 48996,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17209832,
+                  "fixture_id": 19567601,
+                  "type_id": 1,
+                  "participant_id": 18804,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124660,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1966,
+    "remaining": 2238,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

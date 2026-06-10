@@ -1,0 +1,2193 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609168,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 161191,
+              "name": "Czech Republic vs South Africa",
+              "starting_at": "2026-06-18 16:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 25",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781798400,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609185,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 1599,
+              "name": "Czech Republic vs Mexico",
+              "starting_at": "2026-06-25 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 53",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782349200,
+              "participants": [
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18576,
+                  "sport_id": 1,
+                  "country_id": 458,
+                  "venue_id": 14659,
+                  "gender": "male",
+                  "name": "Mexico",
+                  "short_code": "MEX",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
+                  "founded": 1927,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609153,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 181421,
+              "name": "Korea Republic vs Czech Republic",
+              "starting_at": "2026-06-12 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 2",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781229600,
+              "participants": [
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18567,
+                  "sport_id": 1,
+                  "country_id": 712,
+                  "venue_id": 175,
+                  "gender": "male",
+                  "name": "Korea Republic",
+                  "short_code": "KOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
+                  "founded": 1933,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464842,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-21",
+      "ending_at": "2025-11-18",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 1526,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 362707,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362709,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345714,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251897,
+              "aggregate_id": null,
+              "round_id": 362709,
+              "state_id": 5,
+              "venue_id": 5732,
+              "name": "Faroe Islands vs Czech Republic",
+              "starting_at": "2025-10-12 16:00:00",
+              "result_info": "Faroe Islands won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760284800,
+              "participants": [
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18777,
+                  "sport_id": 1,
+                  "country_id": 2154,
+                  "venue_id": 5732,
+                  "gender": "male",
+                  "name": "Faroe Islands",
+                  "short_code": "FRO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18777.png",
+                  "founded": 1979,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 15:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17231383,
+                  "fixture_id": 19345714,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17230338,
+                  "fixture_id": 19345714,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17230340,
+                  "fixture_id": 19345714,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17230342,
+                  "fixture_id": 19345714,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17230343,
+                  "fixture_id": 19345714,
+                  "type_id": 2,
+                  "participant_id": 18777,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17230339,
+                  "fixture_id": 19345714,
+                  "type_id": 1525,
+                  "participant_id": 18777,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17230341,
+                  "fixture_id": 19345714,
+                  "type_id": 1,
+                  "participant_id": 18777,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17231382,
+                  "fixture_id": 19345714,
+                  "type_id": 48996,
+                  "participant_id": 18777,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362708,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-09",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345694,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251897,
+              "aggregate_id": null,
+              "round_id": 362708,
+              "state_id": 5,
+              "venue_id": 5530,
+              "name": "Czech Republic vs Croatia",
+              "starting_at": "2025-10-09 18:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760035500,
+              "participants": [
+                {
+                  "id": 18588,
+                  "sport_id": 1,
+                  "country_id": 266,
+                  "venue_id": 176,
+                  "gender": "male",
+                  "name": "Croatia",
+                  "short_code": "CRO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
+                  "founded": 1912,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17207422,
+                  "fixture_id": 19345694,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17207423,
+                  "fixture_id": 19345694,
+                  "type_id": 48996,
+                  "participant_id": 18588,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17197208,
+                  "fixture_id": 19345694,
+                  "type_id": 1525,
+                  "participant_id": 18588,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17197209,
+                  "fixture_id": 19345694,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17197210,
+                  "fixture_id": 19345694,
+                  "type_id": 1,
+                  "participant_id": 18588,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17197212,
+                  "fixture_id": 19345694,
+                  "type_id": 2,
+                  "participant_id": 18588,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17197211,
+                  "fixture_id": 19345694,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17197213,
+                  "fixture_id": 19345694,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362703,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-24",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345613,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251897,
+              "aggregate_id": null,
+              "round_id": 362703,
+              "state_id": 5,
+              "venue_id": 84272,
+              "name": "Gibraltar vs Czech Republic",
+              "starting_at": "2025-03-25 19:45:00",
+              "result_info": "Czech Republic won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742931900,
+              "participants": [
+                {
+                  "id": 27487,
+                  "sport_id": 1,
+                  "country_id": 3374,
+                  "venue_id": 15038,
+                  "gender": "male",
+                  "name": "Gibraltar",
+                  "short_code": "GIB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/27487.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16125263,
+                  "fixture_id": 19345613,
+                  "type_id": 1,
+                  "participant_id": 27487,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16125262,
+                  "fixture_id": 19345613,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125264,
+                  "fixture_id": 19345613,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16125266,
+                  "fixture_id": 19345613,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125265,
+                  "fixture_id": 19345613,
+                  "type_id": 2,
+                  "participant_id": 27487,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125261,
+                  "fixture_id": 19345613,
+                  "type_id": 1525,
+                  "participant_id": 27487,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125694,
+                  "fixture_id": 19345613,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125693,
+                  "fixture_id": 19345613,
+                  "type_id": 48996,
+                  "participant_id": 27487,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362710,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-15",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362711,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-16",
+          "ending_at": "2025-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345769,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251897,
+              "aggregate_id": null,
+              "round_id": 362711,
+              "state_id": 5,
+              "venue_id": 1810,
+              "name": "Czech Republic vs Gibraltar",
+              "starting_at": "2025-11-17 19:45:00",
+              "result_info": "Czech Republic won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763408700,
+              "participants": [
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 27487,
+                  "sport_id": 1,
+                  "country_id": 3374,
+                  "venue_id": 15038,
+                  "gender": "male",
+                  "name": "Gibraltar",
+                  "short_code": "GIB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/27487.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17467234,
+                  "fixture_id": 19345769,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17467236,
+                  "fixture_id": 19345769,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 6,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17467235,
+                  "fixture_id": 19345769,
+                  "type_id": 1,
+                  "participant_id": 27487,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17467233,
+                  "fixture_id": 19345769,
+                  "type_id": 1525,
+                  "participant_id": 27487,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17467232,
+                  "fixture_id": 19345769,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 6,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17467237,
+                  "fixture_id": 19345769,
+                  "type_id": 2,
+                  "participant_id": 27487,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17467498,
+                  "fixture_id": 19345769,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17467499,
+                  "fixture_id": 19345769,
+                  "type_id": 48996,
+                  "participant_id": 27487,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362705,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-09",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345632,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251897,
+              "aggregate_id": null,
+              "round_id": 362705,
+              "state_id": 5,
+              "venue_id": 325,
+              "name": "Croatia vs Czech Republic",
+              "starting_at": "2025-06-09 18:45:00",
+              "result_info": "Croatia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749494700,
+              "participants": [
+                {
+                  "id": 18588,
+                  "sport_id": 1,
+                  "country_id": 266,
+                  "venue_id": 176,
+                  "gender": "male",
+                  "name": "Croatia",
+                  "short_code": "CRO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
+                  "founded": 1912,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16604381,
+                  "fixture_id": 19345632,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16604377,
+                  "fixture_id": 19345632,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16604378,
+                  "fixture_id": 19345632,
+                  "type_id": 1525,
+                  "participant_id": 18588,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16604382,
+                  "fixture_id": 19345632,
+                  "type_id": 2,
+                  "participant_id": 18588,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16604379,
+                  "fixture_id": 19345632,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16604380,
+                  "fixture_id": 19345632,
+                  "type_id": 1,
+                  "participant_id": 18588,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16604532,
+                  "fixture_id": 19345632,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16604531,
+                  "fixture_id": 19345632,
+                  "type_id": 48996,
+                  "participant_id": 18588,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362702,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-21",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345602,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251897,
+              "aggregate_id": null,
+              "round_id": 362702,
+              "state_id": 5,
+              "venue_id": 2071,
+              "name": "Czech Republic vs Faroe Islands",
+              "starting_at": "2025-03-22 19:45:00",
+              "result_info": "Czech Republic won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742672700,
+              "participants": [
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18777,
+                  "sport_id": 1,
+                  "country_id": 2154,
+                  "venue_id": 5732,
+                  "gender": "male",
+                  "name": "Faroe Islands",
+                  "short_code": "FRO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18777.png",
+                  "founded": 1979,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 15:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16108624,
+                  "fixture_id": 19345602,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16108626,
+                  "fixture_id": 19345602,
+                  "type_id": 1525,
+                  "participant_id": 18777,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16108629,
+                  "fixture_id": 19345602,
+                  "type_id": 1,
+                  "participant_id": 18777,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16108628,
+                  "fixture_id": 19345602,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16108631,
+                  "fixture_id": 19345602,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16108632,
+                  "fixture_id": 19345602,
+                  "type_id": 2,
+                  "participant_id": 18777,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16109295,
+                  "fixture_id": 19345602,
+                  "type_id": 48996,
+                  "participant_id": 18777,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16109294,
+                  "fixture_id": 19345602,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362704,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345618,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251897,
+              "aggregate_id": null,
+              "round_id": 362704,
+              "state_id": 5,
+              "venue_id": 2067,
+              "name": "Czech Republic vs Montenegro",
+              "starting_at": "2025-06-06 18:45:00",
+              "result_info": "Czech Republic won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749235500,
+              "participants": [
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18836,
+                  "sport_id": 1,
+                  "country_id": 998,
+                  "venue_id": 3600,
+                  "gender": "male",
+                  "name": "Montenegro",
+                  "short_code": "MNE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18836.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 16:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16592478,
+                  "fixture_id": 19345618,
+                  "type_id": 1525,
+                  "participant_id": 18836,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16592482,
+                  "fixture_id": 19345618,
+                  "type_id": 2,
+                  "participant_id": 18836,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16592481,
+                  "fixture_id": 19345618,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16592477,
+                  "fixture_id": 19345618,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16592480,
+                  "fixture_id": 19345618,
+                  "type_id": 1,
+                  "participant_id": 18836,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16592883,
+                  "fixture_id": 19345618,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16592884,
+                  "fixture_id": 19345618,
+                  "type_id": 48996,
+                  "participant_id": 18836,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16592479,
+                  "fixture_id": 19345618,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362706,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345652,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 251897,
+              "aggregate_id": null,
+              "round_id": 362706,
+              "state_id": 5,
+              "venue_id": 2186,
+              "name": "Montenegro vs Czech Republic",
+              "starting_at": "2025-09-05 18:45:00",
+              "result_info": "Czech Republic won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757097900,
+              "participants": [
+                {
+                  "id": 18836,
+                  "sport_id": 1,
+                  "country_id": 998,
+                  "venue_id": 3600,
+                  "gender": "male",
+                  "name": "Montenegro",
+                  "short_code": "MNE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18836.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 16:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16899971,
+                  "fixture_id": 19345652,
+                  "type_id": 48996,
+                  "participant_id": 18836,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16899972,
+                  "fixture_id": 19345652,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16899191,
+                  "fixture_id": 19345652,
+                  "type_id": 2,
+                  "participant_id": 18836,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16899189,
+                  "fixture_id": 19345652,
+                  "type_id": 1,
+                  "participant_id": 18836,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16899187,
+                  "fixture_id": 19345652,
+                  "type_id": 1525,
+                  "participant_id": 18836,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16899188,
+                  "fixture_id": 19345652,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16899192,
+                  "fixture_id": 19345652,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16899190,
+                  "fixture_id": 19345652,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464841,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-26",
+      "ending_at": "2026-03-26",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 394752,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464841,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2026-03-26",
+          "ending_at": "2026-03-26",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19604728,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464841,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 394752,
+              "state_id": 8,
+              "venue_id": 5530,
+              "name": "Czech Republic vs Republic of Ireland",
+              "starting_at": "2026-03-26 19:45:00",
+              "result_info": "Czech Republic won after penalties.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1774554300,
+              "participants": [
+                {
+                  "id": 18654,
+                  "sport_id": 1,
+                  "country_id": 455,
+                  "venue_id": 15035,
+                  "gender": "male",
+                  "name": "Republic of Ireland",
+                  "short_code": "IRL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18654.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 23:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 19688364,
+                  "fixture_id": 19604728,
+                  "type_id": 2,
+                  "participant_id": 18654,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 19688365,
+                  "fixture_id": 19604728,
+                  "type_id": 2,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 19688360,
+                  "fixture_id": 19604728,
+                  "type_id": 1525,
+                  "participant_id": 18654,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 19688361,
+                  "fixture_id": 19604728,
+                  "type_id": 1525,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 19688816,
+                  "fixture_id": 19604728,
+                  "type_id": 48996,
+                  "participant_id": 18654,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 19688362,
+                  "fixture_id": 19604728,
+                  "type_id": 1,
+                  "participant_id": 18654,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 19688363,
+                  "fixture_id": 19604728,
+                  "type_id": 1,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 19688815,
+                  "fixture_id": 19604728,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 19688907,
+                  "fixture_id": 19604728,
+                  "type_id": 5,
+                  "participant_id": 18654,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "PENALTY_SHOOTOUT"
+                },
+                {
+                  "id": 19688908,
+                  "fixture_id": 19604728,
+                  "type_id": 5,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "PENALTY_SHOOTOUT"
+                },
+                {
+                  "id": 19688859,
+                  "fixture_id": 19604728,
+                  "type_id": 5314,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "ET_1ST_HALF"
+                },
+                {
+                  "id": 19688860,
+                  "fixture_id": 19604728,
+                  "type_id": 5314,
+                  "participant_id": 18654,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET_1ST_HALF"
+                },
+                {
+                  "id": 19688844,
+                  "fixture_id": 19604728,
+                  "type_id": 3,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "ET"
+                },
+                {
+                  "id": 19688843,
+                  "fixture_id": 19604728,
+                  "type_id": 3,
+                  "participant_id": 18654,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET"
+                },
+                {
+                  "id": 19688863,
+                  "fixture_id": 19604728,
+                  "type_id": 39,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "ET_2ND_HALF"
+                },
+                {
+                  "id": 19688864,
+                  "fixture_id": 19604728,
+                  "type_id": 39,
+                  "participant_id": 18654,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET_2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464840,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Finals",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-31",
+      "ending_at": "2026-03-31",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19608777,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464840,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 8,
+          "venue_id": 1619,
+          "name": "Czech Republic vs Denmark",
+          "starting_at": "2026-03-31 18:45:00",
+          "result_info": "Czech Republic won after penalties.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1774982700,
+          "participants": [
+            {
+              "id": 18583,
+              "sport_id": 1,
+              "country_id": 320,
+              "venue_id": 5660,
+              "gender": "male",
+              "name": "Denmark",
+              "short_code": "DEN",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+              "founded": 1889,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:00:00",
+              "meta": {
+                "location": "away",
+                "winner": false,
+                "position": 2
+              }
+            },
+            {
+              "id": 18718,
+              "sport_id": 1,
+              "country_id": 245,
+              "venue_id": 1619,
+              "gender": "male",
+              "name": "Czech Republic",
+              "short_code": "CZE",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+              "founded": 1901,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-05 00:00:00",
+              "meta": {
+                "location": "home",
+                "winner": true,
+                "position": 1
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 19728491,
+              "fixture_id": 19608777,
+              "type_id": 2,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19728489,
+              "fixture_id": 19608777,
+              "type_id": 1,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19728490,
+              "fixture_id": 19608777,
+              "type_id": 2,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19728488,
+              "fixture_id": 19608777,
+              "type_id": 1,
+              "participant_id": 18583,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19728487,
+              "fixture_id": 19608777,
+              "type_id": 1525,
+              "participant_id": 18718,
+              "score": {
+                "goals": 2,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19728486,
+              "fixture_id": 19608777,
+              "type_id": 1525,
+              "participant_id": 18583,
+              "score": {
+                "goals": 2,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19732563,
+              "fixture_id": 19608777,
+              "type_id": 48996,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732562,
+              "fixture_id": 19608777,
+              "type_id": 48996,
+              "participant_id": 18718,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732703,
+              "fixture_id": 19608777,
+              "type_id": 5314,
+              "participant_id": 18583,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732698,
+              "fixture_id": 19608777,
+              "type_id": 3,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 19732699,
+              "fixture_id": 19608777,
+              "type_id": 3,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 19732702,
+              "fixture_id": 19608777,
+              "type_id": 5314,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732719,
+              "fixture_id": 19608777,
+              "type_id": 39,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732718,
+              "fixture_id": 19608777,
+              "type_id": 39,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732734,
+              "fixture_id": 19608777,
+              "type_id": 5,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            },
+            {
+              "id": 19732735,
+              "fixture_id": 19608777,
+              "type_id": 5,
+              "participant_id": 18718,
+              "score": {
+                "goals": 3,
+                "participant": "home"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124659,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1967,
+    "remaining": 2239,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

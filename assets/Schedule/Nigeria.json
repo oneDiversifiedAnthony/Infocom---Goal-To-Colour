@@ -1,0 +1,2265 @@
+{
+  "data": [
+    {
+      "id": 77465184,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-15",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 323228,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993989,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323228,
+              "state_id": 5,
+              "venue_id": 12732,
+              "name": "Nigeria vs Benin",
+              "starting_at": "2025-10-14 16:00:00",
+              "result_info": "Nigeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760457600,
+              "participants": [
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18783,
+                  "sport_id": 1,
+                  "country_id": 7830,
+                  "venue_id": 12456,
+                  "gender": "male",
+                  "name": "Benin",
+                  "short_code": "BEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18783.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17235957,
+                  "fixture_id": 18993989,
+                  "type_id": 1525,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17235958,
+                  "fixture_id": 18993989,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17236441,
+                  "fixture_id": 18993989,
+                  "type_id": 48996,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17235960,
+                  "fixture_id": 18993989,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17235956,
+                  "fixture_id": 18993989,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17235961,
+                  "fixture_id": 18993989,
+                  "type_id": 2,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17236440,
+                  "fixture_id": 18993989,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17235959,
+                  "fixture_id": 18993989,
+                  "type_id": 1,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323222,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-09",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993970,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323222,
+              "state_id": 5,
+              "venue_id": 14384,
+              "name": "Benin vs Nigeria",
+              "starting_at": "2024-06-10 16:00:00",
+              "result_info": "Benin won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1718035200,
+              "participants": [
+                {
+                  "id": 18783,
+                  "sport_id": 1,
+                  "country_id": 7830,
+                  "venue_id": 12456,
+                  "gender": "male",
+                  "name": "Benin",
+                  "short_code": "BEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18783.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14533236,
+                  "fixture_id": 18993970,
+                  "type_id": 1525,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15581741,
+                  "fixture_id": 18993970,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15581740,
+                  "fixture_id": 18993970,
+                  "type_id": 48996,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14533235,
+                  "fixture_id": 18993970,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14533233,
+                  "fixture_id": 18993970,
+                  "type_id": 1,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14533234,
+                  "fixture_id": 18993970,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14533365,
+                  "fixture_id": 18993970,
+                  "type_id": 2,
+                  "participant_id": 18783,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14533366,
+                  "fixture_id": 18993970,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323225,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-03",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993980,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323225,
+              "state_id": 5,
+              "venue_id": 12732,
+              "name": "Nigeria vs Rwanda",
+              "starting_at": "2025-09-06 16:00:00",
+              "result_info": "Nigeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757174400,
+              "participants": [
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18833,
+                  "sport_id": 1,
+                  "country_id": 88137,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Rwanda",
+                  "short_code": "RWA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18833.png",
+                  "founded": 1972,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 17:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16907467,
+                  "fixture_id": 18993980,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16907466,
+                  "fixture_id": 18993980,
+                  "type_id": 1525,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16907471,
+                  "fixture_id": 18993980,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16907469,
+                  "fixture_id": 18993980,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16910575,
+                  "fixture_id": 18993980,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16910576,
+                  "fixture_id": 18993980,
+                  "type_id": 48996,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16907470,
+                  "fixture_id": 18993980,
+                  "type_id": 2,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16907468,
+                  "fixture_id": 18993980,
+                  "type_id": 1,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323224,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-23",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993976,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323224,
+              "state_id": 5,
+              "venue_id": 12732,
+              "name": "Nigeria vs Zimbabwe",
+              "starting_at": "2025-03-25 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742918400,
+              "participants": [
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18547,
+                  "sport_id": 1,
+                  "country_id": 2325,
+                  "venue_id": 11996,
+                  "gender": "male",
+                  "name": "Zimbabwe",
+                  "short_code": "ZWE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18547.png",
+                  "founded": 1965,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-30 13:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16124706,
+                  "fixture_id": 18993976,
+                  "type_id": 1,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124707,
+                  "fixture_id": 18993976,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16124703,
+                  "fixture_id": 18993976,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125042,
+                  "fixture_id": 18993976,
+                  "type_id": 48996,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16124709,
+                  "fixture_id": 18993976,
+                  "type_id": 2,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16124704,
+                  "fixture_id": 18993976,
+                  "type_id": 1525,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125041,
+                  "fixture_id": 18993976,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16124705,
+                  "fixture_id": 18993976,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323223,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-17",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993974,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323223,
+              "state_id": 5,
+              "venue_id": 12781,
+              "name": "Rwanda vs Nigeria",
+              "starting_at": "2025-03-21 16:00:00",
+              "result_info": "Nigeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742572800,
+              "participants": [
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18833,
+                  "sport_id": 1,
+                  "country_id": 88137,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Rwanda",
+                  "short_code": "RWA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18833.png",
+                  "founded": 1972,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 17:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16093500,
+                  "fixture_id": 18993974,
+                  "type_id": 1,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16093505,
+                  "fixture_id": 18993974,
+                  "type_id": 2,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16093494,
+                  "fixture_id": 18993974,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16093496,
+                  "fixture_id": 18993974,
+                  "type_id": 1525,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16093497,
+                  "fixture_id": 18993974,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16093502,
+                  "fixture_id": 18993974,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16093952,
+                  "fixture_id": 18993974,
+                  "type_id": 48996,
+                  "participant_id": 18833,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16093953,
+                  "fixture_id": 18993974,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323220,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-19",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993964,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323220,
+              "state_id": 5,
+              "venue_id": 12796,
+              "name": "Zimbabwe vs Nigeria",
+              "starting_at": "2023-11-19 13:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700398800,
+              "participants": [
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18547,
+                  "sport_id": 1,
+                  "country_id": 2325,
+                  "venue_id": 11996,
+                  "gender": "male",
+                  "name": "Zimbabwe",
+                  "short_code": "ZWE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18547.png",
+                  "founded": 1965,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-30 13:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13525111,
+                  "fixture_id": 18993964,
+                  "type_id": 1,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13526005,
+                  "fixture_id": 18993964,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13525146,
+                  "fixture_id": 18993964,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13525145,
+                  "fixture_id": 18993964,
+                  "type_id": 1525,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13525112,
+                  "fixture_id": 18993964,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13526004,
+                  "fixture_id": 18993964,
+                  "type_id": 2,
+                  "participant_id": 18547,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323219,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-15",
+          "ending_at": "2023-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993961,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323219,
+              "state_id": 5,
+              "venue_id": 12739,
+              "name": "Nigeria vs Lesotho",
+              "starting_at": "2023-11-16 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700150400,
+              "participants": [
+                {
+                  "id": 18772,
+                  "sport_id": 1,
+                  "country_id": 482134,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Lesotho",
+                  "short_code": "LSO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18772.png",
+                  "founded": 1932,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13511364,
+                  "fixture_id": 18993961,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13511365,
+                  "fixture_id": 18993961,
+                  "type_id": 1525,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13511413,
+                  "fixture_id": 18993961,
+                  "type_id": 2,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13511366,
+                  "fixture_id": 18993961,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13511363,
+                  "fixture_id": 18993961,
+                  "type_id": 1,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13511414,
+                  "fixture_id": 18993961,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323221,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993968,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323221,
+              "state_id": 5,
+              "venue_id": 12732,
+              "name": "Nigeria vs South Africa",
+              "starting_at": "2024-06-07 19:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717786800,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14520959,
+                  "fixture_id": 18993968,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14520962,
+                  "fixture_id": 18993968,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14520960,
+                  "fixture_id": 18993968,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15581736,
+                  "fixture_id": 18993968,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15581737,
+                  "fixture_id": 18993968,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14520961,
+                  "fixture_id": 18993968,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14521049,
+                  "fixture_id": 18993968,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14521050,
+                  "fixture_id": 18993968,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323227,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993984,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323227,
+              "state_id": 5,
+              "venue_id": 8325,
+              "name": "Lesotho vs Nigeria",
+              "starting_at": "2025-10-10 16:00:00",
+              "result_info": "Nigeria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760112000,
+              "participants": [
+                {
+                  "id": 18772,
+                  "sport_id": 1,
+                  "country_id": 482134,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Lesotho",
+                  "short_code": "LSO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18772.png",
+                  "founded": 1932,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17211103,
+                  "fixture_id": 18993984,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211101,
+                  "fixture_id": 18993984,
+                  "type_id": 1525,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211106,
+                  "fixture_id": 18993984,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17211104,
+                  "fixture_id": 18993984,
+                  "type_id": 1,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17211108,
+                  "fixture_id": 18993984,
+                  "type_id": 2,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17211756,
+                  "fixture_id": 18993984,
+                  "type_id": 48996,
+                  "participant_id": 18772,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17211757,
+                  "fixture_id": 18993984,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17211110,
+                  "fixture_id": 18993984,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323226,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993981,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249493,
+              "aggregate_id": null,
+              "round_id": 323226,
+              "state_id": 5,
+              "venue_id": 11987,
+              "name": "South Africa vs Nigeria",
+              "starting_at": "2025-09-09 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757433600,
+              "participants": [
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16926332,
+                  "fixture_id": 18993981,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16925984,
+                  "fixture_id": 18993981,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16925986,
+                  "fixture_id": 18993981,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16925985,
+                  "fixture_id": 18993981,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16925981,
+                  "fixture_id": 18993981,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16925982,
+                  "fixture_id": 18993981,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16925983,
+                  "fixture_id": 18993981,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16926331,
+                  "fixture_id": 18993981,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77476898,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-13",
+      "ending_at": "2025-11-13",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 372381,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372382,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372384,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372386,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372383,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372385,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 392946,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-13",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19595420,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77476898,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 392946,
+              "state_id": 7,
+              "venue_id": 343802,
+              "name": "Nigeria vs Gabon",
+              "starting_at": "2025-11-13 16:00:00",
+              "result_info": "Nigeria won after extra-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763049600,
+              "participants": [
+                {
+                  "id": 18737,
+                  "sport_id": 1,
+                  "country_id": 716,
+                  "venue_id": 12710,
+                  "gender": "male",
+                  "name": "Nigeria",
+                  "short_code": "NGA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+                  "founded": 1945,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18789,
+                  "sport_id": 1,
+                  "country_id": 3662,
+                  "venue_id": 12328,
+                  "gender": "male",
+                  "name": "Gabon",
+                  "short_code": "GAB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18789.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 10:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17437670,
+                  "fixture_id": 19595420,
+                  "type_id": 2,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17437665,
+                  "fixture_id": 19595420,
+                  "type_id": 1525,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17437667,
+                  "fixture_id": 19595420,
+                  "type_id": 1,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17437666,
+                  "fixture_id": 19595420,
+                  "type_id": 1525,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17437920,
+                  "fixture_id": 19595420,
+                  "type_id": 48996,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438016,
+                  "fixture_id": 19595420,
+                  "type_id": 5314,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "ET_1ST_HALF"
+                },
+                {
+                  "id": 17437919,
+                  "fixture_id": 19595420,
+                  "type_id": 48996,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438015,
+                  "fixture_id": 19595420,
+                  "type_id": 3,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET"
+                },
+                {
+                  "id": 17438017,
+                  "fixture_id": 19595420,
+                  "type_id": 5314,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET_1ST_HALF"
+                },
+                {
+                  "id": 17438055,
+                  "fixture_id": 19595420,
+                  "type_id": 39,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET_2ND_HALF"
+                },
+                {
+                  "id": 17438054,
+                  "fixture_id": 19595420,
+                  "type_id": 39,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "ET_2ND_HALF"
+                },
+                {
+                  "id": 17438014,
+                  "fixture_id": 19595420,
+                  "type_id": 3,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "ET"
+                },
+                {
+                  "id": 17437668,
+                  "fixture_id": 19595420,
+                  "type_id": 1,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17437669,
+                  "fixture_id": 19595420,
+                  "type_id": 2,
+                  "participant_id": 18737,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77465182,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Final",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-16",
+      "ending_at": "2025-11-16",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19601161,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465182,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 8,
+          "venue_id": 12581,
+          "name": "Nigeria vs Congo DR",
+          "starting_at": "2025-11-16 19:00:00",
+          "result_info": "Congo DR won after penalties.",
+          "leg": "1/1",
+          "details": null,
+          "length": null,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1763319600,
+          "participants": [
+            {
+              "id": 18552,
+              "sport_id": 1,
+              "country_id": 1320,
+              "venue_id": 3695,
+              "gender": "male",
+              "name": "Congo DR",
+              "short_code": "COD",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+              "founded": 1919,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:00:00",
+              "meta": {
+                "location": "away",
+                "winner": true,
+                "position": 2
+              }
+            },
+            {
+              "id": 18737,
+              "sport_id": 1,
+              "country_id": 716,
+              "venue_id": 12710,
+              "gender": "male",
+              "name": "Nigeria",
+              "short_code": "NGA",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+              "founded": 1945,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:45:00",
+              "meta": {
+                "location": "home",
+                "winner": false,
+                "position": 1
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 17465215,
+              "fixture_id": 19601161,
+              "type_id": 48996,
+              "participant_id": 18737,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 17465216,
+              "fixture_id": 19601161,
+              "type_id": 48996,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 17464744,
+              "fixture_id": 19601161,
+              "type_id": 1,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 17464741,
+              "fixture_id": 19601161,
+              "type_id": 1525,
+              "participant_id": 18737,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 17465313,
+              "fixture_id": 19601161,
+              "type_id": 3,
+              "participant_id": 18737,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 17464743,
+              "fixture_id": 19601161,
+              "type_id": 1,
+              "participant_id": 18737,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 17464742,
+              "fixture_id": 19601161,
+              "type_id": 1525,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 17465316,
+              "fixture_id": 19601161,
+              "type_id": 5314,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 17464745,
+              "fixture_id": 19601161,
+              "type_id": 2,
+              "participant_id": 18737,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 17465373,
+              "fixture_id": 19601161,
+              "type_id": 39,
+              "participant_id": 18737,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 17465374,
+              "fixture_id": 19601161,
+              "type_id": 39,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 17465315,
+              "fixture_id": 19601161,
+              "type_id": 5314,
+              "participant_id": 18737,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 17465314,
+              "fixture_id": 19601161,
+              "type_id": 3,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 17465394,
+              "fixture_id": 19601161,
+              "type_id": 5,
+              "participant_id": 18552,
+              "score": {
+                "goals": 4,
+                "participant": "away"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            },
+            {
+              "id": 17464746,
+              "fixture_id": 19601161,
+              "type_id": 2,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 17465393,
+              "fixture_id": 19601161,
+              "type_id": 5,
+              "participant_id": 18737,
+              "score": {
+                "goals": 3,
+                "participant": "home"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124636,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1990,
+    "remaining": 2261,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

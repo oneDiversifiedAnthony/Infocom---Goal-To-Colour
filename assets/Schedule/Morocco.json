@@ -1,0 +1,1820 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609171,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253021,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 160,
+              "name": "Scotland vs Morocco",
+              "starting_at": "2026-06-19 22:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 30",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781906400,
+              "participants": [
+                {
+                  "id": 18706,
+                  "sport_id": 1,
+                  "country_id": 1161,
+                  "venue_id": 6935,
+                  "gender": "male",
+                  "name": "Scotland",
+                  "short_code": "SCO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18706.png",
+                  "founded": 1873,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609187,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253021,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 161191,
+              "name": "Morocco vs Haiti",
+              "starting_at": "2026-06-24 22:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 50",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782338400,
+              "participants": [
+                {
+                  "id": 18804,
+                  "sport_id": 1,
+                  "country_id": 2177,
+                  "venue_id": 12214,
+                  "gender": "male",
+                  "name": "Haiti",
+                  "short_code": "HTI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609131,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253021,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 21826,
+              "name": "Brazil vs Morocco",
+              "starting_at": "2026-06-13 22:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 7",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781388000,
+              "participants": [
+                {
+                  "id": 18704,
+                  "sport_id": 1,
+                  "country_id": 5,
+                  "venue_id": 392,
+                  "gender": "male",
+                  "name": "Brazil",
+                  "short_code": "BRA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18704.png",
+                  "founded": 1914,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 22:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77465184,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-15",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 323228,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994049,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323228,
+              "state_id": 5,
+              "venue_id": 12586,
+              "name": "Morocco vs Congo",
+              "starting_at": "2025-10-14 19:00:00",
+              "result_info": "Morocco won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760468400,
+              "participants": [
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18785,
+                  "sport_id": 1,
+                  "country_id": 1560,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Congo",
+                  "short_code": "COG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18785.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-10-14 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17236886,
+                  "fixture_id": 18994049,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17236887,
+                  "fixture_id": 18994049,
+                  "type_id": 2,
+                  "participant_id": 18785,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17236885,
+                  "fixture_id": 18994049,
+                  "type_id": 1,
+                  "participant_id": 18785,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17236883,
+                  "fixture_id": 18994049,
+                  "type_id": 1525,
+                  "participant_id": 18785,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17237556,
+                  "fixture_id": 18994049,
+                  "type_id": 48996,
+                  "participant_id": 18785,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17236882,
+                  "fixture_id": 18994049,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17236884,
+                  "fixture_id": 18994049,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17237555,
+                  "fixture_id": 18994049,
+                  "type_id": 48996,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323222,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-09",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994030,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323222,
+              "state_id": 5,
+              "venue_id": 12580,
+              "name": "Congo vs Morocco",
+              "starting_at": "2024-06-11 19:00:00",
+              "result_info": "Morocco won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1718132400,
+              "participants": [
+                {
+                  "id": 18785,
+                  "sport_id": 1,
+                  "country_id": 1560,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Congo",
+                  "short_code": "COG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18785.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2025-10-14 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14535515,
+                  "fixture_id": 18994030,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15581762,
+                  "fixture_id": 18994030,
+                  "type_id": 48996,
+                  "participant_id": 18785,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15581763,
+                  "fixture_id": 18994030,
+                  "type_id": 48996,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14535517,
+                  "fixture_id": 18994030,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 6,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14535540,
+                  "fixture_id": 18994030,
+                  "type_id": 2,
+                  "participant_id": 18785,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14535516,
+                  "fixture_id": 18994030,
+                  "type_id": 1525,
+                  "participant_id": 18785,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14535514,
+                  "fixture_id": 18994030,
+                  "type_id": 1,
+                  "participant_id": 18785,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14535541,
+                  "fixture_id": 18994030,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 6,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323225,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-03",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994040,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323225,
+              "state_id": 5,
+              "venue_id": 12586,
+              "name": "Morocco vs Niger",
+              "starting_at": "2025-09-05 19:00:00",
+              "result_info": "Morocco won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757098800,
+              "participants": [
+                {
+                  "id": 18920,
+                  "sport_id": 1,
+                  "country_id": 65053,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Niger",
+                  "short_code": "NER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18920.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16899419,
+                  "fixture_id": 18994040,
+                  "type_id": 1,
+                  "participant_id": 18920,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16899422,
+                  "fixture_id": 18994040,
+                  "type_id": 2,
+                  "participant_id": 18920,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16899421,
+                  "fixture_id": 18994040,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16900037,
+                  "fixture_id": 18994040,
+                  "type_id": 48996,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16900038,
+                  "fixture_id": 18994040,
+                  "type_id": 48996,
+                  "participant_id": 18920,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16899424,
+                  "fixture_id": 18994040,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16899418,
+                  "fixture_id": 18994040,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16899417,
+                  "fixture_id": 18994040,
+                  "type_id": 1525,
+                  "participant_id": 18920,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323224,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-23",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994036,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323224,
+              "state_id": 5,
+              "venue_id": 164710,
+              "name": "Morocco vs Tanzania",
+              "starting_at": "2025-03-25 21:30:00",
+              "result_info": "Morocco won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742938200,
+              "participants": [
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18831,
+                  "sport_id": 1,
+                  "country_id": 35210,
+                  "venue_id": 5365,
+                  "gender": "male",
+                  "name": "Tanzania",
+                  "short_code": "TZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/15/18831.png",
+                  "founded": 1930,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-26 14:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16125633,
+                  "fixture_id": 18994036,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125629,
+                  "fixture_id": 18994036,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125630,
+                  "fixture_id": 18994036,
+                  "type_id": 1525,
+                  "participant_id": 18831,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125770,
+                  "fixture_id": 18994036,
+                  "type_id": 48996,
+                  "participant_id": 18831,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125631,
+                  "fixture_id": 18994036,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16125634,
+                  "fixture_id": 18994036,
+                  "type_id": 2,
+                  "participant_id": 18831,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125769,
+                  "fixture_id": 18994036,
+                  "type_id": 48996,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125632,
+                  "fixture_id": 18994036,
+                  "type_id": 1,
+                  "participant_id": 18831,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323223,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-17",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994034,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323223,
+              "state_id": 5,
+              "venue_id": 164710,
+              "name": "Niger vs Morocco",
+              "starting_at": "2025-03-21 21:30:00",
+              "result_info": "Morocco won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742592600,
+              "participants": [
+                {
+                  "id": 18920,
+                  "sport_id": 1,
+                  "country_id": 65053,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Niger",
+                  "short_code": "NER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18920.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16094898,
+                  "fixture_id": 18994034,
+                  "type_id": 1,
+                  "participant_id": 18920,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16095131,
+                  "fixture_id": 18994034,
+                  "type_id": 48996,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16094899,
+                  "fixture_id": 18994034,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094896,
+                  "fixture_id": 18994034,
+                  "type_id": 1525,
+                  "participant_id": 18920,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16094900,
+                  "fixture_id": 18994034,
+                  "type_id": 2,
+                  "participant_id": 18920,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094901,
+                  "fixture_id": 18994034,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16095130,
+                  "fixture_id": 18994034,
+                  "type_id": 48996,
+                  "participant_id": 18920,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16094897,
+                  "fixture_id": 18994034,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323220,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-19",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994024,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323220,
+              "state_id": 5,
+              "venue_id": 5365,
+              "name": "Tanzania vs Morocco",
+              "starting_at": "2023-11-21 19:00:00",
+              "result_info": "Morocco won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700593200,
+              "participants": [
+                {
+                  "id": 18831,
+                  "sport_id": 1,
+                  "country_id": 35210,
+                  "venue_id": 5365,
+                  "gender": "male",
+                  "name": "Tanzania",
+                  "short_code": "TZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/15/18831.png",
+                  "founded": 1930,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-26 14:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13534310,
+                  "fixture_id": 18994024,
+                  "type_id": 2,
+                  "participant_id": 18831,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13534016,
+                  "fixture_id": 18994024,
+                  "type_id": 1525,
+                  "participant_id": 18831,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13534017,
+                  "fixture_id": 18994024,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13534008,
+                  "fixture_id": 18994024,
+                  "type_id": 1,
+                  "participant_id": 18831,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13534009,
+                  "fixture_id": 18994024,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13534311,
+                  "fixture_id": 18994024,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323219,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-15",
+          "ending_at": "2023-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19590782,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323219,
+              "state_id": 12,
+              "venue_id": null,
+              "name": "Morocco vs Eritrea",
+              "starting_at": "2023-11-16 19:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1700161200,
+              "participants": [
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18698,
+                  "sport_id": 1,
+                  "country_id": 43321,
+                  "venue_id": 14453,
+                  "gender": "male",
+                  "name": "Eritrea",
+                  "short_code": "ERI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18698.png",
+                  "founded": 1996,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 14:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 323221,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994028,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323221,
+              "state_id": 5,
+              "venue_id": 12580,
+              "name": "Morocco vs Zambia",
+              "starting_at": "2024-06-07 19:00:00",
+              "result_info": "Morocco won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717786800,
+              "participants": [
+                {
+                  "id": 18776,
+                  "sport_id": 1,
+                  "country_id": 2568,
+                  "venue_id": 12940,
+                  "gender": "male",
+                  "name": "Zambia",
+                  "short_code": "ZMB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18776.png",
+                  "founded": 1929,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 23:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14520950,
+                  "fixture_id": 18994028,
+                  "type_id": 1525,
+                  "participant_id": 18776,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14520947,
+                  "fixture_id": 18994028,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15581759,
+                  "fixture_id": 18994028,
+                  "type_id": 48996,
+                  "participant_id": 18776,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15581758,
+                  "fixture_id": 18994028,
+                  "type_id": 48996,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14520949,
+                  "fixture_id": 18994028,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14520948,
+                  "fixture_id": 18994028,
+                  "type_id": 1,
+                  "participant_id": 18776,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14521045,
+                  "fixture_id": 18994028,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14521046,
+                  "fixture_id": 18994028,
+                  "type_id": 2,
+                  "participant_id": 18776,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323227,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-10",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 323226,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994041,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249495,
+              "aggregate_id": null,
+              "round_id": 323226,
+              "state_id": 5,
+              "venue_id": 12944,
+              "name": "Zambia vs Morocco",
+              "starting_at": "2025-09-08 13:00:00",
+              "result_info": "Morocco won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757336400,
+              "participants": [
+                {
+                  "id": 18776,
+                  "sport_id": 1,
+                  "country_id": 2568,
+                  "venue_id": 12940,
+                  "gender": "male",
+                  "name": "Zambia",
+                  "short_code": "ZMB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18776.png",
+                  "founded": 1929,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 23:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16924223,
+                  "fixture_id": 18994041,
+                  "type_id": 1,
+                  "participant_id": 18776,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924222,
+                  "fixture_id": 18994041,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924225,
+                  "fixture_id": 18994041,
+                  "type_id": 2,
+                  "participant_id": 18776,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924221,
+                  "fixture_id": 18994041,
+                  "type_id": 1525,
+                  "participant_id": 18776,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924224,
+                  "fixture_id": 18994041,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924418,
+                  "fixture_id": 18994041,
+                  "type_id": 48996,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16924226,
+                  "fixture_id": 18994041,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924417,
+                  "fixture_id": 18994041,
+                  "type_id": 48996,
+                  "participant_id": 18776,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77476898,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-13",
+      "ending_at": "2025-11-13",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 372381,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372382,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372384,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372386,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372383,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372385,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 392946,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-13",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124634,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1992,
+    "remaining": 2264,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

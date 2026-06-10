@@ -1,0 +1,3004 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609134,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253022,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 1579,
+              "name": "United States vs Australia",
+              "starting_at": "2026-06-19 19:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 32",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781895600,
+              "participants": [
+                {
+                  "id": 18571,
+                  "sport_id": 1,
+                  "country_id": 3483,
+                  "venue_id": 11566,
+                  "gender": "male",
+                  "name": "United States",
+                  "short_code": "USA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18571.png",
+                  "founded": 1913,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609188,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253022,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 11579,
+              "name": "Paraguay vs Australia",
+              "starting_at": "2026-06-26 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 60",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782439200,
+              "participants": [
+                {
+                  "id": 18723,
+                  "sport_id": 1,
+                  "country_id": 1190,
+                  "venue_id": 11354,
+                  "gender": "male",
+                  "name": "Paraguay",
+                  "short_code": "PRY",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18723.png",
+                  "founded": 1906,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609156,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253022,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 11554,
+              "name": "Australia vs T\u00fcrkiye",
+              "starting_at": "2026-06-14 04:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 6",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781409600,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18716,
+                  "sport_id": 1,
+                  "country_id": 404,
+                  "venue_id": 9634,
+                  "gender": "male",
+                  "name": "T\u00fcrkiye",
+                  "short_code": "TUR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18716.png",
+                  "founded": 1923,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 22:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478769,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 2",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-16",
+      "ending_at": "2024-06-11",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393370,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-06",
+          "ending_at": "2024-06-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313029,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252901,
+              "aggregate_id": null,
+              "round_id": 393370,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Bangladesh vs Australia",
+              "starting_at": "2024-06-06 10:45:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717670700,
+              "participants": [
+                {
+                  "id": 18847,
+                  "sport_id": 1,
+                  "country_id": 155043,
+                  "venue_id": 852,
+                  "gender": "male",
+                  "name": "Bangladesh",
+                  "short_code": "BGD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18847.png",
+                  "founded": 1972,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915871,
+                  "fixture_id": 19313029,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915869,
+                  "fixture_id": 19313029,
+                  "type_id": 1525,
+                  "participant_id": 18847,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915875,
+                  "fixture_id": 19313029,
+                  "type_id": 2,
+                  "participant_id": 18847,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915884,
+                  "fixture_id": 19313029,
+                  "type_id": 1,
+                  "participant_id": 18847,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15857002,
+                  "fixture_id": 19313029,
+                  "type_id": 48996,
+                  "participant_id": 18847,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15857003,
+                  "fixture_id": 19313029,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14915867,
+                  "fixture_id": 19313029,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915880,
+                  "fixture_id": 19313029,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393369,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-03-26",
+          "ending_at": "2024-03-26",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313027,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252901,
+              "aggregate_id": null,
+              "round_id": 393369,
+              "state_id": 5,
+              "venue_id": 71357,
+              "name": "Lebanon vs Australia",
+              "starting_at": "2024-03-26 08:45:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1711442700,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18584,
+                  "sport_id": 1,
+                  "country_id": 45412,
+                  "venue_id": 6889,
+                  "gender": "male",
+                  "name": "Lebanon",
+                  "short_code": "LBN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18584.png",
+                  "founded": 1933,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915847,
+                  "fixture_id": 19313027,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915844,
+                  "fixture_id": 19313027,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915850,
+                  "fixture_id": 19313027,
+                  "type_id": 1,
+                  "participant_id": 18584,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915845,
+                  "fixture_id": 19313027,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856999,
+                  "fixture_id": 19313027,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856998,
+                  "fixture_id": 19313027,
+                  "type_id": 48996,
+                  "participant_id": 18584,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14915854,
+                  "fixture_id": 19313027,
+                  "type_id": 1525,
+                  "participant_id": 18584,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915852,
+                  "fixture_id": 19313027,
+                  "type_id": 2,
+                  "participant_id": 18584,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393368,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-03-21",
+          "ending_at": "2024-03-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313025,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252901,
+              "aggregate_id": null,
+              "round_id": 393368,
+              "state_id": 5,
+              "venue_id": 30548,
+              "name": "Australia vs Lebanon",
+              "starting_at": "2024-03-21 09:10:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1711012200,
+              "participants": [
+                {
+                  "id": 18584,
+                  "sport_id": 1,
+                  "country_id": 45412,
+                  "venue_id": 6889,
+                  "gender": "male",
+                  "name": "Lebanon",
+                  "short_code": "LBN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18584.png",
+                  "founded": 1933,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916288,
+                  "fixture_id": 19313025,
+                  "type_id": 1,
+                  "participant_id": 18584,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15856994,
+                  "fixture_id": 19313025,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856995,
+                  "fixture_id": 19313025,
+                  "type_id": 48996,
+                  "participant_id": 18584,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14916290,
+                  "fixture_id": 19313025,
+                  "type_id": 1525,
+                  "participant_id": 18584,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916289,
+                  "fixture_id": 19313025,
+                  "type_id": 2,
+                  "participant_id": 18584,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916287,
+                  "fixture_id": 19313025,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916285,
+                  "fixture_id": 19313025,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916286,
+                  "fixture_id": 19313025,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393371,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-11",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313031,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252901,
+              "aggregate_id": null,
+              "round_id": 393371,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Australia vs Palestine",
+              "starting_at": "2024-06-11 12:10:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1718107800,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18596,
+                  "sport_id": 1,
+                  "country_id": 48946,
+                  "venue_id": 14415,
+                  "gender": "male",
+                  "name": "Palestine",
+                  "short_code": "PSE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18596.png",
+                  "founded": 1928,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 14:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915868,
+                  "fixture_id": 19313031,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915878,
+                  "fixture_id": 19313031,
+                  "type_id": 2,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15857007,
+                  "fixture_id": 19313031,
+                  "type_id": 48996,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15857006,
+                  "fixture_id": 19313031,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14915870,
+                  "fixture_id": 19313031,
+                  "type_id": 1525,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915873,
+                  "fixture_id": 19313031,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915892,
+                  "fixture_id": 19313031,
+                  "type_id": 1,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915889,
+                  "fixture_id": 19313031,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393366,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-16",
+          "ending_at": "2023-11-16",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313021,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252901,
+              "aggregate_id": null,
+              "round_id": 393366,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Australia vs Bangladesh",
+              "starting_at": "2023-11-16 09:10:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1700125800,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18847,
+                  "sport_id": 1,
+                  "country_id": 155043,
+                  "venue_id": 852,
+                  "gender": "male",
+                  "name": "Bangladesh",
+                  "short_code": "BGD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18847.png",
+                  "founded": 1972,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916304,
+                  "fixture_id": 19313021,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 7,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916299,
+                  "fixture_id": 19313021,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 7,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916301,
+                  "fixture_id": 19313021,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916303,
+                  "fixture_id": 19313021,
+                  "type_id": 1,
+                  "participant_id": 18847,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916297,
+                  "fixture_id": 19313021,
+                  "type_id": 1525,
+                  "participant_id": 18847,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916306,
+                  "fixture_id": 19313021,
+                  "type_id": 2,
+                  "participant_id": 18847,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393367,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-21",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313024,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252901,
+              "aggregate_id": null,
+              "round_id": 393367,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Palestine vs Australia",
+              "starting_at": "2023-11-21 14:00:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1700575200,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18596,
+                  "sport_id": 1,
+                  "country_id": 48946,
+                  "venue_id": 14415,
+                  "gender": "male",
+                  "name": "Palestine",
+                  "short_code": "PSE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18596.png",
+                  "founded": 1928,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 14:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916294,
+                  "fixture_id": 19313024,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916295,
+                  "fixture_id": 19313024,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916291,
+                  "fixture_id": 19313024,
+                  "type_id": 1525,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916293,
+                  "fixture_id": 19313024,
+                  "type_id": 2,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916296,
+                  "fixture_id": 19313024,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916292,
+                  "fixture_id": 19313024,
+                  "type_id": 1,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478770,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 3",
+      "sort_order": 4,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-09-05",
+      "ending_at": "2025-06-10",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393365,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312924,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393365,
+              "state_id": 5,
+              "venue_id": 63,
+              "name": "Saudi Arabia vs Australia",
+              "starting_at": "2025-06-10 18:15:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749579300,
+              "participants": [
+                {
+                  "id": 18562,
+                  "sport_id": 1,
+                  "country_id": 35376,
+                  "venue_id": 1503,
+                  "gender": "male",
+                  "name": "Saudi Arabia",
+                  "short_code": "KSA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
+                  "founded": 1956,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16605718,
+                  "fixture_id": 19312924,
+                  "type_id": 1,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605715,
+                  "fixture_id": 19312924,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605716,
+                  "fixture_id": 19312924,
+                  "type_id": 1525,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605717,
+                  "fixture_id": 19312924,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605719,
+                  "fixture_id": 19312924,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605720,
+                  "fixture_id": 19312924,
+                  "type_id": 2,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605934,
+                  "fixture_id": 19312924,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605933,
+                  "fixture_id": 19312924,
+                  "type_id": 48996,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393364,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-05",
+          "ending_at": "2025-06-05",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312921,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393364,
+              "state_id": 5,
+              "venue_id": 343721,
+              "name": "Australia vs Japan",
+              "starting_at": "2025-06-05 11:10:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749121800,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18597,
+                  "sport_id": 1,
+                  "country_id": 479,
+                  "venue_id": 13533,
+                  "gender": "male",
+                  "name": "Japan",
+                  "short_code": "JPN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-31 10:25:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16589026,
+                  "fixture_id": 19312921,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16589027,
+                  "fixture_id": 19312921,
+                  "type_id": 1525,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16589028,
+                  "fixture_id": 19312921,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16589029,
+                  "fixture_id": 19312921,
+                  "type_id": 1,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16589030,
+                  "fixture_id": 19312921,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16589031,
+                  "fixture_id": 19312921,
+                  "type_id": 2,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16589080,
+                  "fixture_id": 19312921,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16589081,
+                  "fixture_id": 19312921,
+                  "type_id": 48996,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393363,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-25",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312918,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393363,
+              "state_id": 5,
+              "venue_id": 14410,
+              "name": "China PR vs Australia",
+              "starting_at": "2025-03-25 11:00:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742900400,
+              "participants": [
+                {
+                  "id": 18599,
+                  "sport_id": 1,
+                  "country_id": 5618,
+                  "venue_id": 14410,
+                  "gender": "male",
+                  "name": "China PR",
+                  "short_code": "CHN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18599.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 11:35:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16124277,
+                  "fixture_id": 19312918,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16124274,
+                  "fixture_id": 19312918,
+                  "type_id": 1,
+                  "participant_id": 18599,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124406,
+                  "fixture_id": 19312918,
+                  "type_id": 48996,
+                  "participant_id": 18599,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16124407,
+                  "fixture_id": 19312918,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16124273,
+                  "fixture_id": 19312918,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16124275,
+                  "fixture_id": 19312918,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124276,
+                  "fixture_id": 19312918,
+                  "type_id": 2,
+                  "participant_id": 18599,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16124272,
+                  "fixture_id": 19312918,
+                  "type_id": 1525,
+                  "participant_id": 18599,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393356,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-09-05",
+          "ending_at": "2024-09-05",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312895,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393356,
+              "state_id": 5,
+              "venue_id": 14738,
+              "name": "Australia vs Bahrain",
+              "starting_at": "2024-09-05 10:10:00",
+              "result_info": "Bahrain won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1725531000,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18590,
+                  "sport_id": 1,
+                  "country_id": 190321,
+                  "venue_id": 1818,
+                  "gender": "male",
+                  "name": "Bahrain",
+                  "short_code": "BHR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18590.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915996,
+                  "fixture_id": 19312895,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915993,
+                  "fixture_id": 19312895,
+                  "type_id": 2,
+                  "participant_id": 18590,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856832,
+                  "fixture_id": 19312895,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856833,
+                  "fixture_id": 19312895,
+                  "type_id": 48996,
+                  "participant_id": 18590,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14915992,
+                  "fixture_id": 19312895,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915991,
+                  "fixture_id": 19312895,
+                  "type_id": 1525,
+                  "participant_id": 18590,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915995,
+                  "fixture_id": 19312895,
+                  "type_id": 1,
+                  "participant_id": 18590,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915994,
+                  "fixture_id": 19312895,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393357,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-09-10",
+          "ending_at": "2024-09-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312899,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393357,
+              "state_id": 5,
+              "venue_id": 13964,
+              "name": "Indonesia vs Australia",
+              "starting_at": "2024-09-10 12:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1725969600,
+              "participants": [
+                {
+                  "id": 18705,
+                  "sport_id": 1,
+                  "country_id": 88407,
+                  "venue_id": 13964,
+                  "gender": "male",
+                  "name": "Indonesia",
+                  "short_code": "IDN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18705.png",
+                  "founded": 1930,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915589,
+                  "fixture_id": 19312899,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915590,
+                  "fixture_id": 19312899,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915587,
+                  "fixture_id": 19312899,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915591,
+                  "fixture_id": 19312899,
+                  "type_id": 2,
+                  "participant_id": 18705,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856840,
+                  "fixture_id": 19312899,
+                  "type_id": 48996,
+                  "participant_id": 18705,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856841,
+                  "fixture_id": 19312899,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14915592,
+                  "fixture_id": 19312899,
+                  "type_id": 1525,
+                  "participant_id": 18705,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915595,
+                  "fixture_id": 19312899,
+                  "type_id": 1,
+                  "participant_id": 18705,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393361,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-19",
+          "ending_at": "2024-11-19",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312911,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393361,
+              "state_id": 5,
+              "venue_id": 340207,
+              "name": "Bahrain vs Australia",
+              "starting_at": "2024-11-19 18:15:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1732040100,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18590,
+                  "sport_id": 1,
+                  "country_id": 190321,
+                  "venue_id": 1818,
+                  "gender": "male",
+                  "name": "Bahrain",
+                  "short_code": "BHR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18590.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15233536,
+                  "fixture_id": 19312911,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15233537,
+                  "fixture_id": 19312911,
+                  "type_id": 1,
+                  "participant_id": 18590,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15233539,
+                  "fixture_id": 19312911,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15233538,
+                  "fixture_id": 19312911,
+                  "type_id": 1525,
+                  "participant_id": 18590,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15233567,
+                  "fixture_id": 19312911,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15233568,
+                  "fixture_id": 19312911,
+                  "type_id": 2,
+                  "participant_id": 18590,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856865,
+                  "fixture_id": 19312911,
+                  "type_id": 48996,
+                  "participant_id": 18590,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856864,
+                  "fixture_id": 19312911,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393362,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-20",
+          "ending_at": "2025-03-20",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312914,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393362,
+              "state_id": 5,
+              "venue_id": 152,
+              "name": "Australia vs Indonesia",
+              "starting_at": "2025-03-20 09:10:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742461800,
+              "participants": [
+                {
+                  "id": 18705,
+                  "sport_id": 1,
+                  "country_id": 88407,
+                  "venue_id": 13964,
+                  "gender": "male",
+                  "name": "Indonesia",
+                  "short_code": "IDN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18705.png",
+                  "founded": 1930,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16091202,
+                  "fixture_id": 19312914,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16091203,
+                  "fixture_id": 19312914,
+                  "type_id": 48996,
+                  "participant_id": 18705,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16091116,
+                  "fixture_id": 19312914,
+                  "type_id": 1525,
+                  "participant_id": 18705,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16091118,
+                  "fixture_id": 19312914,
+                  "type_id": 1,
+                  "participant_id": 18705,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16091119,
+                  "fixture_id": 19312914,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16091120,
+                  "fixture_id": 19312914,
+                  "type_id": 2,
+                  "participant_id": 18705,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16091117,
+                  "fixture_id": 19312914,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16091121,
+                  "fixture_id": 19312914,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393360,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-14",
+          "ending_at": "2024-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312908,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393360,
+              "state_id": 5,
+              "venue_id": 343377,
+              "name": "Australia vs Saudi Arabia",
+              "starting_at": "2024-11-14 09:10:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1731575400,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18562,
+                  "sport_id": 1,
+                  "country_id": 35376,
+                  "venue_id": 1503,
+                  "gender": "male",
+                  "name": "Saudi Arabia",
+                  "short_code": "KSA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
+                  "founded": 1956,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15856859,
+                  "fixture_id": 19312908,
+                  "type_id": 48996,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856858,
+                  "fixture_id": 19312908,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15203397,
+                  "fixture_id": 19312908,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15203396,
+                  "fixture_id": 19312908,
+                  "type_id": 1525,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15203394,
+                  "fixture_id": 19312908,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15203395,
+                  "fixture_id": 19312908,
+                  "type_id": 1,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15203476,
+                  "fixture_id": 19312908,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15203477,
+                  "fixture_id": 19312908,
+                  "type_id": 2,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393359,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-15",
+          "ending_at": "2024-10-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312904,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393359,
+              "state_id": 5,
+              "venue_id": 13533,
+              "name": "Japan vs Australia",
+              "starting_at": "2024-10-15 10:35:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1728988500,
+              "participants": [
+                {
+                  "id": 18597,
+                  "sport_id": 1,
+                  "country_id": 479,
+                  "venue_id": 13533,
+                  "gender": "male",
+                  "name": "Japan",
+                  "short_code": "JPN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-31 10:25:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15044497,
+                  "fixture_id": 19312904,
+                  "type_id": 1,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15044496,
+                  "fixture_id": 19312904,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15044499,
+                  "fixture_id": 19312904,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15044498,
+                  "fixture_id": 19312904,
+                  "type_id": 1525,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15044544,
+                  "fixture_id": 19312904,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15044545,
+                  "fixture_id": 19312904,
+                  "type_id": 2,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856850,
+                  "fixture_id": 19312904,
+                  "type_id": 48996,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856851,
+                  "fixture_id": 19312904,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393358,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-10",
+          "ending_at": "2024-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312901,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252904,
+              "aggregate_id": null,
+              "round_id": 393358,
+              "state_id": 5,
+              "venue_id": 14679,
+              "name": "Australia vs China PR",
+              "starting_at": "2024-10-10 09:10:00",
+              "result_info": "Australia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1728551400,
+              "participants": [
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18599,
+                  "sport_id": 1,
+                  "country_id": 5618,
+                  "venue_id": 14410,
+                  "gender": "male",
+                  "name": "China PR",
+                  "short_code": "CHN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18599.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 11:35:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15016278,
+                  "fixture_id": 19312901,
+                  "type_id": 1525,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15016277,
+                  "fixture_id": 19312901,
+                  "type_id": 1525,
+                  "participant_id": 18599,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15016296,
+                  "fixture_id": 19312901,
+                  "type_id": 2,
+                  "participant_id": 18599,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15016295,
+                  "fixture_id": 19312901,
+                  "type_id": 2,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15016276,
+                  "fixture_id": 19312901,
+                  "type_id": 1,
+                  "participant_id": 18599,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15016275,
+                  "fixture_id": 19312901,
+                  "type_id": 1,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15856845,
+                  "fixture_id": 19312901,
+                  "type_id": 48996,
+                  "participant_id": 18599,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856844,
+                  "fixture_id": 19312901,
+                  "type_id": 48996,
+                  "participant_id": 18730,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478771,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 4",
+      "sort_order": 5,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-10-08",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393374,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-14",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 393373,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-11",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 393372,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-08",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124616,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 2010,
+    "remaining": 2289,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

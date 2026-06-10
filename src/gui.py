@@ -144,7 +144,7 @@ class App:
                                    lambda t: self.gen_team_label.config(text=t))
 
         build_timeline_tab(self.notebook, self.db, self.set_team_colours, self._goal_pressed)
-        build_flags_tab(self.notebook, self.db, self._goal_pressed)
+        self._highlight_flag = build_flags_tab(self.notebook, self.db, self._goal_pressed)
         self._flags_tab_index = self.notebook.index("end") - 1
         self.chase = build_chases_tab(self.notebook, self.root, self._draw_swatches,
                                       lambda: self.team_colours)
@@ -206,16 +206,17 @@ class App:
         self.gen_team_label.config(text=country_name)
         self._draw_swatches(colours)
         self._update_sacn_country(country_name)
+        self._highlight_flag(country_name)
         if country_name:
             self._fire_trigger(country_name)
 
     def _goal_pressed(self, colours, country_name):
-        print(f"[App] _goal_pressed called: {country_name}")
         self.team_colours = colours
         self.team_name = country_name
         self.gen_team_label.config(text=country_name)
         self._draw_swatches(colours)
         self._update_sacn_country(country_name)
+        self._highlight_flag(country_name)
         self.goal.trigger(colours, country_name)
         self._fire_trigger(country_name)
         self._fire_sound_event("Goal by Team", country_name)
@@ -270,6 +271,7 @@ class App:
                 self.sacn.send_trigger(t["universe"], t["channel"], 0)
         self._active_trigger = None
         self.goal.stop()
+        self._highlight_flag("")  # clear flag highlight
         self.status_bar.trigger_label.config(text="", fg=FG_DIM)
         self.status_bar.trigger_progress["value"] = 0
         # Blackout colour output

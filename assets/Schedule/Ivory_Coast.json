@@ -1,0 +1,2040 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609135,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11542,
+              "name": "Germany vs C\u00f4te d'Ivoire",
+              "starting_at": "2026-06-20 20:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 33",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781985600,
+              "participants": [
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609191,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 11556,
+              "name": "Curacao vs C\u00f4te d'Ivoire",
+              "starting_at": "2026-06-25 20:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 55",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782417600,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609157,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 11556,
+              "name": "C\u00f4te d'Ivoire vs Ecuador",
+              "starting_at": "2026-06-14 23:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 9",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781478000,
+              "participants": [
+                {
+                  "id": 18573,
+                  "sport_id": 1,
+                  "country_id": 459,
+                  "venue_id": 1463,
+                  "gender": "male",
+                  "name": "Ecuador",
+                  "short_code": "ECU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77465184,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-15",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 323228,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995162,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323228,
+              "state_id": 5,
+              "venue_id": 340419,
+              "name": "C\u00f4te d'Ivoire vs Kenya",
+              "starting_at": "2025-10-14 19:00:00",
+              "result_info": "C\u00f4te d'Ivoire won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760468400,
+              "participants": [
+                {
+                  "id": 18835,
+                  "sport_id": 1,
+                  "country_id": 1179,
+                  "venue_id": 3661,
+                  "gender": "male",
+                  "name": "Kenya",
+                  "short_code": "KEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18835.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17236909,
+                  "fixture_id": 18995162,
+                  "type_id": 1,
+                  "participant_id": 18835,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17236911,
+                  "fixture_id": 18995162,
+                  "type_id": 2,
+                  "participant_id": 18835,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17237543,
+                  "fixture_id": 18995162,
+                  "type_id": 48996,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17236910,
+                  "fixture_id": 18995162,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17236906,
+                  "fixture_id": 18995162,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17236908,
+                  "fixture_id": 18995162,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17237544,
+                  "fixture_id": 18995162,
+                  "type_id": 48996,
+                  "participant_id": 18835,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17236907,
+                  "fixture_id": 18995162,
+                  "type_id": 1525,
+                  "participant_id": 18835,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323222,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-09",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995143,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323222,
+              "state_id": 5,
+              "venue_id": 12527,
+              "name": "Kenya vs C\u00f4te d'Ivoire",
+              "starting_at": "2024-06-11 13:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1718110800,
+              "participants": [
+                {
+                  "id": 18835,
+                  "sport_id": 1,
+                  "country_id": 1179,
+                  "venue_id": 3661,
+                  "gender": "male",
+                  "name": "Kenya",
+                  "short_code": "KEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18835.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15582250,
+                  "fixture_id": 18995143,
+                  "type_id": 48996,
+                  "participant_id": 18835,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15582251,
+                  "fixture_id": 18995143,
+                  "type_id": 48996,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14534787,
+                  "fixture_id": 18995143,
+                  "type_id": 1525,
+                  "participant_id": 18835,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14534839,
+                  "fixture_id": 18995143,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14534786,
+                  "fixture_id": 18995143,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14534785,
+                  "fixture_id": 18995143,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14534838,
+                  "fixture_id": 18995143,
+                  "type_id": 2,
+                  "participant_id": 18835,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14534784,
+                  "fixture_id": 18995143,
+                  "type_id": 1,
+                  "participant_id": 18835,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323225,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-03",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995153,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323225,
+              "state_id": 5,
+              "venue_id": 14384,
+              "name": "C\u00f4te d'Ivoire vs Burundi",
+              "starting_at": "2025-09-05 19:00:00",
+              "result_info": "C\u00f4te d'Ivoire won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757098800,
+              "participants": [
+                {
+                  "id": 18834,
+                  "sport_id": 1,
+                  "country_id": 821,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "Burundi",
+                  "short_code": "BDI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18834.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-26 11:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16899430,
+                  "fixture_id": 18995153,
+                  "type_id": 1525,
+                  "participant_id": 18834,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16900052,
+                  "fixture_id": 18995153,
+                  "type_id": 48996,
+                  "participant_id": 18834,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16899439,
+                  "fixture_id": 18995153,
+                  "type_id": 2,
+                  "participant_id": 18834,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16899437,
+                  "fixture_id": 18995153,
+                  "type_id": 1,
+                  "participant_id": 18834,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16899438,
+                  "fixture_id": 18995153,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16899440,
+                  "fixture_id": 18995153,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16900051,
+                  "fixture_id": 18995153,
+                  "type_id": 48996,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16899434,
+                  "fixture_id": 18995153,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323224,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-23",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995149,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323224,
+              "state_id": 5,
+              "venue_id": 14384,
+              "name": "C\u00f4te d'Ivoire vs Gambia",
+              "starting_at": "2025-03-24 19:00:00",
+              "result_info": "C\u00f4te d'Ivoire won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742842800,
+              "participants": [
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18700,
+                  "sport_id": 1,
+                  "country_id": 2507,
+                  "venue_id": 12772,
+                  "gender": "male",
+                  "name": "Gambia",
+                  "short_code": "GMB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18700.png",
+                  "founded": 1952,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 15:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16123511,
+                  "fixture_id": 18995149,
+                  "type_id": 1525,
+                  "participant_id": 18700,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123514,
+                  "fixture_id": 18995149,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123515,
+                  "fixture_id": 18995149,
+                  "type_id": 2,
+                  "participant_id": 18700,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123513,
+                  "fixture_id": 18995149,
+                  "type_id": 1,
+                  "participant_id": 18700,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123510,
+                  "fixture_id": 18995149,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123512,
+                  "fixture_id": 18995149,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123914,
+                  "fixture_id": 18995149,
+                  "type_id": 48996,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16123915,
+                  "fixture_id": 18995149,
+                  "type_id": 48996,
+                  "participant_id": 18700,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323223,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-17",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995147,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323223,
+              "state_id": 5,
+              "venue_id": 12581,
+              "name": "Burundi vs C\u00f4te d'Ivoire",
+              "starting_at": "2025-03-21 19:00:00",
+              "result_info": "C\u00f4te d'Ivoire won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742583600,
+              "participants": [
+                {
+                  "id": 18834,
+                  "sport_id": 1,
+                  "country_id": 821,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "Burundi",
+                  "short_code": "BDI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18834.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-26 11:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16094100,
+                  "fixture_id": 18995147,
+                  "type_id": 1525,
+                  "participant_id": 18834,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16094102,
+                  "fixture_id": 18995147,
+                  "type_id": 1,
+                  "participant_id": 18834,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094103,
+                  "fixture_id": 18995147,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094105,
+                  "fixture_id": 18995147,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094101,
+                  "fixture_id": 18995147,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16094104,
+                  "fixture_id": 18995147,
+                  "type_id": 2,
+                  "participant_id": 18834,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094892,
+                  "fixture_id": 18995147,
+                  "type_id": 48996,
+                  "participant_id": 18834,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16094893,
+                  "fixture_id": 18995147,
+                  "type_id": 48996,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323220,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-19",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995137,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323220,
+              "state_id": 5,
+              "venue_id": 5365,
+              "name": "Gambia vs C\u00f4te d'Ivoire",
+              "starting_at": "2023-11-20 16:00:00",
+              "result_info": "C\u00f4te d'Ivoire won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700496000,
+              "participants": [
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18700,
+                  "sport_id": 1,
+                  "country_id": 2507,
+                  "venue_id": 12772,
+                  "gender": "male",
+                  "name": "Gambia",
+                  "short_code": "GMB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18700.png",
+                  "founded": 1952,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 15:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13532240,
+                  "fixture_id": 18995137,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13532263,
+                  "fixture_id": 18995137,
+                  "type_id": 2,
+                  "participant_id": 18700,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13532241,
+                  "fixture_id": 18995137,
+                  "type_id": 1525,
+                  "participant_id": 18700,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13532238,
+                  "fixture_id": 18995137,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13532239,
+                  "fixture_id": 18995137,
+                  "type_id": 1,
+                  "participant_id": 18700,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13532262,
+                  "fixture_id": 18995137,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323219,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-15",
+          "ending_at": "2023-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994051,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323219,
+              "state_id": 5,
+              "venue_id": 340419,
+              "name": "C\u00f4te d'Ivoire vs Seychelles",
+              "starting_at": "2023-11-17 19:00:00",
+              "result_info": "C\u00f4te d'Ivoire won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700247600,
+              "participants": [
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18827,
+                  "sport_id": 1,
+                  "country_id": 908860,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Seychelles",
+                  "short_code": "SYC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18827.png",
+                  "founded": 1979,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-26 14:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13513098,
+                  "fixture_id": 18994051,
+                  "type_id": 2,
+                  "participant_id": 18827,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13512961,
+                  "fixture_id": 18994051,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 9,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13512959,
+                  "fixture_id": 18994051,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13512960,
+                  "fixture_id": 18994051,
+                  "type_id": 1,
+                  "participant_id": 18827,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13512962,
+                  "fixture_id": 18994051,
+                  "type_id": 1525,
+                  "participant_id": 18827,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13513097,
+                  "fixture_id": 18994051,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 9,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323221,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995141,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323221,
+              "state_id": 5,
+              "venue_id": 343423,
+              "name": "C\u00f4te d'Ivoire vs Gabon",
+              "starting_at": "2024-06-07 19:00:00",
+              "result_info": "C\u00f4te d'Ivoire won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717786800,
+              "participants": [
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18789,
+                  "sport_id": 1,
+                  "country_id": 3662,
+                  "venue_id": 12328,
+                  "gender": "male",
+                  "name": "Gabon",
+                  "short_code": "GAB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18789.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 10:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14520945,
+                  "fixture_id": 18995141,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15582246,
+                  "fixture_id": 18995141,
+                  "type_id": 48996,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15582247,
+                  "fixture_id": 18995141,
+                  "type_id": 48996,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14520946,
+                  "fixture_id": 18995141,
+                  "type_id": 1525,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14520943,
+                  "fixture_id": 18995141,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14520944,
+                  "fixture_id": 18995141,
+                  "type_id": 1,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14521043,
+                  "fixture_id": 18995141,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14521044,
+                  "fixture_id": 18995141,
+                  "type_id": 2,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323227,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995157,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323227,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Seychelles vs C\u00f4te d'Ivoire",
+              "starting_at": "2025-10-10 13:00:00",
+              "result_info": "C\u00f4te d'Ivoire won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760101200,
+              "participants": [
+                {
+                  "id": 18827,
+                  "sport_id": 1,
+                  "country_id": 908860,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Seychelles",
+                  "short_code": "SYC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18827.png",
+                  "founded": 1979,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-26 14:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17210688,
+                  "fixture_id": 18995157,
+                  "type_id": 1525,
+                  "participant_id": 18827,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17210689,
+                  "fixture_id": 18995157,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 7,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211058,
+                  "fixture_id": 18995157,
+                  "type_id": 48996,
+                  "participant_id": 18827,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17210693,
+                  "fixture_id": 18995157,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 7,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17210690,
+                  "fixture_id": 18995157,
+                  "type_id": 1,
+                  "participant_id": 18827,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17210691,
+                  "fixture_id": 18995157,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17210692,
+                  "fixture_id": 18995157,
+                  "type_id": 2,
+                  "participant_id": 18827,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17211059,
+                  "fixture_id": 18995157,
+                  "type_id": 48996,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323226,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995154,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249496,
+              "aggregate_id": null,
+              "round_id": 323226,
+              "state_id": 5,
+              "venue_id": 12347,
+              "name": "Gabon vs C\u00f4te d'Ivoire",
+              "starting_at": "2025-09-09 19:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757444400,
+              "participants": [
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18789,
+                  "sport_id": 1,
+                  "country_id": 3662,
+                  "venue_id": 12328,
+                  "gender": "male",
+                  "name": "Gabon",
+                  "short_code": "GAB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18789.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 10:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16927043,
+                  "fixture_id": 18995154,
+                  "type_id": 48996,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16926696,
+                  "fixture_id": 18995154,
+                  "type_id": 1,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16926691,
+                  "fixture_id": 18995154,
+                  "type_id": 1525,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16926689,
+                  "fixture_id": 18995154,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16926694,
+                  "fixture_id": 18995154,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16927044,
+                  "fixture_id": 18995154,
+                  "type_id": 48996,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16926699,
+                  "fixture_id": 18995154,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16926702,
+                  "fixture_id": 18995154,
+                  "type_id": 2,
+                  "participant_id": 18789,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77476898,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-13",
+      "ending_at": "2025-11-13",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 372381,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372382,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372384,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372386,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372383,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372385,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 392946,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-13",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124631,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1995,
+    "remaining": 2268,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

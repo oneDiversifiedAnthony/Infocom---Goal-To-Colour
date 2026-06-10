@@ -32,6 +32,7 @@ import sys
 DEPENDENCIES = {
     "sacn": "sacn",
     "pygame": "pygame-ce",
+    "PIL": "Pillow",
 }
 
 

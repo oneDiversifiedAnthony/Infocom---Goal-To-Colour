@@ -1,0 +1,280 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609134,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253022,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 1579,
+              "name": "United States vs Australia",
+              "starting_at": "2026-06-19 19:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 32",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781895600,
+              "participants": [
+                {
+                  "id": 18571,
+                  "sport_id": 1,
+                  "country_id": 3483,
+                  "venue_id": 11566,
+                  "gender": "male",
+                  "name": "United States",
+                  "short_code": "USA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18571.png",
+                  "founded": 1913,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18730,
+                  "sport_id": 1,
+                  "country_id": 98,
+                  "venue_id": 14477,
+                  "gender": "male",
+                  "name": "Australia",
+                  "short_code": "AUS",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609189,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253022,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 343444,
+              "name": "T\u00fcrkiye vs United States",
+              "starting_at": "2026-06-26 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 59",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782439200,
+              "participants": [
+                {
+                  "id": 18716,
+                  "sport_id": 1,
+                  "country_id": 404,
+                  "venue_id": 9634,
+                  "gender": "male",
+                  "name": "T\u00fcrkiye",
+                  "short_code": "TUR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18716.png",
+                  "founded": 1923,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 22:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18571,
+                  "sport_id": 1,
+                  "country_id": 3483,
+                  "venue_id": 11566,
+                  "gender": "male",
+                  "name": "United States",
+                  "short_code": "USA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18571.png",
+                  "founded": 1913,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609133,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253022,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 343444,
+              "name": "United States vs Paraguay",
+              "starting_at": "2026-06-13 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 4",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781312400,
+              "participants": [
+                {
+                  "id": 18571,
+                  "sport_id": 1,
+                  "country_id": 3483,
+                  "venue_id": 11566,
+                  "gender": "male",
+                  "name": "United States",
+                  "short_code": "USA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18571.png",
+                  "founded": 1913,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18723,
+                  "sport_id": 1,
+                  "country_id": 1190,
+                  "venue_id": 11354,
+                  "gender": "male",
+                  "name": "Paraguay",
+                  "short_code": "PRY",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18723.png",
+                  "founded": 1906,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124649,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1977,
+    "remaining": 2245,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

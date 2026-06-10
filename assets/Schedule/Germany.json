@@ -1,0 +1,1388 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609135,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11542,
+              "name": "Germany vs C\u00f4te d'Ivoire",
+              "starting_at": "2026-06-20 20:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 33",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781985600,
+              "participants": [
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609136,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 21826,
+              "name": "Ecuador vs Germany",
+              "starting_at": "2026-06-25 20:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 56",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782417600,
+              "participants": [
+                {
+                  "id": 18573,
+                  "sport_id": 1,
+                  "country_id": 459,
+                  "venue_id": 1463,
+                  "gender": "male",
+                  "name": "Ecuador",
+                  "short_code": "ECU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609158,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 21827,
+              "name": "Germany vs Curacao",
+              "starting_at": "2026-06-14 17:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 10",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781456400,
+              "participants": [
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464842,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-21",
+      "ending_at": "2025-11-18",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 1526,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 362707,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427850,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249211,
+              "aggregate_id": null,
+              "round_id": 362707,
+              "state_id": 5,
+              "venue_id": 1946,
+              "name": "Germany vs Northern Ireland",
+              "starting_at": "2025-09-07 18:45:00",
+              "result_info": "Germany won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757270700,
+              "participants": [
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18696,
+                  "sport_id": 1,
+                  "country_id": 491,
+                  "venue_id": 8014,
+                  "gender": "male",
+                  "name": "Northern Ireland",
+                  "short_code": "NIR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18696.png",
+                  "founded": 1880,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 19:10:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16921042,
+                  "fixture_id": 19427850,
+                  "type_id": 1525,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16921043,
+                  "fixture_id": 19427850,
+                  "type_id": 1525,
+                  "participant_id": 18696,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16921046,
+                  "fixture_id": 19427850,
+                  "type_id": 2,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16921045,
+                  "fixture_id": 19427850,
+                  "type_id": 1,
+                  "participant_id": 18696,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16921777,
+                  "fixture_id": 19427850,
+                  "type_id": 48996,
+                  "participant_id": 18696,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16921044,
+                  "fixture_id": 19427850,
+                  "type_id": 1,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16921776,
+                  "fixture_id": 19427850,
+                  "type_id": 48996,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16921047,
+                  "fixture_id": 19427850,
+                  "type_id": 2,
+                  "participant_id": 18696,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362709,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427920,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249211,
+              "aggregate_id": null,
+              "round_id": 362709,
+              "state_id": 5,
+              "venue_id": 8014,
+              "name": "Northern Ireland vs Germany",
+              "starting_at": "2025-10-13 18:45:00",
+              "result_info": "Germany won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760381100,
+              "participants": [
+                {
+                  "id": 18696,
+                  "sport_id": 1,
+                  "country_id": 491,
+                  "venue_id": 8014,
+                  "gender": "male",
+                  "name": "Northern Ireland",
+                  "short_code": "NIR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18696.png",
+                  "founded": 1880,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 19:10:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17233810,
+                  "fixture_id": 19427920,
+                  "type_id": 1525,
+                  "participant_id": 18696,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17233813,
+                  "fixture_id": 19427920,
+                  "type_id": 2,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17233814,
+                  "fixture_id": 19427920,
+                  "type_id": 2,
+                  "participant_id": 18696,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17233812,
+                  "fixture_id": 19427920,
+                  "type_id": 1,
+                  "participant_id": 18696,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17234067,
+                  "fixture_id": 19427920,
+                  "type_id": 48996,
+                  "participant_id": 18696,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17233809,
+                  "fixture_id": 19427920,
+                  "type_id": 1525,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17234068,
+                  "fixture_id": 19427920,
+                  "type_id": 48996,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17233811,
+                  "fixture_id": 19427920,
+                  "type_id": 1,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362708,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-09",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427884,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249211,
+              "aggregate_id": null,
+              "round_id": 362708,
+              "state_id": 5,
+              "venue_id": 1618,
+              "name": "Germany vs Luxembourg",
+              "starting_at": "2025-10-10 18:45:00",
+              "result_info": "Germany won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760121900,
+              "participants": [
+                {
+                  "id": 18779,
+                  "sport_id": 1,
+                  "country_id": 3126,
+                  "venue_id": 14496,
+                  "gender": "male",
+                  "name": "Luxembourg",
+                  "short_code": "LUX",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18779.png",
+                  "founded": 1908,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17211990,
+                  "fixture_id": 19427884,
+                  "type_id": 1,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17212442,
+                  "fixture_id": 19427884,
+                  "type_id": 48996,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17211992,
+                  "fixture_id": 19427884,
+                  "type_id": 2,
+                  "participant_id": 18779,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17211984,
+                  "fixture_id": 19427884,
+                  "type_id": 1525,
+                  "participant_id": 18779,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211986,
+                  "fixture_id": 19427884,
+                  "type_id": 1525,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211988,
+                  "fixture_id": 19427884,
+                  "type_id": 1,
+                  "participant_id": 18779,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17211993,
+                  "fixture_id": 19427884,
+                  "type_id": 2,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17212443,
+                  "fixture_id": 19427884,
+                  "type_id": 48996,
+                  "participant_id": 18779,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362703,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-24",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362710,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427934,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249211,
+              "aggregate_id": null,
+              "round_id": 362710,
+              "state_id": 5,
+              "venue_id": 343330,
+              "name": "Luxembourg vs Germany",
+              "starting_at": "2025-11-14 19:45:00",
+              "result_info": "Germany won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763149500,
+              "participants": [
+                {
+                  "id": 18779,
+                  "sport_id": 1,
+                  "country_id": 3126,
+                  "venue_id": 14496,
+                  "gender": "male",
+                  "name": "Luxembourg",
+                  "short_code": "LUX",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18779.png",
+                  "founded": 1908,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17440499,
+                  "fixture_id": 19427934,
+                  "type_id": 1,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17440501,
+                  "fixture_id": 19427934,
+                  "type_id": 2,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17440497,
+                  "fixture_id": 19427934,
+                  "type_id": 1525,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17440500,
+                  "fixture_id": 19427934,
+                  "type_id": 2,
+                  "participant_id": 18779,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17440496,
+                  "fixture_id": 19427934,
+                  "type_id": 1525,
+                  "participant_id": 18779,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17440498,
+                  "fixture_id": 19427934,
+                  "type_id": 1,
+                  "participant_id": 18779,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17440804,
+                  "fixture_id": 19427934,
+                  "type_id": 48996,
+                  "participant_id": 18779,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17440805,
+                  "fixture_id": 19427934,
+                  "type_id": 48996,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362711,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-16",
+          "ending_at": "2025-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427866,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249211,
+              "aggregate_id": null,
+              "round_id": 362711,
+              "state_id": 5,
+              "venue_id": 3876,
+              "name": "Germany vs Slovakia",
+              "starting_at": "2025-11-17 19:45:00",
+              "result_info": "Germany won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763408700,
+              "participants": [
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18648,
+                  "sport_id": 1,
+                  "country_id": 401,
+                  "venue_id": 1915,
+                  "gender": "male",
+                  "name": "Slovakia",
+                  "short_code": "SVK",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18648.png",
+                  "founded": 1993,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 16:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17467261,
+                  "fixture_id": 19427866,
+                  "type_id": 2,
+                  "participant_id": 18648,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17467257,
+                  "fixture_id": 19427866,
+                  "type_id": 1525,
+                  "participant_id": 18648,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17467256,
+                  "fixture_id": 19427866,
+                  "type_id": 1525,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 6,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17467258,
+                  "fixture_id": 19427866,
+                  "type_id": 1,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17467259,
+                  "fixture_id": 19427866,
+                  "type_id": 1,
+                  "participant_id": 18648,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17467260,
+                  "fixture_id": 19427866,
+                  "type_id": 2,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 6,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17467503,
+                  "fixture_id": 19427866,
+                  "type_id": 48996,
+                  "participant_id": 18648,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17467502,
+                  "fixture_id": 19427866,
+                  "type_id": 48996,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362705,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-09",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362702,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-21",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362704,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-07",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362706,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427830,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249211,
+              "aggregate_id": null,
+              "round_id": 362706,
+              "state_id": 5,
+              "venue_id": 9048,
+              "name": "Slovakia vs Germany",
+              "starting_at": "2025-09-04 18:45:00",
+              "result_info": "Slovakia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757011500,
+              "participants": [
+                {
+                  "id": 18648,
+                  "sport_id": 1,
+                  "country_id": 401,
+                  "venue_id": 1915,
+                  "gender": "male",
+                  "name": "Slovakia",
+                  "short_code": "SVK",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18648.png",
+                  "founded": 1993,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 16:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16896401,
+                  "fixture_id": 19427830,
+                  "type_id": 48996,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896400,
+                  "fixture_id": 19427830,
+                  "type_id": 48996,
+                  "participant_id": 18648,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896239,
+                  "fixture_id": 19427830,
+                  "type_id": 1525,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896243,
+                  "fixture_id": 19427830,
+                  "type_id": 2,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896242,
+                  "fixture_id": 19427830,
+                  "type_id": 2,
+                  "participant_id": 18648,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896241,
+                  "fixture_id": 19427830,
+                  "type_id": 1,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896240,
+                  "fixture_id": 19427830,
+                  "type_id": 1,
+                  "participant_id": 18648,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896238,
+                  "fixture_id": 19427830,
+                  "type_id": 1525,
+                  "participant_id": 18648,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464841,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-26",
+      "ending_at": "2026-03-26",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 394752,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464841,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2026-03-26",
+          "ending_at": "2026-03-26",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124627,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1999,
+    "remaining": 2274,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

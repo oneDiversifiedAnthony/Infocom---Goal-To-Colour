@@ -1,0 +1,2040 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609175,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253024,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 1583,
+              "name": "Tunisia vs Japan",
+              "starting_at": "2026-06-21 04:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 36",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782014400,
+              "participants": [
+                {
+                  "id": 18597,
+                  "sport_id": 1,
+                  "country_id": 479,
+                  "venue_id": 13533,
+                  "gender": "male",
+                  "name": "Japan",
+                  "short_code": "JPN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-31 10:25:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609137,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253024,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 72370,
+              "name": "Tunisia vs Netherlands",
+              "starting_at": "2026-06-25 23:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 58",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782428400,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609159,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253024,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 1583,
+              "name": "Sweden vs Tunisia",
+              "starting_at": "2026-06-15 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 12",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781488800,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18564,
+                  "sport_id": 1,
+                  "country_id": 47,
+                  "venue_id": 1668,
+                  "gender": "male",
+                  "name": "Sweden",
+                  "short_code": "SWE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18564.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77465184,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-15",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 323228,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995220,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323228,
+              "state_id": 5,
+              "venue_id": 343603,
+              "name": "Tunisia vs Namibia",
+              "starting_at": "2025-10-13 13:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760360400,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18741,
+                  "sport_id": 1,
+                  "country_id": 5790,
+                  "venue_id": 14480,
+                  "gender": "male",
+                  "name": "Namibia",
+                  "short_code": "NAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18741.png",
+                  "founded": 1990,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-28 12:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17233418,
+                  "fixture_id": 18995220,
+                  "type_id": 48996,
+                  "participant_id": 18741,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17233417,
+                  "fixture_id": 18995220,
+                  "type_id": 48996,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17232976,
+                  "fixture_id": 18995220,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17232977,
+                  "fixture_id": 18995220,
+                  "type_id": 1525,
+                  "participant_id": 18741,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17232978,
+                  "fixture_id": 18995220,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17232979,
+                  "fixture_id": 18995220,
+                  "type_id": 1,
+                  "participant_id": 18741,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17232980,
+                  "fixture_id": 18995220,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17232981,
+                  "fixture_id": 18995220,
+                  "type_id": 2,
+                  "participant_id": 18741,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323222,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-09",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995201,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323222,
+              "state_id": 5,
+              "venue_id": 6539,
+              "name": "Namibia vs Tunisia",
+              "starting_at": "2024-06-09 16:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717948800,
+              "participants": [
+                {
+                  "id": 18741,
+                  "sport_id": 1,
+                  "country_id": 5790,
+                  "venue_id": 14480,
+                  "gender": "male",
+                  "name": "Namibia",
+                  "short_code": "NAM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18741.png",
+                  "founded": 1990,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-28 12:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14530287,
+                  "fixture_id": 18995201,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14530385,
+                  "fixture_id": 18995201,
+                  "type_id": 2,
+                  "participant_id": 18741,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15582274,
+                  "fixture_id": 18995201,
+                  "type_id": 48996,
+                  "participant_id": 18741,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15582275,
+                  "fixture_id": 18995201,
+                  "type_id": 48996,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14530288,
+                  "fixture_id": 18995201,
+                  "type_id": 1525,
+                  "participant_id": 18741,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14530283,
+                  "fixture_id": 18995201,
+                  "type_id": 1,
+                  "participant_id": 18741,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14530284,
+                  "fixture_id": 18995201,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14530386,
+                  "fixture_id": 18995201,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323225,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-03",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995211,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323225,
+              "state_id": 5,
+              "venue_id": 343603,
+              "name": "Tunisia vs Liberia",
+              "starting_at": "2025-09-04 19:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757012400,
+              "participants": [
+                {
+                  "id": 11392,
+                  "sport_id": 1,
+                  "country_id": 719,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Liberia",
+                  "short_code": "LBR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/11392.png",
+                  "founded": 1936,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16896264,
+                  "fixture_id": 18995211,
+                  "type_id": 1,
+                  "participant_id": 11392,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896412,
+                  "fixture_id": 18995211,
+                  "type_id": 48996,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896266,
+                  "fixture_id": 18995211,
+                  "type_id": 2,
+                  "participant_id": 11392,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896265,
+                  "fixture_id": 18995211,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896413,
+                  "fixture_id": 18995211,
+                  "type_id": 48996,
+                  "participant_id": 11392,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896262,
+                  "fixture_id": 18995211,
+                  "type_id": 1525,
+                  "participant_id": 11392,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896267,
+                  "fixture_id": 18995211,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896263,
+                  "fixture_id": 18995211,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323224,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-23",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995207,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323224,
+              "state_id": 5,
+              "venue_id": 343603,
+              "name": "Tunisia vs Malawi",
+              "starting_at": "2025-03-24 21:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742850000,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18832,
+                  "sport_id": 1,
+                  "country_id": 20802,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Malawi",
+                  "short_code": "MWI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18832.png",
+                  "founded": 1966,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 15:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16124016,
+                  "fixture_id": 18995207,
+                  "type_id": 48996,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16124017,
+                  "fixture_id": 18995207,
+                  "type_id": 48996,
+                  "participant_id": 18832,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16123883,
+                  "fixture_id": 18995207,
+                  "type_id": 2,
+                  "participant_id": 18832,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123878,
+                  "fixture_id": 18995207,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123882,
+                  "fixture_id": 18995207,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123879,
+                  "fixture_id": 18995207,
+                  "type_id": 1525,
+                  "participant_id": 18832,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123880,
+                  "fixture_id": 18995207,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123881,
+                  "fixture_id": 18995207,
+                  "type_id": 1,
+                  "participant_id": 18832,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323223,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-17",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995205,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323223,
+              "state_id": 5,
+              "venue_id": 7633,
+              "name": "Liberia vs Tunisia",
+              "starting_at": "2025-03-19 16:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742400000,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 11392,
+                  "sport_id": 1,
+                  "country_id": 719,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Liberia",
+                  "short_code": "LBR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/11392.png",
+                  "founded": 1936,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16089558,
+                  "fixture_id": 18995205,
+                  "type_id": 1525,
+                  "participant_id": 11392,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16089561,
+                  "fixture_id": 18995205,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16089560,
+                  "fixture_id": 18995205,
+                  "type_id": 1,
+                  "participant_id": 11392,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16089563,
+                  "fixture_id": 18995205,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16089833,
+                  "fixture_id": 18995205,
+                  "type_id": 48996,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16089832,
+                  "fixture_id": 18995205,
+                  "type_id": 48996,
+                  "participant_id": 11392,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16089559,
+                  "fixture_id": 18995205,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16089562,
+                  "fixture_id": 18995205,
+                  "type_id": 2,
+                  "participant_id": 11392,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323220,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-19",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995192,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323220,
+              "state_id": 5,
+              "venue_id": 147231,
+              "name": "Malawi vs Tunisia",
+              "starting_at": "2023-11-21 13:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700571600,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18832,
+                  "sport_id": 1,
+                  "country_id": 20802,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Malawi",
+                  "short_code": "MWI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18832.png",
+                  "founded": 1966,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 15:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13533305,
+                  "fixture_id": 18995192,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13533307,
+                  "fixture_id": 18995192,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13533306,
+                  "fixture_id": 18995192,
+                  "type_id": 1525,
+                  "participant_id": 18832,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13533575,
+                  "fixture_id": 18995192,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13533304,
+                  "fixture_id": 18995192,
+                  "type_id": 1,
+                  "participant_id": 18832,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13533574,
+                  "fixture_id": 18995192,
+                  "type_id": 2,
+                  "participant_id": 18832,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323219,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-15",
+          "ending_at": "2023-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18994057,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323219,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Tunisia vs S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+              "starting_at": "2023-11-17 19:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700247600,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 27024,
+                  "sport_id": 1,
+                  "country_id": 179748,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+                  "short_code": null,
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/27024.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13512941,
+                  "fixture_id": 18994057,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13512942,
+                  "fixture_id": 18994057,
+                  "type_id": 1525,
+                  "participant_id": 27024,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13512940,
+                  "fixture_id": 18994057,
+                  "type_id": 1,
+                  "participant_id": 27024,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13512939,
+                  "fixture_id": 18994057,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13513082,
+                  "fixture_id": 18994057,
+                  "type_id": 2,
+                  "participant_id": 27024,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13513081,
+                  "fixture_id": 18994057,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323221,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995199,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323221,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Tunisia vs Equatorial Guinea",
+              "starting_at": "2024-06-05 19:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717614000,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18786,
+                  "sport_id": 1,
+                  "country_id": 211975,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Equatorial Guinea",
+                  "short_code": "GNQ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18786.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 09:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14516759,
+                  "fixture_id": 18995199,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15582270,
+                  "fixture_id": 18995199,
+                  "type_id": 48996,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15582271,
+                  "fixture_id": 18995199,
+                  "type_id": 48996,
+                  "participant_id": 18786,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14516824,
+                  "fixture_id": 18995199,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14516825,
+                  "fixture_id": 18995199,
+                  "type_id": 2,
+                  "participant_id": 18786,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14516758,
+                  "fixture_id": 18995199,
+                  "type_id": 1525,
+                  "participant_id": 18786,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14516757,
+                  "fixture_id": 18995199,
+                  "type_id": 1,
+                  "participant_id": 18786,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14516756,
+                  "fixture_id": 18995199,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323227,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995215,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323227,
+              "state_id": 5,
+              "venue_id": 343603,
+              "name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe vs Tunisia",
+              "starting_at": "2025-10-10 16:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760112000,
+              "participants": [
+                {
+                  "id": 27024,
+                  "sport_id": 1,
+                  "country_id": 179748,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+                  "short_code": null,
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/27024.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17211123,
+                  "fixture_id": 18995215,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 6,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17211121,
+                  "fixture_id": 18995215,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17211766,
+                  "fixture_id": 18995215,
+                  "type_id": 48996,
+                  "participant_id": 27024,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17211767,
+                  "fixture_id": 18995215,
+                  "type_id": 48996,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17211118,
+                  "fixture_id": 18995215,
+                  "type_id": 1525,
+                  "participant_id": 27024,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211119,
+                  "fixture_id": 18995215,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 6,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17211120,
+                  "fixture_id": 18995215,
+                  "type_id": 1,
+                  "participant_id": 27024,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17211122,
+                  "fixture_id": 18995215,
+                  "type_id": 2,
+                  "participant_id": 27024,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323226,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995212,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249498,
+              "aggregate_id": null,
+              "round_id": 323226,
+              "state_id": 5,
+              "venue_id": 14500,
+              "name": "Equatorial Guinea vs Tunisia",
+              "starting_at": "2025-09-08 13:00:00",
+              "result_info": "Tunisia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757336400,
+              "participants": [
+                {
+                  "id": 18786,
+                  "sport_id": 1,
+                  "country_id": 211975,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Equatorial Guinea",
+                  "short_code": "GNQ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18786.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 09:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16924240,
+                  "fixture_id": 18995212,
+                  "type_id": 1525,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924241,
+                  "fixture_id": 18995212,
+                  "type_id": 1,
+                  "participant_id": 18786,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924242,
+                  "fixture_id": 18995212,
+                  "type_id": 1,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924239,
+                  "fixture_id": 18995212,
+                  "type_id": 1525,
+                  "participant_id": 18786,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924409,
+                  "fixture_id": 18995212,
+                  "type_id": 48996,
+                  "participant_id": 18786,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16924410,
+                  "fixture_id": 18995212,
+                  "type_id": 48996,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16924243,
+                  "fixture_id": 18995212,
+                  "type_id": 2,
+                  "participant_id": 18786,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924244,
+                  "fixture_id": 18995212,
+                  "type_id": 2,
+                  "participant_id": 18554,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77476898,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-13",
+      "ending_at": "2025-11-13",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 372381,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372382,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372384,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372386,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372383,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372385,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 392946,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-13",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124645,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1981,
+    "remaining": 2249,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

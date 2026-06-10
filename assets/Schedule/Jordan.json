@@ -1,0 +1,3004 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609181,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253028,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11579,
+              "name": "Jordan vs Algeria",
+              "starting_at": "2026-06-23 03:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 44",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782183600,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "DZA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609198,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253028,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 72372,
+              "name": "Jordan vs Argentina",
+              "starting_at": "2026-06-28 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 70",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782612000,
+              "participants": [
+                {
+                  "id": 18644,
+                  "sport_id": 1,
+                  "country_id": 44,
+                  "venue_id": 6569,
+                  "gender": "male",
+                  "name": "Argentina",
+                  "short_code": "ARG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
+                  "founded": 1893,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609164,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253028,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 11579,
+              "name": "Austria vs Jordan",
+              "starting_at": "2026-06-17 04:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 20",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781668800,
+              "participants": [
+                {
+                  "id": 18643,
+                  "sport_id": 1,
+                  "country_id": 143,
+                  "venue_id": 3871,
+                  "gender": "male",
+                  "name": "Austria",
+                  "short_code": "AUT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18643.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478769,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 2",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-16",
+      "ending_at": "2024-06-11",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393370,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-06",
+          "ending_at": "2024-06-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313006,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252899,
+              "aggregate_id": null,
+              "round_id": 393370,
+              "state_id": 5,
+              "venue_id": 3522,
+              "name": "Jordan vs Tajikistan",
+              "starting_at": "2024-06-06 17:30:00",
+              "result_info": "Jordan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717695000,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18605,
+                  "sport_id": 1,
+                  "country_id": 57160,
+                  "venue_id": 14585,
+                  "gender": "male",
+                  "name": "Tajikistan",
+                  "short_code": "TJK",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18605.png",
+                  "founded": 1936,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 15:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916272,
+                  "fixture_id": 19313006,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916268,
+                  "fixture_id": 19313006,
+                  "type_id": 1525,
+                  "participant_id": 18605,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916269,
+                  "fixture_id": 19313006,
+                  "type_id": 2,
+                  "participant_id": 18605,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856972,
+                  "fixture_id": 19313006,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856973,
+                  "fixture_id": 19313006,
+                  "type_id": 48996,
+                  "participant_id": 18605,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14916270,
+                  "fixture_id": 19313006,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916267,
+                  "fixture_id": 19313006,
+                  "type_id": 1,
+                  "participant_id": 18605,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916271,
+                  "fixture_id": 19313006,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393369,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-03-26",
+          "ending_at": "2024-03-26",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313004,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252899,
+              "aggregate_id": null,
+              "round_id": 393369,
+              "state_id": 5,
+              "venue_id": 3522,
+              "name": "Jordan vs Pakistan",
+              "starting_at": "2024-03-26 19:00:00",
+              "result_info": "Jordan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1711479600,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18612,
+                  "sport_id": 1,
+                  "country_id": 52126,
+                  "venue_id": 14203,
+                  "gender": "male",
+                  "name": "Pakistan",
+                  "short_code": "PAK",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18612.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916274,
+                  "fixture_id": 19313004,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 7,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916273,
+                  "fixture_id": 19313004,
+                  "type_id": 1525,
+                  "participant_id": 18612,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916275,
+                  "fixture_id": 19313004,
+                  "type_id": 2,
+                  "participant_id": 18612,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856969,
+                  "fixture_id": 19313004,
+                  "type_id": 48996,
+                  "participant_id": 18612,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856968,
+                  "fixture_id": 19313004,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14916278,
+                  "fixture_id": 19313004,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916277,
+                  "fixture_id": 19313004,
+                  "type_id": 1,
+                  "participant_id": 18612,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916276,
+                  "fixture_id": 19313004,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 7,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393368,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-03-21",
+          "ending_at": "2024-03-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313001,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252899,
+              "aggregate_id": null,
+              "round_id": 393368,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Pakistan vs Jordan",
+              "starting_at": "2024-03-21 09:00:00",
+              "result_info": "Jordan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1711011600,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18612,
+                  "sport_id": 1,
+                  "country_id": 52126,
+                  "venue_id": 14203,
+                  "gender": "male",
+                  "name": "Pakistan",
+                  "short_code": "PAK",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18612.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916262,
+                  "fixture_id": 19313001,
+                  "type_id": 1525,
+                  "participant_id": 18612,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15856962,
+                  "fixture_id": 19313001,
+                  "type_id": 48996,
+                  "participant_id": 18612,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856963,
+                  "fixture_id": 19313001,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14916261,
+                  "fixture_id": 19313001,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916265,
+                  "fixture_id": 19313001,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916266,
+                  "fixture_id": 19313001,
+                  "type_id": 1,
+                  "participant_id": 18612,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916263,
+                  "fixture_id": 19313001,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916264,
+                  "fixture_id": 19313001,
+                  "type_id": 2,
+                  "participant_id": 18612,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393371,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-11",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313008,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252899,
+              "aggregate_id": null,
+              "round_id": 393371,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Saudi Arabia vs Jordan",
+              "starting_at": "2024-06-11 18:00:00",
+              "result_info": "Jordan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1718128800,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18562,
+                  "sport_id": 1,
+                  "country_id": 35376,
+                  "venue_id": 1503,
+                  "gender": "male",
+                  "name": "Saudi Arabia",
+                  "short_code": "KSA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
+                  "founded": 1956,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916248,
+                  "fixture_id": 19313008,
+                  "type_id": 2,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916254,
+                  "fixture_id": 19313008,
+                  "type_id": 1,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916243,
+                  "fixture_id": 19313008,
+                  "type_id": 1525,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916239,
+                  "fixture_id": 19313008,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15856976,
+                  "fixture_id": 19313008,
+                  "type_id": 48996,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856977,
+                  "fixture_id": 19313008,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14916252,
+                  "fixture_id": 19313008,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916245,
+                  "fixture_id": 19313008,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393366,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-16",
+          "ending_at": "2023-11-16",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312997,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252899,
+              "aggregate_id": null,
+              "round_id": 393366,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Tajikistan vs Jordan",
+              "starting_at": "2023-11-16 13:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1700139600,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18605,
+                  "sport_id": 1,
+                  "country_id": 57160,
+                  "venue_id": 14585,
+                  "gender": "male",
+                  "name": "Tajikistan",
+                  "short_code": "TJK",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18605.png",
+                  "founded": 1936,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 15:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915782,
+                  "fixture_id": 19312997,
+                  "type_id": 1525,
+                  "participant_id": 18605,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915780,
+                  "fixture_id": 19312997,
+                  "type_id": 1,
+                  "participant_id": 18605,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915777,
+                  "fixture_id": 19312997,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915779,
+                  "fixture_id": 19312997,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915781,
+                  "fixture_id": 19312997,
+                  "type_id": 2,
+                  "participant_id": 18605,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915778,
+                  "fixture_id": 19312997,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393367,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478769,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-21",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19313000,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478769,
+              "group_id": 252899,
+              "aggregate_id": null,
+              "round_id": 393367,
+              "state_id": 5,
+              "venue_id": 3522,
+              "name": "Jordan vs Saudi Arabia",
+              "starting_at": "2023-11-21 16:00:00",
+              "result_info": "Saudi Arabia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1700582400,
+              "participants": [
+                {
+                  "id": 18562,
+                  "sport_id": 1,
+                  "country_id": 35376,
+                  "venue_id": 1503,
+                  "gender": "male",
+                  "name": "Saudi Arabia",
+                  "short_code": "KSA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
+                  "founded": 1956,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916247,
+                  "fixture_id": 19313000,
+                  "type_id": 1525,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916250,
+                  "fixture_id": 19313000,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916253,
+                  "fixture_id": 19313000,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916241,
+                  "fixture_id": 19313000,
+                  "type_id": 2,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916244,
+                  "fixture_id": 19313000,
+                  "type_id": 1,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916251,
+                  "fixture_id": 19313000,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478770,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 3",
+      "sort_order": 4,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-09-05",
+      "ending_at": "2025-06-10",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393365,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312894,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393365,
+              "state_id": 5,
+              "venue_id": 4555,
+              "name": "Jordan vs Iraq",
+              "starting_at": "2025-06-10 18:15:00",
+              "result_info": "Iraq won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749579300,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18600,
+                  "sport_id": 1,
+                  "country_id": 107,
+                  "venue_id": 156404,
+                  "gender": "male",
+                  "name": "Iraq",
+                  "short_code": "IRQ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18600.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16605711,
+                  "fixture_id": 19312894,
+                  "type_id": 1,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605709,
+                  "fixture_id": 19312894,
+                  "type_id": 1525,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605712,
+                  "fixture_id": 19312894,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605710,
+                  "fixture_id": 19312894,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605714,
+                  "fixture_id": 19312894,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605713,
+                  "fixture_id": 19312894,
+                  "type_id": 2,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605932,
+                  "fixture_id": 19312894,
+                  "type_id": 48996,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605931,
+                  "fixture_id": 19312894,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393364,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-05",
+          "ending_at": "2025-06-05",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312890,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393364,
+              "state_id": 5,
+              "venue_id": 13259,
+              "name": "Oman vs Jordan",
+              "starting_at": "2025-06-05 16:00:00",
+              "result_info": "Jordan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749139200,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18595,
+                  "sport_id": 1,
+                  "country_id": 7091,
+                  "venue_id": 4722,
+                  "gender": "male",
+                  "name": "Oman",
+                  "short_code": "OMN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18595.png",
+                  "founded": 1978,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16589198,
+                  "fixture_id": 19312890,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16589199,
+                  "fixture_id": 19312890,
+                  "type_id": 2,
+                  "participant_id": 18595,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16589196,
+                  "fixture_id": 19312890,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16589447,
+                  "fixture_id": 19312890,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16589195,
+                  "fixture_id": 19312890,
+                  "type_id": 1525,
+                  "participant_id": 18595,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16589446,
+                  "fixture_id": 19312890,
+                  "type_id": 48996,
+                  "participant_id": 18595,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16589194,
+                  "fixture_id": 19312890,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16589197,
+                  "fixture_id": 19312890,
+                  "type_id": 1,
+                  "participant_id": 18595,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393363,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-25",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312886,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393363,
+              "state_id": 5,
+              "venue_id": 324,
+              "name": "Korea Republic vs Jordan",
+              "starting_at": "2025-03-25 11:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742900400,
+              "participants": [
+                {
+                  "id": 18567,
+                  "sport_id": 1,
+                  "country_id": 712,
+                  "venue_id": 175,
+                  "gender": "male",
+                  "name": "Korea Republic",
+                  "short_code": "KOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
+                  "founded": 1933,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16124282,
+                  "fixture_id": 19312886,
+                  "type_id": 2,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16124280,
+                  "fixture_id": 19312886,
+                  "type_id": 1,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124281,
+                  "fixture_id": 19312886,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16124278,
+                  "fixture_id": 19312886,
+                  "type_id": 1525,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16124279,
+                  "fixture_id": 19312886,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16124404,
+                  "fixture_id": 19312886,
+                  "type_id": 48996,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16124283,
+                  "fixture_id": 19312886,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16124405,
+                  "fixture_id": 19312886,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393356,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-09-05",
+          "ending_at": "2024-09-05",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312867,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393356,
+              "state_id": 5,
+              "venue_id": 3522,
+              "name": "Jordan vs Kuwait",
+              "starting_at": "2024-09-05 18:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1725559200,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18594,
+                  "sport_id": 1,
+                  "country_id": 21462,
+                  "venue_id": 14398,
+                  "gender": "male",
+                  "name": "Kuwait",
+                  "short_code": "KWT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18594.png",
+                  "founded": 1952,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 12:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14915531,
+                  "fixture_id": 19312867,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14915527,
+                  "fixture_id": 19312867,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915525,
+                  "fixture_id": 19312867,
+                  "type_id": 2,
+                  "participant_id": 18594,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14915523,
+                  "fixture_id": 19312867,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915522,
+                  "fixture_id": 19312867,
+                  "type_id": 1525,
+                  "participant_id": 18594,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14915529,
+                  "fixture_id": 19312867,
+                  "type_id": 1,
+                  "participant_id": 18594,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15856800,
+                  "fixture_id": 19312867,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856801,
+                  "fixture_id": 19312867,
+                  "type_id": 48996,
+                  "participant_id": 18594,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393357,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-09-10",
+          "ending_at": "2024-09-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312868,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393357,
+              "state_id": 5,
+              "venue_id": 220127,
+              "name": "Palestine vs Jordan",
+              "starting_at": "2024-09-10 14:00:00",
+              "result_info": "Jordan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": false,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1725976800,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18596,
+                  "sport_id": 1,
+                  "country_id": 48946,
+                  "venue_id": 14415,
+                  "gender": "male",
+                  "name": "Palestine",
+                  "short_code": "PSE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18596.png",
+                  "founded": 1928,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 14:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14916018,
+                  "fixture_id": 19312868,
+                  "type_id": 1,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14916014,
+                  "fixture_id": 19312868,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916015,
+                  "fixture_id": 19312868,
+                  "type_id": 2,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14916009,
+                  "fixture_id": 19312868,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916011,
+                  "fixture_id": 19312868,
+                  "type_id": 1525,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14916017,
+                  "fixture_id": 19312868,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15856803,
+                  "fixture_id": 19312868,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856802,
+                  "fixture_id": 19312868,
+                  "type_id": 48996,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393361,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-19",
+          "ending_at": "2024-11-19",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312882,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393361,
+              "state_id": 5,
+              "venue_id": 14398,
+              "name": "Kuwait vs Jordan",
+              "starting_at": "2024-11-19 18:15:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1732040100,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18594,
+                  "sport_id": 1,
+                  "country_id": 21462,
+                  "venue_id": 14398,
+                  "gender": "male",
+                  "name": "Kuwait",
+                  "short_code": "KWT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18594.png",
+                  "founded": 1952,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 12:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15233535,
+                  "fixture_id": 19312882,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15233532,
+                  "fixture_id": 19312882,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15233569,
+                  "fixture_id": 19312882,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15233570,
+                  "fixture_id": 19312882,
+                  "type_id": 2,
+                  "participant_id": 18594,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856830,
+                  "fixture_id": 19312882,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856831,
+                  "fixture_id": 19312882,
+                  "type_id": 48996,
+                  "participant_id": 18594,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15233533,
+                  "fixture_id": 19312882,
+                  "type_id": 1,
+                  "participant_id": 18594,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15233534,
+                  "fixture_id": 19312882,
+                  "type_id": 1525,
+                  "participant_id": 18594,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393362,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-20",
+          "ending_at": "2025-03-20",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312883,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393362,
+              "state_id": 5,
+              "venue_id": 4555,
+              "name": "Jordan vs Palestine",
+              "starting_at": "2025-03-20 18:15:00",
+              "result_info": "Jordan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742494500,
+              "participants": [
+                {
+                  "id": 18596,
+                  "sport_id": 1,
+                  "country_id": 48946,
+                  "venue_id": 14415,
+                  "gender": "male",
+                  "name": "Palestine",
+                  "short_code": "PSE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18596.png",
+                  "founded": 1928,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 14:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16091622,
+                  "fixture_id": 19312883,
+                  "type_id": 2,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16091619,
+                  "fixture_id": 19312883,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16091618,
+                  "fixture_id": 19312883,
+                  "type_id": 1525,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16091621,
+                  "fixture_id": 19312883,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16091623,
+                  "fixture_id": 19312883,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16091900,
+                  "fixture_id": 19312883,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16091901,
+                  "fixture_id": 19312883,
+                  "type_id": 48996,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16091620,
+                  "fixture_id": 19312883,
+                  "type_id": 1,
+                  "participant_id": 18596,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393360,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-14",
+          "ending_at": "2024-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312879,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393360,
+              "state_id": 5,
+              "venue_id": 156404,
+              "name": "Iraq vs Jordan",
+              "starting_at": "2024-11-14 16:15:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1731600900,
+              "participants": [
+                {
+                  "id": 18600,
+                  "sport_id": 1,
+                  "country_id": 107,
+                  "venue_id": 156404,
+                  "gender": "male",
+                  "name": "Iraq",
+                  "short_code": "IRQ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18600.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15203873,
+                  "fixture_id": 19312879,
+                  "type_id": 1,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15203877,
+                  "fixture_id": 19312879,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15203929,
+                  "fixture_id": 19312879,
+                  "type_id": 2,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856824,
+                  "fixture_id": 19312879,
+                  "type_id": 48996,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856825,
+                  "fixture_id": 19312879,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15203928,
+                  "fixture_id": 19312879,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15203876,
+                  "fixture_id": 19312879,
+                  "type_id": 1525,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15203872,
+                  "fixture_id": 19312879,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393359,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-15",
+          "ending_at": "2024-10-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312876,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393359,
+              "state_id": 5,
+              "venue_id": 4555,
+              "name": "Jordan vs Oman",
+              "starting_at": "2024-10-15 16:00:00",
+              "result_info": "Jordan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1729008000,
+              "participants": [
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18595,
+                  "sport_id": 1,
+                  "country_id": 7091,
+                  "venue_id": 4722,
+                  "gender": "male",
+                  "name": "Oman",
+                  "short_code": "OMN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18595.png",
+                  "founded": 1978,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15045375,
+                  "fixture_id": 19312876,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15045369,
+                  "fixture_id": 19312876,
+                  "type_id": 1,
+                  "participant_id": 18595,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15045374,
+                  "fixture_id": 19312876,
+                  "type_id": 1525,
+                  "participant_id": 18595,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15045368,
+                  "fixture_id": 19312876,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15045506,
+                  "fixture_id": 19312876,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15045507,
+                  "fixture_id": 19312876,
+                  "type_id": 2,
+                  "participant_id": 18595,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856819,
+                  "fixture_id": 19312876,
+                  "type_id": 48996,
+                  "participant_id": 18595,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856818,
+                  "fixture_id": 19312876,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 393358,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478770,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-10",
+          "ending_at": "2024-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19312871,
+              "sport_id": 1,
+              "league_id": 714,
+              "season_id": 22294,
+              "stage_id": 77478770,
+              "group_id": 252903,
+              "aggregate_id": null,
+              "round_id": 393358,
+              "state_id": 5,
+              "venue_id": 4555,
+              "name": "Jordan vs Korea Republic",
+              "starting_at": "2024-10-10 14:00:00",
+              "result_info": "Korea Republic won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1728568800,
+              "participants": [
+                {
+                  "id": 18567,
+                  "sport_id": 1,
+                  "country_id": 712,
+                  "venue_id": 175,
+                  "gender": "male",
+                  "name": "Korea Republic",
+                  "short_code": "KOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
+                  "founded": 1933,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15016477,
+                  "fixture_id": 19312871,
+                  "type_id": 1,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15016476,
+                  "fixture_id": 19312871,
+                  "type_id": 1,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15016478,
+                  "fixture_id": 19312871,
+                  "type_id": 1525,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15016511,
+                  "fixture_id": 19312871,
+                  "type_id": 2,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15016479,
+                  "fixture_id": 19312871,
+                  "type_id": 1525,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15016510,
+                  "fixture_id": 19312871,
+                  "type_id": 2,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15856809,
+                  "fixture_id": 19312871,
+                  "type_id": 48996,
+                  "participant_id": 18559,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15856808,
+                  "fixture_id": 19312871,
+                  "type_id": 48996,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478771,
+      "sport_id": 1,
+      "league_id": 714,
+      "season_id": 22294,
+      "type_id": 223,
+      "name": "Round 4",
+      "sort_order": 5,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-10-08",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 393374,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-14",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 393373,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-11",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 393372,
+          "sport_id": 1,
+          "league_id": 714,
+          "season_id": 22294,
+          "stage_id": 77478771,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-08",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124661,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1965,
+    "remaining": 2237,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

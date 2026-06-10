@@ -23,7 +23,11 @@
         "channel": 1
       },
       "anthem": "Algeria National Anthem (Instrumental).mp3",
-      "anthem_length": 72.0
+      "anthem_length": 72.0,
+      "sportmonks_id": 18620,
+      "short_code": "DZA",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+      "country_id": 614
     },
     "Argentina": {
       "colours": [
@@ -48,7 +52,11 @@
         "channel": 2
       },
       "anthem": "Argentina National Anthem (Instrumental).mp3",
-      "anthem_length": 213.3
+      "anthem_length": 213.3,
+      "sportmonks_id": 18644,
+      "short_code": "ARG",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
+      "country_id": 44
     },
     "Australia": {
       "colours": [
@@ -73,7 +81,11 @@
         "channel": 3
       },
       "anthem": "Australia National Anthem (Instrumental).mp3",
-      "anthem_length": 54.4
+      "anthem_length": 54.4,
+      "sportmonks_id": 18730,
+      "short_code": "AUS",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18730.png",
+      "country_id": 98
     },
     "Austria": {
       "colours": [
@@ -98,7 +110,11 @@
         "channel": 4
       },
       "anthem": "Austria National Anthem (Instrumental).mp3",
-      "anthem_length": 89.5
+      "anthem_length": 89.5,
+      "sportmonks_id": 18643,
+      "short_code": "AUT",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18643.png",
+      "country_id": 143
     },
     "Belgium": {
       "colours": [
@@ -123,7 +139,11 @@
         "channel": 5
       },
       "anthem": "Belgium National Anthem (Instrumental).mp3",
-      "anthem_length": 63.1
+      "anthem_length": 63.1,
+      "sportmonks_id": 18743,
+      "short_code": "BEL",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18743.png",
+      "country_id": 556
     },
     "Brazil": {
       "colours": [
@@ -148,7 +168,11 @@
         "channel": 6
       },
       "anthem": "Brazil National Anthem (Instrumental).mp3",
-      "anthem_length": 112.9
+      "anthem_length": 112.9,
+      "sportmonks_id": 18704,
+      "short_code": "BRA",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18704.png",
+      "country_id": 5
     },
     "Cameroon": {
       "colours": [
@@ -173,7 +197,11 @@
         "channel": 7
       },
       "anthem": "Cameroon National Anthem (Instrumental).mp3",
-      "anthem_length": 58.3
+      "anthem_length": 58.3,
+      "sportmonks_id": 18780,
+      "short_code": "CMR",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18780.png",
+      "country_id": 593
     },
     "Canada": {
       "colours": [
@@ -198,7 +226,11 @@
         "channel": 8
       },
       "anthem": "Canada National Anthem (Instrumental).mp3",
-      "anthem_length": 79.0
+      "anthem_length": 79.0,
+      "sportmonks_id": 18572,
+      "short_code": "CAN",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18572.png",
+      "country_id": 1004
     },
     "Chile": {
       "colours": [
@@ -223,7 +255,11 @@
         "channel": 9
       },
       "anthem": "Chile National Anthem (Instrumental).mp3",
-      "anthem_length": 122.5
+      "anthem_length": 122.5,
+      "sportmonks_id": 18774,
+      "short_code": "CHL",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+      "country_id": 80
     },
     "Colombia": {
       "colours": [
@@ -248,7 +284,11 @@
         "channel": 10
       },
       "anthem": "Colombia National Anthem (Instrumental).mp3",
-      "anthem_length": 160.9
+      "anthem_length": 160.9,
+      "sportmonks_id": 18720,
+      "short_code": "COL",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
+      "country_id": 353
     },
     "Costa Rica": {
       "colours": [
@@ -273,7 +313,11 @@
         "channel": 11
       },
       "anthem": "Costa Rica National Anthem (Instrumental).mp3",
-      "anthem_length": 105.8
+      "anthem_length": 105.8,
+      "sportmonks_id": 18598,
+      "short_code": "CRI",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18598.png",
+      "country_id": 1739
     },
     "Croatia": {
       "colours": [
@@ -298,7 +342,11 @@
         "channel": 12
       },
       "anthem": "Croatia National Anthem (Instrumental).mp3",
-      "anthem_length": 59.4
+      "anthem_length": 59.4,
+      "sportmonks_id": 18588,
+      "short_code": "CRO",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
+      "country_id": 266
     },
     "Denmark": {
       "colours": [
@@ -323,7 +371,11 @@
         "channel": 13
       },
       "anthem": "Denmark National Anthem (Instrumental).mp3",
-      "anthem_length": 79.4
+      "anthem_length": 79.4,
+      "sportmonks_id": 18583,
+      "short_code": "DEN",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+      "country_id": 320
     },
     "Ecuador": {
       "colours": [
@@ -348,7 +400,11 @@
         "channel": 14
       },
       "anthem": "Ecuador National Anthem (Instrumental).mp3",
-      "anthem_length": 198.7
+      "anthem_length": 198.7,
+      "sportmonks_id": 18573,
+      "short_code": "ECU",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
+      "country_id": 459
     },
     "Egypt": {
       "colours": [
@@ -373,7 +429,11 @@
         "channel": 15
       },
       "anthem": "Egypt National Anthem (Instrumental).mp3",
-      "anthem_length": 85.8
+      "anthem_length": 85.8,
+      "sportmonks_id": 18546,
+      "short_code": "EGY",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18546.png",
+      "country_id": 886
     },
     "England": {
       "colours": [
@@ -398,7 +458,11 @@
         "channel": 16
       },
       "anthem": "England National Anthem (Instrumental).mp3",
-      "anthem_length": 51.5
+      "anthem_length": 51.5,
+      "sportmonks_id": 18645,
+      "short_code": "ENG",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18645.png",
+      "country_id": 462
     },
     "France": {
       "colours": [
@@ -423,7 +487,11 @@
         "channel": 17
       },
       "anthem": "France National Anthem (Instrumental).mp3",
-      "anthem_length": 79.3
+      "anthem_length": 79.3,
+      "sportmonks_id": 18647,
+      "short_code": "FRA",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18647.png",
+      "country_id": 17
     },
     "Germany": {
       "colours": [
@@ -448,7 +516,11 @@
         "channel": 18
       },
       "anthem": "Germany National Anthem (Instrumental).mp3",
-      "anthem_length": 74.3
+      "anthem_length": 74.3,
+      "sportmonks_id": 18660,
+      "short_code": "GER",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+      "country_id": 11
     },
     "Ghana": {
       "colours": [
@@ -473,7 +545,11 @@
         "channel": 19
       },
       "anthem": "Ghana National Anthem (Instrumental).mp3",
-      "anthem_length": 53.0
+      "anthem_length": 53.0,
+      "sportmonks_id": 18553,
+      "short_code": "GHA",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+      "country_id": 468
     },
     "Indonesia": {
       "colours": [
@@ -498,7 +574,11 @@
         "channel": 20
       },
       "anthem": "Indonesia National Anthem (Instrumental).mp3",
-      "anthem_length": 109.1
+      "anthem_length": 109.1,
+      "sportmonks_id": 18705,
+      "short_code": "IDN",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18705.png",
+      "country_id": 88407
     },
     "Iran": {
       "colours": [
@@ -523,7 +603,11 @@
         "channel": 21
       },
       "anthem": "Iran National Anthem (Instrumental).mp3",
-      "anthem_length": 67.3
+      "anthem_length": 67.3,
+      "sportmonks_id": 18652,
+      "short_code": "IRN",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
+      "country_id": 488
     },
     "Iraq": {
       "colours": [
@@ -548,7 +632,11 @@
         "channel": 22
       },
       "anthem": "Iraq National Anthem (Instrumental).mp3",
-      "anthem_length": 104.0
+      "anthem_length": 104.0,
+      "sportmonks_id": 18600,
+      "short_code": "IRQ",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18600.png",
+      "country_id": 107
     },
     "Italy": {
       "colours": [
@@ -573,7 +661,11 @@
         "channel": 23
       },
       "anthem": "Italy National Anthem (Instrumental).mp3",
-      "anthem_length": 98.7
+      "anthem_length": 98.7,
+      "sportmonks_id": 18658,
+      "short_code": "ITA",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18658.png",
+      "country_id": 251
     },
     "Ivory Coast": {
       "colours": [
@@ -598,7 +690,11 @@
         "channel": 24
       },
       "anthem": "The Ivory Coast National Anthem (Instrumental).mp3",
-      "anthem_length": 69.2
+      "anthem_length": 69.2,
+      "sportmonks_id": 18560,
+      "short_code": "CIV",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+      "country_id": 23
     },
     "Jamaica": {
       "colours": [
@@ -623,7 +719,11 @@
         "channel": 25
       },
       "anthem": "Jamaica National Anthem (Instrumental).mp3",
-      "anthem_length": 80.1
+      "anthem_length": 80.1,
+      "sportmonks_id": 18771,
+      "short_code": "JAM",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+      "country_id": 1640
     },
     "Japan": {
       "colours": [
@@ -648,7 +748,11 @@
         "channel": 26
       },
       "anthem": "Japan National Anthem (Instrumental).mp3",
-      "anthem_length": 58.7
+      "anthem_length": 58.7,
+      "sportmonks_id": 18597,
+      "short_code": "JPN",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
+      "country_id": 479
     },
     "Mexico": {
       "colours": [
@@ -673,7 +777,11 @@
         "channel": 27
       },
       "anthem": "Mexico National Anthem (Instrumental).mp3",
-      "anthem_length": 101.7
+      "anthem_length": 101.7,
+      "sportmonks_id": 18576,
+      "short_code": "MEX",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
+      "country_id": 458
     },
     "Morocco": {
       "colours": [
@@ -698,7 +806,11 @@
         "channel": 28
       },
       "anthem": "Morocco National Anthem (Instrumental).mp3",
-      "anthem_length": 60.7
+      "anthem_length": 60.7,
+      "sportmonks_id": 18551,
+      "short_code": "MAR",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+      "country_id": 1424
     },
     "Netherlands": {
       "colours": [
@@ -723,7 +835,11 @@
         "channel": 29
       },
       "anthem": "Netherlands National Anthem (Instrumental).mp3",
-      "anthem_length": 48.7
+      "anthem_length": 48.7,
+      "sportmonks_id": 18694,
+      "short_code": "NED",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+      "country_id": 38
     },
     "New Zealand": {
       "colours": [
@@ -748,7 +864,11 @@
         "channel": 30
       },
       "anthem": "New Zealand National Anthem (Instrumental).mp3",
-      "anthem_length": 63.1
+      "anthem_length": 63.1,
+      "sportmonks_id": 18613,
+      "short_code": "NZL",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18613.png",
+      "country_id": 2817
     },
     "Nigeria": {
       "colours": [
@@ -773,7 +893,11 @@
         "channel": 31
       },
       "anthem": "Nigeria National Anthem (Instrumental).mp3",
-      "anthem_length": 48.4
+      "anthem_length": 48.4,
+      "sportmonks_id": 18737,
+      "short_code": "NGA",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+      "country_id": 716
     },
     "Panama": {
       "colours": [
@@ -798,7 +922,11 @@
         "channel": 32
       },
       "anthem": "Panama National Anthem (Instrumental).mp3",
-      "anthem_length": 109.8
+      "anthem_length": 109.8,
+      "sportmonks_id": 18717,
+      "short_code": "PAN",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+      "country_id": 65437
     },
     "Poland": {
       "colours": [
@@ -823,7 +951,11 @@
         "channel": 33
       },
       "anthem": "Poland National Anthem (Instrumental).mp3",
-      "anthem_length": 42.9
+      "anthem_length": 42.9,
+      "sportmonks_id": 18699,
+      "short_code": "POL",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+      "country_id": 2
     },
     "Portugal": {
       "colours": [
@@ -848,7 +980,11 @@
         "channel": 34
       },
       "anthem": "Portugal National Anthem (Instrumental).mp3",
-      "anthem_length": 70.2
+      "anthem_length": 70.2,
+      "sportmonks_id": 18701,
+      "short_code": "POR",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
+      "country_id": 20
     },
     "Qatar": {
       "colours": [
@@ -873,7 +1009,11 @@
         "channel": 35
       },
       "anthem": "Qatar National Anthem (Instrumental).mp3",
-      "anthem_length": 86.6
+      "anthem_length": 86.6,
+      "sportmonks_id": 18544,
+      "short_code": "QAT",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18544.png",
+      "country_id": 74505
     },
     "Saudi Arabia": {
       "colours": [
@@ -898,7 +1038,11 @@
         "channel": 36
       },
       "anthem": "Saudi Arabia National Anthem (Instrumental).mp3",
-      "anthem_length": 33.7
+      "anthem_length": 33.7,
+      "sportmonks_id": 18562,
+      "short_code": "KSA",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
+      "country_id": 35376
     },
     "Senegal": {
       "colours": [
@@ -923,7 +1067,11 @@
         "channel": 37
       },
       "anthem": "Senegal National Anthem (Instrumental).mp3",
-      "anthem_length": 55.8
+      "anthem_length": 55.8,
+      "sportmonks_id": 18558,
+      "short_code": "SEN",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18558.png",
+      "country_id": 200
     },
     "Serbia": {
       "colours": [
@@ -948,30 +1096,38 @@
         "channel": 38
       },
       "anthem": "Serbia National Anthem (Instrumental).mp3",
-      "anthem_length": 106.6
+      "anthem_length": 106.6,
+      "sportmonks_id": 18873,
+      "short_code": "SRB",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18873.png",
+      "country_id": 296
     },
     "South Africa": {
       "colours": [
-        [
-          0,
-          0,
-          0
-        ],
         [
           0,
           119,
           73
         ],
         [
-          255,
-          184,
-          28
+          222,
+          56,
+          49
+        ],
+        [
+          0,
+          36,
+          149
         ]
       ],
       "trigger": {
         "universe": 2,
         "channel": 39
-      }
+      },
+      "sportmonks_id": 18555,
+      "short_code": "ZAF",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+      "country_id": 146
     },
     "South Korea": {
       "colours": [
@@ -996,7 +1152,11 @@
         "channel": 40
       },
       "anthem": "South Korea National Anthem (Instrumental).mp3",
-      "anthem_length": 57.4
+      "anthem_length": 57.4,
+      "sportmonks_id": 18567,
+      "short_code": "KOR",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
+      "country_id": 712
     },
     "Spain": {
       "colours": [
@@ -1021,7 +1181,11 @@
         "channel": 41
       },
       "anthem": "Spain National Anthem (Instrumental).mp3",
-      "anthem_length": 58.1
+      "anthem_length": 58.1,
+      "sportmonks_id": 18710,
+      "short_code": "ESP",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18710.png",
+      "country_id": 32
     },
     "Switzerland": {
       "colours": [
@@ -1046,7 +1210,11 @@
         "channel": 42
       },
       "anthem": "Switzerland National Anthem (Instrumental).mp3",
-      "anthem_length": 84.1
+      "anthem_length": 84.1,
+      "sportmonks_id": 18708,
+      "short_code": "SUI",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18708.png",
+      "country_id": 62
     },
     "Tunisia": {
       "colours": [
@@ -1069,7 +1237,11 @@
       "trigger": {
         "universe": 2,
         "channel": 43
-      }
+      },
+      "sportmonks_id": 18554,
+      "short_code": "TUN",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+      "country_id": 1439
     },
     "Turkey": {
       "colours": [
@@ -1094,7 +1266,11 @@
         "channel": 44
       },
       "anthem": "Turkey National Anthem (Instrumental).mp3",
-      "anthem_length": 76.1
+      "anthem_length": 76.1,
+      "sportmonks_id": 18716,
+      "short_code": "TUR",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18716.png",
+      "country_id": 404
     },
     "Ukraine": {
       "colours": [
@@ -1119,7 +1295,11 @@
         "channel": 45
       },
       "anthem": "Ukraine National Anthem (Instrumental).mp3",
-      "anthem_length": 79.6
+      "anthem_length": 79.6,
+      "sportmonks_id": 18624,
+      "short_code": "UKR",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18624.png",
+      "country_id": 86
     },
     "Uruguay": {
       "colours": [
@@ -1144,7 +1324,11 @@
         "channel": 46
       },
       "anthem": "Uruguay National Anthem (Instrumental).mp3",
-      "anthem_length": 114.5
+      "anthem_length": 114.5,
+      "sportmonks_id": 15251,
+      "short_code": "URU",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/15251.png",
+      "country_id": 158
     },
     "USA": {
       "colours": [
@@ -1169,7 +1353,11 @@
         "channel": 47
       },
       "anthem": "United States of America National Anthem (Instrumental).mp3",
-      "anthem_length": 78.3
+      "anthem_length": 78.3,
+      "sportmonks_id": 18571,
+      "short_code": "USA",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18571.png",
+      "country_id": 3483
     },
     "Uzbekistan": {
       "colours": [
@@ -1194,7 +1382,316 @@
         "channel": 48
       },
       "anthem": "Uzbekistan National Anthem (Instrumental).mp3",
-      "anthem_length": 146.1
+      "anthem_length": 146.1,
+      "sportmonks_id": 18745,
+      "short_code": "UZB",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+      "country_id": 2426
+    },
+    "Bosnia and Herzegovina": {
+      "colours": [
+        [
+          0,
+          0,
+          153
+        ],
+        [
+          255,
+          221,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 49
+      },
+      "sportmonks_id": 18625,
+      "short_code": "BIH",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18625.png",
+      "country_id": 507,
+      "anthem": "Bosnia and Herzegovina National Anthem (Instrumental).mp3"
+    },
+    "Cape Verde Islands": {
+      "colours": [
+        [
+          0,
+          51,
+          160
+        ],
+        [
+          255,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 50
+      },
+      "sportmonks_id": 18823,
+      "short_code": "CPV",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18823.png",
+      "country_id": 772,
+      "anthem": "Cape Verde National Anthem (Instrumental).mp3"
+    },
+    "Congo DR": {
+      "colours": [
+        [
+          0,
+          127,
+          255
+        ],
+        [
+          255,
+          0,
+          0
+        ],
+        [
+          255,
+          221,
+          0
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 51
+      },
+      "sportmonks_id": 18552,
+      "short_code": "COD",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+      "country_id": 1320,
+      "anthem": "Democratic Republic of the Congo National Anthem (Instrumental).mp3"
+    },
+    "Curacao": {
+      "colours": [
+        [
+          0,
+          34,
+          102
+        ],
+        [
+          255,
+          186,
+          8
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 52
+      },
+      "sportmonks_id": 18910,
+      "short_code": "CUW",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18910.png",
+      "country_id": 7437
+    },
+    "Czech Republic": {
+      "colours": [
+        [
+          255,
+          255,
+          255
+        ],
+        [
+          206,
+          17,
+          38
+        ],
+        [
+          17,
+          69,
+          126
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 53
+      },
+      "sportmonks_id": 18718,
+      "short_code": "CZE",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18718.png",
+      "country_id": 245
+    },
+    "Haiti": {
+      "colours": [
+        [
+          0,
+          32,
+          91
+        ],
+        [
+          210,
+          16,
+          52
+        ],
+        [
+          255,
+          255,
+          255
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 54
+      },
+      "sportmonks_id": 18804,
+      "short_code": "HTI",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
+      "country_id": 2177,
+      "anthem": "Haiti National Anthem (Instrumental).mp3"
+    },
+    "Jordan": {
+      "colours": [
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          255,
+          255,
+          255
+        ],
+        [
+          0,
+          122,
+          61
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 55
+      },
+      "sportmonks_id": 18559,
+      "short_code": "JOR",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+      "country_id": 97374,
+      "anthem": "Jordan National Anthem (Instrumental).mp3"
+    },
+    "Norway": {
+      "colours": [
+        [
+          186,
+          12,
+          47
+        ],
+        [
+          255,
+          255,
+          255
+        ],
+        [
+          0,
+          32,
+          91
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 56
+      },
+      "sportmonks_id": 18578,
+      "short_code": "NOR",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18578.png",
+      "country_id": 1578,
+      "anthem": "Norway National Anthem (Instrumental).mp3"
+    },
+    "Paraguay": {
+      "colours": [
+        [
+          218,
+          41,
+          28
+        ],
+        [
+          255,
+          255,
+          255
+        ],
+        [
+          0,
+          56,
+          168
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 57
+      },
+      "sportmonks_id": 18723,
+      "short_code": "PRY",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18723.png",
+      "country_id": 1190,
+      "anthem": "Paraguay National Anthem (Instrumental).mp3"
+    },
+    "Scotland": {
+      "colours": [
+        [
+          0,
+          0,
+          128
+        ],
+        [
+          255,
+          255,
+          255
+        ],
+        [
+          0,
+          0,
+          128
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 58
+      },
+      "sportmonks_id": 18706,
+      "short_code": "SCO",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18706.png",
+      "country_id": 1161
+    },
+    "Sweden": {
+      "colours": [
+        [
+          0,
+          106,
+          167
+        ],
+        [
+          254,
+          204,
+          2
+        ],
+        [
+          0,
+          106,
+          167
+        ]
+      ],
+      "trigger": {
+        "universe": 2,
+        "channel": 59
+      },
+      "sportmonks_id": 18564,
+      "short_code": "SWE",
+      "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18564.png",
+      "country_id": 47,
+      "anthem": "Sweden National Anthem (Instrumental).mp3"
     }
   }
 }

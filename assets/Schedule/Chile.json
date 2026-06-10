@@ -1,0 +1,2920 @@
+{
+  "data": [
+    {
+      "id": 77465895,
+      "sport_id": 1,
+      "league_id": 726,
+      "season_id": 22305,
+      "type_id": 223,
+      "name": "Regular Season",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-09-07",
+      "ending_at": "2025-09-09",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 318166,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-21",
+          "ending_at": "2023-11-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946417,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318166,
+              "state_id": 5,
+              "venue_id": 7157,
+              "name": "Ecuador vs Chile",
+              "starting_at": "2023-11-21 23:30:00",
+              "result_info": "Ecuador won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700609400,
+              "participants": [
+                {
+                  "id": 18573,
+                  "sport_id": 1,
+                  "country_id": 459,
+                  "venue_id": 1463,
+                  "gender": "male",
+                  "name": "Ecuador",
+                  "short_code": "ECU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 8
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13534554,
+                  "fixture_id": 18946417,
+                  "type_id": 1525,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13534555,
+                  "fixture_id": 18946417,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13534568,
+                  "fixture_id": 18946417,
+                  "type_id": 2,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13534552,
+                  "fixture_id": 18946417,
+                  "type_id": 1,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13534553,
+                  "fixture_id": 18946417,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13534569,
+                  "fixture_id": 18946417,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318162,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-09-12",
+          "ending_at": "2023-09-13",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946400,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318162,
+              "state_id": 5,
+              "venue_id": 5157,
+              "name": "Chile vs Colombia",
+              "starting_at": "2023-09-13 00:30:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1694565000,
+              "participants": [
+                {
+                  "id": 18720,
+                  "sport_id": 1,
+                  "country_id": 353,
+                  "venue_id": 2035,
+                  "gender": "male",
+                  "name": "Colombia",
+                  "short_code": "COL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 9
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13157257,
+                  "fixture_id": 18946400,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13157242,
+                  "fixture_id": 18946400,
+                  "type_id": 1525,
+                  "participant_id": 18720,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13157243,
+                  "fixture_id": 18946400,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13157241,
+                  "fixture_id": 18946400,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13157240,
+                  "fixture_id": 18946400,
+                  "type_id": 1,
+                  "participant_id": 18720,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13157256,
+                  "fixture_id": 18946400,
+                  "type_id": 2,
+                  "participant_id": 18720,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318171,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "11",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-14",
+          "ending_at": "2024-11-16",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946445,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318171,
+              "state_id": 5,
+              "venue_id": 5308,
+              "name": "Peru vs Chile",
+              "starting_at": "2024-11-16 01:30:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1731720600,
+              "participants": [
+                {
+                  "id": 18775,
+                  "sport_id": 1,
+                  "country_id": 338,
+                  "venue_id": 11432,
+                  "gender": "male",
+                  "name": "Peru",
+                  "short_code": "PER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18775.png",
+                  "founded": 1922,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 9
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 10
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15561738,
+                  "fixture_id": 18946445,
+                  "type_id": 48996,
+                  "participant_id": 18775,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15561739,
+                  "fixture_id": 18946445,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15206250,
+                  "fixture_id": 18946445,
+                  "type_id": 1,
+                  "participant_id": 18775,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15206251,
+                  "fixture_id": 18946445,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15206267,
+                  "fixture_id": 18946445,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15206253,
+                  "fixture_id": 18946445,
+                  "type_id": 1525,
+                  "participant_id": 18775,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15206252,
+                  "fixture_id": 18946445,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15206266,
+                  "fixture_id": 18946445,
+                  "type_id": 2,
+                  "participant_id": 18775,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318177,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "17",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-05",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946473,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318177,
+              "state_id": 5,
+              "venue_id": 392,
+              "name": "Brazil vs Chile",
+              "starting_at": "2025-09-05 00:30:00",
+              "result_info": "Brazil won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757032200,
+              "participants": [
+                {
+                  "id": 18704,
+                  "sport_id": 1,
+                  "country_id": 5,
+                  "venue_id": 392,
+                  "gender": "male",
+                  "name": "Brazil",
+                  "short_code": "BRA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18704.png",
+                  "founded": 1914,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 22:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 10
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16896499,
+                  "fixture_id": 18946473,
+                  "type_id": 2,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896494,
+                  "fixture_id": 18946473,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896497,
+                  "fixture_id": 18946473,
+                  "type_id": 1,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896498,
+                  "fixture_id": 18946473,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896565,
+                  "fixture_id": 18946473,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896495,
+                  "fixture_id": 18946473,
+                  "type_id": 1525,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896496,
+                  "fixture_id": 18946473,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896564,
+                  "fixture_id": 18946473,
+                  "type_id": 48996,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318169,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-10",
+          "ending_at": "2024-10-12",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946434,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318169,
+              "state_id": 5,
+              "venue_id": 10774,
+              "name": "Chile vs Brazil",
+              "starting_at": "2024-10-11 00:00:00",
+              "result_info": "Brazil won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1728604800,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 9
+                  }
+                },
+                {
+                  "id": 18704,
+                  "sport_id": 1,
+                  "country_id": 5,
+                  "venue_id": 392,
+                  "gender": "male",
+                  "name": "Brazil",
+                  "short_code": "BRA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18704.png",
+                  "founded": 1914,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 22:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 6
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15017012,
+                  "fixture_id": 18946434,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15561716,
+                  "fixture_id": 18946434,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15561717,
+                  "fixture_id": 18946434,
+                  "type_id": 48996,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15017013,
+                  "fixture_id": 18946434,
+                  "type_id": 1525,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15017010,
+                  "fixture_id": 18946434,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15017011,
+                  "fixture_id": 18946434,
+                  "type_id": 1,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15017058,
+                  "fixture_id": 18946434,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15017059,
+                  "fixture_id": 18946434,
+                  "type_id": 2,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318173,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "13",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-20",
+          "ending_at": "2025-03-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946452,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318173,
+              "state_id": 5,
+              "venue_id": 11354,
+              "name": "Paraguay vs Chile",
+              "starting_at": "2025-03-20 23:00:00",
+              "result_info": "Paraguay won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742511600,
+              "participants": [
+                {
+                  "id": 18723,
+                  "sport_id": 1,
+                  "country_id": 1190,
+                  "venue_id": 11354,
+                  "gender": "male",
+                  "name": "Paraguay",
+                  "short_code": "PRY",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18723.png",
+                  "founded": 1906,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16092000,
+                  "fixture_id": 18946452,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16092103,
+                  "fixture_id": 18946452,
+                  "type_id": 48996,
+                  "participant_id": 18723,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16092001,
+                  "fixture_id": 18946452,
+                  "type_id": 1,
+                  "participant_id": 18723,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16092003,
+                  "fixture_id": 18946452,
+                  "type_id": 2,
+                  "participant_id": 18723,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16091999,
+                  "fixture_id": 18946452,
+                  "type_id": 1525,
+                  "participant_id": 18723,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16092104,
+                  "fixture_id": 18946452,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16092002,
+                  "fixture_id": 18946452,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16092004,
+                  "fixture_id": 18946452,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318174,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "14",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-25",
+          "ending_at": "2025-03-26",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946460,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318174,
+              "state_id": 5,
+              "venue_id": 10774,
+              "name": "Chile vs Ecuador",
+              "starting_at": "2025-03-26 00:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742947200,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 10
+                  }
+                },
+                {
+                  "id": 18573,
+                  "sport_id": 1,
+                  "country_id": 459,
+                  "venue_id": 1463,
+                  "gender": "male",
+                  "name": "Ecuador",
+                  "short_code": "ECU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16125887,
+                  "fixture_id": 18946460,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125784,
+                  "fixture_id": 18946460,
+                  "type_id": 1525,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125785,
+                  "fixture_id": 18946460,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16125788,
+                  "fixture_id": 18946460,
+                  "type_id": 2,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125888,
+                  "fixture_id": 18946460,
+                  "type_id": 48996,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125783,
+                  "fixture_id": 18946460,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125787,
+                  "fixture_id": 18946460,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125786,
+                  "fixture_id": 18946460,
+                  "type_id": 1,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318176,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "16",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946466,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318176,
+              "state_id": 5,
+              "venue_id": 316246,
+              "name": "Bolivia vs Chile",
+              "starting_at": "2025-06-10 20:00:00",
+              "result_info": "Bolivia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749585600,
+              "participants": [
+                {
+                  "id": 18825,
+                  "sport_id": 1,
+                  "country_id": 7598,
+                  "venue_id": 4082,
+                  "gender": "male",
+                  "name": "Bolivia",
+                  "short_code": "BOL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/9/18825.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 8
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 10
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16605897,
+                  "fixture_id": 18946466,
+                  "type_id": 1525,
+                  "participant_id": 18825,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605902,
+                  "fixture_id": 18946466,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605900,
+                  "fixture_id": 18946466,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605901,
+                  "fixture_id": 18946466,
+                  "type_id": 2,
+                  "participant_id": 18825,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605898,
+                  "fixture_id": 18946466,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605899,
+                  "fixture_id": 18946466,
+                  "type_id": 1,
+                  "participant_id": 18825,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16606019,
+                  "fixture_id": 18946466,
+                  "type_id": 48996,
+                  "participant_id": 18825,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16606020,
+                  "fixture_id": 18946466,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318175,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "15",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-05",
+          "ending_at": "2025-06-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946463,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318175,
+              "state_id": 5,
+              "venue_id": 10774,
+              "name": "Chile vs Argentina",
+              "starting_at": "2025-06-06 01:00:00",
+              "result_info": "Argentina won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749171600,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 10
+                  }
+                },
+                {
+                  "id": 18644,
+                  "sport_id": 1,
+                  "country_id": 44,
+                  "venue_id": 6569,
+                  "gender": "male",
+                  "name": "Argentina",
+                  "short_code": "ARG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
+                  "founded": 1893,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16589684,
+                  "fixture_id": 18946463,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16589687,
+                  "fixture_id": 18946463,
+                  "type_id": 1,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16589685,
+                  "fixture_id": 18946463,
+                  "type_id": 1525,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16589688,
+                  "fixture_id": 18946463,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16589689,
+                  "fixture_id": 18946463,
+                  "type_id": 2,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16589686,
+                  "fixture_id": 18946463,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16589794,
+                  "fixture_id": 18946463,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16589795,
+                  "fixture_id": 18946463,
+                  "type_id": 48996,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318164,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-10-17",
+          "ending_at": "2023-10-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946407,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318164,
+              "state_id": 5,
+              "venue_id": 6599,
+              "name": "Venezuela vs Chile",
+              "starting_at": "2023-10-17 21:00:00",
+              "result_info": "Venezuela won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1697576400,
+              "participants": [
+                {
+                  "id": 18711,
+                  "sport_id": 1,
+                  "country_id": 275,
+                  "venue_id": 5418,
+                  "gender": "male",
+                  "name": "Venezuela",
+                  "short_code": "VEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18711.png",
+                  "founded": 1926,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 6
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13354478,
+                  "fixture_id": 18946407,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13354476,
+                  "fixture_id": 18946407,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13354475,
+                  "fixture_id": 18946407,
+                  "type_id": 1,
+                  "participant_id": 18711,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13354477,
+                  "fixture_id": 18946407,
+                  "type_id": 1525,
+                  "participant_id": 18711,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13354563,
+                  "fixture_id": 18946407,
+                  "type_id": 2,
+                  "participant_id": 18711,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13354564,
+                  "fixture_id": 18946407,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318178,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "18",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-09",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946479,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318178,
+              "state_id": 5,
+              "venue_id": 10774,
+              "name": "Chile vs Uruguay",
+              "starting_at": "2025-09-09 23:30:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757460600,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 10
+                  }
+                },
+                {
+                  "id": 15251,
+                  "sport_id": 1,
+                  "country_id": 158,
+                  "venue_id": 10900,
+                  "gender": "male",
+                  "name": "Uruguay",
+                  "short_code": "URU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/15251.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 18:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16927133,
+                  "fixture_id": 18946479,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16927140,
+                  "fixture_id": 18946479,
+                  "type_id": 1,
+                  "participant_id": 15251,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16927142,
+                  "fixture_id": 18946479,
+                  "type_id": 2,
+                  "participant_id": 15251,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16927141,
+                  "fixture_id": 18946479,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16927135,
+                  "fixture_id": 18946479,
+                  "type_id": 1525,
+                  "participant_id": 15251,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16927137,
+                  "fixture_id": 18946479,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16927183,
+                  "fixture_id": 18946479,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16927184,
+                  "fixture_id": 18946479,
+                  "type_id": 48996,
+                  "participant_id": 15251,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318165,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-16",
+          "ending_at": "2023-11-17",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946415,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318165,
+              "state_id": 5,
+              "venue_id": 5157,
+              "name": "Chile vs Paraguay",
+              "starting_at": "2023-11-17 00:30:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700181000,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 8
+                  }
+                },
+                {
+                  "id": 18723,
+                  "sport_id": 1,
+                  "country_id": 1190,
+                  "venue_id": 11354,
+                  "gender": "male",
+                  "name": "Paraguay",
+                  "short_code": "PRY",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18723.png",
+                  "founded": 1906,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 7
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13511803,
+                  "fixture_id": 18946415,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13511821,
+                  "fixture_id": 18946415,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13511805,
+                  "fixture_id": 18946415,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13511806,
+                  "fixture_id": 18946415,
+                  "type_id": 1525,
+                  "participant_id": 18723,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13511822,
+                  "fixture_id": 18946415,
+                  "type_id": 2,
+                  "participant_id": 18723,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13511804,
+                  "fixture_id": 18946415,
+                  "type_id": 1,
+                  "participant_id": 18723,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318163,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-10-12",
+          "ending_at": "2023-10-13",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946404,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318163,
+              "state_id": 5,
+              "venue_id": 5157,
+              "name": "Chile vs Peru",
+              "starting_at": "2023-10-13 00:00:00",
+              "result_info": "Chile won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1697155200,
+              "participants": [
+                {
+                  "id": 18775,
+                  "sport_id": 1,
+                  "country_id": 338,
+                  "venue_id": 11432,
+                  "gender": "male",
+                  "name": "Peru",
+                  "short_code": "PER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18775.png",
+                  "founded": 1922,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 7
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 8
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13325763,
+                  "fixture_id": 18946404,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13325764,
+                  "fixture_id": 18946404,
+                  "type_id": 1525,
+                  "participant_id": 18775,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13325762,
+                  "fixture_id": 18946404,
+                  "type_id": 1,
+                  "participant_id": 18775,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13325761,
+                  "fixture_id": 18946404,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13325773,
+                  "fixture_id": 18946404,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13325774,
+                  "fixture_id": 18946404,
+                  "type_id": 2,
+                  "participant_id": 18775,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318168,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-09-10",
+          "ending_at": "2024-09-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946430,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318168,
+              "state_id": 5,
+              "venue_id": 10774,
+              "name": "Chile vs Bolivia",
+              "starting_at": "2024-09-10 21:00:00",
+              "result_info": "Bolivia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1726002000,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 9
+                  }
+                },
+                {
+                  "id": 18825,
+                  "sport_id": 1,
+                  "country_id": 7598,
+                  "venue_id": 4082,
+                  "gender": "male",
+                  "name": "Bolivia",
+                  "short_code": "BOL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/9/18825.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 8
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15561708,
+                  "fixture_id": 18946430,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15561709,
+                  "fixture_id": 18946430,
+                  "type_id": 48996,
+                  "participant_id": 18825,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14857233,
+                  "fixture_id": 18946430,
+                  "type_id": 1525,
+                  "participant_id": 18825,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14857231,
+                  "fixture_id": 18946430,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14857232,
+                  "fixture_id": 18946430,
+                  "type_id": 1,
+                  "participant_id": 18825,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14857245,
+                  "fixture_id": 18946430,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14857246,
+                  "fixture_id": 18946430,
+                  "type_id": 2,
+                  "participant_id": 18825,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14857234,
+                  "fixture_id": 18946430,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318167,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-09-05",
+          "ending_at": "2024-09-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946423,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318167,
+              "state_id": 5,
+              "venue_id": 6569,
+              "name": "Argentina vs Chile",
+              "starting_at": "2024-09-06 00:00:00",
+              "result_info": "Argentina won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1725580800,
+              "participants": [
+                {
+                  "id": 18644,
+                  "sport_id": 1,
+                  "country_id": 44,
+                  "venue_id": 6569,
+                  "gender": "male",
+                  "name": "Argentina",
+                  "short_code": "ARG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
+                  "founded": 1893,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 8
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14829753,
+                  "fixture_id": 18946423,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15561694,
+                  "fixture_id": 18946423,
+                  "type_id": 48996,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15561695,
+                  "fixture_id": 18946423,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14829746,
+                  "fixture_id": 18946423,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14829780,
+                  "fixture_id": 18946423,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14829745,
+                  "fixture_id": 18946423,
+                  "type_id": 1,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14829754,
+                  "fixture_id": 18946423,
+                  "type_id": 1525,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14829779,
+                  "fixture_id": 18946423,
+                  "type_id": 2,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318172,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "12",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-11-19",
+          "ending_at": "2024-11-20",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946449,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318172,
+              "state_id": 5,
+              "venue_id": 10774,
+              "name": "Chile vs Venezuela",
+              "starting_at": "2024-11-20 00:00:00",
+              "result_info": "Chile won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1732060800,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 10
+                  }
+                },
+                {
+                  "id": 18711,
+                  "sport_id": 1,
+                  "country_id": 275,
+                  "venue_id": 5418,
+                  "gender": "male",
+                  "name": "Venezuela",
+                  "short_code": "VEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18711.png",
+                  "founded": 1926,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 7
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15238752,
+                  "fixture_id": 18946449,
+                  "type_id": 1525,
+                  "participant_id": 18711,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15561747,
+                  "fixture_id": 18946449,
+                  "type_id": 48996,
+                  "participant_id": 18711,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15561746,
+                  "fixture_id": 18946449,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15238751,
+                  "fixture_id": 18946449,
+                  "type_id": 1,
+                  "participant_id": 18711,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15238769,
+                  "fixture_id": 18946449,
+                  "type_id": 2,
+                  "participant_id": 18711,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15238753,
+                  "fixture_id": 18946449,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15238750,
+                  "fixture_id": 18946449,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15238768,
+                  "fixture_id": 18946449,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318170,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-10-15",
+          "ending_at": "2024-10-16",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946438,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318170,
+              "state_id": 5,
+              "venue_id": 5048,
+              "name": "Colombia vs Chile",
+              "starting_at": "2024-10-15 20:30:00",
+              "result_info": "Colombia won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1729024200,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 10
+                  }
+                },
+                {
+                  "id": 18720,
+                  "sport_id": 1,
+                  "country_id": 353,
+                  "venue_id": 2035,
+                  "gender": "male",
+                  "name": "Colombia",
+                  "short_code": "COL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15046529,
+                  "fixture_id": 18946438,
+                  "type_id": 1525,
+                  "participant_id": 18720,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15046573,
+                  "fixture_id": 18946438,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15046572,
+                  "fixture_id": 18946438,
+                  "type_id": 2,
+                  "participant_id": 18720,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15561724,
+                  "fixture_id": 18946438,
+                  "type_id": 48996,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15561725,
+                  "fixture_id": 18946438,
+                  "type_id": 48996,
+                  "participant_id": 18720,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15046526,
+                  "fixture_id": 18946438,
+                  "type_id": 1,
+                  "participant_id": 18720,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 15046528,
+                  "fixture_id": 18946438,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15046527,
+                  "fixture_id": 18946438,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 318161,
+          "sport_id": 1,
+          "league_id": 726,
+          "season_id": 22305,
+          "stage_id": 77465895,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-09-07",
+          "ending_at": "2023-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18946392,
+              "sport_id": 1,
+              "league_id": 726,
+              "season_id": 22305,
+              "stage_id": 77465895,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 318161,
+              "state_id": 5,
+              "venue_id": 7845,
+              "name": "Uruguay vs Chile",
+              "starting_at": "2023-09-08 23:00:00",
+              "result_info": "Uruguay won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1694214000,
+              "participants": [
+                {
+                  "id": 18774,
+                  "sport_id": 1,
+                  "country_id": 80,
+                  "venue_id": 10774,
+                  "gender": "male",
+                  "name": "Chile",
+                  "short_code": "CHL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18774.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 15251,
+                  "sport_id": 1,
+                  "country_id": 158,
+                  "venue_id": 10900,
+                  "gender": "male",
+                  "name": "Uruguay",
+                  "short_code": "URU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/15251.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 8
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13131957,
+                  "fixture_id": 18946392,
+                  "type_id": 1,
+                  "participant_id": 15251,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13131983,
+                  "fixture_id": 18946392,
+                  "type_id": 2,
+                  "participant_id": 15251,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13131959,
+                  "fixture_id": 18946392,
+                  "type_id": 1525,
+                  "participant_id": 15251,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13131984,
+                  "fixture_id": 18946392,
+                  "type_id": 2,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13131960,
+                  "fixture_id": 18946392,
+                  "type_id": 1525,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13131958,
+                  "fixture_id": 18946392,
+                  "type_id": 1,
+                  "participant_id": 18774,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124621,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 2005,
+    "remaining": 2283,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

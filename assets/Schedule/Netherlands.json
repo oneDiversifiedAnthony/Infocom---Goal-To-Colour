@@ -1,0 +1,1694 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609176,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253024,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 21827,
+              "name": "Netherlands vs Sweden",
+              "starting_at": "2026-06-20 17:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 35",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781974800,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18564,
+                  "sport_id": 1,
+                  "country_id": 47,
+                  "venue_id": 1668,
+                  "gender": "male",
+                  "name": "Sweden",
+                  "short_code": "SWE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18564.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609137,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253024,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 72370,
+              "name": "Tunisia vs Netherlands",
+              "starting_at": "2026-06-25 23:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 58",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782428400,
+              "participants": [
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609138,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253024,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 72372,
+              "name": "Netherlands vs Japan",
+              "starting_at": "2026-06-14 20:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 11",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781467200,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18597,
+                  "sport_id": 1,
+                  "country_id": 479,
+                  "venue_id": 13533,
+                  "gender": "male",
+                  "name": "Japan",
+                  "short_code": "JPN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-31 10:25:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464842,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-21",
+      "ending_at": "2025-11-18",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 1526,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 362707,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427853,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362707,
+              "state_id": 5,
+              "venue_id": 7594,
+              "name": "Lithuania vs Netherlands",
+              "starting_at": "2025-09-07 16:00:00",
+              "result_info": "Netherlands won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757260800,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 27065,
+                  "sport_id": 1,
+                  "country_id": 2079,
+                  "venue_id": 7594,
+                  "gender": "male",
+                  "name": "Lithuania",
+                  "short_code": "LTU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/27065.png",
+                  "founded": 1922,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16919356,
+                  "fixture_id": 19427853,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16919342,
+                  "fixture_id": 19427853,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16919349,
+                  "fixture_id": 19427853,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16919344,
+                  "fixture_id": 19427853,
+                  "type_id": 1525,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16919353,
+                  "fixture_id": 19427853,
+                  "type_id": 1,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16919358,
+                  "fixture_id": 19427853,
+                  "type_id": 2,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16920877,
+                  "fixture_id": 19427853,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16920876,
+                  "fixture_id": 19427853,
+                  "type_id": 48996,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362709,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427909,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362709,
+              "state_id": 5,
+              "venue_id": 154,
+              "name": "Netherlands vs Finland",
+              "starting_at": "2025-10-12 16:00:00",
+              "result_info": "Netherlands won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760284800,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18570,
+                  "sport_id": 1,
+                  "country_id": 1233,
+                  "venue_id": 6050,
+                  "gender": "male",
+                  "name": "Finland",
+                  "short_code": "FIN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18570.png",
+                  "founded": 1907,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17230351,
+                  "fixture_id": 19427909,
+                  "type_id": 1525,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17230355,
+                  "fixture_id": 19427909,
+                  "type_id": 2,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17230352,
+                  "fixture_id": 19427909,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17230354,
+                  "fixture_id": 19427909,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17230353,
+                  "fixture_id": 19427909,
+                  "type_id": 1,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17231376,
+                  "fixture_id": 19427909,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17231377,
+                  "fixture_id": 19427909,
+                  "type_id": 48996,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17230350,
+                  "fixture_id": 19427909,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362708,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-09",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345693,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362708,
+              "state_id": 5,
+              "venue_id": 974,
+              "name": "Malta vs Netherlands",
+              "starting_at": "2025-10-09 18:45:00",
+              "result_info": "Netherlands won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760035500,
+              "participants": [
+                {
+                  "id": 18691,
+                  "sport_id": 1,
+                  "country_id": 2756,
+                  "venue_id": 974,
+                  "gender": "male",
+                  "name": "Malta",
+                  "short_code": "MLT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18691.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17197214,
+                  "fixture_id": 19345693,
+                  "type_id": 1525,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17197219,
+                  "fixture_id": 19345693,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17208176,
+                  "fixture_id": 19345693,
+                  "type_id": 48996,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17208177,
+                  "fixture_id": 19345693,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17197217,
+                  "fixture_id": 19345693,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17197218,
+                  "fixture_id": 19345693,
+                  "type_id": 2,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17197215,
+                  "fixture_id": 19345693,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17197216,
+                  "fixture_id": 19345693,
+                  "type_id": 1,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362703,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-24",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362710,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427947,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362710,
+              "state_id": 5,
+              "venue_id": 14452,
+              "name": "Poland vs Netherlands",
+              "starting_at": "2025-11-14 19:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763149500,
+              "participants": [
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17440492,
+                  "fixture_id": 19427947,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17440495,
+                  "fixture_id": 19427947,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17440493,
+                  "fixture_id": 19427947,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17440490,
+                  "fixture_id": 19427947,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17440491,
+                  "fixture_id": 19427947,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17440494,
+                  "fixture_id": 19427947,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17440815,
+                  "fixture_id": 19427947,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17440814,
+                  "fixture_id": 19427947,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362711,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-16",
+          "ending_at": "2025-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427959,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362711,
+              "state_id": 5,
+              "venue_id": 154,
+              "name": "Netherlands vs Lithuania",
+              "starting_at": "2025-11-17 19:45:00",
+              "result_info": "Netherlands won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763408700,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 27065,
+                  "sport_id": 1,
+                  "country_id": 2079,
+                  "venue_id": 7594,
+                  "gender": "male",
+                  "name": "Lithuania",
+                  "short_code": "LTU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/27065.png",
+                  "founded": 1922,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17467238,
+                  "fixture_id": 19427959,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17467239,
+                  "fixture_id": 19427959,
+                  "type_id": 1525,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17467243,
+                  "fixture_id": 19427959,
+                  "type_id": 1,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17467245,
+                  "fixture_id": 19427959,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17467242,
+                  "fixture_id": 19427959,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17467247,
+                  "fixture_id": 19427959,
+                  "type_id": 2,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17467492,
+                  "fixture_id": 19427959,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17467493,
+                  "fixture_id": 19427959,
+                  "type_id": 48996,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362705,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-09",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345638,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362705,
+              "state_id": 5,
+              "venue_id": 1438,
+              "name": "Netherlands vs Malta",
+              "starting_at": "2025-06-10 18:45:00",
+              "result_info": "Netherlands won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749581100,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18691,
+                  "sport_id": 1,
+                  "country_id": 2756,
+                  "venue_id": 974,
+                  "gender": "male",
+                  "name": "Malta",
+                  "short_code": "MLT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18691.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16605793,
+                  "fixture_id": 19345638,
+                  "type_id": 1525,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605798,
+                  "fixture_id": 19345638,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 8,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605797,
+                  "fixture_id": 19345638,
+                  "type_id": 2,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605796,
+                  "fixture_id": 19345638,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605795,
+                  "fixture_id": 19345638,
+                  "type_id": 1,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605794,
+                  "fixture_id": 19345638,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 8,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605970,
+                  "fixture_id": 19345638,
+                  "type_id": 48996,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605969,
+                  "fixture_id": 19345638,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362702,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-21",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362704,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345626,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362704,
+              "state_id": 5,
+              "venue_id": 6050,
+              "name": "Finland vs Netherlands",
+              "starting_at": "2025-06-07 18:45:00",
+              "result_info": "Netherlands won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749321900,
+              "participants": [
+                {
+                  "id": 18570,
+                  "sport_id": 1,
+                  "country_id": 1233,
+                  "venue_id": 6050,
+                  "gender": "male",
+                  "name": "Finland",
+                  "short_code": "FIN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18570.png",
+                  "founded": 1907,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16597557,
+                  "fixture_id": 19345626,
+                  "type_id": 1525,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16597561,
+                  "fixture_id": 19345626,
+                  "type_id": 2,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16597562,
+                  "fixture_id": 19345626,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16597558,
+                  "fixture_id": 19345626,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16597560,
+                  "fixture_id": 19345626,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16597559,
+                  "fixture_id": 19345626,
+                  "type_id": 1,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16598234,
+                  "fixture_id": 19345626,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16598233,
+                  "fixture_id": 19345626,
+                  "type_id": 48996,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362706,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345646,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362706,
+              "state_id": 5,
+              "venue_id": 1795,
+              "name": "Netherlands vs Poland",
+              "starting_at": "2025-09-04 18:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757011500,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16896221,
+                  "fixture_id": 19345646,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896220,
+                  "fixture_id": 19345646,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896224,
+                  "fixture_id": 19345646,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896223,
+                  "fixture_id": 19345646,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896222,
+                  "fixture_id": 19345646,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896407,
+                  "fixture_id": 19345646,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896225,
+                  "fixture_id": 19345646,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896406,
+                  "fixture_id": 19345646,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464841,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-26",
+      "ending_at": "2026-03-26",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 394752,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464841,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2026-03-26",
+          "ending_at": "2026-03-26",
+          "games_in_current_week": false,
+          "fixtures": []
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124635,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1991,
+    "remaining": 2263,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

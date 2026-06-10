@@ -1,0 +1,2193 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609169,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253020,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 343444,
+              "name": "Switzerland vs Bosnia and Herzegovina",
+              "starting_at": "2026-06-18 19:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 26",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781809200,
+              "participants": [
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18708,
+                  "sport_id": 1,
+                  "country_id": 62,
+                  "venue_id": 9553,
+                  "gender": "male",
+                  "name": "Switzerland",
+                  "short_code": "SUI",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18708.png",
+                  "founded": 1895,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609186,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253020,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 1579,
+              "name": "Bosnia and Herzegovina vs Qatar",
+              "starting_at": "2026-06-24 19:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 52",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782327600,
+              "participants": [
+                {
+                  "id": 18544,
+                  "sport_id": 1,
+                  "country_id": 74505,
+                  "venue_id": 14371,
+                  "gender": "male",
+                  "name": "Qatar",
+                  "short_code": "QAT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18544.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609154,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253020,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 11542,
+              "name": "Canada vs Bosnia and Herzegovina",
+              "starting_at": "2026-06-12 19:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 3",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781290800,
+              "participants": [
+                {
+                  "id": 18572,
+                  "sport_id": 1,
+                  "country_id": 1004,
+                  "venue_id": 11542,
+                  "gender": "male",
+                  "name": "Canada",
+                  "short_code": "CAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18572.png",
+                  "founded": 1912,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 23:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464842,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-21",
+      "ending_at": "2025-11-18",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 1526,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 362707,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427857,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249218,
+              "aggregate_id": null,
+              "round_id": 362707,
+              "state_id": 5,
+              "venue_id": 2603,
+              "name": "Bosnia and Herzegovina vs Austria",
+              "starting_at": "2025-09-09 18:45:00",
+              "result_info": "Austria won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757443500,
+              "participants": [
+                {
+                  "id": 18643,
+                  "sport_id": 1,
+                  "country_id": 143,
+                  "venue_id": 3871,
+                  "gender": "male",
+                  "name": "Austria",
+                  "short_code": "AUT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18643.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16926456,
+                  "fixture_id": 19427857,
+                  "type_id": 1,
+                  "participant_id": 18643,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16926454,
+                  "fixture_id": 19427857,
+                  "type_id": 1525,
+                  "participant_id": 18643,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16926453,
+                  "fixture_id": 19427857,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16926458,
+                  "fixture_id": 19427857,
+                  "type_id": 2,
+                  "participant_id": 18643,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16926965,
+                  "fixture_id": 19427857,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16926966,
+                  "fixture_id": 19427857,
+                  "type_id": 48996,
+                  "participant_id": 18643,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16926455,
+                  "fixture_id": 19427857,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16926457,
+                  "fixture_id": 19427857,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362709,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362708,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-09",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427897,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249218,
+              "aggregate_id": null,
+              "round_id": 362708,
+              "state_id": 5,
+              "venue_id": 215,
+              "name": "Cyprus vs Bosnia and Herzegovina",
+              "starting_at": "2025-10-09 18:45:00",
+              "result_info": "Bosnia and Herzegovina won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760035500,
+              "participants": [
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18626,
+                  "sport_id": 1,
+                  "country_id": 116,
+                  "venue_id": 338810,
+                  "gender": "male",
+                  "name": "Cyprus",
+                  "short_code": "CYP",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18626.png",
+                  "founded": 1934,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17197239,
+                  "fixture_id": 19427897,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17207806,
+                  "fixture_id": 19427897,
+                  "type_id": 48996,
+                  "participant_id": 18626,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17207807,
+                  "fixture_id": 19427897,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17197246,
+                  "fixture_id": 19427897,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17197238,
+                  "fixture_id": 19427897,
+                  "type_id": 1525,
+                  "participant_id": 18626,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17197243,
+                  "fixture_id": 19427897,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17197241,
+                  "fixture_id": 19427897,
+                  "type_id": 1,
+                  "participant_id": 18626,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17197244,
+                  "fixture_id": 19427897,
+                  "type_id": 2,
+                  "participant_id": 18626,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362703,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-24",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345605,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249218,
+              "aggregate_id": null,
+              "round_id": 362703,
+              "state_id": 5,
+              "venue_id": 2603,
+              "name": "Bosnia and Herzegovina vs Cyprus",
+              "starting_at": "2025-03-24 19:45:00",
+              "result_info": "Bosnia and Herzegovina won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742845500,
+              "participants": [
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18626,
+                  "sport_id": 1,
+                  "country_id": 116,
+                  "venue_id": 338810,
+                  "gender": "male",
+                  "name": "Cyprus",
+                  "short_code": "CYP",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18626.png",
+                  "founded": 1934,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16123629,
+                  "fixture_id": 19345605,
+                  "type_id": 2,
+                  "participant_id": 18626,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123624,
+                  "fixture_id": 19345605,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123625,
+                  "fixture_id": 19345605,
+                  "type_id": 1525,
+                  "participant_id": 18626,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123627,
+                  "fixture_id": 19345605,
+                  "type_id": 1,
+                  "participant_id": 18626,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123626,
+                  "fixture_id": 19345605,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123972,
+                  "fixture_id": 19345605,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16123973,
+                  "fixture_id": 19345605,
+                  "type_id": 48996,
+                  "participant_id": 18626,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16123628,
+                  "fixture_id": 19345605,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362710,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427953,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249218,
+              "aggregate_id": null,
+              "round_id": 362710,
+              "state_id": 5,
+              "venue_id": 2603,
+              "name": "Bosnia and Herzegovina vs Romania",
+              "starting_at": "2025-11-15 19:45:00",
+              "result_info": "Bosnia and Herzegovina won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763235900,
+              "participants": [
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18638,
+                  "sport_id": 1,
+                  "country_id": 155,
+                  "venue_id": 2010,
+                  "gender": "male",
+                  "name": "Romania",
+                  "short_code": "ROM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18638.png",
+                  "founded": 1909,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17450462,
+                  "fixture_id": 19427953,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17451084,
+                  "fixture_id": 19427953,
+                  "type_id": 48996,
+                  "participant_id": 18638,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17450466,
+                  "fixture_id": 19427953,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17450464,
+                  "fixture_id": 19427953,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17450465,
+                  "fixture_id": 19427953,
+                  "type_id": 2,
+                  "participant_id": 18638,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17450463,
+                  "fixture_id": 19427953,
+                  "type_id": 1,
+                  "participant_id": 18638,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17451083,
+                  "fixture_id": 19427953,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17450461,
+                  "fixture_id": 19427953,
+                  "type_id": 1525,
+                  "participant_id": 18638,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362711,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-16",
+          "ending_at": "2025-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427962,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249218,
+              "aggregate_id": null,
+              "round_id": 362711,
+              "state_id": 5,
+              "venue_id": 3871,
+              "name": "Austria vs Bosnia and Herzegovina",
+              "starting_at": "2025-11-18 19:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763495100,
+              "participants": [
+                {
+                  "id": 18643,
+                  "sport_id": 1,
+                  "country_id": 143,
+                  "venue_id": 3871,
+                  "gender": "male",
+                  "name": "Austria",
+                  "short_code": "AUT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18643.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17470282,
+                  "fixture_id": 19427962,
+                  "type_id": 1,
+                  "participant_id": 18643,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17470281,
+                  "fixture_id": 19427962,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17470285,
+                  "fixture_id": 19427962,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17470280,
+                  "fixture_id": 19427962,
+                  "type_id": 1525,
+                  "participant_id": 18643,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17470283,
+                  "fixture_id": 19427962,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17470284,
+                  "fixture_id": 19427962,
+                  "type_id": 2,
+                  "participant_id": 18643,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17470822,
+                  "fixture_id": 19427962,
+                  "type_id": 48996,
+                  "participant_id": 18643,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17470823,
+                  "fixture_id": 19427962,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362705,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-09",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362702,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-21",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345594,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249218,
+              "aggregate_id": null,
+              "round_id": 362702,
+              "state_id": 5,
+              "venue_id": 2010,
+              "name": "Romania vs Bosnia and Herzegovina",
+              "starting_at": "2025-03-21 19:45:00",
+              "result_info": "Bosnia and Herzegovina won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742586300,
+              "participants": [
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18638,
+                  "sport_id": 1,
+                  "country_id": 155,
+                  "venue_id": 2010,
+                  "gender": "male",
+                  "name": "Romania",
+                  "short_code": "ROM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/14/18638.png",
+                  "founded": 1909,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16094385,
+                  "fixture_id": 19345594,
+                  "type_id": 1525,
+                  "participant_id": 18638,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16094387,
+                  "fixture_id": 19345594,
+                  "type_id": 1,
+                  "participant_id": 18638,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094388,
+                  "fixture_id": 19345594,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094386,
+                  "fixture_id": 19345594,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094978,
+                  "fixture_id": 19345594,
+                  "type_id": 48996,
+                  "participant_id": 18638,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16094389,
+                  "fixture_id": 19345594,
+                  "type_id": 2,
+                  "participant_id": 18638,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094979,
+                  "fixture_id": 19345594,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16094384,
+                  "fixture_id": 19345594,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362704,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345621,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249218,
+              "aggregate_id": null,
+              "round_id": 362704,
+              "state_id": 5,
+              "venue_id": 2603,
+              "name": "Bosnia and Herzegovina vs San Marino",
+              "starting_at": "2025-06-07 13:00:00",
+              "result_info": "Bosnia and Herzegovina won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749301200,
+              "participants": [
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18872,
+                  "sport_id": 1,
+                  "country_id": 3347,
+                  "venue_id": 7319,
+                  "gender": "male",
+                  "name": "San Marino",
+                  "short_code": "SMR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18872.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16595329,
+                  "fixture_id": 19345621,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16595331,
+                  "fixture_id": 19345621,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16595334,
+                  "fixture_id": 19345621,
+                  "type_id": 2,
+                  "participant_id": 18872,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16595332,
+                  "fixture_id": 19345621,
+                  "type_id": 1,
+                  "participant_id": 18872,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16596360,
+                  "fixture_id": 19345621,
+                  "type_id": 48996,
+                  "participant_id": 18872,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16595333,
+                  "fixture_id": 19345621,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16596359,
+                  "fixture_id": 19345621,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16595330,
+                  "fixture_id": 19345621,
+                  "type_id": 1525,
+                  "participant_id": 18872,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362706,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427847,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249218,
+              "aggregate_id": null,
+              "round_id": 362706,
+              "state_id": 5,
+              "venue_id": 7319,
+              "name": "San Marino vs Bosnia and Herzegovina",
+              "starting_at": "2025-09-06 18:45:00",
+              "result_info": "Bosnia and Herzegovina won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757184300,
+              "participants": [
+                {
+                  "id": 18872,
+                  "sport_id": 1,
+                  "country_id": 3347,
+                  "venue_id": 7319,
+                  "gender": "male",
+                  "name": "San Marino",
+                  "short_code": "SMR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18872.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16911742,
+                  "fixture_id": 19427847,
+                  "type_id": 48996,
+                  "participant_id": 18872,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16910759,
+                  "fixture_id": 19427847,
+                  "type_id": 1525,
+                  "participant_id": 18872,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16910761,
+                  "fixture_id": 19427847,
+                  "type_id": 1,
+                  "participant_id": 18872,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16910764,
+                  "fixture_id": 19427847,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 6,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16910763,
+                  "fixture_id": 19427847,
+                  "type_id": 2,
+                  "participant_id": 18872,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16911743,
+                  "fixture_id": 19427847,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 5,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16910762,
+                  "fixture_id": 19427847,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16910760,
+                  "fixture_id": 19427847,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 6,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464841,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-26",
+      "ending_at": "2026-03-26",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 394752,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464841,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2026-03-26",
+          "ending_at": "2026-03-26",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19604727,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464841,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 394752,
+              "state_id": 8,
+              "venue_id": 125,
+              "name": "Wales vs Bosnia and Herzegovina",
+              "starting_at": "2026-03-26 19:45:00",
+              "result_info": "Bosnia and Herzegovina won after penalties.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1774554300,
+              "participants": [
+                {
+                  "id": 18721,
+                  "sport_id": 1,
+                  "country_id": 515,
+                  "venue_id": 14478,
+                  "gender": "male",
+                  "name": "Wales",
+                  "short_code": "WAL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18721.png",
+                  "founded": 1876,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18625,
+                  "sport_id": 1,
+                  "country_id": 507,
+                  "venue_id": 2603,
+                  "gender": "male",
+                  "name": "Bosnia and Herzegovina",
+                  "short_code": "BIH",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+                  "founded": 1992,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 19688349,
+                  "fixture_id": 19604727,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 19688351,
+                  "fixture_id": 19604727,
+                  "type_id": 1,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 19688353,
+                  "fixture_id": 19604727,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 19688352,
+                  "fixture_id": 19604727,
+                  "type_id": 2,
+                  "participant_id": 18721,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 19688348,
+                  "fixture_id": 19604727,
+                  "type_id": 1525,
+                  "participant_id": 18721,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 19688350,
+                  "fixture_id": 19604727,
+                  "type_id": 1,
+                  "participant_id": 18721,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 19688807,
+                  "fixture_id": 19604727,
+                  "type_id": 48996,
+                  "participant_id": 18721,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 19688808,
+                  "fixture_id": 19604727,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 19688909,
+                  "fixture_id": 19604727,
+                  "type_id": 5,
+                  "participant_id": 18721,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "PENALTY_SHOOTOUT"
+                },
+                {
+                  "id": 19688910,
+                  "fixture_id": 19604727,
+                  "type_id": 5,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "PENALTY_SHOOTOUT"
+                },
+                {
+                  "id": 19688845,
+                  "fixture_id": 19604727,
+                  "type_id": 3,
+                  "participant_id": 18721,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "ET"
+                },
+                {
+                  "id": 19688861,
+                  "fixture_id": 19604727,
+                  "type_id": 5314,
+                  "participant_id": 18721,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "ET_1ST_HALF"
+                },
+                {
+                  "id": 19688862,
+                  "fixture_id": 19604727,
+                  "type_id": 5314,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET_1ST_HALF"
+                },
+                {
+                  "id": 19688846,
+                  "fixture_id": 19604727,
+                  "type_id": 3,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET"
+                },
+                {
+                  "id": 19688865,
+                  "fixture_id": 19604727,
+                  "type_id": 39,
+                  "participant_id": 18721,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "ET_2ND_HALF"
+                },
+                {
+                  "id": 19688866,
+                  "fixture_id": 19604727,
+                  "type_id": 39,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "ET_2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464840,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Finals",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-31",
+      "ending_at": "2026-03-31",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19608780,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464840,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 8,
+          "venue_id": 2603,
+          "name": "Bosnia and Herzegovina vs Italy",
+          "starting_at": "2026-03-31 18:45:00",
+          "result_info": "Bosnia and Herzegovina won after penalties.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1774982700,
+          "participants": [
+            {
+              "id": 18625,
+              "sport_id": 1,
+              "country_id": 507,
+              "venue_id": 2603,
+              "gender": "male",
+              "name": "Bosnia and Herzegovina",
+              "short_code": "BIH",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18625.png",
+              "founded": 1992,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-06 19:00:00",
+              "meta": {
+                "location": "home",
+                "winner": true,
+                "position": 1
+              }
+            },
+            {
+              "id": 18658,
+              "sport_id": 1,
+              "country_id": 251,
+              "venue_id": 7189,
+              "gender": "male",
+              "name": "Italy",
+              "short_code": "ITA",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18658.png",
+              "founded": 1898,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-07 19:00:00",
+              "meta": {
+                "location": "away",
+                "winner": false,
+                "position": 2
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 19730698,
+              "fixture_id": 19608780,
+              "type_id": 1,
+              "participant_id": 18625,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19730699,
+              "fixture_id": 19608780,
+              "type_id": 1,
+              "participant_id": 18658,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19730700,
+              "fixture_id": 19608780,
+              "type_id": 2,
+              "participant_id": 18625,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19730701,
+              "fixture_id": 19608780,
+              "type_id": 2,
+              "participant_id": 18658,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19730696,
+              "fixture_id": 19608780,
+              "type_id": 1525,
+              "participant_id": 18625,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19732612,
+              "fixture_id": 19608780,
+              "type_id": 48996,
+              "participant_id": 18625,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19730697,
+              "fixture_id": 19608780,
+              "type_id": 1525,
+              "participant_id": 18658,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19732712,
+              "fixture_id": 19608780,
+              "type_id": 5314,
+              "participant_id": 18625,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732704,
+              "fixture_id": 19608780,
+              "type_id": 3,
+              "participant_id": 18625,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 19732613,
+              "fixture_id": 19608780,
+              "type_id": 48996,
+              "participant_id": 18658,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732705,
+              "fixture_id": 19608780,
+              "type_id": 3,
+              "participant_id": 18658,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 19732713,
+              "fixture_id": 19608780,
+              "type_id": 5314,
+              "participant_id": 18658,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732726,
+              "fixture_id": 19608780,
+              "type_id": 39,
+              "participant_id": 18625,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732727,
+              "fixture_id": 19608780,
+              "type_id": 39,
+              "participant_id": 18658,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732736,
+              "fixture_id": 19608780,
+              "type_id": 5,
+              "participant_id": 18625,
+              "score": {
+                "goals": 4,
+                "participant": "home"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            },
+            {
+              "id": 19732737,
+              "fixture_id": 19608780,
+              "type_id": 5,
+              "participant_id": 18658,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124657,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1969,
+    "remaining": 2243,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

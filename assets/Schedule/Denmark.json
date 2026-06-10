@@ -1,0 +1,1547 @@
+{
+  "data": [
+    {
+      "id": 77464842,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-21",
+      "ending_at": "2025-11-18",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 1526,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 362707,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427877,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249213,
+              "aggregate_id": null,
+              "round_id": 362707,
+              "state_id": 5,
+              "venue_id": 136,
+              "name": "Greece vs Denmark",
+              "starting_at": "2025-09-08 18:45:00",
+              "result_info": "Denmark won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757357100,
+              "participants": [
+                {
+                  "id": 18568,
+                  "sport_id": 1,
+                  "country_id": 125,
+                  "venue_id": 254,
+                  "gender": "male",
+                  "name": "Greece",
+                  "short_code": "GRC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18568.png",
+                  "founded": 1926,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18583,
+                  "sport_id": 1,
+                  "country_id": 320,
+                  "venue_id": 5660,
+                  "gender": "male",
+                  "name": "Denmark",
+                  "short_code": "DEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16924731,
+                  "fixture_id": 19427877,
+                  "type_id": 1,
+                  "participant_id": 18568,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924733,
+                  "fixture_id": 19427877,
+                  "type_id": 1,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16924727,
+                  "fixture_id": 19427877,
+                  "type_id": 1525,
+                  "participant_id": 18568,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924735,
+                  "fixture_id": 19427877,
+                  "type_id": 2,
+                  "participant_id": 18568,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924729,
+                  "fixture_id": 19427877,
+                  "type_id": 1525,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16924737,
+                  "fixture_id": 19427877,
+                  "type_id": 2,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16924870,
+                  "fixture_id": 19427877,
+                  "type_id": 48996,
+                  "participant_id": 18568,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16924871,
+                  "fixture_id": 19427877,
+                  "type_id": 48996,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362709,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427919,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249213,
+              "aggregate_id": null,
+              "round_id": 362709,
+              "state_id": 5,
+              "venue_id": 5655,
+              "name": "Denmark vs Greece",
+              "starting_at": "2025-10-12 18:45:00",
+              "result_info": "Denmark won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760294700,
+              "participants": [
+                {
+                  "id": 18583,
+                  "sport_id": 1,
+                  "country_id": 320,
+                  "venue_id": 5660,
+                  "gender": "male",
+                  "name": "Denmark",
+                  "short_code": "DEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18568,
+                  "sport_id": 1,
+                  "country_id": 125,
+                  "venue_id": 254,
+                  "gender": "male",
+                  "name": "Greece",
+                  "short_code": "GRC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18568.png",
+                  "founded": 1926,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17231511,
+                  "fixture_id": 19427919,
+                  "type_id": 1,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17231892,
+                  "fixture_id": 19427919,
+                  "type_id": 48996,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17231509,
+                  "fixture_id": 19427919,
+                  "type_id": 1525,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17231510,
+                  "fixture_id": 19427919,
+                  "type_id": 1,
+                  "participant_id": 18568,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17231512,
+                  "fixture_id": 19427919,
+                  "type_id": 2,
+                  "participant_id": 18568,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17231513,
+                  "fixture_id": 19427919,
+                  "type_id": 2,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17231893,
+                  "fixture_id": 19427919,
+                  "type_id": 48996,
+                  "participant_id": 18568,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17231508,
+                  "fixture_id": 19427919,
+                  "type_id": 1525,
+                  "participant_id": 18568,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362708,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-09",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427882,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249213,
+              "aggregate_id": null,
+              "round_id": 362708,
+              "state_id": 5,
+              "venue_id": 2544,
+              "name": "Belarus vs Denmark",
+              "starting_at": "2025-10-09 18:45:00",
+              "result_info": "Denmark won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760035500,
+              "participants": [
+                {
+                  "id": 18634,
+                  "sport_id": 1,
+                  "country_id": 212,
+                  "venue_id": 4208,
+                  "gender": "male",
+                  "name": "Belarus",
+                  "short_code": "BLR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18634.png",
+                  "founded": 1989,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 16:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18583,
+                  "sport_id": 1,
+                  "country_id": 320,
+                  "venue_id": 5660,
+                  "gender": "male",
+                  "name": "Denmark",
+                  "short_code": "DEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17197240,
+                  "fixture_id": 19427882,
+                  "type_id": 1525,
+                  "participant_id": 18634,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17208182,
+                  "fixture_id": 19427882,
+                  "type_id": 48996,
+                  "participant_id": 18634,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17208183,
+                  "fixture_id": 19427882,
+                  "type_id": 48996,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17197247,
+                  "fixture_id": 19427882,
+                  "type_id": 1,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17197248,
+                  "fixture_id": 19427882,
+                  "type_id": 2,
+                  "participant_id": 18634,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17197249,
+                  "fixture_id": 19427882,
+                  "type_id": 2,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 6,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17197242,
+                  "fixture_id": 19427882,
+                  "type_id": 1525,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 6,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17197245,
+                  "fixture_id": 19427882,
+                  "type_id": 1,
+                  "participant_id": 18634,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362703,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-24",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362710,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427940,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249213,
+              "aggregate_id": null,
+              "round_id": 362710,
+              "state_id": 5,
+              "venue_id": 5655,
+              "name": "Denmark vs Belarus",
+              "starting_at": "2025-11-15 19:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763235900,
+              "participants": [
+                {
+                  "id": 18583,
+                  "sport_id": 1,
+                  "country_id": 320,
+                  "venue_id": 5660,
+                  "gender": "male",
+                  "name": "Denmark",
+                  "short_code": "DEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18634,
+                  "sport_id": 1,
+                  "country_id": 212,
+                  "venue_id": 4208,
+                  "gender": "male",
+                  "name": "Belarus",
+                  "short_code": "BLR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18634.png",
+                  "founded": 1989,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 16:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17450467,
+                  "fixture_id": 19427940,
+                  "type_id": 1525,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17450472,
+                  "fixture_id": 19427940,
+                  "type_id": 2,
+                  "participant_id": 18634,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17450471,
+                  "fixture_id": 19427940,
+                  "type_id": 2,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17450469,
+                  "fixture_id": 19427940,
+                  "type_id": 1,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17451086,
+                  "fixture_id": 19427940,
+                  "type_id": 48996,
+                  "participant_id": 18634,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17451085,
+                  "fixture_id": 19427940,
+                  "type_id": 48996,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17450468,
+                  "fixture_id": 19427940,
+                  "type_id": 1525,
+                  "participant_id": 18634,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17450470,
+                  "fixture_id": 19427940,
+                  "type_id": 1,
+                  "participant_id": 18634,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362711,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-16",
+          "ending_at": "2025-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427871,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249213,
+              "aggregate_id": null,
+              "round_id": 362711,
+              "state_id": 5,
+              "venue_id": 6935,
+              "name": "Scotland vs Denmark",
+              "starting_at": "2025-11-18 19:45:00",
+              "result_info": "Scotland won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763495100,
+              "participants": [
+                {
+                  "id": 18706,
+                  "sport_id": 1,
+                  "country_id": 1161,
+                  "venue_id": 6935,
+                  "gender": "male",
+                  "name": "Scotland",
+                  "short_code": "SCO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18706.png",
+                  "founded": 1873,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18583,
+                  "sport_id": 1,
+                  "country_id": 320,
+                  "venue_id": 5660,
+                  "gender": "male",
+                  "name": "Denmark",
+                  "short_code": "DEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17470292,
+                  "fixture_id": 19427871,
+                  "type_id": 1,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17470288,
+                  "fixture_id": 19427871,
+                  "type_id": 1525,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17470294,
+                  "fixture_id": 19427871,
+                  "type_id": 2,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17470296,
+                  "fixture_id": 19427871,
+                  "type_id": 2,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17470290,
+                  "fixture_id": 19427871,
+                  "type_id": 1,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17470286,
+                  "fixture_id": 19427871,
+                  "type_id": 1525,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17470854,
+                  "fixture_id": 19427871,
+                  "type_id": 48996,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17470855,
+                  "fixture_id": 19427871,
+                  "type_id": 48996,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362705,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-09",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362702,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-21",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362704,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-07",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362706,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427834,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249213,
+              "aggregate_id": null,
+              "round_id": 362706,
+              "state_id": 5,
+              "venue_id": 5655,
+              "name": "Denmark vs Scotland",
+              "starting_at": "2025-09-05 18:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757097900,
+              "participants": [
+                {
+                  "id": 18706,
+                  "sport_id": 1,
+                  "country_id": 1161,
+                  "venue_id": 6935,
+                  "gender": "male",
+                  "name": "Scotland",
+                  "short_code": "SCO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18706.png",
+                  "founded": 1873,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18583,
+                  "sport_id": 1,
+                  "country_id": 320,
+                  "venue_id": 5660,
+                  "gender": "male",
+                  "name": "Denmark",
+                  "short_code": "DEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16899299,
+                  "fixture_id": 19427834,
+                  "type_id": 1525,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16899304,
+                  "fixture_id": 19427834,
+                  "type_id": 1,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16899302,
+                  "fixture_id": 19427834,
+                  "type_id": 1,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16899306,
+                  "fixture_id": 19427834,
+                  "type_id": 2,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16899305,
+                  "fixture_id": 19427834,
+                  "type_id": 2,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16899988,
+                  "fixture_id": 19427834,
+                  "type_id": 48996,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16899298,
+                  "fixture_id": 19427834,
+                  "type_id": 1525,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16899987,
+                  "fixture_id": 19427834,
+                  "type_id": 48996,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464841,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-26",
+      "ending_at": "2026-03-26",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 394752,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464841,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2026-03-26",
+          "ending_at": "2026-03-26",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19604726,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464841,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 394752,
+              "state_id": 5,
+              "venue_id": 5655,
+              "name": "Denmark vs North Macedonia",
+              "starting_at": "2026-03-26 19:45:00",
+              "result_info": "Denmark won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1774554300,
+              "participants": [
+                {
+                  "id": 18583,
+                  "sport_id": 1,
+                  "country_id": 320,
+                  "venue_id": 5660,
+                  "gender": "male",
+                  "name": "Denmark",
+                  "short_code": "DEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18689,
+                  "sport_id": 1,
+                  "country_id": 57142,
+                  "venue_id": 3626,
+                  "gender": "male",
+                  "name": "North Macedonia",
+                  "short_code": "MKD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/1/18689.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 17:30:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 19688347,
+                  "fixture_id": 19604726,
+                  "type_id": 2,
+                  "participant_id": 18689,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 19688342,
+                  "fixture_id": 19604726,
+                  "type_id": 1525,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 19688343,
+                  "fixture_id": 19604726,
+                  "type_id": 1525,
+                  "participant_id": 18689,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 19688344,
+                  "fixture_id": 19604726,
+                  "type_id": 1,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 19688345,
+                  "fixture_id": 19604726,
+                  "type_id": 1,
+                  "participant_id": 18689,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 19688346,
+                  "fixture_id": 19604726,
+                  "type_id": 2,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 19688814,
+                  "fixture_id": 19604726,
+                  "type_id": 48996,
+                  "participant_id": 18689,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 19688813,
+                  "fixture_id": 19604726,
+                  "type_id": 48996,
+                  "participant_id": 18583,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464840,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Finals",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-31",
+      "ending_at": "2026-03-31",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19608777,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464840,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 8,
+          "venue_id": 1619,
+          "name": "Czech Republic vs Denmark",
+          "starting_at": "2026-03-31 18:45:00",
+          "result_info": "Czech Republic won after penalties.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1774982700,
+          "participants": [
+            {
+              "id": 18583,
+              "sport_id": 1,
+              "country_id": 320,
+              "venue_id": 5660,
+              "gender": "male",
+              "name": "Denmark",
+              "short_code": "DEN",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18583.png",
+              "founded": 1889,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:00:00",
+              "meta": {
+                "location": "away",
+                "winner": false,
+                "position": 2
+              }
+            },
+            {
+              "id": 18718,
+              "sport_id": 1,
+              "country_id": 245,
+              "venue_id": 1619,
+              "gender": "male",
+              "name": "Czech Republic",
+              "short_code": "CZE",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+              "founded": 1901,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-05 00:00:00",
+              "meta": {
+                "location": "home",
+                "winner": true,
+                "position": 1
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 19728491,
+              "fixture_id": 19608777,
+              "type_id": 2,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19728489,
+              "fixture_id": 19608777,
+              "type_id": 1,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19728490,
+              "fixture_id": 19608777,
+              "type_id": 2,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19728488,
+              "fixture_id": 19608777,
+              "type_id": 1,
+              "participant_id": 18583,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19728487,
+              "fixture_id": 19608777,
+              "type_id": 1525,
+              "participant_id": 18718,
+              "score": {
+                "goals": 2,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19728486,
+              "fixture_id": 19608777,
+              "type_id": 1525,
+              "participant_id": 18583,
+              "score": {
+                "goals": 2,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19732563,
+              "fixture_id": 19608777,
+              "type_id": 48996,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732562,
+              "fixture_id": 19608777,
+              "type_id": 48996,
+              "participant_id": 18718,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732703,
+              "fixture_id": 19608777,
+              "type_id": 5314,
+              "participant_id": 18583,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732698,
+              "fixture_id": 19608777,
+              "type_id": 3,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 19732699,
+              "fixture_id": 19608777,
+              "type_id": 3,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 19732702,
+              "fixture_id": 19608777,
+              "type_id": 5314,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732719,
+              "fixture_id": 19608777,
+              "type_id": 39,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732718,
+              "fixture_id": 19608777,
+              "type_id": 39,
+              "participant_id": 18718,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732734,
+              "fixture_id": 19608777,
+              "type_id": 5,
+              "participant_id": 18583,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            },
+            {
+              "id": 19732735,
+              "fixture_id": 19608777,
+              "type_id": 5,
+              "participant_id": 18718,
+              "score": {
+                "goals": 3,
+                "participant": "home"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124623,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 2003,
+    "remaining": 2279,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

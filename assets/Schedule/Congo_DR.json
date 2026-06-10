@@ -1,0 +1,2687 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609182,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253029,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 181421,
+              "name": "Colombia vs Congo DR",
+              "starting_at": "2026-06-24 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 48",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782266400,
+              "participants": [
+                {
+                  "id": 18720,
+                  "sport_id": 1,
+                  "country_id": 353,
+                  "venue_id": 2035,
+                  "gender": "male",
+                  "name": "Colombia",
+                  "short_code": "COL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609196,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253029,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 161191,
+              "name": "Congo DR vs Uzbekistan",
+              "starting_at": "2026-06-27 23:30:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 72",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782603000,
+              "participants": [
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609166,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253029,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 21827,
+              "name": "Portugal vs Congo DR",
+              "starting_at": "2026-06-17 17:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 23",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781715600,
+              "participants": [
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18701,
+                  "sport_id": 1,
+                  "country_id": 20,
+                  "venue_id": 14455,
+                  "gender": "male",
+                  "name": "Portugal",
+                  "short_code": "POR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
+                  "founded": 1914,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77478976,
+      "sport_id": 1,
+      "league_id": 729,
+      "season_id": 26682,
+      "type_id": 224,
+      "name": "Final",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-31",
+      "ending_at": "2026-04-01",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19603980,
+          "sport_id": 1,
+          "league_id": 729,
+          "season_id": 26682,
+          "stage_id": 77478976,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 7,
+          "venue_id": 181421,
+          "name": "Congo DR vs Jamaica",
+          "starting_at": "2026-03-31 21:00:00",
+          "result_info": "Congo DR won after extra-time.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1774990800,
+          "participants": [
+            {
+              "id": 18552,
+              "sport_id": 1,
+              "country_id": 1320,
+              "venue_id": 3695,
+              "gender": "male",
+              "name": "Congo DR",
+              "short_code": "COD",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+              "founded": 1919,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:00:00",
+              "meta": {
+                "location": "home",
+                "winner": true,
+                "position": 1
+              }
+            },
+            {
+              "id": 18771,
+              "sport_id": 1,
+              "country_id": 1640,
+              "venue_id": 11245,
+              "gender": "male",
+              "name": "Jamaica",
+              "short_code": "JAM",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
+              "founded": 1910,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-05-27 18:30:00",
+              "meta": {
+                "location": "away",
+                "winner": false,
+                "position": 2
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 19730684,
+              "fixture_id": 19603980,
+              "type_id": 1525,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19730685,
+              "fixture_id": 19603980,
+              "type_id": 1525,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19730686,
+              "fixture_id": 19603980,
+              "type_id": 1,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19730687,
+              "fixture_id": 19603980,
+              "type_id": 1,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19730688,
+              "fixture_id": 19603980,
+              "type_id": 2,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19730689,
+              "fixture_id": 19603980,
+              "type_id": 2,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19732776,
+              "fixture_id": 19603980,
+              "type_id": 48996,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732777,
+              "fixture_id": 19603980,
+              "type_id": 48996,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19732821,
+              "fixture_id": 19603980,
+              "type_id": 5314,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732832,
+              "fixture_id": 19603980,
+              "type_id": 39,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732818,
+              "fixture_id": 19603980,
+              "type_id": 3,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 19732820,
+              "fixture_id": 19603980,
+              "type_id": 5314,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 19732833,
+              "fixture_id": 19603980,
+              "type_id": 39,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 19732819,
+              "fixture_id": 19603980,
+              "type_id": 3,
+              "participant_id": 18771,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    },
+    {
+      "id": 77465184,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2023-11-15",
+      "ending_at": "2025-10-14",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 323228,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995133,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323228,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Congo DR vs Sudan",
+              "starting_at": "2025-10-14 19:00:00",
+              "result_info": "Congo DR won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760468400,
+              "participants": [
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18829,
+                  "sport_id": 1,
+                  "country_id": 56518,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Sudan",
+                  "short_code": "SDN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18829.png",
+                  "founded": 1936,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-01-03 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17236889,
+                  "fixture_id": 18995133,
+                  "type_id": 1525,
+                  "participant_id": 18829,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17237553,
+                  "fixture_id": 18995133,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17237554,
+                  "fixture_id": 18995133,
+                  "type_id": 48996,
+                  "participant_id": 18829,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17236893,
+                  "fixture_id": 18995133,
+                  "type_id": 2,
+                  "participant_id": 18829,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17236891,
+                  "fixture_id": 18995133,
+                  "type_id": 1,
+                  "participant_id": 18829,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17236892,
+                  "fixture_id": 18995133,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17236888,
+                  "fixture_id": 18995133,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17236890,
+                  "fixture_id": 18995133,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323222,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-09",
+          "ending_at": "2024-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993951,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323222,
+              "state_id": 5,
+              "venue_id": 3695,
+              "name": "Congo DR vs Togo",
+              "starting_at": "2024-06-09 16:00:00",
+              "result_info": "Congo DR won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717948800,
+              "participants": [
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18549,
+                  "sport_id": 1,
+                  "country_id": 3039,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Togo",
+                  "short_code": "TGO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18549.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15581726,
+                  "fixture_id": 18993951,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15581727,
+                  "fixture_id": 18993951,
+                  "type_id": 48996,
+                  "participant_id": 18549,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14530304,
+                  "fixture_id": 18993951,
+                  "type_id": 1,
+                  "participant_id": 18549,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14530389,
+                  "fixture_id": 18993951,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14530306,
+                  "fixture_id": 18993951,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14530303,
+                  "fixture_id": 18993951,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14530305,
+                  "fixture_id": 18993951,
+                  "type_id": 1525,
+                  "participant_id": 18549,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14530390,
+                  "fixture_id": 18993951,
+                  "type_id": 2,
+                  "participant_id": 18549,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323225,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-03",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995125,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323225,
+              "state_id": 5,
+              "venue_id": 22431,
+              "name": "South Sudan vs Congo DR",
+              "starting_at": "2025-09-05 13:00:00",
+              "result_info": "Congo DR won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757077200,
+              "participants": [
+                {
+                  "id": 27826,
+                  "sport_id": 1,
+                  "country_id": 190317,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "South Sudan",
+                  "short_code": "SSD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/27826.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-26 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16897147,
+                  "fixture_id": 18995125,
+                  "type_id": 1525,
+                  "participant_id": 27826,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16897154,
+                  "fixture_id": 18995125,
+                  "type_id": 2,
+                  "participant_id": 27826,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16897155,
+                  "fixture_id": 18995125,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16897150,
+                  "fixture_id": 18995125,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 4,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16897152,
+                  "fixture_id": 18995125,
+                  "type_id": 1,
+                  "participant_id": 27826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16897153,
+                  "fixture_id": 18995125,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16897766,
+                  "fixture_id": 18995125,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16897765,
+                  "fixture_id": 18995125,
+                  "type_id": 48996,
+                  "participant_id": 27826,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323224,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-23",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993957,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323224,
+              "state_id": 5,
+              "venue_id": 14504,
+              "name": "Mauritania vs Congo DR",
+              "starting_at": "2025-03-25 21:00:00",
+              "result_info": "Congo DR won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742936400,
+              "participants": [
+                {
+                  "id": 18794,
+                  "sport_id": 1,
+                  "country_id": 2493,
+                  "venue_id": 14504,
+                  "gender": "male",
+                  "name": "Mauritania",
+                  "short_code": "MRT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18794.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16125761,
+                  "fixture_id": 18993957,
+                  "type_id": 48996,
+                  "participant_id": 18794,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125762,
+                  "fixture_id": 18993957,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16125539,
+                  "fixture_id": 18993957,
+                  "type_id": 2,
+                  "participant_id": 18794,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125537,
+                  "fixture_id": 18993957,
+                  "type_id": 1,
+                  "participant_id": 18794,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16125538,
+                  "fixture_id": 18993957,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16125535,
+                  "fixture_id": 18993957,
+                  "type_id": 1525,
+                  "participant_id": 18794,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16125540,
+                  "fixture_id": 18993957,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16125536,
+                  "fixture_id": 18993957,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323223,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-17",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993954,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323223,
+              "state_id": 5,
+              "venue_id": 3695,
+              "name": "Congo DR vs South Sudan",
+              "starting_at": "2025-03-21 16:00:00",
+              "result_info": "Congo DR won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742572800,
+              "participants": [
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 27826,
+                  "sport_id": 1,
+                  "country_id": 190317,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "South Sudan",
+                  "short_code": "SSD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/27826.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-26 13:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 5
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16093490,
+                  "fixture_id": 18993954,
+                  "type_id": 1,
+                  "participant_id": 27826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16093489,
+                  "fixture_id": 18993954,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16093488,
+                  "fixture_id": 18993954,
+                  "type_id": 1525,
+                  "participant_id": 27826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16093491,
+                  "fixture_id": 18993954,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16093493,
+                  "fixture_id": 18993954,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16093492,
+                  "fixture_id": 18993954,
+                  "type_id": 2,
+                  "participant_id": 27826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16093955,
+                  "fixture_id": 18993954,
+                  "type_id": 48996,
+                  "participant_id": 27826,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16093954,
+                  "fixture_id": 18993954,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323220,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-19",
+          "ending_at": "2023-11-21",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993947,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323220,
+              "state_id": 5,
+              "venue_id": 950,
+              "name": "Sudan vs Congo DR",
+              "starting_at": "2023-11-19 16:00:00",
+              "result_info": "Sudan won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700409600,
+              "participants": [
+                {
+                  "id": 18829,
+                  "sport_id": 1,
+                  "country_id": 56518,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Sudan",
+                  "short_code": "SDN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18829.png",
+                  "founded": 1936,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-01-03 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13527342,
+                  "fixture_id": 18993947,
+                  "type_id": 1525,
+                  "participant_id": 18829,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13527339,
+                  "fixture_id": 18993947,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13527343,
+                  "fixture_id": 18993947,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13527338,
+                  "fixture_id": 18993947,
+                  "type_id": 1,
+                  "participant_id": 18829,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13527528,
+                  "fixture_id": 18993947,
+                  "type_id": 2,
+                  "participant_id": 18829,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13527529,
+                  "fixture_id": 18993947,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323219,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2023-11-15",
+          "ending_at": "2023-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993942,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323219,
+              "state_id": 5,
+              "venue_id": 3695,
+              "name": "Congo DR vs Mauritania",
+              "starting_at": "2023-11-15 16:00:00",
+              "result_info": "Congo DR won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1700064000,
+              "participants": [
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18794,
+                  "sport_id": 1,
+                  "country_id": 2493,
+                  "venue_id": 14504,
+                  "gender": "male",
+                  "name": "Mauritania",
+                  "short_code": "MRT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18794.png",
+                  "founded": 1961,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 13510309,
+                  "fixture_id": 18993942,
+                  "type_id": 1525,
+                  "participant_id": 18794,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13510306,
+                  "fixture_id": 18993942,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13510308,
+                  "fixture_id": 18993942,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 13510307,
+                  "fixture_id": 18993942,
+                  "type_id": 1,
+                  "participant_id": 18794,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 13510332,
+                  "fixture_id": 18993942,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 13510333,
+                  "fixture_id": 18993942,
+                  "type_id": 2,
+                  "participant_id": 18794,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323221,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18993950,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323221,
+              "state_id": 5,
+              "venue_id": 14382,
+              "name": "Senegal vs Congo DR",
+              "starting_at": "2024-06-06 19:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1717700400,
+              "participants": [
+                {
+                  "id": 18558,
+                  "sport_id": 1,
+                  "country_id": 200,
+                  "venue_id": 14382,
+                  "gender": "male",
+                  "name": "Senegal",
+                  "short_code": "SEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18558.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 15581725,
+                  "fixture_id": 18993950,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15581724,
+                  "fixture_id": 18993950,
+                  "type_id": 48996,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14518526,
+                  "fixture_id": 18993950,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14518528,
+                  "fixture_id": 18993950,
+                  "type_id": 1525,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518527,
+                  "fixture_id": 18993950,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518525,
+                  "fixture_id": 18993950,
+                  "type_id": 1,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14518635,
+                  "fixture_id": 18993950,
+                  "type_id": 2,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518636,
+                  "fixture_id": 18993950,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323227,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-08",
+          "ending_at": "2025-10-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995131,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323227,
+              "state_id": 5,
+              "venue_id": 14373,
+              "name": "Togo vs Congo DR",
+              "starting_at": "2025-10-10 13:00:00",
+              "result_info": "Congo DR won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760101200,
+              "participants": [
+                {
+                  "id": 18549,
+                  "sport_id": 1,
+                  "country_id": 3039,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Togo",
+                  "short_code": "TGO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18549.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17210686,
+                  "fixture_id": 18995131,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17210678,
+                  "fixture_id": 18995131,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17210681,
+                  "fixture_id": 18995131,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17210676,
+                  "fixture_id": 18995131,
+                  "type_id": 1525,
+                  "participant_id": 18549,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17210683,
+                  "fixture_id": 18995131,
+                  "type_id": 2,
+                  "participant_id": 18549,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17211065,
+                  "fixture_id": 18995131,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17210680,
+                  "fixture_id": 18995131,
+                  "type_id": 1,
+                  "participant_id": 18549,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17211064,
+                  "fixture_id": 18995131,
+                  "type_id": 48996,
+                  "participant_id": 18549,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 323226,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465184,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 18995127,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77465184,
+              "group_id": 249492,
+              "aggregate_id": null,
+              "round_id": 323226,
+              "state_id": 5,
+              "venue_id": 3695,
+              "name": "Congo DR vs Senegal",
+              "starting_at": "2025-09-09 16:00:00",
+              "result_info": "Senegal won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757433600,
+              "participants": [
+                {
+                  "id": 18558,
+                  "sport_id": 1,
+                  "country_id": 200,
+                  "venue_id": 14382,
+                  "gender": "male",
+                  "name": "Senegal",
+                  "short_code": "SEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18558.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16925999,
+                  "fixture_id": 18995127,
+                  "type_id": 1,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16925998,
+                  "fixture_id": 18995127,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16926000,
+                  "fixture_id": 18995127,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16925996,
+                  "fixture_id": 18995127,
+                  "type_id": 1525,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16926002,
+                  "fixture_id": 18995127,
+                  "type_id": 2,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16926339,
+                  "fixture_id": 18995127,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16926340,
+                  "fixture_id": 18995127,
+                  "type_id": 48996,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16925994,
+                  "fixture_id": 18995127,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77476898,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-13",
+      "ending_at": "2025-11-13",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 372381,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372382,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372384,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372386,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372383,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 372385,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": null,
+          "ending_at": null,
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 392946,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77476898,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-13",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19595419,
+              "sport_id": 1,
+              "league_id": 711,
+              "season_id": 22005,
+              "stage_id": 77476898,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 392946,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Cameroon vs Congo DR",
+              "starting_at": "2025-11-13 19:00:00",
+              "result_info": "Congo DR won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763060400,
+              "participants": [
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18780,
+                  "sport_id": 1,
+                  "country_id": 593,
+                  "venue_id": 12155,
+                  "gender": "male",
+                  "name": "Cameroon",
+                  "short_code": "CMR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18780.png",
+                  "founded": 1959,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 06:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17437952,
+                  "fixture_id": 19595419,
+                  "type_id": 1525,
+                  "participant_id": 18780,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17437954,
+                  "fixture_id": 19595419,
+                  "type_id": 1,
+                  "participant_id": 18780,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17437956,
+                  "fixture_id": 19595419,
+                  "type_id": 2,
+                  "participant_id": 18780,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17437955,
+                  "fixture_id": 19595419,
+                  "type_id": 2,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17437953,
+                  "fixture_id": 19595419,
+                  "type_id": 1,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17437951,
+                  "fixture_id": 19595419,
+                  "type_id": 1525,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438136,
+                  "fixture_id": 19595419,
+                  "type_id": 48996,
+                  "participant_id": 18780,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438137,
+                  "fixture_id": 19595419,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77465182,
+      "sport_id": 1,
+      "league_id": 711,
+      "season_id": 22005,
+      "type_id": 224,
+      "name": "Play-offs - Final",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-11-16",
+      "ending_at": "2025-11-16",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19601161,
+          "sport_id": 1,
+          "league_id": 711,
+          "season_id": 22005,
+          "stage_id": 77465182,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 8,
+          "venue_id": 12581,
+          "name": "Nigeria vs Congo DR",
+          "starting_at": "2025-11-16 19:00:00",
+          "result_info": "Congo DR won after penalties.",
+          "leg": "1/1",
+          "details": null,
+          "length": null,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1763319600,
+          "participants": [
+            {
+              "id": 18552,
+              "sport_id": 1,
+              "country_id": 1320,
+              "venue_id": 3695,
+              "gender": "male",
+              "name": "Congo DR",
+              "short_code": "COD",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+              "founded": 1919,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:00:00",
+              "meta": {
+                "location": "away",
+                "winner": true,
+                "position": 2
+              }
+            },
+            {
+              "id": 18737,
+              "sport_id": 1,
+              "country_id": 716,
+              "venue_id": 12710,
+              "gender": "male",
+              "name": "Nigeria",
+              "short_code": "NGA",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18737.png",
+              "founded": 1945,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:45:00",
+              "meta": {
+                "location": "home",
+                "winner": false,
+                "position": 1
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 17465215,
+              "fixture_id": 19601161,
+              "type_id": 48996,
+              "participant_id": 18737,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 17465216,
+              "fixture_id": 19601161,
+              "type_id": 48996,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 17464744,
+              "fixture_id": 19601161,
+              "type_id": 1,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 17464741,
+              "fixture_id": 19601161,
+              "type_id": 1525,
+              "participant_id": 18737,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 17465313,
+              "fixture_id": 19601161,
+              "type_id": 3,
+              "participant_id": 18737,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 17464743,
+              "fixture_id": 19601161,
+              "type_id": 1,
+              "participant_id": 18737,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 17464742,
+              "fixture_id": 19601161,
+              "type_id": 1525,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 17465316,
+              "fixture_id": 19601161,
+              "type_id": 5314,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 17464745,
+              "fixture_id": 19601161,
+              "type_id": 2,
+              "participant_id": 18737,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 17465373,
+              "fixture_id": 19601161,
+              "type_id": 39,
+              "participant_id": 18737,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 17465374,
+              "fixture_id": 19601161,
+              "type_id": 39,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET_2ND_HALF"
+            },
+            {
+              "id": 17465315,
+              "fixture_id": 19601161,
+              "type_id": 5314,
+              "participant_id": 18737,
+              "score": {
+                "goals": 0,
+                "participant": "home"
+              },
+              "description": "ET_1ST_HALF"
+            },
+            {
+              "id": 17465314,
+              "fixture_id": 19601161,
+              "type_id": 3,
+              "participant_id": 18552,
+              "score": {
+                "goals": 0,
+                "participant": "away"
+              },
+              "description": "ET"
+            },
+            {
+              "id": 17465394,
+              "fixture_id": 19601161,
+              "type_id": 5,
+              "participant_id": 18552,
+              "score": {
+                "goals": 4,
+                "participant": "away"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            },
+            {
+              "id": 17464746,
+              "fixture_id": 19601161,
+              "type_id": 2,
+              "participant_id": 18552,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 17465393,
+              "fixture_id": 19601161,
+              "type_id": 5,
+              "participant_id": 18737,
+              "score": {
+                "goals": 3,
+                "participant": "home"
+              },
+              "description": "PENALTY_SHOOTOUT"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124658,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1968,
+    "remaining": 2241,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

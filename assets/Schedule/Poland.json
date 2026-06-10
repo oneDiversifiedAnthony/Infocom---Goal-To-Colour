@@ -1,0 +1,1765 @@
+{
+  "data": [
+    {
+      "id": 77464842,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-03-21",
+      "ending_at": "2025-11-18",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 1526,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 362707,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-07",
+          "ending_at": "2025-09-09",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345667,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362707,
+              "state_id": 5,
+              "venue_id": 19398,
+              "name": "Poland vs Finland",
+              "starting_at": "2025-09-07 18:45:00",
+              "result_info": "Poland won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757270700,
+              "participants": [
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18570,
+                  "sport_id": 1,
+                  "country_id": 1233,
+                  "venue_id": 6050,
+                  "gender": "male",
+                  "name": "Finland",
+                  "short_code": "FIN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18570.png",
+                  "founded": 1907,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 17:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16921051,
+                  "fixture_id": 19345667,
+                  "type_id": 1,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16921050,
+                  "fixture_id": 19345667,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16921052,
+                  "fixture_id": 19345667,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16921049,
+                  "fixture_id": 19345667,
+                  "type_id": 1525,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16921778,
+                  "fixture_id": 19345667,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16921779,
+                  "fixture_id": 19345667,
+                  "type_id": 48996,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16921048,
+                  "fixture_id": 19345667,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16921053,
+                  "fixture_id": 19345667,
+                  "type_id": 2,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362709,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "8",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-12",
+          "ending_at": "2025-10-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427908,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362709,
+              "state_id": 5,
+              "venue_id": 7594,
+              "name": "Lithuania vs Poland",
+              "starting_at": "2025-10-12 18:45:00",
+              "result_info": "Poland won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1760294700,
+              "participants": [
+                {
+                  "id": 27065,
+                  "sport_id": 1,
+                  "country_id": 2079,
+                  "venue_id": 7594,
+                  "gender": "male",
+                  "name": "Lithuania",
+                  "short_code": "LTU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/27065.png",
+                  "founded": 1922,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 16:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17231502,
+                  "fixture_id": 19427908,
+                  "type_id": 1525,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17231503,
+                  "fixture_id": 19427908,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17231898,
+                  "fixture_id": 19427908,
+                  "type_id": 48996,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17231506,
+                  "fixture_id": 19427908,
+                  "type_id": 2,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17231504,
+                  "fixture_id": 19427908,
+                  "type_id": 1,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17231899,
+                  "fixture_id": 19427908,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17231507,
+                  "fixture_id": 19427908,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17231505,
+                  "fixture_id": 19427908,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362708,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "7",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-09",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362703,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-24",
+          "ending_at": "2025-03-25",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345604,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362703,
+              "state_id": 5,
+              "venue_id": 14452,
+              "name": "Poland vs Malta",
+              "starting_at": "2025-03-24 19:45:00",
+              "result_info": "Poland won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742845500,
+              "participants": [
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18691,
+                  "sport_id": 1,
+                  "country_id": 2756,
+                  "venue_id": 974,
+                  "gender": "male",
+                  "name": "Malta",
+                  "short_code": "MLT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18691.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16123637,
+                  "fixture_id": 19345604,
+                  "type_id": 1525,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123639,
+                  "fixture_id": 19345604,
+                  "type_id": 1,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123636,
+                  "fixture_id": 19345604,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16123641,
+                  "fixture_id": 19345604,
+                  "type_id": 2,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123638,
+                  "fixture_id": 19345604,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16123640,
+                  "fixture_id": 19345604,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16123977,
+                  "fixture_id": 19345604,
+                  "type_id": 48996,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16123976,
+                  "fixture_id": 19345604,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362710,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "9",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19427947,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362710,
+              "state_id": 5,
+              "venue_id": 14452,
+              "name": "Poland vs Netherlands",
+              "starting_at": "2025-11-14 19:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763149500,
+              "participants": [
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17440492,
+                  "fixture_id": 19427947,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17440495,
+                  "fixture_id": 19427947,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17440493,
+                  "fixture_id": 19427947,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17440490,
+                  "fixture_id": 19427947,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17440491,
+                  "fixture_id": 19427947,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17440494,
+                  "fixture_id": 19427947,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17440815,
+                  "fixture_id": 19427947,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17440814,
+                  "fixture_id": 19427947,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362711,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "10",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-16",
+          "ending_at": "2025-11-18",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345768,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362711,
+              "state_id": 5,
+              "venue_id": 974,
+              "name": "Malta vs Poland",
+              "starting_at": "2025-11-17 19:45:00",
+              "result_info": "Poland won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1763408700,
+              "participants": [
+                {
+                  "id": 18691,
+                  "sport_id": 1,
+                  "country_id": 2756,
+                  "venue_id": 974,
+                  "gender": "male",
+                  "name": "Malta",
+                  "short_code": "MLT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18691.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 18:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17467265,
+                  "fixture_id": 19345768,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17467263,
+                  "fixture_id": 19345768,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17467262,
+                  "fixture_id": 19345768,
+                  "type_id": 1525,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17467506,
+                  "fixture_id": 19345768,
+                  "type_id": 48996,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17467266,
+                  "fixture_id": 19345768,
+                  "type_id": 2,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17467264,
+                  "fixture_id": 19345768,
+                  "type_id": 1,
+                  "participant_id": 18691,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17467267,
+                  "fixture_id": 19345768,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17467507,
+                  "fixture_id": 19345768,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362705,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-09",
+          "ending_at": "2025-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345633,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362705,
+              "state_id": 5,
+              "venue_id": 6050,
+              "name": "Finland vs Poland",
+              "starting_at": "2025-06-10 18:45:00",
+              "result_info": "Finland won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1749581100,
+              "participants": [
+                {
+                  "id": 18570,
+                  "sport_id": 1,
+                  "country_id": 1233,
+                  "venue_id": 6050,
+                  "gender": "male",
+                  "name": "Finland",
+                  "short_code": "FIN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/10/18570.png",
+                  "founded": 1907,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 17:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16605763,
+                  "fixture_id": 19345633,
+                  "type_id": 1525,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605764,
+                  "fixture_id": 19345633,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16605766,
+                  "fixture_id": 19345633,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605768,
+                  "fixture_id": 19345633,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605765,
+                  "fixture_id": 19345633,
+                  "type_id": 1,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16605767,
+                  "fixture_id": 19345633,
+                  "type_id": 2,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16605957,
+                  "fixture_id": 19345633,
+                  "type_id": 48996,
+                  "participant_id": 18570,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16605958,
+                  "fixture_id": 19345633,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362702,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-03-21",
+          "ending_at": "2025-03-22",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345592,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362702,
+              "state_id": 5,
+              "venue_id": 14452,
+              "name": "Poland vs Lithuania",
+              "starting_at": "2025-03-21 19:45:00",
+              "result_info": "Poland won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1742586300,
+              "participants": [
+                {
+                  "id": 27065,
+                  "sport_id": 1,
+                  "country_id": 2079,
+                  "venue_id": 7594,
+                  "gender": "male",
+                  "name": "Lithuania",
+                  "short_code": "LTU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/27065.png",
+                  "founded": 1922,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16094412,
+                  "fixture_id": 19345592,
+                  "type_id": 2,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094410,
+                  "fixture_id": 19345592,
+                  "type_id": 1,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094411,
+                  "fixture_id": 19345592,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16094408,
+                  "fixture_id": 19345592,
+                  "type_id": 1525,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16094413,
+                  "fixture_id": 19345592,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16094951,
+                  "fixture_id": 19345592,
+                  "type_id": 48996,
+                  "participant_id": 27065,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16094409,
+                  "fixture_id": 19345592,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16094950,
+                  "fixture_id": 19345592,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 362704,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-07",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 362706,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464842,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19345646,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464842,
+              "group_id": 249217,
+              "aggregate_id": null,
+              "round_id": 362706,
+              "state_id": 5,
+              "venue_id": 1795,
+              "name": "Netherlands vs Poland",
+              "starting_at": "2025-09-04 18:45:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1757011500,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16896221,
+                  "fixture_id": 19345646,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896220,
+                  "fixture_id": 19345646,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896224,
+                  "fixture_id": 19345646,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896223,
+                  "fixture_id": 19345646,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896222,
+                  "fixture_id": 19345646,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896407,
+                  "fixture_id": 19345646,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896225,
+                  "fixture_id": 19345646,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896406,
+                  "fixture_id": 19345646,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464841,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Semi-finals",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-26",
+      "ending_at": "2026-03-26",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 394752,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464841,
+          "name": "28",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2026-03-26",
+          "ending_at": "2026-03-26",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19604724,
+              "sport_id": 1,
+              "league_id": 720,
+              "season_id": 21887,
+              "stage_id": 77464841,
+              "group_id": null,
+              "aggregate_id": null,
+              "round_id": 394752,
+              "state_id": 5,
+              "venue_id": 14452,
+              "name": "Poland vs Albania",
+              "starting_at": "2026-03-26 19:45:00",
+              "result_info": "Poland won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1774554300,
+              "participants": [
+                {
+                  "id": 18699,
+                  "sport_id": 1,
+                  "country_id": 2,
+                  "venue_id": 19398,
+                  "gender": "male",
+                  "name": "Poland",
+                  "short_code": "POL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18641,
+                  "sport_id": 1,
+                  "country_id": 2454,
+                  "venue_id": 343635,
+                  "gender": "male",
+                  "name": "Albania",
+                  "short_code": "ALB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/17/18641.png",
+                  "founded": 1930,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 19688356,
+                  "fixture_id": 19604724,
+                  "type_id": 1,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 19688357,
+                  "fixture_id": 19604724,
+                  "type_id": 1,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 19688355,
+                  "fixture_id": 19604724,
+                  "type_id": 1525,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 19688358,
+                  "fixture_id": 19604724,
+                  "type_id": 2,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 19688359,
+                  "fixture_id": 19604724,
+                  "type_id": 2,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 19688354,
+                  "fixture_id": 19604724,
+                  "type_id": 1525,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 19688817,
+                  "fixture_id": 19604724,
+                  "type_id": 48996,
+                  "participant_id": 18699,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 19688818,
+                  "fixture_id": 19604724,
+                  "type_id": 48996,
+                  "participant_id": 18641,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464840,
+      "sport_id": 1,
+      "league_id": 720,
+      "season_id": 21887,
+      "type_id": 224,
+      "name": "Play-offs - Finals",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2026-03-31",
+      "ending_at": "2026-03-31",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "fixtures": [
+        {
+          "id": 19608779,
+          "sport_id": 1,
+          "league_id": 720,
+          "season_id": 21887,
+          "stage_id": 77464840,
+          "group_id": null,
+          "aggregate_id": null,
+          "round_id": null,
+          "state_id": 5,
+          "venue_id": 1668,
+          "name": "Sweden vs Poland",
+          "starting_at": "2026-03-31 18:45:00",
+          "result_info": "Sweden won after full-time.",
+          "leg": "1/1",
+          "details": null,
+          "length": 90,
+          "placeholder": false,
+          "has_odds": true,
+          "has_premium_odds": true,
+          "starting_at_timestamp": 1774982700,
+          "participants": [
+            {
+              "id": 18564,
+              "sport_id": 1,
+              "country_id": 47,
+              "venue_id": 1668,
+              "gender": "male",
+              "name": "Sweden",
+              "short_code": "SWE",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18564.png",
+              "founded": 1904,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-04 17:00:00",
+              "meta": {
+                "location": "home",
+                "winner": true,
+                "position": 1
+              }
+            },
+            {
+              "id": 18699,
+              "sport_id": 1,
+              "country_id": 2,
+              "venue_id": 19398,
+              "gender": "male",
+              "name": "Poland",
+              "short_code": "POL",
+              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/11/18699.png",
+              "founded": 1919,
+              "type": "national",
+              "placeholder": false,
+              "last_played_at": "2026-06-03 18:45:00",
+              "meta": {
+                "location": "away",
+                "winner": false,
+                "position": 2
+              }
+            }
+          ],
+          "scores": [
+            {
+              "id": 19730690,
+              "fixture_id": 19608779,
+              "type_id": 1525,
+              "participant_id": 18564,
+              "score": {
+                "goals": 3,
+                "participant": "home"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19730695,
+              "fixture_id": 19608779,
+              "type_id": 2,
+              "participant_id": 18699,
+              "score": {
+                "goals": 2,
+                "participant": "away"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19730691,
+              "fixture_id": 19608779,
+              "type_id": 1525,
+              "participant_id": 18699,
+              "score": {
+                "goals": 2,
+                "participant": "away"
+              },
+              "description": "CURRENT"
+            },
+            {
+              "id": 19732577,
+              "fixture_id": 19608779,
+              "type_id": 48996,
+              "participant_id": 18699,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19730694,
+              "fixture_id": 19608779,
+              "type_id": 2,
+              "participant_id": 18564,
+              "score": {
+                "goals": 3,
+                "participant": "home"
+              },
+              "description": "2ND_HALF"
+            },
+            {
+              "id": 19732576,
+              "fixture_id": 19608779,
+              "type_id": 48996,
+              "participant_id": 18564,
+              "score": {
+                "goals": 1,
+                "participant": "home"
+              },
+              "description": "2ND_HALF_ONLY"
+            },
+            {
+              "id": 19730692,
+              "fixture_id": 19608779,
+              "type_id": 1,
+              "participant_id": 18564,
+              "score": {
+                "goals": 2,
+                "participant": "home"
+              },
+              "description": "1ST_HALF"
+            },
+            {
+              "id": 19730693,
+              "fixture_id": 19608779,
+              "type_id": 1,
+              "participant_id": 18699,
+              "score": {
+                "goals": 1,
+                "participant": "away"
+              },
+              "description": "1ST_HALF"
+            }
+          ]
+        }
+      ],
+      "rounds": []
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124638,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1988,
+    "remaining": 2259,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

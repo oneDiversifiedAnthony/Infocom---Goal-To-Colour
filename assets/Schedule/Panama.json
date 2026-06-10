@@ -1,0 +1,2000 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609151,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253030,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11542,
+              "name": "Panama vs Croatia",
+              "starting_at": "2026-06-23 23:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 46",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782255600,
+              "participants": [
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18588,
+                  "sport_id": 1,
+                  "country_id": 266,
+                  "venue_id": 176,
+                  "gender": "male",
+                  "name": "Croatia",
+                  "short_code": "CRO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
+                  "founded": 1912,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609199,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253030,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 21826,
+              "name": "Panama vs England",
+              "starting_at": "2026-06-27 21:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 67",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782594000,
+              "participants": [
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18645,
+                  "sport_id": 1,
+                  "country_id": 462,
+                  "venue_id": 1315,
+                  "gender": "male",
+                  "name": "England",
+                  "short_code": "ENG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/21/18645.png",
+                  "founded": 1863,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609167,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253030,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 11542,
+              "name": "Ghana vs Panama",
+              "starting_at": "2026-06-17 23:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 21",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781737200,
+              "participants": [
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18553,
+                  "sport_id": 1,
+                  "country_id": 468,
+                  "venue_id": 4428,
+                  "gender": "male",
+                  "name": "Ghana",
+                  "short_code": "GHA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18553.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-02 18:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464844,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Round 2",
+      "sort_order": 2,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2024-06-05",
+      "ending_at": "2025-06-11",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 336851,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-05",
+          "ending_at": "2024-06-07",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110989,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249227,
+              "aggregate_id": null,
+              "round_id": 336851,
+              "state_id": 5,
+              "venue_id": 6860,
+              "name": "Panama vs Guyana",
+              "starting_at": "2024-06-07 00:30:00",
+              "result_info": "Panama won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717720200,
+              "participants": [
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18877,
+                  "sport_id": 1,
+                  "country_id": 1985,
+                  "venue_id": 14539,
+                  "gender": "male",
+                  "name": "Guyana",
+                  "short_code": "GUY",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18877.png",
+                  "founded": 1902,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14518890,
+                  "fixture_id": 19110989,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 15705688,
+                  "fixture_id": 19110989,
+                  "type_id": 48996,
+                  "participant_id": 18877,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705687,
+                  "fixture_id": 19110989,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14518889,
+                  "fixture_id": 19110989,
+                  "type_id": 1525,
+                  "participant_id": 18877,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14518948,
+                  "fixture_id": 19110989,
+                  "type_id": 2,
+                  "participant_id": 18877,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518947,
+                  "fixture_id": 19110989,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14518888,
+                  "fixture_id": 19110989,
+                  "type_id": 1,
+                  "participant_id": 18877,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14518887,
+                  "fixture_id": 19110989,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336852,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-08",
+          "ending_at": "2024-06-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110991,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249227,
+              "aggregate_id": null,
+              "round_id": 336852,
+              "state_id": 5,
+              "venue_id": 5009,
+              "name": "Montserrat vs Panama",
+              "starting_at": "2024-06-10 01:00:00",
+              "result_info": "Panama won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1717981200,
+              "participants": [
+                {
+                  "id": 27043,
+                  "sport_id": 1,
+                  "country_id": 14837,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Montserrat",
+                  "short_code": "MSR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/27043.png",
+                  "founded": null,
+                  "type": "domestic",
+                  "placeholder": false,
+                  "last_played_at": "2025-06-11 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 14532574,
+                  "fixture_id": 19110991,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14532669,
+                  "fixture_id": 19110991,
+                  "type_id": 2,
+                  "participant_id": 27043,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 14532670,
+                  "fixture_id": 19110991,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 15705692,
+                  "fixture_id": 19110991,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 15705691,
+                  "fixture_id": 19110991,
+                  "type_id": 48996,
+                  "participant_id": 27043,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 14532573,
+                  "fixture_id": 19110991,
+                  "type_id": 1,
+                  "participant_id": 27043,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 14532575,
+                  "fixture_id": 19110991,
+                  "type_id": 1525,
+                  "participant_id": 27043,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 14532576,
+                  "fixture_id": 19110991,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336853,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2024-06-11",
+          "ending_at": "2025-06-04",
+          "games_in_current_week": false,
+          "fixtures": []
+        },
+        {
+          "id": 336854,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-06",
+          "ending_at": "2025-06-08",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110995,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249227,
+              "aggregate_id": null,
+              "round_id": 336854,
+              "state_id": 5,
+              "venue_id": null,
+              "name": "Belize vs Panama",
+              "starting_at": "2025-06-08 01:00:00",
+              "result_info": "Panama won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749344400,
+              "participants": [
+                {
+                  "id": 18899,
+                  "sport_id": 1,
+                  "country_id": 144816,
+                  "venue_id": 14547,
+                  "gender": "male",
+                  "name": "Belize",
+                  "short_code": "BLZ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18899.png",
+                  "founded": 1980,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-30 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 5
+                  }
+                },
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16599143,
+                  "fixture_id": 19110995,
+                  "type_id": 48996,
+                  "participant_id": 18899,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16599144,
+                  "fixture_id": 19110995,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16598858,
+                  "fixture_id": 19110995,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16598853,
+                  "fixture_id": 19110995,
+                  "type_id": 1525,
+                  "participant_id": 18899,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16598854,
+                  "fixture_id": 19110995,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16598855,
+                  "fixture_id": 19110995,
+                  "type_id": 1,
+                  "participant_id": 18899,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16598856,
+                  "fixture_id": 19110995,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16598857,
+                  "fixture_id": 19110995,
+                  "type_id": 2,
+                  "participant_id": 18899,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 336855,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464844,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-06-10",
+          "ending_at": "2025-06-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19110997,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464844,
+              "group_id": 249227,
+              "aggregate_id": null,
+              "round_id": 336855,
+              "state_id": 5,
+              "venue_id": 6860,
+              "name": "Panama vs Nicaragua",
+              "starting_at": "2025-06-11 00:00:00",
+              "result_info": "Panama won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1749600000,
+              "participants": [
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18999,
+                  "sport_id": 1,
+                  "country_id": 3990,
+                  "venue_id": 5009,
+                  "gender": "male",
+                  "name": "Nicaragua",
+                  "short_code": "NIC",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18999.png",
+                  "founded": 1931,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 22:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16606105,
+                  "fixture_id": 19110997,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16606108,
+                  "fixture_id": 19110997,
+                  "type_id": 1,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16606356,
+                  "fixture_id": 19110997,
+                  "type_id": 48996,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16606355,
+                  "fixture_id": 19110997,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16606106,
+                  "fixture_id": 19110997,
+                  "type_id": 1525,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16606107,
+                  "fixture_id": 19110997,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16606109,
+                  "fixture_id": 19110997,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16606110,
+                  "fixture_id": 19110997,
+                  "type_id": 2,
+                  "participant_id": 18999,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 77464843,
+      "sport_id": 1,
+      "league_id": 717,
+      "season_id": 21888,
+      "type_id": 223,
+      "name": "Final round",
+      "sort_order": 3,
+      "finished": true,
+      "is_current": false,
+      "starting_at": "2025-09-04",
+      "ending_at": "2025-11-19",
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 388774,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "5",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-13",
+          "ending_at": "2025-11-14",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567613,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249221,
+              "aggregate_id": null,
+              "round_id": 388774,
+              "state_id": 5,
+              "venue_id": 1620,
+              "name": "Guatemala vs Panama",
+              "starting_at": "2025-11-14 02:00:00",
+              "result_info": "Panama won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763085600,
+              "participants": [
+                {
+                  "id": 18618,
+                  "sport_id": 1,
+                  "country_id": 53128,
+                  "venue_id": 11129,
+                  "gender": "male",
+                  "name": "Guatemala",
+                  "short_code": "GTM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18618.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 3
+                  }
+                },
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17438284,
+                  "fixture_id": 19567613,
+                  "type_id": 1525,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438287,
+                  "fixture_id": 19567613,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438285,
+                  "fixture_id": 19567613,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17438286,
+                  "fixture_id": 19567613,
+                  "type_id": 1,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17438288,
+                  "fixture_id": 19567613,
+                  "type_id": 2,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438289,
+                  "fixture_id": 19567613,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17438345,
+                  "fixture_id": 19567613,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17438344,
+                  "fixture_id": 19567613,
+                  "type_id": 48996,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388770,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "1",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-04",
+          "ending_at": "2025-09-06",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567589,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249221,
+              "aggregate_id": null,
+              "round_id": 388770,
+              "state_id": 5,
+              "venue_id": 14729,
+              "name": "Suriname vs Panama",
+              "starting_at": "2025-09-04 21:30:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757021400,
+              "participants": [
+                {
+                  "id": 18911,
+                  "sport_id": 1,
+                  "country_id": 2088,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Suriname",
+                  "short_code": "SUR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18911.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-26 22:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16896421,
+                  "fixture_id": 19567589,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896418,
+                  "fixture_id": 19567589,
+                  "type_id": 1525,
+                  "participant_id": 18911,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896419,
+                  "fixture_id": 19567589,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16896420,
+                  "fixture_id": 19567589,
+                  "type_id": 1,
+                  "participant_id": 18911,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16896477,
+                  "fixture_id": 19567589,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896423,
+                  "fixture_id": 19567589,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16896476,
+                  "fixture_id": 19567589,
+                  "type_id": 48996,
+                  "participant_id": 18911,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16896422,
+                  "fixture_id": 19567589,
+                  "type_id": 2,
+                  "participant_id": 18911,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388773,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "4",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-14",
+          "ending_at": "2025-10-15",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567609,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249221,
+              "aggregate_id": null,
+              "round_id": 388773,
+              "state_id": 5,
+              "venue_id": 6860,
+              "name": "Panama vs Suriname",
+              "starting_at": "2025-10-15 01:00:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760490000,
+              "participants": [
+                {
+                  "id": 18911,
+                  "sport_id": 1,
+                  "country_id": 2088,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Suriname",
+                  "short_code": "SUR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18911.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-26 22:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17237774,
+                  "fixture_id": 19567609,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17237770,
+                  "fixture_id": 19567609,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17237767,
+                  "fixture_id": 19567609,
+                  "type_id": 1525,
+                  "participant_id": 18911,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17237771,
+                  "fixture_id": 19567609,
+                  "type_id": 1,
+                  "participant_id": 18911,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17237773,
+                  "fixture_id": 19567609,
+                  "type_id": 2,
+                  "participant_id": 18911,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17237772,
+                  "fixture_id": 19567609,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17237871,
+                  "fixture_id": 19567609,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17237872,
+                  "fixture_id": 19567609,
+                  "type_id": 48996,
+                  "participant_id": 18911,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388771,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "2",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-09-09",
+          "ending_at": "2025-09-10",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567596,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249221,
+              "aggregate_id": null,
+              "round_id": 388771,
+              "state_id": 5,
+              "venue_id": 6860,
+              "name": "Panama vs Guatemala",
+              "starting_at": "2025-09-09 01:30:00",
+              "result_info": "Game ended in draw.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1757381400,
+              "participants": [
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18618,
+                  "sport_id": 1,
+                  "country_id": 53128,
+                  "venue_id": 11129,
+                  "gender": "male",
+                  "name": "Guatemala",
+                  "short_code": "GTM",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18618.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 16925027,
+                  "fixture_id": 19567596,
+                  "type_id": 1,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16925025,
+                  "fixture_id": 19567596,
+                  "type_id": 1525,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16925026,
+                  "fixture_id": 19567596,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 16925024,
+                  "fixture_id": 19567596,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 16925028,
+                  "fixture_id": 19567596,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 16925074,
+                  "fixture_id": 19567596,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16925075,
+                  "fixture_id": 19567596,
+                  "type_id": 48996,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 16925029,
+                  "fixture_id": 19567596,
+                  "type_id": 2,
+                  "participant_id": 18618,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388775,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "6",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-11-19",
+          "ending_at": "2025-11-19",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567618,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249221,
+              "aggregate_id": null,
+              "round_id": 388775,
+              "state_id": 5,
+              "venue_id": 6860,
+              "name": "Panama vs El Salvador",
+              "starting_at": "2025-11-19 01:00:00",
+              "result_info": "Panama won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1763514000,
+              "participants": [
+                {
+                  "id": 18725,
+                  "sport_id": 1,
+                  "country_id": 35008,
+                  "venue_id": 5957,
+                  "gender": "male",
+                  "name": "El Salvador",
+                  "short_code": "SLV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18725.png",
+                  "founded": 1935,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": true,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17471031,
+                  "fixture_id": 19567618,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471028,
+                  "fixture_id": 19567618,
+                  "type_id": 1525,
+                  "participant_id": 18725,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471029,
+                  "fixture_id": 19567618,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17471030,
+                  "fixture_id": 19567618,
+                  "type_id": 1,
+                  "participant_id": 18725,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17471033,
+                  "fixture_id": 19567618,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471032,
+                  "fixture_id": 19567618,
+                  "type_id": 2,
+                  "participant_id": 18725,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17471132,
+                  "fixture_id": 19567618,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17471133,
+                  "fixture_id": 19567618,
+                  "type_id": 48996,
+                  "participant_id": 18725,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 388772,
+          "sport_id": 1,
+          "league_id": 717,
+          "season_id": 21888,
+          "stage_id": 77464843,
+          "name": "3",
+          "finished": true,
+          "is_current": false,
+          "starting_at": "2025-10-10",
+          "ending_at": "2025-10-11",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19567603,
+              "sport_id": 1,
+              "league_id": 717,
+              "season_id": 21888,
+              "stage_id": 77464843,
+              "group_id": 249221,
+              "aggregate_id": null,
+              "round_id": 388772,
+              "state_id": 5,
+              "venue_id": 5957,
+              "name": "El Salvador vs Panama",
+              "starting_at": "2025-10-11 01:00:00",
+              "result_info": "Panama won after full-time.",
+              "leg": "1/1",
+              "details": null,
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": false,
+              "starting_at_timestamp": 1760144400,
+              "participants": [
+                {
+                  "id": 18725,
+                  "sport_id": 1,
+                  "country_id": 35008,
+                  "venue_id": 5957,
+                  "gender": "male",
+                  "name": "El Salvador",
+                  "short_code": "SLV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18725.png",
+                  "founded": 1935,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": false,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": true,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 17212636,
+                  "fixture_id": 19567603,
+                  "type_id": 2,
+                  "participant_id": 18725,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17212637,
+                  "fixture_id": 19567603,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 17212633,
+                  "fixture_id": 19567603,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17212632,
+                  "fixture_id": 19567603,
+                  "type_id": 1525,
+                  "participant_id": 18725,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 17212634,
+                  "fixture_id": 19567603,
+                  "type_id": 1,
+                  "participant_id": 18725,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17212778,
+                  "fixture_id": 19567603,
+                  "type_id": 48996,
+                  "participant_id": 18725,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 17212635,
+                  "fixture_id": 19567603,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 17212779,
+                  "fixture_id": 19567603,
+                  "type_id": 48996,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124637,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1989,
+    "remaining": 2260,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

@@ -1,0 +1,280 @@
+{
+  "data": [
+    {
+      "id": 77478590,
+      "sport_id": 1,
+      "league_id": 732,
+      "season_id": 26618,
+      "type_id": 223,
+      "name": "Group Stage",
+      "sort_order": 1,
+      "finished": false,
+      "is_current": false,
+      "starting_at": "2026-06-11",
+      "ending_at": "2026-06-28",
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": null,
+      "aggregates": [],
+      "rounds": [
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609128,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 181421,
+              "name": "Mexico vs Korea Republic",
+              "starting_at": "2026-06-19 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 28",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781830800,
+              "participants": [
+                {
+                  "id": 18567,
+                  "sport_id": 1,
+                  "country_id": 712,
+                  "venue_id": 175,
+                  "gender": "male",
+                  "name": "Korea Republic",
+                  "short_code": "KOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
+                  "founded": 1933,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18576,
+                  "sport_id": 1,
+                  "country_id": 458,
+                  "venue_id": 14659,
+                  "gender": "male",
+                  "name": "Mexico",
+                  "short_code": "MEX",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
+                  "founded": 1927,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395362,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "3",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-24",
+          "ending_at": "2026-06-28",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609185,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395362,
+              "state_id": 1,
+              "venue_id": 1599,
+              "name": "Czech Republic vs Mexico",
+              "starting_at": "2026-06-25 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 53",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782349200,
+              "participants": [
+                {
+                  "id": 18718,
+                  "sport_id": 1,
+                  "country_id": 245,
+                  "venue_id": 1619,
+                  "gender": "male",
+                  "name": "Czech Republic",
+                  "short_code": "CZE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18718.png",
+                  "founded": 1901,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 00:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18576,
+                  "sport_id": 1,
+                  "country_id": 458,
+                  "venue_id": 14659,
+                  "gender": "male",
+                  "name": "Mexico",
+                  "short_code": "MEX",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
+                  "founded": 1927,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395361,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "1",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-11",
+          "ending_at": "2026-06-18",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609127,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395361,
+              "state_id": 1,
+              "venue_id": 1599,
+              "name": "Mexico vs South Africa",
+              "starting_at": "2026-06-11 19:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 1",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781204400,
+              "participants": [
+                {
+                  "id": 18576,
+                  "sport_id": 1,
+                  "country_id": 458,
+                  "venue_id": 14659,
+                  "gender": "male",
+                  "name": "Mexico",
+                  "short_code": "MEX",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
+                  "founded": 1927,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-05 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18555,
+                  "sport_id": 1,
+                  "country_id": 146,
+                  "venue_id": 1519,
+                  "gender": "male",
+                  "name": "South Africa",
+                  "short_code": "ZAF",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
+                  "founded": 1991,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-05-29 16:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "subscription": [
+    {
+      "meta": {
+        "current_timestamp": 1781124633,
+        "next_billing_cycle": "2026-07-03T15:01:37 UTC"
+      },
+      "plans": [
+        {
+          "plan": "World Cup 2026",
+          "sport": "Football",
+          "category": "Advanced"
+        }
+      ],
+      "add_ons": [],
+      "widgets": [],
+      "bundles": []
+    }
+  ],
+  "rate_limit": {
+    "resets_in_seconds": 1993,
+    "remaining": 2265,
+    "requested_entity": "Stage"
+  },
+  "timezone": "UTC"
+}

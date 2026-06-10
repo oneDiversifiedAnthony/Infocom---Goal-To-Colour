@@ -111,8 +111,9 @@ class StatusBar:
                                           fill="#ffffff", font=("Consolas", 12, "bold"),
                                           anchor="center")
 
-    def update_rate_limit(self, remaining, total, resets_in):
-        self.rate_label.config(text=f"API: {remaining}")
+    def update_rate_limit(self, remaining, total, resets_in, api_ok=True):
+        self.rate_label.config(text=f"API: {remaining}",
+                               fg="#28a745" if api_ok else "#ff0000")
         minutes = resets_in // 60
         seconds = resets_in % 60
         self.rate_reset_label.config(text=f"{minutes}m{seconds}s")

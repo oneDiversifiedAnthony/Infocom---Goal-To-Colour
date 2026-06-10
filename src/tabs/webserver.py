@@ -50,6 +50,30 @@ try:
 except FileNotFoundError:
     _LOGO_B64 = ""
 
+# Load flag SVG data
+_FLAGS_PATH = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "assets", "Flags.json")
+try:
+    with open(_FLAGS_PATH, "r", encoding="utf-8") as _f:
+        _FLAGS_DATA = json.load(_f).get("flags", {})
+except (FileNotFoundError, json.JSONDecodeError):
+    _FLAGS_DATA = {}
+
+
+def _flag_svg(name, width=48, height=32):
+    """Return an inline flag SVG element for a country, or empty string."""
+    entry = _FLAGS_DATA.get(name)
+    if not entry:
+        return ""
+    svg = entry.get("svg", "")
+    if not svg:
+        return ""
+    # Wrap in a sized container div
+    return (
+        f'<div style="display:inline-block;width:{width}px;height:{height}px;'
+        f'border:1px solid #555;border-radius:2px;overflow:hidden;vertical-align:middle;'
+        f'margin-right:4px;">{svg}</div>'
+    )
+
 # Shared state dict updated by the main app
 _state = {
     "colours": [[0, 0, 0], [0, 0, 0], [0, 0, 0]],
@@ -122,22 +146,12 @@ def _build_html():
             '<div style="background:#ff4444;color:white;padding:16px;'
             'text-align:center;font-size:28px;font-weight:bold;'
             'border-radius:8px;margin:12px 0;animation:blink 0.5s infinite alternate;">'
-            f'GOAL! {team}</div>'
+            f'GOAL! {_flag_svg(team, width=48, height=32)} {team}</div>'
         )
 
-    def _team_swatches(name):
-        """Generate small inline colour swatches for a team."""
-        t = teams.get(name, {})
-        cols = t.get("colours", [[0, 0, 0], [0, 0, 0], [0, 0, 0]])
-        html = ""
-        for rgb in cols:
-            hex_c = f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
-            html += (
-                f'<span style="display:inline-block;width:14px;height:14px;'
-                f'background:{hex_c};border:1px solid #555;margin:0 1px;'
-                f'vertical-align:middle;border-radius:2px;"></span>'
-            )
-        return html
+    def _team_flag(name):
+        """Generate an inline flag for a team in the schedule."""
+        return _flag_svg(name, width=30, height=20)
 
     # Schedule table
     schedule_rows = ""
@@ -177,7 +191,7 @@ def _build_html():
             f'<td style="padding:6px;color:#0088ff;font-family:monospace;">{time_display}</td>'
             f'<td style="padding:6px;color:#888;">{group}</td>'
             f'<td style="padding:6px;font-weight:bold;">'
-            f'{_team_swatches(home)} {home} vs {away} {_team_swatches(away)}</td>'
+            f'{_team_flag(home)} {home} vs {away} {_team_flag(away)}</td>'
             f'<td style="padding:6px;color:#888;font-size:13px;">{venue}</td></tr>'
         )
 
@@ -229,7 +243,10 @@ def _build_html():
 {goal_html}
 
 <h2>Current Colours — {team}</h2>
-{swatch_html}
+<div style="display:flex;align-items:center;gap:24px;">
+<div>{swatch_html}</div>
+{_flag_svg(team, width=200, height=133)}
+</div>
 
 <h2>Schedule</h2>
 <table>{schedule_rows}</table>
@@ -271,6 +288,7 @@ def _build_testing_html():
         '</div></button></form>'
     )
 
+    active_team = _state["team_name"] or ""
     for name in sorted_names:
         team = teams[name]
         colours = team.get("colours", [[0, 0, 0], [0, 0, 0], [0, 0, 0]])
@@ -278,7 +296,7 @@ def _build_testing_html():
         for rgb in colours:
             hex_c = f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
             swatches += (
-                f'<div style="flex:1;height:24px;background:{hex_c};'
+                f'<div style="flex:1;height:20px;background:{hex_c};'
                 f'border:1px solid #333;border-radius:3px;"></div>'
             )
         # Escape name for HTML
@@ -288,16 +306,22 @@ def _build_testing_html():
         trigger = team.get("trigger", {})
         ch = trigger.get("channel", "")
         ch_label = f' <span style="color:#888;font-size:10px;">({ch})</span>' if ch else ""
+        is_active = name == active_team
+        active_cls = " active-team" if is_active else ""
+        flag = _flag_svg(name, width=54, height=36)
         buttons_html += (
             f'<form method="POST" action="/testing" style="display:inline-block;margin:4px;">'
             f'<input type="hidden" name="action" value="goal">'
             f'<input type="hidden" name="team" value="{safe_name}">'
-            f'<button type="submit" style="width:140px;height:80px;background:#2a2a2a;'
+            f'<button type="submit" class="{active_cls}" style="width:160px;height:100px;background:#2a2a2a;'
             f'border:2px solid #555;border-radius:8px;cursor:pointer;padding:4px;'
             f'vertical-align:top;">'
-            f'<div style="color:#fff;font-size:12px;font-weight:bold;">'
-            f'<span style="font-size:18px;">{first}</span>{rest}{ch_label}</div>'
-            f'<div style="display:flex;gap:2px;margin-top:4px;">{swatches}</div>'
+            f'<div style="color:#fff;font-size:11px;font-weight:bold;">'
+            f'<span style="font-size:16px;">{first}</span>{rest}{ch_label}</div>'
+            f'<div style="display:flex;align-items:center;gap:4px;margin-top:3px;">'
+            f'{flag}'
+            f'<div style="display:flex;flex:1;gap:2px;">{swatches}</div>'
+            f'</div>'
             f'</button></form>'
         )
 
@@ -325,7 +349,7 @@ def _build_testing_html():
             f'<div style="background:#ff4444;color:white;padding:10px;'
             f'text-align:center;font-size:22px;font-weight:bold;'
             f'border-radius:6px;margin:8px 0;animation:blink 0.5s infinite alternate;">'
-            f'GOAL! {team_name}</div>'
+            f'GOAL! {_flag_svg(team_name, width=40, height=27)} {team_name}</div>'
         )
 
     html = f"""<!DOCTYPE html>
@@ -336,6 +360,7 @@ def _build_testing_html():
 <title>World Cup Colour - Testing</title>
 <style>
   @keyframes blink {{ 0% {{ opacity:1; }} 100% {{ opacity:0.4; }} }}
+  @keyframes glow {{ 0% {{ box-shadow:0 0 8px #ff4444,0 0 16px #ff4444; }} 100% {{ box-shadow:0 0 4px #ff8800,0 0 8px #ff8800; }} }}
   body {{ background:#1a1a1a; color:#e0e0e0; font-family:'Segoe UI',sans-serif;
          margin:0; padding:20px; }}
   .container {{ max-width:1200px; margin:0 auto; }}
@@ -343,6 +368,7 @@ def _build_testing_html():
              border-bottom:2px solid #0066cc; padding-bottom:12px; margin-bottom:16px; }}
   h1 {{ color:#0066cc; margin:0; }}
   .status {{ background:#222; padding:12px 20px; border-radius:8px; margin-top:16px; }}
+  .active-team {{ border:2px solid #ff4444 !important; animation:glow 0.6s infinite alternate; }}
 </style>
 </head>
 <body>
@@ -357,7 +383,7 @@ def _build_testing_html():
 {goal_banner}
 
 <div class="status">
-  <div style="font-size:18px;font-weight:bold;margin-bottom:8px;">Current: {team_name}</div>
+  <div style="font-size:18px;font-weight:bold;margin-bottom:8px;">Current: {_flag_svg(team_name, width=40, height=27)} {team_name}</div>
   {cur_swatches}
 </div>
 
