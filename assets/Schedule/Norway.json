@@ -9,7 +9,7 @@
       "name": "Group Stage",
       "sort_order": 1,
       "finished": false,
-      "is_current": false,
+      "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
       "games_in_current_week": true,
@@ -223,7 +223,7 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": null
+                    "position": 1
                   }
                 },
                 {
@@ -242,7 +242,7 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": null
+                    "position": 4
                   }
                 }
               ],
@@ -1670,7 +1670,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781125646,
+        "current_timestamp": 1781198846,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1686,8 +1686,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 980,
-    "remaining": 2118,
+    "resets_in_seconds": 3558,
+    "remaining": 2444,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

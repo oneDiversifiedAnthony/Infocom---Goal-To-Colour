@@ -190,9 +190,24 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
     canvas.create_window((0, 0), window=scroll_frame, anchor="nw")
     canvas.configure(yscrollcommand=scrollbar.set)
 
-    # Las Vegas clock panel on the right (primary)
+    # Clock panel on the right
     clock_frame = tk.Frame(container, padx=27, pady=20)
     clock_frame.pack(side="right", fill="y")
+
+    # ── Next game countdown ──────────────────────────────────────────
+    countdown_title = tk.Label(clock_frame, text="", font=("Segoe UI", 14, "bold"),
+                               fg="#ffcc00")
+    countdown_title.pack(anchor="n")
+    countdown_label = tk.Label(clock_frame, text="", font=("Consolas", 26, "bold"),
+                                fg="#ffcc00")
+    countdown_label.pack(anchor="n", pady=(4, 0))
+    countdown_match = tk.Label(clock_frame, text="", font=("Segoe UI", 12),
+                                fg="#888888")
+    countdown_match.pack(anchor="n", pady=(2, 0))
+    countdown_sep = ttk.Separator(clock_frame, orient="horizontal")
+    countdown_sep.pack(fill="x", pady=(14, 14))
+
+    # Las Vegas clock
     tk.Label(clock_frame, text="Las Vegas", font=("Segoe UI", 17, "bold"),
              fg="#cc6600").pack(anchor="n")
     lv_time_label = tk.Label(clock_frame, text="", font=("Consolas", 30, "bold"),
@@ -224,6 +239,21 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
                               fg="#888888")
     utc_date_label.pack(anchor="n", pady=(3, 0))
 
+    def _find_next_game_today(now_utc):
+        """Find the next upcoming game today (UTC date)."""
+        today_str = now_utc.strftime("%Y-%m-%d")
+        for g in all_games:
+            sa = g["starting_at"]
+            if not sa.startswith(today_str):
+                continue
+            try:
+                kick = datetime.strptime(sa, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+            except ValueError:
+                continue
+            if kick > now_utc:
+                return g, kick
+        return None, None
+
     def _update_clock():
         now_utc = datetime.now(timezone.utc)
         utc_time_label.config(text=now_utc.strftime("%H:%M:%S"))
@@ -234,6 +264,22 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
         now_to = now_utc.astimezone(to_tz)
         to_time_label.config(text=now_to.strftime("%H:%M:%S"))
         to_date_label.config(text=now_to.strftime("%a %d %b %Y"))
+
+        # Countdown to next game today
+        game, kick = _find_next_game_today(now_utc)
+        if game and kick:
+            diff = int((kick - now_utc).total_seconds())
+            h, rem = divmod(diff, 3600)
+            m, s = divmod(rem, 60)
+            countdown_title.config(text="TIME UNTIL NEXT GAME")
+            countdown_label.config(text=f"{h:02d}:{m:02d}:{s:02d}")
+            countdown_match.config(text=f"{game['home']} vs {game['away']}")
+            countdown_sep.pack(fill="x", pady=(14, 14))
+        else:
+            countdown_title.config(text="")
+            countdown_label.config(text="")
+            countdown_match.config(text="")
+
         tab.after(1000, _update_clock)
     _update_clock()
 

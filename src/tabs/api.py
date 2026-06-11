@@ -43,7 +43,6 @@ from src.tabs.api_tree import build_tree_subtab
 from src.tabs.api_table import build_table_subtab
 from src.tabs.api_changes import build_changes_subtab
 from src.tabs.api_calllog import build_calllog_subtab
-from src.tabs.api_schedule import build_schedule_subtab
 
 
 DEFAULT_URL = "https://api.sportmonks.com/v3/football/livescores/inplay?api_token={{api_token}}"
@@ -67,7 +66,13 @@ def _load_env_token():
 
 def build_api_tab(notebook, status_bar=None):
     tab = tk.Frame(notebook)
-    notebook.add(tab, text="API")
+    notebook.add(tab, text="API Livescore")
+
+    # Holder for schedule fetch callback, set later by gui.py
+    _fetch_schedule_cb = [None]
+
+    def set_fetch_schedule(cb):
+        _fetch_schedule_cb[0] = cb
 
     os.makedirs(CALL_LOG_DIR, exist_ok=True)
 
@@ -111,7 +116,6 @@ def build_api_tab(notebook, status_bar=None):
     RATE_LIMIT_TOTAL = 2500
     rate_flash_id = [None]
     rate_flash_visible = [True]
-
     # Call log file rotation: new file every 60 minutes, date/time stamped
     current_log_file = [None]
     current_log_hour = [None]
@@ -129,8 +133,11 @@ def build_api_tab(notebook, status_bar=None):
     def _append_call_log(remaining):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         log_file = _get_call_log_file()
-        with open(log_file, "a", encoding="utf-8") as f:
-            f.write(f"{timestamp}, tokens_remaining: {remaining}\n")
+        try:
+            with open(log_file, "a", encoding="utf-8") as f:
+                f.write(f"{timestamp}, tokens_remaining: {remaining}\n")
+        except PermissionError:
+            pass
 
     def _stop_rate_flash():
         if rate_flash_id[0]:
@@ -255,7 +262,7 @@ def build_api_tab(notebook, status_bar=None):
 
     ttk.Separator(ctrl_frame, orient="vertical").pack(side="left", fill="y", padx=8)
     tk.Label(ctrl_frame, text="Auto every", font=("Segoe UI", 10)).pack(side="left", padx=(4, 4))
-    interval_var = tk.IntVar(value=1400)
+    interval_var = tk.IntVar(value=1500)
     tk.Spinbox(ctrl_frame, from_=100, to=60000, increment=100, textvariable=interval_var,
                font=("Consolas", 10), width=6, justify="center").pack(side="left")
     tk.Label(ctrl_frame, text="ms", font=("Segoe UI", 10)).pack(side="left", padx=(2, 8))
@@ -341,6 +348,20 @@ def build_api_tab(notebook, status_bar=None):
     _, table_update = build_table_subtab(result_notebook)
     _, changes_check = build_changes_subtab(result_notebook, CALL_LOG_DIR)
     build_calllog_subtab(result_notebook, CALL_LOG_DIR, tab)
-    build_schedule_subtab(result_notebook, token_var, tab)
 
-    return _start_auto
+    # ── Auto-pull schedule every 15 minutes (at :00, :15, :30, :45) ──
+    _last_schedule_quarter = [None]
+
+    def _check_schedule_timer():
+        now = datetime.datetime.now()
+        quarter = now.minute // 15
+        key = (now.hour, quarter)
+        if key != _last_schedule_quarter[0]:
+            _last_schedule_quarter[0] = key
+            if _fetch_schedule_cb[0]:
+                _fetch_schedule_cb[0]()
+        tab.after(30_000, _check_schedule_timer)
+
+    tab.after(5_000, _check_schedule_timer)
+
+    return _start_auto, set_fetch_schedule, token_var

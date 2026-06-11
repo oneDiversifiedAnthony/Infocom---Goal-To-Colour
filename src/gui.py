@@ -57,7 +57,6 @@ from src.theme import apply_dark_theme, FG_DIM
 from src.statusbar import StatusBar
 from src.sacn_connection import SacnConnection
 from src.goal import GoalController
-from src import scores
 from src.constants import (
     TRIGGER_UNIVERSE, TRIGGER_PULSE_DURATION_MS, TRIGGER_PROGRESS_TICK_MS,
     DMX_MAX_VALUE, SWATCH_CANVAS_SIZE,
@@ -71,6 +70,7 @@ from src.tabs import (
     build_country_editor_tab,
     build_readme_tab,
     build_api_tab,
+    build_api_schedule_tab,
     build_sounds_tab,
     build_webserver_tab,
 )
@@ -101,7 +101,7 @@ class App:
         self.root = tk.Tk()
         version = _bump_version()
         self.root.title(f"World Cup Colour sACN  v{version}")
-        self.root.geometry("720x580")
+        self.root.state("zoomed")
         self.root.resizable(True, True)
 
         apply_dark_theme(self.root)
@@ -151,7 +151,9 @@ class App:
         self.chase = build_chases_tab(self.notebook, self.root, self._draw_swatches,
                                       lambda: self.team_colours)
         self._stop_editor_preview = build_country_editor_tab(self.notebook, self.set_team_colours)
-        self._start_api_auto = build_api_tab(self.notebook, self.status_bar)
+        self._start_api_auto, set_fetch_schedule, api_token_var = build_api_tab(self.notebook, self.status_bar)
+        _, fetch_schedule = build_api_schedule_tab(self.notebook, api_token_var, self.root)
+        set_fetch_schedule(fetch_schedule)
         self._fire_sound_event = build_sounds_tab(self.notebook, self.countries_db,
                                                    stop_editor_preview=self._stop_editor_preview)
         build_readme_tab(self.notebook)
@@ -227,7 +229,6 @@ class App:
         self._highlight_flag(country_name)
         self.goal.trigger(colours, country_name)
         self._fire_trigger(country_name)
-        scores.goal_scored(country_name)
         self._fire_sound_event("Goal by Team", country_name)
 
     def _fire_trigger(self, country_name):

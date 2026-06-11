@@ -132,7 +132,7 @@ def _fetch_venues(token):
 def build_schedule_subtab(result_notebook, token_var, tab_root):
     """Build the Schedule sub-tab. Returns the frame."""
     frame = tk.Frame(result_notebook, bg=BG)
-    result_notebook.add(frame, text="Schedule")
+    result_notebook.add(frame, text="API Schedule")
 
     os.makedirs(SCHEDULE_DIR, exist_ok=True)
 
@@ -234,6 +234,9 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
         fetch_btn.config(state="normal", bg="#0066cc")
         status_label.config(text=msg, fg="#28a745" if "Done" in msg else "#ff0000")
         progress_label.config(text="")
+        if "Done" in msg:
+            now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            last_pulled_label.config(text=f"Last schedule pulled: {now}")
 
     def _load_cached():
         """Load previously saved schedule files and populate the table."""
@@ -280,6 +283,8 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
             filtered.append(fix)
         _populate_table(filtered)
 
+    last_pulled_label = tk.Label(ctrl, text="", font=("Segoe UI", 9), fg="#888888", bg=BG)
+
     fetch_btn = tk.Button(ctrl, text="Get Schedule", font=("Segoe UI", 10, "bold"),
                           bg="#0066cc", fg="white", padx=16, pady=2,
                           command=_get_schedules)
@@ -291,6 +296,7 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
 
     progress_label.pack(side="left", padx=(0, 8))
     status_label.pack(side="left", fill="x", expand=True)
+    last_pulled_label.pack(side="right", padx=(8, 0))
 
     # ── Filter controls ────────────────────────────────────────────
     filter_frame = tk.Frame(frame, bg=BG)
@@ -332,22 +338,23 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
                      background=[("selected", "#3d3d3d")],
                      foreground=[("selected", FG)])
 
-    columns = ("game_id", "date", "time", "home", "away", "score",
-               "league", "round", "venue", "status")
+    columns = ("game_id", "date", "time", "home", "home_goals", "score",
+               "away_goals", "away", "result", "venue", "status")
     table = ttk.Treeview(frame, columns=columns, show="headings", height=25,
                          style="Schedule.Treeview")
 
     col_config = {
-        "game_id": ("Game ID", 90),
-        "date":    ("Date",    90),
-        "time":    ("Time",    60),
-        "home":    ("Home",    140),
-        "away":    ("Away",    140),
-        "score":   ("Score",   70),
-        "league":  ("League",  160),
-        "round":   ("Round",   100),
-        "venue":   ("Venue",   200),
-        "status":  ("Status",  80),
+        "game_id":    ("Game ID",  90),
+        "date":       ("Date",     90),
+        "time":       ("Time",     60),
+        "home":       ("Home",    140),
+        "home_goals": ("H Goals",  60),
+        "score":      ("Score",    70),
+        "away_goals": ("A Goals",  60),
+        "away":       ("Away",    140),
+        "result":     ("Result",  220),
+        "venue":      ("Venue",   200),
+        "status":     ("Status",   80),
     }
     sort_reverse = {}
 
@@ -406,10 +413,11 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
                 date_str,
                 time_str,
                 fix.get("home", ""),
-                fix.get("away", ""),
+                fix.get("home_goals", ""),
                 fix.get("score", ""),
-                fix.get("league", ""),
-                fix.get("round", ""),
+                fix.get("away_goals", ""),
+                fix.get("away", ""),
+                fix.get("result", ""),
                 venue_display,
                 fix.get("status", ""),
             ))
@@ -417,7 +425,7 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
     # Auto-load cached data on startup
     tab_root.after(500, _load_cached)
 
-    return frame
+    return frame, _get_schedules
 
 
 def _extract_fixtures(data, team_name):
@@ -495,57 +503,38 @@ def _parse_fixture(fix, team_name):
     if not home and not away:
         home = team_name
 
-    # Score — sum goals by participant (home/away) from the CURRENT score entries
+    # Score — parse goals by participant (home/away) from the CURRENT score entries
     score_str = ""
+    home_goals = 0
+    away_goals = 0
+    has_scores = False
+    s1 = fix.get("scores", [])
+    if isinstance(s1, list) and s1:
+        try:
+            for sc in s1:
+                if not isinstance(sc, dict):
+                    continue
+                sc_data = sc.get("score", {})
+                if not isinstance(sc_data, dict):
+                    continue
+                desc = sc.get("description", "")
+                participant = sc_data.get("participant", "")
+                g = sc_data.get("goals")
+                if g is None or g == "":
+                    continue
+                g = int(g)
+                if desc == "CURRENT":
+                    has_scores = True
+                    if participant == "home":
+                        home_goals = g
+                    elif participant == "away":
+                        away_goals = g
+            if has_scores:
+                score_str = f"{home_goals} - {away_goals}"
+        except Exception:
+            pass
+    # Result info (game summary string)
     result_info = fix.get("result_info", "")
-    if result_info:
-        score_str = result_info
-    else:
-        s1 = fix.get("scores", [])
-        if isinstance(s1, list) and s1:
-            try:
-                home_goals = 0
-                away_goals = 0
-                has_scores = False
-                for sc in s1:
-                    if not isinstance(sc, dict):
-                        continue
-                    sc_data = sc.get("score", {})
-                    if not isinstance(sc_data, dict):
-                        continue
-                    desc = sc.get("description", "")
-                    participant = sc_data.get("participant", "")
-                    g = sc_data.get("goals")
-                    if g is None or g == "":
-                        continue
-                    g = int(g)
-                    # Use CURRENT entries for the live/final score
-                    if desc == "CURRENT":
-                        has_scores = True
-                        if participant == "home":
-                            home_goals = g
-                        elif participant == "away":
-                            away_goals = g
-                if has_scores:
-                    score_str = f"{home_goals} - {away_goals}"
-            except Exception:
-                pass
-
-    # League
-    league_name = ""
-    league = fix.get("league", {})
-    if isinstance(league, dict):
-        league_name = league.get("name", "")
-    elif fix.get("league_id"):
-        league_name = str(fix["league_id"])
-
-    # Round
-    round_name = ""
-    rnd = fix.get("round", {})
-    if isinstance(rnd, dict):
-        round_name = rnd.get("name", str(rnd.get("id", "")))
-    elif fix.get("round_id"):
-        round_name = str(fix["round_id"])
 
     # Venue -- store venue_id so the table can resolve from venues.json
     venue_name = ""
@@ -569,9 +558,10 @@ def _parse_fixture(fix, team_name):
         "starting_at": str(starting),
         "home": home,
         "away": away,
+        "home_goals": str(home_goals) if has_scores else "",
+        "away_goals": str(away_goals) if has_scores else "",
         "score": score_str,
-        "league": league_name,
-        "round": round_name,
+        "result": result_info,
         "venue": venue_name,
         "venue_id": venue_id,
         "status": str(status),

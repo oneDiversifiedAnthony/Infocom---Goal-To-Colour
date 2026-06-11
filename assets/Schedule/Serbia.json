@@ -63,7 +63,7 @@
                   "founded": 1863,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-10 21:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -578,7 +578,7 @@
                   "founded": 1863,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-10 21:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1418,7 +1418,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781125633,
+        "current_timestamp": 1781198833,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1434,8 +1434,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 993,
-    "remaining": 2136,
+    "resets_in_seconds": 3571,
+    "remaining": 2462,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

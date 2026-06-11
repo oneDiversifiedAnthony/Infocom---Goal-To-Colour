@@ -32,5 +32,6 @@ from src.tabs.chases import build_chases_tab
 from src.tabs.country_editor import build_country_editor_tab
 from src.tabs.readme_tab import build_readme_tab
 from src.tabs.api import build_api_tab
+from src.tabs.api_schedule import build_schedule_subtab as build_api_schedule_tab
 from src.tabs.sounds import build_sounds_tab
 from src.tabs.webserver import build_webserver_tab

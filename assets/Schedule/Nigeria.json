@@ -63,7 +63,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -249,7 +249,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -397,7 +397,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -564,7 +564,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -731,7 +731,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -898,7 +898,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1062,7 +1062,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1207,7 +1207,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1374,7 +1374,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1541,7 +1541,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1791,7 +1791,7 @@
                   "founded": 1945,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-03 18:45:00",
+                  "last_played_at": "2026-06-10 19:45:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -2047,7 +2047,7 @@
               "founded": 1945,
               "type": "national",
               "placeholder": false,
-              "last_played_at": "2026-06-03 18:45:00",
+              "last_played_at": "2026-06-10 19:45:00",
               "meta": {
                 "location": "home",
                 "winner": false,
@@ -2241,7 +2241,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781125628,
+        "current_timestamp": 1781198827,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2257,8 +2257,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 998,
-    "remaining": 2143,
+    "resets_in_seconds": 3577,
+    "remaining": 2469,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

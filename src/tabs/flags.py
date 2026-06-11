@@ -110,7 +110,7 @@ def build_flags_tab(notebook, db, set_team_colours_cb):
             return
         _blink_on[0] = not _blink_on[0]
         colour = HIGHLIGHT_COLOUR if _blink_on[0] else BG_BTN
-        widget.config(highlightbackground=colour, highlightthickness=3 if _blink_on[0] else 0)
+        widget.config(bg=colour)
         _blink_timer[0] = tab.after(BLINK_INTERVAL_MS, _blink_tick)
 
     def highlight_team(name):
@@ -119,7 +119,7 @@ def build_flags_tab(notebook, db, set_team_colours_cb):
             tab.after_cancel(_blink_timer[0])
             _blink_timer[0] = None
         if _blink_widget[0]:
-            _blink_widget[0].config(highlightbackground=BG_BTN, highlightthickness=0)
+            _blink_widget[0].config(bg=BG_BTN)
         widget = button_frames.get(name)
         _blink_widget[0] = widget
         if widget:

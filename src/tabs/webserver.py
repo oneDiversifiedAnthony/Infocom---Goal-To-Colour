@@ -152,6 +152,41 @@ def _build_html():
             f'GOAL! {_flag_svg(team, width=48, height=32)} {team}</div>'
         )
 
+    # Next game countdown
+    countdown_html = ""
+    today_utc = now_utc.strftime("%b %d").replace(" 0", " ")  # e.g. "Jun 11"
+    next_game = None
+    next_kick = None
+    for g in sorted(games, key=lambda g: g.get("time_utc", "99:99")):
+        if g.get("date", "") != today_utc:
+            continue
+        t = g.get("time_utc", "")
+        if not t:
+            continue
+        try:
+            utc_dt = datetime.strptime(f"2026 {today_utc} {t}", "%Y %b %d %H:%M")
+            utc_dt = utc_dt.replace(tzinfo=timezone.utc)
+            if utc_dt > now_utc:
+                next_game = g
+                next_kick = utc_dt
+                break
+        except ValueError:
+            continue
+    if next_game and next_kick:
+        diff = int((next_kick - now_utc).total_seconds())
+        ch, rem = divmod(diff, 3600)
+        cm, cs = divmod(rem, 60)
+        countdown_html = (
+            f'<div style="background:#222;border:2px solid #ffcc00;border-radius:8px;'
+            f'padding:16px 32px;margin:0 0 16px 0;text-align:center;">'
+            f'<div style="font-size:22px;font-weight:bold;color:#ffcc00;">TIME UNTIL NEXT GAME</div>'
+            f'<div style="font-size:52px;font-family:Consolas,monospace;font-weight:bold;'
+            f'color:#ffcc00;">{ch:02d}:{cm:02d}:{cs:02d}</div>'
+            f'<div style="font-size:18px;color:#888;">'
+            f'{next_game.get("home","")} vs {next_game.get("away","")}</div>'
+            f'</div>'
+        )
+
     def _team_flag(name):
         """Generate an inline flag for a team in the schedule."""
         return _flag_svg(name, width=30, height=20)
@@ -264,6 +299,7 @@ def _build_html():
   <img src="data:image/png;base64,{_LOGO_B64}" alt="Diversified">
 </div>
 
+{countdown_html}
 <div class="clocks">
   <div class="clock">
     <div class="clock-label" style="color:#0066cc;">UTC</div>
