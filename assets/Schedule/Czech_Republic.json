@@ -58,12 +58,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -160,7 +160,7 @@
                   "founded": 1927,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-05 02:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -223,7 +223,7 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 1
+                    "position": 4
                   }
                 },
                 {
@@ -242,7 +242,7 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": 4
+                    "position": 3
                   }
                 }
               ],
@@ -2169,7 +2169,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781198844,
+        "current_timestamp": 1781213423,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2185,8 +2185,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3560,
-    "remaining": 2447,
+    "resets_in_seconds": 73,
+    "remaining": 2460,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

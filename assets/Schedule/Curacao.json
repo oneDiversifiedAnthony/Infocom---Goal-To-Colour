@@ -825,7 +825,7 @@
                   "venue_id": 12214,
                   "gender": "male",
                   "name": "Haiti",
-                  "short_code": "HTI",
+                  "short_code": "HAI",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18804.png",
                   "founded": 1904,
                   "type": "national",
@@ -1954,7 +1954,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781198844,
+        "current_timestamp": 1781205886,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1970,8 +1970,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3560,
-    "remaining": 2448,
+    "resets_in_seconds": 331,
+    "remaining": 1917,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

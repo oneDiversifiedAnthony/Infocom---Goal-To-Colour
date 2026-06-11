@@ -223,7 +223,7 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": 2
+                    "position": 1
                   }
                 },
                 {
@@ -242,7 +242,7 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 1
+                    "position": 2
                   }
                 }
               ],
@@ -256,7 +256,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781199273,
+        "current_timestamp": 1781213419,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -272,8 +272,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3131,
-    "remaining": 2433,
+    "resets_in_seconds": 77,
+    "remaining": 2464,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

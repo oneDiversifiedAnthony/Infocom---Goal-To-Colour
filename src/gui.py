@@ -51,12 +51,14 @@ import tkinter as tk
 from tkinter import ttk
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 from src.theme import apply_dark_theme, FG_DIM
 from src.statusbar import StatusBar
 from src.sacn_connection import SacnConnection
 from src.goal import GoalController
+from src import scores
 from src.constants import (
     TRIGGER_UNIVERSE, TRIGGER_PULSE_DURATION_MS, TRIGGER_PROGRESS_TICK_MS,
     DMX_MAX_VALUE, SWATCH_CANVAS_SIZE,
@@ -125,49 +127,104 @@ class App:
         # why: status bar packed bottom-first so it stays anchored during window resize
         self.status_bar = StatusBar(self.root)
 
+        # ── Game header (countdown / live score) ────────────────────────
+        self._header_frame = tk.Frame(self.root, bg="#1a1a1a")
+        self._header_frame.pack(fill="x", padx=8, pady=(8, 0))
+        self._header_title = tk.Label(self._header_frame, text="",
+                                       font=("Segoe UI", 14, "bold"),
+                                       fg="#ffcc00", bg="#1a1a1a")
+        self._header_title.pack(side="left", padx=(12, 8))
+        self._header_detail = tk.Label(self._header_frame, text="",
+                                        font=("Consolas", 20, "bold"),
+                                        fg="#ffcc00", bg="#1a1a1a")
+        self._header_detail.pack(side="left", padx=(0, 8))
+        self._header_match = tk.Label(self._header_frame, text="",
+                                       font=("Segoe UI", 12),
+                                       fg="#888888", bg="#1a1a1a")
+        self._header_match.pack(side="left", padx=(0, 12))
+
         # Main notebook
         self.notebook = ttk.Notebook(self.root)
-        self.notebook.pack(fill="both", expand=True, padx=8, pady=8)
+        self.notebook.pack(fill="both", expand=True, padx=8, pady=(4, 8))
 
-        # Tabs
+        # ── Top-level tabs ─────────────────────────────────────────────
+        build_timeline_tab(self.notebook, self.db, self.set_team_colours, self._goal_pressed)
+        self._highlight_flag = build_flags_tab(self.notebook, self.db, self._goal_pressed)
+        self._flags_tab_index = self.notebook.index("end") - 1
+
+        self._start_api_auto, set_fetch_schedule, set_on_score_change, api_token_var = \
+            build_api_tab(self.notebook, self.status_bar)
+        self._api_live_tab_index = self.notebook.index("end") - 1
+        _, fetch_schedule = build_api_schedule_tab(self.notebook, api_token_var, self.root)
+        set_fetch_schedule(fetch_schedule)
+        set_on_score_change(self._on_live_score_change)
+
+        # ── Settings tab (sub-notebook) ───────────────────────────────
+        settings_tab = tk.Frame(self.notebook)
+        self.notebook.add(settings_tab, text="Settings")
+        settings_nb = ttk.Notebook(settings_tab)
+        settings_nb.pack(fill="both", expand=True)
+
+        # sACN (first in settings)
         self._update_sacn_country, self._sacn_connect = build_sacn_tab(
-            self.notebook, self.sacn, self.countries_db,
-            on_connect=self._switch_to_flags)
+            settings_nb, self.sacn, self.countries_db,
+            on_connect=self._switch_to_api_live)
 
+        # Web Server (second in settings)
+        from src.tabs.timeline import _load_fixtures_from_schedule, _load_venues
+        schedule_fixtures = _load_fixtures_from_schedule(self.db)
+        schedule_venues = _load_venues()
+        all_games = []
+        for fix in schedule_fixtures:
+            sa = fix.get("starting_at", "")
+            try:
+                dt = datetime.strptime(sa, "%Y-%m-%d %H:%M:%S")
+                date_str = dt.strftime("%b %d").replace(" 0", " ")
+                time_str = dt.strftime("%H:%M")
+            except ValueError:
+                date_str = "TBD"
+                time_str = ""
+            vid = fix.get("venue_id")
+            venue = schedule_venues.get(vid, "") if vid else ""
+            all_games.append({
+                "home": fix.get("home", ""),
+                "away": fix.get("away", ""),
+                "date": date_str,
+                "time_utc": time_str,
+                "venue": venue,
+                "group": "",
+            })
+        self._update_web_state = build_webserver_tab(
+            settings_nb,
+            goal_pressed_cb=self._goal_pressed,
+            set_colours_cb=self.set_team_colours)
+        self._update_web_state(games=all_games, teams=self.db.get("teams", {}))
+
+        # Generator
         self.gen_team_label, self.swatches, self.swatch_labels, start_random = \
             build_generator_tab(
-                self.notebook, self._draw_swatches,
+                settings_nb, self._draw_swatches,
                 lambda: (self.team_colours, self.team_name),
                 self._set_raw_state,
             )
 
+        # Chases
+        self.chase = build_chases_tab(settings_nb, self.root, self._draw_swatches,
+                                      lambda: self.team_colours)
+
+        # Country Editor
+        self._stop_editor_preview = build_country_editor_tab(settings_nb, self.set_team_colours)
+
+        # Sounds (top-level tab)
+        self._fire_sound_event = build_sounds_tab(self.notebook, self.countries_db,
+                                                   stop_editor_preview=self._stop_editor_preview)
+
+        # ReadMe (in settings)
+        build_readme_tab(settings_nb)
+
         self.goal = GoalController(self.root, self._draw_swatches,
                                    lambda t: self.gen_team_label.config(text=t),
                                    clear_team_cb=self._clear_team)
-
-        build_timeline_tab(self.notebook, self.db, self.set_team_colours, self._goal_pressed)
-        self._highlight_flag = build_flags_tab(self.notebook, self.db, self._goal_pressed)
-        self._flags_tab_index = self.notebook.index("end") - 1
-        self.chase = build_chases_tab(self.notebook, self.root, self._draw_swatches,
-                                      lambda: self.team_colours)
-        self._stop_editor_preview = build_country_editor_tab(self.notebook, self.set_team_colours)
-        self._start_api_auto, set_fetch_schedule, api_token_var = build_api_tab(self.notebook, self.status_bar)
-        _, fetch_schedule = build_api_schedule_tab(self.notebook, api_token_var, self.root)
-        set_fetch_schedule(fetch_schedule)
-        self._fire_sound_event = build_sounds_tab(self.notebook, self.countries_db,
-                                                   stop_editor_preview=self._stop_editor_preview)
-        build_readme_tab(self.notebook)
-
-        # Web server tab -- pass schedule data
-        all_games = []
-        for group_key, group in self.db["groups"].items():
-            for game in group["games"]:
-                all_games.append({**game, "group": group_key})
-        self._update_web_state = build_webserver_tab(
-            self.notebook,
-            goal_pressed_cb=self._goal_pressed,
-            set_colours_cb=self.set_team_colours)
-        self._update_web_state(games=all_games, teams=self.db.get("teams", {}))
 
         # Auto-start sACN connection and API auto-get
         self._sacn_connect()
@@ -181,12 +238,98 @@ class App:
             self.root.after(2000, _poll_sacn_status)
         _poll_sacn_status()
 
+        # ── Game header update loop ──────────────────────────────────
+        def _update_game_header():
+            live = scores.get_live_games()
+            if live:
+                # Show current live game(s)
+                fid, info = live[0]
+                home = info.get("home", "")
+                away = info.get("away", "")
+                hs = info.get("home_score", 0)
+                aws = info.get("away_score", 0)
+                clock = scores.get_match_clock(fid)
+                self._header_title.config(text="LIVE", fg="#28a745")
+                self._header_detail.config(
+                    text=f"{home}  {hs} - {aws}  {away}",
+                    fg="#28a745")
+                self._header_match.config(text=clock, fg="#28a745")
+            else:
+                nxt = scores.get_next_game_today()
+                if nxt:
+                    _, home, away, kick = nxt
+                    now_utc = datetime.now(timezone.utc)
+                    diff = int((kick - now_utc).total_seconds())
+                    if diff > 0:
+                        h, rem = divmod(diff, 3600)
+                        m, s = divmod(rem, 60)
+                        self._header_title.config(
+                            text="TIME UNTIL NEXT GAME", fg="#ffcc00")
+                        self._header_detail.config(
+                            text=f"{h:02d}:{m:02d}:{s:02d}", fg="#ffcc00")
+                        self._header_match.config(
+                            text=f"{home} vs {away}")
+                    else:
+                        self._header_title.config(text="")
+                        self._header_detail.config(text="")
+                        self._header_match.config(text="")
+                else:
+                    self._header_title.config(text="")
+                    self._header_detail.config(text="")
+                    self._header_match.config(text="")
+            self.root.after(1000, _update_game_header)
+        _update_game_header()
+
         self.root.protocol("WM_DELETE_WINDOW", self._on_close)
-        start_random()
+        # Start in blackout — no colours sent
+        self.set_team_colours([[0, 0, 0], [0, 0, 0], [0, 0, 0]], "")
         self.root.mainloop()
 
+    def _on_live_score_change(self, scoring_team, home, away,
+                                home_score, away_score,
+                                prev_home_score, prev_away_score):
+        """Called when the livescores API detects a score change."""
+        # Map SportMonks team name to local countries.json name
+        local_name = self._resolve_local_name(scoring_team)
+        if not local_name:
+            return
+
+        # Update scores module
+        for fid, s in scores.get_all_scores().items():
+            if s["home"] == home or s["away"] == away:
+                from src.scores import _scores
+                _scores[fid]["home_score"] = home_score
+                _scores[fid]["away_score"] = away_score
+                _scores[fid]["has_score"] = True
+                break
+
+        # Look up colours and fire the goal
+        team_info = self.countries_db.get("teams", {}).get(local_name, {})
+        colours = team_info.get("colours", [[255, 255, 255], [0, 0, 0], [128, 128, 128]])
+        self._goal_pressed(colours, local_name)
+
+    def _resolve_local_name(self, api_name):
+        """Map a SportMonks API team name to a countries.json team name."""
+        teams = self.countries_db.get("teams", {})
+        # Direct match
+        if api_name in teams:
+            return api_name
+        # Try matching by sportmonks name stored in countries.json
+        for local_name, info in teams.items():
+            if info.get("sportmonks_name", "") == api_name:
+                return local_name
+        # Fuzzy: check if one contains the other
+        api_lower = api_name.lower()
+        for local_name in teams:
+            if api_lower == local_name.lower():
+                return local_name
+        return ""
+
     def _switch_to_flags(self):
-        self.notebook.select(self._flags_tab_index)
+        self.notebook.select(self._api_live_tab_index)
+
+    def _switch_to_api_live(self):
+        self.notebook.select(self._api_live_tab_index)
 
     def _set_raw_state(self, colours, name):
         self.team_colours = colours
@@ -209,6 +352,9 @@ class App:
         self.team_name = ""
         self.team_colours = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
         self._highlight_flag("")
+        if hasattr(self, '_update_web_state'):
+            self._update_web_state(team_name="", goal_active=False,
+                                   colours=[[0, 0, 0], [0, 0, 0], [0, 0, 0]])
 
     def set_team_colours(self, colours, country_name=""):
         self.team_colours = colours

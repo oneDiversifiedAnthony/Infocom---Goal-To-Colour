@@ -31,10 +31,20 @@ from tkinter import ttk
 
 def build_table_subtab(result_notebook):
     """Build the Response Table sub-tab. Returns (frame, update_fn)."""
-    frame = tk.Frame(result_notebook)
+    frame = tk.Frame(result_notebook, bg="#000000")
     result_notebook.add(frame, text="Response Table")
 
-    table_tree = ttk.Treeview(frame, show="headings")
+    style = ttk.Style()
+    style.configure("APITable.Treeview",
+                     background="#000000", foreground="#e0e0e0",
+                     fieldbackground="#000000", borderwidth=0)
+    style.configure("APITable.Treeview.Heading",
+                     background="#1a1a1a", foreground="#e0e0e0")
+    style.map("APITable.Treeview",
+              background=[("selected", "#333333")],
+              foreground=[("selected", "#ffffff")])
+
+    table_tree = ttk.Treeview(frame, show="headings", style="APITable.Treeview")
     xscroll = tk.Scrollbar(frame, orient="horizontal", command=table_tree.xview)
     yscroll = tk.Scrollbar(frame, command=table_tree.yview)
     table_tree.config(xscrollcommand=xscroll.set, yscrollcommand=yscroll.set)

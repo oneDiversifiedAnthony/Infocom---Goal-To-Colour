@@ -38,6 +38,7 @@ import urllib.request
 import urllib.error
 import webbrowser
 
+from src import scores as _scores_module
 from src.tabs.api_raw import build_raw_subtab
 from src.tabs.api_tree import build_tree_subtab
 from src.tabs.api_table import build_table_subtab
@@ -45,10 +46,8 @@ from src.tabs.api_changes import build_changes_subtab
 from src.tabs.api_calllog import build_calllog_subtab
 
 
-DEFAULT_URL = "https://api.sportmonks.com/v3/football/livescores/inplay?api_token={{api_token}}"
-CALL_LOG_DIR = os.path.join(
-    os.path.dirname(__file__), os.pardir, os.pardir, "Call Log"
-)
+DEFAULT_URL = "https://api.sportmonks.com/v3/football/livescores/inplay?api_token={{api_token}}&include=scores;participants;events;periods"
+from src.config import CALL_LOG_DIR
 CALL_LOG_ROTATE_MINUTES = 60
 ENV_FILE = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, ".env")
 
@@ -64,15 +63,30 @@ def _load_env_token():
     return os.environ.get("SPORTMONKS_API_TOKEN", "")
 
 
+def _make_dot(colour, size=10):
+    """Create a small square PhotoImage of the given colour."""
+    img = tk.PhotoImage(width=size, height=size)
+    img.put(colour, to=(0, 0, size, size))
+    return img
+
+
 def build_api_tab(notebook, status_bar=None):
     tab = tk.Frame(notebook)
     notebook.add(tab, text="API Livescore")
 
     # Holder for schedule fetch callback, set later by gui.py
     _fetch_schedule_cb = [None]
+    # Holder for score-change callback: fn(team_name, home, away, home_score, away_score, prev_home, prev_away)
+    _on_score_change_cb = [None]
 
     def set_fetch_schedule(cb):
         _fetch_schedule_cb[0] = cb
+
+    def set_on_score_change(cb):
+        _on_score_change_cb[0] = cb
+
+    # Previous livescore snapshot for delta detection
+    _prev_live_scores = [{}]
 
     os.makedirs(CALL_LOG_DIR, exist_ok=True)
 
@@ -200,9 +214,25 @@ def build_api_tab(notebook, status_bar=None):
             pass
 
     # ── Fetch logic ───────────────────────────────────────────────────
+    # Coloured dot images for tab status (keep references to prevent GC)
+    _dot_blue = _make_dot("#0066cc")
+    _dot_green = _make_dot("#28a745")
+    _dot_red = _make_dot("#ff0000")
+    _dot_grey = _make_dot("#555555")
+
+    def _set_tab_status(status):
+        """Update the API Livescore tab dot colour."""
+        dot = {"fetching": _dot_blue, "ok": _dot_green,
+               "error": _dot_red}.get(status, _dot_grey)
+        try:
+            notebook.tab(tab, image=dot, text="API Livescore", compound="left")
+        except Exception:
+            pass
+
     def _fetch():
         final_url = _build_url()
         status_label.config(text="Fetching...", fg="#0066cc")
+        _set_tab_status("fetching")
         raw_clear()
 
         def _do_request():
@@ -226,6 +256,127 @@ def build_api_tab(notebook, status_bar=None):
 
         threading.Thread(target=_do_request, daemon=True).start()
 
+    def _parse_live_scores(data):
+        """Extract per-fixture scores from livescores API response.
+
+        Returns {fixture_id: {"home": str, "away": str, "home_score": int, "away_score": int}}
+        """
+        result = {}
+        if not isinstance(data, dict):
+            return result
+        for fix in data.get("data", []):
+            if not isinstance(fix, dict):
+                continue
+            fid = fix.get("id")
+            if not fid:
+                continue
+            participants = fix.get("participants", [])
+            home = away = ""
+            if isinstance(participants, list):
+                for p in participants:
+                    if not isinstance(p, dict):
+                        continue
+                    meta = p.get("meta", {})
+                    if isinstance(meta, dict):
+                        if meta.get("location") == "home":
+                            home = p.get("name", "")
+                        elif meta.get("location") == "away":
+                            away = p.get("name", "")
+            home_goals = 0
+            away_goals = 0
+            has_score = False
+            for sc in fix.get("scores", []):
+                if not isinstance(sc, dict):
+                    continue
+                if sc.get("description") != "CURRENT":
+                    continue
+                sc_data = sc.get("score", {})
+                if not isinstance(sc_data, dict):
+                    continue
+                g = sc_data.get("goals")
+                if g is None or g == "":
+                    continue
+                has_score = True
+                if sc_data.get("participant") == "home":
+                    home_goals = int(g)
+                elif sc_data.get("participant") == "away":
+                    away_goals = int(g)
+            if has_score:
+                result[fid] = {
+                    "home": home, "away": away,
+                    "home_score": home_goals, "away_score": away_goals,
+                }
+        return result
+
+    def _detect_score_changes(parsed):
+        """Compare current livescores with previous snapshot, log and fire callbacks on changes."""
+        current = _parse_live_scores(parsed)
+        prev = _prev_live_scores[0]
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        # Empty data means no games in play — clear all live state
+        if not current:
+            _scores_module.clear_live_state()
+            _prev_live_scores[0] = {}
+            return
+
+        # Always push latest live scores and events into the scores module
+        for fid, cur in current.items():
+            _scores_module.update_from_live(
+                fid, cur["home"], cur["away"],
+                cur["home_score"], cur["away_score"],
+            )
+        # Store events, state, and periods from each live fixture
+        if isinstance(parsed, dict):
+            for fix in parsed.get("data", []):
+                if isinstance(fix, dict) and fix.get("id"):
+                    fid = fix["id"]
+                    events = fix.get("events", [])
+                    if isinstance(events, list):
+                        _scores_module.update_events(fid, events)
+                    state_id = fix.get("state_id")
+                    if state_id is not None:
+                        _scores_module.update_state(fid, state_id)
+                    periods = fix.get("periods", [])
+                    if isinstance(periods, list):
+                        _scores_module.update_periods(fid, periods)
+
+        # Detect deltas
+        for fid, cur in current.items():
+            old = prev.get(fid)
+            if old is None:
+                continue  # first time seeing this fixture, no delta
+            if cur["home_score"] != old["home_score"] or cur["away_score"] != old["away_score"]:
+                # Score changed!
+                entry = (
+                    f"[{timestamp}] SCORE CHANGE: {cur['home']} vs {cur['away']}  "
+                    f"{old['home_score']}-{old['away_score']} → "
+                    f"{cur['home_score']}-{cur['away_score']}\n"
+                )
+                # Log to changes file
+                changes_file = os.path.join(CALL_LOG_DIR, "changes.log")
+                try:
+                    with open(changes_file, "a", encoding="utf-8") as f:
+                        f.write(entry)
+                except PermissionError:
+                    pass
+
+                # Determine which team scored
+                scoring_team = ""
+                if cur["home_score"] > old["home_score"]:
+                    scoring_team = cur["home"]
+                elif cur["away_score"] > old["away_score"]:
+                    scoring_team = cur["away"]
+
+                if _on_score_change_cb[0] and scoring_team:
+                    _on_score_change_cb[0](
+                        scoring_team, cur["home"], cur["away"],
+                        cur["home_score"], cur["away_score"],
+                        old["home_score"], old["away_score"],
+                    )
+
+        _prev_live_scores[0] = current
+
     def _show_result(text):
         parsed = None
         try:
@@ -240,9 +391,11 @@ def build_api_tab(notebook, status_bar=None):
         if parsed is not None:
             _update_rate_limit(parsed)
             changes_check(parsed)
+            _detect_score_changes(parsed)
 
         status_label.config(text="OK", fg="#28a745")
         auto_style.configure("Auto.Horizontal.TProgressbar", background="#28a745")
+        _set_tab_status("ok")
 
     def _show_error(msg, http_code=None):
         raw_error(msg)
@@ -252,6 +405,7 @@ def build_api_tab(notebook, status_bar=None):
             status_label.config(text="Rate limited – retrying", fg="#ff6600")
         else:
             status_label.config(text="Error – retrying", fg="red")
+        _set_tab_status("error")
         if status_bar:
             status_bar.rate_label.config(fg="#ff0000")
 
@@ -364,4 +518,4 @@ def build_api_tab(notebook, status_bar=None):
 
     tab.after(5_000, _check_schedule_timer)
 
-    return _start_auto, set_fetch_schedule, token_var
+    return _start_auto, set_fetch_schedule, set_on_score_change, token_var

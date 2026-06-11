@@ -367,17 +367,9 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
             sw.create_rectangle(0, 0, 24, 24, fill=hex_col, outline="")
             sw.pack(side="left", padx=2)
 
-        tk.Button(row, text="Send", font=("Segoe UI", 12), padx=5,
-                  command=lambda c=home_colours, n=home: set_team_colours_cb(c, n)
-                  ).pack(side="left", padx=2)
-        tk.Button(row, text="GOAL!", font=("Segoe UI", 12, "bold"),
-                  bg="#ff4444", fg="white", padx=5,
-                  command=lambda c=home_colours, n=home: goal_pressed_cb(c, n)
-                  ).pack(side="left", padx=(2, 4))
-
         # Score display (updated live)
         score_label = tk.Label(row, text="", font=("Consolas", 17, "bold"),
-                               fg="#ffcc00", width=5, anchor="center")
+                               fg="#ffcc00", width=7, anchor="center")
         score_label.pack(side="left", padx=4)
 
         # Away label + team with swatches
@@ -392,13 +384,6 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
             sw.create_rectangle(0, 0, 24, 24, fill=hex_col, outline="")
             sw.pack(side="left", padx=2)
 
-        tk.Button(row, text="Send", font=("Segoe UI", 12), padx=5,
-                  command=lambda c=away_colours, n=away: set_team_colours_cb(c, n)
-                  ).pack(side="left", padx=2)
-        tk.Button(row, text="GOAL!", font=("Segoe UI", 12, "bold"),
-                  bg="#ff4444", fg="white", padx=5,
-                  command=lambda c=away_colours, n=away: goal_pressed_cb(c, n)
-                  ).pack(side="left", padx=2)
 
         # Venue
         venue_id = game.get("venue_id")
@@ -407,26 +392,29 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
             tk.Label(row, text=f"  {venue_name}", font=("Segoe UI", 14),
                      fg="#888888", anchor="w").pack(side="left", padx=(14, 0))
 
-        live_widgets.append((fixture_id, dot_canvas, time_label, score_label))
+        # Match clock (updated live, shown to the right of venue)
+        clock_label = tk.Label(row, text="", font=("Consolas", 14, "bold"),
+                               fg="#28a745", anchor="w")
+        clock_label.pack(side="left", padx=(10, 0))
+
+        live_widgets.append((fixture_id, dot_canvas, time_label, score_label, clock_label))
 
     def _refresh_live():
-        """Update live indicators, scores, and match minutes every 10 seconds."""
+        """Update live indicators, scores, and match clock every 10 seconds."""
         scores.update_live_flags()
-        for fid, dot, time_lbl, score_lbl in live_widgets:
+        for fid, dot, time_lbl, score_lbl, clock_lbl in live_widgets:
             live = scores.is_live(fid)
             colour = "#28a745" if live else "#0066cc"
             dot.delete("all")
             dot.create_oval(3, 3, 17, 17, fill=colour, outline=colour)
             time_lbl.config(fg=colour)
             score_text = scores.get_score_display(fid)
-            minute_text = scores.get_match_minute_display(fid)
-            if score_text and minute_text:
-                score_lbl.config(text=f"{score_text}  {minute_text}", fg="#28a745")
-            elif score_text:
-                score_lbl.config(text=score_text, fg="#ffcc00")
-            elif minute_text:
-                score_lbl.config(text=minute_text, fg="#28a745")
+            if score_text:
+                score_lbl.config(text=score_text,
+                                 fg="#28a745" if live else "#ffcc00")
             else:
                 score_lbl.config(text="", fg="#ffcc00")
+            clock_text = scores.get_match_clock(fid)
+            clock_lbl.config(text=clock_text)
         tab.after(10000, _refresh_live)
     _refresh_live()

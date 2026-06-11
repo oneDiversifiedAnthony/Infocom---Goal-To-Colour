@@ -141,6 +141,8 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
 
     # Store all loaded fixtures for filtering
     all_loaded_fixtures = []
+    # Teams fetched in the most recent pull (for green highlighting)
+    last_pulled_teams = set()
 
     # ── Controls ─────────────────────────────────────────────────────
     ctrl = tk.Frame(frame, bg=BG)
@@ -151,12 +153,47 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
 
     fetching = [False]
 
+    def _find_teams_today_tomorrow():
+        """Find teams playing today or tomorrow from cached schedule files."""
+        today = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+        tomorrow = (datetime.datetime.utcnow() + datetime.timedelta(days=1)).strftime("%Y-%m-%d")
+        target_dates = {today, tomorrow}
+        teams_needed = set()
+
+        if not os.path.isdir(SCHEDULE_DIR):
+            return teams_needed
+
+        for fname in os.listdir(SCHEDULE_DIR):
+            if not fname.endswith(".json"):
+                continue
+            fpath = os.path.join(SCHEDULE_DIR, fname)
+            try:
+                with open(fpath, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                for stage in data.get("data", []):
+                    if not isinstance(stage, dict):
+                        continue
+                    if stage.get("league_id") != WORLD_CUP_LEAGUE_ID:
+                        continue
+                    for rnd in stage.get("rounds", []):
+                        if not isinstance(rnd, dict):
+                            continue
+                        for fix in rnd.get("fixtures", []):
+                            sa = fix.get("starting_at", "")
+                            if sa[:10] in target_dates:
+                                for p in fix.get("participants", []):
+                                    if isinstance(p, dict) and p.get("name"):
+                                        teams_needed.add(p["name"])
+            except Exception:
+                pass
+        return teams_needed
+
     def _get_schedules():
         if fetching[0]:
             return
         fetching[0] = True
         fetch_btn.config(state="disabled", bg="#888888")
-        status_label.config(text="Loading teams...", fg="#0066cc")
+        status_label.config(text="Finding today/tomorrow teams...", fg="#0066cc")
 
         def _worker():
             try:
@@ -166,19 +203,50 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
                 tab_root.after(0, lambda: _done(f"Error loading countries: {e}"))
                 return
 
-            teams = []
+            # Find which teams play today/tomorrow
+            api_teams_needed = _find_teams_today_tomorrow()
+
+            # Build mapping: local name → sportmonks_id, filtering to today/tomorrow teams
+            all_teams = {}
             for name, info in countries.get("teams", {}).items():
                 sm_id = info.get("sportmonks_id")
                 if sm_id:
-                    teams.append((name, sm_id))
+                    all_teams[name] = sm_id
+
+            # Match needed API team names to local names
+            teams = []
+            if api_teams_needed:
+                # Build reverse lookup: sportmonks name → local name
+                for local_name, sm_id in all_teams.items():
+                    # Check if this team's API name matches any needed team
+                    if local_name in api_teams_needed:
+                        teams.append((local_name, sm_id))
+                        continue
+                    # Also check cached schedule for participant names matching this sm_id
+                    for api_name in api_teams_needed:
+                        if api_name.lower() == local_name.lower():
+                            teams.append((local_name, sm_id))
+                            break
+                # If no matches found via name, fetch all (fallback)
+                if not teams:
+                    teams = list(all_teams.items())
+            else:
+                # No cached data yet, fetch all teams
+                teams = list(all_teams.items())
 
             if not teams:
-                tab_root.after(0, lambda: _done("No teams with SportMonks IDs found"))
+                tab_root.after(0, lambda: _done("No teams to fetch"))
                 return
 
             total = len(teams)
             token = token_var.get().strip()
             raw_fixtures = []
+            fetched_teams = set()
+
+            tab_root.after(0, lambda t=total:
+                status_label.config(
+                    text=f"Fetching {t} team{'s' if t != 1 else ''} (today/tomorrow)...",
+                    fg="#0066cc"))
 
             for idx, (name, sm_id) in enumerate(teams, 1):
                 tab_root.after(0, lambda n=name, i=idx, t=total:
@@ -197,8 +265,7 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
                     with open(save_path, "w", encoding="utf-8") as f:
                         json.dump(data, f, indent=2)
 
-                    fixtures = _extract_fixtures(data, name)
-                    raw_fixtures.extend(fixtures)
+                    fetched_teams.add(name)
 
                 except urllib.error.HTTPError as e:
                     tab_root.after(0, lambda n=name, c=e.code:
@@ -217,13 +284,18 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
             _fetch_venues(token)
             venue_map[0] = _load_venues()
 
-            raw_fixtures.sort(key=lambda f: f.get("starting_at", ""))
-
-            tab_root.after(0, lambda: _on_fixtures_loaded(raw_fixtures))
-            tab_root.after(0, lambda t=total, f=len(raw_fixtures):
-                _done(f"Done – {t} teams fetched, {f} fixtures found"))
+            # Reload ALL cached fixtures (not just the ones we just fetched)
+            tab_root.after(0, lambda ft=fetched_teams: _finish_fetch(ft))
+            tab_root.after(0, lambda t=total:
+                _done(f"Done – {t} teams fetched (today/tomorrow)"))
 
         threading.Thread(target=_worker, daemon=True).start()
+
+    def _finish_fetch(fetched_teams):
+        """After fetching, reload all cached data and track which teams were refreshed."""
+        last_pulled_teams.clear()
+        last_pulled_teams.update(fetched_teams)
+        _load_cached()
 
     def _update_progress(name, current, total):
         progress_label.config(text=f"{current}/{total}")
@@ -383,6 +455,9 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
         for item in table.get_children():
             table.delete(item)
 
+        # Tag for green rows (recently pulled teams)
+        table.tag_configure("recent", background="#0a3a0a", foreground="#66ff66")
+
         venues = venue_map[0]
         seen = set()
         for fix in fixtures:
@@ -408,19 +483,24 @@ def build_schedule_subtab(result_notebook, token_var, tab_root):
             if venue_id and venues.get(venue_id):
                 venue_display = venues[venue_id]
 
+            # Green highlight if home or away was in the most recent pull
+            home = fix.get("home", "")
+            away = fix.get("away", "")
+            tags = ("recent",) if (home in last_pulled_teams or away in last_pulled_teams) else ()
+
             table.insert("", "end", values=(
                 fix.get("game_id", ""),
                 date_str,
                 time_str,
-                fix.get("home", ""),
+                home,
                 fix.get("home_goals", ""),
                 fix.get("score", ""),
                 fix.get("away_goals", ""),
-                fix.get("away", ""),
+                away,
                 fix.get("result", ""),
                 venue_display,
                 fix.get("status", ""),
-            ))
+            ), tags=tags)
 
     # Auto-load cached data on startup
     tab_root.after(500, _load_cached)

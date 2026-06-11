@@ -58,12 +58,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -136,12 +136,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -194,11 +194,11 @@
               "group_id": 253019,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 1599,
               "name": "Mexico vs South Africa",
               "starting_at": "2026-06-11 19:00:00",
-              "result_info": null,
+              "result_info": "Mexico won after full-time.",
               "leg": "1/1",
               "details": "Match 1",
               "length": 90,
@@ -219,10 +219,10 @@
                   "founded": 1927,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-05 02:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": true,
                     "position": 2
                   }
                 },
@@ -233,20 +233,109 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
-                    "winner": null,
+                    "winner": false,
                     "position": 3
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 25569970,
+                  "fixture_id": 19609127,
+                  "type_id": 1525,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25569972,
+                  "fixture_id": 19609127,
+                  "type_id": 1,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25569969,
+                  "fixture_id": 19609127,
+                  "type_id": 1525,
+                  "participant_id": 18576,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25569971,
+                  "fixture_id": 19609127,
+                  "type_id": 1,
+                  "participant_id": 18576,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25569973,
+                  "fixture_id": 19609127,
+                  "type_id": 2,
+                  "participant_id": 18576,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25569974,
+                  "fixture_id": 19609127,
+                  "type_id": 2,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25579680,
+                  "fixture_id": 19609127,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25579679,
+                  "fixture_id": 19609127,
+                  "type_id": 48996,
+                  "participant_id": 18576,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
             }
           ]
         }
@@ -310,12 +399,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -477,12 +566,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -663,12 +752,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -830,12 +919,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -978,12 +1067,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1145,12 +1234,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1290,12 +1379,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1435,12 +1524,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1602,12 +1691,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1769,12 +1858,12 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 16:00:00",
+                  "last_played_at": "2026-06-11 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -2016,7 +2105,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781198834,
+        "current_timestamp": 1781213421,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2032,8 +2121,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3570,
-    "remaining": 2461,
+    "resets_in_seconds": 75,
+    "remaining": 2462,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

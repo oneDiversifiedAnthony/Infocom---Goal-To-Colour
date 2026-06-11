@@ -1,0 +1,9 @@
+[2026-06-11 14:45:06] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-11 16:33:22] SCORE CHANGE: Mexico vs South Africa  1-0 → 2-0
+[2026-06-11 17:24:27] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+

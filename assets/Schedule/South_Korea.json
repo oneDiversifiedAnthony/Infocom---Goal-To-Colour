@@ -136,7 +136,7 @@
                   "venue_id": 1519,
                   "gender": "male",
                   "name": "South Africa",
-                  "short_code": "ZAF",
+                  "short_code": "RSA",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/27/18555.png",
                   "founded": 1991,
                   "type": "national",
@@ -2980,7 +2980,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781198835,
+        "current_timestamp": 1781205877,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2996,8 +2996,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3569,
-    "remaining": 2460,
+    "resets_in_seconds": 340,
+    "remaining": 1929,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

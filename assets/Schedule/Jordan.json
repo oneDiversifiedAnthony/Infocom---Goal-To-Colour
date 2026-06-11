@@ -58,7 +58,7 @@
                   "venue_id": 343798,
                   "gender": "male",
                   "name": "Algeria",
-                  "short_code": "DZA",
+                  "short_code": "ALG",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
                   "founded": 1962,
                   "type": "national",
@@ -2980,7 +2980,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781198846,
+        "current_timestamp": 1781205888,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2996,8 +2996,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3558,
-    "remaining": 2445,
+    "resets_in_seconds": 329,
+    "remaining": 1914,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

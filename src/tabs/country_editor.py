@@ -43,7 +43,7 @@ import os
 import threading
 
 COUNTRIES_FILE = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "assets", "countries.json")
-ANTHEMS_DIR = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "Sound Files", "Anthems")
+from src.config import ANTHEMS_DIR
 
 SWATCH_SIZE = 28
 

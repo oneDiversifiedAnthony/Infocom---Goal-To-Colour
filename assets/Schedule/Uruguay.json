@@ -1602,7 +1602,7 @@
                   "venue_id": 11354,
                   "gender": "male",
                   "name": "Paraguay",
-                  "short_code": "PRY",
+                  "short_code": "PAR",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18723.png",
                   "founded": 1906,
                   "type": "national",
@@ -2538,7 +2538,7 @@
                   "venue_id": 11354,
                   "gender": "male",
                   "name": "Paraguay",
-                  "short_code": "PRY",
+                  "short_code": "PAR",
                   "image_path": "https://cdn.sportmonks.com/images/soccer/teams/3/18723.png",
                   "founded": 1906,
                   "type": "national",
@@ -3148,7 +3148,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781198839,
+        "current_timestamp": 1781205881,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3164,8 +3164,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3565,
-    "remaining": 2454,
+    "resets_in_seconds": 336,
+    "remaining": 1923,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

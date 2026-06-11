@@ -72,11 +72,35 @@ def build_tree_subtab(result_notebook):
     scroll.pack(side="right", fill="y")
     tree_widget.pack(fill="both", expand=True)
 
+    def _get_open_paths(parent="", prefix=""):
+        """Return set of path strings for all open (expanded) nodes."""
+        paths = set()
+        for item in tree_widget.get_children(parent):
+            text = tree_widget.item(item, "text")
+            path = f"{prefix}/{text}"
+            if tree_widget.item(item, "open"):
+                paths.add(path)
+                paths.update(_get_open_paths(item, path))
+        return paths
+
+    def _restore_open_paths(parent="", prefix="", open_paths=None):
+        """Re-open nodes whose paths match the saved set."""
+        if not open_paths:
+            return
+        for item in tree_widget.get_children(parent):
+            text = tree_widget.item(item, "text")
+            path = f"{prefix}/{text}"
+            if path in open_paths:
+                tree_widget.item(item, open=True)
+                _restore_open_paths(item, path, open_paths)
+
     def update(parsed, raw_text=""):
+        open_paths = _get_open_paths()
         for item in tree_widget.get_children():
             tree_widget.delete(item)
         if parsed is not None:
             _populate_tree("", parsed, tree_widget)
+            _restore_open_paths(open_paths=open_paths)
         else:
             tree_widget.insert("", "end", text="(not valid JSON)", values=(raw_text[:200],))
 
