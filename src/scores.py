@@ -109,9 +109,11 @@ def goal_scored(team_name):
     for fid, s in _scores.items():
         if s["home"] == team_name:
             s["home_score"] += 1
+            s["has_score"] = True
             return fid
         if s["away"] == team_name:
             s["away_score"] += 1
+            s["has_score"] = True
             return fid
     return None
 

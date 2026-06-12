@@ -399,8 +399,22 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
 
         live_widgets.append((fixture_id, dot_canvas, time_label, score_label, clock_label))
 
+    # Counter for periodic schedule re-read (every 5 minutes = 30 ticks at 10s)
+    _schedule_reload_counter = [0]
+
+    def _reload_schedule_scores():
+        """Re-read schedule JSON files and push any new scores into the scores module."""
+        updated = _load_fixtures_from_schedule(db)
+        scores.register_fixtures(updated)
+
     def _refresh_live():
         """Update live indicators, scores, and match clock every 10 seconds."""
+        # Re-read schedule files every 5 minutes to pick up completed game scores
+        _schedule_reload_counter[0] += 1
+        if _schedule_reload_counter[0] >= 30:
+            _schedule_reload_counter[0] = 0
+            _reload_schedule_scores()
+
         scores.update_live_flags()
         for fid, dot, time_lbl, score_lbl, clock_lbl in live_widgets:
             live = scores.is_live(fid)

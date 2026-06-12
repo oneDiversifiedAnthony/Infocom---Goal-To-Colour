@@ -306,7 +306,7 @@ class App:
         # Look up colours and fire the goal
         team_info = self.countries_db.get("teams", {}).get(local_name, {})
         colours = team_info.get("colours", [[255, 255, 255], [0, 0, 0], [128, 128, 128]])
-        self._goal_pressed(colours, local_name)
+        self._goal_pressed(colours, local_name, from_api=True)
 
     def _resolve_local_name(self, api_name):
         """Map a SportMonks API team name to a countries.json team name."""
@@ -366,13 +366,15 @@ class App:
         if country_name:
             self._fire_trigger(country_name)
 
-    def _goal_pressed(self, colours, country_name):
+    def _goal_pressed(self, colours, country_name, from_api=False):
         self.team_colours = colours
         self.team_name = country_name
         self.gen_team_label.config(text=country_name)
         self._draw_swatches(colours)
         self._update_sacn_country(country_name)
         self._highlight_flag(country_name)
+        if not from_api:
+            scores.goal_scored(country_name)
         self.goal.trigger(colours, country_name)
         self._fire_trigger(country_name)
         self._fire_sound_event("Goal by Team", country_name)
