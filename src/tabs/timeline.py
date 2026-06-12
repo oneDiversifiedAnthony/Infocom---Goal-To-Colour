@@ -45,6 +45,9 @@ SCHEDULE_DIR = os.path.join(
 VENUES_FILE = os.path.join(
     os.path.dirname(__file__), os.pardir, os.pardir, "assets", "venues.json"
 )
+PRESENTATIONS_FILE = os.path.join(
+    os.path.dirname(__file__), os.pardir, os.pardir, "assets", "DiversifiedPresentations.json"
+)
 WORLD_CUP_LEAGUE_ID = 732
 
 
@@ -160,6 +163,17 @@ def _load_fixtures_from_schedule(db):
     return sorted(fixtures.values(), key=lambda f: f["starting_at"])
 
 
+def _load_presentations():
+    """Load Diversified presentations from JSON. Returns list of dicts."""
+    if not os.path.isfile(PRESENTATIONS_FILE):
+        return []
+    try:
+        with open(PRESENTATIONS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f).get("presentations", [])
+    except Exception:
+        return []
+
+
 def _build_group_map(fixtures):
     """Assign group letters A-L based on sorted unique group_ids."""
     group_ids = sorted({f["group_id"] for f in fixtures if f.get("group_id")})
@@ -172,6 +186,7 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
     notebook.add(tab, text="Time Line")
 
     all_games = _load_fixtures_from_schedule(db)
+    presentations = _load_presentations()
     group_map = _build_group_map(all_games)
     venues = _load_venues()
 
@@ -296,25 +311,36 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
     count_label.pack(anchor="w", padx=20, pady=(7, 0))
 
     # Track widgets that need live updates (dot, time label, score label)
-    live_widgets = []  # list of (fixture_id, dot_canvas, time_label, score_label)
+    live_widgets = []  # list of (fixture_id, dot_canvas, time_label, score_label, clock_label)
 
-    current_date = None
+    # ── Build unified timeline: games + presentations sorted by LV time ──
+    timeline_items = []  # (lv_dt, type, data)
+
     for game in all_games:
         starting_at = game.get("starting_at", "")
         if not starting_at:
             continue
-
-        # Parse datetime
         try:
             utc_dt = datetime.strptime(starting_at, "%Y-%m-%d %H:%M:%S")
             utc_dt = utc_dt.replace(tzinfo=timezone.utc)
+            lv_dt = utc_dt.astimezone(lv_tz)
+            timeline_items.append((lv_dt, "game", game, utc_dt))
         except ValueError:
             continue
 
-        lv_dt = utc_dt.astimezone(lv_tz)
+    for p in presentations:
+        try:
+            lv_naive = datetime.strptime(f"{p['date']} {p['start_time']}", "%Y-%m-%d %H:%M")
+            lv_dt = lv_naive.replace(tzinfo=lv_tz)
+            timeline_items.append((lv_dt, "presentation", p, None))
+        except (ValueError, KeyError):
+            continue
+
+    timeline_items.sort(key=lambda x: x[0])
+
+    current_date = None
+    for lv_dt, item_type, data, utc_dt in timeline_items:
         date_str = lv_dt.strftime("%a %d %b %Y")
-        time_lv = lv_dt.strftime("%H:%M")
-        time_utc = utc_dt.strftime("%H:%M")
 
         # Date header (grouped by Las Vegas date)
         if date_str != current_date:
@@ -327,79 +353,130 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
             tk.Label(date_bar, text="  (Las Vegas)", font=("Segoe UI", 12),
                      fg="#aaccff", bg="#0066cc").pack(side="left")
 
-        fixture_id = game.get("id", "")
+        if item_type == "presentation":
+            # ── Presentation row ──
+            p = data
+            row = tk.Frame(scroll_frame, padx=20, pady=4)
+            row.pack(fill="x")
 
-        # Match row
-        row = tk.Frame(scroll_frame, padx=20, pady=5)
-        row.pack(fill="x")
+            # Orange square dot
+            dot_canvas = tk.Canvas(row, width=20, height=20, highlightthickness=0)
+            dot_canvas.create_rectangle(3, 3, 17, 17, fill="#cc6600", outline="#cc6600")
+            dot_canvas.pack(side="left", padx=(7, 7))
 
-        # Timeline dot (changes to green when live)
-        dot_canvas = tk.Canvas(row, width=20, height=20, highlightthickness=0)
-        dot_canvas.create_oval(3, 3, 17, 17, fill="#0066cc", outline="#0066cc")
-        dot_canvas.pack(side="left", padx=(7, 7))
+            # Time range
+            time_str = f"{p.get('start_time', '')} - {p.get('end_time', '')} LV"
+            tk.Label(row, text=time_str, font=("Consolas", 13, "bold"),
+                     fg="#cc6600", width=18, anchor="w").pack(side="left", padx=(0, 7))
 
-        # Game ID
-        tk.Label(row, text=str(fixture_id),
-                 font=("Consolas", 9), fg="#555555", width=10,
-                 anchor="w").pack(side="left", padx=(0, 7))
+            # PRESENTATION label
+            tk.Label(row, text="PRESENTATION", font=("Segoe UI", 10, "bold"),
+                     fg="#cc6600", width=14, anchor="w").pack(side="left")
 
-        # Las Vegas time (primary) + UTC (changes to green when live)
-        time_display = f"{time_lv} LV / {time_utc} UTC"
-        time_label = tk.Label(row, text=time_display,
-                 font=("Consolas", 15, "bold"), fg="#0066cc", width=22,
-                 anchor="w")
-        time_label.pack(side="left", padx=(0, 7))
+            # Title
+            tk.Label(row, text=p.get("title", ""), font=("Segoe UI", 13, "bold"),
+                     fg="#e0e0e0", anchor="w", wraplength=500).pack(side="left", padx=(4, 10))
 
-        # Group label
-        group_letter = group_map.get(game.get("group_id"), "")
-        tk.Label(row, text=group_letter, font=("Consolas", 15), width=3,
-                 fg="#888888", anchor="w").pack(side="left")
+            # Location
+            location = p.get("location", "")
+            if location:
+                tk.Label(row, text=location, font=("Segoe UI", 11),
+                         fg="#888888", anchor="w").pack(side="left", padx=(7, 0))
 
-        # Home label + team with swatches
-        home = game["home"]
-        home_colours = db.get("teams", {}).get(home, {}).get("colours", DEFAULT_TEAM_COLOURS)
-        tk.Label(row, text="H", font=("Consolas", 10, "bold"), fg="#666666",
-                 width=2).pack(side="left")
-        tk.Label(row, text=home, font=("Segoe UI", 17), width=14, anchor="w").pack(side="left")
-        for rgb in home_colours:
-            hex_col = f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
-            sw = tk.Canvas(row, width=24, height=24, highlightthickness=1, highlightbackground="#666")
-            sw.create_rectangle(0, 0, 24, 24, fill=hex_col, outline="")
-            sw.pack(side="left", padx=2)
+            # Presenters row below
+            presenters = p.get("presenters", [])
+            if presenters:
+                pres_row = tk.Frame(scroll_frame, padx=20, pady=0)
+                pres_row.pack(fill="x")
+                # Indent to align with content above
+                tk.Frame(pres_row, width=34).pack(side="left")
+                names = ", ".join(
+                    f"{pr['name']} ({pr['company']})" if pr.get("company") else pr["name"]
+                    for pr in presenters
+                )
+                tk.Label(pres_row, text=names, font=("Segoe UI", 10),
+                         fg="#999999", anchor="w", wraplength=900).pack(side="left")
 
-        # Score display (updated live)
-        score_label = tk.Label(row, text="", font=("Consolas", 17, "bold"),
-                               fg="#ffcc00", width=7, anchor="center")
-        score_label.pack(side="left", padx=4)
+            # Separator
+            sep = tk.Frame(scroll_frame, height=1, bg="#333333")
+            sep.pack(fill="x", padx=34)
 
-        # Away label + team with swatches
-        away = game["away"]
-        away_colours = db.get("teams", {}).get(away, {}).get("colours", DEFAULT_TEAM_COLOURS)
-        tk.Label(row, text="A", font=("Consolas", 10, "bold"), fg="#666666",
-                 width=2).pack(side="left")
-        tk.Label(row, text=away, font=("Segoe UI", 17), width=14, anchor="w").pack(side="left")
-        for rgb in away_colours:
-            hex_col = f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
-            sw = tk.Canvas(row, width=24, height=24, highlightthickness=1, highlightbackground="#666")
-            sw.create_rectangle(0, 0, 24, 24, fill=hex_col, outline="")
-            sw.pack(side="left", padx=2)
+        else:
+            # ── Game row ──
+            game = data
+            time_lv = lv_dt.strftime("%H:%M")
+            time_utc = utc_dt.strftime("%H:%M") if utc_dt else ""
+            fixture_id = game.get("id", "")
 
+            row = tk.Frame(scroll_frame, padx=20, pady=5)
+            row.pack(fill="x")
 
-        # Venue
-        venue_id = game.get("venue_id")
-        venue_name = venues.get(venue_id, "")
-        if venue_name:
-            tk.Label(row, text=f"  {venue_name}", font=("Segoe UI", 14),
-                     fg="#888888", anchor="w").pack(side="left", padx=(14, 0))
+            # Timeline dot (changes to green when live)
+            dot_canvas = tk.Canvas(row, width=20, height=20, highlightthickness=0)
+            dot_canvas.create_oval(3, 3, 17, 17, fill="#0066cc", outline="#0066cc")
+            dot_canvas.pack(side="left", padx=(7, 7))
 
-        # Match clock (updated live, shown to the right of venue)
-        clock_label = tk.Label(row, text="", font=("Consolas", 14, "bold"),
-                               fg="#28a745", anchor="w")
-        clock_label.pack(side="left", padx=(10, 0))
+            # Game ID
+            tk.Label(row, text=str(fixture_id),
+                     font=("Consolas", 9), fg="#555555", width=10,
+                     anchor="w").pack(side="left", padx=(0, 7))
 
-        live_widgets.append((fixture_id, dot_canvas, time_label, score_label, clock_label))
+            # Las Vegas time (primary) + UTC (changes to green when live)
+            time_display = f"{time_lv} LV / {time_utc} UTC"
+            time_label = tk.Label(row, text=time_display,
+                     font=("Consolas", 15, "bold"), fg="#0066cc", width=22,
+                     anchor="w")
+            time_label.pack(side="left", padx=(0, 7))
 
-    # Counter for periodic schedule re-read (every 5 minutes = 30 ticks at 10s)
+            # Group label
+            group_letter = group_map.get(game.get("group_id"), "")
+            tk.Label(row, text=group_letter, font=("Consolas", 15), width=3,
+                     fg="#888888", anchor="w").pack(side="left")
+
+            # Home label + team with swatches
+            home = game["home"]
+            home_colours = db.get("teams", {}).get(home, {}).get("colours", DEFAULT_TEAM_COLOURS)
+            tk.Label(row, text="H", font=("Consolas", 10, "bold"), fg="#666666",
+                     width=2).pack(side="left")
+            tk.Label(row, text=home, font=("Segoe UI", 17), width=14, anchor="w").pack(side="left")
+            for rgb in home_colours:
+                hex_col = f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
+                sw = tk.Canvas(row, width=24, height=24, highlightthickness=1, highlightbackground="#666")
+                sw.create_rectangle(0, 0, 24, 24, fill=hex_col, outline="")
+                sw.pack(side="left", padx=2)
+
+            # Score display (updated live)
+            score_label = tk.Label(row, text="", font=("Consolas", 17, "bold"),
+                                   fg="#ffcc00", width=7, anchor="center")
+            score_label.pack(side="left", padx=4)
+
+            # Away label + team with swatches
+            away = game["away"]
+            away_colours = db.get("teams", {}).get(away, {}).get("colours", DEFAULT_TEAM_COLOURS)
+            tk.Label(row, text="A", font=("Consolas", 10, "bold"), fg="#666666",
+                     width=2).pack(side="left")
+            tk.Label(row, text=away, font=("Segoe UI", 17), width=14, anchor="w").pack(side="left")
+            for rgb in away_colours:
+                hex_col = f"#{rgb[0]:02x}{rgb[1]:02x}{rgb[2]:02x}"
+                sw = tk.Canvas(row, width=24, height=24, highlightthickness=1, highlightbackground="#666")
+                sw.create_rectangle(0, 0, 24, 24, fill=hex_col, outline="")
+                sw.pack(side="left", padx=2)
+
+            # Venue
+            venue_id = game.get("venue_id")
+            venue_name = venues.get(venue_id, "")
+            if venue_name:
+                tk.Label(row, text=f"  {venue_name}", font=("Segoe UI", 14),
+                         fg="#888888", anchor="w").pack(side="left", padx=(14, 0))
+
+            # Match clock (updated live, shown to the right of venue)
+            clock_label = tk.Label(row, text="", font=("Consolas", 14, "bold"),
+                                   fg="#28a745", anchor="w")
+            clock_label.pack(side="left", padx=(10, 0))
+
+            live_widgets.append((fixture_id, dot_canvas, time_label, score_label, clock_label))
+
+    # Counter for periodic schedule re-read (every 1 minute = 6 ticks at 10s)
     _schedule_reload_counter = [0]
 
     def _reload_schedule_scores():
@@ -409,9 +486,9 @@ def build_timeline_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
 
     def _refresh_live():
         """Update live indicators, scores, and match clock every 10 seconds."""
-        # Re-read schedule files every 5 minutes to pick up completed game scores
+        # Re-read schedule files every 1 minute to pick up completed game scores
         _schedule_reload_counter[0] += 1
-        if _schedule_reload_counter[0] >= 30:
+        if _schedule_reload_counter[0] >= 6:
             _schedule_reload_counter[0] = 0
             _reload_schedule_scores()
 

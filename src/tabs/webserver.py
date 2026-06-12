@@ -60,6 +60,14 @@ try:
 except (FileNotFoundError, json.JSONDecodeError):
     _FLAGS_DATA = {}
 
+# Load Diversified presentations
+_PRESENTATIONS_PATH = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, "assets", "DiversifiedPresentations.json")
+try:
+    with open(_PRESENTATIONS_PATH, "r", encoding="utf-8") as _f:
+        _PRESENTATIONS = json.load(_f).get("presentations", [])
+except (FileNotFoundError, json.JSONDecodeError):
+    _PRESENTATIONS = []
+
 
 def _flag_svg(name, width=48, height=32):
     """Return an inline flag SVG element for a country, or empty string."""
@@ -287,46 +295,43 @@ def _build_html():
         """Generate an inline flag for a team in the schedule."""
         return _flag_svg(name, width=30, height=20)
 
-    # Schedule table — sorted by LV time
+    # ── Build unified timeline: games + presentations sorted by LV time ──
     scores.update_live_flags()
     schedule_rows = ""
 
-    # Pre-compute LV datetime for sorting and grouping
-    def _lv_sort_key(g):
+    # Build list of (lv_datetime, type, data) for unified sorting
+    timeline_items = []
+
+    # Add games
+    for g in games:
         d = g.get("date", "")
         t = g.get("time_utc", "")
         if d and t:
             try:
                 utc_dt = datetime.strptime(f"2026 {d} {t}", "%Y %b %d %H:%M")
                 utc_dt = utc_dt.replace(tzinfo=timezone.utc)
-                return utc_dt.astimezone(_lv_tz)
+                lv_dt = utc_dt.astimezone(_lv_tz)
+                timeline_items.append((lv_dt, "game", g, utc_dt))
             except ValueError:
-                pass
-        return datetime(2099, 1, 1, tzinfo=timezone.utc)
+                timeline_items.append((datetime(2099, 1, 1, tzinfo=timezone.utc), "game", g, None))
+        else:
+            timeline_items.append((datetime(2099, 1, 1, tzinfo=timezone.utc), "game", g, None))
 
-    sorted_games = sorted(games, key=_lv_sort_key)
+    # Add presentations (times are already LV local)
+    for p in _PRESENTATIONS:
+        try:
+            lv_naive = datetime.strptime(f"{p['date']} {p['start_time']}", "%Y-%m-%d %H:%M")
+            lv_dt = lv_naive.replace(tzinfo=_lv_tz)
+            timeline_items.append((lv_dt, "presentation", p, None))
+        except (ValueError, KeyError):
+            pass
+
+    timeline_items.sort(key=lambda x: x[0])
 
     current_date = None
-    for g in sorted_games:
-        d = g.get("date", "TBD")
-        time_utc = g.get("time_utc", "")
-        time_lv = ""
-        time_to = ""
-        lv_date_str = d
-        is_live = False
-        if time_utc:
-            try:
-                utc_dt = datetime.strptime(f"2026 {d} {time_utc}", "%Y %b %d %H:%M")
-                utc_dt = utc_dt.replace(tzinfo=timezone.utc)
-                lv_dt = utc_dt.astimezone(_lv_tz)
-                to_dt = utc_dt.astimezone(_to_tz)
-                time_lv = lv_dt.strftime("%H:%M")
-                time_to = to_dt.strftime("%H:%M")
-                lv_date_str = lv_dt.strftime("%b %d").replace(" 0", " ")
-                diff_min = (now_utc - utc_dt).total_seconds() / 60
-                is_live = 0 <= diff_min <= 120
-            except ValueError:
-                pass
+    all_scores = scores.get_all_scores()
+    for lv_dt, item_type, data, utc_dt in timeline_items:
+        lv_date_str = lv_dt.strftime("%b %d").replace(" 0", " ") if lv_dt.year < 2099 else "TBD"
 
         if lv_date_str != current_date:
             current_date = lv_date_str
@@ -335,49 +340,96 @@ def _build_html():
                 f'padding:6px 12px;font-weight:bold;font-size:16px;">{lv_date_str} (LV)</td></tr>'
             )
 
-        time_colour = "#28a745" if is_live else "#0088ff"
-        dot_colour = "#28a745" if is_live else "#0066cc"
-        time_display = f"{time_lv} LV" if time_lv else ""
-        if time_to:
-            time_display += f" / {time_to} TO"
-        if time_utc:
-            time_display += f" / {time_utc} UTC"
-        venue = g.get("venue", "")
-        group = g.get("group", "")
-        home = g.get("home", "")
-        away = g.get("away", "")
-        # Score and match minute from score tracker
-        score_display = ""
-        minute_display = ""
-        all_scores = scores.get_all_scores()
-        for fid, sc in all_scores.items():
-            if sc["home"] == home and sc["away"] == away:
-                sd = scores.get_score_display(fid)
-                if sd:
-                    score_display = sd
-                minute_display = scores.get_match_clock(fid)
-                break
-        # Score display: big bold numbers on the outside of flags
-        home_score_parts = score_display.split(" - ") if score_display else []
-        if len(home_score_parts) == 2:
-            home_score_html = f'<span style="color:#ffcc00;font-weight:bold;font-size:24px;font-family:Consolas,monospace;padding:0 6px;">{home_score_parts[0]}</span>'
-            away_score_html = f'<span style="color:#ffcc00;font-weight:bold;font-size:24px;font-family:Consolas,monospace;padding:0 6px;">{home_score_parts[1]}</span>'
+        if item_type == "presentation":
+            # Presentation row
+            p = data
+            start = p.get("start_time", "")
+            end = p.get("end_time", "")
+            title = p.get("title", "")
+            location = p.get("location", "")
+            presenters = p.get("presenters", [])
+            presenter_names = ", ".join(
+                pr["name"] + (f' <span style="color:#666;">({pr["company"]})</span>' if pr.get("company") else "")
+                for pr in presenters
+            )
+            # Check if currently happening
+            is_now = False
+            try:
+                end_naive = datetime.strptime(f"{p['date']} {p['end_time']}", "%Y-%m-%d %H:%M")
+                end_dt = end_naive.replace(tzinfo=_lv_tz)
+                is_now = lv_dt <= now_utc.astimezone(_lv_tz) <= end_dt
+            except (ValueError, KeyError):
+                pass
+            now_badge = (' <span style="background:#cc6600;color:#fff;padding:2px 8px;'
+                         'border-radius:4px;font-size:11px;font-weight:bold;">NOW</span>') if is_now else ''
+            border_col = "#cc6600" if is_now else "#333"
+            schedule_rows += (
+                f'<tr style="border-bottom:1px solid {border_col};border-left:3px solid #cc6600;">'
+                f'<td style="padding:6px;width:16px;">'
+                f'<span style="display:inline-block;width:12px;height:12px;border-radius:2px;'
+                f'background:#cc6600;"></span></td>'
+                f'<td style="padding:6px;color:#cc6600;font-family:monospace;">'
+                f'{start} - {end} LV{now_badge}</td>'
+                f'<td colspan="3" style="padding:6px;">'
+                f'<div style="font-weight:bold;color:#e0e0e0;font-size:13px;">'
+                f'<span style="color:#cc6600;">PRESENTATION</span> &mdash; {title}</div>'
+                f'<div style="color:#999;font-size:11px;margin-top:2px;">{presenter_names}</div>'
+                f'</td>'
+                f'<td style="padding:6px;color:#888;font-size:12px;">{location}</td></tr>'
+            )
         else:
-            home_score_html = ''
-            away_score_html = ''
-        vs_html = '<span style="color:#555;padding:0 4px;">vs</span>' if not score_display else '<span style="color:#555;padding:0 4px;">-</span>'
-        live_badge = f' <span style="background:#28a745;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:bold;">LIVE {minute_display}</span>' if is_live else ''
-        schedule_rows += (
-            f'<tr style="border-bottom:1px solid #333;">'
-            f'<td style="padding:6px;width:16px;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:{dot_colour};"></span></td>'
-            f'<td style="padding:6px;color:{time_colour};font-family:monospace;">{time_display}{live_badge}</td>'
-            f'<td style="padding:6px;font-weight:bold;text-align:right;white-space:nowrap;">'
-            f'{home_score_html}{_team_flag(home)} <span style="color:#aaa;font-size:10px;">H</span> {home}</td>'
-            f'<td style="padding:6px;text-align:center;">{vs_html}</td>'
-            f'<td style="padding:6px;font-weight:bold;white-space:nowrap;">'
-            f'{away} <span style="color:#aaa;font-size:10px;">A</span> {_team_flag(away)}{away_score_html}</td>'
-            f'<td style="padding:6px;color:#888;font-size:13px;">{venue}</td></tr>'
-        )
+            # Game row
+            g = data
+            time_lv = lv_dt.strftime("%H:%M") if lv_dt.year < 2099 else ""
+            time_to = ""
+            time_utc_str = g.get("time_utc", "")
+            is_live = False
+            if utc_dt:
+                to_dt = utc_dt.astimezone(_to_tz)
+                time_to = to_dt.strftime("%H:%M")
+                diff_min = (now_utc - utc_dt).total_seconds() / 60
+                is_live = 0 <= diff_min <= 120
+
+            time_colour = "#28a745" if is_live else "#0088ff"
+            dot_colour = "#28a745" if is_live else "#0066cc"
+            time_display = f"{time_lv} LV" if time_lv else ""
+            if time_to:
+                time_display += f" / {time_to} TO"
+            if time_utc_str:
+                time_display += f" / {time_utc_str} UTC"
+            venue = g.get("venue", "")
+            home = g.get("home", "")
+            away = g.get("away", "")
+            # Score and match minute from score tracker
+            score_display = ""
+            minute_display = ""
+            for fid, sc in all_scores.items():
+                if sc["home"] == home and sc["away"] == away:
+                    sd = scores.get_score_display(fid)
+                    if sd:
+                        score_display = sd
+                    minute_display = scores.get_match_clock(fid)
+                    break
+            home_score_parts = score_display.split(" - ") if score_display else []
+            if len(home_score_parts) == 2:
+                home_score_html = f'<span style="color:#ffcc00;font-weight:bold;font-size:24px;font-family:Consolas,monospace;padding:0 6px;">{home_score_parts[0]}</span>'
+                away_score_html = f'<span style="color:#ffcc00;font-weight:bold;font-size:24px;font-family:Consolas,monospace;padding:0 6px;">{home_score_parts[1]}</span>'
+            else:
+                home_score_html = ''
+                away_score_html = ''
+            vs_html = '<span style="color:#555;padding:0 4px;">vs</span>' if not score_display else '<span style="color:#555;padding:0 4px;">-</span>'
+            live_badge = f' <span style="background:#28a745;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:bold;">LIVE {minute_display}</span>' if is_live else ''
+            schedule_rows += (
+                f'<tr style="border-bottom:1px solid #333;">'
+                f'<td style="padding:6px;width:16px;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:{dot_colour};"></span></td>'
+                f'<td style="padding:6px;color:{time_colour};font-family:monospace;">{time_display}{live_badge}</td>'
+                f'<td style="padding:6px;font-weight:bold;text-align:right;white-space:nowrap;">'
+                f'{home_score_html}{_team_flag(home)} <span style="color:#aaa;font-size:10px;">H</span> {home}</td>'
+                f'<td style="padding:6px;text-align:center;">{vs_html}</td>'
+                f'<td style="padding:6px;font-weight:bold;white-space:nowrap;">'
+                f'{away} <span style="color:#aaa;font-size:10px;">A</span> {_team_flag(away)}{away_score_html}</td>'
+                f'<td style="padding:6px;color:#888;font-size:13px;">{venue}</td></tr>'
+            )
 
     html = f"""<!DOCTYPE html>
 <html>

@@ -82,7 +82,7 @@
                   "founded": 1912,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-05 23:30:00",
+                  "last_played_at": "2026-06-12 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -160,7 +160,7 @@
                   "founded": 1912,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-05 23:30:00",
+                  "last_played_at": "2026-06-12 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -194,11 +194,11 @@
               "group_id": 253020,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 11542,
               "name": "Canada vs Bosnia and Herzegovina",
               "starting_at": "2026-06-12 19:00:00",
-              "result_info": null,
+              "result_info": "Game ended in draw.",
               "leg": "1/1",
               "details": "Match 3",
               "length": 90,
@@ -219,10 +219,10 @@
                   "founded": 1912,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-05 23:30:00",
+                  "last_played_at": "2026-06-12 19:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": false,
                     "position": 1
                   }
                 },
@@ -238,15 +238,59 @@
                   "founded": 1992,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 19:00:00",
+                  "last_played_at": "2026-06-12 19:00:00",
                   "meta": {
                     "location": "away",
-                    "winner": null,
+                    "winner": false,
                     "position": 2
                   }
                 }
               ],
               "scores": [
+                {
+                  "id": 25662403,
+                  "fixture_id": 19609154,
+                  "type_id": 1525,
+                  "participant_id": 18572,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25662404,
+                  "fixture_id": 19609154,
+                  "type_id": 1525,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25662407,
+                  "fixture_id": 19609154,
+                  "type_id": 2,
+                  "participant_id": 18572,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25662408,
+                  "fixture_id": 19609154,
+                  "type_id": 2,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
                 {
                   "id": 25662405,
                   "fixture_id": 19609154,
@@ -259,59 +303,37 @@
                   "description": "1ST_HALF"
                 },
                 {
-                  "id": 25662403,
-                  "fixture_id": 19609154,
-                  "type_id": 1525,
-                  "participant_id": 18572,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 25662404,
-                  "fixture_id": 19609154,
-                  "type_id": 1525,
-                  "participant_id": 18625,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 25662407,
-                  "fixture_id": 19609154,
-                  "type_id": 2,
-                  "participant_id": 18572,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 25662408,
-                  "fixture_id": 19609154,
-                  "type_id": 2,
-                  "participant_id": 18625,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
                   "id": 25662406,
                   "fixture_id": 19609154,
                   "type_id": 1,
                   "participant_id": 18625,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "away"
                   },
                   "description": "1ST_HALF"
+                },
+                {
+                  "id": 25671012,
+                  "fixture_id": 19609154,
+                  "type_id": 48996,
+                  "participant_id": 18625,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25671011,
+                  "fixture_id": 19609154,
+                  "type_id": 48996,
+                  "participant_id": 18572,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
                 }
               ]
             }
@@ -323,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781288207,
+        "current_timestamp": 1781304865,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -339,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 2293,
-    "remaining": 2410,
+    "resets_in_seconds": 3362,
+    "remaining": 2482,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

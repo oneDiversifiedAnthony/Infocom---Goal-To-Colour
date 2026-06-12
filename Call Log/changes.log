@@ -1,0 +1,9 @@
+[2026-06-12 14:45:54] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-12 15:23:10] SCORE CHANGE: Canada vs Bosnia and Herzegovina  0-0 → 0-1
+[2026-06-12 18:50:02] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+

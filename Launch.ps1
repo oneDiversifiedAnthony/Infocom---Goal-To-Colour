@@ -30,7 +30,7 @@ $RulePrefix       = "WorldCupColour"
 $SacnPort         = 5568
 $WebPort          = 8080
 $HttpsPort        = 443
-$RestartDelaySec  = 5        # seconds to wait before restarting after a crash
+$RestartDelaySec  = 2        # seconds to wait before restarting after a crash
 $PythonExe        = "python" # change to full path if needed, e.g. "C:\Python312\python.exe"
 $MouseWiggleSec   = 60       # wiggle mouse every N seconds to prevent screen lock
 

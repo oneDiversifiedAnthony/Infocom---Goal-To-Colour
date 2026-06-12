@@ -64,8 +64,15 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
     drawing = [False]
 
     def _parse():
-        """Read callcounter_*.log files and return today's entries as (label, tokens, call_type) tuples."""
+        """Read callcounter_*.log files and return today's entries and markers.
+
+        Returns (entries, markers) where:
+            entries: list of (label, tokens, call_type) tuples
+            markers: list of (index_in_entries, time, marker_type, description)
+                marker_type: "state", "goal", or "event"
+        """
         entries = []
+        markers = []
         today_str = datetime.date.today().strftime("%Y-%m-%d")
         pattern = os.path.join(call_log_dir, "callcounter_*.log")
         files = sorted(glob.glob(pattern))
@@ -76,20 +83,32 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
                         line = line.strip()
                         if not line:
                             continue
+                        date_part = line.split(" ")[0] if " " in line else ""
+                        if date_part != today_str:
+                            continue
+                        time_part = line.split(" ")[1] if " " in line else ""
+                        # Check for marker lines
+                        if ", STATE_CHANGE: " in line:
+                            desc = line.split(", STATE_CHANGE: ", 1)[1]
+                            markers.append((len(entries), time_part, "state", desc))
+                            continue
+                        if ", GOAL: " in line:
+                            desc = line.split(", GOAL: ", 1)[1]
+                            markers.append((len(entries), time_part, "goal", desc))
+                            continue
+                        if ", EVENT: " in line:
+                            desc = line.split(", EVENT: ", 1)[1]
+                            markers.append((len(entries), time_part, "event", desc))
+                            continue
                         parts = line.split(", tokens_remaining: ")
                         if len(parts) == 2:
                             try:
-                                date_part = parts[0].split(" ")[0]
-                                if date_part != today_str:
-                                    continue
                                 time_part = parts[0].split(" ")[1] if " " in parts[0] else parts[0]
-                                # Parse tokens and call type from remainder
                                 remainder = parts[1]
                                 call_type = "unknown"
                                 if ", call: " in remainder:
                                     tok_str, rest = remainder.split(", call: ", 1)
                                     tokens = int(tok_str)
-                                    # call type is before the next comma (phase field)
                                     call_type = rest.split(",")[0].strip()
                                 else:
                                     tokens = int(remainder)
@@ -98,17 +117,18 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
                                 pass
             except (FileNotFoundError, PermissionError):
                 pass
-        return entries
+        return entries, markers
 
     def _parse_async(callback):
         """Parse log files in a background thread, then call callback on the main thread."""
         def _worker():
-            entries = _parse()
-            tab.after(0, lambda: callback(entries))
+            result = _parse()
+            tab.after(0, lambda: callback(result))
         threading.Thread(target=_worker, daemon=True).start()
 
-    def _draw_with_data(entries):
+    def _draw_with_data(parse_result):
         """Draw the graph using pre-parsed entries. Runs on the main thread."""
+        entries, markers = parse_result
         drawing[0] = True
         canvas.delete("all")
 
@@ -184,11 +204,77 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
         canvas.create_text(margin_l // 2, margin_t - 8, text="Tokens",
                            fill="#aaaaaa", font=("Segoe UI", 8), anchor="s")
 
+        # ── Markers: state changes, goals, events ──
+        STATE_MARKER_COLOURS = {
+            "NS": "#888888", "1H": "#28a745", "HT": "#ffcc00", "2H": "#28a745",
+            "FT": "#ff0000", "ET": "#cc44ff", "AET": "#ff0000", "FTP": "#ff0000",
+            "PEN": "#cc44ff", "BRK": "#ffcc00",
+        }
+        MARKER_TYPE_COLOURS = {
+            "goal":  "#ffcc00",
+            "event": "#ff6600",
+            "state": "#ffffff",
+        }
+        EVENT_LABEL_COLOURS = {
+            "GOAL": "#ffcc00",
+            "YELLOW_CARD": "#ffcc00",
+            "RED_CARD": "#ff0000",
+            "SUBSTITUTION": "#0088ff",
+        }
+
+        # Stagger labels vertically to avoid overlap
+        label_y_offset = [0]
+
+        for idx, time_str, marker_type, desc in markers:
+            # Map index to x position on the graph
+            if n <= 1:
+                px = margin_l + plot_w // 2
+            else:
+                ci = min(idx, n - 1)
+                px = margin_l + int(plot_w * ci / (n - 1))
+
+            if marker_type == "state":
+                new_state = desc.split("-> ")[-1].strip().rstrip("]")
+                marker_col = STATE_MARKER_COLOURS.get(new_state, "#ffffff")
+                top_label = new_state
+            elif marker_type == "goal":
+                marker_col = "#ffcc00"
+                # Show "GOAL team" as label
+                top_label = "GOAL"
+            else:
+                # event — pick colour by event type
+                event_type = desc.split(" ")[0] if desc else "EVENT"
+                marker_col = EVENT_LABEL_COLOURS.get(event_type, "#ff6600")
+                top_label = event_type
+
+            # Vertical dashed line
+            dash_gap = 4 if marker_type == "state" else 6
+            line_width = 2 if marker_type == "goal" else 1
+            for dy in range(margin_t, margin_t + plot_h, dash_gap * 2):
+                canvas.create_line(px, dy, px, min(dy + dash_gap, margin_t + plot_h),
+                                   fill=marker_col, width=line_width)
+
+            # Label at top (staggered)
+            ly_pos = margin_t - 2 - (label_y_offset[0] % 3) * 10
+            label_y_offset[0] += 1
+            canvas.create_text(px + 2, ly_pos, text=top_label,
+                               fill=marker_col, font=("Consolas", 7, "bold"), anchor="sw")
+
+            # Goal markers get a circle highlight
+            if marker_type == "goal":
+                cy = margin_t + plot_h // 2
+                canvas.create_oval(px - 6, cy - 6, px + 6, cy + 6,
+                                   fill="", outline=marker_col, width=2)
+                canvas.create_text(px, cy, text="\u26BD", font=("Segoe UI", 8))
+
         # Legend
         lx = w - margin_r - 10
         ly = margin_t + 6
         for label, col in [("scores", CALL_TYPE_COLOURS["scores"]),
-                           ("events", CALL_TYPE_COLOURS["events"])]:
+                           ("events", CALL_TYPE_COLOURS["events"]),
+                           ("state", "#ffffff"),
+                           ("goal", "#ffcc00"),
+                           ("card/sub", "#ff6600")]:
             canvas.create_oval(lx - 6, ly - 4, lx, ly + 2, fill=col, outline=col)
             canvas.create_text(lx - 10, ly - 1, text=label, fill=col,
                                font=("Segoe UI", 8), anchor="e")

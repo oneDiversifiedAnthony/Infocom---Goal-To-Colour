@@ -99,9 +99,12 @@ def register_fixtures(fixtures):
                 "live": False,
             }
         elif has_score:
-            _scores[fid]["home_score"] = f.get("home_score") or 0
-            _scores[fid]["away_score"] = f.get("away_score") or 0
-            _scores[fid]["has_score"] = True
+            # Schedule is ground truth for finished games — always update
+            # For live games, the livescores API takes priority via update_from_live
+            if not _scores[fid].get("live"):
+                _scores[fid]["home_score"] = f.get("home_score") or 0
+                _scores[fid]["away_score"] = f.get("away_score") or 0
+                _scores[fid]["has_score"] = True
 
 
 def goal_scored(team_name):
@@ -276,6 +279,33 @@ def get_match_clock(fixture_id):
     return state_name
 
 
+def get_time_remaining(fixture_id):
+    """Return a string like '22:15' showing time left in the current period, or empty.
+
+    Uses period_length (typically 45) minus elapsed minutes/seconds.
+    Returns empty for injury time, breaks, and non-ticking states.
+    """
+    period = get_current_period(fixture_id)
+    if not period or period.get("minutes") is None:
+        return ""
+    minutes = period["minutes"]
+    seconds = period.get("seconds", 0) or 0
+    period_length = period.get("period_length", 45)
+    counts_from = period.get("counts_from", 0)
+    regular_end = counts_from + period_length
+
+    # In injury time — no predictable remaining
+    if minutes >= regular_end:
+        return ""
+
+    total_elapsed_sec = (minutes - counts_from) * 60 + seconds
+    total_period_sec = period_length * 60
+    remaining_sec = max(0, total_period_sec - total_elapsed_sec)
+    rm = remaining_sec // 60
+    rs = remaining_sec % 60
+    return f"{rm}:{rs:02d}"
+
+
 def get_period_info(fixture_id):
     """Return dict with period details for display, or None.
 
@@ -363,6 +393,7 @@ def get_all_scores():
 
 # ── Polling phase detection ──────────────────────────────────────────────
 # State IDs grouped by polling phase
+_PREGAME_STATE_IDS = {1, 13, 26}             # NS, TBA, PEND -- not started yet
 _PLAYING_STATE_IDS = {2, 6, 9, 22, 23}      # 1H, ET, PEN, 2H, ET2H -- active play
 _BREAK_STATE_IDS = {3, 4, 18, 21, 25}       # HT, BRK, INT, ETB, PENB -- breaks
 _FINISHED_STATE_IDS = {5, 7, 8}             # FT, AET, FTP -- match over
@@ -383,6 +414,7 @@ def get_poll_phase():
 
     Returns one of: PHASE_IDLE, PHASE_PREGAME, PHASE_PLAYING, PHASE_BREAK, PHASE_POSTGAME
     """
+    has_pregame = False
     has_playing = False
     has_break = False
     has_finished = False
@@ -395,6 +427,8 @@ def get_poll_phase():
             has_break = True
         elif sid in _FINISHED_STATE_IDS:
             has_finished = True
+        elif sid in _PREGAME_STATE_IDS:
+            has_pregame = True
 
     if has_playing:
         return PHASE_PLAYING
@@ -402,6 +436,8 @@ def get_poll_phase():
         return PHASE_BREAK
     if has_finished:
         return PHASE_POSTGAME
+    if has_pregame:
+        return PHASE_PREGAME
 
     # No active states -- check if a game is coming up soon
     nxt = get_next_game_today()

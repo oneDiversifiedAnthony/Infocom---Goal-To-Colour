@@ -1,0 +1,137 @@
+{
+  "presentations": [
+    {
+      "title": "The Role of Large-Scale Deployments for Mission Critical Digital Signage",
+      "date": "2026-06-16",
+      "start_time": "14:45",
+      "end_time": "15:45",
+      "location": "West Hall W231",
+      "presenters": [
+        {"name": "Steve Glancey", "role": "Digital Experience (DEx) Leader", "company": "Diversified"},
+        {"name": "James Keen", "role": "EVP Marketing", "company": "Uniguest"},
+        {"name": "Thuy LeDinh", "role": "Consultant", "company": "LeDinh Consulting"},
+        {"name": "Misty Chalk", "role": "VP of Sales", "company": "BrightSign"},
+        {"name": "Jason Ault", "role": "Co-Founder & CEO", "company": "Coffman Media"}
+      ]
+    },
+    {
+      "title": "Digital Experience for Enterprise Rollouts",
+      "date": "2026-06-17",
+      "start_time": "13:30",
+      "end_time": "14:30",
+      "location": "West Hall W231",
+      "presenters": [
+        {"name": "Tom Percich", "role": "VP of Sales", "company": "Diversified"},
+        {"name": "Steve Glancey", "role": "Digital Experience (DEx) Leader", "company": "Diversified"},
+        {"name": "Misty Chalk", "role": "VP of Sales", "company": "BrightSign"},
+        {"name": "Stephen Jenkins", "role": "President Global Business and Innovation", "company": "Videri"}
+      ]
+    },
+    {
+      "title": "Building the Intelligent Workplace: How Glenmede Designed a Modern Hybrid Collaboration Experience",
+      "date": "2026-06-17",
+      "start_time": "14:00",
+      "end_time": "14:30",
+      "location": "The Pitch, North Hall #N8063",
+      "presenters": [
+        {"name": "Phillip Shoop", "role": "Account Executive", "company": "Diversified"},
+        {"name": "Brandon Bailor", "role": "VP IT Operations Manager", "company": "Glenmede"},
+        {"name": "Tim Vidal", "role": "Multimedia Event Officer", "company": "Glenmede"}
+      ]
+    },
+    {
+      "title": "From Legacy to the Future: Reimagining Oracle Park's Fan Engagement",
+      "date": "2026-06-17",
+      "start_time": "14:30",
+      "end_time": "15:00",
+      "location": "The Pitch, North Hall #N8063",
+      "presenters": [
+        {"name": "Duane Yoslov", "role": "Senior Vice President", "company": "Diversified"},
+        {"name": "Bill Schlough", "role": "CIO", "company": "San Francisco Giants"}
+      ]
+    },
+    {
+      "title": "From Draft Room to Diamond: How the Phillies Built Technology That Performs When It Matters Most",
+      "date": "2026-06-17",
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "location": "The Pitch, North Hall #N8063",
+      "presenters": [
+        {"name": "Phillip Shoop", "role": "Account Executive", "company": "Diversified"},
+        {"name": "Matt Bryan", "role": "Senior Director, Technology Services", "company": "Philadelphia Phillies"}
+      ]
+    },
+    {
+      "title": "Beyond the Install: Aligning AV Strategy, Systems, and Experience for Long-Term Impact",
+      "date": "2026-06-17",
+      "start_time": "15:30",
+      "end_time": "16:30",
+      "location": "The Pitch, North Hall #N8063",
+      "presenters": [
+        {"name": "Yitzy Shapiro", "role": "COO", "company": "Blue Square X"},
+        {"name": "Chanan Averbuch", "role": "CXO", "company": "Blue Square X"},
+        {"name": "Stephen Glancey", "role": "DIGITAL Practice Leader", "company": "Diversified"}
+      ]
+    },
+    {
+      "title": "Pitch Partner Tech Talks",
+      "date": "2026-06-18",
+      "start_time": "13:00",
+      "end_time": "15:00",
+      "location": "The Pitch, North Hall #N8063",
+      "presenters": [
+        {"name": "Crestron, Grass Valley, L-Acoustics, Legrand, NETGEAR, Shure, and Yamaha", "role": "", "company": ""}
+      ]
+    },
+    {
+      "title": "Building Broadcast Grade Enterprise Media Ecosystems",
+      "date": "2026-06-18",
+      "start_time": "15:00",
+      "end_time": "15:30",
+      "location": "The Pitch, North Hall #N8063",
+      "presenters": [
+        {"name": "TJ Kortlever", "role": "Senior Solutions Architect", "company": "Diversified"},
+        {"name": "Matt Morgan", "role": "Market Development Manager, Broadcast AV", "company": "Ross"},
+        {"name": "Mike Sullivan-Trainor", "role": "Senior Industry Analyst", "company": "AVIXA"}
+      ]
+    },
+    {
+      "title": "Behind the Screens of Integration",
+      "date": "2026-06-18",
+      "start_time": "16:00",
+      "end_time": "16:30",
+      "location": "The Pitch, North Hall #N8063",
+      "presenters": [
+        {"name": "Adam Lopez", "role": "Director Team Lead Commercial", "company": "Diversified"},
+        {"name": "Casey Lloyd", "role": "Director of Strategic Accounts", "company": "Crestron"},
+        {"name": "Joel Mulpeter", "role": "Product Marketing", "company": "Crestron"},
+        {"name": "Jonathan Lyth", "role": "Product Director", "company": "Grass Valley"},
+        {"name": "Michael Diodato", "role": "Head of Northeast", "company": "Blue Square X"}
+      ]
+    },
+    {
+      "title": "Women Without Boundaries: The Power of the Pivot",
+      "date": "2026-06-18",
+      "start_time": "16:30",
+      "end_time": "17:00",
+      "location": "The Pitch, North Hall #N8063",
+      "presenters": [
+        {"name": "Heather Best", "role": "Engagement Manager", "company": "Diversified"},
+        {"name": "Amy DeLouise", "role": "Founder", "company": "#GALSNGEAR"},
+        {"name": "Nicki Sun", "role": "CEO, Nicki Sun Media, and Head of Media Production", "company": "Puget Systems"},
+        {"name": "Cheryl Ottenritter", "role": "Founder", "company": "Ott House Audio"}
+      ]
+    },
+    {
+      "title": "Assembling Your AV First Aid Kit: Strategies to Avoid AV Failures",
+      "date": "2026-06-19",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "location": "Grand Lobby, Booth L1",
+      "presenters": [
+        {"name": "Jason Jacoby", "role": "Sales Engineer", "company": "Diversified"},
+        {"name": "Frank Padikkala", "role": "Snr. Technical Sales Architect - Zoom Spaces", "company": "Zoom"}
+      ]
+    }
+  ]
+}

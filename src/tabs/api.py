@@ -158,6 +158,7 @@ def build_api_tab(notebook, status_bar=None):
         return current_log_file[0]
 
     _last_call_type = ["scores"]
+    _prev_state_ids = {}  # {fixture_id: state_id} for detecting state changes
 
     def _append_call_log(remaining):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -169,6 +170,75 @@ def build_api_tab(notebook, status_bar=None):
                 f.write(f"{timestamp}, tokens_remaining: {remaining}, call: {call_type}, phase: {phase}\n")
         except PermissionError:
             pass
+
+    def _log_state_change(fixture_id, home, away, old_state_id, new_state_id):
+        """Write a state change marker line to the call log."""
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        old_name = _scores_module.STATE_NAMES.get(old_state_id, str(old_state_id)) if old_state_id else "—"
+        new_name = _scores_module.STATE_NAMES.get(new_state_id, str(new_state_id))
+        log_file = _get_call_log_file()
+        try:
+            with open(log_file, "a", encoding="utf-8") as f:
+                f.write(f"{timestamp}, STATE_CHANGE: {home} vs {away} [{old_name} -> {new_name}]\n")
+        except PermissionError:
+            pass
+
+    def _log_goal(home, away, home_score, away_score, scoring_team):
+        """Write a GOAL marker line to the call log."""
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        log_file = _get_call_log_file()
+        try:
+            with open(log_file, "a", encoding="utf-8") as f:
+                f.write(f"{timestamp}, GOAL: {scoring_team} ({home} {home_score}-{away_score} {away})\n")
+        except PermissionError:
+            pass
+
+    _seen_event_ids = set()  # track event IDs already logged
+
+    def _log_new_events(fixture_id, home, away):
+        """Log any new match events (cards, subs, etc.) to the call log."""
+        events = _scores_module.get_events(fixture_id)
+        if not events:
+            return
+        log_file = _get_call_log_file()
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        new_lines = []
+        for ev in events:
+            eid = ev.get("id")
+            if not eid or eid in _seen_event_ids:
+                continue
+            _seen_event_ids.add(eid)
+            type_id = ev.get("type_id")
+            minute = ev.get("minute", "")
+            extra = ev.get("extra_minute")
+            player = ev.get("player_name", "")
+            min_str = f"{minute}'" if minute else ""
+            if extra:
+                min_str = f"{minute}+{extra}'"
+            # Map type_id to label
+            if type_id == 14:
+                label = "GOAL"
+            elif type_id == 19:
+                label = "YELLOW_CARD"
+            elif type_id == 20:
+                label = "RED_CARD"
+            elif type_id == 18:
+                label = "SUBSTITUTION"
+            else:
+                label = f"EVENT_{type_id}"
+            result = ev.get("result", "")
+            detail = player
+            if result:
+                detail += f" ({result})"
+            new_lines.append(
+                f"{timestamp}, EVENT: {label} {min_str} {detail} [{home} vs {away}]\n"
+            )
+        if new_lines:
+            try:
+                with open(log_file, "a", encoding="utf-8") as f:
+                    f.writelines(new_lines)
+            except PermissionError:
+                pass
 
     def _stop_rate_flash():
         if rate_flash_id[0]:
@@ -186,6 +256,10 @@ def build_api_tab(notebook, status_bar=None):
 
     # Minimum interval (ms) derived from rate limit -- enforced as a floor on all polling
     _rate_limit_floor_ms = [0]
+    # Auto-tuned game rate: smoothed toward optimal to leave 3 tokens at reset
+    _auto_game_rate_ms = [0]  # 0 = not yet calculated
+    TOKEN_RESERVE = 3  # tokens to keep in reserve at reset
+    RATE_SMOOTHING = 0.3  # blend factor: 0.3 = 30% new value, 70% old (smooth)
 
     def _update_rate_limit(data):
         if not isinstance(data, dict):
@@ -211,10 +285,45 @@ def build_api_tab(notebook, status_bar=None):
             floor_ms = int(max_interval_sec * 1000)
             _rate_limit_floor_ms[0] = floor_ms
             rate_max_speed_label.config(
-                text=f"Max speed: 1/{max_interval_sec:.1f}s ({floor_ms}ms)  |  Floor applied: {floor_ms}ms")
+                text=f"Max speed: 1/{max_interval_sec:.1f}s ({floor_ms}ms)")
+
+            # Auto-tune game rate: aim to have TOKEN_RESERVE tokens left at reset
+            usable = remaining - TOKEN_RESERVE
+            if usable > 0:
+                optimal_ms = int((resets_in / usable) * 1000)
+                optimal_ms = max(100, optimal_ms)  # never below 100ms
+                # Smooth toward target to avoid jumpy adjustments
+                if _auto_game_rate_ms[0] <= 0:
+                    _auto_game_rate_ms[0] = optimal_ms  # first calculation
+                else:
+                    prev_rate = _auto_game_rate_ms[0]
+                    _auto_game_rate_ms[0] = int(
+                        prev_rate * (1 - RATE_SMOOTHING) + optimal_ms * RATE_SMOOTHING
+                    )
+                # Update the spinbox so the UI reflects the auto-tuned rate
+                phase = _scores_module.get_poll_phase()
+                if phase == _scores_module.PHASE_PLAYING:
+                    playing_interval_var.set(_auto_game_rate_ms[0])
+
+                # Prediction display
+                game_rate_ms = _auto_game_rate_ms[0]
+                calls_until_reset = int(resets_in / (game_rate_ms / 1000))
+                predicted_remaining = remaining - calls_until_reset
+                rate_prediction_label.config(
+                    text=f"Auto game rate: {game_rate_ms}ms  |  "
+                         f"~{predicted_remaining} tokens left at reset  "
+                         f"({calls_until_reset} calls in {resets_in // 60}m {resets_in % 60}s)",
+                    fg="#28a745" if predicted_remaining >= TOKEN_RESERVE else "#ff6600")
+            else:
+                _auto_game_rate_ms[0] = 0
+                rate_prediction_label.config(
+                    text=f"Token reserve ({TOKEN_RESERVE}) reached — throttling",
+                    fg="#ff0000")
         else:
             _rate_limit_floor_ms[0] = 0
+            _auto_game_rate_ms[0] = 0
             rate_max_speed_label.config(text="")
+            rate_prediction_label.config(text="")
 
         rate_progress["value"] = pct
         _stop_rate_flash()
@@ -358,8 +467,12 @@ def build_api_tab(notebook, status_bar=None):
 
         # Empty data means no games in play — clear all live state
         if not current:
+            had_live = bool(_prev_live_scores[0])
             _scores_module.clear_live_state()
             _prev_live_scores[0] = {}
+            # Games just ended — trigger schedule fetch to get final scores
+            if had_live and _fetch_schedule_cb[0]:
+                _fetch_schedule_cb[0]()
             return
 
         # Always push latest live scores and events into the scores module
@@ -373,14 +486,33 @@ def build_api_tab(notebook, status_bar=None):
             for fix in parsed.get("data", []):
                 if isinstance(fix, dict) and fix.get("id"):
                     fid = fix["id"]
-                    events = fix.get("events", [])
-                    if isinstance(events, list):
-                        _scores_module.update_events(fid, events)
+                    if "events" in fix:
+                        events = fix["events"]
+                        if isinstance(events, list):
+                            _scores_module.update_events(fid, events)
+                            cur_info = current.get(fid, {})
+                            _log_new_events(fid,
+                                            cur_info.get("home", ""),
+                                            cur_info.get("away", ""))
                     state_id = fix.get("state_id")
                     if state_id is not None:
+                        old_sid = _prev_state_ids.get(fid)
+                        if old_sid != state_id:
+                            # State changed — log it
+                            cur_info = current.get(fid, {})
+                            _log_state_change(
+                                fid,
+                                cur_info.get("home", fix.get("name", "")),
+                                cur_info.get("away", ""),
+                                old_sid, state_id,
+                            )
+                            _prev_state_ids[fid] = state_id
+                            # Game just finished — fetch schedule for final scores
+                            if state_id in (5, 7, 8) and _fetch_schedule_cb[0]:
+                                _fetch_schedule_cb[0]()
                         _scores_module.update_state(fid, state_id)
-                    periods = fix.get("periods", [])
-                    if isinstance(periods, list):
+                    periods = fix.get("periods")
+                    if isinstance(periods, list) and periods:
                         _scores_module.update_periods(fid, periods)
 
         # Detect deltas
@@ -409,6 +541,10 @@ def build_api_tab(notebook, status_bar=None):
                     scoring_team = cur["home"]
                 elif cur["away_score"] > old["away_score"]:
                     scoring_team = cur["away"]
+
+                if scoring_team:
+                    _log_goal(cur["home"], cur["away"],
+                              cur["home_score"], cur["away_score"], scoring_team)
 
                 if _on_score_change_cb[0] and scoring_team:
                     _on_score_change_cb[0](
@@ -439,6 +575,11 @@ def build_api_tab(notebook, status_bar=None):
         status_label.config(text=f"OK ({call_type})", fg="#28a745")
         _set_tab_status("ok")
 
+        # Update phase display (always) and schedule next cycle (if auto-running)
+        _update_phase_display()
+        if auto_running[0]:
+            _schedule_next_cycle()
+
     def _show_error(msg, http_code=None):
         raw_error(msg)
         tree_error(msg)
@@ -448,6 +589,10 @@ def build_api_tab(notebook, status_bar=None):
         else:
             status_label.config(text="Error – retrying", fg="red")
         _set_tab_status("error")
+
+        # Schedule next auto-cycle even on error
+        if auto_running[0]:
+            _schedule_next_cycle()
         if status_bar:
             status_bar.rate_label.config(fg="#ff0000")
 
@@ -465,12 +610,12 @@ def build_api_tab(notebook, status_bar=None):
     poll_frame = tk.Frame(tab)
     poll_frame.pack(fill="x", padx=12, pady=(2, 2))
 
-    def _poll_setting(parent, label_text, default_ms, col):
+    def _poll_setting(parent, label_text, default_ms, col, step=100):
         lbl = tk.Label(parent, text=label_text, font=("Segoe UI", 8), fg="#888888",
                        padx=3, pady=1)
         lbl.grid(row=0, column=col, padx=(0, 2), sticky="e")
         var = tk.IntVar(value=default_ms)
-        spn = tk.Spinbox(parent, from_=100, to=60000, increment=100, textvariable=var,
+        spn = tk.Spinbox(parent, from_=5, to=60000, increment=step, textvariable=var,
                          font=("Consolas", 9), width=6, justify="center")
         spn.grid(row=0, column=col+1, padx=(0, 2))
         ms_lbl = tk.Label(parent, text="ms", font=("Segoe UI", 8), fg="#888888")
@@ -478,9 +623,9 @@ def build_api_tab(notebook, status_bar=None):
         return var, lbl, spn, ms_lbl
 
     idle_interval_var,     idle_lbl,     idle_spn,     idle_ms     = _poll_setting(poll_frame, "Idle:",      60000,  0)
-    pregame_interval_var,  pregame_lbl,  pregame_spn,  pregame_ms  = _poll_setting(poll_frame, "Pregame:",   5000,  3)
-    playing_interval_var,  playing_lbl,  playing_spn,  playing_ms  = _poll_setting(poll_frame, "Game Time:", 1000,  6)
-    break_interval_var,    break_lbl,    break_spn,    break_ms    = _poll_setting(poll_frame, "Half-Time:", 5000,  9)
+    pregame_interval_var,  pregame_lbl,  pregame_spn,  pregame_ms  = _poll_setting(poll_frame, "Pregame:",   20000,  3)
+    playing_interval_var,  playing_lbl,  playing_spn,  playing_ms  = _poll_setting(poll_frame, "Game Time:", 1000,  6, step=5)
+    break_interval_var,    break_lbl,    break_spn,    break_ms    = _poll_setting(poll_frame, "Half-Time:", 30000,  9)
     postgame_interval_var, postgame_lbl, postgame_spn, postgame_ms = _poll_setting(poll_frame, "Post-Game:", 10000, 12)
 
     # Map phase → (label, spinbox, ms_label) for highlighting
@@ -495,11 +640,14 @@ def build_api_tab(notebook, status_bar=None):
     _default_bg = poll_frame.cget("bg")
 
     def _highlight_active_phase(phase):
-        """Set red background on the active polling mode, clear others."""
+        """Highlight the active polling mode with its phase colour, clear others."""
         for p, (lbl, spn, ms) in _phase_widgets.items():
             if p == phase:
-                lbl.config(bg="#cc0000", fg="white")
-                ms.config(bg="#cc0000", fg="white")
+                bg = _PHASE_COLOURS.get(p, "#cc0000")
+                # Use black text on yellow for readability
+                fg = "#000000" if bg == "#ffcc00" else "white"
+                lbl.config(bg=bg, fg=fg)
+                ms.config(bg=bg, fg=fg)
             else:
                 lbl.config(bg=_default_bg, fg="#888888")
                 ms.config(bg=_default_bg, fg="#888888")
@@ -535,15 +683,18 @@ def build_api_tab(notebook, status_bar=None):
         else:
             desired = max(100, idle_interval_var.get())
 
-        # Enforce rate-limit floor so we never burn tokens faster than allowed
-        floor = _rate_limit_floor_ms[0]
-        return max(desired, floor), phase
+        # Enforce rate-limit floor on non-playing phases only.
+        # During active play, use the configured speed regardless.
+        if phase != _scores_module.PHASE_PLAYING:
+            floor = _rate_limit_floor_ms[0]
+            desired = max(desired, floor)
+        return desired, phase
 
     _PHASE_COLOURS = {
         _scores_module.PHASE_IDLE:     "#888888",
         _scores_module.PHASE_PREGAME:  "#ffcc00",
         _scores_module.PHASE_PLAYING:  "#28a745",
-        _scores_module.PHASE_BREAK:    "#ff6600",
+        _scores_module.PHASE_BREAK:    "#ffcc00",
         _scores_module.PHASE_POSTGAME: "#0066cc",
     }
 
@@ -553,7 +704,8 @@ def build_api_tab(notebook, status_bar=None):
         auto_running[0] = True
         _call_counter[0] = 0
         auto_btn.config(text="Stop Auto", bg="#cc0000", command=_stop_auto)
-        _auto_cycle()
+        # First call on startup is always a full events fetch to get complete game state
+        _auto_cycle(force_events=True)
 
     def _stop_auto():
         auto_running[0] = False
@@ -568,19 +720,41 @@ def build_api_tab(notebook, status_bar=None):
         _highlight_active_phase(None)
         auto_btn.config(text="Auto Get", bg="#28a745", command=_start_auto)
 
-    def _auto_cycle():
+    def _update_phase_display():
+        """Refresh the phase label and highlight based on current state_ids."""
+        _, phase = _get_dynamic_interval()
+        colour = _PHASE_COLOURS.get(phase, "#888888")
+        phase_label.config(text=f"{phase.upper()}", fg=colour)
+        _highlight_active_phase(phase)
+
+    def _auto_cycle(force_events=False):
+        """Fire the next API fetch. Scheduling of the following cycle happens
+        in _schedule_next_cycle(), called from _show_result/_show_error after
+        the response arrives so the phase is based on fresh state_ids."""
         if not auto_running[0]:
             return
 
         # Decide which URL to use: events every Nth call
+        # force_events=True on first call after startup to get full game state
         _call_counter[0] += 1
         n = max(1, events_nth_var.get())
-        if _call_counter[0] % n == 0:
+        if force_events or _call_counter[0] % n == 0:
             _fetch(_build_events_url(), "events")
         else:
             _fetch(_build_scores_url(), "scores")
 
-        # Dynamic interval based on game phase
+    def _schedule_next_cycle():
+        """Determine phase from fresh state_ids and schedule the next auto-cycle."""
+        if not auto_running[0]:
+            return
+        # Cancel any pending timer (in case of rapid calls)
+        if auto_timer_id[0]:
+            tab.after_cancel(auto_timer_id[0])
+            auto_timer_id[0] = None
+        if auto_progress_id[0]:
+            tab.after_cancel(auto_progress_id[0])
+            auto_progress_id[0] = None
+
         interval_ms, phase = _get_dynamic_interval()
         auto_interval[0] = interval_ms
         auto_elapsed[0] = 0
@@ -636,7 +810,10 @@ def build_api_tab(notebook, status_bar=None):
                          background="#28a745")
     rate_progress = ttk.Progressbar(tab, length=200, mode="determinate", maximum=100,
                                     style="Rate.Horizontal.TProgressbar")
-    rate_progress.pack(fill="x", padx=12, pady=(0, 6))
+    rate_progress.pack(fill="x", padx=12, pady=(0, 2))
+
+    rate_prediction_label = tk.Label(tab, text="", font=("Segoe UI", 9), fg="#888888")
+    rate_prediction_label.pack(fill="x", padx=12, pady=(0, 6))
 
     # ── Results (sub-tabbed) ─────────────────────────────────────────
     result_notebook = ttk.Notebook(tab)

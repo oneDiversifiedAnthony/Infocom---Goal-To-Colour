@@ -75,6 +75,7 @@ from src.tabs import (
     build_api_schedule_tab,
     build_sounds_tab,
     build_webserver_tab,
+    build_presentations_tab,
 )
 
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), os.pardir, "assets")
@@ -172,33 +173,48 @@ class App:
 
         # Web Server (second in settings)
         from src.tabs.timeline import _load_fixtures_from_schedule, _load_venues
-        schedule_fixtures = _load_fixtures_from_schedule(self.db)
-        schedule_venues = _load_venues()
-        all_games = []
-        for fix in schedule_fixtures:
-            sa = fix.get("starting_at", "")
-            try:
-                dt = datetime.strptime(sa, "%Y-%m-%d %H:%M:%S")
-                date_str = dt.strftime("%b %d").replace(" 0", " ")
-                time_str = dt.strftime("%H:%M")
-            except ValueError:
-                date_str = "TBD"
-                time_str = ""
-            vid = fix.get("venue_id")
-            venue = schedule_venues.get(vid, "") if vid else ""
-            all_games.append({
-                "home": fix.get("home", ""),
-                "away": fix.get("away", ""),
-                "date": date_str,
-                "time_utc": time_str,
-                "venue": venue,
-                "group": "",
-            })
+        self._load_schedule_fixtures = _load_fixtures_from_schedule
+        self._load_schedule_venues = _load_venues
+
+        def _build_web_games():
+            """Build game list from schedule files for the web server."""
+            fixtures = self._load_schedule_fixtures(self.db)
+            venues = self._load_schedule_venues()
+            games = []
+            for fix in fixtures:
+                sa = fix.get("starting_at", "")
+                try:
+                    dt = datetime.strptime(sa, "%Y-%m-%d %H:%M:%S")
+                    date_str = dt.strftime("%b %d").replace(" 0", " ")
+                    time_str = dt.strftime("%H:%M")
+                except ValueError:
+                    date_str = "TBD"
+                    time_str = ""
+                vid = fix.get("venue_id")
+                venue = venues.get(vid, "") if vid else ""
+                games.append({
+                    "home": fix.get("home", ""),
+                    "away": fix.get("away", ""),
+                    "date": date_str,
+                    "time_utc": time_str,
+                    "venue": venue,
+                    "group": "",
+                })
+            # Also push updated scores into the scores module
+            scores.register_fixtures(fixtures)
+            return games
+
         self._update_web_state = build_webserver_tab(
             settings_nb,
             goal_pressed_cb=self._goal_pressed,
             set_colours_cb=self.set_team_colours)
-        self._update_web_state(games=all_games, teams=self.db.get("teams", {}))
+        self._update_web_state(games=_build_web_games(), teams=self.db.get("teams", {}))
+
+        # Periodically refresh web game list from schedule files (every 60s)
+        def _refresh_web_games():
+            self._update_web_state(games=_build_web_games())
+            self.root.after(60000, _refresh_web_games)
+        self.root.after(60000, _refresh_web_games)
 
         # Generator
         self.gen_team_label, self.swatches, self.swatch_labels, start_random = \
@@ -219,6 +235,9 @@ class App:
         self._fire_sound_event, self._play_sound_by_name = build_sounds_tab(
             self.notebook, self.countries_db,
             stop_editor_preview=self._stop_editor_preview)
+
+        # Presentations Schedule
+        build_presentations_tab(settings_nb)
 
         # ReadMe (in settings)
         build_readme_tab(settings_nb)
@@ -252,11 +271,15 @@ class App:
                 hs = info.get("home_score", 0)
                 aws = info.get("away_score", 0)
                 clock = scores.get_match_clock(fid)
+                remaining = scores.get_time_remaining(fid)
+                clock_display = clock
+                if remaining:
+                    clock_display = f"{clock}  ({remaining} remaining)"
                 self._header_title.config(text="LIVE", fg="#28a745")
                 self._header_detail.config(
                     text=f"{home}  {hs} - {aws}  {away}",
                     fg="#28a745")
-                self._header_match.config(text=clock, fg="#28a745")
+                self._header_match.config(text=clock_display, fg="#28a745")
             else:
                 nxt = scores.get_next_game_today()
                 if nxt:
