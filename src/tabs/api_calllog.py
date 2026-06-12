@@ -35,18 +35,12 @@ import tkinter as tk
 
 RATE_LIMIT_TOTAL = 2500
 
-
-def _token_colour(tokens):
-    """Return the colour for a token value, matching the rate limit progress bar."""
-    pct = (tokens / RATE_LIMIT_TOTAL) * 100
-    if pct < 10:
-        return "#ff0000"
-    elif pct < 25:
-        return "#ff0000"
-    elif pct < 50:
-        return "#ff6600"
-    else:
-        return "#28a745"
+# Colours for each call type
+CALL_TYPE_COLOURS = {
+    "scores": "#0099ff",   # blue for lightweight score polls
+    "events": "#cc44ff",   # purple for full event fetches
+    "unknown": "#28a745",  # green fallback
+}
 
 
 def build_calllog_subtab(result_notebook, call_log_dir, tab):
@@ -70,7 +64,7 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
     drawing = [False]
 
     def _parse():
-        """Read callcounter_*.log files and return today's entries as (label, tokens) tuples."""
+        """Read callcounter_*.log files and return today's entries as (label, tokens, call_type) tuples."""
         entries = []
         today_str = datetime.date.today().strftime("%Y-%m-%d")
         pattern = os.path.join(call_log_dir, "callcounter_*.log")
@@ -88,9 +82,18 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
                                 date_part = parts[0].split(" ")[0]
                                 if date_part != today_str:
                                     continue
-                                tokens = int(parts[1])
                                 time_part = parts[0].split(" ")[1] if " " in parts[0] else parts[0]
-                                entries.append((time_part, tokens))
+                                # Parse tokens and call type from remainder
+                                remainder = parts[1]
+                                call_type = "unknown"
+                                if ", call: " in remainder:
+                                    tok_str, rest = remainder.split(", call: ", 1)
+                                    tokens = int(tok_str)
+                                    # call type is before the next comma (phase field)
+                                    call_type = rest.split(",")[0].strip()
+                                else:
+                                    tokens = int(remainder)
+                                entries.append((time_part, tokens, call_type))
                             except (ValueError, IndexError):
                                 pass
             except (FileNotFoundError, PermissionError):
@@ -127,7 +130,8 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
         plot_h = h - margin_t - margin_b
 
         n = len(entries)
-        tokens = [t for _, t in entries]
+        tokens = [t for _, t, _ in entries]
+        call_types = [ct for _, _, ct in entries]
         max_t = max(tokens)
         min_t = min(tokens)
         t_range = max_t - min_t if max_t != min_t else 1
@@ -140,7 +144,7 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
             px = margin_l + (int(plot_w * i / (n - 1)) if n > 1 else plot_w // 2)
             py = margin_t + int(plot_h * (max_t - tokens[i]) / t_range)
             coords.append((px, py))
-            colours.append(_token_colour(tokens[i]))
+            colours.append(CALL_TYPE_COLOURS.get(call_types[i], CALL_TYPE_COLOURS["unknown"]))
             if i % step == 0:
                 x_labels.append((px, entries[i][0]))
 
@@ -179,6 +183,17 @@ def build_calllog_subtab(result_notebook, call_log_dir, tab):
 
         canvas.create_text(margin_l // 2, margin_t - 8, text="Tokens",
                            fill="#aaaaaa", font=("Segoe UI", 8), anchor="s")
+
+        # Legend
+        lx = w - margin_r - 10
+        ly = margin_t + 6
+        for label, col in [("scores", CALL_TYPE_COLOURS["scores"]),
+                           ("events", CALL_TYPE_COLOURS["events"])]:
+            canvas.create_oval(lx - 6, ly - 4, lx, ly + 2, fill=col, outline=col)
+            canvas.create_text(lx - 10, ly - 1, text=label, fill=col,
+                               font=("Segoe UI", 8), anchor="e")
+            ly += 16
+
         drawing[0] = False
 
     def _draw():

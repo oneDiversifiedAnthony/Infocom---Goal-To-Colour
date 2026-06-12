@@ -359,3 +359,57 @@ def clear_live_state():
 def get_all_scores():
     """Return the full scores dict (read-only snapshot)."""
     return dict(_scores)
+
+
+# ── Polling phase detection ──────────────────────────────────────────────
+# State IDs grouped by polling phase
+_PLAYING_STATE_IDS = {2, 6, 9, 22, 23}      # 1H, ET, PEN, 2H, ET2H -- active play
+_BREAK_STATE_IDS = {3, 4, 18, 21, 25}       # HT, BRK, INT, ETB, PENB -- breaks
+_FINISHED_STATE_IDS = {5, 7, 8}             # FT, AET, FTP -- match over
+
+# Phases returned by get_poll_phase()
+PHASE_IDLE = "idle"           # no live games, nothing imminent
+PHASE_PREGAME = "pregame"     # game coming up soon but not started
+PHASE_PLAYING = "playing"     # active play (1H, 2H, ET, PEN)
+PHASE_BREAK = "break"         # half-time or other break
+PHASE_POSTGAME = "postgame"   # match just ended (cooldown)
+
+# How long after FT/AET/FTP to stay in postgame phase (seconds)
+POSTGAME_COOLDOWN_SEC = 300
+
+
+def get_poll_phase():
+    """Determine the current polling phase based on live game states.
+
+    Returns one of: PHASE_IDLE, PHASE_PREGAME, PHASE_PLAYING, PHASE_BREAK, PHASE_POSTGAME
+    """
+    has_playing = False
+    has_break = False
+    has_finished = False
+
+    for fid in list(_state_ids.keys()):
+        sid = _state_ids[fid]
+        if sid in _PLAYING_STATE_IDS:
+            has_playing = True
+        elif sid in _BREAK_STATE_IDS:
+            has_break = True
+        elif sid in _FINISHED_STATE_IDS:
+            has_finished = True
+
+    if has_playing:
+        return PHASE_PLAYING
+    if has_break:
+        return PHASE_BREAK
+    if has_finished:
+        return PHASE_POSTGAME
+
+    # No active states -- check if a game is coming up soon
+    nxt = get_next_game_today()
+    if nxt:
+        _, _, _, kick = nxt
+        now = datetime.now(timezone.utc)
+        secs = (kick - now).total_seconds()
+        if 0 < secs <= 600:  # within 10 minutes
+            return PHASE_PREGAME
+
+    return PHASE_IDLE

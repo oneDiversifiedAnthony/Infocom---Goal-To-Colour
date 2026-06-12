@@ -46,7 +46,8 @@ from src.tabs.api_changes import build_changes_subtab
 from src.tabs.api_calllog import build_calllog_subtab
 
 
-DEFAULT_URL = "https://api.sportmonks.com/v3/football/livescores/inplay?api_token={{api_token}}&include=scores;participants;events;periods"
+SCORES_URL = "https://api.sportmonks.com/v3/football/livescores/inplay?api_token={{api_token}}&include=scores;periods"
+EVENTS_URL = "https://api.sportmonks.com/v3/football/livescores/inplay?api_token={{api_token}}&include=scores;participants;events;periods"
 from src.config import CALL_LOG_DIR
 CALL_LOG_ROTATE_MINUTES = 60
 ENV_FILE = os.path.join(os.path.dirname(__file__), os.pardir, os.pardir, ".env")
@@ -90,16 +91,22 @@ def build_api_tab(notebook, status_bar=None):
 
     os.makedirs(CALL_LOG_DIR, exist_ok=True)
 
-    # ── URL ────────────────────────────────────────────────────────────
+    # ── URLs ───────────────────────────────────────────────────────────
     url_frame = tk.Frame(tab)
-    url_frame.pack(fill="x", padx=12, pady=(12, 4))
-    tk.Label(url_frame, text="URL:", font=("Segoe UI", 10)).pack(side="left", padx=(0, 6))
-    url_var = tk.StringVar(value=DEFAULT_URL)
-    tk.Entry(url_frame, textvariable=url_var, font=("Consolas", 9), width=70).pack(side="left", fill="x", expand=True)
+    url_frame.pack(fill="x", padx=12, pady=(12, 2))
+    tk.Label(url_frame, text="Scores URL:", font=("Segoe UI", 9)).pack(side="left", padx=(0, 4))
+    scores_url_var = tk.StringVar(value=SCORES_URL)
+    tk.Entry(url_frame, textvariable=scores_url_var, font=("Consolas", 8), width=70).pack(side="left", fill="x", expand=True)
     tk.Button(url_frame, text="SportMonks Dashboard", font=("Segoe UI", 9, "bold"),
               bg="#0066cc", fg="white", padx=8,
               command=lambda: webbrowser.open("https://my.sportmonks.com/login?redirect=dashboard")
               ).pack(side="right", padx=(8, 0))
+
+    url_frame2 = tk.Frame(tab)
+    url_frame2.pack(fill="x", padx=12, pady=(0, 4))
+    tk.Label(url_frame2, text="Events URL:", font=("Segoe UI", 9)).pack(side="left", padx=(0, 4))
+    events_url_var = tk.StringVar(value=EVENTS_URL)
+    tk.Entry(url_frame2, textvariable=events_url_var, font=("Consolas", 8), width=70).pack(side="left", fill="x", expand=True)
 
     # ── API Token ──────────────────────────────────────────────────────
     token_frame = tk.Frame(tab)
@@ -121,10 +128,16 @@ def build_api_tab(notebook, status_bar=None):
     auto_elapsed = [0]
     auto_interval = [0]
 
-    def _build_url():
-        url = url_var.get().strip()
+    # Call counter for events URL rotation (events every Nth call)
+    _call_counter = [0]
+
+    def _build_scores_url():
         token = token_var.get().strip()
-        return url.replace("{{api_token}}", token)
+        return scores_url_var.get().strip().replace("{{api_token}}", token)
+
+    def _build_events_url():
+        token = token_var.get().strip()
+        return events_url_var.get().strip().replace("{{api_token}}", token)
 
     # ── Rate limit state ──────────────────────────────────────────────
     RATE_LIMIT_TOTAL = 2500
@@ -144,12 +157,16 @@ def build_api_tab(notebook, status_bar=None):
             current_log_file[0] = os.path.join(CALL_LOG_DIR, filename)
         return current_log_file[0]
 
+    _last_call_type = ["scores"]
+
     def _append_call_log(remaining):
         timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        call_type = _last_call_type[0]
+        phase = _scores_module.get_poll_phase()
         log_file = _get_call_log_file()
         try:
             with open(log_file, "a", encoding="utf-8") as f:
-                f.write(f"{timestamp}, tokens_remaining: {remaining}\n")
+                f.write(f"{timestamp}, tokens_remaining: {remaining}, call: {call_type}, phase: {phase}\n")
         except PermissionError:
             pass
 
@@ -166,6 +183,9 @@ def build_api_tab(notebook, status_bar=None):
         else:
             rate_style.configure("Rate.Horizontal.TProgressbar", background="#333333")
         rate_flash_id[0] = tab.after(500, _rate_flash_tick)
+
+    # Minimum interval (ms) derived from rate limit -- enforced as a floor on all polling
+    _rate_limit_floor_ms = [0]
 
     def _update_rate_limit(data):
         if not isinstance(data, dict):
@@ -187,9 +207,13 @@ def build_api_tab(notebook, status_bar=None):
         rate_reset_label.config(text=f"Resets in {minutes}m {seconds}s")
 
         if resets_in > 0 and remaining > 0:
-            max_interval = resets_in / remaining
-            rate_max_speed_label.config(text=f"Max speed: 1 call every {max_interval:.1f}s")
+            max_interval_sec = resets_in / remaining
+            floor_ms = int(max_interval_sec * 1000)
+            _rate_limit_floor_ms[0] = floor_ms
+            rate_max_speed_label.config(
+                text=f"Max speed: 1/{max_interval_sec:.1f}s ({floor_ms}ms)  |  Floor applied: {floor_ms}ms")
         else:
+            _rate_limit_floor_ms[0] = 0
             rate_max_speed_label.config(text="")
 
         rate_progress["value"] = pct
@@ -229,9 +253,10 @@ def build_api_tab(notebook, status_bar=None):
         except Exception:
             pass
 
-    def _fetch():
-        final_url = _build_url()
-        status_label.config(text="Fetching...", fg="#0066cc")
+    def _fetch(url_override=None, call_type="scores"):
+        final_url = url_override or _build_scores_url()
+        _last_call_type[0] = call_type
+        status_label.config(text=f"Fetching ({call_type})...", fg="#0066cc")
         _set_tab_status("fetching")
         raw_clear()
 
@@ -240,7 +265,10 @@ def build_api_tab(notebook, status_bar=None):
                 req = urllib.request.Request(final_url, headers={"User-Agent": "Mozilla/5.0"})
                 with urllib.request.urlopen(req, timeout=15) as resp:
                     body = resp.read().decode("utf-8", errors="replace")
-                tab.after(0, lambda: _show_result(body))
+                try:
+                    tab.after(0, lambda: _show_result(body))
+                except RuntimeError:
+                    return
             except urllib.error.HTTPError as e:
                 body = ""
                 try:
@@ -249,10 +277,16 @@ def build_api_tab(notebook, status_bar=None):
                     pass
                 msg = f"HTTP Error {e.code}: {e.reason}\n\n{body}"
                 code = e.code
-                tab.after(0, lambda: _show_error(msg, code))
+                try:
+                    tab.after(0, lambda: _show_error(msg, code))
+                except RuntimeError:
+                    return
             except Exception as e:
                 msg = str(e)
-                tab.after(0, lambda: _show_error(msg))
+                try:
+                    tab.after(0, lambda: _show_error(msg))
+                except RuntimeError:
+                    return
 
         threading.Thread(target=_do_request, daemon=True).start()
 
@@ -260,6 +294,8 @@ def build_api_tab(notebook, status_bar=None):
         """Extract per-fixture scores from livescores API response.
 
         Returns {fixture_id: {"home": str, "away": str, "home_score": int, "away_score": int}}
+        Participant names come from the API when included, otherwise fall back
+        to names already stored in the scores module (from a previous events call).
         """
         result = {}
         if not isinstance(data, dict):
@@ -282,6 +318,12 @@ def build_api_tab(notebook, status_bar=None):
                             home = p.get("name", "")
                         elif meta.get("location") == "away":
                             away = p.get("name", "")
+            # Fall back to names from scores module (populated by earlier events calls)
+            if not home or not away:
+                existing = _scores_module.get_all_scores().get(fid)
+                if existing:
+                    home = home or existing.get("home", "")
+                    away = away or existing.get("away", "")
             home_goals = 0
             away_goals = 0
             has_score = False
@@ -393,8 +435,8 @@ def build_api_tab(notebook, status_bar=None):
             changes_check(parsed)
             _detect_score_changes(parsed)
 
-        status_label.config(text="OK", fg="#28a745")
-        auto_style.configure("Auto.Horizontal.TProgressbar", background="#28a745")
+        call_type = _last_call_type[0]
+        status_label.config(text=f"OK ({call_type})", fg="#28a745")
         _set_tab_status("ok")
 
     def _show_error(msg, http_code=None):
@@ -410,21 +452,106 @@ def build_api_tab(notebook, status_bar=None):
             status_bar.rate_label.config(fg="#ff0000")
 
     # ── Get / Auto controls ───────────────────────────────────────────
-    tk.Button(ctrl_frame, text="Get", font=("Segoe UI", 10, "bold"),
-              bg="#0066cc", fg="white", padx=16, pady=2,
-              command=_fetch).pack(side="left", padx=(0, 12))
+    tk.Button(ctrl_frame, text="Get Scores", font=("Segoe UI", 9, "bold"),
+              bg="#0066cc", fg="white", padx=8, pady=2,
+              command=lambda: _fetch(_build_scores_url(), "scores")).pack(side="left", padx=(0, 4))
+    tk.Button(ctrl_frame, text="Get Events", font=("Segoe UI", 9, "bold"),
+              bg="#6600cc", fg="white", padx=8, pady=2,
+              command=lambda: _fetch(_build_events_url(), "events")).pack(side="left", padx=(0, 12))
 
     ttk.Separator(ctrl_frame, orient="vertical").pack(side="left", fill="y", padx=8)
-    tk.Label(ctrl_frame, text="Auto every", font=("Segoe UI", 10)).pack(side="left", padx=(4, 4))
-    interval_var = tk.IntVar(value=1500)
-    tk.Spinbox(ctrl_frame, from_=100, to=60000, increment=100, textvariable=interval_var,
-               font=("Consolas", 10), width=6, justify="center").pack(side="left")
-    tk.Label(ctrl_frame, text="ms", font=("Segoe UI", 10)).pack(side="left", padx=(2, 8))
+
+    # ── Polling frequency settings ────────────────────────────────────
+    poll_frame = tk.Frame(tab)
+    poll_frame.pack(fill="x", padx=12, pady=(2, 2))
+
+    def _poll_setting(parent, label_text, default_ms, col):
+        lbl = tk.Label(parent, text=label_text, font=("Segoe UI", 8), fg="#888888",
+                       padx=3, pady=1)
+        lbl.grid(row=0, column=col, padx=(0, 2), sticky="e")
+        var = tk.IntVar(value=default_ms)
+        spn = tk.Spinbox(parent, from_=100, to=60000, increment=100, textvariable=var,
+                         font=("Consolas", 9), width=6, justify="center")
+        spn.grid(row=0, column=col+1, padx=(0, 2))
+        ms_lbl = tk.Label(parent, text="ms", font=("Segoe UI", 8), fg="#888888")
+        ms_lbl.grid(row=0, column=col+2, padx=(0, 12))
+        return var, lbl, spn, ms_lbl
+
+    idle_interval_var,     idle_lbl,     idle_spn,     idle_ms     = _poll_setting(poll_frame, "Idle:",      60000,  0)
+    pregame_interval_var,  pregame_lbl,  pregame_spn,  pregame_ms  = _poll_setting(poll_frame, "Pregame:",   5000,  3)
+    playing_interval_var,  playing_lbl,  playing_spn,  playing_ms  = _poll_setting(poll_frame, "Game Time:", 1000,  6)
+    break_interval_var,    break_lbl,    break_spn,    break_ms    = _poll_setting(poll_frame, "Half-Time:", 5000,  9)
+    postgame_interval_var, postgame_lbl, postgame_spn, postgame_ms = _poll_setting(poll_frame, "Post-Game:", 10000, 12)
+
+    # Map phase → (label, spinbox, ms_label) for highlighting
+    _phase_widgets = {
+        _scores_module.PHASE_IDLE:     (idle_lbl,     idle_spn,     idle_ms),
+        _scores_module.PHASE_PREGAME:  (pregame_lbl,  pregame_spn,  pregame_ms),
+        _scores_module.PHASE_PLAYING:  (playing_lbl,  playing_spn,  playing_ms),
+        _scores_module.PHASE_BREAK:    (break_lbl,    break_spn,    break_ms),
+        _scores_module.PHASE_POSTGAME: (postgame_lbl, postgame_spn, postgame_ms),
+    }
+
+    _default_bg = poll_frame.cget("bg")
+
+    def _highlight_active_phase(phase):
+        """Set red background on the active polling mode, clear others."""
+        for p, (lbl, spn, ms) in _phase_widgets.items():
+            if p == phase:
+                lbl.config(bg="#cc0000", fg="white")
+                ms.config(bg="#cc0000", fg="white")
+            else:
+                lbl.config(bg=_default_bg, fg="#888888")
+                ms.config(bg=_default_bg, fg="#888888")
+
+    tk.Label(poll_frame, text="Events every", font=("Segoe UI", 8), fg="#888888"
+             ).grid(row=0, column=15, padx=(0, 2), sticky="e")
+    events_nth_var = tk.IntVar(value=10)
+    tk.Spinbox(poll_frame, from_=1, to=100, increment=1, textvariable=events_nth_var,
+               font=("Consolas", 9), width=4, justify="center"
+               ).grid(row=0, column=16, padx=(0, 2))
+    tk.Label(poll_frame, text="calls", font=("Segoe UI", 8), fg="#888888"
+             ).grid(row=0, column=17, padx=(0, 0))
+
+    # Phase display label
+    phase_label = tk.Label(ctrl_frame, text="", font=("Consolas", 9, "bold"), fg="#888888")
+    phase_label.pack(side="left", padx=(8, 4))
+
+    def _get_dynamic_interval():
+        """Return the polling interval in ms based on current game phase.
+
+        The interval is clamped to never go below the rate-limit-derived floor
+        (resets_in_seconds / remaining_tokens), recalculated after every API call.
+        """
+        phase = _scores_module.get_poll_phase()
+        if phase == _scores_module.PHASE_PLAYING:
+            desired = max(100, playing_interval_var.get())
+        elif phase == _scores_module.PHASE_BREAK:
+            desired = max(100, break_interval_var.get())
+        elif phase == _scores_module.PHASE_POSTGAME:
+            desired = max(100, postgame_interval_var.get())
+        elif phase == _scores_module.PHASE_PREGAME:
+            desired = max(100, pregame_interval_var.get())
+        else:
+            desired = max(100, idle_interval_var.get())
+
+        # Enforce rate-limit floor so we never burn tokens faster than allowed
+        floor = _rate_limit_floor_ms[0]
+        return max(desired, floor), phase
+
+    _PHASE_COLOURS = {
+        _scores_module.PHASE_IDLE:     "#888888",
+        _scores_module.PHASE_PREGAME:  "#ffcc00",
+        _scores_module.PHASE_PLAYING:  "#28a745",
+        _scores_module.PHASE_BREAK:    "#ff6600",
+        _scores_module.PHASE_POSTGAME: "#0066cc",
+    }
 
     def _start_auto():
         if auto_running[0]:
             return
         auto_running[0] = True
+        _call_counter[0] = 0
         auto_btn.config(text="Stop Auto", bg="#cc0000", command=_stop_auto)
         _auto_cycle()
 
@@ -437,16 +564,35 @@ def build_api_tab(notebook, status_bar=None):
             tab.after_cancel(auto_progress_id[0])
             auto_progress_id[0] = None
         progress["value"] = 0
+        phase_label.config(text="")
+        _highlight_active_phase(None)
         auto_btn.config(text="Auto Get", bg="#28a745", command=_start_auto)
 
     def _auto_cycle():
         if not auto_running[0]:
             return
-        _fetch()
-        interval_ms = max(100, interval_var.get())
+
+        # Decide which URL to use: events every Nth call
+        _call_counter[0] += 1
+        n = max(1, events_nth_var.get())
+        if _call_counter[0] % n == 0:
+            _fetch(_build_events_url(), "events")
+        else:
+            _fetch(_build_scores_url(), "scores")
+
+        # Dynamic interval based on game phase
+        interval_ms, phase = _get_dynamic_interval()
         auto_interval[0] = interval_ms
         auto_elapsed[0] = 0
         progress["value"] = 0
+
+        # Update phase display and highlight active setting
+        colour = _PHASE_COLOURS.get(phase, "#888888")
+        phase_label.config(text=f"{phase.upper()} {interval_ms}ms",
+                           fg=colour)
+        auto_style.configure("Auto.Horizontal.TProgressbar", background=colour)
+        _highlight_active_phase(phase)
+
         _tick_progress()
         auto_timer_id[0] = tab.after(interval_ms, _auto_cycle)
 

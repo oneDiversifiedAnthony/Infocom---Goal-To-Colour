@@ -836,10 +836,16 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                     if cached is None:
                         cached = _extract_waveform(s, PEAK_CACHE_POINTS)
                         _save_peak_cache(pf, cached[0], cached[1])
-                    tab.after(0, lambda: _on_sound_loaded(s, s_half, cached))
+                    try:
+                        tab.after(0, lambda: _on_sound_loaded(s, s_half, cached))
+                    except RuntimeError:
+                        pass  # main loop already destroyed
                 except Exception as e:
                     msg = str(e)
-                    tab.after(0, lambda: duration_label.config(text=f"Error: {msg}") if duration_label.winfo_exists() else None)
+                    try:
+                        tab.after(0, lambda: duration_label.config(text=f"Error: {msg}") if duration_label.winfo_exists() else None)
+                    except RuntimeError:
+                        pass  # main loop already destroyed
             threading.Thread(target=_worker, daemon=True).start()
 
         def _on_sound_loaded(s, s_half, cached_peaks):
@@ -858,7 +864,10 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             """Resample cached peaks to current canvas width."""
             if peak_cache[0] is None:
                 return
-            w = max(100, waveform_canvas.winfo_width())
+            try:
+                w = max(100, waveform_canvas.winfo_width())
+            except tk.TclError:
+                return
             mode = render_var.get()
             if mode == "Fast":
                 w = w // 4
@@ -1385,6 +1394,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             "set_cue_out": lambda: _cue_at_hover(False),
             "event_var": event_var,
             "team_var": team_var,
+            "filename": filename,
         })
         play_btn.config(command=_play)
         half_btn.config(command=_play_half)
@@ -1412,7 +1422,17 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         if team_name and event_type in ("Goal", "Goal by Team"):
             _anthem_play(team_name)
 
+    def play_by_name(name):
+        """Play a loaded sound card by filename (without extension), e.g. 'PreGame'."""
+        name_lower = name.lower()
+        for ctrl in sound_controls:
+            if ctrl.get("filename", "").lower() == name_lower:
+                if not ctrl["is_playing"]():
+                    ctrl["play"]()
+                return True
+        return False
+
     refresh_btn.config(command=_scan_and_populate)
     _scan_and_populate()
 
-    return fire_event
+    return fire_event, play_by_name

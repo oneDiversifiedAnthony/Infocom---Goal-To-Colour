@@ -2,8 +2,7 @@
   "SFX - Siren.mp3": {
     "cue_in": 0.02701,
     "cue_out": 0.62124,
-    "gain_db": -0.5,
-    "event": "Goal"
+    "gain_db": -0.5
   },
   "SFX - Steamship horn.mp3": {
     "cue_in": 0.012277,

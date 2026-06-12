@@ -216,8 +216,9 @@ class App:
         self._stop_editor_preview = build_country_editor_tab(settings_nb, self.set_team_colours)
 
         # Sounds (top-level tab)
-        self._fire_sound_event = build_sounds_tab(self.notebook, self.countries_db,
-                                                   stop_editor_preview=self._stop_editor_preview)
+        self._fire_sound_event, self._play_sound_by_name = build_sounds_tab(
+            self.notebook, self.countries_db,
+            stop_editor_preview=self._stop_editor_preview)
 
         # ReadMe (in settings)
         build_readme_tab(settings_nb)
@@ -239,6 +240,8 @@ class App:
         _poll_sacn_status()
 
         # ── Game header update loop ──────────────────────────────────
+        _pregame_fired_for = [None]  # fixture id we already triggered PreGame for
+
         def _update_game_header():
             live = scores.get_live_games()
             if live:
@@ -257,7 +260,7 @@ class App:
             else:
                 nxt = scores.get_next_game_today()
                 if nxt:
-                    _, home, away, kick = nxt
+                    fid, home, away, kick = nxt
                     now_utc = datetime.now(timezone.utc)
                     diff = int((kick - now_utc).total_seconds())
                     if diff > 0:
@@ -269,6 +272,11 @@ class App:
                             text=f"{h:02d}:{m:02d}:{s:02d}", fg="#ffcc00")
                         self._header_match.config(
                             text=f"{home} vs {away}")
+
+                        # Trigger PreGame.mp3 at 2 minutes before kickoff
+                        if diff <= 120 and _pregame_fired_for[0] != fid:
+                            _pregame_fired_for[0] = fid
+                            self._play_sound_by_name("PreGame")
                     else:
                         self._header_title.config(text="")
                         self._header_detail.config(text="")
@@ -306,7 +314,7 @@ class App:
         # Look up colours and fire the goal
         team_info = self.countries_db.get("teams", {}).get(local_name, {})
         colours = team_info.get("colours", [[255, 255, 255], [0, 0, 0], [128, 128, 128]])
-        self._goal_pressed(colours, local_name, from_api=True)
+        self._goal_pressed(colours, local_name)
 
     def _resolve_local_name(self, api_name):
         """Map a SportMonks API team name to a countries.json team name."""
@@ -366,15 +374,13 @@ class App:
         if country_name:
             self._fire_trigger(country_name)
 
-    def _goal_pressed(self, colours, country_name, from_api=False):
+    def _goal_pressed(self, colours, country_name):
         self.team_colours = colours
         self.team_name = country_name
         self.gen_team_label.config(text=country_name)
         self._draw_swatches(colours)
         self._update_sacn_country(country_name)
         self._highlight_flag(country_name)
-        if not from_api:
-            scores.goal_scored(country_name)
         self.goal.trigger(colours, country_name)
         self._fire_trigger(country_name)
         self._fire_sound_event("Goal by Team", country_name)

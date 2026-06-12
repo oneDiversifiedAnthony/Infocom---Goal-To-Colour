@@ -26,7 +26,8 @@
 sound playback state, and the game schedule.
 
 Runs a lightweight HTTP server in a background thread on a configurable port.
-The page auto-refreshes every 2 seconds via meta-refresh.
+Dynamic sections refresh every 2 seconds via fetch(); clocks tick every second
+client-side to avoid flicker.
 """
 
 import tkinter as tk
@@ -382,7 +383,6 @@ def _build_html():
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="2">
 <title>World Cup Colour - Live Status</title>
 <style>
   @keyframes blink {{ 0% {{ opacity:1; }} 100% {{ opacity:0.4; }} }}
@@ -401,6 +401,7 @@ def _build_html():
   .clock-time {{ font-size:56px; font-family:Consolas,monospace; font-weight:bold; }}
   .clock-date {{ font-size:28px; color:#888; font-family:Consolas,monospace; }}
   table {{ width:100%; border-collapse:collapse; margin-top:8px; }}
+  .fade-update {{ transition: opacity 0.15s ease; }}
 </style>
 </head>
 <body>
@@ -410,37 +411,92 @@ def _build_html():
   <img src="data:image/png;base64,{_LOGO_B64}" alt="Diversified">
 </div>
 
-{countdown_html}
+<div id="countdown-area">{countdown_html}</div>
 <div class="clocks">
   <div class="clock">
     <div class="clock-label" style="color:#0066cc;">UTC</div>
-    <div class="clock-time" style="color:#0066cc;">{now_utc.strftime("%H:%M")}</div>
-    <div class="clock-date">{now_utc.strftime("%a %d %b %Y")}</div>
+    <div class="clock-time" id="clock-utc" style="color:#0066cc;">{now_utc.strftime("%H:%M:%S")}</div>
+    <div class="clock-date" id="clock-utc-date">{now_utc.strftime("%a %d %b %Y")}</div>
   </div>
   <div class="clock">
     <div class="clock-label" style="color:#cc6600;">Las Vegas</div>
-    <div class="clock-time" style="color:#cc6600;">{now_lv.strftime("%H:%M")}</div>
-    <div class="clock-date">{now_lv.strftime("%a %d %b %Y")}</div>
+    <div class="clock-time" id="clock-lv" style="color:#cc6600;">{now_lv.strftime("%H:%M:%S")}</div>
+    <div class="clock-date" id="clock-lv-date">{now_lv.strftime("%a %d %b %Y")}</div>
   </div>
   <div class="clock">
     <div class="clock-label" style="color:#cc0066;">Toronto</div>
-    <div class="clock-time" style="color:#cc0066;">{now_to.strftime("%H:%M")}</div>
-    <div class="clock-date">{now_to.strftime("%a %d %b %Y")}</div>
+    <div class="clock-time" id="clock-to" style="color:#cc0066;">{now_to.strftime("%H:%M:%S")}</div>
+    <div class="clock-date" id="clock-to-date">{now_to.strftime("%a %d %b %Y")}</div>
   </div>
 </div>
 
-{goal_html}
+<div id="goal-area">{goal_html}</div>
 
-<h2>Current Colours — {team}</h2>
+<div id="colours-area">
+<h2>Current Colours &mdash; {team}</h2>
 <div style="display:flex;align-items:center;gap:24px;">
 <div>{swatch_html}</div>
 {_flag_svg(team, width=200, height=133)}
 </div>
+</div>
 
+<div id="schedule-area">
 <h2>Schedule</h2>
 <table>{schedule_rows}</table>
+</div>
 
 </div>
+<script>
+// Client-side clocks — tick every second, never freeze
+function updateClocks() {{
+  var now = new Date();
+  function pad(n) {{ return n < 10 ? '0' + n : n; }}
+  function fmt(d) {{ return pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()); }}
+  function fmtDate(d) {{
+    var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return days[d.getDay()] + ' ' + pad(d.getDate()) + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
+  }}
+  // UTC
+  var utc = new Date(now.toLocaleString('en-US', {{timeZone:'UTC'}}));
+  document.getElementById('clock-utc').textContent = fmt(utc);
+  document.getElementById('clock-utc-date').textContent = fmtDate(utc);
+  // Las Vegas
+  var lv = new Date(now.toLocaleString('en-US', {{timeZone:'America/Los_Angeles'}}));
+  document.getElementById('clock-lv').textContent = fmt(lv);
+  document.getElementById('clock-lv-date').textContent = fmtDate(lv);
+  // Toronto
+  var to = new Date(now.toLocaleString('en-US', {{timeZone:'America/Toronto'}}));
+  document.getElementById('clock-to').textContent = fmt(to);
+  document.getElementById('clock-to-date').textContent = fmtDate(to);
+}}
+setInterval(updateClocks, 1000);
+updateClocks();
+
+// Smooth data refresh — fetch page, swap only dynamic sections
+var refreshing = false;
+function refreshData() {{
+  if (refreshing) return;
+  refreshing = true;
+  fetch(window.location.href, {{cache: 'no-store'}})
+    .then(function(r) {{ return r.text(); }})
+    .then(function(html) {{
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(html, 'text/html');
+      var ids = ['countdown-area', 'goal-area', 'colours-area', 'schedule-area'];
+      for (var i = 0; i < ids.length; i++) {{
+        var newEl = doc.getElementById(ids[i]);
+        var curEl = document.getElementById(ids[i]);
+        if (newEl && curEl && newEl.innerHTML !== curEl.innerHTML) {{
+          curEl.innerHTML = newEl.innerHTML;
+        }}
+      }}
+    }})
+    .catch(function() {{}})
+    .finally(function() {{ refreshing = false; }});
+}}
+setInterval(refreshData, 1000);
+</script>
 </body>
 </html>"""
     return html
@@ -576,7 +632,6 @@ def _build_testing_html():
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="2">
 <title>World Cup Colour - Testing</title>
 <style>
   @keyframes blink {{ 0% {{ opacity:1; }} 100% {{ opacity:0.4; }} }}
@@ -598,8 +653,9 @@ def _build_testing_html():
   <img src="data:image/png;base64,{_LOGO_B64}" alt="Diversified" style="height:60px;">
 </div>
 <p style="color:#888;">Click a country to trigger a goal celebration.</p>
-{buttons_html}
+<div id="flags-area">{buttons_html}</div>
 
+<div id="status-area">
 {goal_banner}
 
 <div class="status">
@@ -619,8 +675,34 @@ def _build_testing_html():
 </div>
 
 {_build_live_scores_html()}
+</div>
 
 </div>
+<script>
+// Smooth data refresh — update status area without full reload (preserves flag buttons)
+var refreshing = false;
+function refreshData() {{
+  if (refreshing) return;
+  refreshing = true;
+  fetch(window.location.href, {{cache: 'no-store'}})
+    .then(function(r) {{ return r.text(); }})
+    .then(function(html) {{
+      var parser = new DOMParser();
+      var doc = parser.parseFromString(html, 'text/html');
+      var ids = ['flags-area', 'status-area'];
+      for (var i = 0; i < ids.length; i++) {{
+        var newEl = doc.getElementById(ids[i]);
+        var curEl = document.getElementById(ids[i]);
+        if (newEl && curEl && newEl.innerHTML !== curEl.innerHTML) {{
+          curEl.innerHTML = newEl.innerHTML;
+        }}
+      }}
+    }})
+    .catch(function() {{}})
+    .finally(function() {{ refreshing = false; }});
+}}
+setInterval(refreshData, 1000);
+</script>
 </body>
 </html>"""
     return html
