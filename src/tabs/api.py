@@ -130,6 +130,10 @@ def build_api_tab(notebook, status_bar=None):
 
     # Call counter for events URL rotation (events every Nth call)
     _call_counter = [0]
+    # Postgame call cap — stop aggressive polling after N calls once match ends
+    POSTGAME_CALL_CAP = 10
+    _postgame_calls = [0]
+    _last_phase = [None]
 
     def _build_scores_url():
         token = token_var.get().strip()
@@ -702,8 +706,8 @@ def build_api_tab(notebook, status_bar=None):
         ms_lbl.grid(row=0, column=col+2, padx=(0, 12))
         return var, lbl, spn, ms_lbl
 
-    idle_interval_var,     idle_lbl,     idle_spn,     idle_ms     = _poll_setting(poll_frame, "Idle:",      60000,  0)
-    pregame_interval_var,  pregame_lbl,  pregame_spn,  pregame_ms  = _poll_setting(poll_frame, "Pregame:",   20000,  3)
+    idle_interval_var,     idle_lbl,     idle_spn,     idle_ms     = _poll_setting(poll_frame, "Idle:",      120000,  0)
+    pregame_interval_var,  pregame_lbl,  pregame_spn,  pregame_ms  = _poll_setting(poll_frame, "Pregame:",   60000,  3)
     playing_interval_var,  playing_lbl,  playing_spn,  playing_ms  = _poll_setting(poll_frame, "Game Time:", 500,  6, step=5)
     break_interval_var,    break_lbl,    break_spn,    break_ms    = _poll_setting(poll_frame, "Half-Time:", 45000,  9)
     postgame_interval_var, postgame_lbl, postgame_spn, postgame_ms = _poll_setting(poll_frame, "Post-Game:", 10000, 12)
@@ -760,12 +764,23 @@ def build_api_tab(notebook, status_bar=None):
         if _burn_mode[0] and phase == _scores_module.PHASE_PLAYING:
             return BURN_INTERVAL_MS, phase
 
+        # Track phase transitions to reset postgame counter
+        if phase != _last_phase[0]:
+            if phase == _scores_module.PHASE_POSTGAME:
+                _postgame_calls[0] = 0
+            _last_phase[0] = phase
+
         if phase == _scores_module.PHASE_PLAYING:
             desired = max(100, playing_interval_var.get())
         elif phase == _scores_module.PHASE_BREAK:
             desired = max(100, break_interval_var.get())
         elif phase == _scores_module.PHASE_POSTGAME:
-            desired = max(100, postgame_interval_var.get())
+            _postgame_calls[0] += 1
+            if _postgame_calls[0] <= POSTGAME_CALL_CAP:
+                desired = max(100, postgame_interval_var.get())
+            else:
+                # Cap reached — fall back to idle rate to conserve tokens
+                desired = max(100, idle_interval_var.get())
         elif phase == _scores_module.PHASE_PREGAME:
             desired = max(100, pregame_interval_var.get())
         else:
