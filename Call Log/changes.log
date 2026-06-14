@@ -7,3 +7,19 @@
   data: [1 items] -> [0 items]
   message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
 
+[2026-06-13 14:45:45] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-13 15:21:38] SCORE CHANGE: Qatar vs Switzerland  0-0 → 0-1
+[2026-06-13 17:01:35] SCORE CHANGE: Qatar vs Switzerland  0-1 → 1-1
+[2026-06-13 17:20:16] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-13 17:53:52] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-13 18:25:00] SCORE CHANGE: Brazil vs Morocco  0-0 → 0-1
+[2026-06-13 18:36:11] SCORE CHANGE: Brazil vs Morocco  0-1 → 1-1

@@ -39,9 +39,10 @@ import base64
 import os
 from urllib.parse import unquote_plus
 from http.server import HTTPServer, BaseHTTPRequestHandler
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 from src import scores
+from src.config import get_webserver_bool, set_webserver_bool, get_config, set_config
 
 
 # Load logo as base64 for embedding in HTML
@@ -94,6 +95,42 @@ _state = {
     "api_remaining": "",  # e.g. "2950 / 3000"
     "sacn_connected": False,
 }
+
+# Section definitions: key -> display label
+_SECTION_LABELS = {
+    "show_clock_utc":      "Clock — UTC",
+    "show_clock_lasvegas": "Clock — Las Vegas",
+    "show_clock_toronto":  "Clock — Toronto",
+    "show_live_status":    "Live Status / Now Playing",
+    "show_goal_banner":    "Goal Banner",
+    "show_colours":        "Current Colours",
+    "show_todays_games":   "Today's Games",
+    "show_schedule":       "Whole Schedule",
+    "show_schedule_times": "Schedule Times (LV / TO / UTC)",
+}
+
+_DEFAULT_ORDER = list(_SECTION_LABELS.keys())
+
+# Web page section visibility (loaded from config.ini)
+_WEB_SECTIONS = {k: get_webserver_bool(k, True) for k in _SECTION_LABELS}
+
+# Section display order (loaded from config.ini)
+def _load_section_order():
+    raw = get_config("webserver", "section_order", fallback="")
+    if not raw:
+        return list(_DEFAULT_ORDER)
+    keys = [k.strip() for k in raw.split(",") if k.strip() in _SECTION_LABELS]
+    # Append any missing keys at end
+    for k in _DEFAULT_ORDER:
+        if k not in keys:
+            keys.append(k)
+    return keys
+
+_WEB_SECTION_ORDER = _load_section_order()
+
+
+def _save_section_order():
+    set_config("webserver", "section_order", ",".join(_WEB_SECTION_ORDER))
 
 _lv_tz = ZoneInfo("America/Los_Angeles")
 _to_tz = ZoneInfo("America/Toronto")
@@ -153,7 +190,7 @@ def _build_html():
 
     # Goal banner
     goal_html = ""
-    if goal:
+    if goal and _WEB_SECTIONS["show_goal_banner"]:
         goal_html = (
             '<div style="background:#ff4444;color:white;padding:16px;'
             'text-align:center;font-size:28px;font-weight:bold;'
@@ -165,7 +202,7 @@ def _build_html():
     countdown_html = ""
     scores.update_live_flags()
     live_games = scores.get_live_games()
-    if live_games:
+    if live_games and _WEB_SECTIONS["show_live_status"]:
         # Show NOW PLAYING with big team names and scores
         fid, info = live_games[0]
         lh = info.get("home", "")
@@ -257,7 +294,7 @@ def _build_html():
             f'</div></div>'
             f'{events_html}'
         )
-    else:
+    elif _WEB_SECTIONS["show_live_status"]:
         today_utc = now_utc.strftime("%b %d").replace(" 0", " ")
         next_game = None
         next_kick = None
@@ -392,11 +429,14 @@ def _build_html():
 
             time_colour = "#28a745" if is_live else "#0088ff"
             dot_colour = "#28a745" if is_live else "#0066cc"
-            time_display = f"{time_lv} LV" if time_lv else ""
-            if time_to:
-                time_display += f" / {time_to} TO"
-            if time_utc_str:
-                time_display += f" / {time_utc_str} UTC"
+            if _WEB_SECTIONS["show_schedule_times"]:
+                time_display = f"{time_lv} LV" if time_lv else ""
+                if time_to:
+                    time_display += f" / {time_to} TO"
+                if time_utc_str:
+                    time_display += f" / {time_utc_str} UTC"
+            else:
+                time_display = ""
             venue = g.get("venue", "")
             home = g.get("home", "")
             away = g.get("away", "")
@@ -431,6 +471,243 @@ def _build_html():
                 f'<td style="padding:6px;color:#888;font-size:13px;">{venue}</td></tr>'
             )
 
+    # Build conditional HTML blocks
+    # Build individual clock divs
+    clock_divs = ""
+    clocks_js_parts = []
+    if _WEB_SECTIONS["show_clock_utc"]:
+        clock_divs += (
+            f'<div class="clock">'
+            f'<div class="clock-label" style="color:#0066cc;">UTC</div>'
+            f'<div class="clock-time" id="clock-utc" style="color:#0066cc;">{now_utc.strftime("%H:%M:%S")}</div>'
+            f'<div class="clock-date" id="clock-utc-date">{now_utc.strftime("%a %d %b %Y")}</div>'
+            f'</div>'
+        )
+        clocks_js_parts.append(
+            "var utc = new Date(now.toLocaleString('en-US', {timeZone:'UTC'}));\n"
+            "document.getElementById('clock-utc').textContent = fmt(utc);\n"
+            "document.getElementById('clock-utc-date').textContent = fmtDate(utc);"
+        )
+    if _WEB_SECTIONS["show_clock_lasvegas"]:
+        clock_divs += (
+            f'<div class="clock">'
+            f'<div class="clock-label" style="color:#cc6600;">Las Vegas</div>'
+            f'<div class="clock-time" id="clock-lv" style="color:#cc6600;">{now_lv.strftime("%H:%M:%S")}</div>'
+            f'<div class="clock-date" id="clock-lv-date">{now_lv.strftime("%a %d %b %Y")}</div>'
+            f'</div>'
+        )
+        clocks_js_parts.append(
+            "var lv = new Date(now.toLocaleString('en-US', {timeZone:'America/Los_Angeles'}));\n"
+            "document.getElementById('clock-lv').textContent = fmt(lv);\n"
+            "document.getElementById('clock-lv-date').textContent = fmtDate(lv);"
+        )
+    if _WEB_SECTIONS["show_clock_toronto"]:
+        clock_divs += (
+            f'<div class="clock">'
+            f'<div class="clock-label" style="color:#cc0066;">Toronto</div>'
+            f'<div class="clock-time" id="clock-to" style="color:#cc0066;">{now_to.strftime("%H:%M:%S")}</div>'
+            f'<div class="clock-date" id="clock-to-date">{now_to.strftime("%a %d %b %Y")}</div>'
+            f'</div>'
+        )
+        clocks_js_parts.append(
+            "var to = new Date(now.toLocaleString('en-US', {timeZone:'America/Toronto'}));\n"
+            "document.getElementById('clock-to').textContent = fmt(to);\n"
+            "document.getElementById('clock-to-date').textContent = fmtDate(to);"
+        )
+
+    clocks_html = ""
+    clocks_js = ""
+    if clock_divs:
+        clocks_html = f'<div class="clocks">{clock_divs}</div>'
+        clocks_js = (
+            "function updateClocks() {\n"
+            "  var now = new Date();\n"
+            "  function pad(n) { return n < 10 ? '0' + n : n; }\n"
+            "  function fmt(d) { return pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()); }\n"
+            "  function fmtDate(d) {\n"
+            "    var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];\n"
+            "    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];\n"
+            "    return days[d.getDay()] + ' ' + pad(d.getDate()) + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();\n"
+            "  }\n"
+            "  " + "\n  ".join(clocks_js_parts) + "\n"
+            "}\n"
+            "setInterval(updateClocks, 1000);\n"
+            "updateClocks();\n"
+        )
+
+    colours_html = ""
+    if _WEB_SECTIONS["show_colours"]:
+        colours_html = (
+            f'<div id="colours-area">'
+            f'<h2>Current Colours &mdash; {team}</h2>'
+            f'<div style="display:flex;align-items:center;gap:24px;">'
+            f'<div>{swatch_html}</div>'
+            f'{_flag_svg(team, width=200, height=133)}'
+            f'</div></div>'
+        )
+
+    # Today's Games (LV time) — filtered from timeline
+    todays_games_html = ""
+    if _WEB_SECTIONS["show_todays_games"]:
+        today_lv_str = now_utc.astimezone(_lv_tz).strftime("%Y-%m-%d")
+        today_rows = ""
+        for lv_dt, item_type, data, utc_dt in timeline_items:
+            if item_type != "game":
+                continue
+            if lv_dt.year >= 2099:
+                continue
+            if lv_dt.strftime("%Y-%m-%d") != today_lv_str:
+                continue
+            g = data
+            time_lv = lv_dt.strftime("%H:%M")
+            time_to = ""
+            time_utc_str = g.get("time_utc", "")
+            is_live = False
+            if utc_dt:
+                to_dt = utc_dt.astimezone(_to_tz)
+                time_to = to_dt.strftime("%H:%M")
+                diff_min = (now_utc - utc_dt).total_seconds() / 60
+                is_live = 0 <= diff_min <= 120
+            time_colour = "#28a745" if is_live else "#0088ff"
+            dot_colour = "#28a745" if is_live else "#0066cc"
+            if _WEB_SECTIONS["show_schedule_times"]:
+                time_display = f"{time_lv} LV"
+                if time_to:
+                    time_display += f" / {time_to} TO"
+                if time_utc_str:
+                    time_display += f" / {time_utc_str} UTC"
+            else:
+                time_display = ""
+            home = g.get("home", "")
+            away = g.get("away", "")
+            venue = g.get("venue", "")
+            score_display = ""
+            minute_display = ""
+            for fid, sc in all_scores.items():
+                if sc["home"] == home and sc["away"] == away:
+                    sd = scores.get_score_display(fid)
+                    if sd:
+                        score_display = sd
+                    minute_display = scores.get_match_clock(fid)
+                    break
+            home_score_parts = score_display.split(" - ") if score_display else []
+            if len(home_score_parts) == 2:
+                home_score_html = f'<span style="color:#ffcc00;font-weight:bold;font-size:24px;font-family:Consolas,monospace;padding:0 6px;">{home_score_parts[0]}</span>'
+                away_score_html = f'<span style="color:#ffcc00;font-weight:bold;font-size:24px;font-family:Consolas,monospace;padding:0 6px;">{home_score_parts[1]}</span>'
+            else:
+                home_score_html = ''
+                away_score_html = ''
+            vs_html = '<span style="color:#555;padding:0 4px;">vs</span>' if not score_display else '<span style="color:#555;padding:0 4px;">-</span>'
+            live_badge = f' <span style="background:#28a745;color:#fff;padding:2px 8px;border-radius:4px;font-size:11px;font-weight:bold;">LIVE {minute_display}</span>' if is_live else ''
+            today_rows += (
+                f'<tr style="border-bottom:1px solid #333;">'
+                f'<td style="padding:6px;width:16px;"><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:{dot_colour};"></span></td>'
+                f'<td style="padding:6px;color:{time_colour};font-family:monospace;">{time_display}{live_badge}</td>'
+                f'<td style="padding:6px;font-weight:bold;text-align:right;white-space:nowrap;">'
+                f'{home_score_html}{_flag_svg(home, width=30, height=20)} <span style="color:#aaa;font-size:10px;">H</span> {home}</td>'
+                f'<td style="padding:6px;text-align:center;">{vs_html}</td>'
+                f'<td style="padding:6px;font-weight:bold;white-space:nowrap;">'
+                f'{away} <span style="color:#aaa;font-size:10px;">A</span> {_flag_svg(away, width=30, height=20)}{away_score_html}</td>'
+                f'<td style="padding:6px;color:#888;font-size:13px;">{venue}</td></tr>'
+            )
+        if today_rows:
+            today_lv_display = now_utc.astimezone(_lv_tz).strftime("%A, %b %d").replace(" 0", " ")
+            todays_games_html = (
+                f'<div id="todays-games-area">'
+                f'<h2>Today\'s Games — {today_lv_display} (LV)</h2>'
+                f'<table>{today_rows}</table>'
+                f'</div>'
+            )
+
+    schedule_html = ""
+    if _WEB_SECTIONS["show_schedule"]:
+        # Group schedule rows by date for day-at-a-time rotation
+        # Parse the rows to split by date header
+        schedule_days = {}  # {date_str: rows_html}
+        _current_day_key = None
+        _day_order = []  # preserve insertion order
+        import re as _re
+        # Split schedule_rows by date header rows
+        _row_parts = _re.split(r'(<tr><td colspan="6"[^>]*>)', schedule_rows)
+        i = 0
+        while i < len(_row_parts):
+            part = _row_parts[i]
+            if part.startswith('<tr><td colspan="6"'):
+                # This is a date header — extract date text
+                header_html = part + (_row_parts[i + 1] if i + 1 < len(_row_parts) else "")
+                date_match = _re.search(r'>([^<]+)</td>', header_html)
+                _current_day_key = date_match.group(1).strip() if date_match else f"day_{len(_day_order)}"
+                if _current_day_key not in schedule_days:
+                    schedule_days[_current_day_key] = ""
+                    _day_order.append(_current_day_key)
+                schedule_days[_current_day_key] += header_html
+                i += 2
+            else:
+                if _current_day_key and part.strip():
+                    schedule_days[_current_day_key] += part
+                i += 1
+
+        # Determine which days to show: today (LV), tomorrow (LV), and the last day
+        today_lv_str = now_lv.strftime("%b %d").replace(" 0", " ") + " (LV)"
+        tomorrow_lv = now_lv + timedelta(days=1)
+        tomorrow_lv_str = tomorrow_lv.strftime("%b %d").replace(" 0", " ") + " (LV)"
+        last_day_str = _day_order[-1] if _day_order else None
+
+        _show_days = []
+        for d in [today_lv_str, tomorrow_lv_str]:
+            if d in schedule_days and d not in _show_days:
+                _show_days.append(d)
+        if last_day_str and last_day_str not in _show_days:
+            _show_days.append(last_day_str)
+
+        # If none matched (dates might not align), show all days
+        if not _show_days:
+            _show_days = _day_order
+
+        # Build day divs
+        day_divs = ""
+        for idx, day_key in enumerate(_show_days):
+            display = "block" if idx == 0 else "none"
+            day_divs += (
+                f'<div class="schedule-day" style="display:{display};'
+                f'opacity:{1 if idx == 0 else 0};transition:opacity 0.8s ease;">'
+                f'<table>{schedule_days[day_key]}</table></div>'
+            )
+
+        schedule_html = (
+            f'<div id="schedule-area">'
+            f'<h2>Schedule</h2>'
+            f'{day_divs}'
+            f'</div>'
+        )
+
+    # Assemble body sections in configured order
+    _section_html = {
+        "show_live_status":    f'<div id="countdown-area">{countdown_html}</div>',
+        "show_clock_utc":      "",  # clocks handled as group below
+        "show_clock_lasvegas": "",
+        "show_clock_toronto":  "",
+        "show_goal_banner":    f'<div id="goal-area">{goal_html}</div>',
+        "show_colours":        colours_html,
+        "show_todays_games":   todays_games_html,
+        "show_schedule":       schedule_html,
+        "show_schedule_times": "",  # sub-option, not a standalone section
+    }
+    # Insert clocks HTML after the first clock key in order
+    _clock_keys = {"show_clock_utc", "show_clock_lasvegas", "show_clock_toronto"}
+    first_clock_done = False
+    ordered_parts = []
+    for key in _WEB_SECTION_ORDER:
+        if key in _clock_keys:
+            if not first_clock_done:
+                first_clock_done = True
+                ordered_parts.append(clocks_html)
+            continue
+        html_block = _section_html.get(key, "")
+        if html_block:
+            ordered_parts.append(html_block)
+    ordered_body = "\n".join(ordered_parts)
+
     html = f"""<!DOCTYPE html>
 <html>
 <head>
@@ -463,68 +740,11 @@ def _build_html():
   <img src="data:image/png;base64,{_LOGO_B64}" alt="Diversified">
 </div>
 
-<div id="countdown-area">{countdown_html}</div>
-<div class="clocks">
-  <div class="clock">
-    <div class="clock-label" style="color:#0066cc;">UTC</div>
-    <div class="clock-time" id="clock-utc" style="color:#0066cc;">{now_utc.strftime("%H:%M:%S")}</div>
-    <div class="clock-date" id="clock-utc-date">{now_utc.strftime("%a %d %b %Y")}</div>
-  </div>
-  <div class="clock">
-    <div class="clock-label" style="color:#cc6600;">Las Vegas</div>
-    <div class="clock-time" id="clock-lv" style="color:#cc6600;">{now_lv.strftime("%H:%M:%S")}</div>
-    <div class="clock-date" id="clock-lv-date">{now_lv.strftime("%a %d %b %Y")}</div>
-  </div>
-  <div class="clock">
-    <div class="clock-label" style="color:#cc0066;">Toronto</div>
-    <div class="clock-time" id="clock-to" style="color:#cc0066;">{now_to.strftime("%H:%M:%S")}</div>
-    <div class="clock-date" id="clock-to-date">{now_to.strftime("%a %d %b %Y")}</div>
-  </div>
-</div>
-
-<div id="goal-area">{goal_html}</div>
-
-<div id="colours-area">
-<h2>Current Colours &mdash; {team}</h2>
-<div style="display:flex;align-items:center;gap:24px;">
-<div>{swatch_html}</div>
-{_flag_svg(team, width=200, height=133)}
-</div>
-</div>
-
-<div id="schedule-area">
-<h2>Schedule</h2>
-<table>{schedule_rows}</table>
-</div>
+{ordered_body}
 
 </div>
 <script>
-// Client-side clocks — tick every second, never freeze
-function updateClocks() {{
-  var now = new Date();
-  function pad(n) {{ return n < 10 ? '0' + n : n; }}
-  function fmt(d) {{ return pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds()); }}
-  function fmtDate(d) {{
-    var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-    return days[d.getDay()] + ' ' + pad(d.getDate()) + ' ' + months[d.getMonth()] + ' ' + d.getFullYear();
-  }}
-  // UTC
-  var utc = new Date(now.toLocaleString('en-US', {{timeZone:'UTC'}}));
-  document.getElementById('clock-utc').textContent = fmt(utc);
-  document.getElementById('clock-utc-date').textContent = fmtDate(utc);
-  // Las Vegas
-  var lv = new Date(now.toLocaleString('en-US', {{timeZone:'America/Los_Angeles'}}));
-  document.getElementById('clock-lv').textContent = fmt(lv);
-  document.getElementById('clock-lv-date').textContent = fmtDate(lv);
-  // Toronto
-  var to = new Date(now.toLocaleString('en-US', {{timeZone:'America/Toronto'}}));
-  document.getElementById('clock-to').textContent = fmt(to);
-  document.getElementById('clock-to-date').textContent = fmtDate(to);
-}}
-setInterval(updateClocks, 1000);
-updateClocks();
-
+{clocks_js}
 // Smooth data refresh — fetch page, swap only dynamic sections
 var refreshing = false;
 function refreshData() {{
@@ -535,7 +755,7 @@ function refreshData() {{
     .then(function(html) {{
       var parser = new DOMParser();
       var doc = parser.parseFromString(html, 'text/html');
-      var ids = ['countdown-area', 'goal-area', 'colours-area', 'schedule-area'];
+      var ids = ['countdown-area', 'goal-area', 'colours-area', 'todays-games-area'];
       for (var i = 0; i < ids.length; i++) {{
         var newEl = doc.getElementById(ids[i]);
         var curEl = document.getElementById(ids[i]);
@@ -543,11 +763,54 @@ function refreshData() {{
           curEl.innerHTML = newEl.innerHTML;
         }}
       }}
+      // Update schedule day contents without resetting rotation state
+      var curArea = document.getElementById('schedule-area');
+      var newArea = doc.getElementById('schedule-area');
+      if (curArea && newArea) {{
+        var curDays = curArea.querySelectorAll('.schedule-day');
+        var newDays = newArea.querySelectorAll('.schedule-day');
+        for (var d = 0; d < curDays.length && d < newDays.length; d++) {{
+          var curTable = curDays[d].querySelector('table');
+          var newTable = newDays[d].querySelector('table');
+          if (curTable && newTable && curTable.innerHTML !== newTable.innerHTML) {{
+            curTable.innerHTML = newTable.innerHTML;
+          }}
+        }}
+      }}
     }})
     .catch(function() {{}})
     .finally(function() {{ refreshing = false; }});
 }}
 setInterval(refreshData, 1000);
+
+// Schedule day rotation with fade
+(function() {{
+  var currentDay = 0;
+  var ROTATE_INTERVAL = 8000;  // 8 seconds per day
+  var FADE_DURATION = 800;     // matches CSS transition
+
+  function rotateDays() {{
+    var area = document.getElementById('schedule-area');
+    if (!area) return;
+    var days = area.querySelectorAll('.schedule-day');
+    if (days.length <= 1) return;
+
+    var cur = days[currentDay % days.length];
+    // Fade out current
+    cur.style.opacity = '0';
+    setTimeout(function() {{
+      cur.style.display = 'none';
+      currentDay = (currentDay + 1) % days.length;
+      var next = days[currentDay];
+      next.style.display = 'block';
+      // Force reflow before fade in
+      void next.offsetHeight;
+      next.style.opacity = '1';
+    }}, FADE_DURATION);
+  }}
+
+  setInterval(rotateDays, ROTATE_INTERVAL);
+}})();
 </script>
 </body>
 </html>"""
@@ -966,6 +1229,85 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
     tk.Checkbutton(tab, text="Enable Testing Page (/testing)",
                    font=("Segoe UI", 11), variable=testing_var,
                    onvalue=True, offvalue=False).pack(pady=(0, 10))
+
+    # ── Live Status Page sections ─────────────────────────────────────
+    sections_frame = tk.LabelFrame(tab, text="Live Status Page Sections",
+                                    font=("Segoe UI", 10, "bold"),
+                                    padx=12, pady=8)
+    sections_frame.pack(padx=30, pady=(0, 10), fill="x")
+
+    list_frame = tk.Frame(sections_frame)
+    list_frame.pack(fill="both", expand=True)
+
+    section_listbox = tk.Listbox(list_frame, font=("Segoe UI", 10),
+                                  height=len(_SECTION_LABELS),
+                                  selectmode="browse", activestyle="none",
+                                  bg="#2a2a2a", fg="#e0e0e0",
+                                  selectbackground="#0066cc",
+                                  selectforeground="white")
+    section_listbox.pack(side="left", fill="both", expand=True)
+
+    btn_panel = tk.Frame(list_frame)
+    btn_panel.pack(side="left", padx=(8, 0), fill="y")
+
+    def _refresh_listbox():
+        """Redraw the listbox from _WEB_SECTION_ORDER."""
+        section_listbox.delete(0, "end")
+        for key in _WEB_SECTION_ORDER:
+            label = _SECTION_LABELS.get(key, key)
+            enabled = _WEB_SECTIONS.get(key, True)
+            marker = "\u2611" if enabled else "\u2610"
+            section_listbox.insert("end", f"  {marker}  {label}")
+            if not enabled:
+                idx = section_listbox.size() - 1
+                section_listbox.itemconfig(idx, fg="#666666")
+
+    def _move_up():
+        sel = section_listbox.curselection()
+        if not sel or sel[0] == 0:
+            return
+        i = sel[0]
+        _WEB_SECTION_ORDER[i], _WEB_SECTION_ORDER[i - 1] = (
+            _WEB_SECTION_ORDER[i - 1], _WEB_SECTION_ORDER[i])
+        _save_section_order()
+        _refresh_listbox()
+        section_listbox.selection_set(i - 1)
+        section_listbox.see(i - 1)
+
+    def _move_down():
+        sel = section_listbox.curselection()
+        if not sel or sel[0] >= len(_WEB_SECTION_ORDER) - 1:
+            return
+        i = sel[0]
+        _WEB_SECTION_ORDER[i], _WEB_SECTION_ORDER[i + 1] = (
+            _WEB_SECTION_ORDER[i + 1], _WEB_SECTION_ORDER[i])
+        _save_section_order()
+        _refresh_listbox()
+        section_listbox.selection_set(i + 1)
+        section_listbox.see(i + 1)
+
+    def _toggle_enabled():
+        sel = section_listbox.curselection()
+        if not sel:
+            return
+        i = sel[0]
+        key = _WEB_SECTION_ORDER[i]
+        new_val = not _WEB_SECTIONS.get(key, True)
+        _WEB_SECTIONS[key] = new_val
+        set_webserver_bool(key, new_val)
+        _refresh_listbox()
+        section_listbox.selection_set(i)
+
+    tk.Button(btn_panel, text="\u25B2 Up", font=("Segoe UI", 9, "bold"),
+              width=8, command=_move_up).pack(pady=(0, 4))
+    tk.Button(btn_panel, text="\u25BC Down", font=("Segoe UI", 9, "bold"),
+              width=8, command=_move_down).pack(pady=(0, 8))
+    tk.Button(btn_panel, text="\u2611 Toggle", font=("Segoe UI", 9, "bold"),
+              width=8, bg="#0066cc", fg="white",
+              command=_toggle_enabled).pack(pady=(0, 4))
+
+    _refresh_listbox()
+    section_listbox.selection_set(0)
 
     # URLs
     url_frame = tk.LabelFrame(tab, text="Access URLs", font=("Segoe UI", 10),

@@ -260,6 +260,10 @@ def build_api_tab(notebook, status_bar=None):
     _auto_game_rate_ms = [0]  # 0 = not yet calculated
     TOKEN_RESERVE = 3  # tokens to keep in reserve at reset
     RATE_SMOOTHING = 0.3  # blend factor: 0.3 = 30% new value, 70% old (smooth)
+    # Burn mode: when game ends before rate limit resets, burn surplus tokens at 700ms
+    BURN_INTERVAL_MS = 700
+    _burn_mode = [False]
+    _burn_tokens_available = [0]  # surplus tokens to burn
 
     def _update_rate_limit(data):
         if not isinstance(data, dict):
@@ -287,10 +291,42 @@ def build_api_tab(notebook, status_bar=None):
             rate_max_speed_label.config(
                 text=f"Max speed: 1/{max_interval_sec:.1f}s ({floor_ms}ms)")
 
-            # Auto-tune game rate: aim to have TOKEN_RESERVE tokens left at reset
+            # Auto-tune game rate: phase-aware budgeting
+            # Account for different polling rates in each upcoming phase
+            # (1H playing, halftime break, 2H playing) instead of assuming
+            # a single constant rate for the entire reset window.
             usable = remaining - TOKEN_RESERVE
             if usable > 0:
-                optimal_ms = int((resets_in / usable) * 1000)
+                segments = _scores_module.get_phase_time_segments()
+                break_rate_ms = max(100, break_interval_var.get())
+
+                if segments:
+                    # Cap segments to the reset window
+                    time_budget = resets_in
+                    break_calls = 0
+                    playing_secs = 0
+                    for seg_phase, seg_secs in segments:
+                        seg_secs = min(seg_secs, time_budget)
+                        if seg_secs <= 0:
+                            break
+                        if seg_phase == _scores_module.PHASE_BREAK:
+                            break_calls += seg_secs / (break_rate_ms / 1000)
+                        else:
+                            playing_secs += seg_secs
+                        time_budget -= seg_secs
+                        if time_budget <= 0:
+                            break
+
+                    # Tokens available for playing phases
+                    playing_tokens = usable - int(break_calls)
+                    if playing_tokens > 0 and playing_secs > 0:
+                        optimal_ms = int((playing_secs / playing_tokens) * 1000)
+                    else:
+                        optimal_ms = int((resets_in / usable) * 1000)
+                else:
+                    # No segment info — fall back to simple calculation
+                    optimal_ms = int((resets_in / usable) * 1000)
+
                 optimal_ms = max(100, optimal_ms)  # never below 100ms
                 # Smooth toward target to avoid jumpy adjustments
                 if _auto_game_rate_ms[0] <= 0:
@@ -305,9 +341,25 @@ def build_api_tab(notebook, status_bar=None):
                 if phase == _scores_module.PHASE_PLAYING:
                     playing_interval_var.set(_auto_game_rate_ms[0])
 
-                # Prediction display
+                # Prediction display — phase-aware call estimate
                 game_rate_ms = _auto_game_rate_ms[0]
-                calls_until_reset = int(resets_in / (game_rate_ms / 1000))
+                if segments:
+                    est_calls = 0
+                    t_left = resets_in
+                    for seg_phase, seg_secs in segments:
+                        seg_secs = min(seg_secs, t_left)
+                        if seg_secs <= 0:
+                            break
+                        if seg_phase == _scores_module.PHASE_BREAK:
+                            est_calls += seg_secs / (break_rate_ms / 1000)
+                        else:
+                            est_calls += seg_secs / (game_rate_ms / 1000)
+                        t_left -= seg_secs
+                        if t_left <= 0:
+                            break
+                    calls_until_reset = int(est_calls)
+                else:
+                    calls_until_reset = int(resets_in / (game_rate_ms / 1000))
                 predicted_remaining = remaining - calls_until_reset
                 rate_prediction_label.config(
                     text=f"Auto game rate: {game_rate_ms}ms  |  "
@@ -324,6 +376,34 @@ def build_api_tab(notebook, status_bar=None):
             _auto_game_rate_ms[0] = 0
             rate_max_speed_label.config(text="")
             rate_prediction_label.config(text="")
+
+        # ── Burn mode detection ──────────────────────────────────────
+        # In 2nd half+: if rate limit resets AFTER the game ends,
+        # surplus tokens will expire unused. Burn them at 700ms.
+        game_secs = _scores_module.get_min_game_seconds_remaining()
+        if (game_secs is not None and resets_in > 0 and remaining > TOKEN_RESERVE
+                and game_secs < resets_in):
+            # Tokens we'd normally use during remaining game time at current rate
+            current_rate_sec = max(0.7, (_auto_game_rate_ms[0] or 1000) / 1000)
+            tokens_for_game = int(game_secs / current_rate_sec)
+            # Surplus = tokens that would expire after game ends
+            surplus = remaining - tokens_for_game - TOKEN_RESERVE
+            if surplus > 10:  # only burn if meaningful surplus
+                _burn_mode[0] = True
+                _burn_tokens_available[0] = surplus
+                game_m, game_s = divmod(int(game_secs), 60)
+                rate_prediction_label.config(
+                    text=f"BURN MODE: {surplus} surplus tokens | "
+                         f"game ends in ~{game_m}m{game_s:02d}s | "
+                         f"reset in {resets_in // 60}m{resets_in % 60:02d}s | "
+                         f"burning at {BURN_INTERVAL_MS}ms",
+                    fg="#ff4400")
+            else:
+                _burn_mode[0] = False
+                _burn_tokens_available[0] = 0
+        else:
+            _burn_mode[0] = False
+            _burn_tokens_available[0] = 0
 
         rate_progress["value"] = pct
         _stop_rate_flash()
@@ -624,8 +704,8 @@ def build_api_tab(notebook, status_bar=None):
 
     idle_interval_var,     idle_lbl,     idle_spn,     idle_ms     = _poll_setting(poll_frame, "Idle:",      60000,  0)
     pregame_interval_var,  pregame_lbl,  pregame_spn,  pregame_ms  = _poll_setting(poll_frame, "Pregame:",   20000,  3)
-    playing_interval_var,  playing_lbl,  playing_spn,  playing_ms  = _poll_setting(poll_frame, "Game Time:", 1000,  6, step=5)
-    break_interval_var,    break_lbl,    break_spn,    break_ms    = _poll_setting(poll_frame, "Half-Time:", 30000,  9)
+    playing_interval_var,  playing_lbl,  playing_spn,  playing_ms  = _poll_setting(poll_frame, "Game Time:", 500,  6, step=5)
+    break_interval_var,    break_lbl,    break_spn,    break_ms    = _poll_setting(poll_frame, "Half-Time:", 45000,  9)
     postgame_interval_var, postgame_lbl, postgame_spn, postgame_ms = _poll_setting(poll_frame, "Post-Game:", 10000, 12)
 
     # Map phase → (label, spinbox, ms_label) for highlighting
@@ -670,8 +750,16 @@ def build_api_tab(notebook, status_bar=None):
 
         The interval is clamped to never go below the rate-limit-derived floor
         (resets_in_seconds / remaining_tokens), recalculated after every API call.
+
+        In burn mode (2nd half+, surplus tokens expiring after game ends),
+        overrides to BURN_INTERVAL_MS (700ms) to maximize data freshness.
         """
         phase = _scores_module.get_poll_phase()
+
+        # Burn mode overrides during active play
+        if _burn_mode[0] and phase == _scores_module.PHASE_PLAYING:
+            return BURN_INTERVAL_MS, phase
+
         if phase == _scores_module.PHASE_PLAYING:
             desired = max(100, playing_interval_var.get())
         elif phase == _scores_module.PHASE_BREAK:
@@ -761,9 +849,14 @@ def build_api_tab(notebook, status_bar=None):
         progress["value"] = 0
 
         # Update phase display and highlight active setting
-        colour = _PHASE_COLOURS.get(phase, "#888888")
-        phase_label.config(text=f"{phase.upper()} {interval_ms}ms",
-                           fg=colour)
+        if _burn_mode[0] and phase == _scores_module.PHASE_PLAYING:
+            colour = "#ff4400"
+            phase_label.config(text=f"BURN {interval_ms}ms ({_burn_tokens_available[0]} surplus)",
+                               fg=colour)
+        else:
+            colour = _PHASE_COLOURS.get(phase, "#888888")
+            phase_label.config(text=f"{phase.upper()} {interval_ms}ms",
+                               fg=colour)
         auto_style.configure("Auto.Horizontal.TProgressbar", background=colour)
         _highlight_active_phase(phase)
 

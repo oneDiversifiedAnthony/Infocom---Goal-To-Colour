@@ -104,7 +104,7 @@ def build_schedule_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
                   ).pack(side="left", padx=1)
         tk.Button(row, text="GOAL!", font=("Segoe UI", 7, "bold"),
                   bg="#ff4444", fg="white", padx=3,
-                  command=lambda c=home_colours, n=home: goal_pressed_cb(c, n)  # why: triggers flash celebration via callback
+                  command=lambda c=home_colours, n=home: goal_pressed_cb(c, n, is_home=True)
                   ).pack(side="left", padx=(1, 6))
 
         tk.Label(row, text="vs", font=("Segoe UI", 9), fg="#999999").pack(side="left", padx=4)
@@ -118,5 +118,5 @@ def build_schedule_tab(notebook, db, set_team_colours_cb, goal_pressed_cb):
                   ).pack(side="left", padx=1)
         tk.Button(row, text="GOAL!", font=("Segoe UI", 7, "bold"),
                   bg="#ff4444", fg="white", padx=3,
-                  command=lambda c=away_colours, n=away: goal_pressed_cb(c, n)
+                  command=lambda c=away_colours, n=away: goal_pressed_cb(c, n, is_home=False)
                   ).pack(side="left", padx=1)

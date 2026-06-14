@@ -39,8 +39,11 @@ import pygame
 
 from src.tabs.sound_keybinding import bind_sound_keys, F_KEYS
 
-from src.config import SOUND_DIR, ANTHEMS_DIR
+from src.config import SOUND_DIR, ANTHEMS_DIR, get_config, set_config
 MEDITS_FILE = os.path.join(SOUND_DIR, "medits.json")
+
+# Current mixer device (None = system default)
+_current_mixer_device = [None]
 WAVEFORM_W = 300
 WAVEFORM_H = 60
 LEVEL_W = 20
@@ -243,7 +246,48 @@ def _draw_waveform(canvas, waveform_data, cue_in=None, cue_out=None,
                           font=("Consolas", 9, "bold"), anchor="ne", tags="cue")
 
 
-EVENT_TYPES = ["None", "Goal", "Goal by Team"]
+EVENT_TYPES = ["None", "Goal", "Goal Home", "Goal Away", "Goal by Team"]
+
+
+def _get_audio_devices():
+    """Return list of available audio output device names."""
+    try:
+        pygame.init()
+        import pygame._sdl2.audio as sdl2_audio
+        return list(sdl2_audio.get_audio_device_names(False))
+    except Exception:
+        return []
+
+
+def _init_mixer(devicename=None):
+    """Initialize pygame mixer with the given device (None = system default)."""
+    try:
+        pygame.mixer.quit()
+    except Exception:
+        pass
+    kwargs = {"frequency": 44100, "size": -16, "channels": 2, "buffer": 1024}
+    if devicename:
+        kwargs["devicename"] = devicename
+    try:
+        pygame.mixer.init(**kwargs)
+        _current_mixer_device[0] = devicename
+        return True
+    except Exception:
+        # Fall back to default if named device fails
+        try:
+            pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=1024)
+            _current_mixer_device[0] = None
+        except Exception:
+            pass
+        return False
+
+
+def _ensure_device(devicename):
+    """Switch mixer to devicename if not already on it. Returns True if ready."""
+    target = devicename or None
+    if target == _current_mixer_device[0]:
+        return True
+    return _init_mixer(target)
 
 
 def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
@@ -253,7 +297,9 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
 
     team_names = sorted(countries_db.get("teams", {}).keys()) if countries_db else []
 
-    pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=1024)
+    # Initialize mixer with saved device preference
+    saved_device = get_config("audio", "output_device", fallback="")
+    _init_mixer(saved_device or None)
 
     # Toolbar
     toolbar = tk.Frame(tab)
@@ -262,6 +308,36 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                             bg="#0066cc", fg="white", padx=12, pady=2,
                             takefocus=False)
     refresh_btn.pack(side="left")
+
+    # ── Audio device selector ──────────────────────────────────────────
+    device_frame = tk.Frame(toolbar)
+    device_frame.pack(side="right", padx=(12, 0))
+    tk.Label(device_frame, text="Output:", font=("Segoe UI", 9)).pack(side="left", padx=(0, 4))
+
+    devices = _get_audio_devices()
+    device_choices = ["System Default"] + devices
+    current = saved_device if saved_device in devices else "System Default"
+    device_var = tk.StringVar(value=current)
+    device_menu = tk.OptionMenu(device_frame, device_var, *device_choices)
+    device_menu.config(font=("Segoe UI", 9), width=30)
+    device_menu.pack(side="left")
+
+    device_status = tk.Label(device_frame, text="", font=("Segoe UI", 8), fg="#888888")
+    device_status.pack(side="left", padx=(4, 0))
+
+    def _apply_device(*_args):
+        chosen = device_var.get()
+        dev = "" if chosen == "System Default" else chosen
+        ok = _init_mixer(dev or None)
+        set_config("audio", "output_device", dev)
+        if ok:
+            device_status.config(text=f"({chosen})", fg="#28a745")
+        else:
+            device_status.config(text="(failed — using default)", fg="#ff0000")
+
+    device_var.trace_add("write", _apply_device)
+    if saved_device:
+        device_status.config(text=f"({current})", fg="#28a745")
 
     tk.Label(toolbar, text="Render:", font=("Segoe UI", 9)).pack(side="right", padx=(8, 4))
     render_var = tk.StringVar(value="Medium")
@@ -813,6 +889,39 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         team_var.trace_add("write", _on_team_change)
         _rebuild_team_menu()
 
+        # Output device selector
+        dev_frame = tk.Frame(ctrl)
+        dev_frame.pack(pady=(4, 0), fill="x")
+        tk.Label(dev_frame, text="Output:", font=("Segoe UI", 7), fg="#aaaaaa").pack(anchor="w")
+        saved_device = file_medits.get("output_device", "")
+        dev_choices = ["Default"] + _get_audio_devices()
+        dev_current = saved_device if saved_device in dev_choices else "Default"
+        dev_var = tk.StringVar(value=dev_current)
+        dev_menu = ttk.Combobox(dev_frame, textvariable=dev_var,
+                                 values=dev_choices, state="readonly",
+                                 font=("Segoe UI", 7), width=20)
+        dev_menu.pack(fill="x")
+
+        def _on_dev_change(*_args):
+            entry = medits[0].get(file_basename, {})
+            chosen = dev_var.get()
+            if chosen and chosen != "Default":
+                entry["output_device"] = chosen
+            else:
+                entry.pop("output_device", None)
+            if entry:
+                medits[0][file_basename] = entry
+            elif file_basename in medits[0]:
+                del medits[0][file_basename]
+            _save_medits(medits[0])
+
+        dev_var.trace_add("write", _on_dev_change)
+
+        def _get_target_device():
+            """Return the device name this sound should play on, or None for default."""
+            d = dev_var.get()
+            return d if d and d != "Default" else None
+
         def _make_half_speed(raw):
             """Duplicate each stereo frame to produce half-speed audio."""
             frame_size = 4  # 16-bit stereo
@@ -994,12 +1103,29 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 return sound_trimmed_half[0] if has_cue and sound_trimmed_half[0] else sound_half[0]
             return sound_trimmed[0] if has_cue and sound_trimmed[0] else sound_obj[0]
 
+        def _switch_device_if_needed():
+            """Switch mixer to this sound's assigned device. Reloads sounds if mixer changed."""
+            target = _get_target_device()
+            if target == _current_mixer_device[0]:
+                return
+            _ensure_device(target)
+            # Mixer reinitialized — reload this sound synchronously
+            try:
+                s = pygame.mixer.Sound(filepath)
+                sound_obj[0] = s
+                raw = s.get_raw()
+                sound_half[0] = pygame.mixer.Sound(buffer=_make_half_speed(raw))
+                _build_trimmed()
+            except Exception:
+                pass
+
         def _play():
             if sound_obj[0] is None:
                 return
             if playing[0]:
                 _stop()
                 return
+            _switch_device_if_needed()
             active_card[0] = card_index
             sound_obj[0].stop()
             if sound_half[0]:
@@ -1029,6 +1155,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if playing[0]:
                 _stop()
                 return
+            _switch_device_if_needed()
             active_card[0] = card_index
             sound_obj[0].stop()
             sound_half[0].stop()
@@ -1404,22 +1531,30 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         """Trigger sounds bound to a matching event.
 
         Args:
-            event_type: "Goal" or "Goal by Team"
+            event_type: "Goal", "Goal Home", "Goal Away", or "Goal by Team"
             team_name: country name (only checked for "Goal by Team")
         """
+        goal_types = ("Goal", "Goal Home", "Goal Away", "Goal by Team")
         for ctrl in sound_controls:
             ev = ctrl["event_var"].get()
             if ev == "None":
                 continue
-            if ev == "Goal" and event_type in ("Goal", "Goal by Team"):
+            if ev == "Goal" and event_type in goal_types:
+                # "Goal" fires on ANY goal event
                 if not ctrl["is_playing"]():
                     ctrl["play"]()
-            elif ev == "Goal by Team" and event_type in ("Goal", "Goal by Team"):
+            elif ev == "Goal Home" and event_type == "Goal Home":
+                if not ctrl["is_playing"]():
+                    ctrl["play"]()
+            elif ev == "Goal Away" and event_type == "Goal Away":
+                if not ctrl["is_playing"]():
+                    ctrl["play"]()
+            elif ev == "Goal by Team" and event_type in goal_types:
                 if ctrl["team_var"].get() == team_name:
                     if not ctrl["is_playing"]():
                         ctrl["play"]()
         # Play national anthem for the team
-        if team_name and event_type in ("Goal", "Goal by Team"):
+        if team_name and event_type in goal_types:
             _anthem_play(team_name)
 
     def play_by_name(name):

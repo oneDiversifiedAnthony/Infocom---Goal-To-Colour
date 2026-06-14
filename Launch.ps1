@@ -219,10 +219,63 @@ function Start-Watchdog {
     }
 }
 
+# ── Dependency Check ──────────────────────────────────────────────────────────
+function Ensure-Dependencies {
+    Write-Host ""
+    Write-Host "========================================" -ForegroundColor Cyan
+    Write-Host " Dependency Check" -ForegroundColor Cyan
+    Write-Host "========================================" -ForegroundColor Cyan
+
+    $configPath = Join-Path $AppDir "config.ini"
+    $needsInstall = $true
+
+    if (Test-Path $configPath) {
+        $content = Get-Content $configPath -Raw
+        if ($content -match '(?m)^\[dependencies\]') {
+            if ($content -match '(?m)^status\s*=\s*installed') {
+                Write-Host "  Dependencies: OK (already installed)" -ForegroundColor DarkGray
+                $needsInstall = $false
+            } else {
+                Write-Host "  Dependencies: previous install incomplete or failed" -ForegroundColor Yellow
+            }
+        } else {
+            Write-Host "  Dependencies: not yet installed" -ForegroundColor Yellow
+        }
+    } else {
+        Write-Host "  Dependencies: config.ini not found, running installer" -ForegroundColor Yellow
+    }
+
+    if ($needsInstall) {
+        $installScript = Join-Path $AppDir "Install.ps1"
+        if (Test-Path $installScript) {
+            Write-Host "  Running Install.ps1 ..." -ForegroundColor Cyan
+            & $installScript
+            if ($LASTEXITCODE -ne 0) {
+                Write-Host "  Install.ps1 failed. Cannot continue." -ForegroundColor Red
+                return $false
+            }
+        } else {
+            Write-Host "  ERROR: Install.ps1 not found at $installScript" -ForegroundColor Red
+            return $false
+        }
+    }
+
+    return $true
+}
+
 # ── Main ─────────────────────────────────────────────────────────────────────
 try {
     Ensure-NetworkPrivate
     Ensure-FirewallRules
+
+    $depsOk = Ensure-Dependencies
+    if (-not $depsOk) {
+        Write-Host ""
+        Write-Host "Cannot start -- dependencies not satisfied." -ForegroundColor Red
+        Read-Host "Press Enter to close"
+        exit 1
+    }
+
     Start-MouseWiggle
     Start-Watchdog
 } catch {

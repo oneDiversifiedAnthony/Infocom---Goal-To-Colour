@@ -121,28 +121,31 @@ class App:
             self.countries_db = json.load(f)
         self.db["teams"] = self.countries_db["teams"]  # why: merge into one dict so all tabs share a single unified team lookup
 
-        self._trigger_timer = None
+        self._active_triggers = {}  # {country_name: (uni, ch, timer_id)}
         self._trigger_progress_timer = None
-        self._active_trigger = None
 
         # why: status bar packed bottom-first so it stays anchored during window resize
         self.status_bar = StatusBar(self.root)
 
-        # ── Game header (countdown / live score) ────────────────────────
-        self._header_frame = tk.Frame(self.root, bg="#1a1a1a")
-        self._header_frame.pack(fill="x", padx=8, pady=(8, 0))
-        self._header_title = tk.Label(self._header_frame, text="",
-                                       font=("Segoe UI", 14, "bold"),
-                                       fg="#ffcc00", bg="#1a1a1a")
-        self._header_title.pack(side="left", padx=(12, 8))
-        self._header_detail = tk.Label(self._header_frame, text="",
-                                        font=("Consolas", 20, "bold"),
-                                        fg="#ffcc00", bg="#1a1a1a")
-        self._header_detail.pack(side="left", padx=(0, 8))
-        self._header_match = tk.Label(self._header_frame, text="",
-                                       font=("Segoe UI", 12),
-                                       fg="#888888", bg="#1a1a1a")
-        self._header_match.pack(side="left", padx=(0, 12))
+        # ── Game header (countdown / live scores) ───────────────────────
+        self._header_container = tk.Frame(self.root, bg="#1a1a1a")
+        self._header_container.pack(fill="x", padx=8, pady=(8, 0))
+        self._header_live_rows = []  # dynamic rows for live games
+        # Bottom row: next upcoming game (always visible when applicable)
+        self._header_next_frame = tk.Frame(self._header_container, bg="#1a1a1a")
+        self._header_next_frame.pack(fill="x", side="bottom")
+        self._header_next_title = tk.Label(self._header_next_frame, text="",
+                                            font=("Segoe UI", 11, "bold"),
+                                            fg="#ffcc00", bg="#1a1a1a")
+        self._header_next_title.pack(side="left", padx=(12, 8))
+        self._header_next_detail = tk.Label(self._header_next_frame, text="",
+                                             font=("Consolas", 16, "bold"),
+                                             fg="#ffcc00", bg="#1a1a1a")
+        self._header_next_detail.pack(side="left", padx=(0, 8))
+        self._header_next_match = tk.Label(self._header_next_frame, text="",
+                                            font=("Segoe UI", 10),
+                                            fg="#888888", bg="#1a1a1a")
+        self._header_next_match.pack(side="left", padx=(0, 12))
 
         # Main notebook
         self.notebook = ttk.Notebook(self.root)
@@ -261,11 +264,30 @@ class App:
         # ── Game header update loop ──────────────────────────────────
         _pregame_fired_for = [None]  # fixture id we already triggered PreGame for
 
+        def _ensure_live_rows(count):
+            """Create or remove header rows so there are exactly `count` live game rows."""
+            while len(self._header_live_rows) < count:
+                row = tk.Frame(self._header_container, bg="#1a1a1a")
+                title = tk.Label(row, text="", font=("Segoe UI", 14, "bold"),
+                                 fg="#28a745", bg="#1a1a1a")
+                title.pack(side="left", padx=(12, 8))
+                detail = tk.Label(row, text="", font=("Consolas", 20, "bold"),
+                                  fg="#28a745", bg="#1a1a1a")
+                detail.pack(side="left", padx=(0, 8))
+                match = tk.Label(row, text="", font=("Segoe UI", 12),
+                                 fg="#28a745", bg="#1a1a1a")
+                match.pack(side="left", padx=(0, 12))
+                row.pack(fill="x", before=self._header_next_frame)
+                self._header_live_rows.append((row, title, detail, match))
+            while len(self._header_live_rows) > count:
+                row, _, _, _ = self._header_live_rows.pop()
+                row.destroy()
+
         def _update_game_header():
             live = scores.get_live_games()
-            if live:
-                # Show current live game(s)
-                fid, info = live[0]
+            _ensure_live_rows(len(live))
+            for i, (fid, info) in enumerate(live):
+                row, title_lbl, detail_lbl, match_lbl = self._header_live_rows[i]
                 home = info.get("home", "")
                 away = info.get("away", "")
                 hs = info.get("home_score", 0)
@@ -275,39 +297,40 @@ class App:
                 clock_display = clock
                 if remaining:
                     clock_display = f"{clock}  ({remaining} remaining)"
-                self._header_title.config(text="LIVE", fg="#28a745")
-                self._header_detail.config(
+                title_lbl.config(text="LIVE", fg="#28a745")
+                detail_lbl.config(
                     text=f"{home}  {hs} - {aws}  {away}",
                     fg="#28a745")
-                self._header_match.config(text=clock_display, fg="#28a745")
-            else:
-                nxt = scores.get_next_game_today()
-                if nxt:
-                    fid, home, away, kick = nxt
-                    now_utc = datetime.now(timezone.utc)
-                    diff = int((kick - now_utc).total_seconds())
-                    if diff > 0:
-                        h, rem = divmod(diff, 3600)
-                        m, s = divmod(rem, 60)
-                        self._header_title.config(
-                            text="TIME UNTIL NEXT GAME", fg="#ffcc00")
-                        self._header_detail.config(
-                            text=f"{h:02d}:{m:02d}:{s:02d}", fg="#ffcc00")
-                        self._header_match.config(
-                            text=f"{home} vs {away}")
+                match_lbl.config(text=clock_display, fg="#28a745")
 
-                        # Trigger PreGame.mp3 at 2 minutes before kickoff
-                        if diff <= 120 and _pregame_fired_for[0] != fid:
-                            _pregame_fired_for[0] = fid
-                            self._play_sound_by_name("PreGame")
-                    else:
-                        self._header_title.config(text="")
-                        self._header_detail.config(text="")
-                        self._header_match.config(text="")
+            # Next upcoming game (shown on its own row, even during live games)
+            nxt = scores.get_next_game_today()
+            if nxt:
+                fid, home, away, kick = nxt
+                now_utc = datetime.now(timezone.utc)
+                diff = int((kick - now_utc).total_seconds())
+                if diff > 0:
+                    h, rem = divmod(diff, 3600)
+                    m, s = divmod(rem, 60)
+                    self._header_next_title.config(
+                        text="NEXT GAME", fg="#ffcc00")
+                    self._header_next_detail.config(
+                        text=f"{h:02d}:{m:02d}:{s:02d}", fg="#ffcc00")
+                    self._header_next_match.config(
+                        text=f"{home} vs {away}")
+
+                    # Trigger PreGame.mp3 at 2 minutes before kickoff
+                    if diff <= 120 and _pregame_fired_for[0] != fid:
+                        _pregame_fired_for[0] = fid
+                        self._play_sound_by_name("PreGame")
                 else:
-                    self._header_title.config(text="")
-                    self._header_detail.config(text="")
-                    self._header_match.config(text="")
+                    self._header_next_title.config(text="")
+                    self._header_next_detail.config(text="")
+                    self._header_next_match.config(text="")
+            else:
+                self._header_next_title.config(text="")
+                self._header_next_detail.config(text="")
+                self._header_next_match.config(text="")
             self.root.after(1000, _update_game_header)
         _update_game_header()
 
@@ -337,7 +360,8 @@ class App:
         # Look up colours and fire the goal
         team_info = self.countries_db.get("teams", {}).get(local_name, {})
         colours = team_info.get("colours", [[255, 255, 255], [0, 0, 0], [128, 128, 128]])
-        self._goal_pressed(colours, local_name)
+        is_home = (scoring_team == home)
+        self._goal_pressed(colours, local_name, is_home=is_home)
 
     def _resolve_local_name(self, api_name):
         """Map a SportMonks API team name to a countries.json team name."""
@@ -397,7 +421,7 @@ class App:
         if country_name:
             self._fire_trigger(country_name)
 
-    def _goal_pressed(self, colours, country_name):
+    def _goal_pressed(self, colours, country_name, is_home=None):
         self.team_colours = colours
         self.team_name = country_name
         self.gen_team_label.config(text=country_name)
@@ -406,7 +430,13 @@ class App:
         self._highlight_flag(country_name)
         self.goal.trigger(colours, country_name)
         self._fire_trigger(country_name)
-        self._fire_sound_event("Goal by Team", country_name)
+        # Fire the most specific event type available
+        if is_home is True:
+            self._fire_sound_event("Goal Home", country_name)
+        elif is_home is False:
+            self._fire_sound_event("Goal Away", country_name)
+        else:
+            self._fire_sound_event("Goal by Team", country_name)
 
     def _fire_trigger(self, country_name):
         team = self.countries_db.get("teams", {}).get(country_name, {})
@@ -416,30 +446,44 @@ class App:
         uni = trigger["universe"]
         ch = trigger["channel"]
 
-        if self._active_trigger:
-            prev_uni, prev_ch = self._active_trigger
-            self.sacn.send_trigger(prev_uni, prev_ch, 0)
+        # Cancel existing trigger for this country if re-triggered
+        existing = self._active_triggers.get(country_name)
+        if existing:
+            _, _, old_timer = existing
+            if old_timer:
+                self.root.after_cancel(old_timer)
+            self.sacn.send_trigger(existing[0], existing[1], 0)
 
-        if self._trigger_timer:
-            self.root.after_cancel(self._trigger_timer)
+        self.sacn.send_trigger(uni, ch, DMX_MAX_VALUE)
+
+        # Show all active trigger names in status bar
+        active_names = [n for n in self._active_triggers if n != country_name]
+        active_names.append(country_name)
+        self.status_bar.trigger_label.config(
+            text=f"{' + '.join(active_names)} triggered", fg="#ff9800")
+
         if self._trigger_progress_timer:
             self.root.after_cancel(self._trigger_progress_timer)
-
-        self._active_trigger = (uni, ch)
-        self.sacn.send_trigger(uni, ch, DMX_MAX_VALUE)
-        self.status_bar.trigger_label.config(
-            text=f"{country_name} Ch{ch} triggered", fg="#ff9800")
-
         self._trigger_duration = TRIGGER_PULSE_DURATION_MS
         self._trigger_elapsed = 0
         self.status_bar.trigger_progress["value"] = 100
         self._tick_trigger_progress()
 
-        def _clear():
-            self._clear_all_triggers()
-            self._trigger_timer = None
+        def _clear_one(name=country_name):
+            entry = self._active_triggers.pop(name, None)
+            if entry:
+                self.sacn.send_trigger(entry[0], entry[1], 0)
+            if not self._active_triggers:
+                # All triggers done — full cleanup
+                self._clear_all_triggers()
+            else:
+                # Update status bar to show remaining triggers
+                remaining = list(self._active_triggers.keys())
+                self.status_bar.trigger_label.config(
+                    text=f"{' + '.join(remaining)} triggered", fg="#ff9800")
 
-        self._trigger_timer = self.root.after(TRIGGER_PULSE_DURATION_MS, _clear)  # why: after() keeps DMX I/O on the main thread, avoiding race conditions
+        timer_id = self.root.after(TRIGGER_PULSE_DURATION_MS, _clear_one)
+        self._active_triggers[country_name] = (uni, ch, timer_id)
 
     def _tick_trigger_progress(self):
         self._trigger_elapsed += TRIGGER_PROGRESS_TICK_MS
@@ -452,15 +496,24 @@ class App:
             self._trigger_progress_timer = None
 
     def _clear_all_triggers(self):
+        for name, entry in list(self._active_triggers.items()):
+            uni, ch, timer_id = entry
+            if timer_id:
+                self.root.after_cancel(timer_id)
+            self.sacn.send_trigger(uni, ch, 0)
+        self._active_triggers.clear()
+        # Also zero any trigger channels not tracked (belt-and-suspenders)
         for team_data in self.countries_db.get("teams", {}).values():
             t = team_data.get("trigger")
             if t:
                 self.sacn.send_trigger(t["universe"], t["channel"], 0)
-        self._active_trigger = None
         self.goal.stop()
         self._highlight_flag("")  # clear flag highlight
         self.status_bar.trigger_label.config(text="", fg=FG_DIM)
         self.status_bar.trigger_progress["value"] = 0
+        if self._trigger_progress_timer:
+            self.root.after_cancel(self._trigger_progress_timer)
+            self._trigger_progress_timer = None
         # Blackout colour output
         black = [[0, 0, 0]] * 3
         self._draw_swatches(black)

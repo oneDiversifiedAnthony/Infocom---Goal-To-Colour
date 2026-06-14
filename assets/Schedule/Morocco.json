@@ -194,7 +194,7 @@
               "group_id": 253021,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 22,
               "venue_id": 21826,
               "name": "Brazil vs Morocco",
               "starting_at": "2026-06-13 22:00:00",
@@ -246,7 +246,96 @@
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 25769045,
+                  "fixture_id": 19609131,
+                  "type_id": 1525,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25769046,
+                  "fixture_id": 19609131,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25769047,
+                  "fixture_id": 19609131,
+                  "type_id": 1,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25769048,
+                  "fixture_id": 19609131,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25769050,
+                  "fixture_id": 19609131,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25769049,
+                  "fixture_id": 19609131,
+                  "type_id": 2,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25778975,
+                  "fixture_id": 19609131,
+                  "type_id": 48996,
+                  "participant_id": 18704,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25778976,
+                  "fixture_id": 19609131,
+                  "type_id": 48996,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
             }
           ]
         }
@@ -1796,7 +1885,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781304866,
+        "current_timestamp": 1781394320,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1812,8 +1901,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3361,
-    "remaining": 2481,
+    "resets_in_seconds": 55,
+    "remaining": 2416,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

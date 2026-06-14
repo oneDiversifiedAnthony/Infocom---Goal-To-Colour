@@ -306,6 +306,115 @@ def get_time_remaining(fixture_id):
     return f"{rm}:{rs:02d}"
 
 
+def get_game_seconds_remaining(fixture_id):
+    """Estimate total seconds remaining in the match (all periods), or None.
+
+    Only returns a value during 2nd half or later (state_id 22, 6, 23, 9).
+    In the 2nd half, estimates based on 90-minute regulation.
+    Returns None for 1st half, breaks, or finished matches.
+    """
+    state_id = _state_ids.get(fixture_id)
+    if state_id is None:
+        return None
+
+    # Only burn during 2nd half and beyond
+    if state_id not in {22, 6, 23, 9}:  # 2H, ET, ET2H, PEN
+        return None
+
+    period = get_current_period(fixture_id)
+    if not period or period.get("minutes") is None:
+        return None
+
+    minutes = period["minutes"]
+    seconds = period.get("seconds", 0) or 0
+
+    if state_id == 22:  # 2nd half — game ends around 90'
+        end_minute = 90
+    elif state_id == 6:   # ET 1st half — ends around 105'
+        end_minute = 105
+    elif state_id == 23:  # ET 2nd half — ends around 120'
+        end_minute = 120
+    elif state_id == 9:   # Penalties — could end any moment
+        return 300  # rough estimate: 5 minutes
+    else:
+        return None
+
+    # Add ~5 min for expected injury time
+    end_minute += 5
+    remaining = max(0, (end_minute * 60) - (minutes * 60 + seconds))
+    return remaining
+
+
+def get_game_phase_is_second_half():
+    """Return True if any live game is in the 2nd half or later."""
+    for fid, sid in _state_ids.items():
+        if sid in {22, 6, 23, 9}:  # 2H, ET, ET2H, PEN
+            return True
+    return False
+
+
+def get_min_game_seconds_remaining():
+    """Return the minimum seconds remaining across all live games, or None."""
+    results = []
+    for fid in _state_ids:
+        r = get_game_seconds_remaining(fid)
+        if r is not None:
+            results.append(r)
+    return min(results) if results else None
+
+
+HALFTIME_DURATION_SEC = 15 * 60  # 15 minute halftime break
+
+
+def get_phase_time_segments():
+    """Estimate remaining seconds in each upcoming phase for token budgeting.
+
+    Returns a list of (phase, seconds) tuples representing the time segments
+    from now until the match ends. For example, during the 1st half:
+        [("playing", 600), ("break", 900), ("playing", 2700)]
+    means 10 min left in 1H, 15 min halftime, then 45 min 2H.
+
+    Returns None if no live games or not enough info to estimate.
+    """
+    for fid, sid in _state_ids.items():
+        period = get_current_period(fid)
+
+        if sid == 2:  # 1st Half
+            if period and period.get("minutes") is not None:
+                minutes = period["minutes"]
+                seconds = period.get("seconds", 0) or 0
+                period_length = period.get("period_length", 45)
+                counts_from = period.get("counts_from", 0)
+                regular_end = counts_from + period_length
+                elapsed_sec = (minutes - counts_from) * 60 + seconds
+                remaining_1h = max(0, period_length * 60 - elapsed_sec)
+                # Add ~3 min for expected injury time
+                remaining_1h += 3 * 60
+            else:
+                remaining_1h = 45 * 60  # fallback: full half
+
+            return [
+                (PHASE_PLAYING, remaining_1h),
+                (PHASE_BREAK, HALFTIME_DURATION_SEC),
+                (PHASE_PLAYING, 50 * 60),  # 2H ~45 + 5 min injury
+            ]
+
+        elif sid == 3:  # Halftime
+            # Estimate time left in halftime — rough guess, ~7.5 min average
+            ht_remaining = 7 * 60 + 30
+            return [
+                (PHASE_BREAK, ht_remaining),
+                (PHASE_PLAYING, 50 * 60),
+            ]
+
+        elif sid == 22:  # 2nd Half
+            r = get_game_seconds_remaining(fid)
+            if r is not None:
+                return [(PHASE_PLAYING, r)]
+
+    return None
+
+
 def get_period_info(fixture_id):
     """Return dict with period details for display, or None.
 
