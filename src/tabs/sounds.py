@@ -35,15 +35,18 @@ import time
 import tkinter as tk
 from tkinter import ttk
 
-import pygame
+from src import audio_engine
 
 from src.tabs.sound_keybinding import bind_sound_keys, F_KEYS
 
 from src.config import SOUND_DIR, ANTHEMS_DIR, get_config, set_config
 MEDITS_FILE = os.path.join(SOUND_DIR, "medits.json")
 
-# Current mixer device (None = system default)
-_current_mixer_device = [None]
+# Master / anthem output device name ("" or None = system default). Sound cards
+# set to "Default" play on this device; cards with their own device play on
+# theirs. The multi-device audio engine keeps a stream open per device, so all
+# play simultaneously.
+_master_device = [None]
 WAVEFORM_W = 300
 WAVEFORM_H = 60
 LEVEL_W = 20
@@ -251,45 +254,19 @@ EVENT_TYPES = ["None", "Goal", "Goal Home", "Goal Away", "Goal by Team"]
 
 def _get_audio_devices():
     """Return list of available audio output device names."""
-    try:
-        pygame.init()
-        import pygame._sdl2.audio as sdl2_audio
-        return list(sdl2_audio.get_audio_device_names(False))
-    except Exception:
-        return []
+    return audio_engine.list_output_devices()
 
 
-def _init_mixer(devicename=None):
-    """Initialize pygame mixer with the given device (None = system default)."""
-    try:
-        pygame.mixer.quit()
-    except Exception:
-        pass
-    kwargs = {"frequency": 48000, "size": -16, "channels": 2, "buffer": 1024}  # why: 48 kHz matches the Dante Virtual Soundcard clock (avoids resampling)
-    if devicename:
-        kwargs["devicename"] = devicename
-    try:
-        pygame.mixer.init(**kwargs)
-        pygame.mixer.set_num_channels(32)  # why: allow many sound sources to mix simultaneously (default is only 8)
-        _current_mixer_device[0] = devicename
-        return True
-    except Exception:
-        # Fall back to default if named device fails
-        try:
-            pygame.mixer.init(frequency=48000, size=-16, channels=2, buffer=1024)
-            pygame.mixer.set_num_channels(32)
-            _current_mixer_device[0] = None
-        except Exception:
-            pass
-        return False
+def _set_master_device(devicename):
+    """Set the master/anthem output device used by the anthem and Default cards.
 
-
-def _ensure_device(devicename):
-    """Switch mixer to devicename if not already on it. Returns True if ready."""
+    Returns True if the device resolved to a real output (or default).
+    """
     target = devicename or None
-    if target == _current_mixer_device[0]:
+    _master_device[0] = target
+    if target is None:
         return True
-    return _init_mixer(target)
+    return audio_engine.resolve_device(target) is not None
 
 
 def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
@@ -299,9 +276,10 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
 
     team_names = sorted(countries_db.get("teams", {}).keys()) if countries_db else []
 
-    # Initialize mixer with saved device preference
+    # Master/anthem output device from saved preference
     saved_device = get_config("audio", "output_device", fallback="")
-    _init_mixer(saved_device or None)
+    _set_master_device(saved_device or None)
+    audio_engine.prime_decoder()  # why: init the decoder on the main thread before background loads
 
     # Toolbar
     toolbar = tk.Frame(tab)
@@ -347,12 +325,12 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
     def _apply_device(*_args):
         chosen = device_var.get()
         dev = "" if chosen == "System Default" else chosen
-        ok = _init_mixer(dev or None)
+        ok = _set_master_device(dev or None)
         set_config("audio", "output_device", dev)
         if ok:
             device_status.config(text=f"({chosen})", fg="#28a745")
         else:
-            device_status.config(text="(failed — using default)", fg="#ff0000")
+            device_status.config(text="(not found — using default)", fg="#ff0000")
 
     device_var.trace_add("write", _apply_device)
     if saved_device:
@@ -535,10 +513,10 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         if not os.path.exists(filepath):
             return
         try:
-            snd = pygame.mixer.Sound(filepath)
+            snd = audio_engine.Sound(filepath)
             anthem_sound[0] = snd
             anthem_start_time[0] = time.time()
-            anthem_channel[0] = snd.play()
+            anthem_channel[0] = snd.play(device=_master_device[0])  # anthem uses the master/anthem output
             if anthem_channel[0]:
                 anthem_channel[0].set_volume(_anthem_db_to_vol(anthem_gain_var.get()))
             anthem_playing[0] = True
@@ -943,10 +921,10 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         def _load_sound():
             def _worker():
                 try:
-                    s = pygame.mixer.Sound(filepath)
+                    s = audio_engine.Sound(filepath)
                     raw = s.get_raw()
                     half_raw = _make_half_speed(raw)
-                    s_half = pygame.mixer.Sound(buffer=half_raw)
+                    s_half = audio_engine.Sound(buffer=half_raw)
                     # Load or build peak cache
                     pf = _peak_path(filepath)
                     cached = _load_peak_cache(pf, filepath)
@@ -1021,9 +999,9 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 sound_trimmed[0] = None
                 sound_trimmed_half[0] = None
                 return
-            sound_trimmed[0] = pygame.mixer.Sound(buffer=trimmed_raw)
+            sound_trimmed[0] = audio_engine.Sound(buffer=trimmed_raw)
             half_raw = _make_half_speed(trimmed_raw)
-            sound_trimmed_half[0] = pygame.mixer.Sound(buffer=half_raw)
+            sound_trimmed_half[0] = audio_engine.Sound(buffer=half_raw)
 
         def _save_cue():
             """Save current cue points and gain to medits.json."""
@@ -1111,31 +1089,9 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 return sound_trimmed_half[0] if has_cue and sound_trimmed_half[0] else sound_half[0]
             return sound_trimmed[0] if has_cue and sound_trimmed[0] else sound_obj[0]
 
-        def _switch_device_if_needed():
-            """Switch mixer to this sound's assigned device. Reloads sounds if mixer changed.
-
-            A card set to "Default" follows the globally-configured mixer device
-            (the toolbar selection / config.ini output_device). We must NOT reinit
-            the mixer in that case: reinitialising calls pygame.mixer.quit(), which
-            stops every other sound that is currently playing and also moves audio
-            off the configured Dante device. Only switch for an explicit per-card
-            device that actually differs from the current mixer.
-            """
-            target = _get_target_device()
-            if target is None:
-                return  # follow the global mixer device; never reinit on Default
-            if target == _current_mixer_device[0]:
-                return
-            _ensure_device(target)
-            # Mixer reinitialized — reload this sound synchronously
-            try:
-                s = pygame.mixer.Sound(filepath)
-                sound_obj[0] = s
-                raw = s.get_raw()
-                sound_half[0] = pygame.mixer.Sound(buffer=_make_half_speed(raw))
-                _build_trimmed()
-            except Exception:
-                pass
+        def _card_device():
+            """Output device for this card: its own if set, else the master/anthem device."""
+            return _get_target_device() or _master_device[0]
 
         def _play():
             if sound_obj[0] is None:
@@ -1143,7 +1099,6 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if playing[0]:
                 _stop()
                 return
-            _switch_device_if_needed()
             active_card[0] = card_index
             sound_obj[0].stop()
             if sound_half[0]:
@@ -1156,7 +1111,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             loops = -1 if loop_var.get() else 0
             play_start_time[0] = time.time()
             snd = _get_play_sound(False)
-            channel_obj[0] = snd.play(loops=loops)
+            channel_obj[0] = snd.play(loops=loops, device=_card_device())
             if channel_obj[0]:
                 channel_obj[0].set_volume(_db_to_volume(gain_var.get()))
                 active_channels.append(channel_obj[0])
@@ -1173,7 +1128,6 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if playing[0]:
                 _stop()
                 return
-            _switch_device_if_needed()
             active_card[0] = card_index
             sound_obj[0].stop()
             sound_half[0].stop()
@@ -1185,7 +1139,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             loops = -1 if loop_var.get() else 0
             play_start_time[0] = time.time()
             snd = _get_play_sound(True)
-            channel_obj[0] = snd.play(loops=loops)
+            channel_obj[0] = snd.play(loops=loops, device=_card_device())
             if channel_obj[0]:
                 channel_obj[0].set_volume(_db_to_volume(gain_var.get()))
                 active_channels.append(channel_obj[0])

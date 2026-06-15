@@ -33,6 +33,8 @@ DEPENDENCIES = {
     "sacn": "sacn",
     "pygame": "pygame-ce",
     "PIL": "Pillow",
+    "numpy": "numpy",            # audio engine mixing
+    "sounddevice": "sounddevice",  # multi-device audio output (PortAudio)
 }
 
 
