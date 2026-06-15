@@ -30,3 +30,32 @@
 [2026-06-14 13:31:32] SCORE CHANGE: Germany vs Curacao  4-1 → 5-1
 [2026-06-14 13:40:57] SCORE CHANGE: Germany vs Curacao  5-1 → 6-1
 [2026-06-14 13:51:36] SCORE CHANGE: Germany vs Curacao  6-1 → 7-1
+[2026-06-14 19:55:46] SCORE CHANGE: Ivory Coast vs Ecuador  0-0 → 1-0
+[2026-06-14 20:20:26] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-14 20:45:40] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-14 21:07:29] SCORE CHANGE: Sweden vs Tunisia  0-0 → 1-0
+[2026-06-14 21:30:22] SCORE CHANGE: Sweden vs Tunisia  1-0 → 2-0
+[2026-06-14 21:43:38] SCORE CHANGE: Sweden vs Tunisia  2-0 → 2-1
+[2026-06-14 22:19:54] SCORE CHANGE: Sweden vs Tunisia  2-1 → 3-1
+[2026-06-14 22:44:35] SCORE CHANGE: Sweden vs Tunisia  3-1 → 4-1
+[2026-06-14 22:45:37] SCORE CHANGE: Sweden vs Tunisia  4-1 → 3-1
+[2026-06-14 22:46:54] SCORE CHANGE: Sweden vs Tunisia  3-1 → 4-1
+[2026-06-14 22:56:06] SCORE CHANGE: Sweden vs Tunisia  4-1 → 5-1
+[2026-06-14 23:13:30] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-15 10:45:11] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-15 13:12:35] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+

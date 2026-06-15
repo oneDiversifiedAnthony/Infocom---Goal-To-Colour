@@ -12,7 +12,7 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": null,
       "aggregates": [],
       "rounds": [
@@ -82,7 +82,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -102,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609162,
@@ -116,11 +116,11 @@
               "group_id": 253026,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 161191,
               "name": "Spain vs Cape Verde Islands",
               "starting_at": "2026-06-15 16:00:00",
-              "result_info": null,
+              "result_info": "Game ended in draw.",
               "leg": "1/1",
               "details": "Match 14",
               "length": 90,
@@ -141,10 +141,10 @@
                   "founded": 1913,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-09 02:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": false,
                     "position": 1
                   }
                 },
@@ -160,15 +160,104 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "away",
-                    "winner": null,
+                    "winner": false,
                     "position": 2
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 25937068,
+                  "fixture_id": 19609162,
+                  "type_id": 1525,
+                  "participant_id": 18710,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25937069,
+                  "fixture_id": 19609162,
+                  "type_id": 1525,
+                  "participant_id": 18823,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25937070,
+                  "fixture_id": 19609162,
+                  "type_id": 1,
+                  "participant_id": 18710,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25937071,
+                  "fixture_id": 19609162,
+                  "type_id": 1,
+                  "participant_id": 18823,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25937072,
+                  "fixture_id": 19609162,
+                  "type_id": 2,
+                  "participant_id": 18710,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25937073,
+                  "fixture_id": 19609162,
+                  "type_id": 2,
+                  "participant_id": 18823,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25945846,
+                  "fixture_id": 19609162,
+                  "type_id": 48996,
+                  "participant_id": 18710,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25945847,
+                  "fixture_id": 19609162,
+                  "type_id": 48996,
+                  "participant_id": 18823,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
             }
           ]
         },
@@ -180,10 +269,10 @@
           "stage_id": 77478590,
           "name": "2",
           "finished": false,
-          "is_current": false,
+          "is_current": true,
           "starting_at": "2026-06-18",
           "ending_at": "2026-06-24",
-          "games_in_current_week": false,
+          "games_in_current_week": true,
           "fixtures": [
             {
               "id": 19609178,
@@ -219,7 +308,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -315,7 +404,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -482,7 +571,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -649,7 +738,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -835,7 +924,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -983,7 +1072,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1150,7 +1239,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1314,7 +1403,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1459,7 +1548,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1626,7 +1715,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1793,7 +1882,7 @@
                   "founded": 1982,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-15 16:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -2016,7 +2105,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781483801,
+        "current_timestamp": 1781548225,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2032,8 +2121,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 512,
-    "remaining": 2430,
+    "resets_in_seconds": 3590,
+    "remaining": 2488,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
