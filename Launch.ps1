@@ -24,6 +24,7 @@ if (-not $isAdmin) {
 # ── Resolve paths ────────────────────────────────────────────────────────────
 $AppDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 Set-Location $AppDir
+$ConfigPath = Join-Path $AppDir "config.ini"
 
 # ── Configuration ────────────────────────────────────────────────────────────
 $RulePrefix       = "WorldCupColour"
@@ -263,10 +264,78 @@ function Ensure-Dependencies {
     return $true
 }
 
+# ── Network Setup Flag (config.ini [network]) ──────────────────────────────────
+# Mirrors the [dependencies] flag: once the network profile, firewall rules, and
+# Network Discovery are configured, record it in config.ini so subsequent launches
+# skip the (admin-only, slow) setup. Delete the [network] section to force a re-run.
+function Test-NetworkConfigured {
+    if (-not (Test-Path $ConfigPath)) { return $false }
+    $content = Get-Content $ConfigPath -Raw
+    if ($content -match '(?m)^\[network\]' -and $content -match '(?m)^status\s*=\s*configured') {
+        return $true
+    }
+    return $false
+}
+
+function Set-NetworkConfigured {
+    $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+
+    $lines = @()
+    if (Test-Path $ConfigPath) {
+        $lines = Get-Content $ConfigPath
+    }
+
+    # Remove any existing [network] section (idempotent rewrite)
+    $newLines = @()
+    $inSection = $false
+    foreach ($line in $lines) {
+        if ($line -match '^\[network\]') {
+            $inSection = $true
+            continue
+        }
+        if ($inSection -and $line -match '^\[') {
+            $inSection = $false
+        }
+        if (-not $inSection) {
+            $newLines += $line
+        }
+    }
+
+    # Strip trailing blank lines
+    while ($newLines.Count -gt 0 -and $newLines[-1].Trim() -eq "") {
+        $newLines = $newLines[0..($newLines.Count - 2)]
+    }
+
+    # Append [network] section
+    $newLines += ""
+    $newLines += "[network]"
+    $newLines += "status = configured"
+    $newLines += "profile = Private"
+    $newLines += "firewall_rules = installed"
+    $newLines += "network_discovery = enabled"
+    $newLines += "configured_on = $timestamp"
+    $newLines += ""
+
+    $newLines | Set-Content $ConfigPath -Encoding UTF8
+}
+
 # ── Main ─────────────────────────────────────────────────────────────────────
 try {
-    Ensure-NetworkPrivate
-    Ensure-FirewallRules
+    if (Test-NetworkConfigured) {
+        Write-Host ""
+        Write-Host "========================================" -ForegroundColor Cyan
+        Write-Host " Network Setup" -ForegroundColor Cyan
+        Write-Host "========================================" -ForegroundColor Cyan
+        Write-Host "  OK (already configured) -- skipping profile/firewall/discovery setup" -ForegroundColor DarkGray
+        Write-Host "  (delete the [network] section in config.ini to force a re-run)" -ForegroundColor DarkGray
+        Write-Host ""
+    } else {
+        Ensure-NetworkPrivate
+        Ensure-FirewallRules
+        Set-NetworkConfigured
+        Write-Host "  config.ini updated: [network] status = configured" -ForegroundColor Green
+        Write-Host ""
+    }
 
     $depsOk = Ensure-Dependencies
     if (-not $depsOk) {
