@@ -116,7 +116,7 @@
               "group_id": 253026,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 2,
               "venue_id": 78531,
               "name": "Saudi Arabia vs Uruguay",
               "starting_at": "2026-06-15 22:00:00",
@@ -3215,7 +3215,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781559911,
+        "current_timestamp": 1781562682,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3231,8 +3231,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 1585,
-    "remaining": 2364,
+    "resets_in_seconds": 2623,
+    "remaining": 2461,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

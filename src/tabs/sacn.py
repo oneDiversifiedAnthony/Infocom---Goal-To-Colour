@@ -295,6 +295,7 @@ def build_sacn_manual_tab(notebook, sacn, countries_db=None):
     # ── DMX Fader Banks ─────────────────────────────────────────────────
     FADERS_PER_UNI = 50
     POLL_MS = 100
+    BOUNCE_PULSE_MS = 400  # why: how long a per-country bounce holds the trigger channel high
 
     # why: Universe 1 (3 lamps × RGB) stacks on top; Universe 2 (50 ch) fills below
     fader_container = tk.Frame(tab)
@@ -414,6 +415,18 @@ def build_sacn_manual_tab(notebook, sacn, countries_db=None):
             if name_cv:
                 all_name_canvases.append((name_cv, ch_num, idx))
 
+            # Per-country bounce key: momentarily pulse this country's trigger
+            # channel full then off, as a per-country output check.
+            if channel_names and ch_num in channel_names:
+                def _bounce_channel(v=var):
+                    v.set(255)
+                    tab.after(BOUNCE_PULSE_MS, lambda vv=v: vv.set(0))
+
+                bounce_btn = tk.Button(col, text="Bounce", font=("Consolas", 5),
+                                       bg="#0066cc", fg="white",
+                                       padx=0, pady=0, command=_bounce_channel)
+                bounce_btn.pack(pady=(1, 0), fill="x")
+
             def _on_change(*_args, v=var, lbl=val_label, cv=intensity_cv, ct=ch_type, u=universe, i=idx):
                 val = v.get()
                 lbl.config(text=str(val))
@@ -527,6 +540,31 @@ def build_sacn_manual_tab(notebook, sacn, countries_db=None):
     u1_frame = _build_fader_bank(fader_container, 1, u1_labels, expand=False)
     _build_fader_bank(fader_container, 2, u2_labels, expand=True,
                       channel_names=u2_channel_names)
+
+    # ── Bounce sACN port (quick output health check) ────────────────────
+    # Sits under the fader banks: stops and immediately restarts the sACN sender
+    # so receivers see the source drop/re-appear and any NIC/bind error surfaces.
+    bounce_frame = tk.Frame(tab)
+    bounce_frame.pack(side="bottom", pady=(2, 8))
+
+    bounce_status = tk.Label(bounce_frame, text="", font=("Consolas", 9), fg="#888888")
+    _bounce_clear = [None]
+
+    def _bounce_sacn():
+        ok, err = sacn.bounce()
+        if _bounce_clear[0]:
+            tab.after_cancel(_bounce_clear[0])
+        if ok:
+            unis = ", ".join(str(u) for u in sorted(sacn._active_universes))
+            bounce_status.config(text=f"Bounced ✓  (Universe {unis})", fg="#28a745")
+        else:
+            bounce_status.config(text=f"Bounce failed: {err}", fg="#ff0000")
+        _bounce_clear[0] = tab.after(5000, lambda: bounce_status.config(text=""))
+
+    tk.Button(bounce_frame, text="Bounce sACN Port", font=("Segoe UI", 10, "bold"),
+              bg="#0066cc", fg="white", padx=16, pady=4,
+              command=_bounce_sacn).pack()
+    bounce_status.pack(pady=(4, 0))
 
     # Combined colour swatches for each lamp in Universe 1
     swatch_frame = tk.Frame(u1_frame)

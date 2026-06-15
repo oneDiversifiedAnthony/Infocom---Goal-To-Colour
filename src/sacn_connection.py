@@ -165,6 +165,20 @@ class SacnConnection:
             self.stop()
             return False, str(e)
 
+    def bounce(self):
+        """Stop and immediately restart the sender with the current configuration.
+
+        A quick health check: receivers see this source drop and re-appear, and any
+        bind/NIC problem surfaces as an error. Returns (True, "") on success or
+        (False, reason) on failure.
+        """
+        try:
+            self.connect()  # connect() stops the existing sender first, then re-activates outputs
+            return True, ""
+        except OSError as e:
+            self.stop()
+            return False, str(e)
+
     def stop(self):
         if self.sender:
             try:
