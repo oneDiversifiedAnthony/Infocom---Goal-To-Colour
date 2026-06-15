@@ -222,8 +222,13 @@ def build_sacn_tab(notebook, sacn, on_connect=None):
         # Persist so the startup auto-connect (gui.py) reuses the chosen NIC + destination
         set_config("sacn", "bind_address", bind_ip)
         set_config("sacn", "destination_ip", ip)
-        sacn.reconfigure(channel_map=channel_map, destination_ip=ip or None,
-                         bind_address=bind_ip)  # why: None dest triggers multicast; bind pins the NIC
+        ok, err = sacn.reconfigure(channel_map=channel_map, destination_ip=ip or None,
+                                   bind_address=bind_ip)  # why: None dest triggers multicast; bind pins the NIC
+        if not ok:
+            sacn_status.config(
+                text=f"Connection failed: {err}", fg="red"
+            )
+            return
         universes = sorted(set(m["universe"] for m in channel_map) | sacn.extra_universes)
         mode = f"unicast {ip}" if ip else "multicast"
         nic_desc = f" via {bind_ip}" if bind_ip else ""

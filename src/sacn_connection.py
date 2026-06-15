@@ -78,6 +78,7 @@ class SacnConnection:
         atexit.register(self.stop)  # why: ensures DMX outputs are zeroed even on crash or unhandled exception
 
     def connect(self):
+        """Start sACN sender. Raises OSError if bind_address is unavailable."""
         self.stop()
         self.sender = sacn.sACNsender(cid=tuple(self._cid_uuid.bytes), source_name=self.source_name,
                                       bind_address=self.bind_address)
@@ -150,13 +151,19 @@ class SacnConnection:
         output.dmx_data = tuple(data)
 
     def reconfigure(self, channel_map=None, destination_ip=None, bind_address=None):
+        """Reconfigure and reconnect. Returns (True, "") on success or (False, reason) on failure."""
         if channel_map is not None:
             self.channel_map = channel_map
         if destination_ip is not None:
             self.destination_ip = destination_ip if destination_ip != "" else None
         if bind_address is not None:
             self.bind_address = bind_address if bind_address != "" else "0.0.0.0"
-        self.connect()
+        try:
+            self.connect()
+            return True, ""
+        except OSError as e:
+            self.stop()
+            return False, str(e)
 
     def stop(self):
         if self.sender:
