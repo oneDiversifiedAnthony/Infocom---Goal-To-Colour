@@ -31,6 +31,7 @@ client-side to avoid flicker.
 """
 
 import tkinter as tk
+from tkinter import ttk
 import threading
 import socket
 import json
@@ -1115,17 +1116,18 @@ _server_thread = [None]
 _testing_enabled = [True]
 
 
-def _start_server(port, status_label):
-    """Start the HTTP server on the given port."""
+def _start_server(port, status_label, bind_ip="0.0.0.0"):
+    """Start the HTTP server on the given port and bind address."""
     if _server_instance[0]:
         _stop_server(status_label)
     try:
-        server = HTTPServer(("0.0.0.0", port), _Handler)
+        server = HTTPServer((bind_ip, port), _Handler)
         _server_instance[0] = server
         t = threading.Thread(target=server.serve_forever, daemon=True)
         t.start()
         _server_thread[0] = t
-        status_label.config(text=f"Running on port {port}", fg="#28a745")
+        where = "all interfaces" if bind_ip == "0.0.0.0" else bind_ip
+        status_label.config(text=f"Running on {where}:{port}", fg="#28a745")
     except OSError as e:
         status_label.config(text=f"Error: {e}", fg="red")
 
@@ -1176,6 +1178,46 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
     tk.Entry(port_frame, textvariable=port_var, font=("Consolas", 11),
              width=8, justify="center").pack(side="left")
 
+    # Bind adapter dropdown (only one can be selected)
+    _ALL_LABEL = "All interfaces (0.0.0.0)"
+
+    def _bind_options():
+        opts = [_ALL_LABEL]
+        for ip in _get_local_ips():
+            if ip not in opts:
+                opts.append(ip)
+        return opts
+
+    def _ip_to_label(ip):
+        return _ALL_LABEL if ip in ("", "0.0.0.0") else ip
+
+    def _label_to_ip(label):
+        return "0.0.0.0" if label == _ALL_LABEL else label
+
+    bind_frame = tk.Frame(tab)
+    bind_frame.pack(pady=6)
+    tk.Label(bind_frame, text="Bind to adapter:",
+             font=("Segoe UI", 11)).pack(side="left", padx=(0, 8))
+    saved_bind_ip = get_config("webserver", "bind_ip", fallback="0.0.0.0")
+    bind_options = _bind_options()
+    saved_label = _ip_to_label(saved_bind_ip)
+    if saved_label not in bind_options:
+        bind_options.append(saved_label)
+    bind_var = tk.StringVar(value=saved_label)
+    bind_combo = ttk.Combobox(bind_frame, textvariable=bind_var,
+                              values=bind_options, state="readonly",
+                              font=("Consolas", 11), width=28)
+    bind_combo.pack(side="left")
+
+    def _on_bind_change(*_args):
+        new_ip = _label_to_ip(bind_var.get())
+        set_config("webserver", "bind_ip", new_ip)
+        # Restart immediately if currently running so the change takes effect
+        if _server_instance[0]:
+            _start_server(port_var.get(), status_label, new_ip)
+
+    bind_combo.bind("<<ComboboxSelected>>", _on_bind_change)
+
     # Status
     status_label = tk.Label(tab, text="Stopped", font=("Consolas", 10), fg="red")
 
@@ -1184,7 +1226,7 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
     btn_frame.pack(pady=15)
 
     def _start():
-        _start_server(port_var.get(), status_label)
+        _start_server(port_var.get(), status_label, _label_to_ip(bind_var.get()))
 
     def _stop():
         _stop_server(status_label)
