@@ -65,3 +65,7 @@
 
 [2026-06-15 15:24:09] SCORE CHANGE: Belgium vs Egypt  0-0 → 0-1
 [2026-06-15 15:36:13] SCORE CHANGE: Belgium vs Egypt  0-1 → 1-1
+[2026-06-15 16:13:27] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+

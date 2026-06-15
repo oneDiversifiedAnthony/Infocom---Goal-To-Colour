@@ -100,6 +100,26 @@ def _load_version():
         return _bump_version()
 
 
+def _normalize_team_colours(teams):
+    """Strip colour entries down to [r, g, b] triples in place.
+
+    countries.json stores each colour as [r, g, b, "Colour Name"]. The rest of
+    the app treats colours as plain RGB triples (iterating per channel for sACN
+    output and goal flashing), so the trailing name must be dropped here at the
+    single load point. The name remains in the file on disk for the editor and
+    Excel export.
+    """
+    for team in teams.values():
+        cols = team.get("colours")
+        if not isinstance(cols, list):
+            continue
+        team["colours"] = [
+            [int(c[0]), int(c[1]), int(c[2])]
+            for c in cols
+            if isinstance(c, (list, tuple)) and len(c) >= 3
+        ]
+
+
 class App:
     def __init__(self):
         self.root = tk.Tk()
@@ -120,10 +140,16 @@ class App:
             self.db = json.load(f)
         with open(COUNTRIES_FILE, "r") as f:
             self.countries_db = json.load(f)
+        _normalize_team_colours(self.countries_db.get("teams", {}))  # why: drop the [r,g,b,name] colour name so consumers see plain RGB triples
         self.db["teams"] = self.countries_db["teams"]  # why: merge into one dict so all tabs share a single unified team lookup
 
         self._active_triggers = {}  # {country_name: (uni, ch, timer_id)}
         self._trigger_progress_timer = None
+
+        # Walk-the-triggers test state (steps universe 2, channels 1-50)
+        self._walk_active = False
+        self._walk_timer = None
+        self._walk_channel = 1
 
         # why: status bar packed bottom-first so it stays anchored during window resize
         self.status_bar = StatusBar(self.root)
@@ -229,6 +255,7 @@ class App:
                 settings_nb, self._draw_swatches,
                 lambda: (self.team_colours, self.team_name),
                 self._set_raw_state,
+                toggle_walk_triggers=self._toggle_walk_triggers,
             )
 
         # Chases
@@ -522,6 +549,49 @@ class App:
         black = [[0, 0, 0]] * 3
         self._draw_swatches(black)
 
+    # ── Walk the triggers ────────────────────────────────────────────────
+    WALK_CHANNEL_COUNT = 50   # why: step channels 1-50 of the trigger universe
+    WALK_STEP_MS = 1000       # why: hold each channel high for 1 second
+
+    def _walk_step(self):
+        """Light one trigger channel at a time, advancing every second."""
+        if not self._walk_active:
+            return
+        # Zero the previously lit channel so only one is high at a time
+        prev = self._walk_channel - 1 if self._walk_channel > 1 else self.WALK_CHANNEL_COUNT
+        self.sacn.send_trigger(TRIGGER_UNIVERSE, prev, 0)
+        # Drive the current channel high
+        self.sacn.send_trigger(TRIGGER_UNIVERSE, self._walk_channel, DMX_MAX_VALUE)
+        self.status_bar.trigger_label.config(
+            text=f"Walking triggers — U{TRIGGER_UNIVERSE} ch {self._walk_channel}/{self.WALK_CHANNEL_COUNT}",
+            fg="#ff9800")
+        # Advance, wrapping back to 1 to loop forever
+        self._walk_channel += 1
+        if self._walk_channel > self.WALK_CHANNEL_COUNT:
+            self._walk_channel = 1
+        self._walk_timer = self.root.after(self.WALK_STEP_MS, self._walk_step)
+
+    def _stop_walk_triggers(self):
+        """Stop the walk and zero every channel it may have lit."""
+        self._walk_active = False
+        if self._walk_timer:
+            self.root.after_cancel(self._walk_timer)
+            self._walk_timer = None
+        for ch in range(1, self.WALK_CHANNEL_COUNT + 1):
+            self.sacn.send_trigger(TRIGGER_UNIVERSE, ch, 0)
+        self.status_bar.trigger_label.config(text="", fg=FG_DIM)
+
+    def _toggle_walk_triggers(self):
+        """Start or stop the trigger walk. Returns True if now running."""
+        if self._walk_active:
+            self._stop_walk_triggers()
+            return False
+        self._walk_active = True
+        self._walk_channel = 1
+        self._walk_step()
+        return True
+
     def _on_close(self):
+        self._stop_walk_triggers()
         self.sacn.stop()
         self.root.destroy()

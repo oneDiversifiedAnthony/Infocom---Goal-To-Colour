@@ -265,17 +265,19 @@ def _init_mixer(devicename=None):
         pygame.mixer.quit()
     except Exception:
         pass
-    kwargs = {"frequency": 44100, "size": -16, "channels": 2, "buffer": 1024}
+    kwargs = {"frequency": 48000, "size": -16, "channels": 2, "buffer": 1024}  # why: 48 kHz matches the Dante Virtual Soundcard clock (avoids resampling)
     if devicename:
         kwargs["devicename"] = devicename
     try:
         pygame.mixer.init(**kwargs)
+        pygame.mixer.set_num_channels(32)  # why: allow many sound sources to mix simultaneously (default is only 8)
         _current_mixer_device[0] = devicename
         return True
     except Exception:
         # Fall back to default if named device fails
         try:
-            pygame.mixer.init(frequency=44100, size=-16, channels=2, buffer=1024)
+            pygame.mixer.init(frequency=48000, size=-16, channels=2, buffer=1024)
+            pygame.mixer.set_num_channels(32)
             _current_mixer_device[0] = None
         except Exception:
             pass
@@ -309,20 +311,37 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                             takefocus=False)
     refresh_btn.pack(side="left")
 
-    # ── Audio device selector ──────────────────────────────────────────
-    device_frame = tk.Frame(toolbar)
-    device_frame.pack(side="right", padx=(12, 0))
-    tk.Label(device_frame, text="Output:", font=("Segoe UI", 9)).pack(side="left", padx=(0, 4))
+    # The master/anthem audio device selector now lives inside the National
+    # Anthem box (built below) per request — see "Anthem Output" there.
+
+    tk.Label(toolbar, text="Render:", font=("Segoe UI", 9)).pack(side="right", padx=(8, 4))
+    render_var = tk.StringVar(value="Medium")
+    render_menu = tk.OptionMenu(toolbar, render_var, "Fast", "Medium", "Detailed")
+    render_menu.config(font=("Segoe UI", 9), width=8)
+    render_menu.pack(side="right")
+
+    # ── Anthem channel ────────────────────────────────────────────────
+    anthem_frame = tk.LabelFrame(tab, text="National Anthem", font=("Segoe UI", 10, "bold"),
+                                  fg="#cc6600", padx=4, pady=2)
+    anthem_frame.pack(fill="x", padx=12, pady=(4, 4))
+
+    # ── Anthem output device selector ──────────────────────────────────
+    # This is the master pygame mixer device (e.g. the Dante Virtual Soundcard).
+    # The anthem plays on it, as do all sound cards set to "Default".
+    anthem_output_row = tk.Frame(anthem_frame)
+    anthem_output_row.pack(fill="x", pady=(0, 2))
+    tk.Label(anthem_output_row, text="Anthem Output:", font=("Segoe UI", 9),
+             fg="#cc6600").pack(side="left", padx=(4, 4))
 
     devices = _get_audio_devices()
     device_choices = ["System Default"] + devices
     current = saved_device if saved_device in devices else "System Default"
     device_var = tk.StringVar(value=current)
-    device_menu = tk.OptionMenu(device_frame, device_var, *device_choices)
+    device_menu = tk.OptionMenu(anthem_output_row, device_var, *device_choices)
     device_menu.config(font=("Segoe UI", 9), width=30)
     device_menu.pack(side="left")
 
-    device_status = tk.Label(device_frame, text="", font=("Segoe UI", 8), fg="#888888")
+    device_status = tk.Label(anthem_output_row, text="", font=("Segoe UI", 8), fg="#888888")
     device_status.pack(side="left", padx=(4, 0))
 
     def _apply_device(*_args):
@@ -338,17 +357,6 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
     device_var.trace_add("write", _apply_device)
     if saved_device:
         device_status.config(text=f"({current})", fg="#28a745")
-
-    tk.Label(toolbar, text="Render:", font=("Segoe UI", 9)).pack(side="right", padx=(8, 4))
-    render_var = tk.StringVar(value="Medium")
-    render_menu = tk.OptionMenu(toolbar, render_var, "Fast", "Medium", "Detailed")
-    render_menu.config(font=("Segoe UI", 9), width=8)
-    render_menu.pack(side="right")
-
-    # ── Anthem channel ────────────────────────────────────────────────
-    anthem_frame = tk.LabelFrame(tab, text="National Anthem", font=("Segoe UI", 10, "bold"),
-                                  fg="#cc6600", padx=4, pady=2)
-    anthem_frame.pack(fill="x", padx=12, pady=(4, 4))
 
     anthem_content = tk.Frame(anthem_frame)
     anthem_content.pack(fill="x")
@@ -1104,8 +1112,18 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             return sound_trimmed[0] if has_cue and sound_trimmed[0] else sound_obj[0]
 
         def _switch_device_if_needed():
-            """Switch mixer to this sound's assigned device. Reloads sounds if mixer changed."""
+            """Switch mixer to this sound's assigned device. Reloads sounds if mixer changed.
+
+            A card set to "Default" follows the globally-configured mixer device
+            (the toolbar selection / config.ini output_device). We must NOT reinit
+            the mixer in that case: reinitialising calls pygame.mixer.quit(), which
+            stops every other sound that is currently playing and also moves audio
+            off the configured Dante device. Only switch for an explicit per-card
+            device that actually differs from the current mixer.
+            """
             target = _get_target_device()
+            if target is None:
+                return  # follow the global mixer device; never reinit on Default
             if target == _current_mixer_device[0]:
                 return
             _ensure_device(target)

@@ -40,11 +40,13 @@ import random
 from src.constants import SWATCH_CANVAS_SIZE, RANDOM_CYCLE_INTERVAL_MS, DMX_MAX_VALUE
 
 
-def build_generator_tab(notebook, draw_swatches, get_state, set_state):
+def build_generator_tab(notebook, draw_swatches, get_state, set_state,
+                        toggle_walk_triggers=None):
     """Build the Colour Generator tab.
 
     get_state() -> (team_colours, team_name)
     set_state(team_colours, team_name)
+    toggle_walk_triggers() -> bool  (start/stop the universe-2 channel walk)
     """
     tab = tk.Frame(notebook)
     notebook.add(tab, text="Colour Generator")
@@ -134,6 +136,21 @@ def build_generator_tab(notebook, draw_swatches, get_state, set_state):
     tk.Button(tab, text="BLACKOUT", font=("Segoe UI", 12, "bold"),
               bg="#000000", fg="white", padx=30, pady=8,
               command=_blackout).pack(pady=(8, 10))
+
+    # Walk the triggers: step universe 2 channels 1-50, one per second, looping
+    if toggle_walk_triggers is not None:
+        walk_btn = tk.Button(tab, text="Walk the Triggers", font=("Segoe UI", 11, "bold"),
+                             bg="#cc6600", fg="white", padx=20, pady=6)
+
+        def _on_walk():
+            running = toggle_walk_triggers()
+            if running:
+                walk_btn.config(text="Stop Walking", bg="#cc0000")
+            else:
+                walk_btn.config(text="Walk the Triggers", bg="#cc6600")
+
+        walk_btn.config(command=_on_walk)
+        walk_btn.pack(pady=(0, 10))
 
     def _update_colour():
         team_colours, _ = get_state()

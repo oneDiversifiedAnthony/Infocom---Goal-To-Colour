@@ -4,7 +4,7 @@
     "cue_out": 0.62124,
     "gain_db": -0.5,
     "event": "Goal Away",
-    "output_device": "DVS Transmit  3-4 (Dante Virtual Soundcard)"
+    "output_device": "DVS Transmit  5-6 (Dante Virtual Soundcard)"
   },
   "SFX - Steamship horn.mp3": {
     "cue_in": 0.012277,
@@ -36,7 +36,8 @@
     "event": "Goal Home"
   },
   "SFX - FOG HORN.mp3": {
-    "output_device": "DVS Transmit  5-6 (Dante Virtual Soundcard)"
+    "output_device": "DVS Transmit  7-8 (Dante Virtual Soundcard)",
+    "event": "Goal"
   },
   "PreGame.mp3": {
     "output_device": "DVS Transmit 15-16 (Dante Virtual Soundcard)"

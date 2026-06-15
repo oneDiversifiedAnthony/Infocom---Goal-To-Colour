@@ -54,7 +54,9 @@ WHITE_THRESHOLD = 200
 
 def _dim_colour(rgb, factor=0.0):
     """Dim an RGB colour towards black by factor (0.0 = black, 1.0 = original)."""
-    return [int(v * factor) for v in rgb]
+    # why: colour entries may carry a trailing name ([r, g, b, "Name"]); only the
+    # first three channels are numeric, so guard against multiplying that string.
+    return [int(v * factor) for v in rgb[:3]]
 
 
 def _flash_off_colours(colours):
@@ -65,7 +67,7 @@ def _flash_off_colours(colours):
     """
     result = []
     for rgb in colours:
-        if all(v >= WHITE_THRESHOLD for v in rgb):
+        if all(v >= WHITE_THRESHOLD for v in rgb[:3]):
             # White-ish -> flash to black
             result.append([0, 0, 0])
         else:
