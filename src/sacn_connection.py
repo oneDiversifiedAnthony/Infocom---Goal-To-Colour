@@ -57,7 +57,7 @@ from src.constants import DMX_CHANNEL_COUNT, DMX_MAX_VALUE
 class SacnConnection:
     """Configurable sACN sender. Supports unicast (IP) or multicast."""
 
-    def __init__(self, destination_ip=None, source_name="ColourMockDevice"):
+    def __init__(self, destination_ip=None, source_name="ColourMockDevice", bind_address="0.0.0.0"):
         # Per-colour channel mapping: [{r, g, b, universe}, ...]
         self.channel_map = [
             {"r": 1, "g": 2, "b": 3, "universe": 1},
@@ -65,6 +65,10 @@ class SacnConnection:
             {"r": 7, "g": 8, "b": 9, "universe": 1},
         ]
         self.destination_ip = destination_ip
+        # why: binding the sender socket to a specific NIC's IP forces multicast (and
+        # unicast) egress out that interface -- essential on multi-NIC machines where the
+        # OS would otherwise pick the default-route NIC. "0.0.0.0" = let the OS choose.
+        self.bind_address = bind_address or "0.0.0.0"
         self.sender = None
         self.source_name = source_name
         self._cid_uuid = uuid.uuid4()  # why: UUID CID lets sACN receivers uniquely identify this source
@@ -75,7 +79,8 @@ class SacnConnection:
 
     def connect(self):
         self.stop()
-        self.sender = sacn.sACNsender(cid=tuple(self._cid_uuid.bytes), source_name=self.source_name)
+        self.sender = sacn.sACNsender(cid=tuple(self._cid_uuid.bytes), source_name=self.source_name,
+                                      bind_address=self.bind_address)
         self.sender.start()
         self._active_universes = set()
         # Collect all universes to activate (channel map + extras like triggers)
@@ -144,11 +149,13 @@ class SacnConnection:
             data[channel - 1] = value
         output.dmx_data = tuple(data)
 
-    def reconfigure(self, channel_map=None, destination_ip=None):
+    def reconfigure(self, channel_map=None, destination_ip=None, bind_address=None):
         if channel_map is not None:
             self.channel_map = channel_map
         if destination_ip is not None:
             self.destination_ip = destination_ip if destination_ip != "" else None
+        if bind_address is not None:
+            self.bind_address = bind_address if bind_address != "" else "0.0.0.0"
         self.connect()
 
     def stop(self):

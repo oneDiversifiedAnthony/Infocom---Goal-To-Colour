@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609174,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253023,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 72370,
-              "name": "Ecuador vs Curacao",
-              "starting_at": "2026-06-21 00:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 34",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782000000,
-              "participants": [
-                {
-                  "id": 18910,
-                  "sport_id": 1,
-                  "country_id": 7437,
-                  "venue_id": 331170,
-                  "gender": "male",
-                  "name": "Curacao",
-                  "short_code": "CUW",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
-                  "founded": null,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18573,
-                  "sport_id": 1,
-                  "country_id": 459,
-                  "venue_id": 1463,
-                  "gender": "male",
-                  "name": "Ecuador",
-                  "short_code": "ECU",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
-                  "founded": 1925,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 20:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -141,7 +63,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -194,11 +116,11 @@
               "group_id": 253023,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 21827,
               "name": "Germany vs Curacao",
               "starting_at": "2026-06-14 17:00:00",
-              "result_info": null,
+              "result_info": "Germany won after full-time.",
               "leg": "1/1",
               "details": "Match 10",
               "length": 90,
@@ -219,10 +141,10 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": true,
                     "position": 1
                   }
                 },
@@ -238,11 +160,178 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 25844947,
+                  "fixture_id": 19609158,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25844948,
+                  "fixture_id": 19609158,
+                  "type_id": 1,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25844949,
+                  "fixture_id": 19609158,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25844951,
+                  "fixture_id": 19609158,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25844946,
+                  "fixture_id": 19609158,
+                  "type_id": 1525,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 7,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25844950,
+                  "fixture_id": 19609158,
+                  "type_id": 2,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 7,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25854561,
+                  "fixture_id": 19609158,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25854560,
+                  "fixture_id": 19609158,
+                  "type_id": 48996,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609174,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 72370,
+              "name": "Ecuador vs Curacao",
+              "starting_at": "2026-06-21 00:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 34",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782000000,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 2
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18573,
+                  "sport_id": 1,
+                  "country_id": 459,
+                  "venue_id": 1463,
+                  "gender": "male",
+                  "name": "Ecuador",
+                  "short_code": "ECU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
                   }
                 }
               ],
@@ -315,7 +404,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -501,7 +590,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -663,7 +752,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -830,7 +919,7 @@
                   "founded": 1904,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 00:00:00",
+                  "last_played_at": "2026-06-14 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -849,7 +938,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1034,7 +1123,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1201,7 +1290,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1349,7 +1438,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1516,7 +1605,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1661,7 +1750,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1828,7 +1917,7 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1954,7 +2043,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781395604,
+        "current_timestamp": 1781480723,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1970,8 +2059,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3212,
-    "remaining": 2456,
+    "resets_in_seconds": 3590,
+    "remaining": 2487,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

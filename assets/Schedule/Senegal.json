@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609180,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253027,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 21826,
-              "name": "Norway vs Senegal",
-              "starting_at": "2026-06-23 00:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 41",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782172800,
-              "participants": [
-                {
-                  "id": 18578,
-                  "sport_id": 1,
-                  "country_id": 1578,
-                  "venue_id": 76,
-                  "gender": "male",
-                  "name": "Norway",
-                  "short_code": "NOR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18578.png",
-                  "founded": 1902,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18558,
-                  "sport_id": 1,
-                  "country_id": 200,
-                  "venue_id": 14382,
-                  "gender": "male",
-                  "name": "Senegal",
-                  "short_code": "SEN",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18558.png",
-                  "founded": 1960,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-09 23:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -223,7 +145,7 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": 2
+                    "position": 1
                   }
                 },
                 {
@@ -242,7 +164,85 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 3
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609180,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253027,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 21826,
+              "name": "Norway vs Senegal",
+              "starting_at": "2026-06-23 00:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 41",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782172800,
+              "participants": [
+                {
+                  "id": 18578,
+                  "sport_id": 1,
+                  "country_id": 1578,
+                  "venue_id": 76,
+                  "gender": "male",
+                  "name": "Norway",
+                  "short_code": "NOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18578.png",
+                  "founded": 1902,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18558,
+                  "sport_id": 1,
+                  "country_id": 200,
+                  "venue_id": 14382,
+                  "gender": "male",
+                  "name": "Senegal",
+                  "short_code": "SEN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18558.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 23:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
                   }
                 }
               ],
@@ -2016,7 +2016,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781205874,
+        "current_timestamp": 1781483420,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2032,8 +2032,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 343,
-    "remaining": 1932,
+    "resets_in_seconds": 893,
+    "remaining": 2448,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

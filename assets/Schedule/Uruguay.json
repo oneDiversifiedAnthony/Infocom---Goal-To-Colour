@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609178,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253026,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 78531,
-              "name": "Uruguay vs Cape Verde Islands",
-              "starting_at": "2026-06-21 22:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 37",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782079200,
-              "participants": [
-                {
-                  "id": 18823,
-                  "sport_id": 1,
-                  "country_id": 772,
-                  "venue_id": null,
-                  "gender": "male",
-                  "name": "Cape Verde Islands",
-                  "short_code": "CPV",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18823.png",
-                  "founded": 1982,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 15251,
-                  "sport_id": 1,
-                  "country_id": 158,
-                  "venue_id": 10900,
-                  "gender": "male",
-                  "name": "Uruguay",
-                  "short_code": "URU",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/15251.png",
-                  "founded": 1900,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-03-31 18:30:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -243,6 +165,84 @@
                     "location": "home",
                     "winner": null,
                     "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609178,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253026,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 78531,
+              "name": "Uruguay vs Cape Verde Islands",
+              "starting_at": "2026-06-21 22:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 37",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782079200,
+              "participants": [
+                {
+                  "id": 18823,
+                  "sport_id": 1,
+                  "country_id": 772,
+                  "venue_id": null,
+                  "gender": "male",
+                  "name": "Cape Verde Islands",
+                  "short_code": "CPV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18823.png",
+                  "founded": 1982,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 15251,
+                  "sport_id": 1,
+                  "country_id": 158,
+                  "venue_id": 10900,
+                  "gender": "male",
+                  "name": "Uruguay",
+                  "short_code": "URU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/15251.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-03-31 18:30:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
                   }
                 }
               ],
@@ -3148,7 +3148,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781395602,
+        "current_timestamp": 1781483423,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3164,8 +3164,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3214,
-    "remaining": 2458,
+    "resets_in_seconds": 890,
+    "remaining": 2445,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

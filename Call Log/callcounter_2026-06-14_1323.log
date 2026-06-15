@@ -1,0 +1,73 @@
+2026-06-14 13:23:08, tokens_remaining: 1851, call: events, phase: idle
+2026-06-14 13:23:08, EVENT: GOAL 6' Felix Nmecha (1-0) [Germany vs Curacao]
+2026-06-14 13:23:08, EVENT: GOAL 21' Livano Comenencia (1-1) [Germany vs Curacao]
+2026-06-14 13:23:08, EVENT: GOAL 38' Nico Schlotterbeck (2-1) [Germany vs Curacao]
+2026-06-14 13:23:08, EVENT: EVENT_16 45+5' Kai Havertz (3-1) [Germany vs Curacao]
+2026-06-14 13:23:08, EVENT: GOAL 47' Jamal Musiala (4-1) [Germany vs Curacao]
+2026-06-14 13:23:08, EVENT: SUBSTITUTION 46' Jeremy Antonisse [Germany vs Curacao]
+2026-06-14 13:23:08, STATE_CHANGE: Germany vs Curacao [— -> 2H]
+2026-06-14 13:23:08, tokens_remaining: 1850, call: scores, phase: playing
+2026-06-14 13:23:10, tokens_remaining: 1849, call: scores, phase: playing
+2026-06-14 13:23:11, tokens_remaining: 1848, call: scores, phase: playing
+2026-06-14 13:23:14, tokens_remaining: 1847, call: events, phase: idle
+2026-06-14 13:23:14, EVENT: GOAL 6' Felix Nmecha (1-0) [Germany vs Curacao]
+2026-06-14 13:23:14, EVENT: GOAL 21' Livano Comenencia (1-1) [Germany vs Curacao]
+2026-06-14 13:23:14, EVENT: GOAL 38' Nico Schlotterbeck (2-1) [Germany vs Curacao]
+2026-06-14 13:23:14, EVENT: EVENT_16 45+5' Kai Havertz (3-1) [Germany vs Curacao]
+2026-06-14 13:23:14, EVENT: GOAL 47' Jamal Musiala (4-1) [Germany vs Curacao]
+2026-06-14 13:23:14, EVENT: SUBSTITUTION 46' Jeremy Antonisse [Germany vs Curacao]
+2026-06-14 13:23:14, STATE_CHANGE: Germany vs Curacao [— -> 2H]
+2026-06-14 13:23:17, tokens_remaining: 1846, call: events, phase: idle
+2026-06-14 13:23:17, EVENT: GOAL 6' Felix Nmecha (1-0) [Germany vs Curacao]
+2026-06-14 13:23:17, EVENT: GOAL 21' Livano Comenencia (1-1) [Germany vs Curacao]
+2026-06-14 13:23:17, EVENT: GOAL 38' Nico Schlotterbeck (2-1) [Germany vs Curacao]
+2026-06-14 13:23:17, EVENT: EVENT_16 45+5' Kai Havertz (3-1) [Germany vs Curacao]
+2026-06-14 13:23:17, EVENT: GOAL 47' Jamal Musiala (4-1) [Germany vs Curacao]
+2026-06-14 13:23:17, EVENT: SUBSTITUTION 46' Jeremy Antonisse [Germany vs Curacao]
+2026-06-14 13:23:17, STATE_CHANGE: Germany vs Curacao [— -> 2H]
+2026-06-14 13:23:18, tokens_remaining: 1845, call: scores, phase: playing
+2026-06-14 13:23:19, tokens_remaining: 1844, call: events, phase: idle
+2026-06-14 13:23:19, EVENT: GOAL 6' Felix Nmecha (1-0) [Germany vs Curacao]
+2026-06-14 13:23:19, EVENT: GOAL 21' Livano Comenencia (1-1) [Germany vs Curacao]
+2026-06-14 13:23:19, EVENT: GOAL 38' Nico Schlotterbeck (2-1) [Germany vs Curacao]
+2026-06-14 13:23:19, EVENT: EVENT_16 45+5' Kai Havertz (3-1) [Germany vs Curacao]
+2026-06-14 13:23:19, EVENT: GOAL 47' Jamal Musiala (4-1) [Germany vs Curacao]
+2026-06-14 13:23:19, EVENT: SUBSTITUTION 46' Jeremy Antonisse [Germany vs Curacao]
+2026-06-14 13:23:19, STATE_CHANGE: Germany vs Curacao [— -> 2H]
+2026-06-14 13:23:21, tokens_remaining: 1843, call: scores, phase: playing
+2026-06-14 13:23:21, tokens_remaining: 1843, call: scores, phase: playing
+2026-06-14 13:23:22, tokens_remaining: 1843, call: scores, phase: playing
+2026-06-14 13:23:23, tokens_remaining: 1842, call: scores, phase: playing
+2026-06-14 13:23:24, tokens_remaining: 1841, call: scores, phase: playing
+2026-06-14 13:23:25, tokens_remaining: 1840, call: scores, phase: playing
+2026-06-14 13:23:25, tokens_remaining: 1840, call: scores, phase: playing
+2026-06-14 13:23:26, tokens_remaining: 1840, call: scores, phase: playing
+2026-06-14 13:23:27, tokens_remaining: 1839, call: scores, phase: playing
+2026-06-14 13:23:28, tokens_remaining: 1839, call: scores, phase: playing
+2026-06-14 13:23:29, tokens_remaining: 1838, call: scores, phase: playing
+2026-06-14 13:23:29, tokens_remaining: 1838, call: scores, phase: playing
+2026-06-14 13:23:30, tokens_remaining: 1838, call: scores, phase: playing
+2026-06-14 13:23:30, tokens_remaining: 1837, call: scores, phase: playing
+2026-06-14 13:23:32, tokens_remaining: 1836, call: events, phase: playing
+2026-06-14 13:23:32, tokens_remaining: 1837, call: scores, phase: playing
+2026-06-14 13:23:33, tokens_remaining: 1835, call: events, phase: playing
+2026-06-14 13:23:33, tokens_remaining: 1834, call: scores, phase: playing
+2026-06-14 13:23:35, tokens_remaining: 1834, call: scores, phase: playing
+2026-06-14 13:23:37, tokens_remaining: 1833, call: scores, phase: playing
+2026-06-14 13:23:37, tokens_remaining: 1833, call: scores, phase: playing
+2026-06-14 13:23:39, tokens_remaining: 1832, call: scores, phase: playing
+2026-06-14 13:23:39, tokens_remaining: 1832, call: scores, phase: playing
+2026-06-14 13:23:40, tokens_remaining: 1831, call: scores, phase: playing
+2026-06-14 13:23:40, tokens_remaining: 1831, call: scores, phase: playing
+2026-06-14 13:23:42, tokens_remaining: 1830, call: scores, phase: playing
+2026-06-14 13:23:42, tokens_remaining: 1830, call: scores, phase: playing
+2026-06-14 13:23:44, tokens_remaining: 1829, call: scores, phase: playing
+2026-06-14 13:23:45, tokens_remaining: 1829, call: scores, phase: playing
+2026-06-14 13:23:46, tokens_remaining: 1828, call: scores, phase: playing
+2026-06-14 13:23:46, tokens_remaining: 1828, call: scores, phase: playing
+2026-06-14 13:23:48, tokens_remaining: 1827, call: scores, phase: playing
+2026-06-14 13:23:48, tokens_remaining: 1827, call: scores, phase: playing
+2026-06-14 13:23:50, tokens_remaining: 1826, call: scores, phase: playing
+2026-06-14 13:23:50, tokens_remaining: 1826, call: scores, phase: playing
+2026-06-14 13:23:51, tokens_remaining: 1825, call: events, phase: playing
+2026-06-14 13:23:53, tokens_remaining: 1824, call: scores, phase: playing

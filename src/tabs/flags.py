@@ -47,8 +47,8 @@ from src.theme import BG, BG_LIGHT, FG  # why: import from theme instead of dupl
 from src.constants import DEFAULT_TEAM_COLOURS
 from src.svg_renderer import svg_to_image
 
-COLS = 7  # why: 7x7 grid accommodates up to 48 teams (including BLACKOUT) on one screen
-ROWS = 7
+COLS = 7  # why: fixed column count; row count is computed at build time to fit all teams
+ROWS = 7  # minimum row count (grid grows beyond this when there are more teams)
 FONT_SMALL = ("Segoe UI", 10, "bold")
 FONT_BIG = ("Segoe UI", 20, "bold")
 BG_BTN = BG_LIGHT  # why: button background uses the theme's lighter shade
@@ -74,9 +74,15 @@ def build_flags_tab(notebook, db, set_team_colours_cb):
     tab = tk.Frame(notebook)
     notebook.add(tab, text="Flags")
 
+    teams_sorted = sorted(db["teams"].keys())
+    total_buttons = len(teams_sorted) + 1  # why: +1 for the always-present BLACKOUT button
+    # why: grow rows to fit every button so none spill into unweighted cells (which would
+    # collapse to minimum height and clip their colour swatches). Ceiling division.
+    rows_needed = max(ROWS, -(-total_buttons // COLS))
+
     for c in range(COLS):
         tab.columnconfigure(c, weight=1, uniform="col")  # why: uniform weight ensures buttons scale equally with window
-    for r in range(ROWS):
+    for r in range(rows_needed):
         tab.rowconfigure(r, weight=1, uniform="row")
 
     button_frames = {}  # country name -> button Frame widget
@@ -85,7 +91,6 @@ def build_flags_tab(notebook, db, set_team_colours_cb):
         tab, 0, 0, "BLACKOUT",
         [[0, 0, 0], [0, 0, 0], [0, 0, 0]], set_team_colours_cb)
 
-    teams_sorted = sorted(db["teams"].keys())
     for idx, country in enumerate(teams_sorted):
         team_data = db["teams"][country]
         colours = team_data.get("colours", DEFAULT_TEAM_COLOURS)

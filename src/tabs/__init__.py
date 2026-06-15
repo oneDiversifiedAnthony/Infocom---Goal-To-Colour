@@ -24,7 +24,7 @@
 
 """Re-exports all tab builder functions so the main app can import them from a single location."""
 
-from src.tabs.sacn import build_sacn_tab
+from src.tabs.sacn import build_sacn_tab, build_sacn_manual_tab
 from src.tabs.generator import build_generator_tab
 from src.tabs.timeline import build_timeline_tab
 from src.tabs.flags import build_flags_tab

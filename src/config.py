@@ -16,7 +16,7 @@ APP_ROOT = _app_root()
 _CONFIG_PATH = os.path.join(APP_ROOT, "config.ini")
 
 _cfg = configparser.ConfigParser()
-_cfg.read(_CONFIG_PATH)
+_cfg.read(_CONFIG_PATH, encoding="utf-8-sig")
 
 SOUND_DIR = os.path.join(APP_ROOT, _cfg.get("paths", "sound_files", fallback="Sound Files"))
 ANTHEMS_DIR = os.path.join(SOUND_DIR, "Anthems")

@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609135,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253023,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 11542,
-              "name": "Germany vs C\u00f4te d'Ivoire",
-              "starting_at": "2026-06-20 20:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 33",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1781985600,
-              "participants": [
-                {
-                  "id": 18660,
-                  "sport_id": 1,
-                  "country_id": 11,
-                  "venue_id": 1944,
-                  "gender": "male",
-                  "name": "Germany",
-                  "short_code": "GER",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
-                  "founded": 1900,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18560,
-                  "sport_id": 1,
-                  "country_id": 23,
-                  "venue_id": 22001,
-                  "gender": "male",
-                  "name": "C\u00f4te d'Ivoire",
-                  "short_code": "CIV",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
-                  "founded": 1960,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-04 19:10:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -160,7 +82,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -194,11 +116,11 @@
               "group_id": 253023,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 21827,
               "name": "Germany vs Curacao",
               "starting_at": "2026-06-14 17:00:00",
-              "result_info": null,
+              "result_info": "Germany won after full-time.",
               "leg": "1/1",
               "details": "Match 10",
               "length": 90,
@@ -219,10 +141,10 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": true,
                     "position": 1
                   }
                 },
@@ -238,11 +160,178 @@
                   "founded": null,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
+                  "last_played_at": "2026-06-14 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 25844947,
+                  "fixture_id": 19609158,
+                  "type_id": 1525,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25844948,
+                  "fixture_id": 19609158,
+                  "type_id": 1,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25844949,
+                  "fixture_id": 19609158,
+                  "type_id": 1,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25844951,
+                  "fixture_id": 19609158,
+                  "type_id": 2,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25844946,
+                  "fixture_id": 19609158,
+                  "type_id": 1525,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 7,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25844950,
+                  "fixture_id": 19609158,
+                  "type_id": 2,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 7,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25854561,
+                  "fixture_id": 19609158,
+                  "type_id": 48996,
+                  "participant_id": 18910,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25854560,
+                  "fixture_id": 19609158,
+                  "type_id": 48996,
+                  "participant_id": 18660,
+                  "score": {
+                    "goals": 4,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609135,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11542,
+              "name": "Germany vs C\u00f4te d'Ivoire",
+              "starting_at": "2026-06-20 20:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 33",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781985600,
+              "participants": [
+                {
+                  "id": 18660,
+                  "sport_id": 1,
+                  "country_id": 11,
+                  "venue_id": 1944,
+                  "gender": "male",
+                  "name": "Germany",
+                  "short_code": "GER",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18660.png",
+                  "founded": 1900,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-14 17:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18560,
+                  "sport_id": 1,
+                  "country_id": 23,
+                  "venue_id": 22001,
+                  "gender": "male",
+                  "name": "C\u00f4te d'Ivoire",
+                  "short_code": "CIV",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18560.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 19:10:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 2
+                    "position": null
                   }
                 }
               ],
@@ -315,7 +404,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -501,7 +590,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -668,7 +757,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -849,7 +938,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -997,7 +1086,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1225,7 +1314,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1364,7 +1453,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781395599,
+        "current_timestamp": 1781480717,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1380,8 +1469,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3217,
-    "remaining": 2464,
+    "resets_in_seconds": 3596,
+    "remaining": 2495,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

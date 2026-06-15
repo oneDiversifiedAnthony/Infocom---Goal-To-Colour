@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609175,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253024,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 1583,
-              "name": "Tunisia vs Japan",
-              "starting_at": "2026-06-21 04:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 36",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782014400,
-              "participants": [
-                {
-                  "id": 18597,
-                  "sport_id": 1,
-                  "country_id": 479,
-                  "venue_id": 13533,
-                  "gender": "male",
-                  "name": "Japan",
-                  "short_code": "JPN",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
-                  "founded": 1921,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18554,
-                  "sport_id": 1,
-                  "country_id": 1439,
-                  "venue_id": 343603,
-                  "gender": "male",
-                  "name": "Tunisia",
-                  "short_code": "TUN",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
-                  "founded": 1957,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-06 13:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -160,7 +82,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -194,11 +116,11 @@
               "group_id": 253024,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 72372,
               "name": "Netherlands vs Japan",
               "starting_at": "2026-06-14 20:00:00",
-              "result_info": null,
+              "result_info": "Game ended in draw.",
               "leg": "1/1",
               "details": "Match 11",
               "length": 90,
@@ -219,10 +141,10 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": false,
                     "position": 1
                   }
                 },
@@ -238,11 +160,178 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 25859011,
+                  "fixture_id": 19609138,
+                  "type_id": 1,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25859013,
+                  "fixture_id": 19609138,
+                  "type_id": 2,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25866183,
+                  "fixture_id": 19609138,
+                  "type_id": 48996,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25866182,
+                  "fixture_id": 19609138,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25859010,
+                  "fixture_id": 19609138,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25859009,
+                  "fixture_id": 19609138,
+                  "type_id": 1525,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25859012,
+                  "fixture_id": 19609138,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25859008,
+                  "fixture_id": 19609138,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609175,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253024,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 1583,
+              "name": "Tunisia vs Japan",
+              "starting_at": "2026-06-21 04:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 36",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782014400,
+              "participants": [
+                {
+                  "id": 18597,
+                  "sport_id": 1,
+                  "country_id": 479,
+                  "venue_id": 13533,
+                  "gender": "male",
+                  "name": "Japan",
+                  "short_code": "JPN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/5/18597.png",
+                  "founded": 1921,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 2
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18554,
+                  "sport_id": 1,
+                  "country_id": 1439,
+                  "venue_id": 343603,
+                  "gender": "male",
+                  "name": "Tunisia",
+                  "short_code": "TUN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/26/18554.png",
+                  "founded": 1957,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 13:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
                   }
                 }
               ],
@@ -334,7 +423,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -501,7 +590,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -605,7 +694,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -772,7 +861,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -958,7 +1047,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1084,7 +1173,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1266,7 +1355,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1414,7 +1503,7 @@
                   "founded": 1961,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 19:00:00",
+                  "last_played_at": "2026-06-14 04:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1433,7 +1522,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1581,7 +1670,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1748,7 +1837,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1934,7 +2023,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2082,7 +2171,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2249,7 +2338,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -2416,7 +2505,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2583,7 +2672,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -2602,7 +2691,7 @@
                   "founded": 1961,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 19:00:00",
+                  "last_played_at": "2026-06-14 04:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -2769,7 +2858,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2936,7 +3025,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781395599,
+        "current_timestamp": 1781480718,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2952,8 +3041,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3217,
-    "remaining": 2463,
+    "resets_in_seconds": 3595,
+    "remaining": 2494,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

@@ -3,7 +3,8 @@
     "cue_in": 0.02701,
     "cue_out": 0.62124,
     "gain_db": -0.5,
-    "event": "Goal Away"
+    "event": "Goal Away",
+    "output_device": "DVS Transmit  3-4 (Dante Virtual Soundcard)"
   },
   "SFX - Steamship horn.mp3": {
     "cue_in": 0.012277,
@@ -31,10 +32,13 @@
     "gain_db": 7.5
   },
   "G-O-A-L Shout ( Andrés Cantor ).mp3": {
-    "output_device": "Speakers (Realtek(R) Audio)",
+    "output_device": "DVS Transmit  3-4 (Dante Virtual Soundcard)",
     "event": "Goal Home"
   },
   "SFX - FOG HORN.mp3": {
-    "output_device": "Speakers (Realtek(R) Audio)"
+    "output_device": "DVS Transmit  5-6 (Dante Virtual Soundcard)"
+  },
+  "PreGame.mp3": {
+    "output_device": "DVS Transmit 15-16 (Dante Virtual Soundcard)"
   }
 }

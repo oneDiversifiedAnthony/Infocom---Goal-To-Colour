@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609176,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253024,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 21827,
-              "name": "Netherlands vs Sweden",
-              "starting_at": "2026-06-20 17:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 35",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1781974800,
-              "participants": [
-                {
-                  "id": 18694,
-                  "sport_id": 1,
-                  "country_id": 38,
-                  "venue_id": 154,
-                  "gender": "male",
-                  "name": "Netherlands",
-                  "short_code": "NED",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
-                  "founded": 1889,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18564,
-                  "sport_id": 1,
-                  "country_id": 47,
-                  "venue_id": 1668,
-                  "gender": "male",
-                  "name": "Sweden",
-                  "short_code": "SWE",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18564.png",
-                  "founded": 1904,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-04 17:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -160,7 +82,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -194,11 +116,11 @@
               "group_id": 253024,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 72372,
               "name": "Netherlands vs Japan",
               "starting_at": "2026-06-14 20:00:00",
-              "result_info": null,
+              "result_info": "Game ended in draw.",
               "leg": "1/1",
               "details": "Match 11",
               "length": 90,
@@ -219,10 +141,10 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": false,
                     "position": 1
                   }
                 },
@@ -238,11 +160,178 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 25859011,
+                  "fixture_id": 19609138,
+                  "type_id": 1,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25859013,
+                  "fixture_id": 19609138,
+                  "type_id": 2,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25866183,
+                  "fixture_id": 19609138,
+                  "type_id": 48996,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25866182,
+                  "fixture_id": 19609138,
+                  "type_id": 48996,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25859010,
+                  "fixture_id": 19609138,
+                  "type_id": 1,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25859009,
+                  "fixture_id": 19609138,
+                  "type_id": 1525,
+                  "participant_id": 18597,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25859012,
+                  "fixture_id": 19609138,
+                  "type_id": 2,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25859008,
+                  "fixture_id": 19609138,
+                  "type_id": 1525,
+                  "participant_id": 18694,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609176,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253024,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 21827,
+              "name": "Netherlands vs Sweden",
+              "starting_at": "2026-06-20 17:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 35",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781974800,
+              "participants": [
+                {
+                  "id": 18694,
+                  "sport_id": 1,
+                  "country_id": 38,
+                  "venue_id": 154,
+                  "gender": "male",
+                  "name": "Netherlands",
+                  "short_code": "NED",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/6/18694.png",
+                  "founded": 1889,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-14 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18564,
+                  "sport_id": 1,
+                  "country_id": 47,
+                  "venue_id": 1668,
+                  "gender": "male",
+                  "name": "Sweden",
+                  "short_code": "SWE",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/4/18564.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-04 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 2
+                    "position": null
                   }
                 }
               ],
@@ -315,7 +404,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -482,7 +571,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -668,7 +757,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -849,7 +938,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -997,7 +1086,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1164,7 +1253,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1364,7 +1453,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1512,7 +1601,7 @@
                   "founded": 1889,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1670,7 +1759,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781395600,
+        "current_timestamp": 1781480718,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1686,8 +1775,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3216,
-    "remaining": 2462,
+    "resets_in_seconds": 3595,
+    "remaining": 2493,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

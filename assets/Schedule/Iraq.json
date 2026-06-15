@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609179,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253027,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 11556,
-              "name": "France vs Iraq",
-              "starting_at": "2026-06-22 21:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 42",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782162000,
-              "participants": [
-                {
-                  "id": 18600,
-                  "sport_id": 1,
-                  "country_id": 107,
-                  "venue_id": 156404,
-                  "gender": "male",
-                  "name": "Iraq",
-                  "short_code": "IRQ",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18600.png",
-                  "founded": 1948,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 01:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18647,
-                  "sport_id": 1,
-                  "country_id": 17,
-                  "venue_id": 6152,
-                  "gender": "male",
-                  "name": "France",
-                  "short_code": "FRA",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18647.png",
-                  "founded": 1919,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-08 19:10:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -208,25 +130,6 @@
               "starting_at_timestamp": 1781647200,
               "participants": [
                 {
-                  "id": 18600,
-                  "sport_id": 1,
-                  "country_id": 107,
-                  "venue_id": 156404,
-                  "gender": "male",
-                  "name": "Iraq",
-                  "short_code": "IRQ",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18600.png",
-                  "founded": 1948,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 01:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": 1
-                  }
-                },
-                {
                   "id": 18578,
                   "sport_id": 1,
                   "country_id": 1578,
@@ -243,6 +146,103 @@
                     "location": "away",
                     "winner": null,
                     "position": 4
+                  }
+                },
+                {
+                  "id": 18600,
+                  "sport_id": 1,
+                  "country_id": 107,
+                  "venue_id": 156404,
+                  "gender": "male",
+                  "name": "Iraq",
+                  "short_code": "IRQ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18600.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609179,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253027,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11556,
+              "name": "France vs Iraq",
+              "starting_at": "2026-06-22 21:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 42",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782162000,
+              "participants": [
+                {
+                  "id": 18600,
+                  "sport_id": 1,
+                  "country_id": 107,
+                  "venue_id": 156404,
+                  "gender": "male",
+                  "name": "Iraq",
+                  "short_code": "IRQ",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/8/18600.png",
+                  "founded": 1948,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18647,
+                  "sport_id": 1,
+                  "country_id": 17,
+                  "venue_id": 6152,
+                  "gender": "male",
+                  "name": "France",
+                  "short_code": "FRA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18647.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 19:10:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
                   }
                 }
               ],
@@ -1969,7 +1969,7 @@
                   "founded": 1933,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-04 01:00:00",
+                  "last_played_at": "2026-06-12 02:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -3138,7 +3138,7 @@
                   "founded": 1933,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-04 01:00:00",
+                  "last_played_at": "2026-06-12 02:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -3778,7 +3778,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781205863,
+        "current_timestamp": 1781483417,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3794,8 +3794,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 354,
-    "remaining": 1947,
+    "resets_in_seconds": 896,
+    "remaining": 2451,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

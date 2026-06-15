@@ -22,8 +22,12 @@
 # Use of this software constitutes acceptance of your confidentiality, IP protection,
 # and contractual obligations with oneDiversified.
 
-"""sACN Config tab -- IP entry, channel mapping grid, connect/disconnect, CID display,
-and live DMX fader banks for Universe 1 and Universe 2.
+"""sACN tabs.
+
+build_sacn_tab -- "sACN Config": IP entry, channel mapping grid, connect/disconnect,
+and CID display.
+build_sacn_manual_tab -- "sACN Manual": live DMX fader banks for Universe 1 (top) and
+Universe 2 (below) for manual channel control.
 
 Handles events:
     - Connect reads the channel map and destination IP, then starts sACN output.
@@ -37,24 +41,59 @@ Key design decisions:
       fixture patching across multiple universes.
     - on_connect callback allows the App to auto-switch to the Flags tab after connection.
     - Universe 1 faders are grouped as 3 lamps × RGB for clear fixture identification.
+    - The manual fader banks live on their own tab so the config tab stays compact;
+      Universe 1 stacks above Universe 2 (rather than side-by-side) so the 50-channel
+      Universe 2 bank gets the full tab width.
 """
 
 import tkinter as tk
 import socket
+import subprocess
 from src.theme import FG_DIM
 from src.constants import DMX_CHANNEL_COUNT
+from src.config import get_config, set_config
+
+
+def _get_interfaces():
+    """Return a list of (alias, ip) for up IPv4 interfaces on this machine.
+
+    Uses PowerShell's Get-NetIPAddress because socket.getaddrinfo(gethostname())
+    only reports the default-route NIC and misses the lighting/Dante NICs we need
+    to bind sACN multicast to.
+    """
+    results = []
+    try:
+        out = subprocess.run(
+            ["powershell", "-NoProfile", "-Command",
+             "Get-NetIPAddress -AddressFamily IPv4 | "
+             "Where-Object { $_.IPAddress -ne '127.0.0.1' } | "
+             "ForEach-Object { \"$($_.InterfaceAlias)|$($_.IPAddress)\" }"],
+            capture_output=True, text=True, timeout=8,
+            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+        )
+        for line in out.stdout.splitlines():
+            line = line.strip()
+            if "|" in line:
+                alias, ip = line.split("|", 1)
+                alias, ip = alias.strip(), ip.strip()
+                if ip and not any(ip == r[1] for r in results):
+                    results.append((alias, ip))
+    except Exception:
+        pass
+    if not results:  # why: fall back to the limited socket method if PowerShell is unavailable
+        try:
+            for info in socket.getaddrinfo(socket.gethostname(), None, socket.AF_INET):
+                ip = info[4][0]
+                if not any(ip == r[1] for r in results):
+                    results.append(("", ip))
+        except socket.gaierror:
+            pass
+    return results
 
 
 def _get_local_ips():
-    """Return a list of local IP addresses on this machine."""
-    ips = []
-    try:
-        for info in socket.getaddrinfo(socket.gethostname(), None, socket.AF_INET):
-            addr = info[4][0]
-            if addr not in ips:
-                ips.append(addr)
-    except socket.gaierror:
-        pass
+    """Return a list of local IP address strings on this machine."""
+    ips = [ip for _alias, ip in _get_interfaces()]
     if not ips:
         ips.append("127.0.0.1")
     return ips
@@ -73,20 +112,65 @@ def _intensity_colour(value, channel_type):
     return f"#{v:02x}{v:02x}{v:02x}"
 
 
-def build_sacn_tab(notebook, sacn, countries_db=None, on_connect=None):
+def build_sacn_tab(notebook, sacn, on_connect=None):
     tab = tk.Frame(notebook)
     notebook.add(tab, text="sACN Config")
 
     tk.Label(tab, text="sACN Connection Settings",
              font=("Segoe UI", 14, "bold")).pack(pady=(20, 10))
 
+    AUTO_NIC = "Auto (default route)"
+
     # Destination IP
     ip_frame = tk.Frame(tab)
     ip_frame.pack(pady=6)
     tk.Label(ip_frame, text="Destination IP:", font=("Segoe UI", 11)).pack(side="left", padx=(0, 8))
-    ip_var = tk.StringVar(value="")  # why: blank defaults to multicast for zero-config setup
+    saved_dest = get_config("sacn", "destination_ip", fallback="")
+    ip_var = tk.StringVar(value=saved_dest)  # why: blank defaults to multicast for zero-config setup
     tk.Entry(ip_frame, textvariable=ip_var, font=("Consolas", 11), width=20).pack(side="left")
     tk.Label(ip_frame, text="(blank = multicast)", font=("Segoe UI", 9), fg="#888888").pack(side="left", padx=(8, 0))
+
+    # Output NIC -- which interface multicast/unicast egresses from (binds sACN socket)
+    nic_frame = tk.Frame(tab)
+    nic_frame.pack(pady=6)
+    tk.Label(nic_frame, text="Output NIC:", font=("Segoe UI", 11)).pack(side="left", padx=(0, 8))
+    saved_bind = get_config("sacn", "bind_address", fallback="")  # "" / "0.0.0.0" = Auto
+    nic_var = tk.StringVar(value=AUTO_NIC)
+    nic_label_to_ip = {AUTO_NIC: ""}
+
+    def _nic_label(alias, ip):
+        return f"{alias} — {ip}" if alias else ip
+
+    def _populate_nics():
+        """(Re)enumerate interfaces and rebuild the NIC dropdown, preserving selection."""
+        nic_label_to_ip.clear()
+        nic_label_to_ip[AUTO_NIC] = ""
+        for alias, ip in _get_interfaces():
+            nic_label_to_ip[_nic_label(alias, ip)] = ip
+        # why: keep a saved-but-currently-absent NIC selectable so a setup-time unplug
+        # doesn't silently revert sACN output to the wrong interface.
+        if saved_bind and saved_bind not in ("0.0.0.0",) and \
+                saved_bind not in nic_label_to_ip.values():
+            nic_label_to_ip[f"(saved) {saved_bind}"] = saved_bind
+
+        menu = nic_menu["menu"]
+        menu.delete(0, "end")
+        for label in nic_label_to_ip:
+            menu.add_command(label=label, command=lambda v=label: nic_var.set(v))
+
+        # Restore selection to the saved bind IP if present, else Auto
+        if saved_bind and saved_bind not in ("0.0.0.0",):
+            match = next((lbl for lbl, ip in nic_label_to_ip.items() if ip == saved_bind), None)
+            nic_var.set(match or AUTO_NIC)
+        else:
+            nic_var.set(AUTO_NIC)
+
+    nic_menu = tk.OptionMenu(nic_frame, nic_var, AUTO_NIC)
+    nic_menu.config(font=("Segoe UI", 10), width=34)
+    nic_menu.pack(side="left")
+    tk.Button(nic_frame, text="Refresh", font=("Segoe UI", 9), padx=8,
+              command=_populate_nics).pack(side="left", padx=(8, 0))
+    _populate_nics()
 
     # Channel mapping grid
     map_frame = tk.LabelFrame(tab, text="Channel Mapping", font=("Segoe UI", 10), padx=12, pady=8)
@@ -134,11 +218,17 @@ def build_sacn_tab(notebook, sacn, countries_db=None, on_connect=None):
             sacn_status.config(text="Invalid channel or universe value", fg="red")
             return
         ip = ip_var.get().strip()
-        sacn.reconfigure(channel_map=channel_map, destination_ip=ip or None)  # why: None triggers multicast mode
+        bind_ip = nic_label_to_ip.get(nic_var.get(), "")
+        # Persist so the startup auto-connect (gui.py) reuses the chosen NIC + destination
+        set_config("sacn", "bind_address", bind_ip)
+        set_config("sacn", "destination_ip", ip)
+        sacn.reconfigure(channel_map=channel_map, destination_ip=ip or None,
+                         bind_address=bind_ip)  # why: None dest triggers multicast; bind pins the NIC
         universes = sorted(set(m["universe"] for m in channel_map) | sacn.extra_universes)
         mode = f"unicast {ip}" if ip else "multicast"
+        nic_desc = f" via {bind_ip}" if bind_ip else ""
         sacn_status.config(
-            text=f"Connected - Universe(s) {', '.join(map(str, universes))}, {mode}", fg="green"
+            text=f"Connected - Universe(s) {', '.join(map(str, universes))}, {mode}{nic_desc}", fg="green"
         )
         if on_connect:
             on_connect()  # why: allows auto-switching to Flags tab after connection
@@ -182,10 +272,26 @@ def build_sacn_tab(notebook, sacn, countries_db=None, on_connect=None):
     for addr in _get_local_ips():
         tk.Label(ip_list_frame, text=addr, font=("Consolas", 10), fg=FG_DIM, anchor="w").pack(anchor="w")
 
+    return _connect
+
+
+def build_sacn_manual_tab(notebook, sacn, countries_db=None):
+    """Build the "sACN Manual" tab: live DMX fader banks for Universe 1 and 2.
+
+    Returns _update_country_name(name) so the app can highlight the active country's
+    fader label in Universe 2.
+    """
+    tab = tk.Frame(notebook)
+    notebook.add(tab, text="sACN Manual")
+
+    tk.Label(tab, text="Manual DMX Control",
+             font=("Segoe UI", 14, "bold")).pack(pady=(12, 4))
+
     # ── DMX Fader Banks ─────────────────────────────────────────────────
     FADERS_PER_UNI = 50
     POLL_MS = 100
 
+    # why: Universe 1 (3 lamps × RGB) stacks on top; Universe 2 (50 ch) fills below
     fader_container = tk.Frame(tab)
     fader_container.pack(fill="both", expand=True, padx=8, pady=(5, 8))
 
@@ -204,7 +310,9 @@ def build_sacn_tab(notebook, sacn, countries_db=None, on_connect=None):
         """
         frame = tk.LabelFrame(parent, text=f"Universe {universe}",
                                font=("Segoe UI", 10, "bold"), padx=4, pady=4)
-        frame.pack(side="left", fill="both", expand=expand, padx=(0, 4))
+        # why: stack vertically (Universe 1 on top, Universe 2 below) so the wide
+        # 50-channel Universe 2 bank can use the full tab width
+        frame.pack(side="top", fill="both", expand=expand, padx=4, pady=(0, 4))
 
         # Scrollable inner frame
         name_height = 80 if channel_names else 0
@@ -473,4 +581,4 @@ def build_sacn_tab(notebook, sacn, countries_db=None, on_connect=None):
     # Start polling
     tab.after(POLL_MS, _update_faders_from_output)
 
-    return _update_country_name, _connect
+    return _update_country_name

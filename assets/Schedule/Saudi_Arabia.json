@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609142,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253026,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 161191,
-              "name": "Spain vs Saudi Arabia",
-              "starting_at": "2026-06-21 16:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 38",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782057600,
-              "participants": [
-                {
-                  "id": 18710,
-                  "sport_id": 1,
-                  "country_id": 32,
-                  "venue_id": 2020,
-                  "gender": "male",
-                  "name": "Spain",
-                  "short_code": "ESP",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18710.png",
-                  "founded": 1913,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-09 02:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": 1
-                  }
-                },
-                {
-                  "id": 18562,
-                  "sport_id": 1,
-                  "country_id": 35376,
-                  "venue_id": 1503,
-                  "gender": "male",
-                  "name": "Saudi Arabia",
-                  "short_code": "KSA",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
-                  "founded": 1956,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-09 23:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": 3
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -241,6 +163,84 @@
                   "last_played_at": "2026-06-09 23:00:00",
                   "meta": {
                     "location": "home",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609142,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253026,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 161191,
+              "name": "Spain vs Saudi Arabia",
+              "starting_at": "2026-06-21 16:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 38",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782057600,
+              "participants": [
+                {
+                  "id": 18710,
+                  "sport_id": 1,
+                  "country_id": 32,
+                  "venue_id": 2020,
+                  "gender": "male",
+                  "name": "Spain",
+                  "short_code": "ESP",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/22/18710.png",
+                  "founded": 1913,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 02:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18562,
+                  "sport_id": 1,
+                  "country_id": 35376,
+                  "venue_id": 1503,
+                  "gender": "male",
+                  "name": "Saudi Arabia",
+                  "short_code": "KSA",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/2/18562.png",
+                  "founded": 1956,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-09 23:00:00",
+                  "meta": {
+                    "location": "away",
                     "winner": null,
                     "position": 3
                   }
@@ -1310,7 +1310,7 @@
                   "founded": 1961,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 19:00:00",
+                  "last_played_at": "2026-06-14 04:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1625,7 +1625,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -2438,7 +2438,7 @@
                   "founded": 1961,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 19:00:00",
+                  "last_played_at": "2026-06-14 04:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -2791,7 +2791,7 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-31 10:25:00",
+                  "last_played_at": "2026-06-14 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -3264,7 +3264,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781395601,
+        "current_timestamp": 1781483419,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3280,8 +3280,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3215,
-    "remaining": 2461,
+    "resets_in_seconds": 894,
+    "remaining": 2449,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

@@ -65,6 +65,7 @@ from src.constants import (
 )
 from src.tabs import (
     build_sacn_tab,
+    build_sacn_manual_tab,
     build_generator_tab,
     build_timeline_tab,
     build_flags_tab,
@@ -170,9 +171,12 @@ class App:
         settings_nb.pack(fill="both", expand=True)
 
         # sACN (first in settings)
-        self._update_sacn_country, self._sacn_connect = build_sacn_tab(
-            settings_nb, self.sacn, self.countries_db,
+        self._sacn_connect = build_sacn_tab(
+            settings_nb, self.sacn,
             on_connect=self._switch_to_api_live)
+        # sACN Manual -- live DMX fader banks on their own tab
+        self._update_sacn_country = build_sacn_manual_tab(
+            settings_nb, self.sacn, self.countries_db)
 
         # Web Server (second in settings)
         from src.tabs.timeline import _load_fixtures_from_schedule, _load_venues

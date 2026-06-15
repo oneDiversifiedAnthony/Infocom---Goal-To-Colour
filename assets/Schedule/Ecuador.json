@@ -17,84 +17,6 @@
       "aggregates": [],
       "rounds": [
         {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609174,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253023,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 72370,
-              "name": "Ecuador vs Curacao",
-              "starting_at": "2026-06-21 00:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 34",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782000000,
-              "participants": [
-                {
-                  "id": 18910,
-                  "sport_id": 1,
-                  "country_id": 7437,
-                  "venue_id": 331170,
-                  "gender": "male",
-                  "name": "Curacao",
-                  "short_code": "CUW",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
-                  "founded": null,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 00:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18573,
-                  "sport_id": 1,
-                  "country_id": 459,
-                  "venue_id": 1463,
-                  "gender": "male",
-                  "name": "Ecuador",
-                  "short_code": "ECU",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
-                  "founded": 1925,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 20:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
-        {
           "id": 395362,
           "sport_id": 1,
           "league_id": 732,
@@ -160,7 +82,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 18:30:00",
+                  "last_played_at": "2026-06-14 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -194,7 +116,7 @@
               "group_id": 253023,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 2,
               "venue_id": 11556,
               "name": "C\u00f4te d'Ivoire vs Ecuador",
               "starting_at": "2026-06-14 23:00:00",
@@ -223,7 +145,7 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 4
+                    "position": 3
                   }
                 },
                 {
@@ -242,7 +164,152 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": 3
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": [
+                {
+                  "id": 25868921,
+                  "fixture_id": 19609157,
+                  "type_id": 1525,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25868920,
+                  "fixture_id": 19609157,
+                  "type_id": 1525,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25868922,
+                  "fixture_id": 19609157,
+                  "type_id": 1,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25868923,
+                  "fixture_id": 19609157,
+                  "type_id": 1,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25868924,
+                  "fixture_id": 19609157,
+                  "type_id": 2,
+                  "participant_id": 18573,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25868925,
+                  "fixture_id": 19609157,
+                  "type_id": 2,
+                  "participant_id": 18560,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": false,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": false,
+          "fixtures": [
+            {
+              "id": 19609174,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253023,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 72370,
+              "name": "Ecuador vs Curacao",
+              "starting_at": "2026-06-21 00:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 34",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782000000,
+              "participants": [
+                {
+                  "id": 18910,
+                  "sport_id": 1,
+                  "country_id": 7437,
+                  "venue_id": 331170,
+                  "gender": "male",
+                  "name": "Curacao",
+                  "short_code": "CUW",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18910.png",
+                  "founded": null,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-14 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18573,
+                  "sport_id": 1,
+                  "country_id": 459,
+                  "venue_id": 1463,
+                  "gender": "male",
+                  "name": "Ecuador",
+                  "short_code": "ECU",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18573.png",
+                  "founded": 1925,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 20:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
                   }
                 }
               ],
@@ -3148,7 +3215,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781395598,
+        "current_timestamp": 1781480715,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3164,8 +3231,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3218,
-    "remaining": 2466,
+    "resets_in_seconds": 3598,
+    "remaining": 2497,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
