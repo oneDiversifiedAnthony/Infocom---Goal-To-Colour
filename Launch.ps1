@@ -32,8 +32,27 @@ $SacnPort         = 5568
 $WebPort          = 8080
 $HttpsPort        = 443
 $RestartDelaySec  = 2        # seconds to wait before restarting after a crash
-$PythonExe        = "python" # change to full path if needed, e.g. "C:\Python312\python.exe"
 $MouseWiggleSec   = 60       # wiggle mouse every N seconds to prevent screen lock
+
+# ── Resolve Python interpreter ─────────────────────────────────────────────────
+# Prefer the full path recorded in config.ini [dependencies] python_path. Falling
+# back to bare "python" is risky on Windows: it often resolves to the Microsoft
+# Store stub, which exits 0 immediately and makes the watchdog think the app
+# closed cleanly (so it never relaunches).
+function Get-PythonExe {
+    if (Test-Path $ConfigPath) {
+        $content = Get-Content $ConfigPath -Raw
+        if ($content -match '(?m)^\s*python_path\s*=\s*(.+?)\s*$') {
+            $p = $matches[1].Trim()
+            if ($p -and (Test-Path $p)) {
+                return $p
+            }
+        }
+    }
+    return "python"
+}
+
+$PythonExe = Get-PythonExe
 
 # ── Firewall Rules ───────────────────────────────────────────────────────────
 $Rules = @(
@@ -199,11 +218,11 @@ function Start-Watchdog {
         $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
         Write-Host "[$timestamp] Starting main.py ..." -ForegroundColor Green
 
-        $proc = Start-Process -FilePath $PythonExe -ArgumentList "main.py" `
-            -WorkingDirectory $AppDir -PassThru -NoNewWindow
-
-        $proc.WaitForExit()
-        $exitCode = $proc.ExitCode
+        # Call the interpreter directly and block until it exits. This is more
+        # reliable than Start-Process -PassThru, whose .ExitCode is frequently
+        # unpopulated; $LASTEXITCODE always reflects the real process exit code.
+        & $PythonExe "main.py"
+        $exitCode = $LASTEXITCODE
         $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
         if ($exitCode -eq 0) {

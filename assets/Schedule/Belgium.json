@@ -116,7 +116,7 @@
               "group_id": 253025,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 22,
               "venue_id": 1579,
               "name": "Belgium vs Egypt",
               "starting_at": "2026-06-15 19:00:00",
@@ -175,7 +175,7 @@
                   "type_id": 1525,
                   "participant_id": 18546,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "away"
                   },
                   "description": "CURRENT"
@@ -186,7 +186,7 @@
                   "type_id": 1525,
                   "participant_id": 18743,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "CURRENT"
@@ -197,7 +197,7 @@
                   "type_id": 1,
                   "participant_id": 18546,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "away"
                   },
                   "description": "1ST_HALF"
@@ -219,7 +219,7 @@
                   "type_id": 2,
                   "participant_id": 18546,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "away"
                   },
                   "description": "2ND_HALF"
@@ -230,10 +230,32 @@
                   "type_id": 2,
                   "participant_id": 18743,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "2ND_HALF"
+                },
+                {
+                  "id": 25956746,
+                  "fixture_id": 19609139,
+                  "type_id": 48996,
+                  "participant_id": 18743,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25956747,
+                  "fixture_id": 19609139,
+                  "type_id": 48996,
+                  "participant_id": 18546,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
                 }
               ]
             }
@@ -323,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781548800,
+        "current_timestamp": 1781555898,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -339,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3015,
-    "remaining": 2485,
+    "resets_in_seconds": 1997,
+    "remaining": 2429,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

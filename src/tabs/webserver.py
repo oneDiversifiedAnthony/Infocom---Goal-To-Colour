@@ -1212,6 +1212,8 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
     def _on_bind_change(*_args):
         new_ip = _label_to_ip(bind_var.get())
         set_config("webserver", "bind_ip", new_ip)
+        # Reflect the new binding in the Access URLs list
+        _update_urls()
         # Restart immediately if currently running so the change takes effect
         if _server_instance[0]:
             _start_server(port_var.get(), status_label, new_ip)
@@ -1239,6 +1241,10 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
               padx=20, pady=4, command=_stop).pack(side="left", padx=8)
 
     def _best_ip():
+        # If bound to a specific adapter, that's the only address it answers on.
+        bound = _label_to_ip(bind_var.get())
+        if bound not in ("", "0.0.0.0"):
+            return bound
         ips = _get_local_ips()
         for ip in ips:
             if ip != "127.0.0.1":
@@ -1369,8 +1375,24 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
 
     def _update_urls(*_args):
         p = port_var.get()
+        bound = _label_to_ip(bind_var.get())
+        all_ifaces = bound in ("", "0.0.0.0")
+        # Show every adapter when bound to all interfaces, otherwise just the
+        # one the server actually answers on.
+        any_shown = False
         for lbl, ip in url_labels:
-            lbl.config(text=f"http://{ip}:{p}/")
+            if all_ifaces or ip == bound:
+                lbl.config(text=f"http://{ip}:{p}/")
+                lbl.pack(anchor="w", before=api_label)
+                any_shown = True
+            else:
+                lbl.pack_forget()
+        # Fallback: if the bound IP has no matching label, show them all
+        # rather than an empty list.
+        if not any_shown:
+            for lbl, ip in url_labels:
+                lbl.config(text=f"http://{ip}:{p}/")
+                lbl.pack(anchor="w", before=api_label)
         api_label.config(text=f"JSON API: http://localhost:{p}/api/status    |    Testing: http://localhost:{p}/testing")
 
     port_var.trace_add("write", _update_urls)
