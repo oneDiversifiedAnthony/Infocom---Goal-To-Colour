@@ -228,6 +228,7 @@ def build_sacn_tab(notebook, sacn, on_connect=None):
             sacn_status.config(
                 text=f"Connection failed: {err}", fg="red"
             )
+            _set_button_states(False)
             return
         universes = sorted(set(m["universe"] for m in channel_map) | sacn.extra_universes)
         mode = f"unicast {ip}" if ip else "multicast"
@@ -235,23 +236,34 @@ def build_sacn_tab(notebook, sacn, on_connect=None):
         sacn_status.config(
             text=f"Connected - Universe(s) {', '.join(map(str, universes))}, {mode}{nic_desc}", fg="green"
         )
-        if on_connect:
-            on_connect()  # why: allows auto-switching to Flags tab after connection
+        _set_button_states(True)
+        # why: do not switch tabs on connect -- stay on the sACN Config tab
 
     def _disconnect():
         sacn.stop()
         sacn_status.config(text="Disconnected", fg="red")
+        _set_button_states(False)
 
     # Buttons
     btn_frame = tk.Frame(tab)
     btn_frame.pack(pady=15)
 
-    tk.Button(btn_frame, text="Connect", font=("Segoe UI", 11, "bold"),
-              bg="#28a745", fg="white", padx=20, pady=4,
-              command=_connect).pack(side="left", padx=8)
+    connect_btn = tk.Button(btn_frame, text="Connect", font=("Segoe UI", 11, "bold"),
+                            bg="#28a745", fg="white", padx=20, pady=4,
+                            command=_connect)
+    connect_btn.pack(side="left", padx=8)
 
-    tk.Button(btn_frame, text="Disconnect", font=("Segoe UI", 11),
-              padx=20, pady=4, command=_disconnect).pack(side="left", padx=8)
+    disconnect_btn = tk.Button(btn_frame, text="Disconnect", font=("Segoe UI", 11),
+                               padx=20, pady=4, command=_disconnect)
+    disconnect_btn.pack(side="left", padx=8)
+
+    def _set_button_states(connected):
+        # When connected, only Disconnect is actionable; Connect is disabled so it
+        # can't be re-entered (re-connecting while already connected used to crash).
+        connect_btn.config(state="disabled" if connected else "normal")
+        disconnect_btn.config(state="normal" if connected else "disabled")
+
+    _set_button_states(False)
 
     sacn_status.pack(pady=(5, 10))
 

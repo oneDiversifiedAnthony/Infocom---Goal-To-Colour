@@ -49,9 +49,27 @@ Design decisions:
 
 import sacn
 import atexit
+import socket
 import uuid
 
 from src.constants import DMX_CHANNEL_COUNT, DMX_MAX_VALUE
+
+
+# Work around a bug in the `sacn` library: when sACNsender construction fails
+# (e.g. an unbindable bind_address), __init__ raises before setting
+# `_sender_handler`, and the half-built object's __del__ -> stop() then raises
+# "AttributeError: 'sACNsender' object has no attribute '_sender_handler'".
+# Guard stop() so such an object is garbage-collected silently.
+_orig_sender_stop = sacn.sACNsender.stop
+
+
+def _safe_sender_stop(self):
+    if getattr(self, "_sender_handler", None) is None:
+        return
+    _orig_sender_stop(self)
+
+
+sacn.sACNsender.stop = _safe_sender_stop
 
 
 class SacnConnection:
@@ -85,6 +103,16 @@ class SacnConnection:
         leave a half-built sender behind).
         """
         self.stop()
+        # Pre-flight: confirm the bind address is actually assignable on this
+        # machine. This gives a clear error and avoids half-constructing a sender
+        # (whose __del__ would otherwise error) when the NIC is wrong/absent.
+        if self.bind_address and self.bind_address != "0.0.0.0":
+            try:
+                _probe = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+                _probe.bind((self.bind_address, 0))
+                _probe.close()
+            except OSError as e:
+                raise OSError(f"Cannot bind to NIC {self.bind_address}: {e}")
         try:
             self.sender = sacn.sACNsender(cid=tuple(self._cid_uuid.bytes), source_name=self.source_name,
                                           bind_address=self.bind_address)
