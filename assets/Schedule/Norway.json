@@ -116,7 +116,7 @@
               "group_id": 253027,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 3,
+              "state_id": 22,
               "venue_id": 160,
               "name": "Iraq vs Norway",
               "starting_at": "2026-06-16 22:00:00",
@@ -234,6 +234,28 @@
                     "participant": "away"
                   },
                   "description": "2ND_HALF"
+                },
+                {
+                  "id": 26001492,
+                  "fixture_id": 19609163,
+                  "type_id": 48996,
+                  "participant_id": 18600,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 26001493,
+                  "fixture_id": 19609163,
+                  "type_id": 48996,
+                  "participant_id": 18578,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
                 }
               ]
             }
@@ -323,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781650822,
+        "current_timestamp": 1781652298,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -339,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 2690,
-    "remaining": 2444,
+    "resets_in_seconds": 1214,
+    "remaining": 2430,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
