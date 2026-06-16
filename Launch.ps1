@@ -202,8 +202,13 @@ function Stop-MouseWiggle {
 }
 
 # ── Watchdog Loop ────────────────────────────────────────────────────────────
+$HeartbeatFile    = Join-Path $AppDir ".wcc_heartbeat"
+$HangTimeoutSec   = 20    # kill if the GUI heartbeat is older than this (app hung)
+$StartupGraceSec  = 120   # allow this long for first paint before expecting a heartbeat
+
 function Start-Watchdog {
     $crashCount = 0
+    $hangCount  = 0
 
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host " World Cup Colour - Watchdog" -ForegroundColor Cyan
@@ -211,6 +216,7 @@ function Start-Watchdog {
     Write-Host "  App dir : $AppDir" -ForegroundColor White
     Write-Host "  Python  : $PythonExe" -ForegroundColor White
     Write-Host "  Restart : always (show mode) -- ${RestartDelaySec}s after exit" -ForegroundColor White
+    Write-Host "  Watchdog: kills + relaunches if the GUI hangs >${HangTimeoutSec}s" -ForegroundColor White
     Write-Host ""
     Write-Host "  Press Ctrl+C in this window to stop the watchdog." -ForegroundColor Yellow
     Write-Host ""
@@ -219,21 +225,45 @@ function Start-Watchdog {
         $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
         Write-Host "[$timestamp] Starting main.py ..." -ForegroundColor Green
 
-        # Call the interpreter directly and block until it exits. This is more
-        # reliable than Start-Process -PassThru, whose .ExitCode is frequently
-        # unpopulated; $LASTEXITCODE always reflects the real process exit code.
-        & $PythonExe "main.py"
-        $exitCode = $LASTEXITCODE
-        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+        # Remove any stale heartbeat so a fresh launch is judged on its own
+        Remove-Item $HeartbeatFile -ErrorAction SilentlyContinue
 
-        # Show mode: always relaunch, whether the app closed cleanly or crashed.
-        # To stop the app for good, press Ctrl+C in this window.
-        if ($exitCode -eq 0) {
-            Write-Host "[$timestamp] Application exited (code 0)." -ForegroundColor Cyan
+        # Launch in the background so we can watch the heartbeat. A hung GUI thread
+        # stops touching the heartbeat file; we then kill and relaunch it. (A direct
+        # blocking call cannot recover from a hang -- the whole point of this.)
+        $proc = Start-Process -FilePath $PythonExe -ArgumentList "main.py" `
+            -WorkingDirectory $AppDir -PassThru -NoNewWindow
+        $launchedAt = Get-Date
+        $reason = "exited"
+
+        while (-not $proc.HasExited) {
+            Start-Sleep -Seconds 3
+            if ($proc.HasExited) { break }
+            if (Test-Path $HeartbeatFile) {
+                $age = ((Get-Date) - (Get-Item $HeartbeatFile).LastWriteTime).TotalSeconds
+                if ($age -gt $HangTimeoutSec) {
+                    $reason = "hung (heartbeat $([int]$age)s old)"
+                    try { $proc.Kill() } catch {}
+                    Start-Sleep -Milliseconds 500
+                    break
+                }
+            } else {
+                $sinceLaunch = ((Get-Date) - $launchedAt).TotalSeconds
+                if ($sinceLaunch -gt $StartupGraceSec) {
+                    $reason = "no heartbeat after $([int]$sinceLaunch)s"
+                    try { $proc.Kill() } catch {}
+                    Start-Sleep -Milliseconds 500
+                    break
+                }
+            }
+        }
+
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+        if ($reason -like 'hung*' -or $reason -like 'no heartbeat*') {
+            $hangCount++
+            Write-Host "[$timestamp] HANG #$hangCount -- $reason. Killed." -ForegroundColor Red
         } else {
-            $crashCount++
-            Write-Host ""
-            Write-Host "[$timestamp] CRASH #$crashCount  (exit code $exitCode)" -ForegroundColor Red
+            Write-Host "[$timestamp] Application $reason." -ForegroundColor Cyan
         }
         Write-Host "  Relaunching in $RestartDelaySec seconds ... (Ctrl+C to stop)" -ForegroundColor Yellow
         Start-Sleep -Seconds $RestartDelaySec

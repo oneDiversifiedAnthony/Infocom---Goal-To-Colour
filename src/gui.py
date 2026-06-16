@@ -59,7 +59,11 @@ from src.statusbar import StatusBar
 from src.sacn_connection import SacnConnection
 from src.goal import GoalController
 from src import scores
-from src.config import get_config, set_config
+from src.config import get_config, set_config, APP_ROOT
+
+# Heartbeat file the watchdog (Launch.ps1) polls; if it goes stale the GUI has
+# hung and the watchdog kills + relaunches the app.
+_HEARTBEAT_FILE = os.path.join(APP_ROOT, ".wcc_heartbeat")
 from src.constants import (
     TRIGGER_UNIVERSE, TRIGGER_PULSE_DURATION_MS, TRIGGER_PROGRESS_TICK_MS,
     DMX_MAX_VALUE, SWATCH_CANVAS_SIZE,
@@ -384,6 +388,7 @@ class App:
         self.root.protocol("WM_DELETE_WINDOW", self._on_close)
         # Start in blackout — no colours sent
         self.set_team_colours([[0, 0, 0], [0, 0, 0], [0, 0, 0]], "")
+        self._heartbeat()  # let the watchdog detect a GUI hang
         self.root.mainloop()
 
     def _on_live_score_change(self, scoring_team, home, away,
@@ -624,6 +629,16 @@ class App:
             return
         self._master_offset_ms = ms
         set_config("triggers", "master_offset_ms", str(ms))
+
+    def _heartbeat(self):
+        """Touch the heartbeat file from the GUI thread every 2s. If the GUI hangs,
+        this stops updating and Launch.ps1 kills + relaunches the app."""
+        try:
+            with open(_HEARTBEAT_FILE, "w") as f:
+                f.write("alive")
+        except Exception:
+            pass
+        self.root.after(2000, self._heartbeat)
 
     def _on_close(self):
         # Tear down every background output/thread so the process exits cleanly.
