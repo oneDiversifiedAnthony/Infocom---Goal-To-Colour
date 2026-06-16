@@ -63,7 +63,7 @@
                   "founded": 1895,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-15 19:00:00",
+                  "last_played_at": "2026-06-06 13:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -116,11 +116,11 @@
               "group_id": 253025,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 5,
+              "state_id": 22,
               "venue_id": 1579,
               "name": "Belgium vs Egypt",
               "starting_at": "2026-06-15 19:00:00",
-              "result_info": "Game ended in draw.",
+              "result_info": null,
               "leg": "1/1",
               "details": "Match 16",
               "length": 90,
@@ -141,10 +141,10 @@
                   "founded": 1921,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-15 19:00:00",
+                  "last_played_at": "2026-06-06 22:00:00",
                   "meta": {
                     "location": "away",
-                    "winner": false,
+                    "winner": null,
                     "position": 2
                   }
                 },
@@ -160,10 +160,10 @@
                   "founded": 1895,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-15 19:00:00",
+                  "last_played_at": "2026-06-06 13:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": false,
+                    "winner": null,
                     "position": 1
                   }
                 }
@@ -308,7 +308,7 @@
                   "founded": 1895,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-15 19:00:00",
+                  "last_played_at": "2026-06-06 13:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -345,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781567130,
+        "current_timestamp": 1781555835,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -361,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 1799,
-    "remaining": 2471,
+    "resets_in_seconds": 2060,
+    "remaining": 2443,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

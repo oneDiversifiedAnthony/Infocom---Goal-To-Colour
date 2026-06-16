@@ -59,35 +59,4 @@
   data: [1 items] -> [0 items]
   message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
 
-[2026-06-15 13:45:47] CHANGE DETECTED:
-  data: [0 items] -> [1 items]
-  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
-
-[2026-06-15 15:24:09] SCORE CHANGE: Belgium vs Egypt  0-0 → 0-1
-[2026-06-15 15:36:13] SCORE CHANGE: Belgium vs Egypt  0-1 → 1-1
-[2026-06-15 16:13:27] CHANGE DETECTED:
-  data: [1 items] -> [0 items]
-  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
-
-[2026-06-15 16:45:33] CHANGE DETECTED:
-  data: [0 items] -> [1 items]
-  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
-
-[2026-06-15 17:44:19] SCORE CHANGE: Saudi Arabia vs Uruguay  0-0 → 1-0
-[2026-06-15 18:45:38] SCORE CHANGE: Saudi Arabia vs Uruguay  1-0 → 1-1
-[2026-06-15 19:20:20] CHANGE DETECTED:
-  data: [1 items] -> [0 items]
-  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
-
-[2026-06-15 19:45:34] CHANGE DETECTED:
-  data: [0 items] -> [1 items]
-  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
-
-[2026-06-15 20:11:14] SCORE CHANGE: Iran vs New Zealand  0-0 → 0-1
-[2026-06-15 20:36:21] SCORE CHANGE: Iran vs New Zealand  0-1 → 1-1
-[2026-06-15 21:21:55] SCORE CHANGE: Iran vs New Zealand  1-1 → 1-2
-[2026-06-15 21:30:59] SCORE CHANGE: Iran vs New Zealand  1-2 → 2-2
-[2026-06-15 22:18:07] CHANGE DETECTED:
-  data: [1 items] -> [0 items]
-  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
-
+[2026-06-15 16:28:37] SCORE CHANGE: Belgium vs Egypt  0-1 → 1-1
