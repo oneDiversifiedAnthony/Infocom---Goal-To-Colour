@@ -597,9 +597,23 @@ class App:
 
     def _on_close(self):
         # Tear down every background output/thread so the process exits cleanly.
-        # The sACN sender thread is non-daemon, so leaving it running would keep
-        # the process alive and prevent the watchdog (Launch.ps1) from relaunching.
-        self._stop_walk_triggers()
+        # CRITICAL: some cleanup calls (sounddevice/PortAudio stream close, the
+        # non-daemon sACN sender thread join) can BLOCK. If they hang, the window
+        # never closes and the process never exits -- which, with the always-relaunch
+        # watchdog, traps the operator. So we arm a hard force-exit timer first:
+        # whichever finishes first (graceful cleanup or the timer) terminates the
+        # process. os._exit bypasses any wedged thread and the OS reclaims sockets,
+        # audio streams, etc.
+        import os
+        import threading
+        watchdog = threading.Timer(2.5, lambda: os._exit(0))
+        watchdog.daemon = True
+        watchdog.start()
+
+        try:
+            self._stop_walk_triggers()
+        except Exception:
+            pass
         try:
             self.sacn.stop()
         except Exception:
@@ -614,4 +628,8 @@ class App:
             audio_engine.shutdown()  # close all sounddevice streams + the decoder mixer
         except Exception:
             pass
-        self.root.destroy()
+        try:
+            self.root.destroy()
+        except Exception:
+            pass
+        os._exit(0)  # guarantee termination so the watchdog regains control

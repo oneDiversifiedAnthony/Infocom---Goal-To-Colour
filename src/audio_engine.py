@@ -191,9 +191,14 @@ class _DeviceStream:
             self.voices.append(voice)
 
     def close(self):
+        # abort() stops immediately without draining buffers (stop() can block);
+        # ignore_errors avoids raising if the device already went away.
         try:
-            self.stream.stop()
-            self.stream.close()
+            self.stream.abort(ignore_errors=True)
+        except Exception:
+            pass
+        try:
+            self.stream.close(ignore_errors=True)
         except Exception:
             pass
 
