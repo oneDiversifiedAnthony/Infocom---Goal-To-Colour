@@ -907,6 +907,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         channel_obj = [None]
         playing = [False]
         half_speed = [False]
+        looping_flag = [False]  # True while the current playback is looping
         waveform_data = [None]
         peak_cache = [None]  # cached high-res peaks (peaks_l, peaks_r)
         zoom_view = [0.0, 1.0]  # [view_start, view_end] as fraction 0.0-1.0
@@ -1256,6 +1257,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 sound_trimmed_half[0].stop()
             half_speed[0] = False
             loops = -1 if (loop_var.get() or free_run_var.get() or force_loop) else 0
+            looping_flag[0] = (loops == -1)
             play_start_time[0] = time.time()
             snd = _get_play_sound(False)
             channel_obj[0] = snd.play(loops=loops, device=_card_device(),
@@ -1285,6 +1287,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 sound_trimmed_half[0].stop()
             half_speed[0] = True
             loops = -1 if (loop_var.get() or free_run_var.get()) else 0
+            looping_flag[0] = (loops == -1)
             play_start_time[0] = time.time()
             snd = _get_play_sound(True)
             channel_obj[0] = snd.play(loops=loops, device=_card_device(),
@@ -1320,6 +1323,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 sound_trimmed_half[0].stop()
             playing[0] = False
             half_speed[0] = False
+            looping_flag[0] = False
             _stop_ending_blink()
             if fading[0]:
                 fading[0] = False
@@ -1523,6 +1527,22 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                     waveform_canvas.create_polygon(
                         x - tri, wf_h, x + tri, wf_h, x, wf_h - tri,
                         fill="#ff0000", outline="", tags="playhead")
+
+                # Second red marker: once a looping playhead reaches the loop
+                # point, show a marker at the loop point (where it loops back to).
+                if looping_flag[0] and loop_point[0] is not None and frac >= loop_point[0]:
+                    lp = loop_point[0]
+                    if vs < lp < ve and ve > vs:
+                        lx = int((lp - vs) / (ve - vs) * wf_w)
+                        tri = 6
+                        waveform_canvas.create_line(lx, tri, lx, wf_h - tri,
+                                                    fill="#ff5555", width=2, tags="playhead")
+                        waveform_canvas.create_polygon(
+                            lx - tri, 0, lx + tri, 0, lx, tri,
+                            fill="#ff5555", outline="", tags="playhead")
+                        waveform_canvas.create_polygon(
+                            lx - tri, wf_h, lx + tri, wf_h, lx, wf_h - tri,
+                            fill="#ff5555", outline="", tags="playhead")
 
             # Blink play button orange when ≤5 seconds remaining (non-looping only)
             if not loop_var.get() and length_s > 0:
