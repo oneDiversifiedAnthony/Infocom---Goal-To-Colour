@@ -784,8 +784,12 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             "half_time":   tk.BooleanVar(value=file_medits.get("loop_half_time", False)),
             "second_half": tk.BooleanVar(value=file_medits.get("loop_second_half", False)),
         }
+        # Free Run: pressing Play loops continuously, independent of game windows
+        free_run_var = tk.BooleanVar(value=file_medits.get("loop_free_run", False))
         win_frame = tk.LabelFrame(ctrl, text="Loop window", font=("Segoe UI", 7), fg="#aaaaaa")
         win_frame.pack(fill="x", pady=(2, 2))
+        tk.Checkbutton(win_frame, text="Free Run", variable=free_run_var,
+                       font=("Segoe UI", 7, "bold"), command=lambda: _save_cue()).pack(anchor="w")
         tk.Checkbutton(win_frame, text="1st Half", variable=loop_win_vars["first_half"],
                        font=("Segoe UI", 7), command=lambda: _save_cue()).pack(anchor="w")
         tk.Checkbutton(win_frame, text="Half Time", variable=loop_win_vars["half_time"],
@@ -807,6 +811,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             sound_trimmed[0] = None
             sound_trimmed_half[0] = None
             event_var.set("None")
+            free_run_var.set(False)
             for _v in loop_win_vars.values():
                 _v.set(False)
             if file_basename in medits[0]:
@@ -1114,8 +1119,9 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 entry["loop_point"] = round(loop_point[0], 6)
             else:
                 entry.pop("loop_point", None)
-            # Loop windows
-            for key, var in (("loop_first_half", loop_win_vars["first_half"]),
+            # Loop windows + free-run
+            for key, var in (("loop_free_run", free_run_var),
+                             ("loop_first_half", loop_win_vars["first_half"]),
                              ("loop_half_time", loop_win_vars["half_time"]),
                              ("loop_second_half", loop_win_vars["second_half"])):
                 if var.get():
@@ -1249,7 +1255,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if sound_trimmed_half[0]:
                 sound_trimmed_half[0].stop()
             half_speed[0] = False
-            loops = -1 if (loop_var.get() or force_loop) else 0
+            loops = -1 if (loop_var.get() or free_run_var.get() or force_loop) else 0
             play_start_time[0] = time.time()
             snd = _get_play_sound(False)
             channel_obj[0] = snd.play(loops=loops, device=_card_device(),
@@ -1278,7 +1284,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if sound_trimmed_half[0]:
                 sound_trimmed_half[0].stop()
             half_speed[0] = True
-            loops = -1 if loop_var.get() else 0
+            loops = -1 if (loop_var.get() or free_run_var.get()) else 0
             play_start_time[0] = time.time()
             snd = _get_play_sound(True)
             channel_obj[0] = snd.play(loops=loops, device=_card_device(),

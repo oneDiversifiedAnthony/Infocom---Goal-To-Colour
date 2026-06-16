@@ -1,7 +1,7 @@
 {
   "SFX - Siren.mp3": {
     "cue_in": 0.02701,
-    "cue_out": 0.62124,
+    "cue_out": 0.607976,
     "gain_db": -0.5,
     "event": "Goal Away",
     "output_device": "DVS Transmit  5-6 (Dante Virtual Soundcard)"
@@ -34,7 +34,11 @@
   "G-O-A-L Shout ( Andrés Cantor ).mp3": {
     "output_device": "DVS Transmit  3-4 (Dante Virtual Soundcard)",
     "event": "Goal Home",
-    "cue_out": 0.8924
+    "cue_out": 0.8924,
+    "loop_point": 0.812641,
+    "loop_first_half": true,
+    "loop_half_time": true,
+    "cue_in": 0.014296
   },
   "SFX - FOG HORN.mp3": {
     "output_device": "DVS Transmit  7-8 (Dante Virtual Soundcard)",

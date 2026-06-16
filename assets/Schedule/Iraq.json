@@ -116,7 +116,7 @@
               "group_id": 253027,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 2,
+              "state_id": 3,
               "venue_id": 160,
               "name": "Iraq vs Norway",
               "starting_at": "2026-06-16 22:00:00",
@@ -3675,7 +3675,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781649918,
+        "current_timestamp": 1781650815,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3691,8 +3691,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3594,
-    "remaining": 2492,
+    "resets_in_seconds": 2697,
+    "remaining": 2450,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
