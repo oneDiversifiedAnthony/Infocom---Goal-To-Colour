@@ -212,11 +212,17 @@ def _get_stream(device_index):
 
 
 def shutdown():
-    """Close all open output streams."""
+    """Close all open output streams and the decoder mixer."""
     with _streams_lock:
         for st in _streams.values():
             st.close()
         _streams.clear()
+    if _decoder_ready[0]:
+        try:
+            pygame.mixer.quit()
+        except Exception:
+            pass
+        _decoder_ready[0] = False
 
 
 atexit.register(shutdown)

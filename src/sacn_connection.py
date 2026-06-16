@@ -78,25 +78,34 @@ class SacnConnection:
         atexit.register(self.stop)  # why: ensures DMX outputs are zeroed even on crash or unhandled exception
 
     def connect(self):
-        """Start sACN sender. Raises OSError if bind_address is unavailable."""
+        """Start sACN sender. Raises if bind_address is unavailable.
+
+        Always leaves the object cleanly disconnected on any failure (so a failed
+        re-connect -- e.g. pressing Connect again while already connected -- can't
+        leave a half-built sender behind).
+        """
         self.stop()
-        self.sender = sacn.sACNsender(cid=tuple(self._cid_uuid.bytes), source_name=self.source_name,
-                                      bind_address=self.bind_address)
-        self.sender.start()
-        self._active_universes = set()
-        # Collect all universes to activate (channel map + extras like triggers)
-        all_universes = set(m["universe"] for m in self.channel_map)
-        all_universes.update(self.extra_universes)
-        for uni in sorted(all_universes):
-            if uni not in self._active_universes:
-                self.sender.activate_output(uni)
-                self.sender[uni].source_name = self.source_name
-                if self.destination_ip:
-                    self.sender[uni].multicast = False
-                    self.sender[uni].destination = self.destination_ip
-                else:
-                    self.sender[uni].multicast = True
-                self._active_universes.add(uni)
+        try:
+            self.sender = sacn.sACNsender(cid=tuple(self._cid_uuid.bytes), source_name=self.source_name,
+                                          bind_address=self.bind_address)
+            self.sender.start()
+            self._active_universes = set()
+            # Collect all universes to activate (channel map + extras like triggers)
+            all_universes = set(m["universe"] for m in self.channel_map)
+            all_universes.update(self.extra_universes)
+            for uni in sorted(all_universes):
+                if uni not in self._active_universes:
+                    self.sender.activate_output(uni)
+                    self.sender[uni].source_name = self.source_name
+                    if self.destination_ip:
+                        self.sender[uni].multicast = False
+                        self.sender[uni].destination = self.destination_ip
+                    else:
+                        self.sender[uni].multicast = True
+                    self._active_universes.add(uni)
+        except Exception:
+            self.stop()  # tear down any partially-built sender before propagating
+            raise
 
     def send_rgb(self, colours):
         """Send RGB colours using per-colour channel/universe mapping."""
@@ -161,7 +170,7 @@ class SacnConnection:
         try:
             self.connect()
             return True, ""
-        except OSError as e:
+        except Exception as e:  # why: never let a (re)connect failure crash the Tk button callback
             self.stop()
             return False, str(e)
 
@@ -175,7 +184,7 @@ class SacnConnection:
         try:
             self.connect()  # connect() stops the existing sender first, then re-activates outputs
             return True, ""
-        except OSError as e:
+        except Exception as e:  # why: never let a bounce failure crash the Tk button callback
             self.stop()
             return False, str(e)
 

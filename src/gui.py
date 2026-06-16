@@ -596,6 +596,22 @@ class App:
         return True
 
     def _on_close(self):
+        # Tear down every background output/thread so the process exits cleanly.
+        # The sACN sender thread is non-daemon, so leaving it running would keep
+        # the process alive and prevent the watchdog (Launch.ps1) from relaunching.
         self._stop_walk_triggers()
-        self.sacn.stop()
+        try:
+            self.sacn.stop()
+        except Exception:
+            pass
+        try:
+            if getattr(self, "osc_wave", None):
+                self.osc_wave.disconnect()  # stop VEGAS thread + close OSC socket
+        except Exception:
+            pass
+        try:
+            from src import audio_engine
+            audio_engine.shutdown()  # close all sounddevice streams + the decoder mixer
+        except Exception:
+            pass
         self.root.destroy()
