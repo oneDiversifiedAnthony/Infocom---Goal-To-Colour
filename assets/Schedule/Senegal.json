@@ -116,7 +116,7 @@
               "group_id": 253027,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 2,
               "venue_id": 21826,
               "name": "France vs Senegal",
               "starting_at": "2026-06-16 19:00:00",
@@ -2083,7 +2083,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781635390,
+        "current_timestamp": 1781637312,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2099,8 +2099,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 135,
-    "remaining": 2433,
+    "resets_in_seconds": 1851,
+    "remaining": 2461,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

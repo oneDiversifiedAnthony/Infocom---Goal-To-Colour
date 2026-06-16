@@ -37,9 +37,11 @@
   },
   "SFX - FOG HORN.mp3": {
     "output_device": "DVS Transmit  7-8 (Dante Virtual Soundcard)",
-    "event": "Goal"
+    "event": "Goal",
+    "cue_out": 0.850263
   },
   "PreGame.mp3": {
-    "output_device": "DVS Transmit 15-16 (Dante Virtual Soundcard)"
+    "output_device": "DVS Transmit 15-16 (Dante Virtual Soundcard)",
+    "cue_out": 0.943567
   }
 }
