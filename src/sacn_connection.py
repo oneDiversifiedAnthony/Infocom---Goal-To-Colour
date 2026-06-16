@@ -72,6 +72,24 @@ def _safe_sender_stop(self):
 sacn.sACNsender.stop = _safe_sender_stop
 
 
+# Make the sACN sender's socket thread a DAEMON. The library leaves it
+# non-daemon, so at interpreter shutdown Python's _thread._shutdown() (and the
+# atexit stop()) call self._thread.join() with no timeout -- which hangs on
+# Ctrl+C and forces a second Ctrl+C. Daemon threads are not joined at exit.
+try:
+    import threading as _threading
+    from sacn.sending.sender_socket_udp import SenderSocketUDP as _SenderSocketUDP
+
+    def _daemon_socket_start(self):
+        self._thread = _threading.Thread(target=self.send_loop, name="sacn_sender",
+                                         daemon=True)
+        self._thread.start()
+
+    _SenderSocketUDP.start = _daemon_socket_start
+except Exception:
+    pass
+
+
 class SacnConnection:
     """Configurable sACN sender. Supports unicast (IP) or multicast."""
 

@@ -908,9 +908,8 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         playing = [False]
         half_speed = [False]
         looping_flag = [False]  # True while the current playback is looping
-        overlap_channel = [None]  # the second, overlapping looping voice
-        overlap_start = [0.0]     # its start time (for the 2nd position marker)
-        overlap_timer = [None]    # scheduled start of the overlap
+        overlap_voices = []       # active overlap voices: [[channel, start_time], ...]
+        overlap_timer = [None]    # repeating overlap re-trigger timer
         waveform_data = [None]
         peak_cache = [None]  # cached high-res peaks (peaks_l, peaks_r)
         zoom_view = [0.0, 1.0]  # [view_start, view_end] as fraction 0.0-1.0
@@ -1244,48 +1243,68 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             """Output device for this card: its own if set, else the master/anthem device."""
             return _get_target_device() or _master_device[0]
 
+        MAX_OVERLAP = 6  # cap on overlapping layers so it can't run away
+
         def _clear_overlap():
-            """Stop and forget the overlapping voice and any pending start."""
+            """Stop all overlap voices and cancel the re-trigger timer."""
             if overlap_timer[0]:
                 try:
                     tab.after_cancel(overlap_timer[0])
                 except Exception:
                     pass
                 overlap_timer[0] = None
-            if overlap_channel[0]:
+            for v in overlap_voices:
                 try:
-                    overlap_channel[0].stop()
+                    v[0].stop()
                 except Exception:
                     pass
-                overlap_channel[0] = None
+            overlap_voices.clear()
 
-        def _start_overlap():
-            """Start the second voice from the loop point, overlapping the first."""
+        def _overlap_interval_ms():
+            """Time from the in-point to the loop point -- the re-trigger interval."""
+            if loop_point[0] is None or sound_obj[0] is None:
+                return 0
+            ci = cue_in[0] or 0.0
+            secs = (loop_point[0] - ci) * sound_obj[0].get_length() * (2 if half_speed[0] else 1)
+            return int(secs * 1000)
+
+        def _overlap_tick():
+            """Loop point reached -> start a new play from the [ in-point, layered."""
             overlap_timer[0] = None
-            if not playing[0] or loop_point[0] is None:
+            if not playing[0]:
                 return
+            # Drop finished voices, then cap the number of layers
+            overlap_voices[:] = [v for v in overlap_voices if v[0] and v[0].get_busy()]
+            while len(overlap_voices) >= MAX_OVERLAP:
+                old = overlap_voices.pop(0)
+                try:
+                    old[0].stop()
+                except Exception:
+                    pass
+            # New one-shot from the in-point (start of the cue-trimmed buffer)
             snd = _get_play_sound(half_speed[0])
-            if snd is None:
-                return
-            try:
-                ch = snd.play(loops=-1, device=_card_device(),
-                              loop_start=_loop_start_frames(half_speed[0]))
-            except Exception:
-                return
-            if ch:
-                ch.set_volume(_db_to_volume(gain_var.get()))
-                overlap_channel[0] = ch
-                overlap_start[0] = time.time()
-                active_channels.append(ch)
+            if snd is not None:
+                try:
+                    ch = snd.play(loops=0, device=_card_device())
+                except Exception:
+                    ch = None
+                if ch:
+                    ch.set_volume(_db_to_volume(gain_var.get()))
+                    overlap_voices.append([ch, time.time()])
+                    active_channels.append(ch)
+            interval = _overlap_interval_ms()
+            if interval > 0:
+                overlap_timer[0] = tab.after(interval, _overlap_tick)
 
         def _maybe_schedule_overlap():
-            """When looping with a loop point, schedule one overlapping voice so the
-            sound plays over top of itself (bounded to a single extra voice)."""
+            """When looping with a loop point, re-trigger a play from the in-point each
+            time the playhead reaches the loop point, layering the sound over itself."""
             _clear_overlap()
             if not looping_flag[0] or loop_point[0] is None:
                 return
-            delay_ms = int(_loop_start_frames(half_speed[0]) / audio_engine.SAMPLE_RATE * 1000)
-            overlap_timer[0] = tab.after(max(1, delay_ms), _start_overlap)
+            interval = _overlap_interval_ms()
+            if interval > 0:
+                overlap_timer[0] = tab.after(interval, _overlap_tick)
 
         def _play(force_loop=False):
             if sound_obj[0] is None:
@@ -1306,8 +1325,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             looping_flag[0] = (loops == -1)
             play_start_time[0] = time.time()
             snd = _get_play_sound(False)
-            channel_obj[0] = snd.play(loops=loops, device=_card_device(),
-                                      loop_start=_loop_start_frames(False))
+            channel_obj[0] = snd.play(loops=loops, device=_card_device())
             if channel_obj[0]:
                 channel_obj[0].set_volume(_db_to_volume(gain_var.get()))
                 active_channels.append(channel_obj[0])
@@ -1337,8 +1355,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             looping_flag[0] = (loops == -1)
             play_start_time[0] = time.time()
             snd = _get_play_sound(True)
-            channel_obj[0] = snd.play(loops=loops, device=_card_device(),
-                                      loop_start=_loop_start_frames(True))
+            channel_obj[0] = snd.play(loops=loops, device=_card_device())
             if channel_obj[0]:
                 channel_obj[0].set_volume(_db_to_volume(gain_var.get()))
                 active_channels.append(channel_obj[0])
@@ -1577,29 +1594,29 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                         x - tri, wf_h, x + tri, wf_h, x, wf_h - tri,
                         fill="#ff0000", outline="", tags="playhead")
 
-                # Second position marker: the overlapping voice playing the loop
-                # region over top of the first. Tracks its own position.
-                if (overlap_channel[0] is not None and loop_point[0] is not None
-                        and overlap_channel[0].get_busy() and sound_obj[0] is not None):
-                    region_start = loop_point[0]
+                # Overlap markers: each layered voice playing [in -> out] over the top
+                if overlap_voices and sound_obj[0] is not None:
+                    region_start = cue_in[0] or 0.0
                     region_end = cue_out[0] or 1.0
                     span = region_end - region_start
-                    full_len = sound_obj[0].get_length() * (2 if half_speed[0] else 1)
-                    region_dur = span * full_len
+                    region_dur = span * sound_obj[0].get_length() * (2 if half_speed[0] else 1)
                     if span > 0 and region_dur > 0:
-                        ov_elapsed = time.time() - overlap_start[0]
-                        ov_frac = region_start + (ov_elapsed % region_dur) / region_dur * span
-                        if vs < ov_frac < ve:
-                            ox = int((ov_frac - vs) / (ve - vs) * wf_w)
-                            tri = 6
-                            waveform_canvas.create_line(ox, tri, ox, wf_h - tri,
-                                                        fill="#ff7777", width=2, tags="playhead")
-                            waveform_canvas.create_polygon(
-                                ox - tri, 0, ox + tri, 0, ox, tri,
-                                fill="#ff7777", outline="", tags="playhead")
-                            waveform_canvas.create_polygon(
-                                ox - tri, wf_h, ox + tri, wf_h, ox, wf_h - tri,
-                                fill="#ff7777", outline="", tags="playhead")
+                        for v in overlap_voices:
+                            ov_elapsed = time.time() - v[1]
+                            if ov_elapsed >= region_dur:
+                                continue
+                            ov_frac = region_start + (ov_elapsed / region_dur) * span
+                            if vs < ov_frac < ve:
+                                ox = int((ov_frac - vs) / (ve - vs) * wf_w)
+                                tri = 6
+                                waveform_canvas.create_line(ox, tri, ox, wf_h - tri,
+                                                            fill="#ff7777", width=2, tags="playhead")
+                                waveform_canvas.create_polygon(
+                                    ox - tri, 0, ox + tri, 0, ox, tri,
+                                    fill="#ff7777", outline="", tags="playhead")
+                                waveform_canvas.create_polygon(
+                                    ox - tri, wf_h, ox + tri, wf_h, ox, wf_h - tri,
+                                    fill="#ff7777", outline="", tags="playhead")
 
             # Blink play button orange when ≤5 seconds remaining (non-looping only)
             if not loop_var.get() and length_s > 0:
