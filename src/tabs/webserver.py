@@ -837,11 +837,28 @@ setInterval(refreshData, 1000);
 
 def _build_api_json():
     """Return state as JSON for API consumers."""
-    return json.dumps({
+    data = {
         "colours": _state["colours"],
         "team_name": _state["team_name"],
         "goal_active": _state["goal_active"],
-    }, indent=2)
+        "live": False,
+        "home": "",
+        "away": "",
+        "home_score": None,
+        "away_score": None,
+    }
+    try:
+        live = scores.get_live_games()
+        if live:
+            _fid, info = live[0]  # primary live game (matches the "NOW PLAYING" panel)
+            data["live"] = True
+            data["home"] = info.get("home", "")
+            data["away"] = info.get("away", "")
+            data["home_score"] = info.get("home_score", 0)
+            data["away_score"] = info.get("away_score", 0)
+    except Exception:
+        pass
+    return json.dumps(data, indent=2)
 
 
 def _build_live_scores_html():
