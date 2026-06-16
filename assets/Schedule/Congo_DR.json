@@ -12,88 +12,10 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": null,
       "aggregates": [],
       "rounds": [
-        {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609182,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253029,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 181421,
-              "name": "Colombia vs Congo DR",
-              "starting_at": "2026-06-24 02:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 48",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782266400,
-              "participants": [
-                {
-                  "id": 18720,
-                  "sport_id": 1,
-                  "country_id": 353,
-                  "venue_id": 2035,
-                  "gender": "male",
-                  "name": "Colombia",
-                  "short_code": "COL",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
-                  "founded": 1924,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 23:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18552,
-                  "sport_id": 1,
-                  "country_id": 1320,
-                  "venue_id": 3695,
-                  "gender": "male",
-                  "name": "Congo DR",
-                  "short_code": "COD",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
-                  "founded": 1919,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-03 18:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
         {
           "id": 395362,
           "sport_id": 1,
@@ -180,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609166,
@@ -223,7 +145,7 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": null
+                    "position": 2
                   }
                 },
                 {
@@ -242,6 +164,84 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609182,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253029,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 181421,
+              "name": "Colombia vs Congo DR",
+              "starting_at": "2026-06-24 02:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 48",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782266400,
+              "participants": [
+                {
+                  "id": 18720,
+                  "sport_id": 1,
+                  "country_id": 353,
+                  "venue_id": 2035,
+                  "gender": "male",
+                  "name": "Colombia",
+                  "short_code": "COL",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/0/18720.png",
+                  "founded": 1924,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-03 18:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
                     "position": null
                   }
                 }
@@ -251,242 +251,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": 77478976,
-      "sport_id": 1,
-      "league_id": 729,
-      "season_id": 26682,
-      "type_id": 224,
-      "name": "Final",
-      "sort_order": 1,
-      "finished": true,
-      "is_current": false,
-      "starting_at": "2026-03-31",
-      "ending_at": "2026-04-01",
-      "games_in_current_week": false,
-      "tie_breaker_rule_id": null,
-      "fixtures": [
-        {
-          "id": 19603980,
-          "sport_id": 1,
-          "league_id": 729,
-          "season_id": 26682,
-          "stage_id": 77478976,
-          "group_id": null,
-          "aggregate_id": null,
-          "round_id": null,
-          "state_id": 7,
-          "venue_id": 181421,
-          "name": "Congo DR vs Jamaica",
-          "starting_at": "2026-03-31 21:00:00",
-          "result_info": "Congo DR won after extra-time.",
-          "leg": "1/1",
-          "details": null,
-          "length": 90,
-          "placeholder": false,
-          "has_odds": true,
-          "has_premium_odds": true,
-          "starting_at_timestamp": 1774990800,
-          "participants": [
-            {
-              "id": 18552,
-              "sport_id": 1,
-              "country_id": 1320,
-              "venue_id": 3695,
-              "gender": "male",
-              "name": "Congo DR",
-              "short_code": "COD",
-              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
-              "founded": 1919,
-              "type": "national",
-              "placeholder": false,
-              "last_played_at": "2026-06-03 18:00:00",
-              "meta": {
-                "location": "home",
-                "winner": true,
-                "position": 1
-              }
-            },
-            {
-              "id": 18771,
-              "sport_id": 1,
-              "country_id": 1640,
-              "venue_id": 11245,
-              "gender": "male",
-              "name": "Jamaica",
-              "short_code": "JAM",
-              "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18771.png",
-              "founded": 1910,
-              "type": "national",
-              "placeholder": false,
-              "last_played_at": "2026-05-27 18:30:00",
-              "meta": {
-                "location": "away",
-                "winner": false,
-                "position": 2
-              }
-            }
-          ],
-          "scores": [
-            {
-              "id": 19730684,
-              "fixture_id": 19603980,
-              "type_id": 1525,
-              "participant_id": 18552,
-              "score": {
-                "goals": 1,
-                "participant": "home"
-              },
-              "description": "CURRENT"
-            },
-            {
-              "id": 19730685,
-              "fixture_id": 19603980,
-              "type_id": 1525,
-              "participant_id": 18771,
-              "score": {
-                "goals": 0,
-                "participant": "away"
-              },
-              "description": "CURRENT"
-            },
-            {
-              "id": 19730686,
-              "fixture_id": 19603980,
-              "type_id": 1,
-              "participant_id": 18552,
-              "score": {
-                "goals": 0,
-                "participant": "home"
-              },
-              "description": "1ST_HALF"
-            },
-            {
-              "id": 19730687,
-              "fixture_id": 19603980,
-              "type_id": 1,
-              "participant_id": 18771,
-              "score": {
-                "goals": 0,
-                "participant": "away"
-              },
-              "description": "1ST_HALF"
-            },
-            {
-              "id": 19730688,
-              "fixture_id": 19603980,
-              "type_id": 2,
-              "participant_id": 18552,
-              "score": {
-                "goals": 0,
-                "participant": "home"
-              },
-              "description": "2ND_HALF"
-            },
-            {
-              "id": 19730689,
-              "fixture_id": 19603980,
-              "type_id": 2,
-              "participant_id": 18771,
-              "score": {
-                "goals": 0,
-                "participant": "away"
-              },
-              "description": "2ND_HALF"
-            },
-            {
-              "id": 19732776,
-              "fixture_id": 19603980,
-              "type_id": 48996,
-              "participant_id": 18552,
-              "score": {
-                "goals": 0,
-                "participant": "home"
-              },
-              "description": "2ND_HALF_ONLY"
-            },
-            {
-              "id": 19732777,
-              "fixture_id": 19603980,
-              "type_id": 48996,
-              "participant_id": 18771,
-              "score": {
-                "goals": 0,
-                "participant": "away"
-              },
-              "description": "2ND_HALF_ONLY"
-            },
-            {
-              "id": 19732821,
-              "fixture_id": 19603980,
-              "type_id": 5314,
-              "participant_id": 18771,
-              "score": {
-                "goals": 0,
-                "participant": "away"
-              },
-              "description": "ET_1ST_HALF"
-            },
-            {
-              "id": 19732832,
-              "fixture_id": 19603980,
-              "type_id": 39,
-              "participant_id": 18552,
-              "score": {
-                "goals": 1,
-                "participant": "home"
-              },
-              "description": "ET_2ND_HALF"
-            },
-            {
-              "id": 19732818,
-              "fixture_id": 19603980,
-              "type_id": 3,
-              "participant_id": 18552,
-              "score": {
-                "goals": 1,
-                "participant": "home"
-              },
-              "description": "ET"
-            },
-            {
-              "id": 19732820,
-              "fixture_id": 19603980,
-              "type_id": 5314,
-              "participant_id": 18552,
-              "score": {
-                "goals": 1,
-                "participant": "home"
-              },
-              "description": "ET_1ST_HALF"
-            },
-            {
-              "id": 19732833,
-              "fixture_id": 19603980,
-              "type_id": 39,
-              "participant_id": 18771,
-              "score": {
-                "goals": 0,
-                "participant": "away"
-              },
-              "description": "ET_2ND_HALF"
-            },
-            {
-              "id": 19732819,
-              "fixture_id": 19603980,
-              "type_id": 3,
-              "participant_id": 18771,
-              "score": {
-                "goals": 0,
-                "participant": "away"
-              },
-              "description": "ET"
-            }
-          ]
-        }
-      ],
-      "rounds": []
     },
     {
       "id": 77465184,
@@ -2663,7 +2427,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781205885,
+        "current_timestamp": 1781620237,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2679,8 +2443,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 332,
-    "remaining": 1918,
+    "resets_in_seconds": 3589,
+    "remaining": 2486,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

@@ -63,7 +63,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -116,11 +116,11 @@
               "group_id": 253025,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 343444,
               "name": "Iran vs New Zealand",
               "starting_at": "2026-06-16 01:00:00",
-              "result_info": null,
+              "result_info": "Game ended in draw.",
               "leg": "1/1",
               "details": "Match 15",
               "length": 90,
@@ -141,10 +141,10 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": false,
                     "position": 3
                   }
                 },
@@ -160,15 +160,104 @@
                   "founded": 1891,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
-                    "winner": null,
+                    "winner": false,
                     "position": 4
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 25970929,
+                  "fixture_id": 19609160,
+                  "type_id": 1525,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25970930,
+                  "fixture_id": 19609160,
+                  "type_id": 1,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25970928,
+                  "fixture_id": 19609160,
+                  "type_id": 1525,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 25970932,
+                  "fixture_id": 19609160,
+                  "type_id": 2,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25970933,
+                  "fixture_id": 19609160,
+                  "type_id": 2,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 2,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 25970931,
+                  "fixture_id": 19609160,
+                  "type_id": 1,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 25980270,
+                  "fixture_id": 19609160,
+                  "type_id": 48996,
+                  "participant_id": 18652,
+                  "score": {
+                    "goals": 1,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25980271,
+                  "fixture_id": 19609160,
+                  "type_id": 48996,
+                  "participant_id": 18613,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                }
+              ]
             }
           ]
         },
@@ -208,6 +297,25 @@
               "starting_at_timestamp": 1782068400,
               "participants": [
                 {
+                  "id": 18652,
+                  "sport_id": 1,
+                  "country_id": 488,
+                  "venue_id": 1984,
+                  "gender": "male",
+                  "name": "Iran",
+                  "short_code": "IRN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
+                  "founded": 1920,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-16 01:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 2
+                  }
+                },
+                {
                   "id": 18743,
                   "sport_id": 1,
                   "country_id": 556,
@@ -223,26 +331,7 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18652,
-                  "sport_id": 1,
-                  "country_id": 488,
-                  "venue_id": 1984,
-                  "gender": "male",
-                  "name": "Iran",
-                  "short_code": "IRN",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18652.png",
-                  "founded": 1920,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
+                    "position": 4
                   }
                 }
               ],
@@ -334,7 +423,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -482,7 +571,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -649,7 +738,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -835,7 +924,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -983,7 +1072,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1128,7 +1217,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1291,7 +1380,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1477,7 +1566,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1625,7 +1714,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1792,7 +1881,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1959,7 +2048,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2145,7 +2234,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2293,7 +2382,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -2460,7 +2549,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2627,7 +2716,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -2794,7 +2883,7 @@
                   "founded": 1920,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-05-29 15:30:00",
+                  "last_played_at": "2026-06-16 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -2980,7 +3069,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781562676,
+        "current_timestamp": 1781620232,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2996,8 +3085,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 2629,
-    "remaining": 2468,
+    "resets_in_seconds": 3594,
+    "remaining": 2492,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

@@ -116,7 +116,7 @@
               "group_id": 253026,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 2,
+              "state_id": 22,
               "venue_id": 78531,
               "name": "Saudi Arabia vs Uruguay",
               "starting_at": "2026-06-15 22:00:00",
@@ -175,7 +175,7 @@
                   "type_id": 1525,
                   "participant_id": 18562,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "CURRENT"
@@ -197,7 +197,7 @@
                   "type_id": 1,
                   "participant_id": 18562,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "1ST_HALF"
@@ -230,10 +230,32 @@
                   "type_id": 2,
                   "participant_id": 18562,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "2ND_HALF"
+                },
+                {
+                  "id": 25968662,
+                  "fixture_id": 19609161,
+                  "type_id": 48996,
+                  "participant_id": 18562,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 25968663,
+                  "fixture_id": 19609161,
+                  "type_id": 48996,
+                  "participant_id": 15251,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
                 }
               ]
             }
@@ -3331,7 +3353,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781562679,
+        "current_timestamp": 1781567134,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3347,7 +3369,7 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 2626,
+    "resets_in_seconds": 1795,
     "remaining": 2465,
     "requested_entity": "Stage"
   },

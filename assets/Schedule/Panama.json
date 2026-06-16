@@ -12,88 +12,10 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": null,
       "aggregates": [],
       "rounds": [
-        {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609151,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253030,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 11542,
-              "name": "Panama vs Croatia",
-              "starting_at": "2026-06-23 23:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 46",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782255600,
-              "participants": [
-                {
-                  "id": 18717,
-                  "sport_id": 1,
-                  "country_id": 65437,
-                  "venue_id": 6860,
-                  "gender": "male",
-                  "name": "Panama",
-                  "short_code": "PAN",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
-                  "founded": 1937,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-06 19:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18588,
-                  "sport_id": 1,
-                  "country_id": 266,
-                  "venue_id": 176,
-                  "gender": "male",
-                  "name": "Croatia",
-                  "short_code": "CRO",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
-                  "founded": 1912,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 18:45:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
         {
           "id": 395362,
           "sport_id": 1,
@@ -180,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609167,
@@ -223,7 +145,7 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": null
+                    "position": 4
                   }
                 },
                 {
@@ -241,6 +163,84 @@
                   "last_played_at": "2026-06-02 18:45:00",
                   "meta": {
                     "location": "home",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609151,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253030,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11542,
+              "name": "Panama vs Croatia",
+              "starting_at": "2026-06-23 23:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 46",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782255600,
+              "participants": [
+                {
+                  "id": 18717,
+                  "sport_id": 1,
+                  "country_id": 65437,
+                  "venue_id": 6860,
+                  "gender": "male",
+                  "name": "Panama",
+                  "short_code": "PAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/29/18717.png",
+                  "founded": 1937,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-06 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18588,
+                  "sport_id": 1,
+                  "country_id": 266,
+                  "venue_id": 176,
+                  "gender": "male",
+                  "name": "Croatia",
+                  "short_code": "CRO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18588.png",
+                  "founded": 1912,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 18:45:00",
+                  "meta": {
+                    "location": "away",
                     "winner": null,
                     "position": null
                   }
@@ -1976,7 +1976,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781205871,
+        "current_timestamp": 1781620234,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1992,8 +1992,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 346,
-    "remaining": 1937,
+    "resets_in_seconds": 3592,
+    "remaining": 2489,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

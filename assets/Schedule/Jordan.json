@@ -12,88 +12,10 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": null,
       "aggregates": [],
       "rounds": [
-        {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609181,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253028,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 11579,
-              "name": "Jordan vs Algeria",
-              "starting_at": "2026-06-23 03:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 44",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782183600,
-              "participants": [
-                {
-                  "id": 18620,
-                  "sport_id": 1,
-                  "country_id": 614,
-                  "venue_id": 343798,
-                  "gender": "male",
-                  "name": "Algeria",
-                  "short_code": "ALG",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
-                  "founded": 1962,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18559,
-                  "sport_id": 1,
-                  "country_id": 97374,
-                  "venue_id": 3522,
-                  "gender": "male",
-                  "name": "Jordan",
-                  "short_code": "JOR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
-                  "founded": 1949,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 23:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
         {
           "id": 395362,
           "sport_id": 1,
@@ -180,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609164,
@@ -223,7 +145,7 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": null
+                    "position": 3
                   }
                 },
                 {
@@ -241,6 +163,84 @@
                   "last_played_at": "2026-06-07 23:00:00",
                   "meta": {
                     "location": "away",
+                    "winner": null,
+                    "position": 4
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609181,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253028,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11579,
+              "name": "Jordan vs Algeria",
+              "starting_at": "2026-06-23 03:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 44",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782183600,
+              "participants": [
+                {
+                  "id": 18620,
+                  "sport_id": 1,
+                  "country_id": 614,
+                  "venue_id": 343798,
+                  "gender": "male",
+                  "name": "Algeria",
+                  "short_code": "ALG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/28/18620.png",
+                  "founded": 1962,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-11 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18559,
+                  "sport_id": 1,
+                  "country_id": 97374,
+                  "venue_id": 3522,
+                  "gender": "male",
+                  "name": "Jordan",
+                  "short_code": "JOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/31/18559.png",
+                  "founded": 1949,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-07 23:00:00",
+                  "meta": {
+                    "location": "home",
                     "winner": null,
                     "position": null
                   }
@@ -835,7 +835,7 @@
                   "founded": 1956,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-09 23:00:00",
+                  "last_played_at": "2026-06-15 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1128,7 +1128,7 @@
                   "founded": 1956,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-09 23:00:00",
+                  "last_played_at": "2026-06-15 22:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1625,7 +1625,7 @@
                   "founded": 1933,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-04 01:00:00",
+                  "last_played_at": "2026-06-12 02:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -2794,7 +2794,7 @@
                   "founded": 1933,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-04 01:00:00",
+                  "last_played_at": "2026-06-12 02:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2980,7 +2980,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781205888,
+        "current_timestamp": 1781620238,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2996,8 +2996,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 329,
-    "remaining": 1914,
+    "resets_in_seconds": 3588,
+    "remaining": 2485,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

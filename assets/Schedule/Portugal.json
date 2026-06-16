@@ -12,88 +12,10 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": null,
       "aggregates": [],
       "rounds": [
-        {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609148,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253029,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 21827,
-              "name": "Portugal vs Uzbekistan",
-              "starting_at": "2026-06-23 17:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 47",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782234000,
-              "participants": [
-                {
-                  "id": 18701,
-                  "sport_id": 1,
-                  "country_id": 20,
-                  "venue_id": 14455,
-                  "gender": "male",
-                  "name": "Portugal",
-                  "short_code": "POR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
-                  "founded": 1914,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18745,
-                  "sport_id": 1,
-                  "country_id": 2426,
-                  "venue_id": 211879,
-                  "gender": "male",
-                  "name": "Uzbekistan",
-                  "short_code": "UZB",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
-                  "founded": 1946,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-08 18:45:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
         {
           "id": 395362,
           "sport_id": 1,
@@ -180,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609166,
@@ -223,7 +145,7 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": null
+                    "position": 2
                   }
                 },
                 {
@@ -242,7 +164,85 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": null
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609148,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253029,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 21827,
+              "name": "Portugal vs Uzbekistan",
+              "starting_at": "2026-06-23 17:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 47",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782234000,
+              "participants": [
+                {
+                  "id": 18701,
+                  "sport_id": 1,
+                  "country_id": 20,
+                  "venue_id": 14455,
+                  "gender": "male",
+                  "name": "Portugal",
+                  "short_code": "POR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
+                  "founded": 1914,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 19:45:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18745,
+                  "sport_id": 1,
+                  "country_id": 2426,
+                  "venue_id": 211879,
+                  "gender": "male",
+                  "name": "Uzbekistan",
+                  "short_code": "UZB",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/25/18745.png",
+                  "founded": 1946,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-08 18:45:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 3
                   }
                 }
               ],
@@ -251,1120 +251,12 @@
           ]
         }
       ]
-    },
-    {
-      "id": 77464842,
-      "sport_id": 1,
-      "league_id": 720,
-      "season_id": 21887,
-      "type_id": 223,
-      "name": "Group Stage",
-      "sort_order": 1,
-      "finished": true,
-      "is_current": false,
-      "starting_at": "2025-03-21",
-      "ending_at": "2025-11-18",
-      "games_in_current_week": false,
-      "tie_breaker_rule_id": 1526,
-      "aggregates": [],
-      "rounds": [
-        {
-          "id": 362707,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "6",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-09-07",
-          "ending_at": "2025-09-09",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19427881,
-              "sport_id": 1,
-              "league_id": 720,
-              "season_id": 21887,
-              "stage_id": 77464842,
-              "group_id": 249216,
-              "aggregate_id": null,
-              "round_id": 362707,
-              "state_id": 5,
-              "venue_id": 338752,
-              "name": "Hungary vs Portugal",
-              "starting_at": "2025-09-09 18:45:00",
-              "result_info": "Portugal won after full-time.",
-              "leg": "1/1",
-              "details": null,
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1757443500,
-              "participants": [
-                {
-                  "id": 18701,
-                  "sport_id": 1,
-                  "country_id": 20,
-                  "venue_id": 14455,
-                  "gender": "male",
-                  "name": "Portugal",
-                  "short_code": "POR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
-                  "founded": 1914,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": true,
-                    "position": 1
-                  }
-                },
-                {
-                  "id": 18732,
-                  "sport_id": 1,
-                  "country_id": 674,
-                  "venue_id": 6767,
-                  "gender": "male",
-                  "name": "Hungary",
-                  "short_code": "HUN",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18732.png",
-                  "founded": 1901,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-09 17:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": false,
-                    "position": 3
-                  }
-                }
-              ],
-              "scores": [
-                {
-                  "id": 16926993,
-                  "fixture_id": 19427881,
-                  "type_id": 48996,
-                  "participant_id": 18732,
-                  "score": {
-                    "goals": 1,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 16926994,
-                  "fixture_id": 19427881,
-                  "type_id": 48996,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 2,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 16926442,
-                  "fixture_id": 19427881,
-                  "type_id": 1525,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 3,
-                    "participant": "away"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 16926450,
-                  "fixture_id": 19427881,
-                  "type_id": 1,
-                  "participant_id": 18732,
-                  "score": {
-                    "goals": 1,
-                    "participant": "home"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 16926452,
-                  "fixture_id": 19427881,
-                  "type_id": 2,
-                  "participant_id": 18732,
-                  "score": {
-                    "goals": 2,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 16926444,
-                  "fixture_id": 19427881,
-                  "type_id": 1525,
-                  "participant_id": 18732,
-                  "score": {
-                    "goals": 2,
-                    "participant": "home"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 16926447,
-                  "fixture_id": 19427881,
-                  "type_id": 1,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 1,
-                    "participant": "away"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 16926451,
-                  "fixture_id": 19427881,
-                  "type_id": 2,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 3,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 362709,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "8",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-10-12",
-          "ending_at": "2025-10-14",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19427929,
-              "sport_id": 1,
-              "league_id": 720,
-              "season_id": 21887,
-              "stage_id": 77464842,
-              "group_id": 249216,
-              "aggregate_id": null,
-              "round_id": 362709,
-              "state_id": 5,
-              "venue_id": 8323,
-              "name": "Portugal vs Hungary",
-              "starting_at": "2025-10-14 18:45:00",
-              "result_info": "Game ended in draw.",
-              "leg": "1/1",
-              "details": null,
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1760467500,
-              "participants": [
-                {
-                  "id": 18701,
-                  "sport_id": 1,
-                  "country_id": 20,
-                  "venue_id": 14455,
-                  "gender": "male",
-                  "name": "Portugal",
-                  "short_code": "POR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
-                  "founded": 1914,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": false,
-                    "position": 1
-                  }
-                },
-                {
-                  "id": 18732,
-                  "sport_id": 1,
-                  "country_id": 674,
-                  "venue_id": 6767,
-                  "gender": "male",
-                  "name": "Hungary",
-                  "short_code": "HUN",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18732.png",
-                  "founded": 1901,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-09 17:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": false,
-                    "position": 2
-                  }
-                }
-              ],
-              "scores": [
-                {
-                  "id": 17236519,
-                  "fixture_id": 19427929,
-                  "type_id": 2,
-                  "participant_id": 18732,
-                  "score": {
-                    "goals": 2,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 17236514,
-                  "fixture_id": 19427929,
-                  "type_id": 1525,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 2,
-                    "participant": "home"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 17236518,
-                  "fixture_id": 19427929,
-                  "type_id": 2,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 2,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 17236515,
-                  "fixture_id": 19427929,
-                  "type_id": 1525,
-                  "participant_id": 18732,
-                  "score": {
-                    "goals": 2,
-                    "participant": "away"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 17237485,
-                  "fixture_id": 19427929,
-                  "type_id": 48996,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 17236517,
-                  "fixture_id": 19427929,
-                  "type_id": 1,
-                  "participant_id": 18732,
-                  "score": {
-                    "goals": 1,
-                    "participant": "away"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 17236516,
-                  "fixture_id": 19427929,
-                  "type_id": 1,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 2,
-                    "participant": "home"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 17237486,
-                  "fixture_id": 19427929,
-                  "type_id": 48996,
-                  "participant_id": 18732,
-                  "score": {
-                    "goals": 1,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 362708,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "7",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-10-09",
-          "ending_at": "2025-10-11",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19427893,
-              "sport_id": 1,
-              "league_id": 720,
-              "season_id": 21887,
-              "stage_id": 77464842,
-              "group_id": 249216,
-              "aggregate_id": null,
-              "round_id": 362708,
-              "state_id": 5,
-              "venue_id": 8323,
-              "name": "Portugal vs Republic of Ireland",
-              "starting_at": "2025-10-11 18:45:00",
-              "result_info": "Portugal won after full-time.",
-              "leg": "1/1",
-              "details": null,
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1760208300,
-              "participants": [
-                {
-                  "id": 18701,
-                  "sport_id": 1,
-                  "country_id": 20,
-                  "venue_id": 14455,
-                  "gender": "male",
-                  "name": "Portugal",
-                  "short_code": "POR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
-                  "founded": 1914,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": true,
-                    "position": 1
-                  }
-                },
-                {
-                  "id": 18654,
-                  "sport_id": 1,
-                  "country_id": 455,
-                  "venue_id": 15035,
-                  "gender": "male",
-                  "name": "Republic of Ireland",
-                  "short_code": "IRL",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18654.png",
-                  "founded": 1921,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-05 23:30:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": false,
-                    "position": 4
-                  }
-                }
-              ],
-              "scores": [
-                {
-                  "id": 17222383,
-                  "fixture_id": 19427893,
-                  "type_id": 2,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 1,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 17222379,
-                  "fixture_id": 19427893,
-                  "type_id": 1525,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 1,
-                    "participant": "home"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 17222382,
-                  "fixture_id": 19427893,
-                  "type_id": 1,
-                  "participant_id": 18654,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 17222384,
-                  "fixture_id": 19427893,
-                  "type_id": 2,
-                  "participant_id": 18654,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 17223084,
-                  "fixture_id": 19427893,
-                  "type_id": 48996,
-                  "participant_id": 18654,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 17222381,
-                  "fixture_id": 19427893,
-                  "type_id": 1,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 17223083,
-                  "fixture_id": 19427893,
-                  "type_id": 48996,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 1,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 17222380,
-                  "fixture_id": 19427893,
-                  "type_id": 1525,
-                  "participant_id": 18654,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "CURRENT"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 362703,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "2",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-03-24",
-          "ending_at": "2025-03-25",
-          "games_in_current_week": false,
-          "fixtures": []
-        },
-        {
-          "id": 362710,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "9",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-11-13",
-          "ending_at": "2025-11-15",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19427932,
-              "sport_id": 1,
-              "league_id": 720,
-              "season_id": 21887,
-              "stage_id": 77464842,
-              "group_id": 249216,
-              "aggregate_id": null,
-              "round_id": 362710,
-              "state_id": 5,
-              "venue_id": 15035,
-              "name": "Republic of Ireland vs Portugal",
-              "starting_at": "2025-11-13 19:45:00",
-              "result_info": "Republic of Ireland won after full-time.",
-              "leg": "1/1",
-              "details": null,
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1763063100,
-              "participants": [
-                {
-                  "id": 18701,
-                  "sport_id": 1,
-                  "country_id": 20,
-                  "venue_id": 14455,
-                  "gender": "male",
-                  "name": "Portugal",
-                  "short_code": "POR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
-                  "founded": 1914,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": false,
-                    "position": 1
-                  }
-                },
-                {
-                  "id": 18654,
-                  "sport_id": 1,
-                  "country_id": 455,
-                  "venue_id": 15035,
-                  "gender": "male",
-                  "name": "Republic of Ireland",
-                  "short_code": "IRL",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/30/18654.png",
-                  "founded": 1921,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-05 23:30:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": true,
-                    "position": 3
-                  }
-                }
-              ],
-              "scores": [
-                {
-                  "id": 17438024,
-                  "fixture_id": 19427932,
-                  "type_id": 1525,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 17438025,
-                  "fixture_id": 19427932,
-                  "type_id": 1525,
-                  "participant_id": 18654,
-                  "score": {
-                    "goals": 2,
-                    "participant": "home"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 17438028,
-                  "fixture_id": 19427932,
-                  "type_id": 2,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 17438027,
-                  "fixture_id": 19427932,
-                  "type_id": 1,
-                  "participant_id": 18654,
-                  "score": {
-                    "goals": 2,
-                    "participant": "home"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 17438026,
-                  "fixture_id": 19427932,
-                  "type_id": 1,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 17438159,
-                  "fixture_id": 19427932,
-                  "type_id": 48996,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 17438158,
-                  "fixture_id": 19427932,
-                  "type_id": 48996,
-                  "participant_id": 18654,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 17438029,
-                  "fixture_id": 19427932,
-                  "type_id": 2,
-                  "participant_id": 18654,
-                  "score": {
-                    "goals": 2,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 362711,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "10",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-11-16",
-          "ending_at": "2025-11-18",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19427863,
-              "sport_id": 1,
-              "league_id": 720,
-              "season_id": 21887,
-              "stage_id": 77464842,
-              "group_id": 249216,
-              "aggregate_id": null,
-              "round_id": 362711,
-              "state_id": 5,
-              "venue_id": 165,
-              "name": "Portugal vs Armenia",
-              "starting_at": "2025-11-16 14:00:00",
-              "result_info": "Portugal won after full-time.",
-              "leg": "1/1",
-              "details": null,
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1763301600,
-              "participants": [
-                {
-                  "id": 18701,
-                  "sport_id": 1,
-                  "country_id": 20,
-                  "venue_id": 14455,
-                  "gender": "male",
-                  "name": "Portugal",
-                  "short_code": "POR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
-                  "founded": 1914,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": true,
-                    "position": 1
-                  }
-                },
-                {
-                  "id": 18639,
-                  "sport_id": 1,
-                  "country_id": 919,
-                  "venue_id": 3627,
-                  "gender": "male",
-                  "name": "Armenia",
-                  "short_code": "ARM",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/15/18639.png",
-                  "founded": 1992,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-09 15:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": false,
-                    "position": 4
-                  }
-                }
-              ],
-              "scores": [
-                {
-                  "id": 17455535,
-                  "fixture_id": 19427863,
-                  "type_id": 2,
-                  "participant_id": 18639,
-                  "score": {
-                    "goals": 1,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 17455532,
-                  "fixture_id": 19427863,
-                  "type_id": 1525,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 9,
-                    "participant": "home"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 17455531,
-                  "fixture_id": 19427863,
-                  "type_id": 1525,
-                  "participant_id": 18639,
-                  "score": {
-                    "goals": 1,
-                    "participant": "away"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 17455533,
-                  "fixture_id": 19427863,
-                  "type_id": 1,
-                  "participant_id": 18639,
-                  "score": {
-                    "goals": 1,
-                    "participant": "away"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 17455536,
-                  "fixture_id": 19427863,
-                  "type_id": 2,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 9,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 17455534,
-                  "fixture_id": 19427863,
-                  "type_id": 1,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 5,
-                    "participant": "home"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 17458176,
-                  "fixture_id": 19427863,
-                  "type_id": 48996,
-                  "participant_id": 18639,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 17458175,
-                  "fixture_id": 19427863,
-                  "type_id": 48996,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 4,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": 362705,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "4",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-06-09",
-          "ending_at": "2025-06-10",
-          "games_in_current_week": false,
-          "fixtures": []
-        },
-        {
-          "id": 362702,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "1",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-03-21",
-          "ending_at": "2025-03-22",
-          "games_in_current_week": false,
-          "fixtures": []
-        },
-        {
-          "id": 362704,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "3",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-06-06",
-          "ending_at": "2025-06-07",
-          "games_in_current_week": false,
-          "fixtures": []
-        },
-        {
-          "id": 362706,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464842,
-          "name": "5",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2025-09-04",
-          "ending_at": "2025-09-06",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19427843,
-              "sport_id": 1,
-              "league_id": 720,
-              "season_id": 21887,
-              "stage_id": 77464842,
-              "group_id": 249216,
-              "aggregate_id": null,
-              "round_id": 362706,
-              "state_id": 5,
-              "venue_id": 3627,
-              "name": "Armenia vs Portugal",
-              "starting_at": "2025-09-06 16:00:00",
-              "result_info": "Portugal won after full-time.",
-              "leg": "1/1",
-              "details": null,
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1757174400,
-              "participants": [
-                {
-                  "id": 18639,
-                  "sport_id": 1,
-                  "country_id": 919,
-                  "venue_id": 3627,
-                  "gender": "male",
-                  "name": "Armenia",
-                  "short_code": "ARM",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/15/18639.png",
-                  "founded": 1992,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-09 15:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": false,
-                    "position": 1
-                  }
-                },
-                {
-                  "id": 18701,
-                  "sport_id": 1,
-                  "country_id": 20,
-                  "venue_id": 14455,
-                  "gender": "male",
-                  "name": "Portugal",
-                  "short_code": "POR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/13/18701.png",
-                  "founded": 1914,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": true,
-                    "position": 3
-                  }
-                }
-              ],
-              "scores": [
-                {
-                  "id": 16907559,
-                  "fixture_id": 19427843,
-                  "type_id": 1,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 3,
-                    "participant": "away"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 16907557,
-                  "fixture_id": 19427843,
-                  "type_id": 1525,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 5,
-                    "participant": "away"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 16907561,
-                  "fixture_id": 19427843,
-                  "type_id": 2,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 5,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 16907558,
-                  "fixture_id": 19427843,
-                  "type_id": 1,
-                  "participant_id": 18639,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "1ST_HALF"
-                },
-                {
-                  "id": 16907556,
-                  "fixture_id": 19427843,
-                  "type_id": 1525,
-                  "participant_id": 18639,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "CURRENT"
-                },
-                {
-                  "id": 16910540,
-                  "fixture_id": 19427843,
-                  "type_id": 48996,
-                  "participant_id": 18701,
-                  "score": {
-                    "goals": 2,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                },
-                {
-                  "id": 16907560,
-                  "fixture_id": 19427843,
-                  "type_id": 2,
-                  "participant_id": 18639,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF"
-                },
-                {
-                  "id": 16910539,
-                  "fixture_id": 19427843,
-                  "type_id": 48996,
-                  "participant_id": 18639,
-                  "score": {
-                    "goals": 0,
-                    "participant": "home"
-                  },
-                  "description": "2ND_HALF_ONLY"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": 77464841,
-      "sport_id": 1,
-      "league_id": 720,
-      "season_id": 21887,
-      "type_id": 224,
-      "name": "Play-offs - Semi-finals",
-      "sort_order": 2,
-      "finished": true,
-      "is_current": false,
-      "starting_at": "2026-03-26",
-      "ending_at": "2026-03-26",
-      "games_in_current_week": false,
-      "tie_breaker_rule_id": null,
-      "aggregates": [],
-      "rounds": [
-        {
-          "id": 394752,
-          "sport_id": 1,
-          "league_id": 720,
-          "season_id": 21887,
-          "stage_id": 77464841,
-          "name": "28",
-          "finished": true,
-          "is_current": false,
-          "starting_at": "2026-03-26",
-          "ending_at": "2026-03-26",
-          "games_in_current_week": false,
-          "fixtures": []
-        }
-      ]
     }
   ],
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781205872,
+        "current_timestamp": 1781620235,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1380,8 +272,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 345,
-    "remaining": 1935,
+    "resets_in_seconds": 3591,
+    "remaining": 2488,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

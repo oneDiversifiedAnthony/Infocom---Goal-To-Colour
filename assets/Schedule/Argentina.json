@@ -12,88 +12,10 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": null,
       "aggregates": [],
       "rounds": [
-        {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609146,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253028,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 72372,
-              "name": "Argentina vs Austria",
-              "starting_at": "2026-06-22 17:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 43",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1782147600,
-              "participants": [
-                {
-                  "id": 18644,
-                  "sport_id": 1,
-                  "country_id": 44,
-                  "venue_id": 6569,
-                  "gender": "male",
-                  "name": "Argentina",
-                  "short_code": "ARG",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
-                  "founded": 1893,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-10 01:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18643,
-                  "sport_id": 1,
-                  "country_id": 143,
-                  "venue_id": 3871,
-                  "gender": "male",
-                  "name": "Austria",
-                  "short_code": "AUT",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18643.png",
-                  "founded": 1904,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-01 18:45:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
         {
           "id": 395362,
           "sport_id": 1,
@@ -180,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609145,
@@ -223,7 +145,7 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": null
+                    "position": 1
                   }
                 },
                 {
@@ -239,6 +161,84 @@
                   "type": "national",
                   "placeholder": false,
                   "last_played_at": "2026-06-11 00:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609146,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253028,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 72372,
+              "name": "Argentina vs Austria",
+              "starting_at": "2026-06-22 17:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 43",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1782147600,
+              "participants": [
+                {
+                  "id": 18644,
+                  "sport_id": 1,
+                  "country_id": 44,
+                  "venue_id": 6569,
+                  "gender": "male",
+                  "name": "Argentina",
+                  "short_code": "ARG",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/20/18644.png",
+                  "founded": 1893,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-10 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": null
+                  }
+                },
+                {
+                  "id": 18643,
+                  "sport_id": 1,
+                  "country_id": 143,
+                  "venue_id": 3871,
+                  "gender": "male",
+                  "name": "Austria",
+                  "short_code": "AUT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/19/18643.png",
+                  "founded": 1904,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-01 18:45:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -315,7 +315,7 @@
                   "founded": 1914,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 22:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -605,7 +605,7 @@
                   "founded": 1906,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-05 22:45:00",
+                  "last_played_at": "2026-06-13 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1125,7 +1125,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-03-31 18:30:00",
+                  "last_played_at": "2026-06-15 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1292,7 +1292,7 @@
                   "founded": 1914,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 22:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -1919,7 +1919,7 @@
                   "founded": 1925,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 20:00:00",
+                  "last_played_at": "2026-06-14 23:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -2105,7 +2105,7 @@
                   "founded": 1900,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-03-31 18:30:00",
+                  "last_played_at": "2026-06-15 22:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -2231,7 +2231,7 @@
                   "founded": 1906,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-05 22:45:00",
+                  "last_played_at": "2026-06-13 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -3063,7 +3063,7 @@
                   "founded": 1925,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 20:00:00",
+                  "last_played_at": "2026-06-14 23:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -3148,7 +3148,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781205849,
+        "current_timestamp": 1781620227,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3164,8 +3164,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 368,
-    "remaining": 1967,
+    "resets_in_seconds": 3599,
+    "remaining": 2498,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
