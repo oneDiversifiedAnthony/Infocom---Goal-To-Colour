@@ -4,7 +4,8 @@
 # Single launcher that:
 #   1. Self-elevates to Administrator (needed for firewall rules)
 #   2. Ensures firewall rules are in place (idempotent)
-#   3. Launches main.py in a watchdog loop that auto-restarts on crash
+#   3. Launches main.py in a watchdog loop that always relaunches (show mode);
+#      stop it with Ctrl+C in the watchdog window
 #
 # Double-click Launch.bat to run, or right-click this file > Run with PowerShell.
 # ============================================================================
@@ -209,9 +210,9 @@ function Start-Watchdog {
     Write-Host "========================================" -ForegroundColor Cyan
     Write-Host "  App dir : $AppDir" -ForegroundColor White
     Write-Host "  Python  : $PythonExe" -ForegroundColor White
-    Write-Host "  Restart : ${RestartDelaySec}s after crash" -ForegroundColor White
+    Write-Host "  Restart : always (show mode) -- ${RestartDelaySec}s after exit" -ForegroundColor White
     Write-Host ""
-    Write-Host "  Press Ctrl+C in this window to stop." -ForegroundColor Yellow
+    Write-Host "  Press Ctrl+C in this window to stop the watchdog." -ForegroundColor Yellow
     Write-Host ""
 
     while ($true) {
@@ -225,16 +226,16 @@ function Start-Watchdog {
         $exitCode = $LASTEXITCODE
         $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
+        # Show mode: always relaunch, whether the app closed cleanly or crashed.
+        # To stop the app for good, press Ctrl+C in this window.
         if ($exitCode -eq 0) {
-            Write-Host "[$timestamp] Application exited cleanly (code 0)." -ForegroundColor Cyan
-            Write-Host "  Clean exit -- not restarting." -ForegroundColor Cyan
-            break
+            Write-Host "[$timestamp] Application exited (code 0)." -ForegroundColor Cyan
+        } else {
+            $crashCount++
+            Write-Host ""
+            Write-Host "[$timestamp] CRASH #$crashCount  (exit code $exitCode)" -ForegroundColor Red
         }
-
-        $crashCount++
-        Write-Host ""
-        Write-Host "[$timestamp] CRASH #$crashCount  (exit code $exitCode)" -ForegroundColor Red
-        Write-Host "  Restarting in $RestartDelaySec seconds ..." -ForegroundColor Yellow
+        Write-Host "  Relaunching in $RestartDelaySec seconds ... (Ctrl+C to stop)" -ForegroundColor Yellow
         Start-Sleep -Seconds $RestartDelaySec
     }
 }
