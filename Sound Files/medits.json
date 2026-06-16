@@ -33,7 +33,8 @@
   },
   "G-O-A-L Shout ( Andrés Cantor ).mp3": {
     "output_device": "DVS Transmit  3-4 (Dante Virtual Soundcard)",
-    "event": "Goal Home"
+    "event": "Goal Home",
+    "cue_out": 0.8924
   },
   "SFX - FOG HORN.mp3": {
     "output_device": "DVS Transmit  7-8 (Dante Virtual Soundcard)",

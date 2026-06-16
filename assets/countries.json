@@ -535,7 +535,7 @@
       ],
       "trigger": {
         "universe": 2,
-        "channel": 17
+        "channel": 16
       },
       "anthem": "France National Anthem (Instrumental).mp3",
       "anthem_length": 79.3,
@@ -695,7 +695,7 @@
       ],
       "trigger": {
         "universe": 2,
-        "channel": 22
+        "channel": 8
       },
       "anthem": "Iraq National Anthem (Instrumental).mp3",
       "anthem_length": 104.0,
@@ -1175,7 +1175,7 @@
       ],
       "trigger": {
         "universe": 2,
-        "channel": 37
+        "channel": 34
       },
       "anthem": "Senegal National Anthem (Instrumental).mp3",
       "anthem_length": 55.8,
@@ -1770,7 +1770,7 @@
       ],
       "trigger": {
         "universe": 2,
-        "channel": 56
+        "channel": 47
       },
       "sportmonks_id": 18578,
       "short_code": "NOR",
