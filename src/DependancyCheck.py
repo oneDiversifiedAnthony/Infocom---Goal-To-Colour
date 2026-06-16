@@ -35,7 +35,6 @@ DEPENDENCIES = {
     "PIL": "Pillow",
     "numpy": "numpy",            # audio engine mixing
     "sounddevice": "sounddevice",  # multi-device audio output (PortAudio)
-    "pythonosc": "python-osc",   # OSC WAVE -- Yamaha DM7 fader control
 }
 
 
