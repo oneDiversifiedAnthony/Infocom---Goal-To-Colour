@@ -3,7 +3,7 @@
 #
 # Dependency installer:
 #   1. Installs Python 3.14 (if not already present) via winget
-#   2. Installs all pip dependencies (sacn, pygame-ce, Pillow, numpy, sounddevice)
+#   2. Installs all pip dependencies (sacn, pygame-ce, Pillow, numpy, sounddevice, python-osc)
 #   3. Updates config.ini [dependencies] section when complete
 #
 # Run via Launch.bat or: powershell -ExecutionPolicy Bypass -File Install.ps1
@@ -21,7 +21,8 @@ $PipPackages = @(
     @{ Import = "pygame";      Pip = "pygame-ce"   },
     @{ Import = "PIL";         Pip = "Pillow"      },
     @{ Import = "numpy";       Pip = "numpy"       },
-    @{ Import = "sounddevice"; Pip = "sounddevice" }
+    @{ Import = "sounddevice"; Pip = "sounddevice" },
+    @{ Import = "pythonosc";   Pip = "python-osc"  }
 )
 
 # ── Helpers ─────────────────────────────────────────────────────────────────

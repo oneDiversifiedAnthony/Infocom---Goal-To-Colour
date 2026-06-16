@@ -36,3 +36,4 @@ from src.tabs.api_schedule import build_schedule_subtab as build_api_schedule_ta
 from src.tabs.sounds import build_sounds_tab
 from src.tabs.webserver import build_webserver_tab
 from src.tabs.presentations import build_presentations_tab
+from src.tabs.osc_wave import build_osc_wave_tab

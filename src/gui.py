@@ -77,6 +77,7 @@ from src.tabs import (
     build_sounds_tab,
     build_webserver_tab,
     build_presentations_tab,
+    build_osc_wave_tab,
 )
 
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), os.pardir, "assets")
@@ -272,6 +273,9 @@ class App:
 
         # Presentations Schedule
         build_presentations_tab(settings_nb)
+
+        # OSC WAVE (Yamaha DM7 fader control)
+        self.osc_wave = build_osc_wave_tab(settings_nb)
 
         # ReadMe (in settings)
         build_readme_tab(settings_nb)
