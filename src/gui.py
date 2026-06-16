@@ -59,6 +59,7 @@ from src.statusbar import StatusBar
 from src.sacn_connection import SacnConnection
 from src.goal import GoalController
 from src import scores
+from src.config import get_config, set_config
 from src.constants import (
     TRIGGER_UNIVERSE, TRIGGER_PULSE_DURATION_MS, TRIGGER_PROGRESS_TICK_MS,
     DMX_MAX_VALUE, SWATCH_CANVAS_SIZE,
@@ -151,6 +152,12 @@ class App:
         self._walk_timer = None
         self._walk_channel = 1
 
+        # Master offset: delay (ms) applied to the goal lighting trigger
+        try:
+            self._master_offset_ms = max(0, int(get_config("triggers", "master_offset_ms", fallback="10")))
+        except (ValueError, TypeError):
+            self._master_offset_ms = 10
+
         # why: status bar packed bottom-first so it stays anchored during window resize
         self.status_bar = StatusBar(self.root)
 
@@ -199,7 +206,9 @@ class App:
         # sACN (first in settings)
         self._sacn_connect = build_sacn_tab(
             settings_nb, self.sacn,
-            on_connect=self._switch_to_api_live)
+            on_connect=self._switch_to_api_live,
+            get_master_offset=self.get_master_offset,
+            set_master_offset=self.set_master_offset)
         # sACN Manual -- live DMX fader banks on their own tab
         self._update_sacn_country = build_sacn_manual_tab(
             settings_nb, self.sacn, self.countries_db)
@@ -467,7 +476,12 @@ class App:
         self._update_sacn_country(country_name)
         self._highlight_flag(country_name)
         self.goal.trigger(colours, country_name)
-        self._fire_trigger(country_name)
+        # Master offset: delay the lighting trigger by the configured ms
+        offset = max(0, self._master_offset_ms)
+        if offset > 0:
+            self.root.after(offset, lambda n=country_name: self._fire_trigger(n))
+        else:
+            self._fire_trigger(country_name)
         # Fire the most specific event type available
         if is_home is True:
             self._fire_sound_event("Goal Home", country_name)
@@ -597,6 +611,19 @@ class App:
         self._walk_channel = 1
         self._walk_step()
         return True
+
+    # ── Master offset (goal lighting-trigger delay, ms) ──────────────────
+    def get_master_offset(self):
+        return self._master_offset_ms
+
+    def set_master_offset(self, ms):
+        """Set the goal-trigger delay (ms) and persist it to config.ini."""
+        try:
+            ms = max(0, int(ms))
+        except (ValueError, TypeError):
+            return
+        self._master_offset_ms = ms
+        set_config("triggers", "master_offset_ms", str(ms))
 
     def _on_close(self):
         # Tear down every background output/thread so the process exits cleanly.

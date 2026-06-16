@@ -112,7 +112,8 @@ def _intensity_colour(value, channel_type):
     return f"#{v:02x}{v:02x}{v:02x}"
 
 
-def build_sacn_tab(notebook, sacn, on_connect=None):
+def build_sacn_tab(notebook, sacn, on_connect=None,
+                   get_master_offset=None, set_master_offset=None):
     tab = tk.Frame(notebook)
     notebook.add(tab, text="sACN Config")
 
@@ -196,6 +197,31 @@ def build_sacn_tab(notebook, sacn, on_connect=None):
                      width=5, justify="center").grid(row=i+1, column=j+1, padx=6, pady=4)
             row_vars[key] = var
         ch_map_vars.append(row_vars)
+
+    # ── Master Offset: delay the goal lighting trigger (ms) ─────────────
+    if get_master_offset is not None and set_master_offset is not None:
+        offset_frame = tk.LabelFrame(tab, text="Master Offset",
+                                     font=("Segoe UI", 10), padx=12, pady=8)
+        offset_frame.pack(padx=30, pady=(0, 10), fill="x")
+        row = tk.Frame(offset_frame)
+        row.pack(anchor="w")
+        tk.Label(row, text="Goal trigger delay:", font=("Segoe UI", 11)).pack(side="left", padx=(0, 8))
+        offset_var = tk.IntVar(value=int(get_master_offset()))
+        offset_spin = tk.Spinbox(row, from_=0, to=10000, increment=5, width=8,
+                                 textvariable=offset_var, font=("Consolas", 11),
+                                 justify="center")
+        offset_spin.pack(side="left")
+        tk.Label(row, text="ms", font=("Segoe UI", 11)).pack(side="left", padx=(4, 0))
+
+        def _apply_offset(*_args):
+            try:
+                set_master_offset(int(offset_var.get()))
+            except (ValueError, tk.TclError):
+                pass
+
+        offset_var.trace_add("write", _apply_offset)
+        tk.Label(offset_frame, text="Delays the lighting trigger on a goal by this amount.",
+                 font=("Segoe UI", 9), fg="#888888").pack(anchor="w", pady=(4, 0))
 
     # Status label
     sacn_status = tk.Label(tab, text="Disconnected", font=("Consolas", 10), fg="red")
