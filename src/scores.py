@@ -215,6 +215,30 @@ def update_state(fixture_id, state_id):
     _state_ids[fixture_id] = state_id
 
 
+# Map SportMonks state_id -> loop window name
+_WINDOW_BY_STATE = {
+    2: "first_half",    # 1st Half
+    6: "first_half",    # Extra Time (1st)
+    3: "half_time",     # Half Time
+    21: "half_time",    # ET Break
+    22: "second_half",  # 2nd Half
+    23: "second_half",  # ET 2nd Half
+}
+
+
+def get_game_window():
+    """Return the current game window for looping ('first_half', 'half_time',
+    'second_half') from any live game, or None if no game is in those states."""
+    update_live_flags()
+    for fid, s in _scores.items():
+        if not s.get("live"):
+            continue
+        window = _WINDOW_BY_STATE.get(_state_ids.get(fid))
+        if window:
+            return window
+    return None
+
+
 def update_periods(fixture_id, periods):
     """Store period data from the API for a fixture."""
     _periods[fixture_id] = periods

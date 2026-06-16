@@ -36,6 +36,7 @@ import tkinter as tk
 from tkinter import ttk
 
 from src import audio_engine
+from src import scores
 
 from src.tabs.sound_keybinding import bind_sound_keys, F_KEYS
 
@@ -171,8 +172,8 @@ def _extract_waveform(sound, num_points):
 
 def _draw_waveform(canvas, waveform_data, cue_in=None, cue_out=None,
                    colour_l="#00cc66", colour_r="#0099ff",
-                   view_start=0.0, view_end=1.0):
-    """Draw stereo waveform with optional cue markers.
+                   view_start=0.0, view_end=1.0, loop_point=None):
+    """Draw stereo waveform with optional cue and loop markers.
 
     view_start/view_end define the visible fraction range (0.0-1.0) for zoom.
     """
@@ -247,6 +248,13 @@ def _draw_waveform(canvas, waveform_data, cue_in=None, cue_out=None,
         canvas.create_line(cx, 0, cx, h, fill="#ffaa00", width=2, tags="cue")
         canvas.create_text(cx - 3, 2, text="]", fill="#ffaa00",
                           font=("Consolas", 9, "bold"), anchor="ne", tags="cue")
+
+    # Loop-point marker (mapped to visible range)
+    if loop_point is not None and view_start <= loop_point <= view_end:
+        lx = int((loop_point - view_start) / (view_end - view_start) * w)
+        canvas.create_line(lx, 0, lx, h, fill="#c060ff", width=2, tags="cue")
+        canvas.create_text(lx + 3, 2, text="L", fill="#c060ff",
+                          font=("Consolas", 9, "bold"), anchor="nw", tags="cue")
 
 
 EVENT_TYPES = ["None", "Goal", "Goal Home", "Goal Away", "Goal by Team"]
@@ -623,6 +631,40 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
 
     render_var.trace_add("write", _on_render_change)
 
+    # ── Game-window auto-loop monitor ───────────────────────────────────
+    WINDOW_POLL_MS = 2000  # how often to check the live match window
+
+    def _window_monitor():
+        """Auto start/stop looped sounds based on the live game window
+        (1st half / half time / 2nd half)."""
+        try:
+            window = scores.get_game_window()
+        except Exception:
+            window = None
+        for ctrl in sound_controls:
+            win_fn = ctrl.get("window_enabled")
+            auto = ctrl.get("auto_window")  # single-element list, holds the armed window
+            if win_fn is None or auto is None:
+                continue
+            try:
+                enabled = window is not None and win_fn(window)
+                if enabled:
+                    # Arm once per window entry; respect a manual stop afterwards
+                    if auto[0] != window:
+                        auto[0] = window
+                        if not ctrl["is_playing"]():
+                            pl = ctrl.get("play_loop")
+                            if pl:
+                                pl()
+                else:
+                    # Window no longer allows this sound -> stop if we started it
+                    if auto[0] is not None and ctrl["is_playing"]():
+                        ctrl["stop"]()
+                    auto[0] = None
+            except Exception:
+                pass
+        tab.after(WINDOW_POLL_MS, _window_monitor)
+
     def _scan_and_populate():
         """Stop all playback, clear cards, re-scan folder, and rebuild."""
         # Stop all playing sounds
@@ -675,10 +717,28 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 if idx is not None and idx < len(sound_controls):
                     sound_controls[idx]["set_cue_out"]()
 
+            def _on_loop_key(event):
+                # Ignore when typing in a text field so "l" stays a normal key there
+                try:
+                    if event.widget.winfo_class() in (
+                            "Entry", "TEntry", "Spinbox", "TSpinbox", "Text", "TCombobox"):
+                        return
+                except Exception:
+                    pass
+                idx = active_card[0]
+                if idx is not None and idx < len(sound_controls):
+                    fn = sound_controls[idx].get("set_loop_point")
+                    if fn:
+                        fn()
+
             root = tab.winfo_toplevel()
             root.bind("<bracketleft>", _on_bracket_left, add=True)
             root.bind("<bracketright>", _on_bracket_right, add=True)
+            root.bind("<KeyPress-l>", _on_loop_key, add=True)
+            root.bind("<KeyPress-L>", _on_loop_key, add=True)
             _keys_bound[0] = True
+            # Start the game-window auto-loop monitor once
+            _window_monitor()
 
     def _build_sound_card(filepath, card_index, card_height=200):
         filename = os.path.splitext(os.path.basename(filepath))[0]
@@ -718,13 +778,37 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         tk.Checkbutton(ctrl, text="Loop", variable=loop_var,
                        font=("Segoe UI", 9)).pack()
 
+        # Loop windows: game states this sound auto-loops in (1st half / HT / 2nd half)
+        loop_win_vars = {
+            "first_half":  tk.BooleanVar(value=file_medits.get("loop_first_half", False)),
+            "half_time":   tk.BooleanVar(value=file_medits.get("loop_half_time", False)),
+            "second_half": tk.BooleanVar(value=file_medits.get("loop_second_half", False)),
+        }
+        win_frame = tk.LabelFrame(ctrl, text="Loop window", font=("Segoe UI", 7), fg="#aaaaaa")
+        win_frame.pack(fill="x", pady=(2, 2))
+        tk.Checkbutton(win_frame, text="1st Half", variable=loop_win_vars["first_half"],
+                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(anchor="w")
+        tk.Checkbutton(win_frame, text="Half Time", variable=loop_win_vars["half_time"],
+                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(anchor="w")
+        tk.Checkbutton(win_frame, text="2nd Half", variable=loop_win_vars["second_half"],
+                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(anchor="w")
+
+        # Set a loop point at the hover position (also bound to the "L" key)
+        loop_btn = tk.Button(ctrl, text="Set Loop (L)", font=("Segoe UI", 8),
+                             bg="#9b59b6", fg="white",
+                             command=lambda: _loop_at_hover())
+        loop_btn.pack(fill="x", pady=(2, 0))
+
         def _clear_medits():
             cue_in[0] = None
             cue_out[0] = None
+            loop_point[0] = None
             gain_var.set(0.0)
             sound_trimmed[0] = None
             sound_trimmed_half[0] = None
             event_var.set("None")
+            for _v in loop_win_vars.values():
+                _v.set(False)
             if file_basename in medits[0]:
                 del medits[0][file_basename]
                 _save_medits(medits[0])
@@ -831,6 +915,10 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         # Cue points as fraction 0.0-1.0
         cue_in = [file_medits.get("cue_in")]
         cue_out = [file_medits.get("cue_out")]
+        # Loop point as fraction 0.0-1.0 (where a loop returns to); None = none set
+        loop_point = [file_medits.get("loop_point")]
+        # Tracks whether the current playback was started by the auto window monitor
+        auto_window_active = [None]
 
         def _rebuild_team_menu():
             for w in team_menu_frame.winfo_children():
@@ -977,7 +1065,8 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             """Redraw waveform with current zoom and cue state."""
             if waveform_data[0]:
                 _draw_waveform(waveform_canvas, waveform_data[0], cue_in[0], cue_out[0],
-                              view_start=zoom_view[0], view_end=zoom_view[1])
+                              view_start=zoom_view[0], view_end=zoom_view[1],
+                              loop_point=loop_point[0])
 
         def _finish_waveform(stereo_peaks):
             waveform_data[0] = stereo_peaks
@@ -1020,6 +1109,19 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 entry["gain_db"] = g
             else:
                 entry.pop("gain_db", None)
+            # Loop point
+            if loop_point[0] is not None:
+                entry["loop_point"] = round(loop_point[0], 6)
+            else:
+                entry.pop("loop_point", None)
+            # Loop windows
+            for key, var in (("loop_first_half", loop_win_vars["first_half"]),
+                             ("loop_half_time", loop_win_vars["half_time"]),
+                             ("loop_second_half", loop_win_vars["second_half"])):
+                if var.get():
+                    entry[key] = True
+                else:
+                    entry.pop(key, None)
             if entry:
                 medits[0][file_basename] = entry
             elif file_basename in medits[0]:
@@ -1062,6 +1164,25 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             _build_trimmed()
             _redraw()
 
+        def _set_loop_point():
+            """Set the loop point at the current playhead position."""
+            if not playing[0] or sound_obj[0] is None:
+                return
+            length_s = sound_obj[0].get_length()
+            if half_speed[0]:
+                length_s *= 2
+            if length_s <= 0:
+                return
+            frac = ((time.time() - play_start_time[0]) % length_s) / length_s
+            loop_point[0] = frac
+            _save_cue()
+            _redraw()
+
+        def _clear_loop_point():
+            loop_point[0] = None
+            _save_cue()
+            _redraw()
+
         def _db_to_volume(db):
             """Convert dB gain (-60 to +15) to pygame volume (0.0 to 1.0)."""
             if db <= -60:
@@ -1089,11 +1210,31 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 return sound_trimmed_half[0] if has_cue and sound_trimmed_half[0] else sound_half[0]
             return sound_trimmed[0] if has_cue and sound_trimmed[0] else sound_obj[0]
 
+        def _loop_start_frames(is_half):
+            """Frame in the about-to-play buffer that a loop should return to.
+
+            The loop point is a fraction of the FULL sound; map it into whichever
+            buffer is actually played (cue-trimmed and/or half-speed)."""
+            if loop_point[0] is None or sound_obj[0] is None:
+                return 0
+            played = _get_play_sound(is_half)
+            if played is None:
+                return 0
+            full_frames = len(sound_obj[0].get_raw()) // 4
+            played_frames = len(played.get_raw()) // 4
+            trimmed = sound_trimmed_half[0] if is_half else sound_trimmed[0]
+            has_cue = (cue_in[0] is not None or cue_out[0] is not None) and trimmed is not None
+            ci = (cue_in[0] or 0.0) if has_cue else 0.0
+            frame = int((loop_point[0] - ci) * full_frames)
+            if is_half:
+                frame *= 2
+            return max(0, min(frame, played_frames - 1))
+
         def _card_device():
             """Output device for this card: its own if set, else the master/anthem device."""
             return _get_target_device() or _master_device[0]
 
-        def _play():
+        def _play(force_loop=False):
             if sound_obj[0] is None:
                 return
             if playing[0]:
@@ -1108,10 +1249,11 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if sound_trimmed_half[0]:
                 sound_trimmed_half[0].stop()
             half_speed[0] = False
-            loops = -1 if loop_var.get() else 0
+            loops = -1 if (loop_var.get() or force_loop) else 0
             play_start_time[0] = time.time()
             snd = _get_play_sound(False)
-            channel_obj[0] = snd.play(loops=loops, device=_card_device())
+            channel_obj[0] = snd.play(loops=loops, device=_card_device(),
+                                      loop_start=_loop_start_frames(False))
             if channel_obj[0]:
                 channel_obj[0].set_volume(_db_to_volume(gain_var.get()))
                 active_channels.append(channel_obj[0])
@@ -1139,7 +1281,8 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             loops = -1 if loop_var.get() else 0
             play_start_time[0] = time.time()
             snd = _get_play_sound(True)
-            channel_obj[0] = snd.play(loops=loops, device=_card_device())
+            channel_obj[0] = snd.play(loops=loops, device=_card_device(),
+                                      loop_start=_loop_start_frames(True))
             if channel_obj[0]:
                 channel_obj[0].set_volume(_db_to_volume(gain_var.get()))
                 active_channels.append(channel_obj[0])
@@ -1483,6 +1626,25 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             _build_trimmed()
             _redraw()
 
+        def _loop_at_hover():
+            """Set the loop point at the hover cursor position (the L key)."""
+            if hover_line[0] is None:
+                # No hover -> fall back to the live playhead if playing
+                _set_loop_point()
+                return
+            wf_w = waveform_canvas.winfo_width()
+            coords = waveform_canvas.coords(hover_line[0])
+            if not coords:
+                return
+            screen_frac = max(0.0, min(1.0, coords[0] / wf_w))
+            loop_point[0] = zoom_view[0] + screen_frac * (zoom_view[1] - zoom_view[0])
+            _save_cue()
+            _redraw()
+
+        def _window_enabled(window):
+            var = loop_win_vars.get(window)
+            return bool(var.get()) if var else False
+
         stop_fns.append(_stop)
         recompute_fns.append(_recompute_waveform)
         sound_controls.append({
@@ -1491,6 +1653,10 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             "is_playing": lambda p=playing: p[0],
             "set_cue_in": lambda: _cue_at_hover(True),
             "set_cue_out": lambda: _cue_at_hover(False),
+            "set_loop_point": _loop_at_hover,
+            "play_loop": lambda: _play(force_loop=True),
+            "window_enabled": _window_enabled,
+            "auto_window": auto_window_active,
             "event_var": event_var,
             "team_var": team_var,
             "filename": filename,

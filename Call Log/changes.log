@@ -1,2 +1,15 @@
 [2026-06-16 15:29:59] SCORE CHANGE: France vs Senegal  0-0 → 1-0
 [2026-06-16 15:46:18] SCORE CHANGE: France vs Senegal  1-0 → 2-0
+[2026-06-16 15:59:15] SCORE CHANGE: France vs Senegal  2-0 → 2-1
+[2026-06-16 16:00:22] SCORE CHANGE: France vs Senegal  2-1 → 3-1
+[2026-06-16 16:20:45] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-16 16:45:13] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-16 17:29:32] SCORE CHANGE: Iraq vs Norway  0-0 → 0-1
+[2026-06-16 17:39:49] SCORE CHANGE: Iraq vs Norway  0-1 → 1-1
+[2026-06-16 17:43:44] SCORE CHANGE: Iraq vs Norway  1-1 → 1-2

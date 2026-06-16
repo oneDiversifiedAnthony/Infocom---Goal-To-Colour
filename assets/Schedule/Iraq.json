@@ -63,7 +63,7 @@
                   "founded": 1960,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-09 23:00:00",
+                  "last_played_at": "2026-06-16 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -116,7 +116,7 @@
               "group_id": 253027,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 2,
               "venue_id": 160,
               "name": "Iraq vs Norway",
               "starting_at": "2026-06-16 22:00:00",
@@ -145,7 +145,7 @@
                   "meta": {
                     "location": "away",
                     "winner": null,
-                    "position": 4
+                    "position": 3
                   }
                 },
                 {
@@ -164,7 +164,7 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": 3
+                    "position": 2
                   }
                 }
               ],
@@ -175,7 +175,7 @@
                   "type_id": 1525,
                   "participant_id": 18600,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "CURRENT"
@@ -186,7 +186,7 @@
                   "type_id": 1,
                   "participant_id": 18578,
                   "score": {
-                    "goals": 0,
+                    "goals": 2,
                     "participant": "away"
                   },
                   "description": "1ST_HALF"
@@ -197,7 +197,7 @@
                   "type_id": 2,
                   "participant_id": 18600,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "2ND_HALF"
@@ -208,7 +208,7 @@
                   "type_id": 1525,
                   "participant_id": 18578,
                   "score": {
-                    "goals": 0,
+                    "goals": 2,
                     "participant": "away"
                   },
                   "description": "CURRENT"
@@ -219,7 +219,7 @@
                   "type_id": 1,
                   "participant_id": 18600,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "1ST_HALF"
@@ -230,7 +230,7 @@
                   "type_id": 2,
                   "participant_id": 18578,
                   "score": {
-                    "goals": 0,
+                    "goals": 2,
                     "participant": "away"
                   },
                   "description": "2ND_HALF"
@@ -305,7 +305,7 @@
                   "founded": 1919,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-08 19:10:00",
+                  "last_played_at": "2026-06-16 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -3675,7 +3675,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781642733,
+        "current_timestamp": 1781649918,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3691,8 +3691,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 871,
-    "remaining": 2408,
+    "resets_in_seconds": 3594,
+    "remaining": 2492,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

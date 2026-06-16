@@ -136,15 +136,19 @@ def list_output_devices():
 
 # ── Voices and per-device streams ────────────────────────────────────────────
 class _Voice:
-    __slots__ = ("data", "pos", "loops", "volume", "active", "stopflag")
+    __slots__ = ("data", "pos", "loops", "volume", "active", "stopflag", "loop_start")
 
-    def __init__(self, data, loops, volume):
+    def __init__(self, data, loops, volume, loop_start=0):
         self.data = data        # float32 array, shape (n, 2)
         self.pos = 0
         self.loops = loops      # remaining loops; -1 = infinite
         self.volume = float(volume)
         self.active = True
         self.stopflag = False
+        # Frame to jump back to when looping (0 = start). The intro [0, loop_start)
+        # plays once; thereafter the tail [loop_start, end] repeats.
+        n = len(data)
+        self.loop_start = max(0, min(int(loop_start), n - 1)) if n else 0
 
 
 class _DeviceStream:
@@ -175,8 +179,8 @@ class _DeviceStream:
                             break
                         if v.loops > 0:
                             v.loops -= 1
-                        v.pos = 0
-                        avail = len(v.data)
+                        v.pos = v.loop_start  # loop back to the loop point (or start)
+                        avail = len(v.data) - v.pos
                     n = avail if avail < remaining else remaining
                     outdata[out_off:out_off + n] += v.data[v.pos:v.pos + n] * v.volume
                     v.pos += n
@@ -258,14 +262,17 @@ class Sound:
         n = len(self._data)
         return n / SAMPLE_RATE if n else 0.0
 
-    def play(self, loops=0, device=None, volume=1.0):
-        """Start playback on the given device (name or None=default). Returns a Channel."""
+    def play(self, loops=0, device=None, volume=1.0, loop_start=0):
+        """Start playback on the given device (name or None=default). Returns a Channel.
+
+        loop_start: frame to loop back to (the intro before it plays once).
+        """
         try:
             idx = resolve_device(device)
             stream = _get_stream(idx)
         except Exception:
             return None
-        voice = _Voice(self._data, loops, volume)
+        voice = _Voice(self._data, loops, volume, loop_start=loop_start)
         self._voices = [v for v in self._voices if v.active and not v.stopflag]
         self._voices.append(voice)
         stream.add(voice)
