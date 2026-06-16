@@ -256,11 +256,7 @@
   "subscription": [
     {
       "meta": {
-<<<<<<< HEAD
-        "current_timestamp": 1781555839,
-=======
-        "current_timestamp": 1781621803,
->>>>>>> b920823 (Add OSC WAVE (DM7) tab; fix sACN reconnect crash; clean shutdown)
+        "current_timestamp": 1781622968,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -276,13 +272,8 @@
     }
   ],
   "rate_limit": {
-<<<<<<< HEAD
-    "resets_in_seconds": 2056,
-    "remaining": 2441,
-=======
-    "resets_in_seconds": 2023,
-    "remaining": 2462,
->>>>>>> b920823 (Add OSC WAVE (DM7) tab; fix sACN reconnect crash; clean shutdown)
+    "resets_in_seconds": 858,
+    "remaining": 2432,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
