@@ -1539,7 +1539,21 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                 return True
         return False
 
+    def stop_by_name(name):
+        """Stop a loaded sound card by filename (without extension)."""
+        name_lower = name.lower()
+        for ctrl in sound_controls:
+            if ctrl.get("filename", "").lower() == name_lower:
+                ctrl["stop"]()
+                return True
+        return False
+
+    def list_sounds():
+        """Return [{'name', 'playing'}] for every loaded sound (for the web /sounds page)."""
+        return [{"name": ctrl.get("filename", ""), "playing": bool(ctrl["is_playing"]())}
+                for ctrl in sound_controls]
+
     refresh_btn.config(command=_scan_and_populate)
     _scan_and_populate()
 
-    return fire_event, play_by_name
+    return fire_event, play_by_name, stop_by_name, list_sounds

@@ -168,7 +168,74 @@
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 26001128,
+                  "fixture_id": 19609143,
+                  "type_id": 1525,
+                  "participant_id": 18647,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26001129,
+                  "fixture_id": 19609143,
+                  "type_id": 1525,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26001132,
+                  "fixture_id": 19609143,
+                  "type_id": 2,
+                  "participant_id": 18647,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 26001133,
+                  "fixture_id": 19609143,
+                  "type_id": 2,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 26001130,
+                  "fixture_id": 19609143,
+                  "type_id": 1,
+                  "participant_id": 18647,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 26001131,
+                  "fixture_id": 19609143,
+                  "type_id": 1,
+                  "participant_id": 18558,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
             }
           ]
         },
@@ -256,7 +323,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781624525,
+        "current_timestamp": 1781634630,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -272,8 +339,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3596,
-    "remaining": 2494,
+    "resets_in_seconds": 895,
+    "remaining": 2452,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

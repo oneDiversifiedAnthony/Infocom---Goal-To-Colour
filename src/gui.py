@@ -266,9 +266,16 @@ class App:
         self._stop_editor_preview = build_country_editor_tab(settings_nb, self.set_team_colours)
 
         # Sounds (top-level tab)
-        self._fire_sound_event, self._play_sound_by_name = build_sounds_tab(
-            self.notebook, self.countries_db,
-            stop_editor_preview=self._stop_editor_preview)
+        self._fire_sound_event, self._play_sound_by_name, self._stop_sound_by_name, \
+            self._list_sounds = build_sounds_tab(
+                self.notebook, self.countries_db,
+                stop_editor_preview=self._stop_editor_preview)
+        # Expose play/stop/list to the web server's /sounds page
+        from src.tabs import webserver as _webserver
+        _webserver.set_sound_callbacks(
+            list_fn=self._list_sounds,
+            play_fn=self._play_sound_by_name,
+            stop_fn=self._stop_sound_by_name)
 
         # Presentations Schedule
         build_presentations_tab(settings_nb)

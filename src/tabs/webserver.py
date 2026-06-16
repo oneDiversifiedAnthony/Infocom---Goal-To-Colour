@@ -143,6 +143,23 @@ _callbacks = {
     "root": None,           # tkinter root for after() scheduling
 }
 
+# Sound callbacks for the /sounds page (set by the main app after the Sounds tab builds)
+_sound_callbacks = {
+    "list": None,   # fn() -> [{"name": str, "playing": bool}]
+    "play": None,   # fn(name) -> bool
+    "stop": None,   # fn(name) -> bool
+}
+
+
+def set_sound_callbacks(list_fn=None, play_fn=None, stop_fn=None):
+    """Register the Sounds tab's list/play/stop functions for the /sounds page."""
+    if list_fn is not None:
+        _sound_callbacks["list"] = list_fn
+    if play_fn is not None:
+        _sound_callbacks["play"] = play_fn
+    if stop_fn is not None:
+        _sound_callbacks["stop"] = stop_fn
+
 
 def update_state(*, colours=None, team_name=None, goal_active=None,
                  games=None, teams=None, api_remaining=None,
@@ -1024,6 +1041,85 @@ setInterval(refreshData, 1000);
     return html
 
 
+def _build_sounds_html():
+    """Generate the /sounds page: Play/Stop buttons for every loaded sound."""
+    list_fn = _sound_callbacks.get("list")
+    sounds = list_fn() if list_fn else []
+
+    cards = ""
+    for s in sounds:
+        name = s.get("name", "")
+        playing = s.get("playing", False)
+        safe = name.replace('"', '&quot;').replace("'", "&#39;")
+        border = "#28a745" if playing else "#444444"
+        status = ('<span style="color:#28a745;font-weight:bold;">PLAYING</span>'
+                  if playing else '<span style="color:#888;">stopped</span>')
+        cards += (
+            f'<div style="display:flex;align-items:center;gap:12px;background:#222;'
+            f'border:2px solid {border};border-radius:8px;padding:10px 16px;margin:6px 0;">'
+            f'<div style="flex:1;font-size:16px;font-weight:bold;color:#e0e0e0;">{name}'
+            f'<div style="font-size:12px;margin-top:2px;">{status}</div></div>'
+            f'<form method="POST" action="/sounds" style="margin:0;">'
+            f'<input type="hidden" name="action" value="play">'
+            f'<input type="hidden" name="name" value="{safe}">'
+            f'<button type="submit" style="background:#28a745;color:#fff;border:none;'
+            f'border-radius:6px;padding:10px 24px;font-size:15px;font-weight:bold;cursor:pointer;">'
+            f'Play</button></form>'
+            f'<form method="POST" action="/sounds" style="margin:0;">'
+            f'<input type="hidden" name="action" value="stop">'
+            f'<input type="hidden" name="name" value="{safe}">'
+            f'<button type="submit" style="background:#cc0000;color:#fff;border:none;'
+            f'border-radius:6px;padding:10px 24px;font-size:15px;font-weight:bold;cursor:pointer;">'
+            f'Stop</button></form>'
+            f'</div>'
+        )
+    if not cards:
+        cards = '<p style="color:#888;">No sounds loaded.</p>'
+
+    return f"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>World Cup Colour - Sounds</title>
+<style>
+  body {{ background:#1a1a1a; color:#e0e0e0; font-family:'Segoe UI',sans-serif; margin:0; padding:20px; }}
+  .container {{ max-width:800px; margin:0 auto; }}
+  .header {{ display:flex; align-items:center; justify-content:space-between;
+             border-bottom:2px solid #0066cc; padding-bottom:12px; margin-bottom:16px; }}
+  h1 {{ color:#0066cc; margin:0; }}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+  <h1>Sounds</h1>
+  <img src="data:image/png;base64,{_LOGO_B64}" alt="Diversified" style="height:60px;">
+</div>
+<div id="sounds-area">{cards}</div>
+</div>
+<script>
+// Refresh playing state every second without a full reload
+var refreshing = false;
+function refreshData() {{
+  if (refreshing) return;
+  refreshing = true;
+  fetch(window.location.href, {{cache:'no-store'}})
+    .then(function(r) {{ return r.text(); }})
+    .then(function(html) {{
+      var doc = new DOMParser().parseFromString(html, 'text/html');
+      var cur = document.getElementById('sounds-area');
+      var nw = doc.getElementById('sounds-area');
+      if (cur && nw && cur.innerHTML !== nw.innerHTML) cur.innerHTML = nw.innerHTML;
+    }})
+    .catch(function() {{}})
+    .finally(function() {{ refreshing = false; }});
+}}
+setInterval(refreshData, 1000);
+</script>
+</body>
+</html>"""
+
+
 class _Handler(BaseHTTPRequestHandler):
     def handle(self):
         try:
@@ -1050,6 +1146,13 @@ class _Handler(BaseHTTPRequestHandler):
                 self.wfile.write(body)
                 return
             body = _build_testing_html().encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+        elif self.path == "/sounds":
+            body = _build_sounds_html().encode("utf-8")
             self.send_response(200)
             self.send_header("Content-Type", "text/html; charset=utf-8")
             self.send_header("Content-Length", str(len(body)))
@@ -1102,6 +1205,24 @@ class _Handler(BaseHTTPRequestHandler):
             # Redirect back to testing page
             self.send_response(303)
             self.send_header("Location", "/testing")
+            self.end_headers()
+        elif self.path == "/sounds":
+            length = int(self.headers.get("Content-Length", 0))
+            body = self.rfile.read(length).decode("utf-8")
+            params = {}
+            for pair in body.split("&"):
+                if "=" in pair:
+                    k, v = pair.split("=", 1)
+                    params[k] = unquote_plus(v)
+            action = params.get("action", "")
+            name = params.get("name", "")
+            root = _callbacks.get("root")
+            fn = _sound_callbacks.get("stop") if action == "stop" else _sound_callbacks.get("play")
+            # Sound play/stop touch Tk + audio, so run them on the main thread
+            if fn and root and name:
+                root.after(0, lambda f=fn, n=name: f(n))
+            self.send_response(303)
+            self.send_header("Location", "/sounds")
             self.end_headers()
         else:
             self.send_response(404)
@@ -1265,6 +1386,13 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
               bg="#ff4444", fg="white", padx=20, pady=4,
               command=_open_testing).pack(side="left", padx=8)
 
+    def _open_sounds():
+        webbrowser.open(f"http://{_best_ip()}:{port_var.get()}/sounds")
+
+    tk.Button(btn_frame, text="Open Sounds Page", font=("Segoe UI", 11, "bold"),
+              bg="#6600cc", fg="white", padx=20, pady=4,
+              command=_open_sounds).pack(side="left", padx=8)
+
     status_label.pack(pady=(5, 10))
 
     # Testing page toggle
@@ -1393,7 +1521,7 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
             for lbl, ip in url_labels:
                 lbl.config(text=f"http://{ip}:{p}/")
                 lbl.pack(anchor="w", before=api_label)
-        api_label.config(text=f"JSON API: http://localhost:{p}/api/status    |    Testing: http://localhost:{p}/testing")
+        api_label.config(text=f"JSON API: http://localhost:{p}/api/status    |    Testing: http://localhost:{p}/testing    |    Sounds: http://localhost:{p}/sounds")
 
     port_var.trace_add("write", _update_urls)
     _update_urls()
