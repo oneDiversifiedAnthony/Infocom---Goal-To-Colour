@@ -207,7 +207,7 @@ def build_sacn_tab(notebook, sacn, on_connect=None,
         row.pack(anchor="w")
         tk.Label(row, text="Goal trigger delay:", font=("Segoe UI", 11)).pack(side="left", padx=(0, 8))
         offset_var = tk.IntVar(value=int(get_master_offset()))
-        offset_spin = tk.Spinbox(row, from_=0, to=10000, increment=5, width=8,
+        offset_spin = tk.Spinbox(row, from_=0, to=120000, increment=10, width=10,
                                  textvariable=offset_var, font=("Consolas", 11),
                                  justify="center")
         offset_spin.pack(side="left")

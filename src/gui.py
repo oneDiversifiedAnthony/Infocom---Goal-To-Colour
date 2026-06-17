@@ -484,19 +484,25 @@ class App:
         self._update_sacn_country(country_name)
         self._highlight_flag(country_name)
         self.goal.trigger(colours, country_name)
-        # Master offset: delay the lighting trigger by the configured ms
+        # Most specific sound event type available
+        if is_home is True:
+            event_type = "Goal Home"
+        elif is_home is False:
+            event_type = "Goal Away"
+        else:
+            event_type = "Goal by Team"
+
+        # Master offset: delay BOTH the lighting trigger and the goal sound by the
+        # configured ms (so they stay in sync with whatever the offset compensates for).
+        def _fire_goal(n=country_name, et=event_type):
+            self._fire_trigger(n)
+            self._fire_sound_event(et, n)
+
         offset = max(0, self._master_offset_ms)
         if offset > 0:
-            self.root.after(offset, lambda n=country_name: self._fire_trigger(n))
+            self.root.after(offset, _fire_goal)
         else:
-            self._fire_trigger(country_name)
-        # Fire the most specific event type available
-        if is_home is True:
-            self._fire_sound_event("Goal Home", country_name)
-        elif is_home is False:
-            self._fire_sound_event("Goal Away", country_name)
-        else:
-            self._fire_sound_event("Goal by Team", country_name)
+            _fire_goal()
 
     def _fire_trigger(self, country_name):
         team = self.countries_db.get("teams", {}).get(country_name, {})

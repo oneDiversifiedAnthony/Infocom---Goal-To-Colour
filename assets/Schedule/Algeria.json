@@ -12,8 +12,8 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": false,
-      "tie_breaker_rule_id": null,
+      "games_in_current_week": true,
+      "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
         {
@@ -63,7 +63,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -82,7 +82,7 @@
                   "founded": 1904,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-01 18:45:00",
+                  "last_played_at": "2026-06-17 04:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -102,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": false,
+          "is_current": true,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": false,
+          "games_in_current_week": true,
           "fixtures": [
             {
               "id": 19609145,
@@ -116,11 +116,11 @@
               "group_id": 253028,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 22,
+              "state_id": 5,
               "venue_id": 72370,
               "name": "Argentina vs Algeria",
               "starting_at": "2026-06-17 01:00:00",
-              "result_info": null,
+              "result_info": "Argentina won after full-time.",
               "leg": "1/1",
               "details": "Match 19",
               "length": 90,
@@ -141,10 +141,10 @@
                   "founded": 1893,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-10 01:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": true,
                     "position": 1
                   }
                 },
@@ -160,10 +160,10 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "away",
-                    "winner": null,
+                    "winner": false,
                     "position": 2
                   }
                 }
@@ -175,7 +175,7 @@
                   "type_id": 1525,
                   "participant_id": 18644,
                   "score": {
-                    "goals": 1,
+                    "goals": 3,
                     "participant": "home"
                   },
                   "description": "CURRENT"
@@ -208,7 +208,7 @@
                   "type_id": 2,
                   "participant_id": 18644,
                   "score": {
-                    "goals": 1,
+                    "goals": 3,
                     "participant": "home"
                   },
                   "description": "2ND_HALF"
@@ -219,7 +219,7 @@
                   "type_id": 48996,
                   "participant_id": 18644,
                   "score": {
-                    "goals": 0,
+                    "goals": 2,
                     "participant": "home"
                   },
                   "description": "2ND_HALF_ONLY"
@@ -269,7 +269,7 @@
           "stage_id": 77478590,
           "name": "2",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-18",
           "ending_at": "2026-06-24",
           "games_in_current_week": true,
@@ -308,7 +308,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -327,7 +327,7 @@
                   "founded": 1949,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 23:00:00",
+                  "last_played_at": "2026-06-17 04:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -404,7 +404,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -590,7 +590,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -757,7 +757,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -905,7 +905,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1072,7 +1072,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1239,7 +1239,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1384,7 +1384,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1529,7 +1529,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "home",
                     "winner": false,
@@ -1715,7 +1715,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1882,7 +1882,7 @@
                   "founded": 1962,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 00:00:00",
+                  "last_played_at": "2026-06-17 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -2105,7 +2105,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781662509,
+        "current_timestamp": 1781719071,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2121,8 +2121,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 2718,
-    "remaining": 2463,
+    "resets_in_seconds": 1034,
+    "remaining": 2399,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

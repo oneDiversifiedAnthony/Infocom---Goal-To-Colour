@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-06-16 22:45:18",
+  "tracked_fields": {
+    "data": [
+      {
+        "id": 19609164,
+        "sport_id": 1,
+        "league_id": 732,
+        "season_id": 26618,
+        "stage_id": 77478590,
+        "group_id": 253028,
+        "aggregate_id": null,
+        "round_id": 395361,
+        "state_id": 1,
+        "venue_id": 11579,
+        "name": "Austria vs Jordan",
+        "starting_at": "2026-06-17 04:00:00",
+        "result_info": null,
+        "leg": "1/1",
+        "details": "Match 20",
+        "length": 90,
+        "placeholder": false,
+        "has_odds": true,
+        "has_premium_odds": true,
+        "starting_at_timestamp": 1781668800,
+        "scores": [
+          {
+            "id": 26001685,
+            "fixture_id": 19609164,
+            "type_id": 1525,
+            "participant_id": 18643,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26001686,
+            "fixture_id": 19609164,
+            "type_id": 1525,
+            "participant_id": 18559,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26001687,
+            "fixture_id": 19609164,
+            "type_id": 1,
+            "participant_id": 18643,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26001689,
+            "fixture_id": 19609164,
+            "type_id": 2,
+            "participant_id": 18643,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26001690,
+            "fixture_id": 19609164,
+            "type_id": 2,
+            "participant_id": 18559,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26001688,
+            "fixture_id": 19609164,
+            "type_id": 1,
+            "participant_id": 18559,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "1ST_HALF"
+          }
+        ],
+        "periods": []
+      }
+    ]
+  }
+}

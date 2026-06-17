@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-06-17 11:46:03",
+  "tracked_fields": {
+    "data": [
+      {
+        "id": 19609166,
+        "sport_id": 1,
+        "league_id": 732,
+        "season_id": 26618,
+        "stage_id": 77478590,
+        "group_id": 253029,
+        "aggregate_id": null,
+        "round_id": 395361,
+        "state_id": 1,
+        "venue_id": 21827,
+        "name": "Portugal vs Congo DR",
+        "starting_at": "2026-06-17 17:00:00",
+        "result_info": null,
+        "leg": "1/1",
+        "details": "Match 23",
+        "length": 90,
+        "placeholder": false,
+        "has_odds": true,
+        "has_premium_odds": true,
+        "starting_at_timestamp": 1781715600,
+        "scores": [
+          {
+            "id": 26002438,
+            "fixture_id": 19609166,
+            "type_id": 1525,
+            "participant_id": 18701,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26002437,
+            "fixture_id": 19609166,
+            "type_id": 1525,
+            "participant_id": 18552,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26002439,
+            "fixture_id": 19609166,
+            "type_id": 1,
+            "participant_id": 18552,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26002440,
+            "fixture_id": 19609166,
+            "type_id": 1,
+            "participant_id": 18701,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26002441,
+            "fixture_id": 19609166,
+            "type_id": 2,
+            "participant_id": 18552,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26002442,
+            "fixture_id": 19609166,
+            "type_id": 2,
+            "participant_id": 18701,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "2ND_HALF"
+          }
+        ],
+        "periods": []
+      }
+    ]
+  }
+}
