@@ -1269,11 +1269,13 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             return int(secs * 1000)
 
         def _overlap_tick():
-            """Loop point reached -> start a new play from the [ in-point, layered."""
+            """Lead playhead reached the loop point -> start a new play from the [
+            in-point. The new voice becomes the lead; the old lead keeps playing to
+            the end as a trailing layer."""
             overlap_timer[0] = None
             if not playing[0]:
                 return
-            # Drop finished voices, then cap the number of layers
+            # Drop finished trailing voices, then cap the number of layers
             overlap_voices[:] = [v for v in overlap_voices if v[0] and v[0].get_busy()]
             while len(overlap_voices) >= MAX_OVERLAP:
                 old = overlap_voices.pop(0)
@@ -1290,7 +1292,11 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                     ch = None
                 if ch:
                     ch.set_volume(_db_to_volume(gain_var.get()))
-                    overlap_voices.append([ch, time.time()])
+                    # Demote the current lead to a trailing layer; promote the new one
+                    if channel_obj[0] is not None:
+                        overlap_voices.append([channel_obj[0], play_start_time[0]])
+                    channel_obj[0] = ch
+                    play_start_time[0] = time.time()
                     active_channels.append(ch)
             interval = _overlap_interval_ms()
             if interval > 0:
@@ -1321,8 +1327,12 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if sound_trimmed_half[0]:
                 sound_trimmed_half[0].stop()
             half_speed[0] = False
-            loops = -1 if (loop_var.get() or free_run_var.get() or force_loop) else 0
-            looping_flag[0] = (loops == -1)
+            looping = bool(loop_var.get() or free_run_var.get() or force_loop)
+            # Canon mode: with a loop point, each play runs to the END and the loop
+            # is the re-trigger chain (a one-shot per voice), so the sound finishes.
+            canon = looping and loop_point[0] is not None
+            loops = 0 if canon else (-1 if looping else 0)
+            looping_flag[0] = looping
             play_start_time[0] = time.time()
             snd = _get_play_sound(False)
             channel_obj[0] = snd.play(loops=loops, device=_card_device())
@@ -1351,8 +1361,10 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if sound_trimmed_half[0]:
                 sound_trimmed_half[0].stop()
             half_speed[0] = True
-            loops = -1 if (loop_var.get() or free_run_var.get()) else 0
-            looping_flag[0] = (loops == -1)
+            looping = bool(loop_var.get() or free_run_var.get())
+            canon = looping and loop_point[0] is not None
+            loops = 0 if canon else (-1 if looping else 0)
+            looping_flag[0] = looping
             play_start_time[0] = time.time()
             snd = _get_play_sound(True)
             channel_obj[0] = snd.play(loops=loops, device=_card_device())
@@ -1527,8 +1539,13 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             if not playing[0] or not channel_obj[0]:
                 return
             if not channel_obj[0].get_busy():
-                _stop()
-                return
+                # In canon mode the lead is a one-shot; keep going while the
+                # re-trigger chain or any trailing layer is still alive.
+                chain_alive = overlap_timer[0] is not None or any(
+                    v[0] and v[0].get_busy() for v in overlap_voices)
+                if not chain_alive:
+                    _stop()
+                    return
 
             has_cue = cue_in[0] is not None or cue_out[0] is not None
             playing_snd = _get_play_sound(half_speed[0])

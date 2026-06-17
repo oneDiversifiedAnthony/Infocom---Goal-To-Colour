@@ -38,7 +38,8 @@
     "loop_point": 0.770504,
     "loop_first_half": true,
     "loop_half_time": true,
-    "cue_in": 0.014296
+    "cue_in": 0.014296,
+    "loop_free_run": true
   },
   "SFX - FOG HORN.mp3": {
     "output_device": "DVS Transmit  7-8 (Dante Virtual Soundcard)",
