@@ -395,7 +395,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
     anthem_auto_fade_timer = [None]   # auto fade-out after ANTHEM_AUTO_FADE_SEC
     ANTHEM_FADE_DURATION_MS = 3000
     ANTHEM_FADE_STEP_MS = 50
-    ANTHEM_AUTO_FADE_SEC = 30         # anthem auto-fades out after this many seconds
+    ANTHEM_AUTO_FADE_SEC = 40         # anthem auto-fades out after this many seconds
 
     def _anthem_db_to_vol(db):
         if db <= -60:

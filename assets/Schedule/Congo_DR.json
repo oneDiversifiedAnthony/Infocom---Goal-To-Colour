@@ -2494,7 +2494,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781718972,
+        "current_timestamp": 1781719154,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -2510,8 +2510,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 1133,
-    "remaining": 2402,
+    "resets_in_seconds": 951,
+    "remaining": 2348,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
