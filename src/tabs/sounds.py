@@ -392,8 +392,10 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
     anthem_start_time = [0.0]
     anthem_fading = [False]
     anthem_fade_timer = [None]
+    anthem_auto_fade_timer = [None]   # auto fade-out after ANTHEM_AUTO_FADE_SEC
     ANTHEM_FADE_DURATION_MS = 3000
     ANTHEM_FADE_STEP_MS = 50
+    ANTHEM_AUTO_FADE_SEC = 30         # anthem auto-fades out after this many seconds
 
     def _anthem_db_to_vol(db):
         if db <= -60:
@@ -531,6 +533,12 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
             anthem_fading[0] = False
             anthem_status.config(text=f"Playing: {country_name}", fg="#cc6600")
             anthem_fade_btn.config(state="normal", text="Fade Out", bg="#ff6600")
+            # Auto fade-out after ANTHEM_AUTO_FADE_SEC seconds
+            if anthem_auto_fade_timer[0]:
+                tab.after_cancel(anthem_auto_fade_timer[0])
+            anthem_auto_fade_timer[0] = tab.after(
+                ANTHEM_AUTO_FADE_SEC * 1000,
+                lambda: _anthem_fade_out() if anthem_playing[0] and not anthem_fading[0] else None)
             _anthem_poll()
         except Exception:
             pass
@@ -554,6 +562,9 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         if anthem_fade_timer[0]:
             tab.after_cancel(anthem_fade_timer[0])
             anthem_fade_timer[0] = None
+        if anthem_auto_fade_timer[0]:
+            tab.after_cancel(anthem_auto_fade_timer[0])
+            anthem_auto_fade_timer[0] = None
         anthem_fading[0] = False
         if anthem_channel[0]:
             anthem_channel[0].stop()
