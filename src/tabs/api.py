@@ -215,7 +215,7 @@ def build_api_tab(notebook, status_bar=None):
             type_id = ev.get("type_id")
             minute = ev.get("minute", "")
             extra = ev.get("extra_minute")
-            player = ev.get("player_name", "")
+            player = ev.get("player_name") or ""  # key may be present but null
             min_str = f"{minute}'" if minute else ""
             if extra:
                 min_str = f"{minute}+{extra}'"
@@ -230,7 +230,7 @@ def build_api_tab(notebook, status_bar=None):
                 label = "SUBSTITUTION"
             else:
                 label = f"EVENT_{type_id}"
-            result = ev.get("result", "")
+            result = ev.get("result") or ""  # key may be present but null
             detail = player
             if result:
                 detail += f" ({result})"

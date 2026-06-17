@@ -208,7 +208,7 @@
                   "type_id": 1525,
                   "participant_id": 18578,
                   "score": {
-                    "goals": 2,
+                    "goals": 3,
                     "participant": "away"
                   },
                   "description": "CURRENT"
@@ -230,7 +230,7 @@
                   "type_id": 2,
                   "participant_id": 18578,
                   "score": {
-                    "goals": 2,
+                    "goals": 3,
                     "participant": "away"
                   },
                   "description": "2ND_HALF"
@@ -252,7 +252,7 @@
                   "type_id": 48996,
                   "participant_id": 18578,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "away"
                   },
                   "description": "2ND_HALF_ONLY"
@@ -345,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781653044,
+        "current_timestamp": 1781654201,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -361,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 468,
-    "remaining": 2416,
+    "resets_in_seconds": 3588,
+    "remaining": 2486,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

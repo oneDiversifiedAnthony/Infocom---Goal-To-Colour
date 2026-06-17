@@ -35,7 +35,7 @@
     "output_device": "DVS Transmit  3-4 (Dante Virtual Soundcard)",
     "event": "Goal Home",
     "cue_out": 0.8924,
-    "loop_point": 0.026336,
+    "loop_point": 0.770504,
     "loop_first_half": true,
     "loop_half_time": true,
     "cue_in": 0.014296

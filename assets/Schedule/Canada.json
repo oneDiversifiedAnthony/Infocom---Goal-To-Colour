@@ -12,88 +12,10 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": null,
       "aggregates": [],
       "rounds": [
-        {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609170,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253020,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 11554,
-              "name": "Canada vs Qatar",
-              "starting_at": "2026-06-18 22:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 27",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1781820000,
-              "participants": [
-                {
-                  "id": 18544,
-                  "sport_id": 1,
-                  "country_id": 74505,
-                  "venue_id": 14371,
-                  "gender": "male",
-                  "name": "Qatar",
-                  "short_code": "QAT",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18544.png",
-                  "founded": 1960,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18572,
-                  "sport_id": 1,
-                  "country_id": 1004,
-                  "venue_id": 11542,
-                  "gender": "male",
-                  "name": "Canada",
-                  "short_code": "CAN",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18572.png",
-                  "founded": 1912,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-12 19:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
         {
           "id": 395362,
           "sport_id": 1,
@@ -141,7 +63,7 @@
                   "founded": 1895,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 19:00:00",
+                  "last_played_at": "2026-06-13 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -180,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609154,
@@ -338,6 +260,84 @@
               ]
             }
           ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609170,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253020,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 11554,
+              "name": "Canada vs Qatar",
+              "starting_at": "2026-06-18 22:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 27",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781820000,
+              "participants": [
+                {
+                  "id": 18544,
+                  "sport_id": 1,
+                  "country_id": 74505,
+                  "venue_id": 14371,
+                  "gender": "male",
+                  "name": "Qatar",
+                  "short_code": "QAT",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18544.png",
+                  "founded": 1960,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-13 19:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 4
+                  }
+                },
+                {
+                  "id": 18572,
+                  "sport_id": 1,
+                  "country_id": 1004,
+                  "venue_id": 11542,
+                  "gender": "male",
+                  "name": "Canada",
+                  "short_code": "CAN",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/12/18572.png",
+                  "founded": 1912,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-12 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 3
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
         }
       ]
     }
@@ -345,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781304865,
+        "current_timestamp": 1781655332,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -361,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3362,
-    "remaining": 2482,
+    "resets_in_seconds": 2457,
+    "remaining": 2464,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
