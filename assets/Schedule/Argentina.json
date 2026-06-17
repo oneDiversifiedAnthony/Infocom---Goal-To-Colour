@@ -116,7 +116,7 @@
               "group_id": 253028,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 2,
+              "state_id": 22,
               "venue_id": 72370,
               "name": "Argentina vs Algeria",
               "starting_at": "2026-06-17 01:00:00",
@@ -175,7 +175,7 @@
                   "type_id": 1525,
                   "participant_id": 18644,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "CURRENT"
@@ -192,15 +192,48 @@
                   "description": "CURRENT"
                 },
                 {
+                  "id": 26001527,
+                  "fixture_id": 19609145,
+                  "type_id": 2,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
                   "id": 26001526,
                   "fixture_id": 19609145,
                   "type_id": 2,
                   "participant_id": 18644,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "2ND_HALF"
+                },
+                {
+                  "id": 26001672,
+                  "fixture_id": 19609145,
+                  "type_id": 48996,
+                  "participant_id": 18644,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 26001673,
+                  "fixture_id": 19609145,
+                  "type_id": 48996,
+                  "participant_id": 18620,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
                 },
                 {
                   "id": 26001524,
@@ -208,7 +241,7 @@
                   "type_id": 1,
                   "participant_id": 18644,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "1ST_HALF"
@@ -223,17 +256,6 @@
                     "participant": "away"
                   },
                   "description": "1ST_HALF"
-                },
-                {
-                  "id": 26001527,
-                  "fixture_id": 19609145,
-                  "type_id": 2,
-                  "participant_id": 18620,
-                  "score": {
-                    "goals": 0,
-                    "participant": "away"
-                  },
-                  "description": "2ND_HALF"
                 }
               ]
             }
@@ -3215,7 +3237,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781658926,
+        "current_timestamp": 1781662510,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3231,8 +3253,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 2688,
-    "remaining": 2480,
+    "resets_in_seconds": 2717,
+    "remaining": 2462,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

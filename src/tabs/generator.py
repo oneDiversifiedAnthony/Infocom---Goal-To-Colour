@@ -41,12 +41,13 @@ from src.constants import SWATCH_CANVAS_SIZE, RANDOM_CYCLE_INTERVAL_MS, DMX_MAX_
 
 
 def build_generator_tab(notebook, draw_swatches, get_state, set_state,
-                        toggle_walk_triggers=None):
+                        toggle_walk_triggers=None, blackout_triggers=None):
     """Build the Colour Generator tab.
 
     get_state() -> (team_colours, team_name)
     set_state(team_colours, team_name)
     toggle_walk_triggers() -> bool  (start/stop the universe-2 channel walk)
+    blackout_triggers()  (zero all universe-2 triggers, called on BLACKOUT)
     """
     tab = tk.Frame(notebook)
     notebook.add(tab, text="Colour Generator")
@@ -132,6 +133,8 @@ def build_generator_tab(notebook, draw_swatches, get_state, set_state,
         set_state(colours, "Blackout")
         gen_team_label.config(text="Blackout")
         draw_swatches(colours)
+        if blackout_triggers is not None:
+            blackout_triggers()  # also kill all Universe 2 triggers
 
     tk.Button(tab, text="BLACKOUT", font=("Segoe UI", 12, "bold"),
               bg="#000000", fg="white", padx=30, pady=8,

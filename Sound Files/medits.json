@@ -36,17 +36,27 @@
     "event": "Goal Home",
     "cue_out": 0.8924,
     "loop_point": 0.770504,
-    "loop_first_half": true,
-    "loop_half_time": true,
-    "cue_in": 0.014296
+    "cue_in": 0.014296,
+    "gain_db": -4.5
   },
   "SFX - FOG HORN.mp3": {
     "output_device": "DVS Transmit  7-8 (Dante Virtual Soundcard)",
     "event": "Goal",
-    "cue_out": 0.850263
+    "cue_out": 0.850263,
+    "gain_db": 6.0
   },
   "PreGame.mp3": {
     "output_device": "DVS Transmit 15-16 (Dante Virtual Soundcard)",
     "cue_out": 0.943567
+  },
+  "Audience .wav": {
+    "output_device": "DVS Transmit  9-10 (Dante Virtual Soundcard)",
+    "loop_first_half": true,
+    "loop_second_half": true,
+    "loop_free_run": true,
+    "gain_db": 3.0,
+    "loop_point": 0.762622,
+    "cue_in": 0.538809,
+    "cue_out": 0.79578
   }
 }

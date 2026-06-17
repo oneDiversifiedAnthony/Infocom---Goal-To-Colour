@@ -269,6 +269,7 @@ class App:
                 lambda: (self.team_colours, self.team_name),
                 self._set_raw_state,
                 toggle_walk_triggers=self._toggle_walk_triggers,
+                blackout_triggers=self._blackout_triggers,
             )
 
         # Chases
@@ -470,7 +471,9 @@ class App:
         self._draw_swatches(colours)
         self._update_sacn_country(country_name)
         self._highlight_flag(country_name)
-        if country_name:
+        if country_name.upper() == "BLACKOUT":
+            self._blackout_triggers()  # web /testing BLACKOUT also kills U2 triggers
+        elif country_name:
             self._fire_trigger(country_name)
 
     def _goal_pressed(self, colours, country_name, is_home=None):
@@ -574,6 +577,14 @@ class App:
         # Blackout colour output
         black = [[0, 0, 0]] * 3
         self._draw_swatches(black)
+
+    def _blackout_triggers(self):
+        """BLACKOUT: stop the walk and zero every Universe 2 trigger channel."""
+        self._stop_walk_triggers()
+        self._clear_all_triggers()
+        # Kill all of Universe 2's trigger channels, not just team-mapped ones
+        for ch in range(1, self.WALK_CHANNEL_COUNT + 1):
+            self.sacn.send_trigger(TRIGGER_UNIVERSE, ch, 0)
 
     # ── Walk the triggers ────────────────────────────────────────────────
     WALK_CHANNEL_COUNT = 50   # why: step channels 1-50 of the trigger universe
