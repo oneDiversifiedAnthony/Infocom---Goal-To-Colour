@@ -19,3 +19,7 @@
   data: [0 items] -> [1 items]
   message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
 
+[2026-06-16 20:07:43] SCORE CHANGE: Argentina vs Algeria  0-0 → 1-0
+[2026-06-16 20:07:58] SCORE CHANGE: Argentina vs Algeria  1-0 → 0-0
+[2026-06-16 20:10:44] SCORE CHANGE: Argentina vs Algeria  0-0 → 0-1
+[2026-06-16 20:11:58] SCORE CHANGE: Argentina vs Algeria  0-1 → 0-0

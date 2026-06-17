@@ -116,7 +116,7 @@
               "group_id": 253028,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 1,
+              "state_id": 2,
               "venue_id": 72370,
               "name": "Argentina vs Algeria",
               "starting_at": "2026-06-17 01:00:00",
@@ -3215,7 +3215,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781657116,
+        "current_timestamp": 1781658926,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -3231,8 +3231,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 673,
-    "remaining": 2412,
+    "resets_in_seconds": 2688,
+    "remaining": 2480,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

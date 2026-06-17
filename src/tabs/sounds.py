@@ -699,7 +699,7 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         available_h = cards_canvas.winfo_height()
         if available_h < 50:
             available_h = 500
-        card_h = max(220, available_h // len(files))
+        card_h = max(260, available_h // len(files))  # room for loop controls + dropdowns
 
         for i, filepath in enumerate(files):
             _build_sound_card(filepath, i, card_h)
@@ -774,34 +774,35 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
                              bg="#6600cc", fg="white", width=6)
         half_btn.pack(pady=(0, 4))
 
+        # loop_var kept for compatibility (Free Run is the visible loop toggle)
         loop_var = tk.BooleanVar(value=False)
-        tk.Checkbutton(ctrl, text="Loop", variable=loop_var,
-                       font=("Segoe UI", 9)).pack()
-
-        # Loop windows: game states this sound auto-loops in (1st half / HT / 2nd half)
         loop_win_vars = {
             "first_half":  tk.BooleanVar(value=file_medits.get("loop_first_half", False)),
             "half_time":   tk.BooleanVar(value=file_medits.get("loop_half_time", False)),
             "second_half": tk.BooleanVar(value=file_medits.get("loop_second_half", False)),
         }
-        # Free Run: pressing Play loops continuously, independent of game windows
         free_run_var = tk.BooleanVar(value=file_medits.get("loop_free_run", False))
-        win_frame = tk.LabelFrame(ctrl, text="Loop window", font=("Segoe UI", 7), fg="#aaaaaa")
-        win_frame.pack(fill="x", pady=(2, 2))
-        tk.Checkbutton(win_frame, text="Free Run", variable=free_run_var,
-                       font=("Segoe UI", 7, "bold"), command=lambda: _save_cue()).pack(anchor="w")
-        tk.Checkbutton(win_frame, text="1st Half", variable=loop_win_vars["first_half"],
-                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(anchor="w")
-        tk.Checkbutton(win_frame, text="Half Time", variable=loop_win_vars["half_time"],
-                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(anchor="w")
-        tk.Checkbutton(win_frame, text="2nd Half", variable=loop_win_vars["second_half"],
-                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(anchor="w")
 
-        # Set a loop point at the hover position (also bound to the "L" key)
-        loop_btn = tk.Button(ctrl, text="Set Loop (L)", font=("Segoe UI", 8),
-                             bg="#9b59b6", fg="white",
+        # Compact loop controls: 2 rows so the cards stay short enough to show
+        # the Event/Output dropdowns below.
+        win_frame = tk.LabelFrame(ctrl, text="Loop", font=("Segoe UI", 7), fg="#aaaaaa")
+        win_frame.pack(fill="x", pady=(2, 2))
+        _wrow1 = tk.Frame(win_frame)
+        _wrow1.pack(fill="x")
+        tk.Checkbutton(_wrow1, text="Free Run", variable=free_run_var,
+                       font=("Segoe UI", 7, "bold"), command=lambda: _save_cue()).pack(side="left")
+        loop_btn = tk.Button(_wrow1, text="Set L", font=("Segoe UI", 7),
+                             bg="#9b59b6", fg="white", padx=3, pady=0,
                              command=lambda: _loop_at_hover())
-        loop_btn.pack(fill="x", pady=(2, 0))
+        loop_btn.pack(side="right")
+        _wrow2 = tk.Frame(win_frame)
+        _wrow2.pack(fill="x")
+        tk.Checkbutton(_wrow2, text="1st", variable=loop_win_vars["first_half"],
+                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(side="left")
+        tk.Checkbutton(_wrow2, text="HT", variable=loop_win_vars["half_time"],
+                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(side="left")
+        tk.Checkbutton(_wrow2, text="2nd", variable=loop_win_vars["second_half"],
+                       font=("Segoe UI", 7), command=lambda: _save_cue()).pack(side="left")
 
         def _clear_medits():
             cue_in[0] = None
