@@ -12,7 +12,7 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
@@ -82,7 +82,7 @@
                   "founded": 1863,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-10 21:00:00",
+                  "last_played_at": "2026-06-17 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -102,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609167,
@@ -168,7 +168,74 @@
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 26003564,
+                  "fixture_id": 19609167,
+                  "type_id": 1525,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26003567,
+                  "fixture_id": 19609167,
+                  "type_id": 1,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 26003565,
+                  "fixture_id": 19609167,
+                  "type_id": 1525,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26003566,
+                  "fixture_id": 19609167,
+                  "type_id": 1,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 26003569,
+                  "fixture_id": 19609167,
+                  "type_id": 2,
+                  "participant_id": 18553,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 26003568,
+                  "fixture_id": 19609167,
+                  "type_id": 2,
+                  "participant_id": 18717,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
             }
           ]
         },
@@ -180,7 +247,7 @@
           "stage_id": 77478590,
           "name": "2",
           "finished": false,
-          "is_current": false,
+          "is_current": true,
           "starting_at": "2026-06-18",
           "ending_at": "2026-06-24",
           "games_in_current_week": true,
@@ -238,7 +305,7 @@
                   "founded": 1912,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 18:45:00",
+                  "last_played_at": "2026-06-17 20:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -1976,7 +2043,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781719150,
+        "current_timestamp": 1781733792,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1992,8 +2059,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 955,
-    "remaining": 2355,
+    "resets_in_seconds": 718,
+    "remaining": 2401,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

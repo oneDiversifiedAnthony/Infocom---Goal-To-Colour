@@ -12,7 +12,7 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
@@ -63,7 +63,7 @@
                   "founded": 1914,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
+                  "last_played_at": "2026-06-17 17:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -102,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609166,
@@ -116,11 +116,11 @@
               "group_id": 253029,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 3,
+              "state_id": 5,
               "venue_id": 21827,
               "name": "Portugal vs Congo DR",
               "starting_at": "2026-06-17 17:00:00",
-              "result_info": null,
+              "result_info": "Game ended in draw.",
               "leg": "1/1",
               "details": "Match 23",
               "length": 90,
@@ -129,25 +129,6 @@
               "has_premium_odds": true,
               "starting_at_timestamp": 1781715600,
               "participants": [
-                {
-                  "id": 18552,
-                  "sport_id": 1,
-                  "country_id": 1320,
-                  "venue_id": 3695,
-                  "gender": "male",
-                  "name": "Congo DR",
-                  "short_code": "COD",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
-                  "founded": 1919,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-03 18:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": 2
-                  }
-                },
                 {
                   "id": 18701,
                   "sport_id": 1,
@@ -160,11 +141,30 @@
                   "founded": 1914,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
+                  "last_played_at": "2026-06-17 17:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": false,
                     "position": 1
+                  }
+                },
+                {
+                  "id": 18552,
+                  "sport_id": 1,
+                  "country_id": 1320,
+                  "venue_id": 3695,
+                  "gender": "male",
+                  "name": "Congo DR",
+                  "short_code": "COD",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/24/18552.png",
+                  "founded": 1919,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-17 17:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": false,
+                    "position": 2
                   }
                 }
               ],
@@ -225,6 +225,28 @@
                   "description": "2ND_HALF"
                 },
                 {
+                  "id": 26002971,
+                  "fixture_id": 19609166,
+                  "type_id": 48996,
+                  "participant_id": 18701,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 26002972,
+                  "fixture_id": 19609166,
+                  "type_id": 48996,
+                  "participant_id": 18552,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
                   "id": 26002442,
                   "fixture_id": 19609166,
                   "type_id": 2,
@@ -247,7 +269,7 @@
           "stage_id": 77478590,
           "name": "2",
           "finished": false,
-          "is_current": false,
+          "is_current": true,
           "starting_at": "2026-06-18",
           "ending_at": "2026-06-24",
           "games_in_current_week": true,
@@ -286,7 +308,7 @@
                   "founded": 1914,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-10 19:45:00",
+                  "last_played_at": "2026-06-17 17:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -323,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781719151,
+        "current_timestamp": 1781733793,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -339,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 954,
-    "remaining": 2354,
+    "resets_in_seconds": 717,
+    "remaining": 2400,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

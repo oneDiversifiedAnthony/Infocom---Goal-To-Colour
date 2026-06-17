@@ -1,0 +1,25 @@
+2026-06-17 17:03:02, tokens_remaining: 2464, call: events, phase: idle
+2026-06-17 17:03:02, EVENT: EVENT_16 12' Harry Kane  (1-0) [England vs Croatia]
+2026-06-17 17:03:02, EVENT: GOAL 36' Martin Baturina (1-1) [England vs Croatia]
+2026-06-17 17:03:02, EVENT: GOAL 42' Harry Kane  (2-1) [England vs Croatia]
+2026-06-17 17:03:02, EVENT: GOAL 45+5' Petar Musa (2-2) [England vs Croatia]
+2026-06-17 17:03:02, EVENT: GOAL 47' Jude Bellingham (3-2) [England vs Croatia]
+2026-06-17 17:03:02, EVENT: GOAL 85' Marcus Rashford (4-2) [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 58' Mateo Kovacic  [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 66' Igor Matanovic [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 66' Marco Pašalić [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 72' Marcus Rashford [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 72' Morgan Rogers [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 72' Bukayo Saka [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 78' Nikola Vlašić [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 78' Andrej Kramaric [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 79' Djed Spence [England vs Croatia]
+2026-06-17 17:03:02, EVENT: SUBSTITUTION 87' Marc Guéhi [England vs Croatia]
+2026-06-17 17:03:02, EVENT: EVENT_10 11' Harry Kane  [England vs Croatia]
+2026-06-17 17:03:02, STATE_CHANGE: England vs Croatia [— -> FT]
+2026-06-17 17:03:13, tokens_remaining: 2463, call: scores, phase: postgame
+2026-06-17 17:03:23, tokens_remaining: 2462, call: scores, phase: postgame
+2026-06-17 17:03:33, tokens_remaining: 2461, call: scores, phase: postgame
+2026-06-17 17:03:44, tokens_remaining: 2460, call: scores, phase: postgame
+2026-06-17 17:03:54, tokens_remaining: 2459, call: scores, phase: postgame
+2026-06-17 17:04:55, tokens_remaining: 2458, call: scores, phase: postgame

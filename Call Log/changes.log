@@ -50,3 +50,17 @@
 
 [2026-06-17 12:07:05] SCORE CHANGE: Portugal vs Congo DR  0-0 → 1-0
 [2026-06-17 12:51:29] SCORE CHANGE: Portugal vs Congo DR  1-0 → 1-1
+[2026-06-17 14:16:00] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-17 14:45:19] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-17 15:11:48] SCORE CHANGE: England vs Croatia  0-0 → 1-0
+[2026-06-17 15:35:54] SCORE CHANGE: England vs Croatia  1-0 → 1-1
+[2026-06-17 15:41:51] SCORE CHANGE: England vs Croatia  1-1 → 2-1
+[2026-06-17 15:50:29] SCORE CHANGE: England vs Croatia  2-1 → 2-2
+[2026-06-17 16:11:15] SCORE CHANGE: England vs Croatia  2-2 → 3-2
+[2026-06-17 16:49:28] SCORE CHANGE: England vs Croatia  3-2 → 4-2

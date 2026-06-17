@@ -241,10 +241,11 @@ def _build_html():
                 if extra:
                     min_str = f"{minute}+{extra}'"
                 type_id = ev.get("type_id")
-                player = ev.get("player_name", "")
-                info = ev.get("info", "")
-                addition = ev.get("addition", "")
-                result = ev.get("result", "")
+                # these keys may be present but null -> coerce to "" so f-strings/+= are safe
+                player = ev.get("player_name") or ""
+                info = ev.get("info") or ""
+                addition = ev.get("addition") or ""
+                result = ev.get("result") or ""
                 # Determine which team
                 pid = ev.get("participant_id")
                 # Icon and colour based on event type
@@ -267,7 +268,7 @@ def _build_html():
                 elif type_id == 18:  # Substitution
                     icon = "🔄"
                     colour = "#0088ff"
-                    related = ev.get("related_player_name", "")
+                    related = ev.get("related_player_name") or ""
                     detail = f"{player} ↔ {related}" if related else player
                 else:
                     icon = "📋"

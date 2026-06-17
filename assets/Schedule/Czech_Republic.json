@@ -12,7 +12,7 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
+      "games_in_current_week": false,
       "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
@@ -102,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609153,
@@ -269,7 +269,7 @@
           "stage_id": 77478590,
           "name": "2",
           "finished": false,
-          "is_current": false,
+          "is_current": true,
           "starting_at": "2026-06-18",
           "ending_at": "2026-06-24",
           "games_in_current_week": true,
@@ -345,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781719154,
+        "current_timestamp": 1781733798,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -361,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 951,
-    "remaining": 2347,
+    "resets_in_seconds": 712,
+    "remaining": 2393,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"
