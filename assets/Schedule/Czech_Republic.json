@@ -12,7 +12,7 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": false,
+      "games_in_current_week": true,
       "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
@@ -63,7 +63,7 @@
                   "founded": 1901,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-12 02:00:00",
+                  "last_played_at": "2026-06-18 16:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -105,7 +105,7 @@
           "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": false,
+          "games_in_current_week": true,
           "fixtures": [
             {
               "id": 19609153,
@@ -141,7 +141,7 @@
                   "founded": 1901,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-12 02:00:00",
+                  "last_played_at": "2026-06-18 16:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -283,11 +283,11 @@
               "group_id": 253019,
               "aggregate_id": null,
               "round_id": 395360,
-              "state_id": 1,
+              "state_id": 5,
               "venue_id": 161191,
               "name": "Czech Republic vs South Africa",
               "starting_at": "2026-06-18 16:00:00",
-              "result_info": null,
+              "result_info": "Game ended in draw.",
               "leg": "1/1",
               "details": "Match 25",
               "length": 90,
@@ -308,10 +308,10 @@
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 19:00:00",
+                  "last_played_at": "2026-06-18 16:00:00",
                   "meta": {
                     "location": "away",
-                    "winner": null,
+                    "winner": false,
                     "position": 4
                   }
                 },
@@ -327,10 +327,10 @@
                   "founded": 1901,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-12 02:00:00",
+                  "last_played_at": "2026-06-18 16:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": false,
                     "position": 3
                   }
                 }
@@ -342,7 +342,7 @@
                   "type_id": 1525,
                   "participant_id": 18555,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "away"
                   },
                   "description": "CURRENT"
@@ -353,7 +353,7 @@
                   "type_id": 1525,
                   "participant_id": 18718,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "CURRENT"
@@ -364,7 +364,7 @@
                   "type_id": 2,
                   "participant_id": 18555,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "away"
                   },
                   "description": "2ND_HALF"
@@ -386,7 +386,7 @@
                   "type_id": 1,
                   "participant_id": 18718,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "1ST_HALF"
@@ -397,10 +397,32 @@
                   "type_id": 2,
                   "participant_id": 18718,
                   "score": {
-                    "goals": 0,
+                    "goals": 1,
                     "participant": "home"
                   },
                   "description": "2ND_HALF"
+                },
+                {
+                  "id": 26005025,
+                  "fixture_id": 19609168,
+                  "type_id": 48996,
+                  "participant_id": 18555,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 26005024,
+                  "fixture_id": 19609168,
+                  "type_id": 48996,
+                  "participant_id": 18718,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
                 }
               ]
             }
@@ -412,7 +434,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781796620,
+        "current_timestamp": 1781826337,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -428,8 +450,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3592,
-    "remaining": 2489,
+    "resets_in_seconds": 2692,
+    "remaining": 2477,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

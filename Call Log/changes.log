@@ -89,3 +89,36 @@
   data: [1 items] -> [0 items]
   message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
 
+[2026-06-18 10:45:55] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-18 11:05:34] SCORE CHANGE: Czech Republic vs South Africa  0-0 → 1-0
+[2026-06-18 12:44:38] SCORE CHANGE: Czech Republic vs South Africa  1-0 → 1-1
+[2026-06-18 13:14:40] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-18 13:46:02] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-18 15:33:21] SCORE CHANGE: Switzerland vs Bosnia and Herzegovina  0-0 → 1-0
+[2026-06-18 15:43:29] SCORE CHANGE: Switzerland vs Bosnia and Herzegovina  1-0 → 2-0
+[2026-06-18 15:48:55] SCORE CHANGE: Switzerland vs Bosnia and Herzegovina  2-0 → 3-0
+[2026-06-18 15:52:11] SCORE CHANGE: Switzerland vs Bosnia and Herzegovina  3-0 → 3-1
+[2026-06-18 15:56:40] SCORE CHANGE: Switzerland vs Bosnia and Herzegovina  3-1 → 4-1
+[2026-06-18 16:13:05] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-18 16:45:23] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-18 17:17:08] SCORE CHANGE: Canada vs Qatar  0-0 → 1-0
+[2026-06-18 17:29:32] SCORE CHANGE: Canada vs Qatar  1-0 → 2-0
+[2026-06-18 17:48:29] SCORE CHANGE: Canada vs Qatar  2-0 → 3-0
+[2026-06-18 18:25:25] SCORE CHANGE: Canada vs Qatar  3-0 → 4-0
+[2026-06-18 18:36:39] SCORE CHANGE: Canada vs Qatar  4-0 → 5-0
+[2026-06-18 18:53:30] SCORE CHANGE: Canada vs Qatar  5-0 → 6-0

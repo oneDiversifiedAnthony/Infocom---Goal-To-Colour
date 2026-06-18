@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-06-18 10:45:55",
+  "tracked_fields": {
+    "data": [
+      {
+        "id": 19609168,
+        "sport_id": 1,
+        "league_id": 732,
+        "season_id": 26618,
+        "stage_id": 77478590,
+        "group_id": 253019,
+        "aggregate_id": null,
+        "round_id": 395360,
+        "state_id": 1,
+        "venue_id": 161191,
+        "name": "Czech Republic vs South Africa",
+        "starting_at": "2026-06-18 16:00:00",
+        "result_info": null,
+        "leg": "1/1",
+        "details": "Match 25",
+        "length": 90,
+        "placeholder": false,
+        "has_odds": true,
+        "has_premium_odds": true,
+        "starting_at_timestamp": 1781798400,
+        "scores": [
+          {
+            "id": 26004646,
+            "fixture_id": 19609168,
+            "type_id": 1525,
+            "participant_id": 18555,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26004647,
+            "fixture_id": 19609168,
+            "type_id": 1525,
+            "participant_id": 18718,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26004650,
+            "fixture_id": 19609168,
+            "type_id": 2,
+            "participant_id": 18555,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26004648,
+            "fixture_id": 19609168,
+            "type_id": 1,
+            "participant_id": 18555,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26004649,
+            "fixture_id": 19609168,
+            "type_id": 1,
+            "participant_id": 18718,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26004651,
+            "fixture_id": 19609168,
+            "type_id": 2,
+            "participant_id": 18718,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "2ND_HALF"
+          }
+        ],
+        "periods": []
+      }
+    ]
+  }
+}

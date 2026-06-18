@@ -12,7 +12,7 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": false,
+      "games_in_current_week": true,
       "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
@@ -63,7 +63,7 @@
                   "founded": 1901,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-12 02:00:00",
+                  "last_played_at": "2026-06-18 16:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -105,7 +105,7 @@
           "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": false,
+          "games_in_current_week": true,
           "fixtures": [
             {
               "id": 19609127,
@@ -160,7 +160,7 @@
                   "founded": 1991,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-11 19:00:00",
+                  "last_played_at": "2026-06-18 16:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -335,7 +335,74 @@
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 26005390,
+                  "fixture_id": 19609128,
+                  "type_id": 1525,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26005392,
+                  "fixture_id": 19609128,
+                  "type_id": 1,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 26005393,
+                  "fixture_id": 19609128,
+                  "type_id": 1,
+                  "participant_id": 18576,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 26005394,
+                  "fixture_id": 19609128,
+                  "type_id": 2,
+                  "participant_id": 18567,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 26005391,
+                  "fixture_id": 19609128,
+                  "type_id": 1525,
+                  "participant_id": 18576,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26005395,
+                  "fixture_id": 19609128,
+                  "type_id": 2,
+                  "participant_id": 18576,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
             }
           ]
         }
@@ -345,7 +412,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781796954,
+        "current_timestamp": 1781826332,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -361,7 +428,7 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3258,
+    "resets_in_seconds": 2697,
     "remaining": 2484,
     "requested_entity": "Stage"
   },

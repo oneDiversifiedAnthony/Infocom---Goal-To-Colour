@@ -1848,7 +1848,23 @@ def build_sounds_tab(notebook, countries_db=None, stop_editor_preview=None):
         return [{"name": ctrl.get("filename", ""), "playing": bool(ctrl["is_playing"]())}
                 for ctrl in sound_controls]
 
+    def play_anthem(country_name):
+        """Play a country's national anthem (e.g. on a win). Returns how long it
+        will actually play in seconds (auto-fade aware), or 0 if no anthem."""
+        teams = countries_db.get("teams", {}) if countries_db else {}
+        team = teams.get(country_name, {})
+        if not team.get("anthem"):
+            return 0
+        _anthem_play(country_name)
+        # The anthem auto-fades after ANTHEM_AUTO_FADE_SEC; effective play time is
+        # that plus the fade, capped to the file length.
+        effective = ANTHEM_AUTO_FADE_SEC + ANTHEM_FADE_DURATION_MS / 1000.0
+        file_len = team.get("anthem_length") or 0
+        if file_len and file_len < effective:
+            effective = file_len
+        return effective
+
     refresh_btn.config(command=_scan_and_populate)
     _scan_and_populate()
 
-    return fire_event, play_by_name, stop_by_name, list_sounds
+    return fire_event, play_by_name, stop_by_name, list_sounds, play_anthem

@@ -79,12 +79,18 @@ def build_api_tab(notebook, status_bar=None):
     _fetch_schedule_cb = [None]
     # Holder for score-change callback: fn(team_name, home, away, home_score, away_score, prev_home, prev_away)
     _on_score_change_cb = [None]
+    # Holder for game-final callback: fn(winner_name, home, away, home_score, away_score)
+    _on_game_final_cb = [None]
+    _final_fired = set()  # fixture ids we've already fired the game-final callback for
 
     def set_fetch_schedule(cb):
         _fetch_schedule_cb[0] = cb
 
     def set_on_score_change(cb):
         _on_score_change_cb[0] = cb
+
+    def set_on_game_final(cb):
+        _on_game_final_cb[0] = cb
 
     # Previous livescore snapshot for delta detection
     _prev_live_scores = [{}]
@@ -591,9 +597,21 @@ def build_api_tab(notebook, status_bar=None):
                                 old_sid, state_id,
                             )
                             _prev_state_ids[fid] = state_id
-                            # Game just finished — fetch schedule for final scores
-                            if state_id in (5, 7, 8) and _fetch_schedule_cb[0]:
-                                _fetch_schedule_cb[0]()
+                            # Game just finished (FT / after extra time / after pens)
+                            if state_id in (5, 7, 8):
+                                if _fetch_schedule_cb[0]:
+                                    _fetch_schedule_cb[0]()
+                                # Winner -> fire the game-final callback once per fixture
+                                if fid not in _final_fired and _on_game_final_cb[0]:
+                                    ci = current.get(fid, {})
+                                    hs = ci.get("home_score", 0)
+                                    aw = ci.get("away_score", 0)
+                                    if hs != aw:  # not a tie -> there is a winner
+                                        winner = ci.get("home", "") if hs > aw else ci.get("away", "")
+                                        _final_fired.add(fid)
+                                        if winner:
+                                            _on_game_final_cb[0](
+                                                winner, ci.get("home", ""), ci.get("away", ""), hs, aw)
                         _scores_module.update_state(fid, state_id)
                     periods = fix.get("periods")
                     if isinstance(periods, list) and periods:
@@ -949,4 +967,4 @@ def build_api_tab(notebook, status_bar=None):
 
     tab.after(5_000, _check_schedule_timer)
 
-    return _start_auto, set_fetch_schedule, set_on_score_change, token_var
+    return _start_auto, set_fetch_schedule, set_on_score_change, token_var, set_on_game_final

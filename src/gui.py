@@ -194,12 +194,13 @@ class App:
         self._highlight_flag = build_flags_tab(self.notebook, self.db, self._goal_pressed)
         self._flags_tab_index = self.notebook.index("end") - 1
 
-        self._start_api_auto, set_fetch_schedule, set_on_score_change, api_token_var = \
+        self._start_api_auto, set_fetch_schedule, set_on_score_change, api_token_var, set_on_game_final = \
             build_api_tab(self.notebook, self.status_bar)
         self._api_live_tab_index = self.notebook.index("end") - 1
         _, fetch_schedule = build_api_schedule_tab(self.notebook, api_token_var, self.root)
         set_fetch_schedule(fetch_schedule)
         set_on_score_change(self._on_live_score_change)
+        set_on_game_final(self._team_victory)  # winner -> anthem + held light
 
         # ── Settings tab (sub-notebook) ───────────────────────────────
         settings_tab = tk.Frame(self.notebook)
@@ -281,7 +282,7 @@ class App:
 
         # Sounds (top-level tab)
         self._fire_sound_event, self._play_sound_by_name, self._stop_sound_by_name, \
-            self._list_sounds = build_sounds_tab(
+            self._list_sounds, self._play_anthem = build_sounds_tab(
                 self.notebook, self.countries_db,
                 stop_editor_preview=self._stop_editor_preview)
         # Expose play/stop/list to the web server's /sounds page
@@ -591,6 +592,44 @@ class App:
         # Kill all of Universe 2's trigger channels, not just team-mapped ones
         for ch in range(1, self.WALK_CHANNEL_COUNT + 1):
             self.sacn.send_trigger(TRIGGER_UNIVERSE, ch, 0)
+
+    def _team_victory(self, winner, home="", away="", home_score=0, away_score=0):
+        """Game final with a winner: play the winner's anthem and hold their
+        lighting trigger high for the whole time the anthem plays."""
+        if not winner:
+            return
+        length = 0
+        play_anthem = getattr(self, "_play_anthem", None)
+        if play_anthem:
+            try:
+                length = play_anthem(winner) or 0
+            except Exception:
+                length = 0
+        self._hold_trigger(winner, length)
+
+    def _hold_trigger(self, country_name, duration_sec):
+        """Drive a team's trigger high and hold it for duration_sec, then drop it."""
+        team = self.countries_db.get("teams", {}).get(country_name, {})
+        trigger = team.get("trigger")
+        if not trigger:
+            return
+        uni, ch = trigger["universe"], trigger["channel"]
+        existing = self._active_triggers.get(country_name)
+        if existing and existing[2]:
+            self.root.after_cancel(existing[2])
+        self.sacn.send_trigger(uni, ch, DMX_MAX_VALUE)
+        ms = int(duration_sec * 1000) if duration_sec and duration_sec > 0 else TRIGGER_PULSE_DURATION_MS
+        self.status_bar.trigger_label.config(text=f"{country_name} WINS", fg="#ffcc00")
+
+        def _drop(name=country_name):
+            entry = self._active_triggers.pop(name, None)
+            if entry:
+                self.sacn.send_trigger(entry[0], entry[1], 0)
+            if not self._active_triggers:
+                self.status_bar.trigger_label.config(text="", fg=FG_DIM)
+
+        timer_id = self.root.after(ms, _drop)
+        self._active_triggers[country_name] = (uni, ch, timer_id)
 
     # ── Walk the triggers ────────────────────────────────────────────────
     WALK_CHANNEL_COUNT = 50   # why: step channels 1-50 of the trigger universe

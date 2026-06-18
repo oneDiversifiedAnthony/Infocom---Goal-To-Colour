@@ -12,7 +12,7 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": false,
+      "games_in_current_week": true,
       "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
@@ -63,7 +63,7 @@
                   "founded": 1895,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-13 19:00:00",
+                  "last_played_at": "2026-06-18 19:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -105,7 +105,7 @@
           "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": false,
+          "games_in_current_week": true,
           "fixtures": [
             {
               "id": 19609154,
@@ -160,7 +160,7 @@
                   "founded": 1992,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-12 19:00:00",
+                  "last_played_at": "2026-06-18 19:00:00",
                   "meta": {
                     "location": "away",
                     "winner": false,
@@ -283,7 +283,7 @@
               "group_id": 253020,
               "aggregate_id": null,
               "round_id": 395360,
-              "state_id": 1,
+              "state_id": 22,
               "venue_id": 11554,
               "name": "Canada vs Qatar",
               "starting_at": "2026-06-18 22:00:00",
@@ -331,11 +331,100 @@
                   "meta": {
                     "location": "home",
                     "winner": null,
-                    "position": 3
+                    "position": 2
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 26005298,
+                  "fixture_id": 19609170,
+                  "type_id": 1,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 26005296,
+                  "fixture_id": 19609170,
+                  "type_id": 1525,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26005299,
+                  "fixture_id": 19609170,
+                  "type_id": 1,
+                  "participant_id": 18572,
+                  "score": {
+                    "goals": 3,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 26005300,
+                  "fixture_id": 19609170,
+                  "type_id": 2,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 26005378,
+                  "fixture_id": 19609170,
+                  "type_id": 48996,
+                  "participant_id": 18572,
+                  "score": {
+                    "goals": 2,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 26005379,
+                  "fixture_id": 19609170,
+                  "type_id": 48996,
+                  "participant_id": 18544,
+                  "score": {
+                    "goals": 0,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF_ONLY"
+                },
+                {
+                  "id": 26005297,
+                  "fixture_id": 19609170,
+                  "type_id": 1525,
+                  "participant_id": 18572,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26005301,
+                  "fixture_id": 19609170,
+                  "type_id": 2,
+                  "participant_id": 18572,
+                  "score": {
+                    "goals": 5,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                }
+              ]
             }
           ]
         }
@@ -345,7 +434,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781796952,
+        "current_timestamp": 1781826330,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -361,7 +450,7 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 3260,
+    "resets_in_seconds": 2699,
     "remaining": 2486,
     "requested_entity": "Stage"
   },

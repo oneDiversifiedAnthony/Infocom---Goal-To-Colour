@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-06-18 13:46:02",
+  "tracked_fields": {
+    "data": [
+      {
+        "id": 19609169,
+        "sport_id": 1,
+        "league_id": 732,
+        "season_id": 26618,
+        "stage_id": 77478590,
+        "group_id": 253020,
+        "aggregate_id": null,
+        "round_id": 395360,
+        "state_id": 1,
+        "venue_id": 343444,
+        "name": "Switzerland vs Bosnia and Herzegovina",
+        "starting_at": "2026-06-18 19:00:00",
+        "result_info": null,
+        "leg": "1/1",
+        "details": "Match 26",
+        "length": 90,
+        "placeholder": false,
+        "has_odds": true,
+        "has_premium_odds": true,
+        "starting_at_timestamp": 1781809200,
+        "scores": [
+          {
+            "id": 26005053,
+            "fixture_id": 19609169,
+            "type_id": 1525,
+            "participant_id": 18708,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26005054,
+            "fixture_id": 19609169,
+            "type_id": 1,
+            "participant_id": 18625,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26005055,
+            "fixture_id": 19609169,
+            "type_id": 1,
+            "participant_id": 18708,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26005056,
+            "fixture_id": 19609169,
+            "type_id": 2,
+            "participant_id": 18625,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26005052,
+            "fixture_id": 19609169,
+            "type_id": 1525,
+            "participant_id": 18625,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26005057,
+            "fixture_id": 19609169,
+            "type_id": 2,
+            "participant_id": 18708,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "2ND_HALF"
+          }
+        ],
+        "periods": []
+      }
+    ]
+  }
+}
