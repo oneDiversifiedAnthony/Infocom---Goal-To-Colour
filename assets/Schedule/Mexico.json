@@ -12,88 +12,10 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
-      "tie_breaker_rule_id": null,
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
-        {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609128,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253019,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 181421,
-              "name": "Mexico vs Korea Republic",
-              "starting_at": "2026-06-19 01:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 28",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1781830800,
-              "participants": [
-                {
-                  "id": 18567,
-                  "sport_id": 1,
-                  "country_id": 712,
-                  "venue_id": 175,
-                  "gender": "male",
-                  "name": "Korea Republic",
-                  "short_code": "KOR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
-                  "founded": 1933,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-04 01:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18576,
-                  "sport_id": 1,
-                  "country_id": 458,
-                  "venue_id": 14659,
-                  "gender": "male",
-                  "name": "Mexico",
-                  "short_code": "MEX",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
-                  "founded": 1927,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-11 19:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
         {
           "id": 395362,
           "sport_id": 1,
@@ -141,7 +63,7 @@
                   "founded": 1901,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-05 00:00:00",
+                  "last_played_at": "2026-06-12 02:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -180,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609127,
@@ -223,7 +145,7 @@
                   "meta": {
                     "location": "home",
                     "winner": true,
-                    "position": 2
+                    "position": 1
                   }
                 },
                 {
@@ -242,7 +164,7 @@
                   "meta": {
                     "location": "away",
                     "winner": false,
-                    "position": 3
+                    "position": 4
                   }
                 }
               ],
@@ -338,6 +260,84 @@
               ]
             }
           ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609128,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253019,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 181421,
+              "name": "Mexico vs Korea Republic",
+              "starting_at": "2026-06-19 01:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 28",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781830800,
+              "participants": [
+                {
+                  "id": 18567,
+                  "sport_id": 1,
+                  "country_id": 712,
+                  "venue_id": 175,
+                  "gender": "male",
+                  "name": "Korea Republic",
+                  "short_code": "KOR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/7/18567.png",
+                  "founded": 1933,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-12 02:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 2
+                  }
+                },
+                {
+                  "id": 18576,
+                  "sport_id": 1,
+                  "country_id": 458,
+                  "venue_id": 14659,
+                  "gender": "male",
+                  "name": "Mexico",
+                  "short_code": "MEX",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/16/18576.png",
+                  "founded": 1927,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-11 19:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
         }
       ]
     }
@@ -345,7 +345,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781213420,
+        "current_timestamp": 1781796954,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -361,8 +361,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 76,
-    "remaining": 2463,
+    "resets_in_seconds": 3258,
+    "remaining": 2484,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

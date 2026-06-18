@@ -12,88 +12,10 @@
       "is_current": true,
       "starting_at": "2026-06-11",
       "ending_at": "2026-06-28",
-      "games_in_current_week": true,
-      "tie_breaker_rule_id": null,
+      "games_in_current_week": false,
+      "tie_breaker_rule_id": 170,
       "aggregates": [],
       "rounds": [
-        {
-          "id": 395360,
-          "sport_id": 1,
-          "league_id": 732,
-          "season_id": 26618,
-          "stage_id": 77478590,
-          "name": "2",
-          "finished": false,
-          "is_current": false,
-          "starting_at": "2026-06-18",
-          "ending_at": "2026-06-24",
-          "games_in_current_week": false,
-          "fixtures": [
-            {
-              "id": 19609171,
-              "sport_id": 1,
-              "league_id": 732,
-              "season_id": 26618,
-              "stage_id": 77478590,
-              "group_id": 253021,
-              "aggregate_id": null,
-              "round_id": 395360,
-              "state_id": 1,
-              "venue_id": 160,
-              "name": "Scotland vs Morocco",
-              "starting_at": "2026-06-19 22:00:00",
-              "result_info": null,
-              "leg": "1/1",
-              "details": "Match 30",
-              "length": 90,
-              "placeholder": false,
-              "has_odds": true,
-              "has_premium_odds": true,
-              "starting_at_timestamp": 1781906400,
-              "participants": [
-                {
-                  "id": 18706,
-                  "sport_id": 1,
-                  "country_id": 1161,
-                  "venue_id": 6935,
-                  "gender": "male",
-                  "name": "Scotland",
-                  "short_code": "SCO",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18706.png",
-                  "founded": 1873,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-06 20:00:00",
-                  "meta": {
-                    "location": "home",
-                    "winner": null,
-                    "position": null
-                  }
-                },
-                {
-                  "id": 18551,
-                  "sport_id": 1,
-                  "country_id": 1424,
-                  "venue_id": 1679,
-                  "gender": "male",
-                  "name": "Morocco",
-                  "short_code": "MAR",
-                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
-                  "founded": 1955,
-                  "type": "national",
-                  "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
-                  "meta": {
-                    "location": "away",
-                    "winner": null,
-                    "position": null
-                  }
-                }
-              ],
-              "scores": []
-            }
-          ]
-        },
         {
           "id": 395362,
           "sport_id": 1,
@@ -141,7 +63,7 @@
                   "founded": 1904,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 00:00:00",
+                  "last_played_at": "2026-06-14 01:00:00",
                   "meta": {
                     "location": "away",
                     "winner": null,
@@ -160,7 +82,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -180,10 +102,10 @@
           "stage_id": 77478590,
           "name": "1",
           "finished": false,
-          "is_current": true,
+          "is_current": false,
           "starting_at": "2026-06-11",
           "ending_at": "2026-06-18",
-          "games_in_current_week": true,
+          "games_in_current_week": false,
           "fixtures": [
             {
               "id": 19609131,
@@ -194,11 +116,11 @@
               "group_id": 253021,
               "aggregate_id": null,
               "round_id": 395361,
-              "state_id": 22,
+              "state_id": 5,
               "venue_id": 21826,
               "name": "Brazil vs Morocco",
               "starting_at": "2026-06-13 22:00:00",
-              "result_info": null,
+              "result_info": "Game ended in draw.",
               "leg": "1/1",
               "details": "Match 7",
               "length": 90,
@@ -219,10 +141,10 @@
                   "founded": 1914,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-06 22:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "home",
-                    "winner": null,
+                    "winner": false,
                     "position": 1
                   }
                 },
@@ -238,10 +160,10 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "away",
-                    "winner": null,
+                    "winner": false,
                     "position": 2
                   }
                 }
@@ -338,6 +260,84 @@
               ]
             }
           ]
+        },
+        {
+          "id": 395360,
+          "sport_id": 1,
+          "league_id": 732,
+          "season_id": 26618,
+          "stage_id": 77478590,
+          "name": "2",
+          "finished": false,
+          "is_current": true,
+          "starting_at": "2026-06-18",
+          "ending_at": "2026-06-24",
+          "games_in_current_week": true,
+          "fixtures": [
+            {
+              "id": 19609171,
+              "sport_id": 1,
+              "league_id": 732,
+              "season_id": 26618,
+              "stage_id": 77478590,
+              "group_id": 253021,
+              "aggregate_id": null,
+              "round_id": 395360,
+              "state_id": 1,
+              "venue_id": 160,
+              "name": "Scotland vs Morocco",
+              "starting_at": "2026-06-19 22:00:00",
+              "result_info": null,
+              "leg": "1/1",
+              "details": "Match 30",
+              "length": 90,
+              "placeholder": false,
+              "has_odds": true,
+              "has_premium_odds": true,
+              "starting_at_timestamp": 1781906400,
+              "participants": [
+                {
+                  "id": 18706,
+                  "sport_id": 1,
+                  "country_id": 1161,
+                  "venue_id": 6935,
+                  "gender": "male",
+                  "name": "Scotland",
+                  "short_code": "SCO",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18706.png",
+                  "founded": 1873,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-14 01:00:00",
+                  "meta": {
+                    "location": "home",
+                    "winner": null,
+                    "position": 1
+                  }
+                },
+                {
+                  "id": 18551,
+                  "sport_id": 1,
+                  "country_id": 1424,
+                  "venue_id": 1679,
+                  "gender": "male",
+                  "name": "Morocco",
+                  "short_code": "MAR",
+                  "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+                  "founded": 1955,
+                  "type": "national",
+                  "placeholder": false,
+                  "last_played_at": "2026-06-13 22:00:00",
+                  "meta": {
+                    "location": "away",
+                    "winner": null,
+                    "position": 2
+                  }
+                }
+              ],
+              "scores": []
+            }
+          ]
         }
       ]
     },
@@ -404,7 +404,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -590,7 +590,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -757,7 +757,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -905,7 +905,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1091,7 +1091,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1258,7 +1258,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1384,7 +1384,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": null,
@@ -1481,7 +1481,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "home",
                     "winner": true,
@@ -1662,7 +1662,7 @@
                   "founded": 1955,
                   "type": "national",
                   "placeholder": false,
-                  "last_played_at": "2026-06-07 19:00:00",
+                  "last_played_at": "2026-06-13 22:00:00",
                   "meta": {
                     "location": "away",
                     "winner": true,
@@ -1885,7 +1885,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781394320,
+        "current_timestamp": 1781796954,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -1901,8 +1901,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 55,
-    "remaining": 2416,
+    "resets_in_seconds": 3258,
+    "remaining": 2483,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

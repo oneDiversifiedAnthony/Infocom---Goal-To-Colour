@@ -1,0 +1,98 @@
+{
+  "timestamp": "2026-06-17 20:45:45",
+  "tracked_fields": {
+    "data": [
+      {
+        "id": 19609165,
+        "sport_id": 1,
+        "league_id": 732,
+        "season_id": 26618,
+        "stage_id": 77478590,
+        "group_id": 253029,
+        "aggregate_id": null,
+        "round_id": 395361,
+        "state_id": 1,
+        "venue_id": 1599,
+        "name": "Uzbekistan vs Colombia",
+        "starting_at": "2026-06-18 02:00:00",
+        "result_info": null,
+        "leg": "1/1",
+        "details": "Match 24",
+        "length": 90,
+        "placeholder": false,
+        "has_odds": true,
+        "has_premium_odds": true,
+        "starting_at_timestamp": 1781748000,
+        "scores": [
+          {
+            "id": 26003985,
+            "fixture_id": 19609165,
+            "type_id": 1525,
+            "participant_id": 18720,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26003987,
+            "fixture_id": 19609165,
+            "type_id": 1,
+            "participant_id": 18720,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26003986,
+            "fixture_id": 19609165,
+            "type_id": 1,
+            "participant_id": 18745,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26003988,
+            "fixture_id": 19609165,
+            "type_id": 2,
+            "participant_id": 18745,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26003989,
+            "fixture_id": 19609165,
+            "type_id": 2,
+            "participant_id": 18720,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26003984,
+            "fixture_id": 19609165,
+            "type_id": 1525,
+            "participant_id": 18745,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "CURRENT"
+          }
+        ],
+        "periods": []
+      }
+    ]
+  }
+}

@@ -64,3 +64,28 @@
 [2026-06-17 15:50:29] SCORE CHANGE: England vs Croatia  2-1 → 2-2
 [2026-06-17 16:11:15] SCORE CHANGE: England vs Croatia  2-2 → 3-2
 [2026-06-17 16:49:28] SCORE CHANGE: England vs Croatia  3-2 → 4-2
+[2026-06-17 17:17:40] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-17 17:45:57] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-17 19:56:45] SCORE CHANGE: Ghana vs Panama  0-0 → 1-0
+[2026-06-17 20:19:31] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+
+[2026-06-17 20:45:45] CHANGE DETECTED:
+  data: [0 items] -> [1 items]
+  message: "No result(s) found matching your request. Either the query did not return any re" -> (absent)
+
+[2026-06-17 21:40:23] SCORE CHANGE: Uzbekistan vs Colombia  0-0 → 0-1
+[2026-06-17 22:20:59] SCORE CHANGE: Uzbekistan vs Colombia  0-1 → 1-1
+[2026-06-17 22:26:16] SCORE CHANGE: Uzbekistan vs Colombia  1-1 → 1-2
+[2026-06-17 22:59:28] SCORE CHANGE: Uzbekistan vs Colombia  1-2 → 1-3
+[2026-06-17 23:18:23] CHANGE DETECTED:
+  data: [1 items] -> [0 items]
+  message: (absent) -> "No result(s) found matching your request. Either the query did not return any re"
+

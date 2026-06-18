@@ -1,0 +1,77 @@
+2026-06-17 17:05:43, tokens_remaining: 2457, call: events, phase: idle
+2026-06-17 17:05:43, EVENT: EVENT_16 12' Harry Kane  (1-0) [England vs Croatia]
+2026-06-17 17:05:43, EVENT: GOAL 36' Martin Baturina (1-1) [England vs Croatia]
+2026-06-17 17:05:43, EVENT: GOAL 42' Harry Kane  (2-1) [England vs Croatia]
+2026-06-17 17:05:43, EVENT: GOAL 45+5' Petar Musa (2-2) [England vs Croatia]
+2026-06-17 17:05:43, EVENT: GOAL 47' Jude Bellingham (3-2) [England vs Croatia]
+2026-06-17 17:05:43, EVENT: GOAL 85' Marcus Rashford (4-2) [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 58' Mateo Kovacic  [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 66' Igor Matanovic [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 66' Marco Pašalić [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 72' Marcus Rashford [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 72' Morgan Rogers [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 72' Bukayo Saka [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 78' Nikola Vlašić [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 78' Andrej Kramaric [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 79' Djed Spence [England vs Croatia]
+2026-06-17 17:05:43, EVENT: SUBSTITUTION 87' Marc Guéhi [England vs Croatia]
+2026-06-17 17:05:43, EVENT: EVENT_10 11' Harry Kane  [England vs Croatia]
+2026-06-17 17:05:43, STATE_CHANGE: England vs Croatia [— -> FT]
+2026-06-17 17:05:54, tokens_remaining: 2456, call: scores, phase: postgame
+2026-06-17 17:06:04, tokens_remaining: 2455, call: scores, phase: postgame
+2026-06-17 17:06:14, tokens_remaining: 2454, call: scores, phase: postgame
+2026-06-17 17:06:24, tokens_remaining: 2453, call: scores, phase: postgame
+2026-06-17 17:06:35, tokens_remaining: 2452, call: scores, phase: postgame
+2026-06-17 17:07:35, tokens_remaining: 2451, call: scores, phase: postgame
+2026-06-17 17:08:36, tokens_remaining: 2450, call: scores, phase: postgame
+2026-06-17 17:09:36, tokens_remaining: 2449, call: scores, phase: postgame
+2026-06-17 17:10:37, tokens_remaining: 2448, call: events, phase: postgame
+2026-06-17 17:11:37, tokens_remaining: 2447, call: scores, phase: postgame
+2026-06-17 17:12:38, tokens_remaining: 2446, call: scores, phase: postgame
+2026-06-17 17:13:39, tokens_remaining: 2445, call: scores, phase: postgame
+2026-06-17 17:14:39, tokens_remaining: 2444, call: scores, phase: postgame
+2026-06-17 17:15:39, tokens_remaining: 2443, call: scores, phase: postgame
+2026-06-17 17:16:40, tokens_remaining: 2442, call: scores, phase: postgame
+2026-06-17 17:17:40, tokens_remaining: 2441, call: scores, phase: postgame
+2026-06-17 17:18:41, tokens_remaining: 2440, call: scores, phase: idle
+2026-06-17 17:19:42, tokens_remaining: 2439, call: scores, phase: idle
+2026-06-17 17:20:42, tokens_remaining: 2438, call: events, phase: idle
+2026-06-17 17:21:43, tokens_remaining: 2437, call: scores, phase: idle
+2026-06-17 17:22:43, tokens_remaining: 2436, call: scores, phase: idle
+2026-06-17 17:23:44, tokens_remaining: 2435, call: scores, phase: idle
+2026-06-17 17:24:44, tokens_remaining: 2434, call: scores, phase: idle
+2026-06-17 17:25:46, tokens_remaining: 2433, call: scores, phase: idle
+2026-06-17 17:26:47, tokens_remaining: 2432, call: scores, phase: idle
+2026-06-17 17:27:47, tokens_remaining: 2431, call: scores, phase: idle
+2026-06-17 17:28:48, tokens_remaining: 2430, call: scores, phase: idle
+2026-06-17 17:29:48, tokens_remaining: 2429, call: scores, phase: idle
+2026-06-17 17:30:49, tokens_remaining: 2428, call: events, phase: idle
+2026-06-17 17:31:49, tokens_remaining: 2427, call: scores, phase: idle
+2026-06-17 17:32:50, tokens_remaining: 2426, call: scores, phase: idle
+2026-06-17 17:33:50, tokens_remaining: 2425, call: scores, phase: idle
+2026-06-17 17:34:51, tokens_remaining: 2424, call: scores, phase: idle
+2026-06-17 17:35:51, tokens_remaining: 2423, call: scores, phase: idle
+2026-06-17 17:36:52, tokens_remaining: 2422, call: scores, phase: idle
+2026-06-17 17:37:53, tokens_remaining: 2421, call: scores, phase: idle
+2026-06-17 17:38:53, tokens_remaining: 2420, call: scores, phase: idle
+2026-06-17 17:39:54, tokens_remaining: 2419, call: scores, phase: idle
+2026-06-17 17:40:54, tokens_remaining: 2418, call: events, phase: idle
+2026-06-17 17:41:55, tokens_remaining: 2417, call: scores, phase: idle
+2026-06-17 17:42:55, tokens_remaining: 2416, call: scores, phase: idle
+2026-06-17 17:43:56, tokens_remaining: 2415, call: scores, phase: idle
+2026-06-17 17:44:57, tokens_remaining: 2414, call: scores, phase: idle
+2026-06-17 17:45:57, tokens_remaining: 2413, call: scores, phase: idle
+2026-06-17 17:45:57, STATE_CHANGE: Ghana vs Panama [— -> NS]
+2026-06-17 17:46:58, tokens_remaining: 2412, call: scores, phase: pregame
+2026-06-17 17:47:58, tokens_remaining: 2411, call: scores, phase: pregame
+2026-06-17 17:48:59, tokens_remaining: 2410, call: scores, phase: pregame
+2026-06-17 17:49:59, tokens_remaining: 2409, call: scores, phase: pregame
+2026-06-17 17:51:00, tokens_remaining: 2408, call: events, phase: pregame
+2026-06-17 17:52:01, tokens_remaining: 2407, call: scores, phase: pregame
+2026-06-17 17:53:01, tokens_remaining: 2406, call: scores, phase: pregame
+2026-06-17 17:54:02, tokens_remaining: 2405, call: scores, phase: pregame
+2026-06-17 17:55:02, tokens_remaining: 2404, call: scores, phase: pregame
+2026-06-17 17:56:03, tokens_remaining: 2403, call: scores, phase: pregame
+2026-06-17 17:57:03, tokens_remaining: 2402, call: scores, phase: pregame
+2026-06-17 17:58:04, tokens_remaining: 2401, call: scores, phase: pregame
+2026-06-17 17:59:04, tokens_remaining: 2400, call: scores, phase: pregame
