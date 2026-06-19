@@ -386,7 +386,7 @@
                   "type_id": 48996,
                   "participant_id": 18572,
                   "score": {
-                    "goals": 2,
+                    "goals": 3,
                     "participant": "home"
                   },
                   "description": "2ND_HALF_ONLY"
@@ -408,7 +408,7 @@
                   "type_id": 1525,
                   "participant_id": 18572,
                   "score": {
-                    "goals": 5,
+                    "goals": 6,
                     "participant": "home"
                   },
                   "description": "CURRENT"
@@ -419,7 +419,7 @@
                   "type_id": 2,
                   "participant_id": 18572,
                   "score": {
-                    "goals": 5,
+                    "goals": 6,
                     "participant": "home"
                   },
                   "description": "2ND_HALF"
@@ -434,7 +434,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781826330,
+        "current_timestamp": 1781826987,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -450,8 +450,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 2699,
-    "remaining": 2486,
+    "resets_in_seconds": 2042,
+    "remaining": 2474,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

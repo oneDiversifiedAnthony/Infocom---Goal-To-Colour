@@ -2,7 +2,7 @@
   "SFX - Siren.mp3": {
     "cue_in": 0.02701,
     "cue_out": 0.607976,
-    "gain_db": -0.5,
+    "gain_db": 5.5,
     "event": "Goal Away",
     "output_device": "DVS Transmit  5-6 (Dante Virtual Soundcard)"
   },
@@ -43,11 +43,13 @@
     "output_device": "DVS Transmit  7-8 (Dante Virtual Soundcard)",
     "event": "Goal",
     "cue_out": 0.850263,
-    "gain_db": 6.0
+    "gain_db": 6.0,
+    "cue_in": 0.008289
   },
   "PreGame.mp3": {
     "output_device": "DVS Transmit 15-16 (Dante Virtual Soundcard)",
-    "cue_out": 0.943567
+    "cue_out": 0.943567,
+    "gain_db": 4.0
   },
   "Audience .wav": {
     "output_device": "DVS Transmit  9-10 (Dante Virtual Soundcard)",
@@ -55,8 +57,8 @@
     "loop_second_half": true,
     "loop_free_run": true,
     "gain_db": 3.0,
-    "loop_point": 0.762622,
-    "cue_in": 0.538809,
-    "cue_out": 0.79578
+    "loop_point": 0.451394,
+    "cue_in": 0.232856,
+    "cue_out": 0.465712
   }
 }

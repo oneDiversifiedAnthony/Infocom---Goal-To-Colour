@@ -1,45 +1,34 @@
 {
-  "timestamp": "2026-06-17 11:46:03",
+  "timestamp": "2026-06-19 13:45:33",
   "tracked_fields": {
     "data": [
       {
-        "id": 19609166,
+        "id": 19609134,
         "sport_id": 1,
         "league_id": 732,
         "season_id": 26618,
         "stage_id": 77478590,
-        "group_id": 253029,
+        "group_id": 253022,
         "aggregate_id": null,
-        "round_id": 395361,
+        "round_id": 395360,
         "state_id": 1,
-        "venue_id": 21827,
-        "name": "Portugal vs Congo DR",
-        "starting_at": "2026-06-17 17:00:00",
+        "venue_id": 1579,
+        "name": "United States vs Australia",
+        "starting_at": "2026-06-19 19:00:00",
         "result_info": null,
         "leg": "1/1",
-        "details": "Match 23",
+        "details": "Match 32",
         "length": 90,
         "placeholder": false,
         "has_odds": true,
         "has_premium_odds": true,
-        "starting_at_timestamp": 1781715600,
+        "starting_at_timestamp": 1781895600,
         "scores": [
           {
-            "id": 26002438,
-            "fixture_id": 19609166,
+            "id": 26007079,
+            "fixture_id": 19609134,
             "type_id": 1525,
-            "participant_id": 18701,
-            "score": {
-              "goals": 0,
-              "participant": "home"
-            },
-            "description": "CURRENT"
-          },
-          {
-            "id": 26002437,
-            "fixture_id": 19609166,
-            "type_id": 1525,
-            "participant_id": 18552,
+            "participant_id": 18730,
             "score": {
               "goals": 0,
               "participant": "away"
@@ -47,21 +36,10 @@
             "description": "CURRENT"
           },
           {
-            "id": 26002439,
-            "fixture_id": 19609166,
+            "id": 26007080,
+            "fixture_id": 19609134,
             "type_id": 1,
-            "participant_id": 18552,
-            "score": {
-              "goals": 0,
-              "participant": "away"
-            },
-            "description": "1ST_HALF"
-          },
-          {
-            "id": 26002440,
-            "fixture_id": 19609166,
-            "type_id": 1,
-            "participant_id": 18701,
+            "participant_id": 18571,
             "score": {
               "goals": 0,
               "participant": "home"
@@ -69,10 +47,32 @@
             "description": "1ST_HALF"
           },
           {
-            "id": 26002441,
-            "fixture_id": 19609166,
+            "id": 26007081,
+            "fixture_id": 19609134,
+            "type_id": 1,
+            "participant_id": 18730,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26007082,
+            "fixture_id": 19609134,
             "type_id": 2,
-            "participant_id": 18552,
+            "participant_id": 18571,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26007083,
+            "fixture_id": 19609134,
+            "type_id": 2,
+            "participant_id": 18730,
             "score": {
               "goals": 0,
               "participant": "away"
@@ -80,15 +80,15 @@
             "description": "2ND_HALF"
           },
           {
-            "id": 26002442,
-            "fixture_id": 19609166,
-            "type_id": 2,
-            "participant_id": 18701,
+            "id": 26007078,
+            "fixture_id": 19609134,
+            "type_id": 1525,
+            "participant_id": 18571,
             "score": {
               "goals": 0,
               "participant": "home"
             },
-            "description": "2ND_HALF"
+            "description": "CURRENT"
           }
         ],
         "periods": []

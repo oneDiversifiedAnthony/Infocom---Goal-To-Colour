@@ -156,6 +156,12 @@ class App:
         self._walk_timer = None
         self._walk_channel = 1
 
+        # Pregame light show + music state
+        self._pregame_active = False
+        self._pregame_fired = set()       # fixture ids we auto-fired pregame for (pre-kickoff)
+        self._pregame_ht_timer = None     # timer to start pregame 2 min before HT ends
+        self._play_anthem = None          # set when the Sounds tab builds
+
         # Master offset: delay (ms) applied to the goal lighting trigger
         try:
             self._master_offset_ms = max(0, int(get_config("triggers", "master_offset_ms", fallback="10")))
@@ -194,13 +200,14 @@ class App:
         self._highlight_flag = build_flags_tab(self.notebook, self.db, self._goal_pressed)
         self._flags_tab_index = self.notebook.index("end") - 1
 
-        self._start_api_auto, set_fetch_schedule, set_on_score_change, api_token_var, set_on_game_final = \
-            build_api_tab(self.notebook, self.status_bar)
+        self._start_api_auto, set_fetch_schedule, set_on_score_change, api_token_var, \
+            set_on_game_final, set_on_state_change = build_api_tab(self.notebook, self.status_bar)
         self._api_live_tab_index = self.notebook.index("end") - 1
         _, fetch_schedule = build_api_schedule_tab(self.notebook, api_token_var, self.root)
         set_fetch_schedule(fetch_schedule)
         set_on_score_change(self._on_live_score_change)
-        set_on_game_final(self._team_victory)  # winner -> anthem + held light
+        set_on_game_final(self._team_victory)      # winner -> anthem + held light
+        set_on_state_change(self._on_state_change)  # kickoff/HT -> pregame timing
 
         # ── Settings tab (sub-notebook) ───────────────────────────────
         settings_tab = tk.Frame(self.notebook)
@@ -254,7 +261,8 @@ class App:
         self._update_web_state = build_webserver_tab(
             settings_nb,
             goal_pressed_cb=self._goal_pressed,
-            set_colours_cb=self.set_team_colours)
+            set_colours_cb=self.set_team_colours,
+            pregame_cb=self._pregame_toggle)
         self._update_web_state(games=_build_web_games(), teams=self.db.get("teams", {}))
 
         # Periodically refresh web game list from schedule files (every 60s)
@@ -262,6 +270,9 @@ class App:
             self._update_web_state(games=_build_web_games())
             self.root.after(60000, _refresh_web_games)
         self.root.after(60000, _refresh_web_games)
+
+        # Pregame: auto-start ~2 min before any scheduled kickoff
+        self.root.after(15000, self._pregame_schedule_check)
 
         # Generator
         self.gen_team_label, self.swatches, self.swatch_labels, start_random = \
@@ -586,7 +597,9 @@ class App:
         self._draw_swatches(black)
 
     def _blackout_triggers(self):
-        """BLACKOUT: stop the walk and zero every Universe 2 trigger channel."""
+        """BLACKOUT: stop pregame, the walk, and zero every Universe 2 trigger channel."""
+        if self._pregame_active:
+            self._pregame_stop()
         self._stop_walk_triggers()
         self._clear_all_triggers()
         # Kill all of Universe 2's trigger channels, not just team-mapped ones
@@ -630,6 +643,72 @@ class App:
 
         timer_id = self.root.after(ms, _drop)
         self._active_triggers[country_name] = (uni, ch, timer_id)
+
+    # ── Pregame light show + music ───────────────────────────────────────
+    HALF_TIME_SEC = 15 * 60   # assumed half-time length (pregame fires 2 min before it ends)
+    PREGAME_LEAD_SEC = 120    # auto-trigger pregame this many seconds before kickoff / HT end
+
+    def _pregame_start(self):
+        """Start the pregame light show (walk 1-50 on U2) + PreGame music."""
+        self._pregame_active = True
+        if not self._walk_active:           # light show = the channel walk, looping
+            self._walk_active = True
+            self._walk_channel = 1
+            self._walk_step()
+        play = getattr(self, "_play_sound_by_name", None)
+        if play:
+            play("PreGame")
+        self.status_bar.trigger_label.config(text="PREGAME", fg="#00ccff")
+
+    def _pregame_stop(self):
+        """Stop the pregame light show and music (e.g. when the game starts)."""
+        self._pregame_active = False
+        if self._pregame_ht_timer:
+            self.root.after_cancel(self._pregame_ht_timer)
+            self._pregame_ht_timer = None
+        self._stop_walk_triggers()
+        stop = getattr(self, "_stop_sound_by_name", None)
+        if stop:
+            stop("PreGame")
+
+    def _pregame_toggle(self):
+        if self._pregame_active:
+            self._pregame_stop()
+        else:
+            self._pregame_start()
+        return self._pregame_active
+
+    def _on_state_change(self, home, away, new_state_id):
+        """React to live match state changes for pregame timing."""
+        if new_state_id in (2, 22):       # 1st-half / 2nd-half kickoff -> stop pregame
+            if self._pregame_active:
+                self._pregame_stop()
+        elif new_state_id == 3:           # half time -> pregame 2 min before it ends
+            if self._pregame_ht_timer:
+                self.root.after_cancel(self._pregame_ht_timer)
+            delay_ms = max(0, self.HALF_TIME_SEC - self.PREGAME_LEAD_SEC) * 1000
+            self._pregame_ht_timer = self.root.after(delay_ms, self._pregame_start)
+
+    def _pregame_schedule_check(self):
+        """Every 15s: auto-start pregame ~2 min before any scheduled kickoff."""
+        try:
+            now = datetime.now(timezone.utc)
+            for fix in self._load_schedule_fixtures(self.db):
+                fid = fix.get("id")
+                sa = fix.get("starting_at", "")
+                if not fid or not sa or fid in self._pregame_fired:
+                    continue
+                try:
+                    ko = datetime.strptime(sa, "%Y-%m-%d %H:%M:%S").replace(tzinfo=timezone.utc)
+                except ValueError:
+                    continue
+                secs_to_ko = (ko - now).total_seconds()
+                if 0 <= secs_to_ko <= self.PREGAME_LEAD_SEC:
+                    self._pregame_fired.add(fid)
+                    self._pregame_start()
+        except Exception:
+            pass
+        self.root.after(15000, self._pregame_schedule_check)
 
     # ── Walk the triggers ────────────────────────────────────────────────
     WALK_CHANNEL_COUNT = 50   # why: step channels 1-50 of the trigger universe

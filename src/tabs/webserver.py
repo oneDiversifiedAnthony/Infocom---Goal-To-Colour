@@ -140,6 +140,7 @@ _to_tz = ZoneInfo("America/Toronto")
 _callbacks = {
     "goal_pressed": None,   # fn(colours, country_name)
     "set_colours": None,    # fn(colours, country_name)
+    "pregame": None,        # fn() -> toggle pregame light show + music
     "root": None,           # tkinter root for after() scheduling
 }
 
@@ -899,6 +900,17 @@ def _build_testing_html():
     sorted_names = sorted(teams.keys())
 
     buttons_html = ""
+    # Pregame button (above blackout): light show + pregame music
+    buttons_html += (
+        '<form method="POST" action="/testing" style="display:inline-block;margin:4px;">'
+        '<input type="hidden" name="action" value="pregame">'
+        '<button type="submit" style="width:140px;height:100px;background:#003a5c;'
+        'border:2px solid #00ccff;border-radius:8px;cursor:pointer;padding:4px;'
+        'vertical-align:top;">'
+        '<div style="color:#00ccff;font-size:16px;font-weight:bold;">PREGAME</div>'
+        '<div style="color:#88ddff;font-size:11px;margin-top:8px;">light show + music</div>'
+        '</button></form>'
+    )
     # Blackout button
     buttons_html += (
         '<form method="POST" action="/testing" style="display:inline-block;margin:4px;">'
@@ -1204,7 +1216,11 @@ class _Handler(BaseHTTPRequestHandler):
                   f"root={'yes' if root else 'no'} "
                   f"goal_cb={'yes' if _callbacks.get('goal_pressed') else 'no'} "
                   f"team_found={'yes' if team_name in _state['teams'] else 'no'}")
-            if team_name == "BLACKOUT":
+            if action == "pregame":
+                cb = _callbacks.get("pregame")
+                if cb and root:
+                    root.after(0, cb)
+            elif team_name == "BLACKOUT":
                 colours = [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
                 cb = _callbacks.get("set_colours")
                 if cb and root:
@@ -1295,7 +1311,7 @@ def _get_local_ips():
 
 
 def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
-                        set_colours_cb=None):
+                        set_colours_cb=None, pregame_cb=None):
     """Build the Web Server tab. Returns update_state function."""
     tab = tk.Frame(notebook)
     notebook.add(tab, text="Web Server")
@@ -1305,6 +1321,8 @@ def build_webserver_tab(notebook, port=8080, goal_pressed_cb=None,
         _callbacks["goal_pressed"] = goal_pressed_cb
     if set_colours_cb:
         _callbacks["set_colours"] = set_colours_cb
+    if pregame_cb:
+        _callbacks["pregame"] = pregame_cb
 
     tk.Label(tab, text="Web Server",
              font=("Segoe UI", 14, "bold")).pack(pady=(20, 10))
