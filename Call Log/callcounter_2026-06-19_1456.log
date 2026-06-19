@@ -1,0 +1,11 @@
+2026-06-19 14:56:56, tokens_remaining: 801, call: events, phase: idle
+2026-06-19 14:56:56, EVENT: EVENT_15 11' Cameron Burgess (1-0) [United States vs Australia]
+2026-06-19 14:56:56, EVENT: GOAL 44' Alex Freeman (2-0) [United States vs Australia]
+2026-06-19 14:56:56, EVENT: YELLOW_CARD 16' Jordan Bos [United States vs Australia]
+2026-06-19 14:56:56, EVENT: YELLOW_CARD 32' Alessandro Circati [United States vs Australia]
+2026-06-19 14:56:56, EVENT: EVENT_10 44' Alex Freeman [United States vs Australia]
+2026-06-19 14:56:56, STATE_CHANGE: United States vs Australia [— -> HT]
+2026-06-19 14:57:42, tokens_remaining: 800, call: scores, phase: break
+2026-06-19 14:58:27, tokens_remaining: 799, call: scores, phase: break
+2026-06-19 14:59:12, tokens_remaining: 798, call: scores, phase: break
+2026-06-19 14:59:58, tokens_remaining: 797, call: scores, phase: break

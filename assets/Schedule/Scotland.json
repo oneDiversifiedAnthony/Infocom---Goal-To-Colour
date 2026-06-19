@@ -283,7 +283,7 @@
               "group_id": 253021,
               "aggregate_id": null,
               "round_id": 395360,
-              "state_id": 1,
+              "state_id": 3,
               "venue_id": 160,
               "name": "Scotland vs Morocco",
               "starting_at": "2026-06-19 22:00:00",
@@ -335,7 +335,74 @@
                   }
                 }
               ],
-              "scores": []
+              "scores": [
+                {
+                  "id": 26016062,
+                  "fixture_id": 19609171,
+                  "type_id": 1525,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26016065,
+                  "fixture_id": 19609171,
+                  "type_id": 1,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "1ST_HALF"
+                },
+                {
+                  "id": 26016066,
+                  "fixture_id": 19609171,
+                  "type_id": 2,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 26016067,
+                  "fixture_id": 19609171,
+                  "type_id": 2,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "2ND_HALF"
+                },
+                {
+                  "id": 26016063,
+                  "fixture_id": 19609171,
+                  "type_id": 1525,
+                  "participant_id": 18551,
+                  "score": {
+                    "goals": 1,
+                    "participant": "away"
+                  },
+                  "description": "CURRENT"
+                },
+                {
+                  "id": 26016064,
+                  "fixture_id": 19609171,
+                  "type_id": 1,
+                  "participant_id": 18706,
+                  "score": {
+                    "goals": 0,
+                    "participant": "home"
+                  },
+                  "description": "1ST_HALF"
+                }
+              ]
             }
           ]
         }
@@ -345,7 +412,7 @@
   "subscription": [
     {
       "meta": {
-        "current_timestamp": 1781894729,
+        "current_timestamp": 1781909943,
         "next_billing_cycle": "2026-07-03T15:01:37 UTC"
       },
       "plans": [
@@ -361,8 +428,8 @@
     }
   ],
   "rate_limit": {
-    "resets_in_seconds": 1792,
-    "remaining": 2471,
+    "resets_in_seconds": 985,
+    "remaining": 2452,
     "requested_entity": "Stage"
   },
   "timezone": "UTC"

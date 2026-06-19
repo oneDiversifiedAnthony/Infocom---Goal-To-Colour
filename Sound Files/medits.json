@@ -56,7 +56,7 @@
     "loop_first_half": true,
     "loop_second_half": true,
     "loop_free_run": true,
-    "gain_db": 3.0,
+    "gain_db": -1.5,
     "loop_point": 0.451394,
     "cue_in": 0.232856,
     "cue_out": 0.465712

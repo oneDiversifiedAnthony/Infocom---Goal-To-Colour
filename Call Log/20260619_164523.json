@@ -1,0 +1,139 @@
+{
+  "timestamp": "2026-06-19 16:45:23",
+  "tracked_fields": {
+    "data": [
+      {
+        "id": 19609171,
+        "sport_id": 1,
+        "league_id": 732,
+        "season_id": 26618,
+        "stage_id": 77478590,
+        "group_id": 253021,
+        "aggregate_id": null,
+        "round_id": 395360,
+        "state_id": 1,
+        "venue_id": 160,
+        "name": "Scotland vs Morocco",
+        "starting_at": "2026-06-19 22:00:00",
+        "result_info": null,
+        "leg": "1/1",
+        "details": "Match 30",
+        "length": 90,
+        "placeholder": false,
+        "has_odds": true,
+        "has_premium_odds": true,
+        "starting_at_timestamp": 1781906400,
+        "scores": [
+          {
+            "id": 26016062,
+            "fixture_id": 19609171,
+            "type_id": 1525,
+            "participant_id": 18706,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26016065,
+            "fixture_id": 19609171,
+            "type_id": 1,
+            "participant_id": 18551,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "1ST_HALF"
+          },
+          {
+            "id": 26016066,
+            "fixture_id": 19609171,
+            "type_id": 2,
+            "participant_id": 18706,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26016067,
+            "fixture_id": 19609171,
+            "type_id": 2,
+            "participant_id": 18551,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "2ND_HALF"
+          },
+          {
+            "id": 26016063,
+            "fixture_id": 19609171,
+            "type_id": 1525,
+            "participant_id": 18551,
+            "score": {
+              "goals": 0,
+              "participant": "away"
+            },
+            "description": "CURRENT"
+          },
+          {
+            "id": 26016064,
+            "fixture_id": 19609171,
+            "type_id": 1,
+            "participant_id": 18706,
+            "score": {
+              "goals": 0,
+              "participant": "home"
+            },
+            "description": "1ST_HALF"
+          }
+        ],
+        "participants": [
+          {
+            "id": 18706,
+            "sport_id": 1,
+            "country_id": 1161,
+            "venue_id": 6935,
+            "gender": "male",
+            "name": "Scotland",
+            "short_code": "SCO",
+            "image_path": "https://cdn.sportmonks.com/images/soccer/teams/18/18706.png",
+            "founded": 1873,
+            "type": "national",
+            "placeholder": false,
+            "last_played_at": "2026-06-14 01:00:00",
+            "meta": {
+              "location": "home",
+              "winner": null,
+              "position": 1
+            }
+          },
+          {
+            "id": 18551,
+            "sport_id": 1,
+            "country_id": 1424,
+            "venue_id": 1679,
+            "gender": "male",
+            "name": "Morocco",
+            "short_code": "MAR",
+            "image_path": "https://cdn.sportmonks.com/images/soccer/teams/23/18551.png",
+            "founded": 1955,
+            "type": "national",
+            "placeholder": false,
+            "last_played_at": "2026-06-13 22:00:00",
+            "meta": {
+              "location": "away",
+              "winner": null,
+              "position": 2
+            }
+          }
+        ],
+        "events": [],
+        "periods": []
+      }
+    ]
+  }
+}
